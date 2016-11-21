@@ -1,0 +1,21 @@
+{
+  "name": "themer-vim",
+  "version": "1.0.0",
+  "description": "Vim template for themer.",
+  "main": "lib/index.js",
+  "author": "mjswensen",
+  "repository": {
+    "url": "git@github.com:mjswensen/themer-vim.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "babel --out-dir lib src",
+    "start": "watch 'yarn run build' src"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "watch": "^1.0.1"
+  }
+}
