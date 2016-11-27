@@ -59,7 +59,7 @@ Now check the `gen/` folder for your generated themes.
         shade7: '#FFFCFF'
 
       },
-      light: { ... },
+      light: { ... }, // same as above, except that shade0 should be the lightest and shade7 should be the darkest.
     };
 
 See mjswensen/themer-colors-default for an example.
