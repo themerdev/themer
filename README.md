@@ -2,6 +2,8 @@
 
 `themer` takes a set of colors and generates editor themes, terminal themes, and desktop/device wallpapers.
 
+![visual description](/assets/themer-description.png)
+
 `themer` is inspired by [trevordmiller/nova](http://www.trevordmiller.com/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
 
 ## Installation
