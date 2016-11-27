@@ -31,7 +31,7 @@ to which you would pass `<width>x<height>`. For example, to forego the default r
 
 ## Previews
 
-The following are rendered using themer's default color set (mjswensen/themer-colors-default):
+The following are rendered using themer's default color set (mjswensen/themer-colors-default) and the default resolutions:
 
 ![dark desktop](/assets/desktop-dark.png)
 ![light desktop](/assets/desktop-light.png)
