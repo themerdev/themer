@@ -21,5 +21,9 @@
   },
   "dependencies": {
     "svg2png": "^4.1.0"
+  },
+  "repository": {
+    "url": "git@github.com:mjswensen/themer-wallpaper-block-wave.git",
+    "type": "git"
   }
 }
