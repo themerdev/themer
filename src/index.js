@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'pn/fs';
+import mkdirp from 'mkdirp';
 import minimist from 'minimist';
 
 const args = (parsedArgs => {
@@ -47,6 +48,8 @@ const resolvePackage = name => new Promise((resolve, reject) => {
 });
 
 const flatten = arr => [].concat.apply([], arr);
+
+mkdirp.sync(path.resolve(args.out));
 
 Promise.all([args.colors, ...args.template].map(resolvePackage))
   .then(requireables => {
