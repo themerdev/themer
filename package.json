@@ -1,0 +1,21 @@
+{
+  "name": "themer-vim-lightline",
+  "version": "1.0.0",
+  "description": "Themer generator for vim lightline plugin.",
+  "main": "lib/index.js",
+  "repository": {
+    "url": "git@github.com:mjswensen/themer-vim-lightline.git",
+    "type": "git"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel --out-dir lib src",
+    "start": "watch 'yarn run build' src"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "watch": "^1.0.1"
+  }
+}
