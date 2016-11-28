@@ -11,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "build": "babel --out-dir lib src",
-    "start": "watch 'yarn run build' src"
+    "start": "watch 'yarn run build' src",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -20,5 +21,8 @@
   },
   "dependencies": {
     "color": "^0.11.4"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2"
   }
 }
