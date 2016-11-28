@@ -11,11 +11,15 @@
   "license": "MIT",
   "scripts": {
     "build": "babel --out-dir lib src",
-    "start": "watch 'yarn run build' src"
+    "start": "watch 'yarn run build' src",
+    "prepublish": "yarn run build"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "watch": "^1.0.1"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2"
   }
 }
