@@ -1,6 +1,6 @@
 {
   "name": "themer-hyper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Hyper.app plugin generator for themer.",
   "main": "lib/index.js",
   "repository": {
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "babel --out-dir lib src",
     "start": "watch 'yarn run build' src",
-    "prepublish": "npm run build"
+    "prepublish": "yarn run build"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
