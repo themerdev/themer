@@ -1984,6 +1984,14 @@ tar@~2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
+themer:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/themer/-/themer-1.0.2.tgz#bbcd2843d998c4a890aaec40b851728acc3aab1b"
+  dependencies:
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    pn "^1.0.0"
+
 throttleit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
