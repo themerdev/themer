@@ -12,7 +12,8 @@
   "bin": "./bin/themer.js",
   "scripts": {
     "build": "babel --out-dir lib src",
-    "start": "watch 'yarn run build' src"
+    "start": "watch 'yarn run build' src",
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "minimist": "^1.2.0",
