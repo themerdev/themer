@@ -2817,6 +2817,14 @@ test-exclude@^2.1.1:
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
 
+themer:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/themer/-/themer-1.0.2.tgz#bbcd2843d998c4a890aaec40b851728acc3aab1b"
+  dependencies:
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    pn "^1.0.0"
+
 throat@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-3.0.0.tgz#e7c64c867cbb3845f10877642f7b60055b8ec0d6"

@@ -11,6 +11,7 @@
   "scripts": {
     "build": "babel --out-dir lib src",
     "start": "watch 'yarn run build' src",
+    "prepublish": "yarn run build",
     "test": "jest"
   },
   "devDependencies": {
@@ -25,5 +26,8 @@
   "repository": {
     "url": "git@github.com:mjswensen/themer-wallpaper-block-wave.git",
     "type": "git"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2"
   }
 }
