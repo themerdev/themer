@@ -1,4 +1,4 @@
-A wallpaper template for mjswensen/themer.
+A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
 
