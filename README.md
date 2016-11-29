@@ -1,4 +1,4 @@
-A [Hyper.app](https://hyper.is/) plugin generator for mjswensen/themer.
+A [Hyper.app](https://hyper.is/) plugin generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
 
