@@ -1,4 +1,4 @@
-A itchyny/lightline.vim theme template for mjswensen/themer.
+A [lightline.vim](https://github.com/itchyny/lightline.vim) theme template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
 
