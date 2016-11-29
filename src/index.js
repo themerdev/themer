@@ -50,10 +50,10 @@ export const render = (colors, options) => {
   let s:p.normal.error = [ [ s:accent0, s:shade0 ] ]
   let s:p.normal.warning = [ [ s:accent2, s:shade1 ] ]
 
-  let g:lightline#colorscheme#theme#palette = lightline#colorscheme#fill(s:p)
+  let g:lightline#colorscheme#ThemerVimLightline#palette = lightline#colorscheme#fill(s:p)
 
   `;
 
-  return [Promise.resolve({ name: 'themer-vim-lightline.vim', contents: new Buffer(theme, 'utf-8') })];
+  return [Promise.resolve({ name: 'ThemerVimLightline.vim', contents: new Buffer(theme, 'utf-8') })];
 
 };
