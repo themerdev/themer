@@ -39,7 +39,9 @@ Then run your new script:
 
     yarn build
 
-Now check the `gen/` folder for your generated themes.
+Now check the `gen/` folder for your generated themes. Here's the result:
+
+![example usage result](/assets/example-usage.png)
 
 ## Themer color sets
 
