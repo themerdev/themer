@@ -35,7 +35,7 @@ export const render = (colors, options) => {
 
   highlight clear
   syntax reset
-  let g:colors_name = "themer-vim"
+  let g:colors_name = "ThemerVim"
 
   """"""""""
   " Normal "
@@ -140,6 +140,6 @@ export const render = (colors, options) => {
   unlet s:shade0 s:shade1 s:shade2 s:shade3 s:shade4 s:shade5 s:shade6 s:shade7 s:accent0 s:accent1 s:accent2 s:accent3 s:accent4 s:accent5 s:accent6 s:accent7
   `;
 
-  return [Promise.resolve({name: 'themer-vim.vim', contents: new Buffer(theme, 'utf-8')})];
+  return [Promise.resolve({name: 'ThemerVim.vim', contents: new Buffer(theme, 'utf-8')})];
 
 };
