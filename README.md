@@ -18,7 +18,7 @@
       [--template < file / npm module >...] \
       --out < directory >
 
-`themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see mjswensen/themer-colors-default). The same is true for templates.
+`themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [themer-colors-default](https://github.com/mjswensen/themer-colors-default)). The same is true for templates.
 
 ### Example usage
 
@@ -43,7 +43,7 @@ Now check the `gen/` folder for your generated themes.
 
 ## Themer color sets
 
-* mjswensen/themer-colors-default
+* [themer-colors-default](https://github.com/mjswensen/themer-colors-default)
 
 ### Create your own color set
 
@@ -62,7 +62,7 @@ Now check the `gen/` folder for your generated themes.
       light: { ... }, // same as above, except that shade0 should be the lightest and shade7 should be the darkest.
     };
 
-See mjswensen/themer-colors-default for an example.
+See [themer-colors-default](https://github.com/mjswensen/themer-colors-default) for an example.
 
 I would recommend checking your color set into your dotfiles repo. Once you've fine-tuned it, you might consider publishing it to npm for others to use! (If you do, consider naming your repo starting with `themer-colors-` so that others can easily find it.)
 
@@ -70,17 +70,17 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 
 ### Terminals
 
-* mjswensen/hyper
+* [themer-hyper](https://github.com/mjswensen/themer-hyper)
 
 ### Editors/IDEs
 
-* mjswensen/vim
-* mjswensen/vim-lightline
+* [themer-vim](https://github.com/mjswensen/themer-vim)
+* [themer-vim-lightline](https://github.com/mjswensen/themer-vim-lightline)
 
 ### Wallpapers
 
-* mjswensen/wallpaper-block-wave
-* mjswensen/wallpaper-octagon
+* [themer-wallpaper-block-wave](https://github.com/mjswensen/themer-wallpaper-block-wave)
+* [themer-wallpaper-octagon](https://github.com/mjswensen/themer-wallpaper-octagon)
 
 ### Create your own template
 
