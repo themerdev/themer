@@ -1,4 +1,4 @@
-A vim theme template for mjswensen/themer.
+A vim theme template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
 
