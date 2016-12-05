@@ -68,7 +68,7 @@ describe('themer "block wave" wallpaper', () => {
       describe('and when rendering a given resolution', () => {
         const promises = render(colors, { 'themer-wallpaper-block-wave-size': '600x600' });
 
-        it(`should retrun four ${totalDefaultFiles / 2} to write`, async () => {
+        it(`should return ${totalDefaultFiles / 2} files to write`, async () => {
           const files = await Promise.all(promises);
           expect(files.length).toBe(totalDefaultFiles / 2);
           expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(totalDefaultFiles / 4);
