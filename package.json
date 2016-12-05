@@ -8,11 +8,13 @@
   "scripts": {
     "build": "babel --out-dir lib src",
     "start": "watch 'yarn run build' src",
-    "prepublish": "yarn run build"
+    "prepublish": "yarn run build",
+    "test": "yarn run build; jest"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
+    "jest": "^17.0.3",
     "watch": "^1.0.1"
   },
   "dependencies": {
