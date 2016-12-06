@@ -97,13 +97,13 @@ export const render = (colors, options) => {
   exec "hi DiffText guifg=".s:accent2." guibg=".s:shade2
   exec "hi ErrorMsg guifg=".s:shade7." guibg=".s:accent0
   exec "hi VertSplit guibg=".s:shade2
-  exec "hi Folded guifg=".s:shade7." guibg=".s:shade2
-  exec "hi FoldColumn guifg=".s:shade7." guibg=".s:shade1
+  exec "hi Folded guifg=".s:shade4." guibg=".s:shade1
+  exec "hi FoldColumn guifg=".s:shade4." guibg=".s:shade1
   exec "hi SignColumn guibg=".s:shade0
   exec "hi IncSearch guifg=".s:shade0." guibg=".s:accent2
   exec "hi LineNr guifg=".s:shade2." guibg=".s:shade0
   exec "hi CursorLineNr guifg=".s:shade2." guibg=".s:shade1
-  exec "hi MatchParen guibg=".s:shade2
+  exec "hi MatchParen guibg=".s:shade1
   exec "hi MoreMsg guifg=".s:shade0." guibg=".s:accent4
   exec "hi NonText guifg=".s:shade2." guibg=".s:shade0
   exec "hi Pmenu guifg=".s:shade6." guibg=".s:shade1
