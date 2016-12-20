@@ -46,6 +46,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 ## Themer color sets
 
 * [themer-colors-default](https://github.com/mjswensen/themer-colors-default)
+* [themer-colors-night-sky](https://github.com/mjswensen/themer-colors-night-sky)
 
 ### Create your own color set
 
