@@ -6,10 +6,27 @@
 
 `themer` is inspired by [trevordmiller/nova](http://www.trevordmiller.com/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
 
+Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but it is lighter, is more easily extensible with your own color sets and templates, and integrates better with your personal repository of configuration files ("dotfiles") if desired.
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Example usage](#example-usage)
+* [Themer color sets](#themer-color-sets)
+  * [Create your own color set](#create-your-own-color-set)
+* [Themer templates](#themer-templates)
+  * [Terminals](#terminals)
+  * [Editors/IDEs](#editorsides)
+  * [Wallpapers](#wallpapers)
+  * [Create your own template](#create-your-own-template)
+
 ## Installation
 
     mkdir my-dotfiles && cd my-dotfiles
     yarn add themer # or npm install --save themer
+
+If you do not keep your dotfiles under version control, you can simply install themer globally with `yarn global add themer` (or `npm -g install themer`).
 
 ## Usage
 
