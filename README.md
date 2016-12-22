@@ -6,13 +6,17 @@
 
 `themer` is inspired by [trevordmiller/nova](http://www.trevordmiller.com/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
 
-Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but it is lighter, is more easily extensible with your own color sets and templates, and integrates better with your personal repository of configuration files ("dotfiles") if desired.
+Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but:
+
+1. It is lighter, and simpler to use.
+2. It is more easily extensible with your own color sets and templates.
+3. It integrates better with your personal repository of configuration files ("dotfiles") if desired.
 
 ## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
-  * [Example usage](#example-usage)
+  * [Example workflow](#example-workflow)
 * [Themer color sets](#themer-color-sets)
   * [Create your own color set](#create-your-own-color-set)
 * [Themer templates](#themer-templates)
@@ -30,16 +34,16 @@ If you do not keep your dotfiles under version control, you can simply install t
 
 ## Usage
 
-    themer --colors < file / npm module > \
-      --template < file / npm module > \
-      [--template < file / npm module >...] \
-      --out < directory >
+    themer --colors <file OR npm module name> \
+      --template <file OR npm module name> \
+      [--template <file OR npm module name>...] \
+      --out <directory>
 
 `themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [themer-colors-default](https://github.com/mjswensen/themer-colors-default)). The same is true for templates.
 
-### Example usage
+### Example workflow
 
-Say you wanted to generate a vim theme and desktop background using `themer`'s default color set. First, install the color set and templates:
+Say you wanted to generate a vim theme and desktop background using `themer`'s default color set. First, install `themer`, the color set, and the templates:
 
     cd my-dotfiles
     yarn add themer themer-colors-default themer-vim themer-wallpaper-block-wave
@@ -69,6 +73,8 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 
 ### Create your own color set
 
+To create your own color set, create a JavaScript file that exports (CommonJS-style) a `colors` object, like so:
+
     exports.colors = {
       dark: { // A color set can have both light and dark variants, but doesn't have to.
 
@@ -84,7 +90,9 @@ Now check the `gen/` folder for your generated themes. Here's the result:
       light: { ... }, // same as above, except that shade0 should be the lightest and shade7 should be the darkest.
     };
 
-See [themer-colors-default](https://github.com/mjswensen/themer-colors-default) for an example.
+At this point, your JS file can be passed to the `--colors` argument of `themer`.
+
+Refer to [themer-colors-default](https://github.com/mjswensen/themer-colors-default) for an example.
 
 I would recommend checking your color set into your dotfiles repo. Once you've fine-tuned it, you might consider publishing it to npm for others to use! (If you do, consider naming your repo starting with `themer-colors-` so that others can easily find it.)
 
@@ -107,6 +115,8 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 
 ### Create your own template
 
+To create your own template, create a JavaScript file that exports (CommonJS-style) a `render` function, like so:
+
     exports.render = function(colors, options) {
 
       // colors is an object that will have one or both keys: 'light' and
@@ -127,4 +137,6 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 
     };
 
-As long as a template exports a `render` function as indicated, it can be passed to the `-t` (`--template`) argument of `themer`. Once you've developed your template, consider publishing it on npm (with repository name staring with `themer-`) so that others can use it!
+Your JS file can then be passed to a `--template` argument of `themer`. That's it!
+
+Once you've developed your template, consider publishing it on npm (with repository name staring with `themer-`) so that others can use it!
