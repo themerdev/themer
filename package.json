@@ -23,5 +23,9 @@
   },
   "dependencies": {
     "plist": "^2.0.1"
+  },
+  "repository": {
+    "url": "git@github.com:mjswensen/themer-sublime-text.git",
+    "type": "git"
   }
 }
