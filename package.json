@@ -1,0 +1,27 @@
+{
+  "name": "themer-sublime-text",
+  "version": "1.0.0",
+  "description": "Sublime Text theme generator for themer.",
+  "main": "lib/index.js",
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "babel --out-dir lib src",
+    "prepublish": "yarn run build",
+    "start": "watch 'yarn run test' src",
+    "test": "yarn run build && jest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "jest": "^18.0.0",
+    "themer-colors-default": "^1.0.0",
+    "watch": "^1.0.1"
+  },
+  "dependencies": {
+    "plist": "^2.0.1"
+  }
+}
