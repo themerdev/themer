@@ -4,7 +4,7 @@
 
 ![visual description](/assets/themer-description.png)
 
-`themer` is inspired by [trevordmiller/nova](http://www.trevordmiller.com/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
+`themer` is inspired by [trevordmiller/nova](https://trevordmiller.github.io/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
 
 Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but:
 
