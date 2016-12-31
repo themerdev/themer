@@ -2163,10 +2163,6 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
-pn@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pn/-/pn-1.0.0.tgz#1cf5a30b0d806cd18f88fc41a6b5d4ad615b3ba9"
-
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -2563,14 +2559,6 @@ test-exclude@^3.2.2:
     object-assign "^4.1.0"
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
-
-themer:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/themer/-/themer-1.0.2.tgz#bbcd2843d998c4a890aaec40b851728acc3aab1b"
-  dependencies:
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    pn "^1.0.0"
 
 throat@^3.0.0:
   version "3.0.0"

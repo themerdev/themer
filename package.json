@@ -20,9 +20,6 @@
     "jest": "^18.0.0",
     "watch": "^1.0.1"
   },
-  "peerDependencies": {
-    "themer": "^1.0.2"
-  },
   "repository": {
     "url": "git@github.com:mjswensen/themer-colors-night-sky.git",
     "type": "git"
