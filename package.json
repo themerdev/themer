@@ -23,8 +23,5 @@
     "babel-preset-latest": "^6.16.0",
     "jest": "^17.0.3",
     "watch": "^1.0.1"
-  },
-  "peerDependencies": {
-    "themer": "^1.0.2"
   }
 }
