@@ -9,15 +9,21 @@
   },
   "author": "mjswensen",
   "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
   "scripts": {
     "build": "eslint src && babel --out-dir lib src",
     "start": "watch 'yarn run build' src",
+    "test": "yarn run build; jest",
     "prepublish": "yarn run build"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "eslint": "^3.12.2",
+    "jest": "^18.1.0",
+    "themer-colors-default": "^1.0.1",
     "watch": "^1.0.1"
   },
   "dependencies": {
