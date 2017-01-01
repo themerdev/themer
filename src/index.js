@@ -1,6 +1,6 @@
 import Color from 'color';
 
-export const render = (colors, options) => {
+export const render = (colors) => {
   return [{ name: 'dark', colors: colors.dark }, { name: 'light', colors: colors.light }]
     .filter(colorSet => !!colorSet.colors)
     .map(colorSet => {
