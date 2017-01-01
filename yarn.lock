@@ -3007,6 +3007,10 @@ text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
 
+themer-colors-default:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/themer-colors-default/-/themer-colors-default-1.0.1.tgz#3249ddc9d75a908c63a0444657fbe4d333ad0b60"
+
 throat@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-3.0.0.tgz#e7c64c867cbb3845f10877642f7b60055b8ec0d6"
