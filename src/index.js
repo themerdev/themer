@@ -5,7 +5,7 @@ export const render = (colors, options) => {
     .filter(colorSet => !!colorSet.colors)
     .map(colorSet => {
       const plugin = `
-      exports.decorateConfig = function(config) {
+      module.exports.decorateConfig = config => {
         return Object.assign({}, config, {
           cursorColor: '${Color(colorSet.colors.accent6).clearer(0.5).rgbString()}',
           foregroundColor: '${colorSet.colors.shade6}',
@@ -32,6 +32,6 @@ export const render = (colors, options) => {
         });
       };
       `;
-      return Promise.resolve({ name: `themer-hyper-${colorSet.name}.js`, contents: new Buffer(plugin, 'utf-8') });
+      return Promise.resolve({ name: `themer-hyper-${colorSet.name}.js`, contents: Buffer.from(plugin, 'utf-8') });
     });
 };
