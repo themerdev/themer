@@ -1,4 +1,4 @@
-export const render = (colors, options) => {
+export const render = (colors) => {
 
   const colorVars = colorSet => `
   let s:shade0 = "${colorSet.shade0}"
@@ -21,13 +21,13 @@ export const render = (colors, options) => {
 
   const theme = `
 
-  ${!!colors.dark ? `
+  ${'dark' in colors ? `
   if &background == 'dark'
     ${colorVars(colors.dark)}
   endif
   ` : ''}
 
-  ${!!colors.light ? `
+  ${'light' in colors ? `
   if &background == 'light'
     ${colorVars(colors.light)}
   endif

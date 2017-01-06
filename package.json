@@ -9,14 +9,21 @@
     "type": "git"
   },
   "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
   "scripts": {
-    "build": "babel --out-dir lib src",
-    "start": "watch 'yarn run build' src",
+    "build": "eslint src && babel --out-dir lib src",
+    "test": "yarn run build && jest",
+    "start": "watch 'yarn run test' src",
     "prepublish": "yarn run build"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.12.2",
+    "jest": "^18.1.0",
+    "themer-colors-default": "^1.0.1",
     "watch": "^1.0.1"
   },
   "peerDependencies": {
