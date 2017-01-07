@@ -6,7 +6,7 @@ const getSizesFromOptOrDefault = opt => {
   if (opt) {
     const unparsedSizes = Array.isArray(opt) ? opt : [opt];
     return unparsedSizes.map(unparsedSize => {
-      const results = /(\d+)x(\d+)/.exec(unparsedSize)
+      const results = /(\d+)x(\d+)/.exec(unparsedSize);
       if (results) {
         const w = parseInt(results[1], 10);
         const h = parseInt(results[2], 10);

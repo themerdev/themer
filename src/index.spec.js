@@ -1,46 +1,9 @@
-jest.mock('svg2png', () => (sourceBuffer, options) => Promise.resolve(sourceBuffer));
+jest.mock('svg2png', () => (sourceBuffer) => Promise.resolve(sourceBuffer));
 
 import { render } from './index';
+import { colors } from 'themer-colors-default';
 
 describe('themer "octagon" wallpaper', () => {
-
-  const light = {
-    accent0: '#ffffff',
-    accent1: '#ffffff',
-    accent2: '#ffffff',
-    accent3: '#ffffff',
-    accent4: '#ffffff',
-    accent5: '#ffffff',
-    accent6: '#ffffff',
-    accent7: '#ffffff',
-    shade0: '#ffffff',
-    shade1: '#ffffff',
-    shade2: '#ffffff',
-    shade3: '#ffffff',
-    shade4: '#ffffff',
-    shade5: '#ffffff',
-    shade6: '#ffffff',
-    shade7: '#ffffff',
-  };
-
-  const dark = {
-    accent0: '#000000',
-    accent1: '#000000',
-    accent2: '#000000',
-    accent3: '#000000',
-    accent4: '#000000',
-    accent5: '#000000',
-    accent6: '#000000',
-    accent7: '#000000',
-    shade0: '#000000',
-    shade1: '#000000',
-    shade2: '#000000',
-    shade3: '#000000',
-    shade4: '#000000',
-    shade5: '#000000',
-    shade6: '#000000',
-    shade7: '#000000',
-  };
 
   const test = (scenario, colors, totalDefaultFiles) => {
 
@@ -88,8 +51,8 @@ describe('themer "octagon" wallpaper', () => {
 
   };
 
-  test('when given both a light and a dark theme', { light: light, dark: dark }, 8);
-  test('when given only a dark theme', { dark: dark }, 4);
-  test('when given only a light theme', { light: light }, 4);
+  test('when given both a light and a dark theme', colors, 8);
+  test('when given only a dark theme', { dark: colors.dark }, 4);
+  test('when given only a light theme', { light: colors.light }, 4);
 
 });
