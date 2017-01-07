@@ -9,15 +9,17 @@
     "rootDir": "lib"
   },
   "scripts": {
-    "build": "babel --out-dir lib src",
-    "start": "watch 'yarn run build' src",
+    "build": "eslint src && babel --out-dir lib src",
+    "start": "watch 'yarn run test' src",
     "prepublish": "yarn run build",
-    "test": "yarn run build; jest"
+    "test": "yarn run build && jest"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.13.0",
     "jest-cli": "^17.0.3",
+    "themer-colors-default": "^1.0.1",
     "watch": "^1.0.1"
   },
   "dependencies": {

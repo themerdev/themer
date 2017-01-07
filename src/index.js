@@ -7,7 +7,7 @@ const getSizesFromOptOrDefault = opt => {
   if (opt) {
     const unparsedSizes = Array.isArray(opt) ? opt : [opt];
     return unparsedSizes.map(unparsedSize => {
-      const results = /(\d+)x(\d+)/.exec(unparsedSize)
+      const results = /(\d+)x(\d+)/.exec(unparsedSize);
       if (results) {
         const w = parseInt(results[1], 10);
         const h = parseInt(results[2], 10);
@@ -71,7 +71,8 @@ export const render = (colors, options) => {
 
   const deepFlatten = arr => arr.reduce((cumulative, inner) => cumulative.concat(Array.isArray(inner) ? deepFlatten(inner) : inner), []);
 
-  return deepFlatten(colorSets.map(colorSet => sizes.map(size => {
+  return deepFlatten(
+    colorSets.map(colorSet => sizes.map(size => {
       let blockMaxSize = size.s / 3;
       let blockMinSize = blockMaxSize * 2/3;
       let blocks = [];
@@ -111,7 +112,7 @@ export const render = (colors, options) => {
               </feMerge>
             </filter>
           </defs>
-          ${svgData.blocks.map(block => `<rect x="${block.x}" y="${block.y}" width="${block.w}" height="${block.h}" fill="${block.c}" rx="2" ry="2" ${block.g ? `filter="url(#glow)"` : ''} />`).join('\n')}
+          ${svgData.blocks.map(block => `<rect x="${block.x}" y="${block.y}" width="${block.w}" height="${block.h}" fill="${block.c}" rx="2" ry="2" ${block.g ? 'filter="url(#glow)"' : ''} />`).join('\n')}
           <rect x="0" y="0" width="${svgData.size.w}" height="${svgData.size.h}" fill="url(#overlay)"/>
         </svg>
       `;
