@@ -11,7 +11,7 @@
   "license": "MIT",
   "bin": "./bin/themer.js",
   "scripts": {
-    "build": "babel --out-dir lib src",
+    "build": "eslint src && babel --out-dir lib src",
     "start": "watch 'yarn run build' src",
     "prepublish": "yarn run build"
   },
@@ -24,6 +24,7 @@
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.19.0",
     "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.13.1",
     "watch": "^1.0.1"
   }
 }

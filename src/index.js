@@ -3,6 +3,11 @@ import fs from 'pn/fs';
 import mkdirp from 'mkdirp';
 import minimist from 'minimist';
 
+const log = {
+  out: (msg) => { process.stdout.write(`${msg}\n`); },
+  err: (msg) => { process.stderr.write(`${msg}\n`); },
+};
+
 const args = (parsedArgs => {
   try {
     if (parsedArgs.colors === undefined) {
@@ -16,7 +21,7 @@ const args = (parsedArgs => {
     }
   }
   catch(e) {
-    console.error(e.message);
+    log.err(e.message);
     process.exit(1);
   }
   return {
@@ -51,23 +56,23 @@ const flatten = arr => [].concat.apply([], arr);
 
 mkdirp.sync(path.resolve(args.out));
 
-console.log('resolving packages...');
+log.out('resolving packages...');
 Promise.all([args.colors, ...args.template].map(resolvePackage))
   .then(requireables => {
     const colors = require(requireables[0]).colors;
     const templates = requireables.slice(1).map(require);
-    console.log('rendering templates...');
+    log.out('rendering templates...');
     return Promise.all(flatten(templates.map(template => template.render(colors, args))));
   })
   .then(files => {
-    console.log('writing files...');
+    log.out('writing files...');
     return Promise.all(files.map(file => fs.writeFile(path.resolve(args.out, file.name), file.contents)));
   })
   .then(() => {
-    console.log('Done!');
+    log.out('Done!');
     process.exit(0);
   })
   .catch(e => {
-    console.error(e);
+    log.err(e);
     process.exit(1);
   });
