@@ -1,4 +1,4 @@
-# themer
+# themer [![Travis](https://img.shields.io/travis/mjswensen/themer.svg)](https://travis-ci.org/mjswensen/themer)
 
 `themer` takes a set of colors and generates editor themes, terminal themes, and desktop/device wallpapers.
 
