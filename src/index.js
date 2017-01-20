@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'pn/fs';
 import mkdirp from 'mkdirp';
 import minimist from 'minimist';
+import resolvePackage from './resolve';
 
 const log = {
   out: (msg) => { process.stdout.write(`${msg}\n`); },
@@ -37,20 +38,6 @@ const args = (parsedArgs => {
     'out': 'o',
   },
 }));
-
-const resolvePackage = name => new Promise((resolve, reject) => {
-  try {
-    resolve(require.resolve(name));
-  }
-  catch(e) {
-    try {
-      resolve(require.resolve(path.resolve(name)));
-    }
-    catch(e) {
-      reject(`Unable to resolve ${name}`);
-    }
-  }
-});
 
 const flatten = arr => [].concat.apply([], arr);
 
