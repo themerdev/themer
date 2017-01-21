@@ -58,7 +58,7 @@ export const render = (colors) => {
   exec "hi Type guifg=".s:accent7
   exec "hi Special guifg=".s:accent4
   exec "hi Underlined guifg=".s:accent5
-  exec "hi Error guifg=".s:shade0." guibg=".s:accent0
+  exec "hi Error guifg=".s:accent0." guibg=".s:shade1
   exec "hi Todo guifg=".s:accent2." guibg=".s:shade1
 
   " GitGutter
