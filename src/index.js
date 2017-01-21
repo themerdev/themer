@@ -65,6 +65,7 @@ export const render = (colors) => {
 
   exec "hi GitGutterAdd guifg=".s:accent3
   exec "hi GitGutterChange guifg=".s:accent2
+  exec "hi GitGutterChangeDelete guifg=".s:accent2
   exec "hi GitGutterDelete guifg=".s:accent0
 
   " fugitive
