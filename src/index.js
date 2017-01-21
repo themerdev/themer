@@ -90,7 +90,7 @@ export const render = (colors) => {
   exec "hi Conceal guifg=".s:shade2
   exec "hi Cursor guifg=".s:shade0
   exec "hi CursorColumn guibg=".s:shade1
-  exec "hi CursorLine guibg=".s:shade1
+  exec "hi CursorLine guibg=".s:shade1." cterm=none"
   exec "hi Directory guifg=".s:accent5
   exec "hi DiffAdd guifg=".s:accent3." guibg=".s:shade1
   exec "hi DiffChange guifg=".s:accent2." guibg=".s:shade1
@@ -103,7 +103,7 @@ export const render = (colors) => {
   exec "hi SignColumn guibg=".s:shade0
   exec "hi IncSearch guifg=".s:shade0." guibg=".s:accent2
   exec "hi LineNr guifg=".s:shade2." guibg=".s:shade0
-  exec "hi CursorLineNr guifg=".s:shade2." guibg=".s:shade1
+  exec "hi CursorLineNr guifg=".s:shade3." guibg=".s:shade1
   exec "hi MatchParen guibg=".s:shade1
   exec "hi MoreMsg guifg=".s:shade0." guibg=".s:accent4
   exec "hi NonText guifg=".s:shade2." guibg=".s:shade0
