@@ -10,7 +10,7 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 
 1. It is lighter, and simpler to use.
 2. It is more easily extensible with your own color sets and templates.
-3. It integrates better with your personal repository of configuration files ("dotfiles") if desired.
+3. It integrates better with your dotfiles, especially if you keep them under version control.
 
 ## Table of Contents
 
