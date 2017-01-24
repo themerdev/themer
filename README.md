@@ -1,3 +1,5 @@
+# themer-wallpaper-block-wave [![Travis](https://img.shields.io/travis/mjswensen/themer-wallpaper-block-wave.svg)](https://travis-ci.org/mjswensen/themer-wallpaper-block-wave)
+
 A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
