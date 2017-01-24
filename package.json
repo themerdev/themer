@@ -12,7 +12,7 @@
     "build": "eslint src && babel --out-dir lib src",
     "start": "watch 'yarn run build' src",
     "prepublish": "yarn run build",
-    "test": "yarn run build; jest"
+    "test": "yarn run build && jest"
   },
   "dependencies": {
     "color": "^1.0.3"
