@@ -1,3 +1,5 @@
+# themer-hyper [![Travis](https://img.shields.io/travis/mjswensen/themer-hyper.svg)](https://travis-ci.org/mjswensen/themer-hyper)
+
 A [Hyper.app](https://hyper.is/) plugin generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
