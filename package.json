@@ -15,7 +15,7 @@
   "scripts": {
     "build": "eslint src && babel --out-dir lib src",
     "start": "watch 'yarn run build' src",
-    "test": "yarn run build; jest",
+    "test": "yarn run build && jest",
     "prepublish": "yarn run build"
   },
   "devDependencies": {
