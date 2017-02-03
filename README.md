@@ -1,6 +1,6 @@
 # themer [![Travis](https://img.shields.io/travis/mjswensen/themer.svg)](https://travis-ci.org/mjswensen/themer)
 
-`themer` takes a set of colors and generates editor themes, terminal themes, and desktop/device wallpapers.
+`themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), and [desktop/device wallpapers](#wallpapers).
 
 ![visual description](/assets/themer-description.png)
 
@@ -140,4 +140,4 @@ To create your own template, create a JavaScript file that exports (CommonJS-sty
 
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
-Once you've developed your template, consider publishing it on npm (with repository name staring with `themer-`) so that others can use it!
+Once you've developed your template, consider publishing it on npm (with repository name starting with `themer-`) so that others can use it!
