@@ -15,7 +15,7 @@
   "bin": "./bin/themer.js",
   "scripts": {
     "build": "eslint src && babel --out-dir lib src",
-    "start": "watch 'yarn run build' src",
+    "start": "watch 'yarn run test' src",
     "test": "yarn run build && jest",
     "prepublish": "yarn run build"
   },
