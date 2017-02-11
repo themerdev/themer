@@ -26,10 +26,11 @@ describe('the themer command line interface', () => {
   describe('when given valid arguments', () => {
 
     const testOutputDir = path.resolve('test-output');
-    const testOutputFile = path.resolve(testOutputDir, outputFileName);
+    const templateName = 'template.js';
+    const testOutputFile = path.resolve(testOutputDir, templateName, outputFileName);
     const args = [
       '-c', path.resolve('lib', 'test-helpers', 'colors.js'),
-      '-t', path.resolve('lib', 'test-helpers', 'template.js'),
+      '-t', path.resolve('lib', 'test-helpers', templateName),
       '-o', testOutputDir,
     ];
 
@@ -43,6 +44,12 @@ describe('the themer command line interface', () => {
     it('should create the specified output directory if necessary', async () => {
       await child_process.execFile(pathToExecutable, args).promise;
       const wrapped = await wrap(() => fs.access(testOutputDir));
+      expect(wrapped).not.toThrow();
+    });
+
+    it('should create a directory for each template, named after the template', async () => {
+      await child_process.execFile(pathToExecutable, args).promise;
+      const wrapped = await wrap(() => fs.access(path.resolve(testOutputDir, templateName)));
       expect(wrapped).not.toThrow();
     });
 

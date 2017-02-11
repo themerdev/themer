@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "minimist": "^1.2.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp-promise": "^5.0.1",
     "pn": "^1.0.0"
   },
   "devDependencies": {

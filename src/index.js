@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'pn/fs';
-import mkdirp from 'mkdirp';
+import mkdirp from 'mkdirp-promise';
 import minimist from 'minimist';
 import resolvePackage from './resolve';
 
@@ -41,19 +41,35 @@ const args = (parsedArgs => {
 
 const flatten = arr => [].concat.apply([], arr);
 
-mkdirp.sync(path.resolve(args.out));
-
 log.out('resolving packages...');
 Promise.all([args.colors, ...args.template].map(resolvePackage))
   .then(requireables => {
     const colors = require(requireables[0]).colors;
     const templates = requireables.slice(1).map(require);
+    const templateNames = args.template.map(templatePath => path.basename(templatePath));
     log.out('rendering templates...');
-    return Promise.all(flatten(templates.map(template => template.render(colors, args))));
+    return Promise.all(
+      flatten(
+        templates.map(
+          (template, i) => template.render(colors, args).map(
+            promisedFile => promisedFile.then(file => ({ file: file, dir: templateNames[i] }))
+          )
+        )
+      )
+    );
   })
-  .then(files => {
+  .then(outputs => {
     log.out('writing files...');
-    return Promise.all(files.map(file => fs.writeFile(path.resolve(args.out, file.name), file.contents)));
+    return Promise.all(
+      outputs.map(
+        output => {
+          const outputDir = path.resolve(args.out, output.dir);
+          return mkdirp(outputDir).then(
+            () => fs.writeFile(path.resolve(outputDir, output.file.name), output.file.contents)
+          );
+        }
+      )
+    );
   })
   .then(() => {
     log.out('Done!');
