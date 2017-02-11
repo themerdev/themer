@@ -1,7 +1,7 @@
 {
   "name": "themer",
-  "version": "1.2.1",
-  "description": "Development theme generator.",
+  "version": "2.0.0",
+  "description": "Customizable theme generator for editors, terminals, and wallpaper.",
   "main": "lib/index.js",
   "author": "mjswensen",
   "repository": {
