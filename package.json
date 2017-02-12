@@ -1,6 +1,6 @@
 {
   "name": "themer-iterm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "iTerm2 theme generator for themer.",
   "main": "lib/index.js",
   "author": "mjswensen",
@@ -30,6 +30,6 @@
     "type": "git"
   },
   "peerDependencies": {
-    "themer": "^1.0.2"
+    "themer": "^1.0.2||^2"
   }
 }
