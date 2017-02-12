@@ -1,6 +1,6 @@
 {
   "name": "themer-vim-lightline",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Themer generator for vim lightline plugin.",
   "main": "lib/index.js",
   "repository": {
@@ -27,6 +27,6 @@
     "watch": "^1.0.1"
   },
   "peerDependencies": {
-    "themer": "^1.0.2"
+    "themer": "^1.0.2||^2"
   }
 }
