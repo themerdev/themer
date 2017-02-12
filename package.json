@@ -1,6 +1,6 @@
 {
   "name": "themer-vim",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Vim template for themer.",
   "main": "lib/index.js",
   "author": "mjswensen",
@@ -27,6 +27,6 @@
     "watch": "^1.0.1"
   },
   "peerDependencies": {
-    "themer": "^1.0.2"
+    "themer": "^1.0.2||^2"
   }
 }
