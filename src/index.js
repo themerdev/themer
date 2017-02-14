@@ -104,7 +104,7 @@ export const render = (colors) => {
   exec "hi IncSearch guifg=".s:shade0." guibg=".s:accent2
   exec "hi LineNr guifg=".s:shade2." guibg=".s:shade0
   exec "hi CursorLineNr guifg=".s:shade3." guibg=".s:shade1
-  exec "hi MatchParen guibg=".s:shade1
+  exec "hi MatchParen guibg=".s:shade2
   exec "hi MoreMsg guifg=".s:shade0." guibg=".s:accent4
   exec "hi NonText guifg=".s:shade2." guibg=".s:shade0
   exec "hi Pmenu guifg=".s:shade6." guibg=".s:shade1
