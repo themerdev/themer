@@ -22,7 +22,7 @@ describe('themer "block wave" wallpaper', () => {
         it('should not contain "undefined" in the SVG output', async () => {
           const files = await Promise.all(promises);
           files.filter(file => /\.svg/.test(file.name)).forEach(file => {
-            expect(file.contents.toString('utf-8')).not.toContain('undefined');
+            expect(file.contents.toString('utf8')).not.toContain('undefined');
           });
         });
 
@@ -41,7 +41,7 @@ describe('themer "block wave" wallpaper', () => {
         it('should not contain "undefined" in the SVG output', async () => {
           const files = await Promise.all(promises);
           files.filter(file => /\.svg/.test(file.name)).forEach(file => {
-            expect(file.contents.toString('utf-8')).not.toContain('undefined');
+            expect(file.contents.toString('utf8')).not.toContain('undefined');
           });
         });
 
