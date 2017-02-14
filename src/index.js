@@ -54,6 +54,6 @@ export const render = (colors) => {
 
   `;
 
-  return [Promise.resolve({ name: 'ThemerVimLightline.vim', contents: new Buffer(theme, 'utf-8') })];
+  return [Promise.resolve({ name: 'ThemerVimLightline.vim', contents: Buffer.from(theme, 'utf8') })];
 
 };
