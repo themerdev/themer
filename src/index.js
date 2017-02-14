@@ -116,7 +116,7 @@ export const render = (colors, options) => {
       </svg>
     `;
     const basename = `themer-wallpaper-octagon-${colorSet.name}-${size.w}x${size.h}`;
-    const svgBuffer = Buffer.from(svgString, 'utf-8');
+    const svgBuffer = Buffer.from(svgString, 'utf8');
     return [
       Promise.resolve({ name: `${basename}.svg`, contents: svgBuffer }),
       svg2png(svgBuffer).then(pngBuffer => ({ name: `${basename}.png`, contents: pngBuffer })),
