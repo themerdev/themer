@@ -126,8 +126,8 @@ To create your own template, create a JavaScript file that exports (CommonJS-sty
 
       // options is an object representing the original command-line args
       // passed to themer. This allows you to add special arguments that
-      // will apply only to your template. An example of this is allowing
-      // a themer user to specify custom resolutions for rending a wallpaper.
+      // will apply only to your template. An example of this is allowing a
+      // themer user to specify custom resolutions for rendering a wallpaper.
 
       // This function should return an array of Promises, each Promise
       // resolving to an object of the following structure:
