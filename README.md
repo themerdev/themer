@@ -132,7 +132,7 @@ To create your own template, create a JavaScript file that exports (CommonJS-sty
       // This function should return an array of Promises, each Promise
       // resolving to an object of the following structure:
       // {
-      //   name: '<the name of the file to be written>',
+      //   name: '<the name of the file to be written>', // can include subdirectories, too
       //   contents: <a Buffer of the contents of the file to be written>,
       // }
 

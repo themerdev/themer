@@ -2,7 +2,7 @@ import child_process from 'pn/child_process';
 import fs from 'pn/fs';
 import path from 'path';
 import wrap from './test-helpers/wrap';
-import { outputFileName, outputFileContents } from './test-helpers/template';
+import { outputFileDirectory, outputFileName, outputFileContents } from './test-helpers/template';
 
 describe('the themer command line interface', () => {
 
@@ -27,7 +27,7 @@ describe('the themer command line interface', () => {
 
     const testOutputDir = path.resolve('test-output');
     const templateName = 'template.js';
-    const testOutputFile = path.resolve(testOutputDir, templateName, outputFileName);
+    const testOutputFile = path.resolve(testOutputDir, templateName, outputFileDirectory, outputFileName);
     const args = [
       '-c', path.resolve('lib', 'test-helpers', 'colors.js'),
       '-t', path.resolve('lib', 'test-helpers', templateName),
@@ -50,6 +50,12 @@ describe('the themer command line interface', () => {
     it('should create a directory for each template, named after the template', async () => {
       await child_process.execFile(pathToExecutable, args).promise;
       const wrapped = await wrap(() => fs.access(path.resolve(testOutputDir, templateName)));
+      expect(wrapped).not.toThrow();
+    });
+
+    it('should render any subdirectories that the templates might specify', async () => {
+      await child_process.execFile(pathToExecutable, args).promise;
+      const wrapped = await wrap(() => fs.access(path.resolve(testOutputDir, templateName, outputFileDirectory)));
       expect(wrapped).not.toThrow();
     });
 

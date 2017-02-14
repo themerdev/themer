@@ -63,9 +63,9 @@ Promise.all([args.colors, ...args.template].map(resolvePackage))
     return Promise.all(
       outputs.map(
         output => {
-          const outputDir = path.resolve(args.out, output.dir);
-          return mkdirp(outputDir).then(
-            () => fs.writeFile(path.resolve(outputDir, output.file.name), output.file.contents)
+          const outputFilePath = path.resolve(args.out, output.dir, output.file.name);
+          return mkdirp(path.dirname(outputFilePath)).then(
+            () => fs.writeFile(outputFilePath, output.file.contents)
           );
         }
       )
