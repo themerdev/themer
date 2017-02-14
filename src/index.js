@@ -32,6 +32,6 @@ export const render = (colors) => {
         });
       };
       `;
-      return Promise.resolve({ name: `themer-hyper-${colorSet.name}.js`, contents: Buffer.from(plugin, 'utf-8') });
+      return Promise.resolve({ name: `themer-hyper-${colorSet.name}.js`, contents: Buffer.from(plugin, 'utf8') });
     });
 };
