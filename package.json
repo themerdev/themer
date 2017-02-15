@@ -1,0 +1,32 @@
+{
+  "name": "themer-atom-syntax",
+  "version": "1.0.0",
+  "description": "Atom syntax template for themer.",
+  "main": "lib/index.js",
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --copy-files --out-dir lib src",
+    "test": "yarn run build && jest",
+    "start": "watch 'yarn run test' src",
+    "prepublish": "yarn run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-latest": "^6.22.0",
+    "eslint": "^3.15.0",
+    "jest": "^18.1.0",
+    "less": "^2.7.2",
+    "themer-colors-default": "^1.0.1",
+    "watch": "^1.0.1"
+  },
+  "peerDependencies": {
+    "themer": "^2.1.0"
+  },
+  "dependencies": {
+    "pn": "^1.0.0"
+  }
+}
