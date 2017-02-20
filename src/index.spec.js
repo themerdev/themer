@@ -1,5 +1,9 @@
 import { render } from './index';
 import { colors } from 'themer-colors-default';
+import del from 'del';
+import fs from 'pn/fs';
+import less from 'less';
+import mkdirp from 'mkdirp-promise';
 import path from 'path';
 
 describe('render function', () => {
@@ -15,6 +19,20 @@ describe('render function', () => {
       expect(/undefined/.test(contents)).toBe(false);
     });
   };
+
+  const wrap = async fn => {
+    try {
+      const result = await fn();
+      return () => result;
+    }
+    catch(e) {
+      return () => { throw e; };
+    }
+  };
+
+  const outputDir = 'test-output';
+
+  afterAll(() => { del(outputDir); });
 
   it('should properly render package.json files', async () => await basicFileCheck(/package\.json/));
   it('should properly render color variables files', async () => await basicFileCheck(/colors\.less/));
@@ -32,6 +50,36 @@ describe('render function', () => {
     expect(uniqueDirs.size).toBe(2);
   });
 
-  // TODO: start here. TDD: compile index.less
+  it('should provide non-absolute paths for the files to be written', async () => {
+    const files = await promisedFiles;
+    const paths = files.map(file => file.name);
+    expect(paths.some(path.isAbsolute)).toBe(false);
+  });
+
+  it('should produce valid, compilable less', async () => {
+    const files = await promisedFiles;
+    const outputFilePaths = await Promise.all(files.map(file => {
+      const outputFilePath = path.resolve(outputDir, file.name);
+      return mkdirp(path.dirname(outputFilePath))
+        .then(() => fs.writeFile(outputFilePath, file.contents))
+        .then(() => outputFilePath);
+    }));
+    const indexFilePaths = outputFilePaths.filter(outputFilePath => /index\.less/.test(outputFilePath));
+    expect(indexFilePaths.length).toBe(2);
+    const wrapped = await wrap(() => Promise.all(
+      indexFilePaths.map(
+        indexFilePath => fs.readFile(indexFilePath, 'utf8').then(
+          contents => less.render(
+            contents,
+            {
+              paths: [path.dirname(indexFilePath)],
+              filename: path.basename(indexFilePath),
+            },
+          )
+        )
+      )
+    ));
+    expect(wrapped).not.toThrow();
+  });
 
 });
