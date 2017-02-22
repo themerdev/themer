@@ -66,10 +66,10 @@ const renderSyntaxVariablesFiles = colorSets => colorSets.map(colorSet => Promis
     @syntax-result-marker-color-selected: @accent2;
 
     // Gutter colors
-    @syntax-gutter-text-color: @shade6;
+    @syntax-gutter-text-color: @shade2;
     @syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-    @syntax-gutter-background-color: @shade2;
-    @syntax-gutter-background-color-selected: @shade3;
+    @syntax-gutter-background-color: @shade0;
+    @syntax-gutter-background-color-selected: @shade1;
 
     // For git diff info. i.e. in the gutter
     @syntax-color-renamed: @accent5;
@@ -135,12 +135,12 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
       }
     }
 
-    atom-text-editor .search-results .marker .region {
+    atom-text-editor .search-results .syntax--marker .region {
       background-color: transparent;
       border: 1px solid @syntax-result-marker-color;
     }
 
-    atom-text-editor .search-results .marker.current-result .region {
+    atom-text-editor .search-results .syntax--marker.current-result .region {
       border: 1px solid @syntax-result-marker-color-selected;
     }
 
@@ -154,7 +154,7 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
       color: @accent2;
 
       &.syntax--control {
-        color: @accent2;
+        color: @accent5;
       }
 
       &.syntax--operator {
@@ -171,11 +171,11 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
     }
 
     .syntax--storage {
-      color: @accent6;
+      color: @accent7;
     }
 
     .syntax--constant {
-      color: @accent3;
+      color: @shade6;
 
       &.syntax--character.syntax--escape {
         color: @accent4;
@@ -195,7 +195,7 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
     }
 
     .syntax--variable {
-      color: @accent2;
+      color: @shade6;
 
       &.syntax--interpolation {
         color: @accent1;
@@ -233,7 +233,10 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
           color: @shade2;
         }
 
-        &.syntax--string,
+        &.syntax--string {
+          color: @accent3;
+        }
+
         &.syntax--variable,
         &.syntax--parameters,
         &.syntax--array {
@@ -282,7 +285,6 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
       }
       &.syntax--name.syntax--type {
         color: @accent1;
-        text-decoration: underline;
       }
 
       &.syntax--other.syntax--inherited-class {
@@ -298,7 +300,6 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
 
       &.syntax--name.syntax--tag {
         color: @accent0;
-        text-decoration: underline;
       }
 
       &.syntax--other.syntax--attribute-name {
