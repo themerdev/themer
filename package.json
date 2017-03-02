@@ -1,6 +1,6 @@
 {
   "name": "themer-slack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A slack sidebar theme template for themer.",
   "main": "lib/index.js",
   "author": "mjswensen",
@@ -9,7 +9,7 @@
     "rootDir": "lib"
   },
   "scripts": {
-    "build": "eslint src && babel --copy-files --out-dir lib src",
+    "build": "eslint src && babel --out-dir lib src",
     "test": "yarn run build && jest",
     "start": "watch 'yarn run test' src",
     "prepublish": "yarn run build"
