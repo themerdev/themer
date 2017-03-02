@@ -1,6 +1,6 @@
 {
   "name": "themer-slack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A slack sidebar theme template for themer.",
   "main": "lib/index.js",
   "author": "mjswensen",
@@ -23,7 +23,7 @@
     "watch": "^1.0.2"
   },
   "peerDependencies": {
-    "themer": "^2.1.0"
+    "themer": "^2.0.0"
   },
   "repository": "git@github.com:mjswensen/themer-slack.git"
 }
