@@ -1,0 +1,28 @@
+{
+  "name": "themer-slack",
+  "version": "1.0.0",
+  "description": "A slack sidebar theme template for themer.",
+  "main": "lib/index.js",
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --copy-files --out-dir lib src",
+    "test": "yarn run build && jest",
+    "start": "watch 'yarn run test' src",
+    "prepublish": "yarn run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "eslint": "^3.16.1",
+    "jest": "^19.0.2",
+    "themer-colors-default": "^1.0.1",
+    "watch": "^1.0.2"
+  },
+  "peerDependencies": {
+    "themer": "^2.1.0"
+  }
+}
