@@ -23,6 +23,7 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
   * [Terminals](#terminals)
   * [Editors/IDEs](#editorsides)
   * [Wallpapers](#wallpapers)
+  * [Other](#other)
   * [Create your own template](#create-your-own-template)
 
 ## Installation
@@ -113,6 +114,10 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 
 * [themer-wallpaper-block-wave](https://github.com/mjswensen/themer-wallpaper-block-wave)
 * [themer-wallpaper-octagon](https://github.com/mjswensen/themer-wallpaper-octagon)
+
+### Other
+
+* [themer-slack](https://github.com/mjswensen/themer-slack)
 
 ### Create your own template
 
