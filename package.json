@@ -24,5 +24,6 @@
   },
   "peerDependencies": {
     "themer": "^2.1.0"
-  }
+  },
+  "repository": "git@github.com:mjswensen/themer-slack.git"
 }
