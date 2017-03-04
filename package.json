@@ -9,7 +9,7 @@
     "rootDir": "lib"
   },
   "scripts": {
-    "build": "eslint src && babel --copy-files --out-dir lib src",
+    "build": "eslint src && babel --out-dir lib src",
     "test": "yarn run build && jest",
     "start": "watch 'yarn run test' src",
     "prepublish": "yarn run build"
