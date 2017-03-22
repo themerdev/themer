@@ -1,0 +1,31 @@
+{
+  "name": "themer-terminal",
+  "version": "1.0.0",
+  "description": "A Terminal.app theme generator for themer.",
+  "main": "lib/index.js",
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib --copy-files src",
+    "start": "watch 'yarn run test' src",
+    "test": "yarn run build && jest",
+    "prepublish": "yarn run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-latest": "^6.24.0",
+    "eslint": "^3.18.0",
+    "jest": "^19.0.2",
+    "themer-colors-default": "^1.0.1",
+    "watch": "^1.0.2"
+  },
+  "peerDependencies": {
+    "themer": "^2.1.0"
+  },
+  "dependencies": {
+    "pn": "^1.0.0"
+  }
+}
