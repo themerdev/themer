@@ -1,0 +1,6 @@
+osx_image: xcode8.2
+language: node_js
+node_js:
+  - "6.9"
+
+script: yarn test
