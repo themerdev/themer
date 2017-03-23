@@ -16,7 +16,7 @@ extension String {
 func hexToNSColorData(hex: String) -> Data {
   return NSKeyedArchiver.archivedData(
     withRootObject: NSColor(
-      red: CGFloat(Int(hex[1...2], radix: 16)!) / 255, // Consider truncating these to see if it cuts down on output file size..
+      red: CGFloat(Int(hex[1...2], radix: 16)!) / 255,
       green: CGFloat(Int(hex[3...4], radix: 16)!) / 255,
       blue: CGFloat(Int(hex[5...6], radix: 16)!) / 255,
       alpha: 1.0

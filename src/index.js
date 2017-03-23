@@ -38,7 +38,10 @@ export const render = (colors) => {
           `themer-terminal-${colorSet.theme}`,
           tmpFilePath,
         ]).promise
-          .then(() => fs.readFile(tmpFilePath))
+          .then(result => {
+            if (result.stderr) { throw new Error(result.stderr); }
+            else { return fs.readFile(tmpFilePath); }
+          })
           .then(contents => ({
             name: fileName,
             contents: contents,
