@@ -3,6 +3,7 @@ import { colors } from 'themer-colors-default';
 
 describe('Terminal.app theme generator', () => {
 
+  global.jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
   const promisedFiles = render(colors, {});
 
   it('should render two files when given a color set with both a light and a dark theme', async () => {
