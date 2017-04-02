@@ -71,6 +71,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 | --- | --- | --- |
 | [themer-colors-default](https://github.com/mjswensen/themer-colors-default) | ![themer-colors-default dark preview](https://themer-previews.surge.sh/themer-colors-default-dark-full.svg) | ![themer-colors-default light preview](https://themer-previews.surge.sh/themer-colors-default-light-full.svg) |
 | [themer-colors-night-sky](https://github.com/mjswensen/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer-previews.surge.sh/themer-colors-night-sky-dark-full.svg) | |
+| [themer-colors-one](https://github.com/mjswensen/themer-colors-one) | ![themer-colors-one dark preview](https://themer-previews.surge.sh/themer-colors-one-dark-full.svg) | ![themer-colors-one light preview](https://themer-previews.surge.sh/themer-colors-one-light-full.svg) |
 
 ### Create your own color set
 
