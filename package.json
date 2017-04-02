@@ -20,5 +20,6 @@
     "eslint": "^3.19.0",
     "jest": "^19.0.2",
     "watch": "^1.0.2"
-  }
+  },
+  "repository": "git@github.com:mjswensen/themer-colors-one.git"
 }
