@@ -1,8 +1,8 @@
 {
   "name": "themer",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Customizable theme generator for editors, terminals, and wallpaper.",
-  "main": "lib/index.js",
+  "main": "lib/themer.js",
   "author": "mjswensen",
   "repository": {
     "url": "git@github.com:mjswensen/themer.git",
@@ -22,7 +22,8 @@
   "dependencies": {
     "minimist": "^1.2.0",
     "mkdirp-promise": "^5.0.1",
-    "pn": "^1.0.0"
+    "pn": "^1.0.0",
+    "rxjs": "^5.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

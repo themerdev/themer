@@ -1,8 +1,6 @@
 import path from 'path';
-import fs from 'pn/fs';
-import mkdirp from 'mkdirp-promise';
 import minimist from 'minimist';
-import resolvePackage from './resolve';
+import themer from './themer';
 
 const log = {
   out: (msg) => { process.stdout.write(`${msg}\n`); },
@@ -39,43 +37,8 @@ const args = (parsedArgs => {
   },
 }));
 
-const flatten = arr => [].concat.apply([], arr);
-
-log.out('resolving packages...');
-Promise.all([args.colors, ...args.template].map(resolvePackage))
-  .then(requireables => {
-    const colors = require(requireables[0]).colors;
-    const templates = requireables.slice(1).map(require);
-    const templateNames = args.template.map(templatePath => path.basename(templatePath));
-    log.out('rendering templates...');
-    return Promise.all(
-      flatten(
-        templates.map(
-          (template, i) => template.render(colors, args).map(
-            promisedFile => promisedFile.then(file => ({ file: file, dir: templateNames[i] }))
-          )
-        )
-      )
-    );
-  })
-  .then(outputs => {
-    log.out('writing files...');
-    return Promise.all(
-      outputs.map(
-        output => {
-          const outputFilePath = path.resolve(args.out, output.dir, output.file.name);
-          return mkdirp(path.dirname(outputFilePath)).then(
-            () => fs.writeFile(outputFilePath, output.file.contents)
-          );
-        }
-      )
-    );
-  })
-  .then(() => {
-    log.out('Done!');
-    process.exit(0);
-  })
-  .catch(e => {
-    log.err(e);
-    process.exit(1);
-  });
+themer(args.colors, args.template, args.out, args).subscribe(
+  evt => log.out(evt),
+  err => { log.err(err); process.exit(1); },
+  () => process.exit(0)
+);
