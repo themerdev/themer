@@ -6,7 +6,7 @@ A [Hyper.app](https://hyper.is/) plugin generator for [themer](https://github.co
 
 Install this module wherever you have `themer` installed:
 
-    yarn add themer-hyper
+    npm install themer-hyper
 
 Then pass `themer-hyper` as a `-t` (`--template`) arg to `themer`:
 

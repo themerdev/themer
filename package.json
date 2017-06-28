@@ -14,9 +14,9 @@
   },
   "scripts": {
     "build": "eslint src && babel --out-dir lib src",
-    "start": "watch 'yarn run test' src",
-    "test": "yarn run build && jest",
-    "prepublish": "yarn run build"
+    "start": "watch 'npm run test' src",
+    "test": "npm run build && jest",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
