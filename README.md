@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://themer.mjswensen.com">
+    <img src="icon.png" width="256" height="256" alt="Themer application icon" />
+  </a>
+</p>
+
 # themer [![Travis](https://img.shields.io/travis/mjswensen/themer.svg)](https://travis-ci.org/mjswensen/themer)
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), and [desktop/device wallpapers](#wallpapers).
