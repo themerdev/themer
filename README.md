@@ -6,7 +6,7 @@ A Slack sidebar theme generator for [themer](https://github.com/mjswensen/themer
 
 Install this module wherever you have `themer` installed:
 
-    yarn add themer-slack
+    npm install themer-slack
 
 Then pass `themer-slack` as a `-t` (`--template`) arg to `themer`:
 
