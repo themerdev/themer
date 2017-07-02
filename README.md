@@ -6,7 +6,7 @@ An Atom syntax theme generator for [themer](https://github.com/mjswensen/themer)
 
 Install this module wherever you have `themer` installed (note that this package requires `themer@2.1.0` or newer.):
 
-    yarn add themer-atom-syntax
+    npm install themer-atom-syntax
 
 Then pass `themer-atom-syntax` as a `-t` (`--template`) arg to `themer`:
 
