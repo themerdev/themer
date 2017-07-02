@@ -3,6 +3,9 @@
   "version": "1.0.2",
   "description": "A slack sidebar theme template for themer.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
   "author": "mjswensen",
   "license": "MIT",
   "jest": {
@@ -16,7 +19,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
-    "babel-preset-latest": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
     "eslint": "^3.16.1",
     "jest": "^19.0.2",
     "themer-colors-default": "^1.0.1",
@@ -24,6 +28,9 @@
   },
   "peerDependencies": {
     "themer": "^2.0.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
   },
   "repository": "git@github.com:mjswensen/themer-slack.git"
 }
