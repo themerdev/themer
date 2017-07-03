@@ -10,7 +10,7 @@ This module utilizes [Swift](https://swift.org/) and the [AppKit](https://develo
 
 Install this module wherever you have `themer` installed.
 
-    yarn add themer-terminal
+    npm install themer-terminal
 
 Then pass `themer-terminal` as a `-t` (`--template`) argument to `themer`:
 
