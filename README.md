@@ -8,7 +8,7 @@ A dark blue theme for [themer](https://github.com/mjswensen/themer), with colors
 
 Install this module wherever you have `themer` installed:
 
-    yarn add themer-colors-night-sky
+    npm install themer-colors-night-sky
 
 Then pass `themer-colors-night-sky` as a `-c` (`--colors`) arg to `themer`:
 

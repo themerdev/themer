@@ -10,9 +10,9 @@
   },
   "scripts": {
     "build": "eslint src && babel --out-dir lib src",
-    "start": "watch 'yarn run build' src",
-    "prepublish": "yarn run build",
-    "test": "yarn run build && jest"
+    "start": "watch 'npm run build' src",
+    "prepare": "npm run build",
+    "test": "npm run build && jest"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
