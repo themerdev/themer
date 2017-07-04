@@ -6,7 +6,7 @@ A [lightline.vim](https://github.com/itchyny/lightline.vim) theme template for [
 
 Install this module wherever you have `themer` installed:
 
-    yarn add themer-vim-lightline
+    npm install themer-vim-lightline
 
 Then pass `themer-vim-lightline` as a `-t` (`--template`) arg to `themer`:
 
