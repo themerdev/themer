@@ -6,7 +6,7 @@ An [iTerm](https://www.iterm2.com/) theme generator for [themer](https://github.
 
 Install this module wherever you have `themer` installed.
 
-    yarn add themer-iterm
+    npm install themer-iterm
 
 Then pass `themer-iterm` as a `-t` (`--template`) argument to `themer`:
 
