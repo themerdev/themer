@@ -1,3 +1,12 @@
 {
-  "presets": ["latest"]
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "6.11"
+        }
+      }
+    ]
+  ]
 }
