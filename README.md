@@ -6,7 +6,7 @@ A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
 Install this module wherever you have `themer` installed:
 
-    yarn add themer-wallpaper-octagon
+    npm install themer-wallpaper-octagon
 
 Then pass `themer-vim` as a `-t` (`--template`) arg to `themer`:
 
