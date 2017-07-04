@@ -1,6 +1,6 @@
 {
   "name": "themer-vim",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Vim template for themer.",
   "main": "lib/index.js",
   "engines": {
