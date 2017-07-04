@@ -3,6 +3,9 @@
   "version": "1.0.2",
   "description": "Sublime Text theme generator for themer.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
   "author": "mjswensen",
   "license": "MIT",
   "jest": {
@@ -16,7 +19,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-preset-env": "^1.5.2",
     "eslint": "^3.12.2",
     "jest": "^18.0.0",
     "themer-colors-default": "^1.0.1",
