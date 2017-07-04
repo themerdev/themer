@@ -6,7 +6,7 @@ A Sublime Text theme generator for [themer](https://github.com/mjswensen/themer)
 
 Install this module wherever you have `themer` installed:
 
-    yarn add themer-sublime-text
+    npm install themer-sublime-text
 
 Then pass `themer-sublime-text` as a `-t` (`--template`) arg to `themer`:
 
