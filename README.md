@@ -65,7 +65,7 @@ Then edit your `package.json`:
 
 Then run your new script:
 
-    npm build
+    npm run build
 
 Now check the `gen/` folder for your generated themes. Here's the result:
 
