@@ -3,6 +3,9 @@
   "version": "2.2.0",
   "description": "Customizable theme generator for editors, terminals, and wallpaper.",
   "main": "lib/themer.js",
+  "engines": {
+    "node": ">=6.11"
+  },
   "author": "mjswensen",
   "repository": {
     "url": "git@github.com:mjswensen/themer.git",
@@ -28,7 +31,7 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.19.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-preset-env": "^1.5.2",
     "eslint": "^3.13.1",
     "jest": "^18.1.0",
     "watch": "^1.0.1"
