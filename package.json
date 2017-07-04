@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "A default color set for themer.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
   "author": "mjswensen",
   "repository": {
     "url": "git@github.com:mjswensen/themer-colors-default.git",
@@ -20,7 +23,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-preset-env": "^1.5.2",
     "eslint": "^3.12.2",
     "jest": "^17.0.3",
     "watch": "^1.0.1"
