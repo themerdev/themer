@@ -1,6 +1,6 @@
 {
   "name": "themer",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Customizable theme generator for editors, terminals, and wallpaper.",
   "main": "lib/themer.js",
   "engines": {
