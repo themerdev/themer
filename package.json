@@ -3,6 +3,9 @@
   "version": "2.2.3",
   "description": "Vim template for themer.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
   "author": "mjswensen",
   "repository": {
     "url": "git@github.com:mjswensen/themer-vim.git",
@@ -20,7 +23,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-preset-env": "^1.5.2",
     "eslint": "^3.12.2",
     "jest": "^18.1.0",
     "themer-colors-default": "^1.0.1",
