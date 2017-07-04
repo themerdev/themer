@@ -35,9 +35,9 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 ## Installation
 
     mkdir my-dotfiles && cd my-dotfiles
-    yarn add themer # or npm install --save themer
+    npm install themer
 
-If you do not keep your dotfiles under version control, you can simply install themer globally with `yarn global add themer` (or `npm -g install themer`).
+If you do not keep your dotfiles under version control, you can simply install themer globally with `npm -g install themer`.
 
 ## Usage
 
@@ -53,7 +53,7 @@ If you do not keep your dotfiles under version control, you can simply install t
 Say you wanted to generate a vim theme and desktop background using `themer`'s default color set. First, install `themer`, the color set, and the templates:
 
     cd my-dotfiles
-    yarn add themer themer-colors-default themer-vim themer-wallpaper-block-wave
+    npm install themer themer-colors-default themer-vim themer-wallpaper-block-wave
 
 Then edit your `package.json`:
 
@@ -65,7 +65,7 @@ Then edit your `package.json`:
 
 Then run your new script:
 
-    yarn build
+    npm build
 
 Now check the `gen/` folder for your generated themes. Here's the result:
 
