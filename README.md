@@ -22,6 +22,6 @@ Finally, edit `~/.hyper.js` and add the package to the `localPlugins` array:
 
     ...
     localPlugins: [
-      'themer-hyper-dark`,
+      'themer-hyper-dark'
     ],
     ...
