@@ -6,6 +6,8 @@
 
 # themer [![Travis](https://img.shields.io/travis/mjswensen/themer.svg)](https://travis-ci.org/mjswensen/themer)
 
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer)
+
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), and [desktop/device wallpapers](#wallpapers).
 
 ![visual description](/assets/themer-description.png)
@@ -31,7 +33,6 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
   * [Wallpapers](#wallpapers)
   * [Other](#other)
   * [Create your own template](#create-your-own-template)
-* [Sponsors](#sponsors)
 
 ## Installation
 
@@ -156,7 +157,3 @@ To create your own template, create a JavaScript file that exports (CommonJS-sty
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
 Once you've developed your template, consider publishing it on npm (with repository name starting with `themer-`) so that others can use it!
-
-## Sponsors
-
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer)
