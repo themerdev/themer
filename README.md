@@ -1,5 +1,7 @@
 # themer-sublime-text [![Travis](https://img.shields.io/travis/mjswensen/themer-sublime-text.svg)](https://travis-ci.org/mjswensen/themer-sublime-text)
 
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-sublime-text.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-sublime-text)
+
 A Sublime Text theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
