@@ -1,5 +1,7 @@
 # themer-atom-syntax [![Travis](https://img.shields.io/travis/mjswensen/themer-atom-syntax.svg)](https://travis-ci.org/mjswensen/themer-atom-syntax)
 
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-atom-syntax.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-atom-syntax)
+
 An Atom syntax theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
