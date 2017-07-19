@@ -1,5 +1,7 @@
 # themer-iterm [![Travis](https://img.shields.io/travis/mjswensen/themer-iterm.svg)](https://travis-ci.org/mjswensen/themer-iterm)
 
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-iterm.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-iterm)
+
 An [iTerm](https://www.iterm2.com/) theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
