@@ -1,5 +1,7 @@
 # themer-wallpaper-octagon [![Travis](https://img.shields.io/travis/mjswensen/themer-wallpaper-octagon.svg)](https://travis-ci.org/mjswensen/themer-wallpaper-octagon)
 
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-octagon.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-octagon)
+
 A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
