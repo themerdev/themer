@@ -1,5 +1,7 @@
 # themer-vim-lightline [![Travis](https://img.shields.io/travis/mjswensen/themer-vim-lightline.svg)](https://travis-ci.org/mjswensen/themer-vim-lightline)
 
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim-lightline.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim-lightline)
+
 A [lightline.vim](https://github.com/itchyny/lightline.vim) theme template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
