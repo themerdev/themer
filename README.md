@@ -86,7 +86,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 
 ### Create your own color set
 
-To create your own color set, create a JavaScript file that exports (CommonJS-style) a `colors` object, like so:
+To create your own color set, create a JavaScript file that exports a `colors` object, like so:
 
     exports.colors = {
       dark: { // A color set can have both light and dark variants, but doesn't have to.
@@ -135,7 +135,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 
 ### Create your own template
 
-To create your own template, create a JavaScript file that exports (CommonJS-style) a `render` function, like so:
+To create your own template, create a JavaScript file that exports a `render` function, like so:
 
     exports.render = function(colors, options) {
 
