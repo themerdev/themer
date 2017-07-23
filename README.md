@@ -20,6 +20,8 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 2. It is more easily extensible with your own color sets and templates.
 3. It integrates better with your dotfiles, especially if you keep them under version control.
 
+_Don't love the command-line? Check out [the GUI](https://github.com/mjswensen/themer-gui)._
+
 ## Table of Contents
 
 * [Installation](#installation)
@@ -33,6 +35,7 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
   * [Wallpapers](#wallpapers)
   * [Other](#other)
   * [Create your own template](#create-your-own-template)
+* [Themer GUI](#themer-gui)
 
 ## Installation
 
@@ -157,3 +160,7 @@ To create your own template, create a JavaScript file that exports (CommonJS-sty
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
 Once you've developed your template, consider publishing it on npm (with repository name starting with `themer-`) so that others can use it!
+
+## Themer GUI
+
+If you'd prefer to develop your themes visually (and with a tight feedback loop), check out [`themer`'s GUI](https://github.com/mjswensen/themer-gui).
