@@ -81,7 +81,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 | Name | Dark Preview | Light Preview |
 | --- | --- | --- |
 | [themer-colors-default](https://github.com/mjswensen/themer-colors-default) | ![themer-colors-default dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-default-dark-full.svg) | ![themer-colors-default light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-default-light-full.svg) |
-| [themer-colors-night-sky](https://github.com/mjswensen/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-night-sky-dark-full.svg) | |
+| [themer-colors-night-sky](https://github.com/mjswensen/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-night-sky-dark-full.svg) | (dark only) |
 | [themer-colors-one](https://github.com/mjswensen/themer-colors-one) | ![themer-colors-one dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-one-dark-full.svg) | ![themer-colors-one light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-one-light-full.svg) |
 | [themer-colors-polar-ice](https://github.com/mjswensen/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-polar-ice-dark-full.svg) | ![themer-colors-polar-ice light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-polar-ice-light-full.svg) |
 
