@@ -114,10 +114,10 @@ export const render = (colors) => {
   exec "hi Question guifg=".s:shade7." guibg=".s:shade1
   exec "hi Search guifg=".s:shade0." guibg=".s:accent2
   exec "hi SpecialKey guifg=".s:accent7." guibg=".s:shade0
-  exec "hi SpellBad gui=undercurl guisp=".s:accent0
-  exec "hi SpellCap gui=undercurl guisp=".s:accent2
-  exec "hi SpellLocal gui=undercurl guisp=".s:accent4
-  exec "hi SpellRare gui=undercurl guisp=".s:accent1
+  exec "hi SpellBad guifg=".s:accent0
+  exec "hi SpellCap guifg=".s:accent2
+  exec "hi SpellLocal guifg=".s:accent4
+  exec "hi SpellRare guifg=".s:accent1
   exec "hi StatusLine guifg=".s:shade4." guibg=".s:shade1." gui=none cterm=none"
   exec "hi TabLine guifg=".s:shade5." guibg=".s:shade1
   exec "hi TabLineFill guibg=".s:shade1
