@@ -97,7 +97,7 @@ export const render = (colors) => {
   exec "hi DiffDelete guifg=".s:accent0." guibg=".s:shade1
   exec "hi DiffText guifg=".s:accent2." guibg=".s:shade2
   exec "hi ErrorMsg guifg=".s:shade7." guibg=".s:accent0
-  exec "hi VertSplit guibg=".s:shade2
+  exec "hi VertSplit guifg=".s:shade0." guibg=".s:shade3
   exec "hi Folded guifg=".s:shade4." guibg=".s:shade1
   exec "hi FoldColumn guifg=".s:shade4." guibg=".s:shade1
   exec "hi SignColumn guibg=".s:shade0
