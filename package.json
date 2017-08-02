@@ -1,0 +1,34 @@
+{
+  "name": "themer-vscode",
+  "version": "1.0.0",
+  "description": "A VS Code theme generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "babel --out-dir lib src",
+    "lint": "prettier --list-different src/*.js",
+    "prepare": "npm run lint && npm run build",
+    "start": "watch 'npm run test' src",
+    "test": "npm run lint && npm run build && jest",
+    "watch": "watch 'npm run build' src"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.3.0",
+    "jest": "^20.0.4",
+    "prettier": "^1.5.3",
+    "watch": "^1.0.2"
+  },
+  "peerDependencies": {
+    "themer": "^2.1.0"
+  }
+}
