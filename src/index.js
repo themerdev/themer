@@ -1,11 +1,11 @@
 import path from "path";
 import _ from "lodash";
-import Color from "color";
 import { version } from "../package.json";
 
 const packageName = "theme-themer-vscode";
 const themesDirectory = "themes";
 const getThemeFileName = theme => `themer-${theme}-color-theme.json`;
+const getHumanTheme = theme => (theme === "dark" ? "Dark" : "Light");
 
 export const toColorSets = colors =>
   Object.entries(colors).map(([theme, colors]) => ({
@@ -35,7 +35,7 @@ const renderPackageJsonFile = colorSets =>
           categories: ["Themes"],
           contributes: {
             themes: colorSets.map(colorSet => ({
-              label: `Themer ${_.capitalize(colorSet.theme)}`,
+              label: `Themer ${getHumanTheme(colorSet.theme)}`,
               uiTheme: `vs-${colorSet.theme}`,
               path: path.join(
                 ".",
@@ -62,7 +62,8 @@ const renderThemeFiles = colorSets =>
       contents: Buffer.from(
         JSON.stringify(
           {
-            name: `Themer ${_.capitalize(colorSet.theme)}`,
+            name: `Themer ${getHumanTheme(colorSet.theme)}`,
+            type: colorSet.theme,
             colors: {
               "editor.background": colorSet.colors.shade0,
               "editorCursor.foreground": colorSet.colors.accent6,
@@ -80,11 +81,9 @@ const renderThemeFiles = colorSets =>
                   findHighlight: colorSet.colors.accent2,
                   findHighlightForeground: colorSet.colors.shade0,
                   activeGuide: colorSet.colors.accent1,
-                  bracketsForeground: Color(colorSet.colors.shade6).alpha(0.5),
+                  bracketsForeground: `${colorSet.colors.shade6}7F`,
                   bracketsOptions: "stippled_underline",
-                  bracketsContentsForeground: Color(
-                    colorSet.colors.shade6
-                  ).alpha(0.5),
+                  bracketsContentsForeground: `${colorSet.colors.shade6}7F`,
                   tagsOptions: "stippled_underline"
                 }
               },
