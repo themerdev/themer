@@ -449,8 +449,8 @@ const renderThemeFiles = colorSets =>
               "debugToolBar.background": shade1,
 
               // Welcome page
-              "welcomePage.buttonBackground": accent5,
-              "welcomePage.buttonHoverBackground": accent4,
+              "welcomePage.buttonBackground": shade1,
+              "welcomePage.buttonHoverBackground": shade2,
               "walkThrough.embeddedEditorBackground": shade0
             },
             tokenColors: [

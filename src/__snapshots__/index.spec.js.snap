@@ -308,8 +308,8 @@ exports[`render function should properly render theme files 1`] = `
     \\"terminal.ansiWhite\\": \\"#E0DCE0\\",
     \\"terminal.ansiYellow\\": \\"#FFD24A\\",
     \\"debugToolBar.background\\": \\"#474247\\",
-    \\"welcomePage.buttonBackground\\": \\"#66BFFF\\",
-    \\"welcomePage.buttonHoverBackground\\": \\"#26C99E\\",
+    \\"welcomePage.buttonBackground\\": \\"#474247\\",
+    \\"welcomePage.buttonHoverBackground\\": \\"#656066\\",
     \\"walkThrough.embeddedEditorBackground\\": \\"#282629\\"
   },
   \\"tokenColors\\": [
@@ -645,8 +645,8 @@ exports[`render function should properly render theme files 2`] = `
     \\"terminal.ansiWhite\\": \\"#474247\\",
     \\"terminal.ansiYellow\\": \\"#EEBA21\\",
     \\"debugToolBar.background\\": \\"#E0DCE0\\",
-    \\"welcomePage.buttonBackground\\": \\"#53A6E1\\",
-    \\"welcomePage.buttonHoverBackground\\": \\"#1FC598\\",
+    \\"welcomePage.buttonBackground\\": \\"#E0DCE0\\",
+    \\"welcomePage.buttonHoverBackground\\": \\"#C1BCC2\\",
     \\"walkThrough.embeddedEditorBackground\\": \\"#FFFCFF\\"
   },
   \\"tokenColors\\": [
