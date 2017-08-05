@@ -19,7 +19,22 @@ describe("render function", () => {
   it("should properly render a package.json file", async () => {
     const files = await promisedFiles;
     const file = files.find(file => /package\.json/.test(file.name));
-    expect(/undefined/.test(file.contents.toString("utf8"))).toBe(false);
+    expect(file.contents.toString("utf8")).toMatchSnapshot();
+  });
+
+  it("should properly render an icon file when given both light and dark colors", async () => {
+    const files = await promisedFiles;
+    const file = files.find(file => /icon\.svg/.test(file.name));
+    expect(file.contents.toString("utf8")).toMatchSnapshot();
+  });
+
+  it("should properly render an icon file when given only one set of colors", async () => {
+    const lightColors = {
+      light: colors.light
+    };
+    const files = await Promise.all(render(lightColors));
+    const file = files.find(file => /icon\.svg/.test(file.name));
+    expect(file.contents.toString("utf8")).toMatchSnapshot();
   });
 
   it("should properly render theme files", async () => {
@@ -29,7 +44,7 @@ describe("render function", () => {
     );
     expect(themeFiles.length).toBe(2);
     themeFiles.forEach(themeFile => {
-      expect(/undefined/.test(themeFile.contents.toString("utf8"))).toBe(false);
+      expect(themeFile.contents.toString("utf8")).toMatchSnapshot();
     });
   });
 });

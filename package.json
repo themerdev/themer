@@ -7,7 +7,7 @@
     "node": ">=6.11"
   },
   "jest": {
-    "rootDir": "lib"
+    "rootDir": "src"
   },
   "scripts": {
     "build": "babel --out-dir lib src",
