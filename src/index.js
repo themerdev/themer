@@ -74,6 +74,8 @@ const renderThemeFiles = colorSets =>
       accent7
     } = colorSet.colors;
     const shadow = `${getDark(colorSet)}66`;
+    const transparent = "#00000000";
+    const currentFileBackground = shade1;
     return Promise.resolve({
       name: path.join(
         packageName,
@@ -118,12 +120,12 @@ const renderThemeFiles = colorSets =>
 
               // Scroll bar control
               "scrollbar.shadow": shadow,
-              "scrollbarSlider.activeBackground": shade3,
-              "scrollbarSlider.background": shade1,
-              "scrollbarSlider.hoverBackground": shade2,
+              "scrollbarSlider.activeBackground": `${shade5}7f`,
+              "scrollbarSlider.background": `${shade3}7f`,
+              "scrollbarSlider.hoverBackground": `${shade4}7f`,
 
               // Badge
-              "badge.foreground": shade7,
+              "badge.foreground": shade0,
               "badge.background": accent6,
 
               // Progress bar
@@ -131,15 +133,15 @@ const renderThemeFiles = colorSets =>
 
               // Lists and trees
               "list.activeSelectionBackground": accent3,
-              "list.activeSelectionForeground": shade7,
+              "list.activeSelectionForeground": shade0,
               "list.dropBackground": shade3,
-              "list.focusBackground": accent3,
+              "list.focusBackground": shade3,
               "list.highlightForeground": accent2,
               "list.hoverBackground": shade1,
-              "list.inactiveSelectionBackground": shade3,
+              "list.inactiveSelectionBackground": shade1,
               "list.inactiveSelectionForeground": shade7,
               "list.hoverForeground": shade5,
-              "list.focusForeground": shade6,
+              "list.focusForeground": shade0,
 
               // Activity bar
               "activityBar.background": shade0,
@@ -147,30 +149,30 @@ const renderThemeFiles = colorSets =>
               "activityBar.foreground": shade5,
               "activityBar.border": shade0,
               "activityBarBadge.background": accent6,
-              "activityBarBadge.foreground": shade7,
+              "activityBarBadge.foreground": shade0,
 
               // Side bar
               "sideBar.background": shade0,
               "sideBar.foreground": shade6,
               "sideBar.border": shade0,
-              "sideBarTitle.foreground": shade7,
-              "sideBarSectionHeader.background": shade1,
-              "sideBarSectionHeader.foreground": shade5,
+              "sideBarTitle.foreground": shade5,
+              "sideBarSectionHeader.background": shade2,
+              "sideBarSectionHeader.foreground": shade6,
 
               // Editor groups & tabs
-              "editorGroup.background": shade0,
-              "editorGroup.border": shade1,
-              "editorGroup.dropBackground": shade2,
+              "editorGroup.background": shade1,
+              "editorGroup.border": shade0,
+              "editorGroup.dropBackground": `${shade2}7f`,
               "editorGroupHeader.noTabsBackground": shade0,
-              "editorGroupHeader.tabsBackground": shade1,
-              "editorGroupHeader.tabsBorder": shade1,
-              "tab.activeBackground": shade0,
-              "tab.activeForeground": shade7,
+              "editorGroupHeader.tabsBackground": shade0,
+              "editorGroupHeader.tabsBorder": shade0,
+              "tab.activeBackground": currentFileBackground,
+              "tab.activeForeground": shade5,
               "tab.border": shade0,
-              "tab.inactiveBackground": shade1,
+              "tab.inactiveBackground": shade0,
               "tab.inactiveForeground": shade4,
-              "tab.unfocusedActiveForeground": shade1,
-              "tab.unfocusedInactiveForeground": shade3,
+              "tab.unfocusedActiveForeground": shade3,
+              "tab.unfocusedInactiveForeground": shade2,
 
               // Editor colors
               "editor.background": shade0,
@@ -186,10 +188,10 @@ const renderThemeFiles = colorSets =>
               "editor.findMatchHighlightBackground": `${accent2}7f`,
               "editor.findRangeHighlightBackground": shade1,
               "editor.hoverHighlightBackground": shade2,
-              "editor.lineHighlightBackground": shade1,
+              "editor.lineHighlightBackground": shade0,
               "editor.lineHighlightBorder": shade1,
               "editorLink.activeForeground": accent4,
-              "editor.rangeHighlightBackground": accent2,
+              "editor.rangeHighlightBackground": shade1,
               "editorWhitespace.foreground": shade1,
               "editorIndentGuide.background": shade1,
               "editorRuler.foreground": shade1,
@@ -208,9 +210,9 @@ const renderThemeFiles = colorSets =>
 
               // Diff editor colors
               "diffEditor.insertedTextBackground": `${accent3}55`,
-              "diffEditor.insertedTextBorder": accent3,
+              "diffEditor.insertedTextBorder": transparent,
               "diffEditor.removedTextBackground": `${accent0}55`,
-              "diffEditor.removedTextBorder": accent0,
+              "diffEditor.removedTextBorder": transparent,
 
               // Editor widget colors
               "editorWidget.background": shade1,
@@ -261,16 +263,16 @@ const renderThemeFiles = colorSets =>
 
               // Status bar colors
               "statusBar.background": accent5,
-              "statusBar.foreground": shade7,
+              "statusBar.foreground": shade0,
               "statusBar.debuggingBackground": accent1,
-              "statusBar.debuggingForeground": shade7,
-              "statusBar.noFolderForeground": shade7,
+              "statusBar.debuggingForeground": shade0,
               "statusBar.noFolderBackground": accent6,
+              "statusBar.noFolderForeground": shade0,
               "statusBarItem.activeBackground": accent4,
               "statusBarItem.hoverBackground": accent3,
               "statusBarItem.prominentBackground": accent4,
               "statusBarItem.prominentHoverBackground": accent3,
-              "statusBar.border": accent5,
+              "statusBar.border": shade0,
 
               // Title bar colors
               "titleBar.activeBackground": shade0,
@@ -292,7 +294,7 @@ const renderThemeFiles = colorSets =>
               "notification.errorForeground": shade7,
 
               // Extensions
-              "extensionButton.prominentForeground": shade7,
+              "extensionButton.prominentForeground": shade0,
               "extensionButton.prominentBackground": accent5,
               "extensionButton.prominentHoverBackground": accent4,
 
