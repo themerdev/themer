@@ -22,6 +22,21 @@ describe("render function", () => {
     expect(file.contents.toString("utf8")).toMatchSnapshot();
   });
 
+  it("should properly render a simple README.md file", async () => {
+    const files = await promisedFiles;
+    const file = files.find(file => /README\.md/.test(file.name));
+    expect(file.contents.toString("utf8")).toMatchSnapshot();
+  });
+
+  it("should properly render the README.md file when given only one set of colors", async () => {
+    const darkColors = {
+      dark: colors.dark
+    };
+    const files = await Promise.all(render(darkColors));
+    const file = files.find(file => /README\.md/.test(file.name));
+    expect(file.contents.toString("utf8")).toMatchSnapshot();
+  });
+
   it("should properly render an icon file when given both light and dark colors", async () => {
     const files = await promisedFiles;
     const file = files.find(file => /icon\.svg/.test(file.name));
