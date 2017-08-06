@@ -124,6 +124,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 * [themer-sublime-text](https://github.com/mjswensen/themer-sublime-text)
 * [themer-vim](https://github.com/mjswensen/themer-vim)
 * [themer-vim-lightline](https://github.com/mjswensen/themer-vim-lightline)
+* [themer-vscode](https://github.com/mjswensen/themer-vscode)
 
 ### Wallpapers
 
