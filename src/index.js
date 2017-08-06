@@ -1,5 +1,4 @@
 import path from "path";
-import _ from "lodash";
 import { version } from "../package.json";
 
 const packageName = "theme-themer-vscode";
