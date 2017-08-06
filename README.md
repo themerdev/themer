@@ -12,16 +12,6 @@
 
 ![visual description](/assets/themer-description.png)
 
-`themer` is inspired by [trevordmiller/nova](https://trevordmiller.github.io/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
-
-Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but:
-
-1. It is lighter, and simpler to use.
-2. It is more easily extensible with your own color sets and templates.
-3. It integrates better with your dotfiles, especially if you keep them under version control.
-
-_Don't love the command-line? Check out [the GUI](https://github.com/mjswensen/themer-gui)._
-
 ## Table of Contents
 
 * [Installation](#installation)
@@ -35,9 +25,12 @@ _Don't love the command-line? Check out [the GUI](https://github.com/mjswensen/t
   * [Wallpapers](#wallpapers)
   * [Other](#other)
   * [Create your own template](#create-your-own-template)
+* [About](#about)
 * [Themer GUI](#themer-gui)
 
 ## Installation
+
+_Don't love the command-line? Check out [the GUI](https://github.com/mjswensen/themer-gui)._
 
     mkdir my-dotfiles && cd my-dotfiles
     npm install themer
@@ -162,6 +155,16 @@ To create your own template, create a JavaScript file that exports a `render` fu
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
 Once you've developed your template, consider publishing it on npm (with repository name starting with `themer-`) so that others can use it!
+
+## About
+
+`themer` is inspired by [trevordmiller/nova](https://trevordmiller.github.io/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
+
+Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but:
+
+1. It is lighter, and simpler to use.
+2. It is more easily extensible with your own color sets and templates.
+3. It integrates better with your dotfiles, especially if you keep them under version control.
 
 ## Themer GUI
 
