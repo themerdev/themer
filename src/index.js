@@ -331,9 +331,9 @@ const renderThemeFiles = colorSets =>
               "editorGutter.deletedBackground": accent0,
 
               // Diff editor colors
-              "diffEditor.insertedTextBackground": `${accent3}55`,
+              "diffEditor.insertedTextBackground": `${accent3}3f`,
               "diffEditor.insertedTextBorder": transparent,
-              "diffEditor.removedTextBackground": `${accent0}55`,
+              "diffEditor.removedTextBackground": `${accent0}3f`,
               "diffEditor.removedTextBorder": transparent,
 
               // Editor widget colors
@@ -407,13 +407,13 @@ const renderThemeFiles = colorSets =>
               "notification.foreground": shade7,
               "notification.buttonBackground": accent5,
               "notification.buttonHoverBackground": accent4,
-              "notification.buttonForeground": shade7,
+              "notification.buttonForeground": shade0,
               "notification.infoBackground": accent5,
-              "notification.infoForeground": shade7,
+              "notification.infoForeground": shade0,
               "notification.warningBackground": accent1,
-              "notification.warningForeground": shade7,
+              "notification.warningForeground": shade0,
               "notification.errorBackground": accent0,
-              "notification.errorForeground": shade7,
+              "notification.errorForeground": shade0,
 
               // Extensions
               "extensionButton.prominentForeground": shade0,
@@ -421,8 +421,8 @@ const renderThemeFiles = colorSets =>
               "extensionButton.prominentHoverBackground": accent4,
 
               // Quick picker
-              "pickerGroup.border": accent7,
-              "pickerGroup.foreground": accent3,
+              "pickerGroup.border": shade5,
+              "pickerGroup.foreground": shade7,
 
               // Integrated terminal colors
               "terminal.background": shade0,
