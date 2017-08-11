@@ -34,13 +34,13 @@ const deepFlatten = arr =>
   arr.reduce(
     (cumulative, inner) =>
       cumulative.concat(Array.isArray(inner) ? deepFlatten(inner) : inner),
-    [],
+    []
   );
 
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['themer-wallpaper-triangles-size'],
+      options['themer-wallpaper-triangles-size']
     );
   } catch (e) {
     return [Promise.reject(e.message)];
@@ -116,8 +116,8 @@ const render = (colors, options) => {
             contents: pngBuffer,
           })),
         ];
-      }),
-    ),
+      })
+    )
   );
 };
 

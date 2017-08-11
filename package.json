@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A wallpaper generator for themer.",
   "main": "index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
   "scripts": {
     "test": "jest"
   },
