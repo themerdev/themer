@@ -75,18 +75,26 @@ const render = (colors, options) => {
         const svgString = `
           <svg width="${size.w}" height="${size.h}" viewBox="0 0 ${size.w} ${size.h}" xmlns="http://www.w3.org/2000/svg">
             <style>
-              .triangle { opacity: 0.2; }
               .triangle--zero { fill: ${shade0}; }
-              .triangle--seven { fill: ${shade7}; }
+              .triangle--seven {
+                fill: ${shade7};
+                opacity: 0.5;
+              }
             </style>
             <defs>
+              <filter id="texture" filterUnits="objectBoundingBox" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="3" result="turbulence" />
+                <feColorMatrix type="saturate" values="0.1" in="turbulence" result="desaturatedTurbulence" />
+                <feBlend in="SourceGraphic" in2="desaturatedTurbulence" mode="multiply" result="multiplied" />
+                <feBlend in="multiplied" in2="desaturatedTurbulence" mode="screen" />
+              </filter>
               <pattern id="triangles" width="24" height="48" patternUnits="userSpaceOnUse">
-                <path class="triangle triangle--zero" d="M0,0 L24,0 L12,24 Z" />
-                <path class="triangle triangle--zero" d="M0,24 L12,24 L0,48 Z" />
-                <path class="triangle triangle--zero" d="M12,24 L24,24 L 24,48 Z" />
-                <path class="triangle triangle--seven" d="M0,0 L12,24 L0,24 Z" />
-                <path class="triangle triangle--seven" d="M24,0 L24,24 L12,24 Z" />
-                <path class="triangle triangle--seven" d="M12,24 L24,48 L0,48 Z" />
+                <path class="triangle--zero" d="M0,0 L24,0 L12,24 Z" />
+                <path class="triangle--zero" d="M0,24 L12,24 L0,48 Z" />
+                <path class="triangle--zero" d="M12,24 L24,24 L 24,48 Z" />
+                <path class="triangle--seven" d="M0,0 L12,24 L0,24 Z" />
+                <path class="triangle--seven" d="M24,0 L24,24 L12,24 Z" />
+                <path class="triangle--seven" d="M12,24 L24,48 L0,48 Z" />
               </pattern>
               <linearGradient id="warm-linear" x1="0" y1="50%" x2="100%" y2="100%">
                 <stop stop-color="${accent7}" offset="0%" />
@@ -104,7 +112,7 @@ const render = (colors, options) => {
             <rect x="0" y="0" width="100%" height="100%" fill="url(#warm-linear)" />
             <rect x="0" y="0" width="100%" height="100%" fill="url(#cool-linear)" />
             <rect x="0" y="0" width="100%" height="100%" fill="url(#accent-linear)" />
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#triangles)" />
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#triangles)" filter="url(#texture)" opacity="0.3" />
           </svg>
         `;
         const basename = `themer-wallpaper-triangles-${colorSet.name}-${size.w}x${size.h}`;
