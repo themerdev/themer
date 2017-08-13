@@ -123,6 +123,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 
 * [themer-wallpaper-block-wave](https://github.com/mjswensen/themer-wallpaper-block-wave)
 * [themer-wallpaper-octagon](https://github.com/mjswensen/themer-wallpaper-octagon)
+* [themer-wallpaper-triangles](https://github.com/mjswensen/themer-wallpaper-triangles)
 
 ### Other
 
