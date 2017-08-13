@@ -4,8 +4,8 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
 "
           <svg width=\\"600\\" height=\\"600\\" viewBox=\\"0 0 600 600\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #282629; }
-              .triangle--seven {
+              .triangle--dark { fill: #282629; }
+              .triangle--light {
                 fill: #FFFCFF;
                 opacity: 0.5;
               }
@@ -18,12 +18,12 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#F553BF\\" offset=\\"0%\\" />
@@ -50,8 +50,8 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
 "
           <svg width=\\"600\\" height=\\"600\\" viewBox=\\"0 0 600 600\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #FFFCFF; }
-              .triangle--seven {
+              .triangle--dark { fill: #FFFCFF; }
+              .triangle--light {
                 fill: #282629;
                 opacity: 0.5;
               }
@@ -64,12 +64,12 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#EE4EB8\\" offset=\\"0%\\" />
@@ -96,8 +96,8 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
 "
           <svg width=\\"2880\\" height=\\"1800\\" viewBox=\\"0 0 2880 1800\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #282629; }
-              .triangle--seven {
+              .triangle--dark { fill: #282629; }
+              .triangle--light {
                 fill: #FFFCFF;
                 opacity: 0.5;
               }
@@ -110,12 +110,12 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#F553BF\\" offset=\\"0%\\" />
@@ -142,8 +142,8 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
 "
           <svg width=\\"2880\\" height=\\"1800\\" viewBox=\\"0 0 2880 1800\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #FFFCFF; }
-              .triangle--seven {
+              .triangle--dark { fill: #FFFCFF; }
+              .triangle--light {
                 fill: #282629;
                 opacity: 0.5;
               }
@@ -156,12 +156,12 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#EE4EB8\\" offset=\\"0%\\" />
@@ -188,8 +188,8 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
 "
           <svg width=\\"750\\" height=\\"1334\\" viewBox=\\"0 0 750 1334\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #282629; }
-              .triangle--seven {
+              .triangle--dark { fill: #282629; }
+              .triangle--light {
                 fill: #FFFCFF;
                 opacity: 0.5;
               }
@@ -202,12 +202,12 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#F553BF\\" offset=\\"0%\\" />
@@ -234,8 +234,8 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
 "
           <svg width=\\"750\\" height=\\"1334\\" viewBox=\\"0 0 750 1334\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #FFFCFF; }
-              .triangle--seven {
+              .triangle--dark { fill: #FFFCFF; }
+              .triangle--light {
                 fill: #282629;
                 opacity: 0.5;
               }
@@ -248,12 +248,12 @@ exports[`themer "triangles" wallpaper when given both a light and a dark theme a
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#EE4EB8\\" offset=\\"0%\\" />
@@ -280,8 +280,8 @@ exports[`themer "triangles" wallpaper when given only a dark theme and when rend
 "
           <svg width=\\"600\\" height=\\"600\\" viewBox=\\"0 0 600 600\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #282629; }
-              .triangle--seven {
+              .triangle--dark { fill: #282629; }
+              .triangle--light {
                 fill: #FFFCFF;
                 opacity: 0.5;
               }
@@ -294,12 +294,12 @@ exports[`themer "triangles" wallpaper when given only a dark theme and when rend
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#F553BF\\" offset=\\"0%\\" />
@@ -326,8 +326,8 @@ exports[`themer "triangles" wallpaper when given only a dark theme and when rend
 "
           <svg width=\\"2880\\" height=\\"1800\\" viewBox=\\"0 0 2880 1800\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #282629; }
-              .triangle--seven {
+              .triangle--dark { fill: #282629; }
+              .triangle--light {
                 fill: #FFFCFF;
                 opacity: 0.5;
               }
@@ -340,12 +340,12 @@ exports[`themer "triangles" wallpaper when given only a dark theme and when rend
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#F553BF\\" offset=\\"0%\\" />
@@ -372,8 +372,8 @@ exports[`themer "triangles" wallpaper when given only a dark theme and when rend
 "
           <svg width=\\"750\\" height=\\"1334\\" viewBox=\\"0 0 750 1334\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #282629; }
-              .triangle--seven {
+              .triangle--dark { fill: #282629; }
+              .triangle--light {
                 fill: #FFFCFF;
                 opacity: 0.5;
               }
@@ -386,12 +386,12 @@ exports[`themer "triangles" wallpaper when given only a dark theme and when rend
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#F553BF\\" offset=\\"0%\\" />
@@ -418,8 +418,8 @@ exports[`themer "triangles" wallpaper when given only a light theme and when ren
 "
           <svg width=\\"600\\" height=\\"600\\" viewBox=\\"0 0 600 600\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #FFFCFF; }
-              .triangle--seven {
+              .triangle--dark { fill: #FFFCFF; }
+              .triangle--light {
                 fill: #282629;
                 opacity: 0.5;
               }
@@ -432,12 +432,12 @@ exports[`themer "triangles" wallpaper when given only a light theme and when ren
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#EE4EB8\\" offset=\\"0%\\" />
@@ -464,8 +464,8 @@ exports[`themer "triangles" wallpaper when given only a light theme and when ren
 "
           <svg width=\\"2880\\" height=\\"1800\\" viewBox=\\"0 0 2880 1800\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #FFFCFF; }
-              .triangle--seven {
+              .triangle--dark { fill: #FFFCFF; }
+              .triangle--light {
                 fill: #282629;
                 opacity: 0.5;
               }
@@ -478,12 +478,12 @@ exports[`themer "triangles" wallpaper when given only a light theme and when ren
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#EE4EB8\\" offset=\\"0%\\" />
@@ -510,8 +510,8 @@ exports[`themer "triangles" wallpaper when given only a light theme and when ren
 "
           <svg width=\\"750\\" height=\\"1334\\" viewBox=\\"0 0 750 1334\\" xmlns=\\"http://www.w3.org/2000/svg\\">
             <style>
-              .triangle--zero { fill: #FFFCFF; }
-              .triangle--seven {
+              .triangle--dark { fill: #FFFCFF; }
+              .triangle--light {
                 fill: #282629;
                 opacity: 0.5;
               }
@@ -524,12 +524,12 @@ exports[`themer "triangles" wallpaper when given only a light theme and when ren
                 <feBlend in=\\"multiplied\\" in2=\\"desaturatedTurbulence\\" mode=\\"screen\\" />
               </filter>
               <pattern id=\\"triangles\\" width=\\"24\\" height=\\"48\\" patternUnits=\\"userSpaceOnUse\\">
-                <path class=\\"triangle--zero\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
-                <path class=\\"triangle--zero\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
-                <path class=\\"triangle--seven\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,0 L24,0 L12,24 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M0,24 L12,24 L0,48 Z\\" />
+                <path class=\\"triangle--dark\\" d=\\"M12,24 L24,24 L 24,48 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M0,0 L12,24 L0,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M24,0 L24,24 L12,24 Z\\" />
+                <path class=\\"triangle--light\\" d=\\"M12,24 L24,48 L0,48 Z\\" />
               </pattern>
               <linearGradient id=\\"warm-linear\\" x1=\\"0\\" y1=\\"50%\\" x2=\\"100%\\" y2=\\"100%\\">
                 <stop stop-color=\\"#EE4EB8\\" offset=\\"0%\\" />

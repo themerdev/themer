@@ -75,8 +75,8 @@ const render = (colors, options) => {
         const svgString = `
           <svg width="${size.w}" height="${size.h}" viewBox="0 0 ${size.w} ${size.h}" xmlns="http://www.w3.org/2000/svg">
             <style>
-              .triangle--zero { fill: ${shade0}; }
-              .triangle--seven {
+              .triangle--dark { fill: ${shade0}; }
+              .triangle--light {
                 fill: ${shade7};
                 opacity: 0.5;
               }
@@ -89,12 +89,12 @@ const render = (colors, options) => {
                 <feBlend in="multiplied" in2="desaturatedTurbulence" mode="screen" />
               </filter>
               <pattern id="triangles" width="24" height="48" patternUnits="userSpaceOnUse">
-                <path class="triangle--zero" d="M0,0 L24,0 L12,24 Z" />
-                <path class="triangle--zero" d="M0,24 L12,24 L0,48 Z" />
-                <path class="triangle--zero" d="M12,24 L24,24 L 24,48 Z" />
-                <path class="triangle--seven" d="M0,0 L12,24 L0,24 Z" />
-                <path class="triangle--seven" d="M24,0 L24,24 L12,24 Z" />
-                <path class="triangle--seven" d="M12,24 L24,48 L0,48 Z" />
+                <path class="triangle--dark" d="M0,0 L24,0 L12,24 Z" />
+                <path class="triangle--dark" d="M0,24 L12,24 L0,48 Z" />
+                <path class="triangle--dark" d="M12,24 L24,24 L 24,48 Z" />
+                <path class="triangle--light" d="M0,0 L12,24 L0,24 Z" />
+                <path class="triangle--light" d="M24,0 L24,24 L12,24 Z" />
+                <path class="triangle--light" d="M12,24 L24,48 L0,48 Z" />
               </pattern>
               <linearGradient id="warm-linear" x1="0" y1="50%" x2="100%" y2="100%">
                 <stop stop-color="${accent7}" offset="0%" />
