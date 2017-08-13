@@ -10,7 +10,7 @@ Install this module wherever you have `themer` installed:
 
     npm install themer-wallpaper-block-wave
 
-Then pass `themer-vim` as a `-t` (`--template`) arg to `themer`:
+Then pass `themer-wallpaper-block-wave` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-wallpaper-block-wave -o gen
 
