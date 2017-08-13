@@ -1,6 +1,6 @@
 {
   "name": "themer-colors-default",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A default color set for themer.",
   "main": "lib/index.js",
   "engines": {
