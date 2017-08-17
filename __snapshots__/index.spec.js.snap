@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themer Alfred.app theme template should render properly 1`] = `
+"{
+  \\"alfredtheme\\": {
+    \\"result\\": {
+      \\"textSpacing\\": 6,
+      \\"subtext\\": {
+        \\"size\\": 12,
+        \\"colorSelected\\": \\"#847E85FF\\",
+        \\"font\\": \\"System Light\\",
+        \\"color\\": \\"#A29DA3FF\\"
+      },
+      \\"shortcut\\": {
+        \\"size\\": 16,
+        \\"colorSelected\\": \\"#474247FF\\",
+        \\"font\\": \\"System\\",
+        \\"color\\": \\"#E0DCE0FF\\"
+      },
+      \\"backgroundSelected\\": \\"#26C99EFF\\",
+      \\"text\\": {
+        \\"size\\": 18,
+        \\"colorSelected\\": \\"#282629FF\\",
+        \\"font\\": \\"System Light\\",
+        \\"color\\": \\"#FFFCFFFF\\"
+      },
+      \\"iconPaddingHorizontal\\": 12,
+      \\"paddingVertical\\": 12,
+      \\"iconSize\\": 36
+    },
+    \\"search\\": {
+      \\"paddingVertical\\": 8,
+      \\"background\\": \\"#4742477F\\",
+      \\"spacing\\": 10,
+      \\"text\\": {
+        \\"size\\": 22,
+        \\"colorSelected\\": \\"#66BFFFFF\\",
+        \\"font\\": \\"System\\",
+        \\"color\\": \\"#FFFCFFFF\\"
+      },
+      \\"backgroundSelected\\": \\"#F553BFFF\\"
+    },
+    \\"window\\": {
+      \\"color\\": \\"#282629CC\\",
+      \\"paddingHorizontal\\": 10,
+      \\"width\\": 560,
+      \\"borderPadding\\": 0,
+      \\"borderColor\\": \\"#28262900\\",
+      \\"blur\\": 15,
+      \\"roundness\\": 2,
+      \\"paddingVertical\\": 10
+    },
+    \\"credit\\": \\"Themer\\",
+    \\"separator\\": {
+      \\"color\\": \\"#28262900\\",
+      \\"thickness\\": 0
+    },
+    \\"scrollbar\\": {
+      \\"color\\": \\"#FFD24AFF\\",
+      \\"thickness\\": 4
+    },
+    \\"name\\": \\"Themer Dark\\"
+  }
+}"
+`;
+
+exports[`themer Alfred.app theme template should render properly 2`] = `
+"{
+  \\"alfredtheme\\": {
+    \\"result\\": {
+      \\"textSpacing\\": 6,
+      \\"subtext\\": {
+        \\"size\\": 12,
+        \\"colorSelected\\": \\"#A29DA3FF\\",
+        \\"font\\": \\"System Light\\",
+        \\"color\\": \\"#847E85FF\\"
+      },
+      \\"shortcut\\": {
+        \\"size\\": 16,
+        \\"colorSelected\\": \\"#E0DCE0FF\\",
+        \\"font\\": \\"System\\",
+        \\"color\\": \\"#474247FF\\"
+      },
+      \\"backgroundSelected\\": \\"#1FC598FF\\",
+      \\"text\\": {
+        \\"size\\": 18,
+        \\"colorSelected\\": \\"#FFFCFFFF\\",
+        \\"font\\": \\"System Light\\",
+        \\"color\\": \\"#282629FF\\"
+      },
+      \\"iconPaddingHorizontal\\": 12,
+      \\"paddingVertical\\": 12,
+      \\"iconSize\\": 36
+    },
+    \\"search\\": {
+      \\"paddingVertical\\": 8,
+      \\"background\\": \\"#E0DCE07F\\",
+      \\"spacing\\": 10,
+      \\"text\\": {
+        \\"size\\": 22,
+        \\"colorSelected\\": \\"#53A6E1FF\\",
+        \\"font\\": \\"System\\",
+        \\"color\\": \\"#282629FF\\"
+      },
+      \\"backgroundSelected\\": \\"#EE4EB8FF\\"
+    },
+    \\"window\\": {
+      \\"color\\": \\"#FFFCFFCC\\",
+      \\"paddingHorizontal\\": 10,
+      \\"width\\": 560,
+      \\"borderPadding\\": 0,
+      \\"borderColor\\": \\"#FFFCFF00\\",
+      \\"blur\\": 15,
+      \\"roundness\\": 2,
+      \\"paddingVertical\\": 10
+    },
+    \\"credit\\": \\"Themer\\",
+    \\"separator\\": {
+      \\"color\\": \\"#FFFCFF00\\",
+      \\"thickness\\": 0
+    },
+    \\"scrollbar\\": {
+      \\"color\\": \\"#EEBA21FF\\",
+      \\"thickness\\": 4
+    },
+    \\"name\\": \\"Themer Light\\"
+  }
+}"
+`;

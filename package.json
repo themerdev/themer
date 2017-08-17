@@ -7,5 +7,9 @@
     "test": "jest"
   },
   "author": "mjswensen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "themer-colors-default": "^1.0.3"
+  }
 }
