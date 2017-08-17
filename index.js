@@ -32,9 +32,9 @@ const render = (colors, options) => {
                 textSpacing: 6,
                 subtext: {
                   size: 12,
-                  colorSelected: `${shade2}FF`,
+                  colorSelected: `${shade3}FF`,
                   font: 'System Light',
-                  color: `${shade5}FF`,
+                  color: `${shade4}FF`,
                 },
                 shortcut: {
                   size: 16,
@@ -55,7 +55,7 @@ const render = (colors, options) => {
               },
               search: {
                 paddingVertical: 8,
-                background: `${shade0}00`,
+                background: `${shade1}7F`,
                 spacing: 10,
                 text: {
                   size: 22,
@@ -66,7 +66,7 @@ const render = (colors, options) => {
                 backgroundSelected: `${accent7}FF`,
               },
               window: {
-                color: `${shade0}FF`,
+                color: `${shade0}CC`,
                 paddingHorizontal: 10,
                 width: 560,
                 borderPadding: 0,
@@ -81,7 +81,7 @@ const render = (colors, options) => {
                 thickness: 0,
               },
               scrollbar: {
-                color: `${accent7}FF`,
+                color: `${accent2}FF`,
                 thickness: 4,
               },
               name: `Themer ${colorSet.name === 'dark' ? 'Dark' : 'Light'}`,
