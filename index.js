@@ -49,13 +49,13 @@ const render = (colors, options) => {
                   font: 'System Light',
                   color: `${shade7}FF`,
                 },
-                iconPaddingHorizontal: 12,
-                paddingVertical: 12,
+                iconPaddingHorizontal: 6,
+                paddingVertical: 6,
                 iconSize: 36,
               },
               search: {
                 paddingVertical: 8,
-                background: `${shade1}7F`,
+                background: `${shade1}FF`,
                 spacing: 10,
                 text: {
                   size: 22,

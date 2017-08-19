@@ -24,13 +24,13 @@ exports[`themer Alfred.app theme template should render properly 1`] = `
         \\"font\\": \\"System Light\\",
         \\"color\\": \\"#FFFCFFFF\\"
       },
-      \\"iconPaddingHorizontal\\": 12,
-      \\"paddingVertical\\": 12,
+      \\"iconPaddingHorizontal\\": 6,
+      \\"paddingVertical\\": 6,
       \\"iconSize\\": 36
     },
     \\"search\\": {
       \\"paddingVertical\\": 8,
-      \\"background\\": \\"#4742477F\\",
+      \\"background\\": \\"#474247FF\\",
       \\"spacing\\": 10,
       \\"text\\": {
         \\"size\\": 22,
@@ -88,13 +88,13 @@ exports[`themer Alfred.app theme template should render properly 2`] = `
         \\"font\\": \\"System Light\\",
         \\"color\\": \\"#282629FF\\"
       },
-      \\"iconPaddingHorizontal\\": 12,
-      \\"paddingVertical\\": 12,
+      \\"iconPaddingHorizontal\\": 6,
+      \\"paddingVertical\\": 6,
       \\"iconSize\\": 36
     },
     \\"search\\": {
       \\"paddingVertical\\": 8,
-      \\"background\\": \\"#E0DCE07F\\",
+      \\"background\\": \\"#E0DCE0FF\\",
       \\"spacing\\": 10,
       \\"text\\": {
         \\"size\\": 22,
