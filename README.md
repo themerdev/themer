@@ -128,6 +128,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 ### Other
 
 * [themer-slack](https://github.com/mjswensen/themer-slack)
+* [themer-alfred](https://github.com/mjswensen/themer-alfred)
 
 ### Create your own template
 
