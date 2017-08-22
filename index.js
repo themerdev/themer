@@ -32,7 +32,7 @@ const render = (colors, options) => {
                 textSpacing: 6,
                 subtext: {
                   size: 12,
-                  colorSelected: `${shade3}FF`,
+                  colorSelected: `${shade1}FF`,
                   font: 'System Light',
                   color: `${shade4}FF`,
                 },
@@ -55,7 +55,7 @@ const render = (colors, options) => {
               },
               search: {
                 paddingVertical: 8,
-                background: `${shade1}FF`,
+                background: `${shade2}7F`,
                 spacing: 10,
                 text: {
                   size: 22,
@@ -82,7 +82,7 @@ const render = (colors, options) => {
               },
               scrollbar: {
                 color: `${accent2}FF`,
-                thickness: 4,
+                thickness: 2,
               },
               name: `Themer ${colorSet.name === 'dark' ? 'Dark' : 'Light'}`,
             },

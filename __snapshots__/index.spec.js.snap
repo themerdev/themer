@@ -7,7 +7,7 @@ exports[`themer Alfred.app theme template should render properly 1`] = `
       \\"textSpacing\\": 6,
       \\"subtext\\": {
         \\"size\\": 12,
-        \\"colorSelected\\": \\"#847E85FF\\",
+        \\"colorSelected\\": \\"#474247FF\\",
         \\"font\\": \\"System Light\\",
         \\"color\\": \\"#A29DA3FF\\"
       },
@@ -30,7 +30,7 @@ exports[`themer Alfred.app theme template should render properly 1`] = `
     },
     \\"search\\": {
       \\"paddingVertical\\": 8,
-      \\"background\\": \\"#474247FF\\",
+      \\"background\\": \\"#6560667F\\",
       \\"spacing\\": 10,
       \\"text\\": {
         \\"size\\": 22,
@@ -57,7 +57,7 @@ exports[`themer Alfred.app theme template should render properly 1`] = `
     },
     \\"scrollbar\\": {
       \\"color\\": \\"#FFD24AFF\\",
-      \\"thickness\\": 4
+      \\"thickness\\": 2
     },
     \\"name\\": \\"Themer Dark\\"
   }
@@ -71,7 +71,7 @@ exports[`themer Alfred.app theme template should render properly 2`] = `
       \\"textSpacing\\": 6,
       \\"subtext\\": {
         \\"size\\": 12,
-        \\"colorSelected\\": \\"#A29DA3FF\\",
+        \\"colorSelected\\": \\"#E0DCE0FF\\",
         \\"font\\": \\"System Light\\",
         \\"color\\": \\"#847E85FF\\"
       },
@@ -94,7 +94,7 @@ exports[`themer Alfred.app theme template should render properly 2`] = `
     },
     \\"search\\": {
       \\"paddingVertical\\": 8,
-      \\"background\\": \\"#E0DCE0FF\\",
+      \\"background\\": \\"#C1BCC27F\\",
       \\"spacing\\": 10,
       \\"text\\": {
         \\"size\\": 22,
@@ -121,7 +121,7 @@ exports[`themer Alfred.app theme template should render properly 2`] = `
     },
     \\"scrollbar\\": {
       \\"color\\": \\"#EEBA21FF\\",
-      \\"thickness\\": 4
+      \\"thickness\\": 2
     },
     \\"name\\": \\"Themer Light\\"
   }
