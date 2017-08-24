@@ -3,6 +3,9 @@
   "version": "1.0.2",
   "description": "An Alfred.app theme generator for themer.",
   "main": "index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
   "scripts": {
     "test": "jest"
   },
