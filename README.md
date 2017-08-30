@@ -110,6 +110,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 * [themer-hyper](https://github.com/mjswensen/themer-hyper)
 * [themer-iterm](https://github.com/mjswensen/themer-iterm)
 * [themer-terminal](https://github.com/mjswensen/themer-terminal)
+* [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
 
 ### Editors/IDEs
 
