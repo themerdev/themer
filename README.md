@@ -14,7 +14,7 @@ Then pass `themer-wallpaper-block-wave` as a `-t` (`--template`) arg to `themer`
 
     themer -c my-colors.js -t themer-wallpaper-block-wave -o gen
 
-`themer-wallpaper-block-wave` will generate SVG and PNG wallpapers to the output directory (`gen/` in this example).
+`themer-wallpaper-block-wave` will generate SVG wallpapers to the output directory (`gen/` in this example). (You can then convert them to a bitmap format, if necessary, [using Chrome](https://umaar.com/dev-tips/156-element-screenshot/) or other tools.)
 
 ### Default resolutions
 
@@ -32,12 +32,3 @@ By default, `themer-wallpaper-block-wave` will output wallpapers at the followin
 to which you would pass `<width>x<height>`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
     themer -c my-colors.js -t themer-wallpaper-block-wave --themer-wallpaper-block-wave-size 1024x768 --themer-wallpaper-block-wave-size 320x960 -o gen
-
-## Previews
-
-The following are rendered using themer's default color set (mjswensen/themer-colors-default) and the default resolutions:
-
-![dark desktop](/assets/desktop-dark.png)
-![light desktop](/assets/desktop-light.png)
-![dark device](/assets/device-dark.png)
-![light device](/assets/device-light.png)

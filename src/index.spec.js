@@ -1,5 +1,3 @@
-jest.mock('svg2png', () => (sourceBuffer) => Promise.resolve(sourceBuffer));
-
 import { render } from './index';
 import { colors } from 'themer-colors-default';
 
@@ -15,8 +13,7 @@ describe('themer "block wave" wallpaper', () => {
         it(`should return ${totalDefaultFiles} files to write`, async () => {
           const files = await Promise.all(promises);
           expect(files.length).toBe(totalDefaultFiles);
-          expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(totalDefaultFiles / 2);
-          expect(files.filter(file => /\.png/.test(file.name)).length).toBe(totalDefaultFiles / 2);
+          expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(totalDefaultFiles);
         });
 
         it('should not contain "undefined" in the SVG output', async () => {
@@ -28,14 +25,13 @@ describe('themer "block wave" wallpaper', () => {
 
       });
 
-      describe('and when rendering a given resolution', () => {
+      describe('and when rendering a custom resolution', () => {
         const promises = render(colors, { 'themer-wallpaper-block-wave-size': '600x600' });
 
         it(`should return ${totalDefaultFiles / 2} files to write`, async () => {
           const files = await Promise.all(promises);
           expect(files.length).toBe(totalDefaultFiles / 2);
-          expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(totalDefaultFiles / 4);
-          expect(files.filter(file => /\.png/.test(file.name)).length).toBe(totalDefaultFiles / 4);
+          expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(totalDefaultFiles / 2);
         });
 
         it('should not contain "undefined" in the SVG output', async () => {
@@ -51,8 +47,8 @@ describe('themer "block wave" wallpaper', () => {
 
   };
 
-  test('when given both a light and a dark theme', colors, 8);
-  test('when given only a dark theme', { dark: colors.dark }, 4);
-  test('when given only a light theme', { light: colors.light }, 4);
+  test('when given both a light and a dark theme', colors, 4);
+  test('when given only a dark theme', { dark: colors.dark }, 2);
+  test('when given only a light theme', { light: colors.light }, 2);
 
 });

@@ -1,5 +1,4 @@
 import weightedRandom from './weighted-random';
-import svg2png from 'svg2png';
 
 const defaultBlockSize = 36;
 
@@ -95,9 +94,10 @@ export const render = (colors, options) => {
         }
       }
       return { size: size, blocks: blocks };
-    }).map(svgData => {
-      const svgString = `
-        <svg xmlns="http://www.w3.org/2000/svg" style="background-color: ${colorSet.colors.shade0};" width="${svgData.size.w}" height="${svgData.size.h}" viewBox="0 0 ${svgData.size.w} ${svgData.size.h}">
+    }).map(svgData => Promise.resolve({
+      name: `themer-wallpaper-block-wave-${colorSet.name}-${svgData.size.w}x${svgData.size.h}.svg`,
+      contents: Buffer.from(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="${svgData.size.w}" height="${svgData.size.h}" viewBox="0 0 ${svgData.size.w} ${svgData.size.h}">
           <defs>
             <linearGradient id="overlay" x1="1" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="${colorSet.colors.shade0}"/>
@@ -112,17 +112,12 @@ export const render = (colors, options) => {
               </feMerge>
             </filter>
           </defs>
+          <rect x="0" y="0" width="${svgData.size.w}" height="${svgData.size.h}" fill="${colorSet.colors.shade0}" />
           ${svgData.blocks.map(block => `<rect x="${block.x}" y="${block.y}" width="${block.w}" height="${block.h}" fill="${block.c}" rx="2" ry="2" ${block.g ? 'filter="url(#glow)"' : ''} />`).join('\n')}
           <rect x="0" y="0" width="${svgData.size.w}" height="${svgData.size.h}" fill="url(#overlay)"/>
         </svg>
-      `;
-      const basename = `themer-wallpaper-block-wave-${colorSet.name}-${svgData.size.w}x${svgData.size.h}`;
-      const svgBuffer = Buffer.from(svgString, 'utf8');
-      return [
-        Promise.resolve({ name: `${basename}.svg`, contents: svgBuffer }),
-        svg2png(svgBuffer).then(pngBuffer => ({ name: `${basename}.png`, contents: pngBuffer })),
-      ];
-    })
+      `, 'utf8'),
+    }))
   ));
 
 };
