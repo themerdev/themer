@@ -2,7 +2,7 @@
 
 [![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-block-wave.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-block-wave)
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set [(mjswensen/themer-colors-default)](https://github.com/mjswensen/themer-colors-default):
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([mjswensen/themer-colors-default](https://github.com/mjswensen/themer-colors-default)):
 
 ![desktop dark](https://cdn.rawgit.com/mjswensen/themer-wallpaper-block-wave/e64f5545b760f0c3882ac21d108fa6ba00174140/assets/desktop-dark.svg)
 ![desktop light](https://cdn.rawgit.com/mjswensen/themer-wallpaper-block-wave/e64f5545b760f0c3882ac21d108fa6ba00174140/assets/desktop-light.svg)
