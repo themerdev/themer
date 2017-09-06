@@ -25,9 +25,6 @@
     "themer-colors-default": "^1.0.1",
     "watch": "^1.0.1"
   },
-  "dependencies": {
-    "svg2png": "^4.1.0"
-  },
   "repository": {
     "url": "git@github.com:mjswensen/themer-wallpaper-octagon.git",
     "type": "git"
