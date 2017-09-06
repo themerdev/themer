@@ -16,7 +16,7 @@ Then pass `themer-wallpaper-triangles` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-wallpaper-triangles -o gen
 
-`themer-wallpaper-triangles` will generate SVG and PNG wallpapers to the output directory (`gen/` in this example).
+`themer-wallpaper-triangles` will generate SVG wallpapers to the output directory (`gen/` in this example).
 
 ### Default resolutions
 

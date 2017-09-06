@@ -1,5 +1,3 @@
-jest.mock('svg2png', () => sourceBuffer => Promise.resolve(sourceBuffer));
-
 const {render} = require('./index');
 const {colors} = require('themer-colors-default');
 
@@ -13,10 +11,7 @@ describe('themer "triangles" wallpaper', () => {
           Promise.all(promises).then(files => {
             expect(files.length).toBe(totalDefaultFiles);
             expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(
-              totalDefaultFiles / 2
-            );
-            expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
-              totalDefaultFiles / 2
+              totalDefaultFiles
             );
             done();
           });
@@ -41,10 +36,7 @@ describe('themer "triangles" wallpaper', () => {
           Promise.all(promises).then(files => {
             expect(files.length).toBe(totalDefaultFiles / 2);
             expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(
-              totalDefaultFiles / 4
-            );
-            expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
-              totalDefaultFiles / 4
+              totalDefaultFiles / 2
             );
             done();
           });
@@ -62,7 +54,7 @@ describe('themer "triangles" wallpaper', () => {
     });
   };
 
-  test('when given both a light and a dark theme', colors, 8);
-  test('when given only a dark theme', {dark: colors.dark}, 4);
-  test('when given only a light theme', {light: colors.light}, 4);
+  test('when given both a light and a dark theme', colors, 4);
+  test('when given only a dark theme', {dark: colors.dark}, 2);
+  test('when given only a light theme', {light: colors.light}, 2);
 });
