@@ -15,5 +15,19 @@
   "devDependencies": {
     "jest": "^21.0.1",
     "themer-colors-default": "^1.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-xcode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-xcode/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-xcode#readme",
+  "keywords": [
+    "themer",
+    "Xcode",
+    "theme",
+    "syntax"
+  ]
 }
