@@ -8,14 +8,16 @@
   },
   "author": "mjswensen",
   "repository": {
-    "url": "git@github.com:mjswensen/themer.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer.git",
     "type": "git"
   },
   "license": "MIT",
   "jest": {
     "rootDir": "lib"
   },
-  "bin": "./bin/themer.js",
+  "bin": {
+    "themer": "./bin/themer.js"
+  },
   "scripts": {
     "build": "eslint src && babel --out-dir lib src",
     "start": "watch 'npm run test' src",
@@ -35,5 +37,22 @@
     "eslint": "^3.13.1",
     "jest": "^18.1.0",
     "watch": "^1.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "themer",
+    "theme",
+    "editor",
+    "ide",
+    "syntax",
+    "slack",
+    "wallpaper",
+    "terminal"
+  ]
 }
