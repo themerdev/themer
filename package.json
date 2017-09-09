@@ -8,7 +8,7 @@
   },
   "author": "mjswensen",
   "repository": {
-    "url": "git@github.com:mjswensen/themer-vim.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-vim.git",
     "type": "git"
   },
   "license": "MIT",
@@ -31,5 +31,19 @@
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-vim/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-vim#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "vim",
+    "theme",
+    "colorscheme"
+  ]
 }
