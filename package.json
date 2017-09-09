@@ -1,6 +1,6 @@
 {
   "name": "themer-alfred",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An Alfred.app theme generator for themer.",
   "main": "index.js",
   "engines": {
