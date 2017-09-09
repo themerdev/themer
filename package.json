@@ -14,5 +14,19 @@
   "devDependencies": {
     "jest": "^20.0.4",
     "themer-colors-default": "^1.0.3"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-alfred.git"
+  },
+  "keywords": [
+    "themer",
+    "alfred",
+    "theme"
+  ],
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-alfred/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-alfred#readme"
 }
