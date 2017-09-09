@@ -1,7 +1,5 @@
 # themer-colors-polar-ice [![Travis](https://img.shields.io/travis/mjswensen/themer-colors-polar-ice.svg)](https://travis-ci.org/mjswensen/themer-colors-polar-ice)
 
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-colors-polar-ice.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-colors-polar-ice)
-
 A chilly color set for [themer](https://github.com/mjswensen/themer).
 
 Here's an example of `themer-colors-polar-ice` in [vim](https://github.com/mjswensen/themer-vim) and [iTerm](https://github.com/mjswensen/themer-iterm):
@@ -21,3 +19,7 @@ Install this module wherever you have `themer` installed:
 Then pass `themer-colors-polar-ice` as a `-c` (`--colors`) arg to `themer`:
 
     themer -c themer-colors-polar-ice ...
+
+## Sponsor
+
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-colors-polar-ice.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-colors-polar-ice)
