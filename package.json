@@ -36,5 +36,21 @@
   "dependencies": {
     "babel-runtime": "^6.23.0"
   },
-  "repository": "git@github.com:mjswensen/themer-atom-syntax.git"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-atom-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-atom-syntax/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-atom-syntax#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "themer",
+    "atom",
+    "syntax",
+    "theme"
+  ]
 }
