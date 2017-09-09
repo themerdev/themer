@@ -26,10 +26,23 @@
     "watch": "^1.0.1"
   },
   "repository": {
-    "url": "git@github.com:mjswensen/themer-wallpaper-block-wave.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-wallpaper-block-wave.git",
     "type": "git"
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-wallpaper-block-wave/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-wallpaper-block-wave#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "wallpaper",
+    "block-wave"
+  ]
 }
