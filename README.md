@@ -119,6 +119,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 * [themer-vim](https://github.com/mjswensen/themer-vim)
 * [themer-vim-lightline](https://github.com/mjswensen/themer-vim-lightline)
 * [themer-vscode](https://github.com/mjswensen/themer-vscode)
+* [themer-xcode](https://github.com/mjswensen/themer-xcode)
 
 ### Wallpapers
 
