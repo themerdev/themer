@@ -8,7 +8,7 @@
   },
   "author": "mjswensen",
   "repository": {
-    "url": "git@github.com:mjswensen/themer-colors-default.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-colors-default.git",
     "type": "git"
   },
   "license": "MIT",
@@ -27,5 +27,19 @@
     "eslint": "^3.12.2",
     "jest": "^17.0.3",
     "watch": "^1.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-default/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-default#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ]
 }
