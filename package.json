@@ -7,7 +7,7 @@
     "node": ">=6.11"
   },
   "repository": {
-    "url": "git@github.com:mjswensen/themer-hyper.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-hyper.git",
     "type": "git"
   },
   "author": "mjswensen",
@@ -36,5 +36,17 @@
   },
   "peerDependencies": {
     "themer": "^2.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-hyper/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-hyper#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "themer",
+    "hyper",
+    "theme"
+  ]
 }
