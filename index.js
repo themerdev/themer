@@ -36,7 +36,7 @@ const render = colors => {
       accent7,
     } = colorSet.colors;
     return Promise.resolve({
-      name: `themer-xcode-${colorSet.name}.dvtcolortheme`,
+      name: `Themer ${_.capitalize(colorSet.name)}.dvtcolortheme`,
       contents: Buffer.from(
         `<?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

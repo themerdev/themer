@@ -18,9 +18,7 @@ describe('render', () => {
     Promise.all(render(colors)).then(files => {
       expect(files.length).toBe(2);
       files.forEach(file => {
-        expect(/themer-xcode-(dark|light)\.dvtcolortheme/.test(file.name)).toBe(
-          true
-        );
+        expect(/Themer (Dark|Light)\.dvtcolortheme/.test(file.name)).toBe(true);
         expect(file.contents.toString('utf8')).toMatchSnapshot();
       });
       done();
