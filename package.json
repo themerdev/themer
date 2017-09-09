@@ -32,5 +32,21 @@
   "dependencies": {
     "babel-runtime": "^6.23.0"
   },
-  "repository": "git@github.com:mjswensen/themer-slack.git"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-slack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-slack/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-slack#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "themer",
+    "slack",
+    "sidebar",
+    "theme"
+  ]
 }
