@@ -25,7 +25,21 @@
     "watch": "^1.0.1"
   },
   "repository": {
-    "url": "git@github.com:mjswensen/themer-colors-night-sky.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-colors-night-sky.git",
     "type": "git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-night-sky/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-night-sky#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ]
 }
