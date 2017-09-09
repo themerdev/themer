@@ -31,5 +31,25 @@
   },
   "peerDependencies": {
     "themer": "^2.1.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-vscode.git"
+  },
+  "keywords": [
+    "themer",
+    "vs-code",
+    "code",
+    "theme",
+    "color-theme",
+    "visual-studio-code"
+  ],
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-vscode/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-vscode#readme"
 }
