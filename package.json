@@ -26,10 +26,23 @@
     "watch": "^1.0.1"
   },
   "repository": {
-    "url": "git@github.com:mjswensen/themer-wallpaper-octagon.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-wallpaper-octagon.git",
     "type": "git"
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-wallpaper-octagon/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-wallpaper-octagon#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "wallpaper",
+    "octagon"
+  ]
 }
