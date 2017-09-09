@@ -1,7 +1,5 @@
 # themer-vim [![Travis](https://img.shields.io/travis/mjswensen/themer-vim.svg)](https://travis-ci.org/mjswensen/themer-vim)
 
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim)
-
 A vim theme template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
@@ -19,3 +17,7 @@ Then pass `themer-vim` as a `-t` (`--template`) arg to `themer`:
 Finally, set the colorscheme in your .vimrc:
 
     colo ThemerVim
+
+## Sponsor
+
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim)
