@@ -24,5 +24,22 @@
     "jest": "^19.0.2",
     "watch": "^1.0.2"
   },
-  "repository": "git@github.com:mjswensen/themer-colors-one.git"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-colors-one.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-one/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-one#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ]
 }
