@@ -1,7 +1,5 @@
 # themer-hyper [![Travis](https://img.shields.io/travis/mjswensen/themer-hyper.svg)](https://travis-ci.org/mjswensen/themer-hyper)
 
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-hyper.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-hyper)
-
 A [Hyper.app](https://hyper.is/) plugin generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
@@ -27,3 +25,7 @@ Finally, edit `~/.hyper.js` and add the package to the `localPlugins` array:
       'themer-hyper-dark'
     ],
     ...
+
+## Sponsor
+
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-hyper.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-hyper)
