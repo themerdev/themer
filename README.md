@@ -6,8 +6,6 @@
 
 # themer [![Travis](https://img.shields.io/travis/mjswensen/themer.svg)](https://travis-ci.org/mjswensen/themer)
 
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer)
-
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), and [desktop/device wallpapers](#wallpapers).
 
 ![visual description](/assets/themer-description.png)
@@ -27,6 +25,7 @@
   * [Create your own template](#create-your-own-template)
 * [About](#about)
 * [Themer GUI](#themer-gui)
+* [Sponsor](#sponsor)
 
 ## Installation
 
@@ -173,3 +172,7 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 ## Themer GUI
 
 If you'd prefer to develop your themes visually (and with a tight feedback loop), check out [`themer`'s GUI](https://github.com/mjswensen/themer-gui).
+
+## Sponsor
+
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer)
