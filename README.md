@@ -1,7 +1,5 @@
 # themer-atom-syntax [![Travis](https://img.shields.io/travis/mjswensen/themer-atom-syntax.svg)](https://travis-ci.org/mjswensen/themer-atom-syntax)
 
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-atom-syntax.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-atom-syntax)
-
 An Atom syntax theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
@@ -23,3 +21,7 @@ To install the packages to Atom, use the `apm link` command:
     apm link themer-light-syntax/
 
 Finally, open/reload Atom and select "Themer Dark" or "Themer Light" in the list of available syntax themes.
+
+## Sponsor
+
+[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-atom-syntax.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-atom-syntax)
