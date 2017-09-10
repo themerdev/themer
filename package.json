@@ -18,5 +18,15 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjswensen/themer-wallpaper-triangles.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-wallpaper-triangles/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-wallpaper-triangles#readme",
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "wallpaper",
+    "triangles"
+  ]
 }
