@@ -2,6 +2,8 @@
 
 A [themer](https://github.com/mjswensen/themer) color set based on the [Lucidchart editor](https://lucidchart.com/demo).
 
+![Preview](/assets/preview.png)
+
 ## Installation & usage
 
 Install this module wherever you have `themer` installed:
