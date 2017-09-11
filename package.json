@@ -1,0 +1,29 @@
+{
+  "name": "themer-colors-lucid",
+  "version": "1.0.0",
+  "description": "A color set for themer based on the Lucidchart editor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-colors-lucid.git"
+  },
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "lucid",
+    "theme"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-lucid/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-lucid#readme",
+  "devDependencies": {
+    "jest": "^21.0.2"
+  }
+}

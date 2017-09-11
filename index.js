@@ -1,5 +1,4 @@
 exports.colors = {
-
   dark: {
     accent0: '#FF8E7D',
     accent1: '#FFC36D',
@@ -18,7 +17,6 @@ exports.colors = {
     shade6: '#E6E6E6',
     shade7: '#FFFFFF',
   },
-
   light: {
     accent0: '#CB2735',
     accent1: '#F28C00',
@@ -37,5 +35,4 @@ exports.colors = {
     shade6: '#505C6A',
     shade7: '#3D4752',
   },
-
 };
