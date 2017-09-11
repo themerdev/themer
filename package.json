@@ -25,5 +25,6 @@
   "homepage": "https://github.com/mjswensen/themer-colors-lucid#readme",
   "devDependencies": {
     "jest": "^21.0.2"
-  }
+  },
+  "dependencies": {}
 }
