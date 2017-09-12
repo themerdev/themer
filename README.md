@@ -76,6 +76,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 | [themer-colors-night-sky](https://github.com/mjswensen/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-night-sky-dark-full.svg) | (dark only) |
 | [themer-colors-one](https://github.com/mjswensen/themer-colors-one) | ![themer-colors-one dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-one-dark-full.svg) | ![themer-colors-one light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-one-light-full.svg) |
 | [themer-colors-polar-ice](https://github.com/mjswensen/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-polar-ice-dark-full.svg) | ![themer-colors-polar-ice light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-polar-ice-light-full.svg) |
+| [themer-colors-lucid](https://github.com/mjswensen/themer-colors-lucid) | ![themer-colors-lucid dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-lucid-dark-full.svg) | ![themer-colors-lucid light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-lucid-light-full.svg) |
 
 ### Create your own color set
 
