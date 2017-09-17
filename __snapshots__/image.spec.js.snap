@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`color pixel renderer should render a single-pixel PNG image buffer of the given color 1`] = `"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAklEQVR4AewaftIAAAALSURBVGNgaGj4DwADhAIA8DXq4gAAAABJRU5ErkJggg=="`;
