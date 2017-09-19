@@ -1,6 +1,8 @@
 const path = require('path');
+const {pickBy} = require('lodash');
 const {render} = require('./index');
 const {colors} = require('themer-colors-default');
+const {version} = require('./package.json');
 
 describe('Chrome theme generator', () => {
   it('should render a directory containing a manifest.json', done => {
@@ -10,6 +12,19 @@ describe('Chrome theme generator', () => {
       expect(dirnames.length).toBe(2);
       expect(dirnames).toContain('Themer Light');
       expect(dirnames).toContain('Themer Dark');
+      done();
+    });
+  });
+  it('should render properly formatted manifest files', done => {
+    const promisedFiles = render(colors);
+    Promise.all(promisedFiles).then(files => {
+      files.forEach(file => {
+        const contents = JSON.parse(file.contents);
+        expect(contents.version).toBe(version);
+        expect(
+          pickBy(contents, (value, key) => key !== 'version')
+        ).toMatchSnapshot();
+      });
       done();
     });
   });
