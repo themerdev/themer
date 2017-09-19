@@ -1,26 +1,25 @@
 const path = require('path');
-const {capitalize, flattenDeep, mapValues} = require('lodash');
+const {capitalize, mapValues} = require('lodash');
 const Color = require('color');
 const {version} = require('./package.json');
-const {colorPixel} = require('./image');
 
-const formatColorSet = colors => mapValues(colors, hex => Color(hex));
+const formatColorSet = colors =>
+  mapValues(colors, hex => Color(hex).rgb().array());
 
 const themeName = colorSet => `Themer ${colorSet.name}`;
 const themeDirectory = themeName;
 
-const images = {
-  theme_frame: 'frame.png',
-  theme_frame_inactive: 'frame-inactive.png',
-  theme_frame_incognito: 'frame-incognito.png',
-  theme_frame_incognito_inactive: 'frame-incognito-inactive.png',
-  theme_toolbar: 'toolbar.png',
-  theme_tab_background: 'tab-background.png',
-  theme_tab_background_incognito: 'tab-background-incognito.png',
-};
-
-const renderManifest = colorSet =>
-  Promise.resolve({
+const renderManifest = colorSet => {
+  const {
+    shade0,
+    shade1,
+    shade2,
+    shade3,
+    shade4,
+    shade6,
+    shade7,
+  } = colorSet.colors;
+  return Promise.resolve({
     name: path.join(themeDirectory(colorSet), 'manifest.json'),
     contents: Buffer.from(
       JSON.stringify(
@@ -29,9 +28,20 @@ const renderManifest = colorSet =>
           manifest_version: 2,
           name: themeName(colorSet),
           theme: {
-            images,
-            colors: {},
-            tints: {},
+            colors: {
+              frame: colorSet.isDark ? shade0 : shade1,
+              frame_inactive: colorSet.isDark ? shade1 : shade0,
+              frame_incognito: colorSet.isDark ? shade3 : shade4,
+              frame_incognito_inactive: colorSet.isDark ? shade4 : shade3,
+              toolbar: colorSet.isDark ? shade1 : shade0,
+              tab_text: shade7,
+              tab_background_text: shade4,
+              bookmark_text: shade6,
+              ntp_background: shade0,
+              ntp_text: shade6,
+              ntp_section: shade2,
+              ntp_section_text: shade7,
+            },
           },
         },
         null,
@@ -40,25 +50,15 @@ const renderManifest = colorSet =>
       'utf8'
     ),
   });
-
-const renderImages = colorSet => [
-  colorPixel(colorSet.colors.shade0).then(pixel => ({
-    name: path.join(themeDirectory(colorSet), images.theme_frame),
-    contents: pixel,
-  })),
-];
+};
 
 const render = colors => {
   const colorSets = Object.keys(colors).map(key => ({
     name: capitalize(key),
     colors: formatColorSet(colors[key]),
+    isDark: key === 'dark',
   }));
-  return flattenDeep(
-    colorSets.map(colorSet => [
-      renderManifest(colorSet),
-      renderImages(colorSet),
-    ])
-  );
+  return colorSets.map(colorSet => renderManifest(colorSet));
 };
 
 module.exports = {render};

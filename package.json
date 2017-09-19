@@ -23,8 +23,7 @@
   "homepage": "https://github.com/mjswensen/themer-chrome#readme",
   "dependencies": {
     "color": "^2.0.0",
-    "lodash": "^4.17.4",
-    "node-png": "^0.4.3"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "jest": "^21.1.0",
