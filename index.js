@@ -16,6 +16,7 @@ const renderManifest = colorSet => {
     shade2,
     shade3,
     shade4,
+    shade5,
     shade6,
     shade7,
   } = colorSet.colors;
@@ -35,7 +36,7 @@ const renderManifest = colorSet => {
               frame_incognito_inactive: colorSet.isDark ? shade4 : shade3,
               toolbar: colorSet.isDark ? shade1 : shade0,
               tab_text: shade7,
-              tab_background_text: shade4,
+              tab_background_text: shade5,
               bookmark_text: shade6,
               ntp_background: shade0,
               ntp_text: shade6,
