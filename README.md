@@ -16,8 +16,8 @@ Then pass `themer-chrome` as a `-t` (`--template`) arg to `themer`:
 
 To install your generated theme:
 
-1. Launch Chrome and go to [chrome://extensions](chrome://extensions).
+1. Launch Chrome and go to `chrome://extensions`.
 2. Check the "Developer mode" checkbox at the top.
 3. Click the "Load unpacked extension..." button and choose your `Themer Dark` or `Themer Light` directory.
 
-(To reset or remove your theme, visit [chrome://settings](chrome://settings) and click "Reset to Default" in the "Appearance" section.)
+(To reset or remove your theme, visit `chrome://settings` and click "Reset to Default" in the "Appearance" section.)
