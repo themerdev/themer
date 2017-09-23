@@ -77,6 +77,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 | [themer-colors-one](https://github.com/mjswensen/themer-colors-one) | ![themer-colors-one dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-one-dark-full.svg) | ![themer-colors-one light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-one-light-full.svg) |
 | [themer-colors-polar-ice](https://github.com/mjswensen/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-polar-ice-dark-full.svg) | ![themer-colors-polar-ice light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-polar-ice-light-full.svg) |
 | [themer-colors-lucid](https://github.com/mjswensen/themer-colors-lucid) | ![themer-colors-lucid dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-lucid-dark-full.svg) | ![themer-colors-lucid light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-lucid-light-full.svg) |
+| [themer-colors-finger-paint](https://github.com/mjswensen/themer-colors-finger-paint) | ![themer-colors-finger-paint dark preview](https://themer.mjswensen.com/color-set-previews/themer-colors-finger-paint-dark-full.svg) | ![themer-colors-finger-paint light preview](https://themer.mjswensen.com/color-set-previews/themer-colors-finger-paint-light-full.svg) |
 
 ### Create your own color set
 
