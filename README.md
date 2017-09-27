@@ -31,17 +31,21 @@
 
 _Don't love the command-line? Check out [the GUI](https://github.com/mjswensen/themer-gui)._
 
-    mkdir my-dotfiles && cd my-dotfiles
-    npm install themer
+```sh
+mkdir my-dotfiles && cd my-dotfiles
+npm install themer
+```
 
 If you do not keep your dotfiles under version control, you can simply install themer globally with `npm -g install themer`.
 
 ## Usage
 
-    themer --colors <file OR npm module name> \
-      --template <file OR npm module name> \
-      [--template <file OR npm module name>...] \
-      --out <directory>
+```sh
+themer --colors <file OR npm module name> \
+  --template <file OR npm module name> \
+  [--template <file OR npm module name>...] \
+  --out <directory>
+```
 
 `themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [themer-colors-default](https://github.com/mjswensen/themer-colors-default)). The same is true for templates.
 
@@ -49,20 +53,26 @@ If you do not keep your dotfiles under version control, you can simply install t
 
 Say you wanted to generate a vim theme and desktop background using `themer`'s default color set. First, install `themer`, the color set, and the templates:
 
-    cd my-dotfiles
-    npm install themer themer-colors-default themer-vim themer-wallpaper-block-wave
+```sh
+cd my-dotfiles
+npm install themer themer-colors-default themer-vim themer-wallpaper-block-wave
+```
 
 Then edit your `package.json`:
 
-    ...
-    "scripts: {
-      "build": "themer -c themer-colors-default -t themer-vim -t themer-wallpaper-block-wave -o gen"
-    },
-    ...
+```json
+  ...
+  "scripts": {
+    "build": "themer -c themer-colors-default -t themer-vim -t themer-wallpaper-block-wave -o gen"
+  },
+  ...
+```
 
 Then run your new script:
 
-    npm run build
+```sh
+npm run build
+```
 
 Now check the `gen/` folder for your generated themes. Here's the result:
 
@@ -83,20 +93,22 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 
 To create your own color set, create a JavaScript file that exports a `colors` object, like so:
 
-    exports.colors = {
-      dark: { // A color set can have both light and dark variants, but doesn't have to.
+```js
+exports.colors = {
+  dark: { // A color set can have both light and dark variants, but doesn't have to.
 
-        accent0: '#FF4050', // accent0-7 should be the main accent colors of your theme.
-        ...
-        accent7: '#F553BF',
+    accent0: '#FF4050', // accent0-7 should be the main accent colors of your theme.
+    ...
+    accent7: '#F553BF',
 
-        shade0: '#282629', // shade0-7 should be shades of the same hue, with shade0 being the darkest and shade7 being the lightest.
-        ...
-        shade7: '#FFFCFF'
+    shade0: '#282629', // shade0-7 should be shades of the same hue, with shade0 being the darkest and shade7 being the lightest.
+    ...
+    shade7: '#FFFCFF'
 
-      },
-      light: { ... }, // same as above, except that shade0 should be the lightest and shade7 should be the darkest.
-    };
+  },
+  light: { ... }, // same as above, except that shade0 should be the lightest and shade7 should be the darkest.
+};
+```
 
 At this point, your JS file can be passed to the `--colors` argument of `themer`.
 
@@ -139,25 +151,27 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 
 To create your own template, create a JavaScript file that exports a `render` function, like so:
 
-    exports.render = function(colors, options) {
+```js
+exports.render = function(colors, options) {
 
-      // colors is an object that will have one or both keys: 'light' and
-      // 'dark', each being an object with keys 'accent0' through 'accent7'
-      // and 'shade0' through 'shade7'.
+  // colors is an object that will have one or both keys: 'light' and
+  // 'dark', each being an object with keys 'accent0' through 'accent7'
+  // and 'shade0' through 'shade7'.
 
-      // options is an object representing the original command-line args
-      // passed to themer. This allows you to add special arguments that
-      // will apply only to your template. An example of this is allowing a
-      // themer user to specify custom resolutions for rendering a wallpaper.
+  // options is an object representing the original command-line args
+  // passed to themer. This allows you to add special arguments that
+  // will apply only to your template. An example of this is allowing a
+  // themer user to specify custom resolutions for rendering a wallpaper.
 
-      // This function should return an array of Promises, each Promise
-      // resolving to an object of the following structure:
-      // {
-      //   name: '<the name of the file to be written>', // can include subdirectories, too
-      //   contents: <a Buffer of the contents of the file to be written>,
-      // }
+  // This function should return an array of Promises, each Promise
+  // resolving to an object of the following structure:
+  // {
+  //   name: '<the name of the file to be written>', // can include subdirectories, too
+  //   contents: <a Buffer of the contents of the file to be written>,
+  // }
 
-    };
+};
+```
 
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
