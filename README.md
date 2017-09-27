@@ -2,6 +2,10 @@
 
 A warm and friendly [themer](https://github.com/mjswensen/themer) color set.
 
+![dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-dark-swatch.svg)
+
+![light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-light-swatch.svg)
+
 ## Installation & usage
 
 Install this module wherever you have `themer` installed:
