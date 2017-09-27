@@ -133,6 +133,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 * [themer-slack](https://github.com/mjswensen/themer-slack)
 * [themer-alfred](https://github.com/mjswensen/themer-alfred)
 * [themer-chrome](https://github.com/mjswensen/themer-chrome)
+* [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
 
 ### Create your own template
 
