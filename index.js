@@ -2,8 +2,8 @@ const { mapValues, capitalize } = require('lodash');
 const xml = require('xml');
 const Color = require('color');
 
-const formatColors = colors => mapValues(colors, hex =>
-  Color(hex).rgb().string());
+const formatColors = colors =>
+  mapValues(colors, hex => Color(hex).rgb().string());
 
 const renderTheme = colorSet => Promise.resolve({
   name: `Themer ${capitalize(colorSet.name)}.bbColorScheme`,
@@ -166,7 +166,7 @@ const renderTheme = colorSet => Promise.resolve({
           }
         ],
       },
-      { indent: '  ' },
+      { indent: '  ' }
     )}
   `, 'utf8'),
 })
