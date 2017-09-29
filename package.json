@@ -1,0 +1,33 @@
+{
+  "name": "themer-bbedit",
+  "version": "1.0.0",
+  "description": "A BBEdit theme generator for themer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-bbedit.git"
+  },
+  "keywords": [
+    "themer",
+    "bbedit",
+    "theme"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-bbedit/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-bbedit#readme",
+  "dependencies": {
+    "color": "^2.0.0",
+    "lodash": "^4.17.4",
+    "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "themer-colors-default": "^1.0.5"
+  }
+}
