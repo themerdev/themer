@@ -3,7 +3,10 @@ const xml = require('xml');
 const Color = require('color');
 
 const formatColors = colors =>
-  mapValues(colors, hex => Color(hex).rgb().string());
+  mapValues(colors, hex => {
+    const [r, g, b] = Color(hex).rgb().array().map(c => c / 255);
+    return `rgba(${r}, ${g}, ${b}, 1.00)`;
+  });
 
 const renderTheme = colorSet => Promise.resolve({
   name: `Themer ${capitalize(colorSet.name)}.bbColorScheme`,
