@@ -7,7 +7,7 @@ describe('render', () => {
       expect(files.length).toBe(2);
       files.forEach(file => {
         expect(/Themer (Dark|Light)\.bbColorScheme/.test(file.name)).toBe(true);
-        // expect(file.contents.toString('utf8')).toMatchSnapshot();
+        expect(file.contents.toString('utf8')).toMatchSnapshot();
       });
       done();
     });
