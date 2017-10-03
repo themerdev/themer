@@ -1,0 +1,31 @@
+{
+  "name": "themer-conemu",
+  "version": "1.0.0",
+  "description": "A ConEmu theme generator for themer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-conemu.git"
+  },
+  "keywords": [
+    "themer",
+    "conemu",
+    "theme"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-conemu/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-conemu#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "themer-colors-default": "^1.0.5"
+  }
+}
