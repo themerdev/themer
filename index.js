@@ -1,19 +1,17 @@
 const { mapValues } = require('lodash');
 
 const formatColors = colors =>
-  mapValues(colors, hex => hex.replace('#', '00'));
+  mapValues(colors, hex => {
+    const elements = hex.replace('#', '').match(/.{2}/g);
+    elements.push('00');
+    elements.reverse();
+    return elements.join('');
+  });
 
 const renderTheme = colorSet => Promise.resolve({
   name: `themer-${colorSet.name}.xml`,
   contents: Buffer.from(
     `
-      <value name="Name" type="string" data="themer-${colorSet.name}" />
-      <value name="ExtendColors" type="hex" data="00" />
-      <value name="ExtendColorIdx" type="hex" data="10" />
-      <value name="TextColorIdx" type="hex" data="10" />
-      <value name="BackColorIdx" type="hex" data="10" />
-      <value name="PopTextColorIdx" type="hex" data="10" />
-      <value name="PopBackColorIdx" type="hex" data="10" />
       <value name="ColorTable00" type="dword" data="${colorSet.colors.shade0}" />
       <value name="ColorTable01" type="dword" data="${colorSet.colors.accent5}" />
       <value name="ColorTable02" type="dword" data="${colorSet.colors.accent3}" />
