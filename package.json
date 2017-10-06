@@ -1,0 +1,28 @@
+{
+  "name": "themer-atom-ui",
+  "version": "1.0.0",
+  "description": "An Atom UI theme generator for themer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-atom-ui.git"
+  },
+  "keywords": [
+    "themer",
+    "atom",
+    "ui",
+    "theme"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-atom-ui/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-atom-ui#readme",
+  "dependencies": {
+    "@std/esm": "^0.11.2"
+  }
+}
