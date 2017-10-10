@@ -6,5 +6,3 @@ export default () => `
 .status-removed  { color: @text-color-error; }
 .status-renamed  { color: @text-color-info; }
 `;
-
-// TODO: check for comments in other files
