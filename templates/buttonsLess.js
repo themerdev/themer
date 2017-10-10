@@ -28,11 +28,12 @@ export default () => `
 .btn.btn-error   { .btn-color(@background-color-error); }
 
 .btn-color(@bg) {
-  color: @text-color-selected;
+  color: @base-background-color;
   background-color: @bg;
   &:hover,
   &:focus {
     background-color: lighten(@bg, 4%);
+    color: @base-background-color;
   }
   &:active {
     background-color: darken(@bg, 4%);

@@ -1,28 +1,28 @@
 export default (colors) => `
 // Text Colors
-@text-color:           hsl(0,0%,66%);
-@text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color:           ${colors.shade6};
+@text-color-subtle:    ${colors.shade3};
+@text-color-highlight: ${colors.shade7};
+@text-color-selected:  ${colors.shade7};
 
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
+@text-color-info:    ${colors.accent5};
+@text-color-success: ${colors.accent3};
+@text-color-warning: ${colors.accent1};
+@text-color-error:   ${colors.accent0};
 
 // Background colors
-@background-color-info:    hsl(208, 100%, 50%);
-@background-color-success: hsl(160,  70%, 36%);
-@background-color-warning: hsl(32,   60%, 50%);
-@background-color-error:   hsl(0,    70%, 50%);
+@background-color-info:    ${colors.accent5};
+@background-color-success: ${colors.accent3};
+@background-color-warning: ${colors.accent1};
+@background-color-error:   ${colors.accent0};
 
-@background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@base-background-color, 5%);
+@background-color-highlight: ${colors.shade1};
+@background-color-selected:  ${colors.shade2};
+@app-background-color:       @base-background-color;
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: ${colors.shade0};
+@base-border-color:     ${colors.shade1};
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -34,35 +34,35 @@ export default (colors) => `
 @tool-panel-background-color: @base-background-color;
 @tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color: lighten(@base-background-color, 4%);
-@inset-panel-border-color:     @base-border-color;
+@inset-panel-background-color: ${colors.shade1};
+@inset-panel-border-color:     ${colors.shade2};
 
-@panel-heading-background-color: lighten(@base-background-color, 4%);
+@panel-heading-background-color: ${colors.shade1};
 @panel-heading-border-color:     @base-border-color;
 
-@overlay-background-color: lighten(@base-background-color, 5%);
+@overlay-background-color: ${colors.shade1};
 @overlay-border-color:     @base-border-color;
 
-@button-background-color:          lighten(@base-background-color, 10%);
-@button-background-color-hover:    lighten(@button-background-color, 12%);
+@button-background-color:          ${colors.shade1};
+@button-background-color-hover:    ${colors.shade2};
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:    @base-background-color;
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
+@tab-background-color-active: @base-border-color;
 @tab-border-color:            @base-border-color;
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: ${colors.accent5};
+@ui-site-color-2: ${colors.accent3};
+@ui-site-color-3: ${colors.accent1};
+@ui-site-color-4: ${colors.accent7};
+@ui-site-color-5: ${colors.accent2};
 
 // Sizes
 @font-size: 12px;
