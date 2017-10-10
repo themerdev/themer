@@ -1,4 +1,8 @@
 export default (colors) => `
+// Base colors
+@base-background-color: ${colors.shade0};
+@base-border-color:     ${colors.shade1};
+
 // Text Colors
 @text-color:           ${colors.shade6};
 @text-color-subtle:    ${colors.shade3};
@@ -19,10 +23,6 @@ export default (colors) => `
 @background-color-highlight: ${colors.shade1};
 @background-color-selected:  ${colors.shade2};
 @app-background-color:       @base-background-color;
-
-// Base colors
-@base-background-color: ${colors.shade0};
-@base-border-color:     ${colors.shade1};
 
 // Component colors
 @pane-item-background-color: @base-background-color;
