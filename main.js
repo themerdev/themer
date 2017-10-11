@@ -20,14 +20,14 @@ import uiVariablesLess from './templates/uiVariablesLess';
 
 const flatten = arr => [].concat.apply([], arr);
 
-const getDirectory = name => `themer-atom-ui-${name}`;
+const getDirectory = name => `themer-ui-${name}`;
 
 export const render = colors =>
   flatten(
     Object.keys(colors).map(name => [
       Promise.resolve({
         name: path.join(getDirectory(name), 'package.json'),
-        contents: Buffer.from(packageJson(), 'utf8'),
+        contents: Buffer.from(packageJson(name), 'utf8'),
       }),
       Promise.resolve({
         name: path.join(getDirectory(name), 'index.less'),
