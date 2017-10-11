@@ -20,7 +20,7 @@ import uiVariablesLess from './templates/uiVariablesLess';
 
 const flatten = arr => [].concat.apply([], arr);
 
-const getDirectory = name => `themer-ui-${name}`;
+const getDirectory = name => `themer-${name}-ui`;
 
 export const render = colors =>
   flatten(
