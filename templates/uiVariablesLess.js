@@ -75,7 +75,7 @@ export default (colors) => `
 @component-icon-size: 16px;
 @component-line-height: 25px;
 
-@tab-height: 30px;
+@tab-height: 36px;
 
 // Misc
 @component-border-radius: 2px;

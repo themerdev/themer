@@ -26,10 +26,10 @@ export default () => `
     }
 
     .close-icon:hover {
-      color: @text-color-selected;
+      color: @text-color-error;
     }
     &.active .close-icon:hover {
-      color: @text-color;
+      color: @text-color-error;
     }
 
     &.is-dragging {
