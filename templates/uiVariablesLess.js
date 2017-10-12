@@ -55,7 +55,7 @@ export default (colors) => `
 @input-background-color: @app-background-color;
 @input-border-color:     @base-border-color;
 
-@tool-panel-background-color: @base-background-color;
+@tool-panel-background-color: @shade1;
 @tool-panel-border-color:     @base-border-color;
 
 @inset-panel-background-color: @shade1;
@@ -67,8 +67,8 @@ export default (colors) => `
 @overlay-background-color: @shade1;
 @overlay-border-color:     @base-border-color;
 
-@button-background-color:          @shade1;
-@button-background-color-hover:    @shade2;
+@button-background-color:          @shade2;
+@button-background-color-hover:    @shade3;
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
@@ -92,7 +92,7 @@ export default (colors) => `
 // Sizes
 
 @font-size: 12px;
-@input-font-size: 14px;
+@input-font-size: 12px;
 
 @disclosure-arrow-size: 12px;
 

@@ -6,7 +6,8 @@ atom-text-editor[mini] {
   background-color: @input-background-color;
 
   &.is-focused {
-    background-color: darken(@input-background-color, 5%);
+    background-color: @input-background-color;
+    border: 1px solid @accent4;
   }
 
   .placeholder-text {
