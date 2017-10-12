@@ -83,7 +83,7 @@ export const render = colors =>
       }),
       Promise.resolve({
         name: path.join(getDirectory(name), 'styles', 'text.less'),
-        contents: Buffer.from(textLess, 'utf8'),
+        contents: Buffer.from(textLess(), 'utf8'),
       }),
       Promise.resolve({
         name: path.join(getDirectory(name), 'styles', 'tooltips.less'),

@@ -11,17 +11,18 @@ export default () => `
 .text-warning { color: @text-color-warning; }
 .text-error   { color: @text-color-error; }
 
-.highlight         { .highlight-mixin(@background-color-highlight); }
+.highlight         { .highlight-mixin(@background-color-highlight, @text-color-highlight); }
 .highlight-info    { .highlight-mixin(@background-color-info); }
 .highlight-warning { .highlight-mixin(@background-color-warning); }
 .highlight-error   { .highlight-mixin(@background-color-error); }
 .highlight-success { .highlight-mixin(@background-color-success); }
 
-.highlight-mixin(@color) {
+.highlight-mixin(@bg, @fg: @app-background-color) {
+  font-weight: normal;
   padding: 1px 4px;
-  color: @text-color-highlight;
+  color: @fg;
   border-radius: @component-border-radius;
-  background-color: @color;
+  background-color: @bg;
 }
 
 .background-message {
