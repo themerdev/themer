@@ -1,4 +1,4 @@
-export default (colors) => `
+export default colors => `
 // Themer colors
 
 @accent0: ${colors.accent0};

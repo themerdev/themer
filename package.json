@@ -24,5 +24,10 @@
   "homepage": "https://github.com/mjswensen/themer-atom-ui#readme",
   "dependencies": {
     "@std/esm": "^0.11.2"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "lodash": "^4.17.4",
+    "themer-colors-default": "^1.0.5"
   }
 }
