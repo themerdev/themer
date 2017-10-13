@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render should produce valid compiled CSS 1`] = `
-Object {
-  "css": "body {
+"body {
   font-size: 12px;
   color: #E0DCE0;
   background-color: #282629;
@@ -413,31 +412,11 @@ atom-panel.modal {
 .tree-view .list-item.selected {
   color: #FFFCFF;
 }
-",
-  "imports": Array [
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/base.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/ui-variables.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/buttons.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/editor.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/find-and-replace.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/git.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/key-binding.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/lists.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/panels.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/progress.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/sites.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/status-bar.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/tabs.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/text.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/tooltips.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-dark-ui/styles/tree-view.less",
-  ],
-}
+"
 `;
 
 exports[`render should produce valid compiled CSS 2`] = `
-Object {
-  "css": "body {
+"body {
   font-size: 12px;
   color: #474247;
   background-color: #FFFCFF;
@@ -848,26 +827,7 @@ atom-panel.modal {
 .tree-view .list-item.selected {
   color: #282629;
 }
-",
-  "imports": Array [
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/ui-variables.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/base.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/buttons.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/editor.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/find-and-replace.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/git.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/key-binding.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/lists.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/panels.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/progress.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/sites.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/status-bar.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/tabs.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/text.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/tooltips.less",
-    "/var/folders/zh/mw9qkw5n03vcty7ccvfc471w0000gn/T/1507857467149/themer-light-ui/styles/tree-view.less",
-  ],
-}
+"
 `;
 
 exports[`render should render properly-formatted theme files 1`] = `

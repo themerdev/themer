@@ -71,7 +71,7 @@ describe('render', () => {
       })
       .then(compiledContents => {
         compiledContents.forEach(contents => {
-          expect(contents).toMatchSnapshot();
+          expect(contents.css).toMatchSnapshot();
         });
         done();
       });
