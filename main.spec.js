@@ -1,6 +1,10 @@
 const {render} = require('./index');
 const {pickBy} = require('lodash');
 const path = require('path');
+const os = require('os');
+const fs = require('pn/fs');
+const mkdirp = require('mkdirp-promise');
+const less = require('less');
 const {colors} = require('themer-colors-default');
 
 describe('render', () => {
@@ -34,5 +38,42 @@ describe('render', () => {
       });
       done();
     });
+  });
+
+  it('should produce valid compiled CSS', done => {
+    const tmp = path.join(os.tmpdir(), new Date().valueOf().toString());
+    promisedFiles
+      .then(files =>
+        Promise.all(
+          files.map(file => {
+            const outputFilePath = path.resolve(tmp, file.name);
+            return mkdirp(path.dirname(outputFilePath))
+              .then(() => fs.writeFile(outputFilePath, file.contents))
+              .then(() => outputFilePath);
+          })
+        )
+      )
+      .then(outputFilePaths => {
+        const indexFilePaths = outputFilePaths.filter(outputFilePath =>
+          /index\.less/.test(outputFilePath)
+        );
+        expect(indexFilePaths.length).toBe(2);
+        return Promise.all(
+          indexFilePaths.map(indexFilePath => {
+            return fs.readFile(indexFilePath, 'utf8').then(contents =>
+              less.render(contents, {
+                paths: [path.dirname(indexFilePath)],
+                filename: path.basename(indexFilePath),
+              })
+            );
+          })
+        );
+      })
+      .then(compiledContents => {
+        compiledContents.forEach(contents => {
+          expect(contents).toMatchSnapshot();
+        });
+        done();
+      });
   });
 });
