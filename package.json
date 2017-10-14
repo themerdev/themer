@@ -16,6 +16,9 @@
     "jest": "^21.0.1",
     "themer-colors-default": "^1.0.3"
   },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjswensen/themer-xcode.git"
