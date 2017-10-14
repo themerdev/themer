@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/mjswensen/themer-wallpaper-triangles#readme",
   "dependencies": {},
+  "peerDependencies": {
+    "themer": "^1.0.2||^2"
+  },
   "keywords": [
     "themer",
     "wallpaper",
