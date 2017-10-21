@@ -16,6 +16,8 @@
 * [Usage](#usage)
   * [Example workflow](#example-workflow)
 * [Themer color sets](#themer-color-sets)
+  * [Original color sets](#original-color-sets)
+  * [Ports from third-party themes](#ports-from-third-party-themes)
   * [Create your own color set](#create-your-own-color-set)
 * [Themer templates](#themer-templates)
   * [Terminals](#terminals)
@@ -80,14 +82,22 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 
 ## Themer color sets
 
+### Original color sets
+
 | Name | Dark Preview | Light Preview |
 | --- | --- | --- |
 | [themer-colors-default](https://github.com/mjswensen/themer-colors-default) | ![themer-colors-default dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-dark-swatch.svg) | ![themer-colors-default light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-light-swatch.svg) |
 | [themer-colors-night-sky](https://github.com/mjswensen/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-night-sky-dark-swatch.svg) | (dark only) |
-| [themer-colors-one](https://github.com/mjswensen/themer-colors-one) | ![themer-colors-one dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-dark-swatch.svg) | ![themer-colors-one light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-light-swatch.svg) |
 | [themer-colors-polar-ice](https://github.com/mjswensen/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-dark-swatch.svg) | ![themer-colors-polar-ice light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-light-swatch.svg) |
-| [themer-colors-lucid](https://github.com/mjswensen/themer-colors-lucid) | ![themer-colors-lucid dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-dark-swatch.svg) | ![themer-colors-lucid light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-light-swatch.svg) |
 | [themer-colors-finger-paint](https://github.com/mjswensen/themer-colors-finger-paint) | ![themer-colors-finger-paint dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-dark-swatch.svg) | ![themer-colors-finger-paint light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-light-swatch.svg) |
+
+### Ports from third-party themes
+
+| Name | Dark Preview | Light Preview |
+| --- | --- | --- |
+| [themer-colors-one](https://github.com/mjswensen/themer-colors-one) | ![themer-colors-one dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-dark-swatch.svg) | ![themer-colors-one light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-light-swatch.svg) |
+| [themer-colors-lucid](https://github.com/mjswensen/themer-colors-lucid) | ![themer-colors-lucid dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-dark-swatch.svg) | ![themer-colors-lucid light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-light-swatch.svg) |
+| [themer-colors-solarized](https://github.com/mjswensen/themer-colors-solarized) | ![themer-colors-solarized dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-dark-swatch.svg) | ![themer-colors-solarized light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-light-swatch.svg) |
 
 ### Create your own color set
 
