@@ -1,5 +1,9 @@
 # themer-wallpaper-triangles [![Travis](https://img.shields.io/travis/mjswensen/themer-wallpaper-triangles.svg)](https://travis-ci.org/mjswensen/themer-wallpaper-triangles)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-triangles'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-triangles.svg' />
+</a>
+
 A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview using [themer's default color set](https://github.com/mjswensen/themer-colors-default):
 
 ![dark desktop](https://cdn.rawgit.com/mjswensen/themer-wallpaper-triangles/ecf436f9edd35618c72ff8d944c9814b84809b2c/assets/desktop-dark.svg)
@@ -32,7 +36,3 @@ By default, `themer-wallpaper-triangles` will output wallpapers at the following
 to which you would pass `<width>x<height>`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
     themer -c my-colors.js -t themer-wallpaper-triangles --themer-wallpaper-triangles-size 1024x768 --themer-wallpaper-triangles-size 320x960 -o gen
-
-## Sponsor
-
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-triangles.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-wallpaper-triangles)
