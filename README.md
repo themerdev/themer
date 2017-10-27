@@ -1,5 +1,9 @@
 # themer-vim-lightline [![Travis](https://img.shields.io/travis/mjswensen/themer-vim-lightline.svg)](https://travis-ci.org/mjswensen/themer-vim-lightline)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim-lightline'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim-lightline.svg' />
+</a>
+
 A [lightline.vim](https://github.com/itchyny/lightline.vim) theme template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
@@ -17,7 +21,3 @@ Then pass `themer-vim-lightline` as a `-t` (`--template`) arg to `themer`:
 Finally, set the lightline colorscheme in your `.vimrc` file:
 
     let g:lightline = { 'colorscheme': 'ThemerVimLightline' }
-
-## Sponsor
-
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim-lightline.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vim-lightline)
