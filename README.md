@@ -1,5 +1,9 @@
 # themer-alfred [![Travis](https://img.shields.io/travis/mjswensen/themer-alfred.svg)](https://travis-ci.org/mjswensen/themer-alfred)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-alfred'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-alfred.svg' />
+</a>
+
 An [Alfred.app](https://www.alfredapp.com/) theme generator for [themer](https://github.com/mjswensen/themer).
 
 ![themer Alfred preview](/assets/themer-alfred-preview.png)
@@ -17,7 +21,3 @@ Then pass `themer-alfred` as a `-t` (`--template`) arg to `themer`:
     themer -c my-colors.js -t themer-alfred -o gen
 
 `themer-alfred` will generate a `themer-alfred-dark.alfredappearance` / `themer-alfred-light.alfredappearance` (or both) in your output directory. Simply double-click this file to import your theme into Alfred.
-
-## Sponsor
-
-[![Sponsor](https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-alfred.svg)](https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-alfred)
