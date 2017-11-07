@@ -1,6 +1,6 @@
 {
   "name": "themer-cmd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CMD.exe theme generator for themer.",
   "main": "index.js",
   "scripts": {
