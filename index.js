@@ -16,12 +16,12 @@ const renderTheme = colorSet =>
 
 [HKEY_CURRENT_USER\\Console]
 "ColorTable00"=dword:${colorSet.colors.shade0}
-"ColorTable01"=dword:${colorSet.colors.accent5}
-"ColorTable02"=dword:${colorSet.colors.accent3}
-"ColorTable03"=dword:${colorSet.colors.accent4}
+"ColorTable01"=dword:${colorSet.colors.shade4}
+"ColorTable02"=dword:${colorSet.colors.shade2}
+"ColorTable03"=dword:${colorSet.colors.shade5}
 "ColorTable04"=dword:${colorSet.colors.accent1}
 "ColorTable05"=dword:${colorSet.colors.accent6}
-"ColorTable06"=dword:${colorSet.colors.accent2}
+"ColorTable06"=dword:${colorSet.colors.shade3}
 "ColorTable07"=dword:${colorSet.colors.shade6}
 "ColorTable08"=dword:${colorSet.colors.shade1}
 "ColorTable09"=dword:${colorSet.colors.accent5}
