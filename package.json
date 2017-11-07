@@ -28,5 +28,8 @@
   "devDependencies": {
     "jest": "^21.2.1",
     "themer-colors-default": "^1.0.5"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2"
   }
 }
