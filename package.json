@@ -1,0 +1,29 @@
+{
+  "name": "themer-colors-github-universe",
+  "version": "1.0.0",
+  "description": "A dark color set for themer, based on the GitHub Universe 2017 color palette.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-colors-github-universe.git"
+  },
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "github",
+    "universe"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-github-universe/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-github-universe#readme",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
