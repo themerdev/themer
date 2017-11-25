@@ -1,9 +1,5 @@
 # themer-hyper [![Travis](https://img.shields.io/travis/mjswensen/themer-hyper.svg)](https://travis-ci.org/mjswensen/themer-hyper)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-hyper'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-hyper.svg' />
-</a>
-
 A [Hyper.app](https://hyper.is/) plugin generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
