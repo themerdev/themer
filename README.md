@@ -1,9 +1,5 @@
 # themer-vscode [![Travis](https://img.shields.io/travis/mjswensen/themer-vscode.svg)](https://travis-ci.org/mjswensen/themer-vscode)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vscode'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-vscode.svg' />
-</a>
-
 A VS Code theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
