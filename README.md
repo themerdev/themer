@@ -1,9 +1,5 @@
 # themer-slack [![Travis](https://img.shields.io/travis/mjswensen/themer-slack.svg)](https://travis-ci.org/mjswensen/themer-slack)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-slack'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-slack.svg' />
-</a>
-
 A Slack sidebar theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
