@@ -1,9 +1,5 @@
 # themer-xcode [![Travis](https://img.shields.io/travis/mjswensen/themer-xcode.svg)](https://travis-ci.org/mjswensen/themer-xcode)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-xcode'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-xcode.svg' />
-</a>
-
 An Xcode theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
