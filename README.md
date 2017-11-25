@@ -1,9 +1,5 @@
 # themer-terminal [![Travis](https://img.shields.io/travis/mjswensen/themer-terminal.svg)](https://travis-ci.org/mjswensen/themer-terminal)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-terminal'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-terminal.svg' />
-</a>
-
 A Terminal.app theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Dependencies
