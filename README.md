@@ -1,6 +1,6 @@
 # themer-chrome [![Travis](https://img.shields.io/travis/mjswensen/themer-chrome.svg)](https://travis-ci.org/mjswensen/themer-chrome)
 
-An Chrome theme generator for [themer](https://github.com/mjswensen/themer).
+A Chrome theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
 
