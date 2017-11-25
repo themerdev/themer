@@ -1,9 +1,5 @@
 # themer-colors-polar-ice [![Travis](https://img.shields.io/travis/mjswensen/themer-colors-polar-ice.svg)](https://travis-ci.org/mjswensen/themer-colors-polar-ice)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-colors-polar-ice'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/hHKoUkX4tpsdAzjvSfNXFb22/mjswensen/themer-colors-polar-ice.svg' />
-</a>
-
 A chilly color set for [themer](https://github.com/mjswensen/themer).
 
 Here's an example of `themer-colors-polar-ice` in [vim](https://github.com/mjswensen/themer-vim) and [iTerm](https://github.com/mjswensen/themer-iterm):
