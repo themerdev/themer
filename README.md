@@ -12,6 +12,8 @@ Then pass `themer-atom-syntax` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-atom-syntax -o gen
 
+## Output
+
 `themer-atom-syntax` will generate a `themer-dark-syntax/` or `themer-light-syntax/` directory (or both), depending on the color set you passed to themer, which will contain the files for a syntax theme Atom package.
 
 To install the packages to Atom, use the `apm link` command:
