@@ -12,6 +12,8 @@ Then pass `themer-atom-ui` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-atom-ui -o gen
 
+## Output
+
 `themer-atom-ui` will generate a `themer-dark-ui/` or `themer-light-ui/` directory (or both), depending on the color set you passed to themer, which will contain the files for a UI theme Atom package.
 
 To install the packages to Atom, use the `apm link` command:
