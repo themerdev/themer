@@ -12,6 +12,8 @@ Then pass `themer-vim` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-vim -o gen
 
+## Output
+
 `themer-vim` will generate a `ThemerVim.vim` file, which you should copy (or symlink) to `~/.vim/colors/`.
 
 Finally, set the colorscheme in your .vimrc:
