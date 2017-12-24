@@ -12,6 +12,8 @@ Then pass `themer-hyper` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-hyper -o gen
 
+## Output
+
 `themer-hyper` will generate a `themer-hyper-dark/` or `themer-hyper-light/` directory (or both), depending on which color set you passed to `themer`, which will contain the files for a Hyper theme plugin package.
 
 To install your generated plugin, first symlink the outputted package directory to the Hyper local plugins directory:
