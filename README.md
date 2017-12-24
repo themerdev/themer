@@ -16,4 +16,6 @@ Then pass `themer-alfred` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-alfred -o gen
 
+## Output
+
 `themer-alfred` will generate a `themer-alfred-dark.alfredappearance` / `themer-alfred-light.alfredappearance` (or both) in your output directory. Simply double-click this file to import your theme into Alfred.
