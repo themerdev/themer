@@ -12,6 +12,8 @@ Then pass `themer-vim-lightline` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-vim-lightline -o gen
 
+## Output
+
 `themer-vim-lightline` will generate a `ThemerVimLightline.vim` file, which you should copy (or symlink) to `~/.vim/autoload/lightline/colorscheme/`.
 
 Finally, set the lightline colorscheme in your `.vimrc` file:
