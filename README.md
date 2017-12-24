@@ -12,6 +12,8 @@ Then pass `themer-chrome` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-chrome -o gen
 
+## Output
+
 `themer-chrome` will generate a `Themer Dark` or `Themer Light` directory (or both, depending on the color set you passed to `themer`) in your output path.
 
 To install your generated theme:
