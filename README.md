@@ -12,6 +12,8 @@ Then pass `themer-vscode` as a `-t` (`--template`) argument to `themer`:
 
     themer -c my-colors.js -t themer-vscode -o gen
 
+## Output
+
 `themer-vscode` will generate a directory called `theme-themer-vscode`, which will contain the files for a VS Code theme(s).
 
 To install your generated theme, symlink this directory to your local VS Code extensions directory:
