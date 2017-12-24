@@ -12,6 +12,8 @@ Then pass `themer-conemu` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t themer-conemu -o gen
 
+## Output
+
 `themer-conemu` will generate a `themer-dark.xml` / `themer-light.xml` (or both) in your output directory.
 
 To install your new theme:
