@@ -31,8 +31,8 @@ const renderTheme = colorSet =>
 "ColorTable13"=dword:${colorSet.colors.accent7}
 "ColorTable14"=dword:${colorSet.colors.accent2}
 "ColorTable15"=dword:${colorSet.colors.shade7}
-"ScreenColors"=dword:${colorSet.colors.accent0}
-"PopupColors"=dword:${colorSet.colors.shade0}
+"ScreenColors"=dword:00000007
+"PopupColors"=dword:0000008b
     `,
       'utf8'
     ),

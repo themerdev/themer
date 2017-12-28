@@ -20,8 +20,8 @@ exports[`render should render properly formatted CMD.exe theme .reg file 1`] = `
 \\"ColorTable13\\"=dword:00BF53F5
 \\"ColorTable14\\"=dword:004AD2FF
 \\"ColorTable15\\"=dword:00FFFCFF
-\\"ScreenColors\\"=dword:005040FF
-\\"PopupColors\\"=dword:00292628
+\\"ScreenColors\\"=dword:00000007
+\\"PopupColors\\"=dword:0000008b
     "
 `;
 
@@ -45,7 +45,7 @@ exports[`render should render properly formatted CMD.exe theme .reg file 2`] = `
 \\"ColorTable13\\"=dword:00B84EEE
 \\"ColorTable14\\"=dword:0021BAEE
 \\"ColorTable15\\"=dword:00292628
-\\"ScreenColors\\"=dword:004D3EF0
-\\"PopupColors\\"=dword:00FFFCFF
+\\"ScreenColors\\"=dword:00000007
+\\"PopupColors\\"=dword:0000008b
     "
 `;
