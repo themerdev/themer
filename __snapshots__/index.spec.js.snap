@@ -5,12 +5,12 @@ exports[`render should render properly formatted CMD.exe theme .reg file 1`] = `
 
 [HKEY_CURRENT_USER\\\\Console]
 \\"ColorTable00\\"=dword:00292628
-\\"ColorTable01\\"=dword:00A39DA2
-\\"ColorTable02\\"=dword:00666065
-\\"ColorTable03\\"=dword:00C2BCC1
-\\"ColorTable04\\"=dword:004481F2
+\\"ColorTable01\\"=dword:00FFBF66
+\\"ColorTable02\\"=dword:0035CCA4
+\\"ColorTable03\\"=dword:009EC926
+\\"ColorTable04\\"=dword:005040FF
 \\"ColorTable05\\"=dword:00FA78CC
-\\"ColorTable06\\"=dword:00857E84
+\\"ColorTable06\\"=dword:004AD2FF
 \\"ColorTable07\\"=dword:00E0DCE0
 \\"ColorTable08\\"=dword:00474247
 \\"ColorTable09\\"=dword:00FFBF66
@@ -30,12 +30,12 @@ exports[`render should render properly formatted CMD.exe theme .reg file 2`] = `
 
 [HKEY_CURRENT_USER\\\\Console]
 \\"ColorTable00\\"=dword:00FFFCFF
-\\"ColorTable01\\"=dword:00857E84
-\\"ColorTable02\\"=dword:00C2BCC1
-\\"ColorTable03\\"=dword:00666065
-\\"ColorTable04\\"=dword:003577F3
+\\"ColorTable01\\"=dword:00E1A653
+\\"ColorTable02\\"=dword:002DBD97
+\\"ColorTable03\\"=dword:0098C51F
+\\"ColorTable04\\"=dword:004D3EF0
 \\"ColorTable05\\"=dword:00F065BF
-\\"ColorTable06\\"=dword:00A39DA2
+\\"ColorTable06\\"=dword:0021BAEE
 \\"ColorTable07\\"=dword:00474247
 \\"ColorTable08\\"=dword:00E0DCE0
 \\"ColorTable09\\"=dword:00E1A653
