@@ -6,7 +6,7 @@
 
 # themer [![Travis](https://img.shields.io/travis/mjswensen/themer.svg)](https://travis-ci.org/mjswensen/themer) [![npm](https://img.shields.io/npm/dt/themer.svg)](https://github.com/mjswensen/themer#installation)
 
-`themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), and [desktop/device wallpapers](#wallpapers).
+`themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 
 ![visual description](/assets/themer-description.png)
 
