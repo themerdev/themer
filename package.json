@@ -35,7 +35,9 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjswensen/themer-vscode.git"
