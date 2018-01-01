@@ -136,6 +136,7 @@ I would recommend checking your color set into your dotfiles repo. Once you've f
 * [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
 * [themer-conemu](https://github.com/mjswensen/themer-conemu)
 * [themer-cmd](https://github.com/mjswensen/themer-cmd)
+* [0x52a1/themer-termite](https://github.com/0x52a1/themer-termite)
 
 ### Editors/IDEs
 
