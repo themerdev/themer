@@ -27,15 +27,15 @@
   "dependencies": {
     "minimist": "^1.2.0",
     "mkdirp-promise": "^5.0.1",
-    "pn": "^1.0.0",
-    "rxjs": "^5.3.0"
+    "pn": "^1.1.0",
+    "rxjs": "^5.5.6"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-plugin-transform-object-rest-spread": "^6.19.0",
-    "babel-preset-env": "^1.5.2",
-    "eslint": "^3.13.1",
-    "jest": "^18.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
+    "jest": "^22.0.4",
     "watch": "^1.0.1"
   },
   "bugs": {
