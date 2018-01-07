@@ -13,9 +13,9 @@ describe('Hyper.app theme generator', () => {
     expect(files.filter(file => path.basename(file.name) === 'index.js').length).toBe(2);
   });
 
-  it('should render files without any missing values', async () => {
+  it('should render valid files', async () => {
     const files = await promisedFiles;
-    expect(files.every(file => !/undefined/.test(file.contents.toString('utf8')))).toBe(true);
+    files.forEach(file => expect(file.contents.toString('utf8')).toMatchSnapshot());
   });
 
   it('should provide promised files whose contents are buffers', async () => {

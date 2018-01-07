@@ -13,7 +13,7 @@
   "author": "mjswensen",
   "license": "MIT",
   "jest": {
-    "rootDir": "lib"
+    "rootDir": "src"
   },
   "scripts": {
     "build": "eslint src && babel --out-dir lib src",
