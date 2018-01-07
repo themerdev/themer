@@ -117,7 +117,7 @@ export const render = (colors, options) => {
           <rect x="0" y="0" width="${svgData.size.w}" height="${svgData.size.h}" fill="url(#overlay)"/>
         </svg>
       `, 'utf8'),
-    }))
-  ));
+    })))
+  );
 
 };
