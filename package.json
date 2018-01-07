@@ -1,6 +1,6 @@
 {
   "name": "themer-hyper",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A Hyper.app plugin generator for themer.",
   "main": "lib/index.js",
   "engines": {
