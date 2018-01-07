@@ -18,10 +18,10 @@
     "test": "npm run build && jest"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-env": "^1.5.2",
-    "eslint": "^3.12.2",
-    "jest": "^18.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
+    "jest": "^22.0.4",
     "watch": "^1.0.1"
   },
   "repository": {
