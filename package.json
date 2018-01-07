@@ -18,11 +18,11 @@
     "test": "npm run build && jest"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-env": "^1.5.2",
-    "eslint": "^3.12.2",
-    "jest": "^18.0.0",
-    "themer-colors-default": "^1.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "jest": "^22.0.4",
+    "themer-colors-default": "^1.0.6",
     "watch": "^1.0.1"
   },
   "dependencies": {
