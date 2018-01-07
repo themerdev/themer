@@ -94,8 +94,8 @@ export const render = (colors, options) => {
 
     return Promise.resolve({
       name: `themer-wallpaper-octagon-${colorSet.name}-${size.w}x${size.h}.svg`,
-      contents: Buffer.from(`
-        <svg xmlns="http://www.w3.org/2000/svg" width="${size.w}" height="${size.h}" viewBox="${size.w / -2} ${size.h / -2} ${size.w} ${size.h}">
+      contents: Buffer.from(
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${size.w}" height="${size.h}" viewBox="${size.w / -2} ${size.h / -2} ${size.w} ${size.h}">
           <defs>
             <pattern id="bg" width="${size.s}" height="${size.s}" patternUnits="userSpaceOnUse" patternTransform="rotate(22.5)">
               <path d="${getOctagonPathData(size.s)}" stroke="${colorSet.colors.shade1}" stroke-width="1" fill="none"/>
