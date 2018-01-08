@@ -13,9 +13,21 @@ describe('Hyper.app theme generator', () => {
     expect(files.filter(file => path.basename(file.name) === 'index.js').length).toBe(2);
   });
 
-  it('should render valid files', async () => {
+  it('should render valid JSON to package.json files', async () => {
     const files = await promisedFiles;
-    files.forEach(file => expect(file.contents.toString('utf8')).toMatchSnapshot());
+    files.filter(file => path.basename(file.name) === 'package.json').map(
+      file => JSON.parse(file.contents.toString('utf8'))
+    ).forEach(packageJson => {
+      delete packageJson.version;
+      expect(packageJson).toMatchSnapshot();
+    });
+  });
+
+  it('should render valid plugin files', async () => {
+    const files = await promisedFiles;
+    files.filter(file => path.basename(file.name) !== 'package.json').forEach(
+      file => expect(file.contents.toString('utf8')).toMatchSnapshot()
+    );
   });
 
   it('should provide promised files whose contents are buffers', async () => {
