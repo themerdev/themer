@@ -1,10 +1,13 @@
 import path from 'path';
 import minimist from 'minimist';
+import chalk from 'chalk';
 import themer from './themer';
 
+/* eslint-disable no-console */
 const log = {
-  out: (msg) => { process.stdout.write(`${msg}\n`); },
-  err: (msg) => { process.stderr.write(`${msg}\n`); },
+  out: (msg) => { console.log(msg); },
+  err: (msg) => { console.error(chalk.red(msg)); },
+  info: (msg) => { console.log(chalk.cyan(msg)); },
 };
 
 const args = (parsedArgs => {
@@ -40,5 +43,5 @@ const args = (parsedArgs => {
 themer(args.colors, args.template, args.out, args).subscribe(
   evt => log.out(evt),
   err => { log.err(err); process.exit(1); },
-  () => process.exit(0)
+  () => { log.info('done!'); process.exit(0); },
 );

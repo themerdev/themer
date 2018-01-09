@@ -25,6 +25,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
+    "chalk": "^2.3.0",
     "minimist": "^1.2.0",
     "mkdirp-promise": "^5.0.1",
     "pn": "^1.1.0",

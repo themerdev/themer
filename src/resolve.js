@@ -9,7 +9,7 @@ export default name => new Promise((resolve, reject) => {
       resolve(require.resolve(path.resolve(name)));
     }
     catch(e) {
-      reject(`Unable to resolve ${name}`);
+      reject(`Unable to resolve '${name}'.`);
     }
   }
 });

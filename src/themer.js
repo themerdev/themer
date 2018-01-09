@@ -19,7 +19,10 @@ export default function themer(colorsPackageName, templatePackageNames, outDirNa
           flatten(
             templates.map(
               (template, i) => template.render(colors, extraArgs).map(
-                promisedFile => promisedFile.then(file => ({ file: file, dir: templateNames[i] }))
+                promisedFile =>
+                  promisedFile
+                    .then(file => ({ file: file, dir: templateNames[i] }))
+                    .catch(err => Promise.reject(`${templateNames[i]}: ${err}`))
               )
             )
           )
@@ -39,7 +42,6 @@ export default function themer(colorsPackageName, templatePackageNames, outDirNa
         );
       })
       .then(() => {
-        observer.next('done!');
         observer.complete();
       })
       .catch(e => {
