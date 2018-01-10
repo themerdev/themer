@@ -4,4 +4,7 @@ node_js:
   - "7"
   - "lts/*"
 
-script: npm test
+script:
+  - npm run lint
+  - npm run build
+  - npm run test
