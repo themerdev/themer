@@ -4,7 +4,7 @@
   "description": "Customizable theme generator for editors, terminals, and wallpaper.",
   "main": "lib/themer.js",
   "engines": {
-    "node": ">=6.11"
+    "node": ">=8.9.4"
   },
   "author": "mjswensen",
   "repository": {
@@ -16,7 +16,7 @@
     "themer": "./bin/themer.js"
   },
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint lib",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
@@ -30,9 +30,6 @@
     "rxjs": "^5.5.6"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "eslint": "^4.14.0",
     "jest": "^22.0.4"
   },
