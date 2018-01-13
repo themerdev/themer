@@ -17,7 +17,7 @@
     "themer-colors-default": "^1.0.3"
   },
   "peerDependencies": {
-    "themer": "^1.0.2||^2"
+    "themer": "^1.0.2||^2||^3"
   },
   "repository": {
     "type": "git",
