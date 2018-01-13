@@ -24,8 +24,10 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
+    "color-steps": "^1.0.1",
     "minimist": "^1.2.0",
     "mkdirp-promise": "^5.0.1",
+    "onecolor": "^3.0.5",
     "pn": "^1.1.0",
     "rxjs": "^5.5.6"
   },
