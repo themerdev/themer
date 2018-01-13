@@ -1,6 +1,6 @@
 {
   "name": "themer-iterm",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "iTerm2 theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
