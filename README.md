@@ -19,6 +19,8 @@
   * [Original color sets](#original-color-sets)
   * [Ports from third-party themes](#ports-from-third-party-themes)
   * [Create your own color set](#create-your-own-color-set)
+    * [Color mappings](#color-mappings)
+    * [Tips](#tips)
 * [Themer templates](#themer-templates)
   * [Terminals](#terminals)
   * [Editors/IDEs](#editorsides)
@@ -105,26 +107,81 @@ To create your own color set, create a JavaScript file that exports a `colors` o
 
 ```js
 exports.colors = {
-  dark: { // A color set can have both light and dark variants, but doesn't have to.
 
-    accent0: '#FF4050', // accent0-7 should be the main accent colors of your theme.
-    ...
+  // A color set can have both light and dark variants, but is only required
+  // to have one.
+  dark: {
+
+    // Colors can be defined in any valid CSS format.
+
+    // accent0-7 should be the main accent colors of your theme. See the table
+    // in the "Color mappings" section for how the colors will be used in your
+    // new themes.
+    accent0: '#FF4050',
+    accent1: '#F28144',
+    accent2: '#FFD24A',
+    accent3: '#A4CC35',
+    accent4: '#26C99E',
+    accent5: '#66BFFF',
+    accent6: '#CC78FA',
     accent7: '#F553BF',
 
-    shade0: '#282629', // shade0-7 should be shades of the same hue, with shade0 being the darkest and shade7 being the lightest.
-    ...
+    // shade0-7 should be shades of the same hue, with shade0 being the
+    // background and shade7 being the foreground. If you omit the
+    // intermediate shades (1 through 6), they will be calculated automatically
+    // for you.
+    shade0: '#282629',
+    shade1: '#474247',
+    shade2: '#656066',
+    shade3: '#847E85',
+    shade4: '#A29DA3',
+    shade5: '#C1BCC2',
+    shade6: '#E0DCE0',
     shade7: '#FFFCFF'
 
   },
-  light: { ... }, // same as above, except that shade0 should be the lightest and shade7 should be the darkest.
+
+  // Same as above, except that shade0 should be the lightest and shade7 should
+  // be the darkest.
+  light: { ... },
+
 };
 ```
 
-At this point, your JS file can be passed to the `--colors` argument of `themer`.
+Then pass the path to your JS file to the `--colors` argument of `themer`.
 
-Refer to [themer-colors-default](https://github.com/mjswensen/themer-colors-default) for an example.
+```
+themer -c path/to/my/colors.js ...
+```
 
-I would recommend checking your color set into your dotfiles repo. Once you've fine-tuned it, you might consider publishing it to npm for others to use! (If you do, consider naming your repo starting with `themer-colors-` so that others can easily find it.)
+#### Color mappings
+
+To help you choose colors for your own color set, this is approximately how most `themer` templates will utilize your colors:
+
+| Color Key | Typical Usage |
+| --------- | ------------- |
+| `accent0` | error, VCS deletion |
+| `accent1` | syntax |
+| `accent2` | warning, VCS modification |
+| `accent3` | success, VCS addition |
+| `accent4` | syntax |
+| `accent5` | syntax |
+| `accent6` | syntax, caret/cursor |
+| `accent7` | syntax, special |
+| `shade0` | background color |
+| `shade1` | UI |
+| `shade2` | UI, text selection |
+| `shade3` | UI, code comments |
+| `shade4` | UI |
+| `shade5` | UI |
+| `shade6` | foreground text |
+| `shade7` | foreground text |
+
+#### Tips
+
+* If you omit `shade1` through `shade6`, `themer` will interpolate them automatically for you, using [color-steps](https://github.com/mjswensen/color-steps).
+* `themer` supports any valid CSS color format; that means you can use `chartreuse`, `rgb(127, 255, 0)`, `rgb(50%, 100%, 0%)`, `#7FFF00`, `hsl(90, 100%, 50%)`, etc.
+* I would recommend checking your color set into your dotfiles repo. Once you've fine-tuned it, you might consider publishing it to npm for others to use! (If you do, consider naming your package starting with `themer-colors-` so that others can easily find it.)
 
 ## Themer templates
 
