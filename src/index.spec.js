@@ -19,7 +19,9 @@ describe("render function", () => {
   it("should properly render a package.json file", async () => {
     const files = await promisedFiles;
     const file = files.find(file => /package\.json/.test(file.name));
-    expect(file.contents.toString("utf8")).toMatchSnapshot();
+    const json = JSON.parse(file.contents.toString("utf8"));
+    delete json.version;
+    expect(json).toMatchSnapshot();
   });
 
   it("should properly render a simple README.md file", async () => {
