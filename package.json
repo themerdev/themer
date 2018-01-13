@@ -35,7 +35,7 @@
     "color": "^2.0.1"
   },
   "peerDependencies": {
-    "themer": "^2.1.0"
+    "themer": "^2.1||^3"
   },
   "bugs": {
     "url": "https://github.com/mjswensen/themer-hyper/issues"
