@@ -29,6 +29,6 @@
     "themer-colors-default": "^1.0.5"
   },
   "peerDependencies": {
-    "themer": "^1.0.2||^2"
+    "themer": "^1.0.2||^2||^3"
   }
 }
