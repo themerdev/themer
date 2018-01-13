@@ -1,6 +1,6 @@
 {
   "name": "themer-slack",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A slack sidebar theme template for themer.",
   "main": "lib/index.js",
   "engines": {
