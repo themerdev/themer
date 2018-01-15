@@ -1,0 +1,30 @@
+{
+  "name": "themer-wallpaper-trianglify",
+  "version": "1.0.0",
+  "description": "A themer template for generating wallpaper using trianglify.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "themer",
+    "wallpaper",
+    "trianglify"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "dependencies": {
+    "trianglify": "^1.2.0"
+  },
+  "devDependencies": {
+    "jest": "^22.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-wallpaper-trianglify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-wallpaper-trianglify/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-wallpaper-trianglify#readme"
+}
