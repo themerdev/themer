@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const getSizes = opt => {
   if (opt) {
     const unparsedSizes = Array.isArray(opt) ? opt : [opt];
@@ -34,7 +36,7 @@ const getVariances = opt => {
     return unparsedVariances.map(unparsedVariance => {
       try {
         const variance = parseFloat(unparsedVariance);
-        assert(variance >=0 && variance <= 1);
+        assert(variance >= 0 && variance <= 1);
         return variance;
       } catch(e) {
         throw new Error(`Invalid variance: '${unparsedVariance}'. Variance must be a float between 0 and 1 (inclusive).`);
