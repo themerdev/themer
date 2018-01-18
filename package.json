@@ -17,7 +17,8 @@
     "trianglify": "^1.2.0"
   },
   "devDependencies": {
-    "jest": "^22.1.0"
+    "jest": "^22.1.0",
+    "themer-colors-default": "^1.0.6"
   },
   "repository": {
     "type": "git",
