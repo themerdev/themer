@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A themer template for generating wallpaper using trianglify.",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.9.4"
+  },
   "scripts": {
     "test": "jest"
   },
