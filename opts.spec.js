@@ -4,7 +4,6 @@ describe('themer-wallpaper-trianglify options', () => {
   it('should return proper defaults if none provided', () => {
     expect(getSizes()).toMatchSnapshot();
     expect(getVariances()).toMatchSnapshot();
-    expect(getSeed()).toMatchSnapshot();
   });
   it('should parse a single resolution option', () => {
     expect(getSizes('200x200')).toEqual([{ h: 200, w: 200 }]);
@@ -25,12 +24,5 @@ describe('themer-wallpaper-trianglify options', () => {
     expect(() => getVariances('1.1')).toThrow();
     expect(() => getVariances('-1')).toThrow();
     expect(() => getVariances('foo')).toThrow();
-  });
-  it('should validate and return the seed option untouched', () => {
-    const seed = 'hello';
-    expect(getSeed(seed)).toEqual(seed);
-  });
-  it('should not allow multiple seed options', () => {
-    expect(() => getSeed(['foo', 'bar'])).toThrow();
   });
 });

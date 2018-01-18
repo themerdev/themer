@@ -47,20 +47,7 @@ const getVariances = opt => {
   }
 };
 
-const getSeed = opt => {
-  if (opt) {
-    if (Array.isArray(opt)) {
-      throw new Error('Seed may only be provided once.');
-    } else {
-      return opt;
-    }
-  } else {
-    return null;
-  }
-};
-
 module.exports = {
   getSizes,
   getVariances,
-  getSeed,
 };

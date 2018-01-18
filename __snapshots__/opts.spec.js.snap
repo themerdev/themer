@@ -18,5 +18,3 @@ Array [
   0.75,
 ]
 `;
-
-exports[`themer-wallpaper-trianglify options should return proper defaults if none provided 3`] = `null`;
