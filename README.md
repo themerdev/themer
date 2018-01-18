@@ -211,6 +211,7 @@ To help you choose colors for your own color set, this is approximately how most
 * [themer-wallpaper-block-wave](https://github.com/mjswensen/themer-wallpaper-block-wave)
 * [themer-wallpaper-octagon](https://github.com/mjswensen/themer-wallpaper-octagon)
 * [themer-wallpaper-triangles](https://github.com/mjswensen/themer-wallpaper-triangles)
+* [themer-wallpaper-trianglify](https://github.com/mjswensen/themer-wallpaper-trianglify)
 
 ### Other
 
