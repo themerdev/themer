@@ -1,0 +1,33 @@
+{
+  "name": "themer-colors-nova",
+  "version": "1.0.0",
+  "description": "A themer port of the beautiful Nova color set.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-colors-nova.git"
+  },
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme",
+    "nova"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-nova/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-nova#readme",
+  "dependencies": {
+    "color": "^2.0.1",
+    "nova-colors": "^2.1.5"
+  },
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
+}
