@@ -21,6 +21,7 @@
   * [Create your own color set](#create-your-own-color-set)
     * [Color mappings](#color-mappings)
     * [Tips](#tips)
+  * [Using base16 schemes with Themer](#using-base16-schemes-with-themer)
 * [Themer templates](#themer-templates)
   * [Terminals](#terminals)
   * [Editors/IDEs](#editorsides)
@@ -182,6 +183,16 @@ To help you choose colors for your own color set, this is approximately how most
 * If you omit `shade1` through `shade6`, `themer` will interpolate them automatically for you, using [color-steps](https://github.com/mjswensen/color-steps).
 * `themer` supports any valid CSS color format; that means you can use `chartreuse`, `rgb(127, 255, 0)`, `rgb(50%, 100%, 0%)`, `#7FFF00`, `hsl(90, 100%, 50%)`, etc.
 * I would recommend checking your color set into your dotfiles repo. Once you've fine-tuned it, you might consider publishing it to npm for others to use! (If you do, consider naming your package starting with `themer-colors-` so that others can easily find it.)
+
+### Using base16 schemes with Themer
+
+In place of a themer color set file or npm package, you can also provide `themer` with any base16 scheme YAML file.
+
+```
+themer --colors path/to/base16-scheme.yml ...
+```
+
+Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-repositories) for a list of base16 schemes.
 
 ## Themer templates
 
