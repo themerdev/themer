@@ -101,6 +101,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 | [themer-colors-lucid](https://github.com/mjswensen/themer-colors-lucid) | ![themer-colors-lucid dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-dark-swatch.svg) | ![themer-colors-lucid light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-light-swatch.svg) |
 | [themer-colors-solarized](https://github.com/mjswensen/themer-colors-solarized) | ![themer-colors-solarized dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-dark-swatch.svg) | ![themer-colors-solarized light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-light-swatch.svg) |
 | [themer-colors-github-universe](https://github.com/mjswensen/themer-colors-github-universe) | ![themer-colors-github-universe preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-github-universe-dark-swatch.svg) | (dark only) |
+| [themer-colors-nova](https://github.com/mjswensen/themer-colors-nova) | ![themer-colors-nova preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-nova-dark-swatch.svg) | (dark only) |
 
 ### Create your own color set
 
