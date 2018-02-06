@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`the color set reading/parsing should parse and transform a base16 YAML file with .yaml extension 1`] = `
+Object {
+  "dark": Object {
+    "accent0": "#a0a0c5",
+    "accent1": "#efe4a1",
+    "accent2": "#ae81ff",
+    "accent3": "#6dfedf",
+    "accent4": "#8eaee0",
+    "accent5": "#2de0a7",
+    "accent6": "#7aa5ff",
+    "accent7": "#ff79c6",
+    "shade0": "#292a44",
+    "shade1": "#663399",
+    "shade2": "#383a62",
+    "shade3": "#666699",
+    "shade4": "#a0a0c5",
+    "shade5": "#f1eff8",
+    "shade6": "#ccccff",
+    "shade7": "#53495d",
+  },
+}
+`;
+
 exports[`the color set reading/parsing should parse and transform a base16 dark scheme YAML file 1`] = `
 Object {
   "dark": Object {

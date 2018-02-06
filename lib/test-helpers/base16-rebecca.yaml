@@ -1,0 +1,20 @@
+scheme: "Rebecca"
+author: "Victor Borja (http://github.com/vic) based on Rebecca Theme (http://github.com/vic/rebecca-theme)"
+base00: "292a44" # default background
+base01: "663399" # lighter background (status bar)
+base02: "383a62" # selection background
+base03: "666699" # comments, invisibles
+base04: "a0a0c5" # dark foreground (status bar)
+base05: "f1eff8" # default foreground
+base06: "ccccff" # light foreground
+base07: "53495d" # light background
+base08: "a0a0c5" # variables
+base09: "efe4a1" # constants
+base0A: "ae81ff" # search text background
+base0B: "6dfedf" # strings
+base0C: "8eaee0" # regex, escaped chars
+base0D: "2de0a7" # functions
+base0E: "7aa5ff" # keywords
+base0F: "ff79c6" # deprecations
+
+
