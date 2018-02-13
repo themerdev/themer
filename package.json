@@ -1,0 +1,32 @@
+{
+  "name": "themer-sketch-palettes",
+  "version": "1.0.0",
+  "description": "A Sketch palettes generator for themer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-sketch-palettes.git"
+  },
+  "keywords": [
+    "themer",
+    "sketch",
+    "sketch-palettes",
+    "palette"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-sketch-palettes/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-sketch-palettes#readme",
+  "devDependencies": {
+    "jest": "^22.2.2",
+    "themer-colors-default": "^1.0.6"
+  },
+  "dependencies": {
+    "onecolor": "^3.0.5"
+  }
+}
