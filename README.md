@@ -231,6 +231,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-alfred](https://github.com/mjswensen/themer-alfred)
 * [themer-chrome](https://github.com/mjswensen/themer-chrome)
 * [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
+* [themer-sketch-palettes](https://github.com/mjswensen/themer-sketch-palettes)
 
 ### Create your own template
 
