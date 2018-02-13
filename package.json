@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A Sketch palettes generator for themer.",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.9.4"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -28,5 +31,8 @@
   },
   "dependencies": {
     "onecolor": "^3.0.5"
+  },
+  "peerDependencies": {
+    "themer": "^3"
   }
 }
