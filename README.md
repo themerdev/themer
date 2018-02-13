@@ -14,4 +14,4 @@ Then pass `themer-sketch-palettes` as a `-t` (`--template`) arg to `themer`:
 
 ## Output
 
-`themer-sketch-palettes` will generate a `themer-sketch-palettes-dark.sketchpalette` / `themer-sketch-palettes-light.sketchpalette` (or both) in your output directory, which may then be loaded in to Sketch through the [sketch-palettes](https://github.com/andrewfiorillo/sketch-palettes) plugin.
+`themer-sketch-palettes` will generate a `themer-sketch-palettes-dark.sketchpalette` / `themer-sketch-palettes-light.sketchpalette` (or both) in your output directory, which may then be loaded into Sketch through the [sketch-palettes](https://github.com/andrewfiorillo/sketch-palettes) plugin.
