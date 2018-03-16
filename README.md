@@ -217,6 +217,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-vscode](https://github.com/mjswensen/themer-vscode)
 * [themer-xcode](https://github.com/mjswensen/themer-xcode)
 * [themer-bbedit](https://github.com/mjswensen/themer-bbedit)
+* [tomselvi/themer-jetbrains](https://github.com/tomselvi/themer-jetbrains)
 
 ### Wallpapers
 
@@ -232,6 +233,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-chrome](https://github.com/mjswensen/themer-chrome)
 * [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
 * [themer-sketch-palettes](https://github.com/mjswensen/themer-sketch-palettes)
+* [tomselvi/themer-tmux](https://github.com/tomselvi/themer-tmux)
 
 ### Create your own template
 
