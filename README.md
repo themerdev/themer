@@ -206,6 +206,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-conemu](https://github.com/mjswensen/themer-conemu)
 * [themer-cmd](https://github.com/mjswensen/themer-cmd)
 * [0x52a1/themer-termite](https://github.com/0x52a1/themer-termite)
+* [0x52a1/themer-kitty](https://github.com/0x52a1/themer-kitty)
 
 ### Editors/IDEs
 
