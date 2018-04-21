@@ -6,8 +6,10 @@ const themesDirectory = "themes";
 const iconFileName = "icon.svg";
 const getThemeFileName = theme => `themer-${theme}-color-theme.json`;
 const getHumanTheme = theme => (theme === "dark" ? "Dark" : "Light");
-const getDark = colorSet =>
-  colorSet.theme === "dark" ? colorSet.colors.shade0 : colorSet.colors.shade7;
+const getShadow = colorSet =>
+  colorSet.theme === "dark"
+    ? colorSet.colors.shade0
+    : `${colorSet.colors.shade7}66`;
 
 export const toColorSets = colors =>
   Object.entries(colors).map(([theme, colors]) => ({
@@ -195,7 +197,7 @@ const renderThemeFiles = colorSets =>
       accent6,
       accent7
     } = colorSet.colors;
-    const shadow = `${getDark(colorSet)}66`;
+    const shadow = getShadow(colorSet);
     const transparent = "#00000000";
     const currentFileBackground = shade1;
     return Promise.resolve({
@@ -254,7 +256,7 @@ const renderThemeFiles = colorSets =>
               "progressBar.background": accent3,
 
               // Lists and trees
-              "list.activeSelectionBackground": accent3,
+              "list.activeSelectionBackground": `${accent3}7f`,
               "list.activeSelectionForeground": shade0,
               "list.dropBackground": shade3,
               "list.focusBackground": shade3,
@@ -276,14 +278,14 @@ const renderThemeFiles = colorSets =>
               // Side bar
               "sideBar.background": shade0,
               "sideBar.foreground": shade6,
-              "sideBar.border": shade0,
+              "sideBar.border": shade1,
               "sideBarTitle.foreground": shade5,
               "sideBarSectionHeader.background": shade2,
               "sideBarSectionHeader.foreground": shade6,
 
               // Editor groups & tabs
               "editorGroup.background": shade1,
-              "editorGroup.border": shade0,
+              "editorGroup.border": shade1,
               "editorGroup.dropBackground": `${shade2}7f`,
               "editorGroupHeader.noTabsBackground": shade0,
               "editorGroupHeader.tabsBackground": shade0,
@@ -301,13 +303,13 @@ const renderThemeFiles = colorSets =>
               "editor.foreground": shade7,
               "editorLineNumber.foreground": shade2,
               "editorCursor.foreground": accent6,
-              "editor.selectionBackground": `${accent5}55`,
+              "editor.selectionBackground": `${accent5}7f`,
               "editor.selectionHighlightBackground": shade1,
               "editor.inactiveSelectionBackground": `${accent5}33`,
               "editor.wordHighlightBackground": `${accent6}7f`,
               "editor.wordHighlightStrongBackground": `${accent7}7f`,
-              "editor.findMatchBackground": accent2,
-              "editor.findMatchHighlightBackground": `${accent2}7f`,
+              "editor.findMatchBackground": `${accent2}7f`,
+              "editor.findMatchHighlightBackground": `${accent2}3f`,
               "editor.findRangeHighlightBackground": shade1,
               "editor.hoverHighlightBackground": shade2,
               "editor.lineHighlightBackground": shade0,
@@ -321,6 +323,17 @@ const renderThemeFiles = colorSets =>
               "editorBracketMatch.background": shade1,
               "editorBracketMatch.border": shade1,
               "editorOverviewRuler.border": shade1,
+              "editorOverviewRuler.findMatchForeground": `${accent2}7f`,
+              "editorOverviewRuler.rangeHighlightForeground": `${shade2}7f`,
+              "editorOverviewRuler.selectionHighlightForeground": `${shade1}7f`,
+              "editorOverviewRuler.wordHighlightForeground": `${shade2}7f`,
+              "editorOverviewRuler.wordHighlightStrongForeground": `${shade3}7f`,
+              "editorOverviewRuler.modifiedForeground": accent2,
+              "editorOverviewRuler.addedForeground": accent3,
+              "editorOverviewRuler.deletedForeground": accent0,
+              "editorOverviewRuler.errorForeground": accent0,
+              "editorOverviewRuler.warningForeground": accent1,
+              "editorOverviewRuler.infoForeground": accent5,
               "editorError.foreground": accent0,
               "editorError.border": shade7,
               "editorWarning.foreground": accent1,
@@ -386,21 +399,24 @@ const renderThemeFiles = colorSets =>
               // Status bar colors
               "statusBar.background": accent5,
               "statusBar.foreground": shade0,
+              "statusBar.border": `${accent5}7f`,
               "statusBar.debuggingBackground": accent1,
               "statusBar.debuggingForeground": shade0,
+              "statusBar.debuggingBorder": `${accent1}7f`,
               "statusBar.noFolderBackground": accent6,
               "statusBar.noFolderForeground": shade0,
+              "statusBar.noFolderBorder": `${accent6}7f`,
               "statusBarItem.activeBackground": accent4,
               "statusBarItem.hoverBackground": accent3,
               "statusBarItem.prominentBackground": accent4,
               "statusBarItem.prominentHoverBackground": accent3,
-              "statusBar.border": shade0,
 
               // Title bar colors
+
               "titleBar.activeBackground": shade0,
               "titleBar.activeForeground": shade5,
               "titleBar.inactiveBackground": shade0,
-              "titleBar.inactiveForeground": shade4,
+              "titleBar.inactiveForeground": shade3,
 
               // Notification dialog colors
               "notification.background": shade1,
@@ -443,6 +459,9 @@ const renderThemeFiles = colorSets =>
               "terminal.ansiRed": accent0,
               "terminal.ansiWhite": shade6,
               "terminal.ansiYellow": accent2,
+              "terminal.selectionBackground": `${accent5}7f`,
+              "terminalCursor.background": shade1,
+              "terminalCursor.foreground": shade5,
 
               // Debug
               "debugToolBar.background": shade1,
@@ -450,7 +469,14 @@ const renderThemeFiles = colorSets =>
               // Welcome page
               "welcomePage.buttonBackground": shade1,
               "welcomePage.buttonHoverBackground": shade2,
-              "walkThrough.embeddedEditorBackground": shade0
+              "walkThrough.embeddedEditorBackground": shade0,
+
+              // Git
+              "gitDecoration.modifiedResourceForeground": accent2,
+              "gitDecoration.deletedResourceForeground": accent0,
+              "gitDecoration.untrackedResourceForeground": accent6,
+              "gitDecoration.ignoredResourceForeground": shade3,
+              "gitDecoration.conflictingResourceForeground": accent4
             },
             tokenColors: [
               {
