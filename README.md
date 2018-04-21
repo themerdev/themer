@@ -44,10 +44,13 @@ If you do not keep your dotfiles under version control, you can simply install t
 
 ## Usage
 
+Pass `themer` a color set, as many templates as you wish, and an output directory.
+
 ```sh
-themer --colors <file OR npm module name> \
-  --template <file OR npm module name> \
-  [--template <file OR npm module name>...] \
+themer \
+  --colors <npm package name OR file> \
+  --template <npm package name OR file> \
+  [--template <npm package name OR file>...] \
   --out <directory>
 ```
 
