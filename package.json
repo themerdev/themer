@@ -23,18 +23,18 @@
     "prepare": "npm run lint && npm run test"
   },
   "dependencies": {
-    "chalk": "^2.3.0",
+    "chalk": "^2.4.1",
     "color-steps": "^1.0.1",
-    "js-yaml": "^3.10.0",
+    "js-yaml": "^3.11.0",
     "minimist": "^1.2.0",
     "mkdirp-promise": "^5.0.1",
     "onecolor": "^3.0.5",
     "pn": "^1.1.0",
-    "rxjs": "^5.5.6"
+    "rxjs": "^5.5.10"
   },
   "devDependencies": {
-    "eslint": "^4.15.0",
-    "jest": "^22.0.6"
+    "eslint": "^4.19.1",
+    "jest": "^22.4.3"
   },
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
