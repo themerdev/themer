@@ -318,6 +318,7 @@ const renderThemeFiles = colorSets =>
               "editor.rangeHighlightBackground": shade1,
               "editorWhitespace.foreground": shade1,
               "editorIndentGuide.background": shade1,
+              "editorIndentGuide.activeBackground": shade2,
               "editorRuler.foreground": shade1,
               "editorCodeLens.foreground": shade5,
               "editorBracketMatch.background": shade1,
