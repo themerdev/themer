@@ -1,0 +1,30 @@
+{
+  "name": "themer-preview-inline",
+  "version": "1.0.2",
+  "description": "Template for small, inline previews of themer color sets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-preview-inline.git"
+  },
+  "keywords": [
+    "themer",
+    "preview"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-preview-inline/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-preview-inline#readme",
+  "devDependencies": {
+    "jest": "^21.1.0",
+    "themer-colors-default": "^1.0.4"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  }
+}
