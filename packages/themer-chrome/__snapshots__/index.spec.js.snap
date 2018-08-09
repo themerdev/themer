@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chrome theme generator should render properly formatted manifest files 1`] = `
+Object {
+  "manifest_version": 2,
+  "name": "Themer Dark",
+  "theme": Object {
+    "colors": Object {
+      "bookmark_text": Array [
+        224,
+        220,
+        224,
+      ],
+      "frame": Array [
+        40,
+        38,
+        41,
+      ],
+      "frame_inactive": Array [
+        71,
+        66,
+        71,
+      ],
+      "frame_incognito": Array [
+        132,
+        126,
+        133,
+      ],
+      "frame_incognito_inactive": Array [
+        162,
+        157,
+        163,
+      ],
+      "ntp_background": Array [
+        40,
+        38,
+        41,
+      ],
+      "ntp_section": Array [
+        101,
+        96,
+        102,
+      ],
+      "ntp_section_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "ntp_text": Array [
+        224,
+        220,
+        224,
+      ],
+      "tab_background_text": Array [
+        193,
+        188,
+        194,
+      ],
+      "tab_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "toolbar": Array [
+        71,
+        66,
+        71,
+      ],
+    },
+  },
+}
+`;
+
+exports[`Chrome theme generator should render properly formatted manifest files 2`] = `
+Object {
+  "manifest_version": 2,
+  "name": "Themer Light",
+  "theme": Object {
+    "colors": Object {
+      "bookmark_text": Array [
+        71,
+        66,
+        71,
+      ],
+      "frame": Array [
+        224,
+        220,
+        224,
+      ],
+      "frame_inactive": Array [
+        255,
+        252,
+        255,
+      ],
+      "frame_incognito": Array [
+        132,
+        126,
+        133,
+      ],
+      "frame_incognito_inactive": Array [
+        162,
+        157,
+        163,
+      ],
+      "ntp_background": Array [
+        255,
+        252,
+        255,
+      ],
+      "ntp_section": Array [
+        193,
+        188,
+        194,
+      ],
+      "ntp_section_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "ntp_text": Array [
+        71,
+        66,
+        71,
+      ],
+      "tab_background_text": Array [
+        101,
+        96,
+        102,
+      ],
+      "tab_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "toolbar": Array [
+        255,
+        252,
+        255,
+      ],
+    },
+  },
+}
+`;
