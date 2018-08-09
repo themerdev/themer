@@ -1,0 +1,49 @@
+{
+  "name": "themer-vim",
+  "version": "2.2.9",
+  "description": "Vim template for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "author": "mjswensen",
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer-vim.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib src",
+    "test": "npm run build && jest",
+    "start": "watch 'npm run test' src",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "jest": "^22.0.4",
+    "themer-colors-default": "^1.0.6",
+    "watch": "^1.0.1"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-vim/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-vim#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "vim",
+    "theme",
+    "colorscheme"
+  ]
+}
