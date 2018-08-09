@@ -1,0 +1,45 @@
+{
+  "name": "themer-colors-one",
+  "version": "1.0.4",
+  "description": "A port of the popular Atom One themes.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib src",
+    "start": "watch 'npm run test' src",
+    "prepare": "npm run build",
+    "test": "npm run build && jest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^3.19.0",
+    "jest": "^19.0.2",
+    "watch": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mjswensen/themer-colors-one.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-one/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-one#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ]
+}
