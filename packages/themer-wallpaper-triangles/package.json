@@ -1,0 +1,35 @@
+{
+  "name": "themer-wallpaper-triangles",
+  "version": "2.0.3",
+  "description": "A wallpaper generator for themer.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "themer-colors-default": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-wallpaper-triangles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-wallpaper-triangles/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-wallpaper-triangles#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  },
+  "keywords": [
+    "themer",
+    "wallpaper",
+    "triangles"
+  ]
+}
