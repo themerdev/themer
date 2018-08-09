@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the color set reading/parsing should parse and transform a base16 YAML file with .yaml extension 1`] = `
+Object {
+  "dark": Object {
+    "accent0": "#a0a0c5",
+    "accent1": "#efe4a1",
+    "accent2": "#ae81ff",
+    "accent3": "#6dfedf",
+    "accent4": "#8eaee0",
+    "accent5": "#2de0a7",
+    "accent6": "#7aa5ff",
+    "accent7": "#ff79c6",
+    "shade0": "#292a44",
+    "shade1": "#663399",
+    "shade2": "#383a62",
+    "shade3": "#666699",
+    "shade4": "#a0a0c5",
+    "shade5": "#f1eff8",
+    "shade6": "#ccccff",
+    "shade7": "#53495d",
+  },
+}
+`;
+
+exports[`the color set reading/parsing should parse and transform a base16 dark scheme YAML file 1`] = `
+Object {
+  "dark": Object {
+    "accent0": "#ab4642",
+    "accent1": "#dc9656",
+    "accent2": "#f7ca88",
+    "accent3": "#a1b56c",
+    "accent4": "#86c1b9",
+    "accent5": "#7cafc2",
+    "accent6": "#ba8baf",
+    "accent7": "#a16946",
+    "shade0": "#181818",
+    "shade1": "#282828",
+    "shade2": "#383838",
+    "shade3": "#585858",
+    "shade4": "#b8b8b8",
+    "shade5": "#d8d8d8",
+    "shade6": "#e8e8e8",
+    "shade7": "#f8f8f8",
+  },
+}
+`;
+
+exports[`the color set reading/parsing should parse and transform a base16 light scheme YAML file 1`] = `
+Object {
+  "light": Object {
+    "accent0": "#ab4642",
+    "accent1": "#dc9656",
+    "accent2": "#f7ca88",
+    "accent3": "#a1b56c",
+    "accent4": "#86c1b9",
+    "accent5": "#7cafc2",
+    "accent6": "#ba8baf",
+    "accent7": "#a16946",
+    "shade0": "#f8f8f8",
+    "shade1": "#e8e8e8",
+    "shade2": "#d8d8d8",
+    "shade3": "#b8b8b8",
+    "shade4": "#585858",
+    "shade5": "#383838",
+    "shade6": "#282828",
+    "shade7": "#181818",
+  },
+}
+`;
+
+exports[`the color set reading/parsing should return colors defined in standard javascript format 1`] = `
+Object {
+  "dark": Object {
+    "accent0": "#FF4050",
+    "accent1": "#F28144",
+    "accent2": "#FFD24A",
+    "accent3": "#A4CC35",
+    "accent4": "#26C99E",
+    "accent5": "#66BFFF",
+    "accent6": "#CC78FA",
+    "accent7": "#F553BF",
+    "shade0": "#282629",
+    "shade1": "#474247",
+    "shade2": "#656066",
+    "shade3": "#847E85",
+    "shade4": "#A29DA3",
+    "shade5": "#C1BCC2",
+    "shade6": "#E0DCE0",
+    "shade7": "#FFFCFF",
+  },
+  "light": Object {
+    "accent0": "#F03E4D",
+    "accent1": "#F37735",
+    "accent2": "#EEBA21",
+    "accent3": "#97BD2D",
+    "accent4": "#1FC598",
+    "accent5": "#53A6E1",
+    "accent6": "#BF65F0",
+    "accent7": "#EE4EB8",
+    "shade0": "#FFFCFF",
+    "shade1": "#E0DCE0",
+    "shade2": "#C1BCC2",
+    "shade3": "#A29DA3",
+    "shade4": "#847E85",
+    "shade5": "#656066",
+    "shade6": "#474247",
+    "shade7": "#282629",
+  },
+}
+`;

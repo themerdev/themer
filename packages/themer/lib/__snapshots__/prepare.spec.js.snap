@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the color set validation/preparation should convert valid CSS colors to hex 1`] = `
+Object {
+  "dark": Object {
+    "accent0": "#000000",
+    "accent1": "#000000",
+    "accent2": "#000000",
+    "accent3": "#000000",
+    "accent4": "#000000",
+    "accent5": "#000000",
+    "accent6": "#000000",
+    "accent7": "#000000",
+    "shade0": "#000000",
+    "shade1": "#000000",
+    "shade2": "#000000",
+    "shade3": "#000000",
+    "shade4": "#000000",
+    "shade5": "#000000",
+    "shade6": "#000000",
+    "shade7": "#000000",
+  },
+}
+`;
+
+exports[`the color set validation/preparation should properly fill in shades 1 through 6 when necessary 1`] = `
+Object {
+  "dark": Object {
+    "accent0": "#ff0000",
+    "accent1": "#ffa500",
+    "accent2": "#ffff00",
+    "accent3": "#008000",
+    "accent4": "#00ffff",
+    "accent5": "#0000ff",
+    "accent6": "#800080",
+    "accent7": "#ffc0cb",
+    "shade0": "#000000",
+    "shade1": "#242424",
+    "shade2": "#494949",
+    "shade3": "#6d6d6d",
+    "shade4": "#929292",
+    "shade5": "#b6b6b6",
+    "shade6": "#dbdbdb",
+    "shade7": "#ffffff",
+  },
+  "light": Object {
+    "accent0": "#ff0000",
+    "accent1": "#ffa500",
+    "accent2": "#ffff00",
+    "accent3": "#008000",
+    "accent4": "#00ffff",
+    "accent5": "#0000ff",
+    "accent6": "#800080",
+    "accent7": "#ffc0cb",
+    "shade0": "#ffffff",
+    "shade1": "#dbdbdb",
+    "shade2": "#b6b6b6",
+    "shade3": "#929292",
+    "shade4": "#6d6d6d",
+    "shade5": "#494949",
+    "shade6": "#242424",
+    "shade7": "#000000",
+  },
+}
+`;
