@@ -1,0 +1,48 @@
+{
+  "name": "themer-wallpaper-octagon",
+  "version": "2.0.3",
+  "description": "Wallpaper generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib src",
+    "start": "watch 'npm run test' src",
+    "prepare": "npm run build",
+    "test": "npm run build && jest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "jest": "^22.0.4",
+    "themer-colors-default": "^1.0.6",
+    "watch": "^1.0.1"
+  },
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer-wallpaper-octagon.git",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-wallpaper-octagon/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-wallpaper-octagon#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "wallpaper",
+    "octagon"
+  ]
+}

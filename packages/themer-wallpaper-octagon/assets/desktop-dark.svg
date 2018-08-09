@@ -1,0 +1,71 @@
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="2880" height="1800" viewBox="-1440 -900 2880 1800">
+          <defs>
+            <pattern id="bg" width="36" height="36" patternUnits="userSpaceOnUse" patternTransform="rotate(22.5)">
+              <path d="
+  M 6 0
+  l 4 4
+  l 16 0
+  l 4 -4
+  l 6 6
+  l -4 4
+  l 0 16
+  l 4 4
+  l -6 6
+  l -4 -4
+  l -16 0
+  l -4 4
+  l -6 -6
+  l 4 -4
+  l 0 -16
+  l -4 -4
+  z
+  " stroke="#474247" stroke-width="1" fill="none"/>
+            </pattern>
+            <pattern id="bg-large" width="360" height="360" patternUnits="userSpaceOnUse" patternTransform="rotate(-22.5)">
+              <path d="
+  M 60 0
+  l 40 40
+  l 160 0
+  l 40 -40
+  l 60 60
+  l -40 40
+  l 0 160
+  l 40 40
+  l -60 60
+  l -40 -40
+  l -160 0
+  l -40 40
+  l -60 -60
+  l 40 -40
+  l 0 -160
+  l -40 -40
+  z
+  " stroke="#656066" stroke-width="2" fill="none"/>
+            </pattern>
+            <radialGradient id="accent-bg">
+              <stop offset="25%" stop-color="#282629"/>
+              <stop offset="100%" stop-color="#282629" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="fill-0" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#FF4050" stop-opacity="0"/><stop offset="90%" stop-color="#FF4050"/></linearGradient>
+<linearGradient id="fill-1" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#F28144" stop-opacity="0"/><stop offset="90%" stop-color="#F28144"/></linearGradient>
+<linearGradient id="fill-2" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#FFD24A" stop-opacity="0"/><stop offset="90%" stop-color="#FFD24A"/></linearGradient>
+<linearGradient id="fill-3" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#A4CC35" stop-opacity="0"/><stop offset="90%" stop-color="#A4CC35"/></linearGradient>
+<linearGradient id="fill-4" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#26C99E" stop-opacity="0"/><stop offset="90%" stop-color="#26C99E"/></linearGradient>
+<linearGradient id="fill-5" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#66BFFF" stop-opacity="0"/><stop offset="90%" stop-color="#66BFFF"/></linearGradient>
+<linearGradient id="fill-6" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#CC78FA" stop-opacity="0"/><stop offset="90%" stop-color="#CC78FA"/></linearGradient>
+<linearGradient id="fill-7" x1="0" y1="0" x2="1" y2="1"><stop offset="25%" stop-color="#F553BF" stop-opacity="0"/><stop offset="90%" stop-color="#F553BF"/></linearGradient>
+          </defs>
+          <rect x="-1440" y="-900" width="2880" height="1800" fill="#282629" />
+          <rect x="-1440" y="-900" width="2880" height="1800" fill="url(#bg)"/>
+          <rect x="-1440" y="-900" width="2880" height="1800" fill="url(#bg-large)"/>
+          <circle r="1200" fill="url(#accent-bg)"/>
+          <path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#FF4050" stroke-width="0" fill="url(#fill-0)" transform="rotate(0)"/>
+<path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#F28144" stroke-width="0" fill="url(#fill-1)" transform="rotate(-45)"/>
+<path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#FFD24A" stroke-width="0" fill="url(#fill-2)" transform="rotate(-90)"/>
+<path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#A4CC35" stroke-width="0" fill="url(#fill-3)" transform="rotate(-135)"/>
+<path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#26C99E" stroke-width="0" fill="url(#fill-4)" transform="rotate(-180)"/>
+<path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#66BFFF" stroke-width="0" fill="url(#fill-5)" transform="rotate(-225)"/>
+<path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#CC78FA" stroke-width="0" fill="url(#fill-6)" transform="rotate(-270)"/>
+<path d="M 0 -300 L 212.13 -212.13 L 212.13 212.13 Z" stroke="#F553BF" stroke-width="0" fill="url(#fill-7)" transform="rotate(-315)"/>
+        </svg>
