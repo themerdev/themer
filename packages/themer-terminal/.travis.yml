@@ -1,0 +1,8 @@
+os: osx
+osx_image: xcode8.2
+
+language: node_js
+node_js:
+  - "lts/*"
+
+script: npm test
