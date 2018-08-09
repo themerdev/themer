@@ -1,0 +1,45 @@
+{
+  "name": "themer-colors-night-sky",
+  "version": "1.0.5",
+  "description": "A dark color set for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib src",
+    "start": "watch 'npm run build' src",
+    "prepare": "npm run build",
+    "test": "npm run build && jest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
+    "jest": "^22.0.4",
+    "watch": "^1.0.1"
+  },
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer-colors-night-sky.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-night-sky/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-colors-night-sky#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ]
+}
