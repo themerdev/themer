@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render should render properly formatted ConEmu theme xml 1`] = `
+"
+      <value name=\\"ColorTable00\\" type=\\"dword\\" data=\\"00292628\\" />
+      <value name=\\"ColorTable01\\" type=\\"dword\\" data=\\"00FFBF66\\" />
+      <value name=\\"ColorTable02\\" type=\\"dword\\" data=\\"0035CCA4\\" />
+      <value name=\\"ColorTable03\\" type=\\"dword\\" data=\\"009EC926\\" />
+      <value name=\\"ColorTable04\\" type=\\"dword\\" data=\\"005040FF\\" />
+      <value name=\\"ColorTable05\\" type=\\"dword\\" data=\\"00FA78CC\\" />
+      <value name=\\"ColorTable06\\" type=\\"dword\\" data=\\"004481F2\\" />
+      <value name=\\"ColorTable07\\" type=\\"dword\\" data=\\"00E0DCE0\\" />
+      <value name=\\"ColorTable08\\" type=\\"dword\\" data=\\"00474247\\" />
+      <value name=\\"ColorTable09\\" type=\\"dword\\" data=\\"00FFBF66\\" />
+      <value name=\\"ColorTable10\\" type=\\"dword\\" data=\\"0035CCA4\\" />
+      <value name=\\"ColorTable11\\" type=\\"dword\\" data=\\"009EC926\\" />
+      <value name=\\"ColorTable12\\" type=\\"dword\\" data=\\"005040FF\\" />
+      <value name=\\"ColorTable13\\" type=\\"dword\\" data=\\"00BF53F5\\" />
+      <value name=\\"ColorTable14\\" type=\\"dword\\" data=\\"004AD2FF\\" />
+      <value name=\\"ColorTable15\\" type=\\"dword\\" data=\\"00FFFCFF\\" />
+      <value name=\\"ColorTable16\\" type=\\"dword\\" data=\\"00292628\\" />
+      <value name=\\"ColorTable17\\" type=\\"dword\\" data=\\"005040FF\\" />
+      <value name=\\"ColorTable18\\" type=\\"dword\\" data=\\"0035CCA4\\" />
+      <value name=\\"ColorTable19\\" type=\\"dword\\" data=\\"004481F2\\" />
+      <value name=\\"ColorTable20\\" type=\\"dword\\" data=\\"00FFBF66\\" />
+      <value name=\\"ColorTable21\\" type=\\"dword\\" data=\\"00FA78CC\\" />
+      <value name=\\"ColorTable22\\" type=\\"dword\\" data=\\"009EC926\\" />
+      <value name=\\"ColorTable23\\" type=\\"dword\\" data=\\"00E0DCE0\\" />
+      <value name=\\"ColorTable24\\" type=\\"dword\\" data=\\"00474247\\" />
+      <value name=\\"ColorTable25\\" type=\\"dword\\" data=\\"005040FF\\" />
+      <value name=\\"ColorTable26\\" type=\\"dword\\" data=\\"0035CCA4\\" />
+      <value name=\\"ColorTable27\\" type=\\"dword\\" data=\\"004AD2FF\\" />
+      <value name=\\"ColorTable28\\" type=\\"dword\\" data=\\"00FFBF66\\" />
+      <value name=\\"ColorTable29\\" type=\\"dword\\" data=\\"00BF53F5\\" />
+      <value name=\\"ColorTable30\\" type=\\"dword\\" data=\\"009EC926\\" />
+      <value name=\\"ColorTable31\\" type=\\"dword\\" data=\\"00FFFCFF\\" />
+    "
+`;
+
+exports[`render should render properly formatted ConEmu theme xml 2`] = `
+"
+      <value name=\\"ColorTable00\\" type=\\"dword\\" data=\\"00FFFCFF\\" />
+      <value name=\\"ColorTable01\\" type=\\"dword\\" data=\\"00E1A653\\" />
+      <value name=\\"ColorTable02\\" type=\\"dword\\" data=\\"002DBD97\\" />
+      <value name=\\"ColorTable03\\" type=\\"dword\\" data=\\"0098C51F\\" />
+      <value name=\\"ColorTable04\\" type=\\"dword\\" data=\\"004D3EF0\\" />
+      <value name=\\"ColorTable05\\" type=\\"dword\\" data=\\"00F065BF\\" />
+      <value name=\\"ColorTable06\\" type=\\"dword\\" data=\\"003577F3\\" />
+      <value name=\\"ColorTable07\\" type=\\"dword\\" data=\\"00474247\\" />
+      <value name=\\"ColorTable08\\" type=\\"dword\\" data=\\"00E0DCE0\\" />
+      <value name=\\"ColorTable09\\" type=\\"dword\\" data=\\"00E1A653\\" />
+      <value name=\\"ColorTable10\\" type=\\"dword\\" data=\\"002DBD97\\" />
+      <value name=\\"ColorTable11\\" type=\\"dword\\" data=\\"0098C51F\\" />
+      <value name=\\"ColorTable12\\" type=\\"dword\\" data=\\"004D3EF0\\" />
+      <value name=\\"ColorTable13\\" type=\\"dword\\" data=\\"00B84EEE\\" />
+      <value name=\\"ColorTable14\\" type=\\"dword\\" data=\\"0021BAEE\\" />
+      <value name=\\"ColorTable15\\" type=\\"dword\\" data=\\"00292628\\" />
+      <value name=\\"ColorTable16\\" type=\\"dword\\" data=\\"00FFFCFF\\" />
+      <value name=\\"ColorTable17\\" type=\\"dword\\" data=\\"004D3EF0\\" />
+      <value name=\\"ColorTable18\\" type=\\"dword\\" data=\\"002DBD97\\" />
+      <value name=\\"ColorTable19\\" type=\\"dword\\" data=\\"003577F3\\" />
+      <value name=\\"ColorTable20\\" type=\\"dword\\" data=\\"00E1A653\\" />
+      <value name=\\"ColorTable21\\" type=\\"dword\\" data=\\"00F065BF\\" />
+      <value name=\\"ColorTable22\\" type=\\"dword\\" data=\\"0098C51F\\" />
+      <value name=\\"ColorTable23\\" type=\\"dword\\" data=\\"00474247\\" />
+      <value name=\\"ColorTable24\\" type=\\"dword\\" data=\\"00E0DCE0\\" />
+      <value name=\\"ColorTable25\\" type=\\"dword\\" data=\\"004D3EF0\\" />
+      <value name=\\"ColorTable26\\" type=\\"dword\\" data=\\"002DBD97\\" />
+      <value name=\\"ColorTable27\\" type=\\"dword\\" data=\\"0021BAEE\\" />
+      <value name=\\"ColorTable28\\" type=\\"dword\\" data=\\"00E1A653\\" />
+      <value name=\\"ColorTable29\\" type=\\"dword\\" data=\\"00B84EEE\\" />
+      <value name=\\"ColorTable30\\" type=\\"dword\\" data=\\"0098C51F\\" />
+      <value name=\\"ColorTable31\\" type=\\"dword\\" data=\\"00292628\\" />
+    "
+`;
