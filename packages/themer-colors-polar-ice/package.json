@@ -1,0 +1,45 @@
+{
+  "name": "themer-colors-polar-ice",
+  "version": "1.0.2",
+  "description": "A chilly color set for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib src",
+    "start": "watch 'npm run build' src",
+    "prepare": "npm run build",
+    "test": "npm run build && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer-colors-polar-ice.git"
+  },
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-colors-polar-ice/issues"
+  },
+  "homepage": "https://themer.mjswensen.com",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.3.0",
+    "jest": "^20.0.4",
+    "watch": "^1.0.2"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {}
+}
