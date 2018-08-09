@@ -1,0 +1,52 @@
+{
+  "name": "themer-sublime-text",
+  "version": "1.0.7",
+  "description": "Sublime Text theme generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib src",
+    "prepare": "npm run build",
+    "start": "watch 'npm run test' src",
+    "test": "npm run build && jest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "jest": "^22.0.4",
+    "themer-colors-default": "^1.0.6",
+    "watch": "^1.0.1"
+  },
+  "dependencies": {
+    "plist": "^2.0.1"
+  },
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer-sublime-text.git",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-sublime-text/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-sublime-text#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "themer",
+    "sublime",
+    "sublime-text",
+    "syntax",
+    "theme"
+  ]
+}
