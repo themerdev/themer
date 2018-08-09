@@ -1,0 +1,51 @@
+{
+  "name": "themer-vim-lightline",
+  "version": "2.0.7",
+  "description": "Themer generator for vim lightline plugin.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer-vim-lightline.git",
+    "type": "git"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "jest": {
+    "rootDir": "lib"
+  },
+  "scripts": {
+    "build": "eslint src && babel --out-dir lib src",
+    "test": "npm run build && jest",
+    "start": "watch 'npm run test' src",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "jest": "^22.0.4",
+    "themer-colors-default": "^1.0.6",
+    "watch": "^1.0.1"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer-vim-lightline/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer-vim-lightline#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "vim",
+    "vim-lightline",
+    "lightline",
+    "theme",
+    "colorscheme"
+  ]
+}
