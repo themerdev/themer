@@ -4,7 +4,8 @@
   "description": "A color set for themer based on the Lucidchart editor.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
     "type": "git",

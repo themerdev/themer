@@ -4,7 +4,8 @@
   "description": "A Chrome theme generator for themer.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
     "type": "git",

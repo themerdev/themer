@@ -15,7 +15,8 @@
     "prepare": "npm run lint && npm run build",
     "start": "watch 'npm run test' src",
     "test": "npm run lint && npm run build && jest",
-    "watch": "watch 'npm run build' src"
+    "watch": "watch 'npm run build' src",
+    "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "author": "mjswensen",
   "license": "MIT",

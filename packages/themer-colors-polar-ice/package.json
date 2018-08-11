@@ -13,7 +13,8 @@
     "build": "eslint src && babel --out-dir lib src",
     "start": "watch 'npm run build' src",
     "prepare": "npm run build",
-    "test": "npm run build && jest"
+    "test": "npm run build && jest",
+    "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
     "type": "git",

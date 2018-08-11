@@ -19,7 +19,8 @@
     "build": "eslint src && babel --out-dir lib src",
     "start": "watch 'npm run test' src",
     "test": "npm run build && jest",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

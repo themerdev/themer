@@ -4,7 +4,8 @@
   "description": "A warm and friendly color set for themer.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "keywords": [
     "themer",

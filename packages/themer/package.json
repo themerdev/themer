@@ -21,7 +21,7 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "prepare": "npm run lint && npm run test",
-    "prepublishOnly": "cp ../../README.md ./ && cp -R ../../assets ./"
+    "prepublishOnly": "cp ../../README.md ./ && cp ../../LICENSE.md ./ && cp -R ../../assets ./"
   },
   "dependencies": {
     "chalk": "^2.4.1",
