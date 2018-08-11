@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://themer.mjswensen.com">
-    <img src="icon.png" width="256" height="256" alt="Themer application icon" />
+    <img src="assets/icon.png" width="256" height="256" alt="Themer application icon" />
   </a>
 </p>
 
