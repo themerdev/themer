@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-colors-polar-ice.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "keywords": [
     "themer",
@@ -29,9 +29,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-colors-polar-ice/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://themer.mjswensen.com",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-polar-ice#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",

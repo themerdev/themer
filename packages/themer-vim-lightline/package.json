@@ -7,7 +7,7 @@
     "node": ">=6.11"
   },
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer-vim-lightline.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer.git",
     "type": "git"
   },
   "author": "mjswensen",
@@ -34,9 +34,9 @@
     "themer": "^1.0.2||^2||^3"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-vim-lightline/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-vim-lightline#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-vim-lightline#readme",
   "directories": {
     "lib": "lib"
   },

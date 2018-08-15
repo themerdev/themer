@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-xcode.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-xcode/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-xcode#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-xcode#readme",
   "keywords": [
     "themer",
     "Xcode",

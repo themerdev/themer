@@ -27,12 +27,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer-colors-one.git"
+    "url": "git+ssh://git@github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-colors-one/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-colors-one#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-one#readme",
   "directories": {
     "lib": "lib"
   },

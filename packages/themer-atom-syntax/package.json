@@ -39,12 +39,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer-atom-syntax.git"
+    "url": "git+ssh://git@github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-atom-syntax/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-atom-syntax#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-atom-syntax#readme",
   "directories": {
     "lib": "lib"
   },

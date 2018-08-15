@@ -36,12 +36,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer-terminal.git"
+    "url": "git+ssh://git@github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-terminal/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-terminal#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-terminal#readme",
   "directories": {
     "lib": "lib"
   },

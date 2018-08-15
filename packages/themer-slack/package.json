@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer-slack.git"
+    "url": "git+ssh://git@github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-slack/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-slack#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-slack#readme",
   "directories": {
     "lib": "lib"
   },

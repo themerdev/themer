@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-conemu.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "keywords": [
     "themer",
@@ -19,9 +19,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-conemu/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-conemu#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-conemu#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   },

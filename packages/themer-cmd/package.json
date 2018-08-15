@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-cmd.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "keywords": [
     "themer",
@@ -20,9 +20,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-cmd/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-cmd#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-cmd#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   },

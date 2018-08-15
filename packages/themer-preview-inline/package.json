@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-preview-inline.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "keywords": [
     "themer",
@@ -18,9 +18,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-preview-inline/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-preview-inline#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-preview-inline#readme",
   "devDependencies": {
     "jest": "^21.1.0",
     "themer-colors-default": "^1.0.4"

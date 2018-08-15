@@ -29,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-wallpaper-trianglify.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-wallpaper-trianglify/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-wallpaper-trianglify#readme"
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-wallpaper-trianglify#readme"
 }

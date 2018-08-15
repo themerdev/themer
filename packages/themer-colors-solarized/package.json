@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-colors-solarized.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "keywords": [
     "themer",
@@ -21,9 +21,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-colors-solarized/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-colors-solarized#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-solarized#readme",
   "devDependencies": {
     "jest": "^21.2.1"
   }

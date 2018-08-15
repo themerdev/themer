@@ -30,16 +30,16 @@
     "plist": "^2.0.1"
   },
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer-sublime-text.git",
+    "url": "git+ssh://git@github.com/mjswensen/themer.git",
     "type": "git"
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-sublime-text/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-sublime-text#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-sublime-text#readme",
   "directories": {
     "lib": "lib"
   },

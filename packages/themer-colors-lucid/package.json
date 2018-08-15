@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-colors-lucid.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "keywords": [
     "themer",
@@ -21,9 +21,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-colors-lucid/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-colors-lucid#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-lucid#readme",
   "devDependencies": {
     "jest": "^21.0.2"
   },

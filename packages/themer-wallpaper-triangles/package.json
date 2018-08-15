@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-wallpaper-triangles.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-wallpaper-triangles/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-wallpaper-triangles#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-wallpaper-triangles#readme",
   "dependencies": {},
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"

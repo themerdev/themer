@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-colors-nova.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "keywords": [
     "themer",
@@ -21,9 +21,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-colors-nova/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-colors-nova#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-nova#readme",
   "dependencies": {
     "color": "^2.0.1",
     "nova-colors": "^2.1.5"

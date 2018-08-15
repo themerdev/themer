@@ -18,12 +18,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer-colors-finger-paint.git"
+    "url": "git+https://github.com/mjswensen/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer-colors-finger-paint/issues"
+    "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer-colors-finger-paint#readme",
+  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-finger-paint#readme",
   "devDependencies": {
     "jest": "^21.1.0"
   }
