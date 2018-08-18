@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  dev:
-    image: node:8
-    volumes:
-      - .:/themer
-    working_dir: /themer
