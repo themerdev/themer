@@ -8,8 +8,7 @@
   },
   "scripts": {
     "build": "babel --out-dir lib src",
-    "lint": "prettier --list-different src/*.js",
-    "prepare": "npm run lint && npm run build",
+    "prepare": "npm run build",
     "watch": "watch 'npm run build' src",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
@@ -19,7 +18,6 @@
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
-    "prettier": "^1.5.3",
     "themer-colors-default": "^1.0.2",
     "watch": "^1.0.2"
   },
