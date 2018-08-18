@@ -4,7 +4,7 @@ const path = require('path'),
 
 describe('the package resolver', () => {
 
-  const helperDir = path.resolve('lib', 'test-helpers');
+  const helperDir = path.resolve(__dirname, 'test-helpers');
 
   it('should resolve local files', async () => {
     const helperColors = path.resolve(helperDir, 'colors.js');
@@ -18,12 +18,12 @@ describe('the package resolver', () => {
   });
 
   it('should fail to resolve nonexistent paths', async () => {
-    const wrapped = await wrap(() => resolvePackage(path.resolve('foo', 'bar', 'baz.js')));
+    const wrapped = await wrap(() => resolvePackage(path.resolve(__dirname, 'foo', 'bar', 'baz.js')));
     expect(wrapped).toThrow();
   });
 
   it('should fail to resolve uninstalled packages', async () => {
-    const wrapped = await wrap(() => resolvePackage('themer-hyper'));
+    const wrapped = await wrap(() => resolvePackage('not-installed'));
     expect(wrapped).toThrow();
   });
 

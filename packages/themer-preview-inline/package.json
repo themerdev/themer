@@ -4,7 +4,6 @@
   "description": "Template for small, inline previews of themer color sets.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -22,7 +21,6 @@
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-preview-inline#readme",
   "devDependencies": {
-    "jest": "^21.1.0",
     "themer-colors-default": "^1.0.4"
   },
   "peerDependencies": {

@@ -4,7 +4,6 @@
   "description": "A themer color set ported from the popular Solarized themes.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -24,7 +23,5 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-solarized#readme",
-  "devDependencies": {
-    "jest": "^21.2.1"
-  }
+  "devDependencies": {}
 }

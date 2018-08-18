@@ -4,7 +4,6 @@
   "description": "A themer port of the beautiful Nova color set.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -28,7 +27,5 @@
     "color": "^2.0.1",
     "nova-colors": "^2.1.5"
   },
-  "devDependencies": {
-    "jest": "^22.1.4"
-  }
+  "devDependencies": {}
 }

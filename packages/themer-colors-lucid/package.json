@@ -4,7 +4,6 @@
   "description": "A color set for themer based on the Lucidchart editor.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -24,8 +23,6 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-lucid#readme",
-  "devDependencies": {
-    "jest": "^21.0.2"
-  },
+  "devDependencies": {},
   "dependencies": {}
 }

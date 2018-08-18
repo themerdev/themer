@@ -4,7 +4,6 @@
   "description": "A CMD.exe theme generator for themer.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -27,7 +26,6 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "jest": "^21.2.1",
     "themer-colors-default": "^1.0.5"
   },
   "peerDependencies": {

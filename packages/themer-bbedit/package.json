@@ -4,7 +4,6 @@
   "description": "A BBEdit theme generator for themer.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -28,7 +27,6 @@
     "xml": "^1.0.1"
   },
   "devDependencies": {
-    "jest": "^21.2.1",
     "themer-colors-default": "^1.0.5"
   },
   "peerDependencies": {

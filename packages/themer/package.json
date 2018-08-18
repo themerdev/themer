@@ -16,11 +16,6 @@
     "themer": "./bin/themer.js"
   },
   "scripts": {
-    "lint": "eslint lib",
-    "lint:fix": "npm run lint -- --fix",
-    "test": "jest",
-    "test:watch": "npm run test -- --watch",
-    "prepare": "npm run lint && npm run test",
     "prepublishOnly": "cp ../../README.md ./ && cp ../../LICENSE.md ./ && cp -R ../../assets ./"
   },
   "dependencies": {
@@ -33,10 +28,7 @@
     "pn": "^1.1.0",
     "rxjs": "^5.5.10"
   },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "jest": "^22.4.3"
-  },
+  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },

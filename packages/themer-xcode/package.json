@@ -4,7 +4,6 @@
   "description": "An Xcode theme generator for themer.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "author": "mjswensen",
@@ -14,7 +13,6 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "jest": "^21.0.1",
     "themer-colors-default": "^1.0.3"
   },
   "peerDependencies": {

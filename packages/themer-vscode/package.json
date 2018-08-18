@@ -6,15 +6,10 @@
   "engines": {
     "node": ">=6.11"
   },
-  "jest": {
-    "rootDir": "src"
-  },
   "scripts": {
     "build": "babel --out-dir lib src",
     "lint": "prettier --list-different src/*.js",
     "prepare": "npm run lint && npm run build",
-    "start": "watch 'npm run test' src",
-    "test": "npm run lint && npm run build && jest",
     "watch": "watch 'npm run build' src",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
@@ -24,8 +19,6 @@
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
-    "eslint": "^4.3.0",
-    "jest": "^20.0.4",
     "prettier": "^1.5.3",
     "themer-colors-default": "^1.0.2",
     "watch": "^1.0.2"

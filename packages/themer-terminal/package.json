@@ -8,13 +8,8 @@
   },
   "author": "mjswensen",
   "license": "MIT",
-  "jest": {
-    "rootDir": "lib"
-  },
   "scripts": {
-    "build": "eslint src && babel --out-dir lib --copy-files src",
-    "start": "watch 'npm run test' src",
-    "test": "npm run build && jest",
+    "build": "babel --out-dir lib --copy-files src",
     "prepare": "npm run build",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
@@ -22,8 +17,6 @@
     "babel-cli": "^6.24.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.5.2",
-    "eslint": "^3.18.0",
-    "jest": "^19.0.2",
     "themer-colors-default": "^1.0.1",
     "watch": "^1.0.2"
   },

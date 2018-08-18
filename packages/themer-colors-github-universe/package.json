@@ -4,7 +4,6 @@
   "description": "A dark color set for themer, based on the GitHub Universe 2017 color palette.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -24,7 +23,5 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-github-universe#readme",
-  "devDependencies": {
-    "jest": "^21.2.1"
-  }
+  "devDependencies": {}
 }

@@ -6,7 +6,7 @@ const child_process = require('pn/child_process'),
 
 describe('the themer command line interface', () => {
 
-  const pathToExecutable = path.resolve('bin', 'themer.js');
+  const pathToExecutable = path.resolve(__dirname, '..', 'bin', 'themer.js');
 
   it('should fail if no arguments are provided', async () => {
     const wrapped = await wrap(() => child_process.execFile(pathToExecutable).promise);
@@ -25,12 +25,12 @@ describe('the themer command line interface', () => {
 
   describe('when given valid arguments', () => {
 
-    const testOutputDir = path.resolve('test-output');
+    const testOutputDir = path.resolve(__dirname, '..', 'test-output');
     const templateName = 'template.js';
     const testOutputFile = path.resolve(testOutputDir, templateName, outputFileDirectory, outputFileName);
     const args = [
-      '-c', path.resolve('lib', 'test-helpers', 'colors.js'),
-      '-t', path.resolve('lib', 'test-helpers', templateName),
+      '-c', path.resolve(__dirname, 'test-helpers', 'colors.js'),
+      '-t', path.resolve(__dirname, 'test-helpers', templateName),
       '-o', testOutputDir,
     ];
 

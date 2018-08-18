@@ -6,14 +6,10 @@
   "engines": {
     "node": ">=6.11"
   },
-  "jest": {
-    "rootDir": "lib"
-  },
   "scripts": {
-    "build": "eslint src && babel --out-dir lib src",
+    "build": "babel --out-dir lib src",
     "start": "watch 'npm run build' src",
     "prepare": "npm run build",
-    "test": "npm run build && jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -35,8 +31,6 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
-    "eslint": "^4.3.0",
-    "jest": "^20.0.4",
     "watch": "^1.0.2"
   },
   "directories": {

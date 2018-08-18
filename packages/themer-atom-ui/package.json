@@ -4,7 +4,6 @@
   "description": "An Atom UI theme generator for themer.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -27,7 +26,6 @@
     "@std/esm": "^0.11.2"
   },
   "devDependencies": {
-    "jest": "^21.2.1",
     "less": "^3.0.0-alpha.3",
     "lodash": "^4.17.4",
     "mkdirp-promise": "^5.0.1",

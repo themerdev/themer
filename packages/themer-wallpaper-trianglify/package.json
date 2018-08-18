@@ -7,7 +7,6 @@
     "node": ">=8.9.4"
   },
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "keywords": [
@@ -21,7 +20,6 @@
     "trianglify": "^1.2.0"
   },
   "devDependencies": {
-    "jest": "^22.1.0",
     "themer-colors-default": "^1.0.6"
   },
   "peerDependencies": {

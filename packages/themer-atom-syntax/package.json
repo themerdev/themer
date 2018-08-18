@@ -8,13 +8,8 @@
   },
   "author": "mjswensen",
   "license": "MIT",
-  "jest": {
-    "rootDir": "lib"
-  },
   "scripts": {
-    "build": "eslint src && babel --out-dir lib src",
-    "test": "npm run build && jest",
-    "start": "watch 'npm run test' src",
+    "build": "babel --out-dir lib src",
     "prepare": "npm run build",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
@@ -23,8 +18,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "del": "^3.0.0",
-    "eslint": "^4.14.0",
-    "jest": "^22.0.4",
     "less": "^2.7.3",
     "mkdirp-promise": "^5.0.1",
     "pn": "^1.1.0",

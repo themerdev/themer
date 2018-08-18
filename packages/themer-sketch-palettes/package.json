@@ -7,7 +7,6 @@
     "node": ">=8.9.4"
   },
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -27,7 +26,6 @@
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-sketch-palettes#readme",
   "devDependencies": {
-    "jest": "^22.2.2",
     "themer-colors-default": "^1.0.6"
   },
   "dependencies": {

@@ -7,13 +7,11 @@
     "node": ">=6.11"
   },
   "scripts": {
-    "test": "jest",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "author": "mjswensen",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^20.0.4",
     "themer-colors-default": "^1.0.2"
   },
   "repository": {
