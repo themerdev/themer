@@ -2,7 +2,7 @@ const path = require('path');
 const {pickBy} = require('lodash');
 const {render} = require('./index');
 const {colors} = require('themer-colors-default');
-const {version} = require('./package.json');
+const {version} = require('../package.json');
 
 describe('Chrome theme generator', () => {
   it('should render a directory containing a manifest.json', done => {

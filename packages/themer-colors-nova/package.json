@@ -2,7 +2,7 @@
   "name": "themer-colors-nova",
   "version": "1.0.0",
   "description": "A themer port of the beautiful Nova color set.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

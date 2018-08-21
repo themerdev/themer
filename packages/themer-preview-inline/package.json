@@ -2,7 +2,7 @@
   "name": "themer-preview-inline",
   "version": "1.0.2",
   "description": "Template for small, inline previews of themer color sets.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

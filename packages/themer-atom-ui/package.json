@@ -2,7 +2,7 @@
   "name": "themer-atom-ui",
   "version": "1.0.2",
   "description": "An Atom UI theme generator for themer.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

@@ -2,7 +2,7 @@
   "name": "themer-colors-lucid",
   "version": "1.0.0",
   "description": "A color set for themer based on the Lucidchart editor.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

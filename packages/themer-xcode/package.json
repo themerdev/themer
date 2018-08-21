@@ -2,7 +2,7 @@
   "name": "themer-xcode",
   "version": "2.0.2",
   "description": "An Xcode theme generator for themer.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

@@ -2,7 +2,7 @@
   "name": "themer-conemu",
   "version": "1.0.2",
   "description": "A ConEmu theme generator for themer.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

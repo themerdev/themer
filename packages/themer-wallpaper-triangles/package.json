@@ -2,7 +2,7 @@
   "name": "themer-wallpaper-triangles",
   "version": "2.0.3",
   "description": "A wallpaper generator for themer.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=6.11"
   },

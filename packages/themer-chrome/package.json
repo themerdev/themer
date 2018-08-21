@@ -2,7 +2,7 @@
   "name": "themer-chrome",
   "version": "1.0.3",
   "description": "A Chrome theme generator for themer.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

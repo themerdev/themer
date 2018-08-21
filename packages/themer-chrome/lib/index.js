@@ -1,7 +1,7 @@
 const path = require('path');
 const {capitalize, mapValues} = require('lodash');
 const Color = require('color');
-const {version} = require('./package.json');
+const {version} = require('../package.json');
 
 const formatColorSet = colors =>
   mapValues(colors, hex => Color(hex).rgb().array());

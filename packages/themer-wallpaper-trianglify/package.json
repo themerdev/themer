@@ -2,7 +2,7 @@
   "name": "themer-wallpaper-trianglify",
   "version": "1.0.0",
   "description": "A themer template for generating wallpaper using trianglify.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=8.9.4"
   },

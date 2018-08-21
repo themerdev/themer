@@ -2,7 +2,7 @@
   "name": "themer-cmd",
   "version": "1.0.3",
   "description": "A CMD.exe theme generator for themer.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

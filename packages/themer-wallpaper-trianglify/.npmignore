@@ -1,3 +1,2 @@
 __snapshots__
-index.spec.js
-opts.spec.js
+*.spec.js

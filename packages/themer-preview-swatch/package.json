@@ -2,7 +2,7 @@
   "name": "themer-preview-swatch",
   "version": "1.0.3",
   "description": "Color set preview template for themer.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
