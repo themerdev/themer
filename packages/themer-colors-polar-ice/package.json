@@ -26,8 +26,5 @@
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-polar-ice#readme",
   "devDependencies": {},
-  "directories": {
-    "lib": "lib"
-  },
   "dependencies": {}
 }

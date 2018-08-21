@@ -20,9 +20,6 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-night-sky#readme",
-  "directories": {
-    "lib": "lib"
-  },
   "dependencies": {},
   "keywords": [
     "themer",

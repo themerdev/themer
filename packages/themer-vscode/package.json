@@ -17,9 +17,6 @@
   "peerDependencies": {
     "themer": "^2.1||^3"
   },
-  "directories": {
-    "lib": "lib"
-  },
   "dependencies": {},
   "repository": {
     "type": "git",

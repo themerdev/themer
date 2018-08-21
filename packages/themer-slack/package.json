@@ -26,9 +26,6 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-slack#readme",
-  "directories": {
-    "lib": "lib"
-  },
   "keywords": [
     "themer",
     "slack",

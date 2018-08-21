@@ -30,9 +30,6 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-atom-syntax#readme",
-  "directories": {
-    "lib": "lib"
-  },
   "keywords": [
     "themer",
     "atom",

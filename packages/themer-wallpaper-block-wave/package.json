@@ -25,9 +25,6 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-wallpaper-block-wave#readme",
-  "directories": {
-    "lib": "lib"
-  },
   "dependencies": {},
   "keywords": [
     "themer",

@@ -33,9 +33,6 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer#readme",
-  "directories": {
-    "lib": "lib"
-  },
   "keywords": [
     "themer",
     "theme",
