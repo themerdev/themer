@@ -111,7 +111,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 To create your own color set, create a JavaScript file that exports a `colors` object, like so:
 
 ```js
-exports.colors = {
+module.exports.colors = {
 
   // A color set can have both light and dark variants, but is only required
   // to have one.
@@ -244,7 +244,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 To create your own template, create a JavaScript file that exports a `render` function, like so:
 
 ```js
-exports.render = function(colors, options) {
+module.exports.render = function(colors, options) {
 
   // colors is an object that will have one or both keys: 'light' and
   // 'dark', each being an object with keys 'accent0' through 'accent7'

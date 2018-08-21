@@ -1,4 +1,4 @@
-exports.colors = {
+module.exports.colors = {
   dark: {
     accent0: '#FF8E7D',
     accent1: '#FFC36D',

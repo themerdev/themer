@@ -1,7 +1,7 @@
 const { grays, colors } = require('nova-colors').default,
   Color = require('color');
 
-exports.colors = {
+module.exports.colors = {
   dark: {
     shade0: grays.gray1,
     shade1: Color(grays.gray1).mix(Color(grays.gray2)).hex(),

@@ -1,4 +1,4 @@
-exports.colors = {
+module.exports.colors = {
 
   dark: {
 

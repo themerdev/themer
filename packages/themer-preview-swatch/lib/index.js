@@ -41,7 +41,7 @@ const renderPreview = colorSet => {
   return Promise.resolve({ name: `${colorSet.name}-swatch.svg`, contents: Buffer.from(svgString, 'utf8') });
 };
 
-exports.render = (colors, options) => {
+module.exports.render = (colors, options) => {
   return Object.keys(colors)
     .map(name => ({
       name: `${getName(options)}-${name}`,
