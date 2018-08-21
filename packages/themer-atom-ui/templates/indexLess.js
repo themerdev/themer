@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 @import "styles/ui-variables";
 @import "styles/base";
 @import "styles/buttons";

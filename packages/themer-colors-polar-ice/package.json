@@ -7,9 +7,6 @@
     "node": ">=6.11"
   },
   "scripts": {
-    "build": "babel --out-dir lib src",
-    "start": "watch 'npm run build' src",
-    "prepare": "npm run build",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "repository": {
@@ -28,11 +25,7 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-polar-ice#readme",
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "watch": "^1.0.2"
-  },
+  "devDependencies": {},
   "directories": {
     "lib": "lib"
   },

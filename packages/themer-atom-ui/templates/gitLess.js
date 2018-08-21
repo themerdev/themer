@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .status          { color: @text-color; }
 .status-added    { color: @text-color-success; }
 .status-ignored  { color: @text-color-subtle; }

@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .text-smaller {
   font-size: smaller;
 }

@@ -13,15 +13,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "babel --out-dir lib src",
-    "prepare": "npm run build",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "themer-colors-default": "^1.0.6",
-    "watch": "^1.0.1"
+    "themer-colors-default": "^1.0.6"
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"

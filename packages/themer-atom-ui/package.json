@@ -22,9 +22,7 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-atom-ui#readme",
-  "dependencies": {
-    "@std/esm": "^0.11.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "less": "^3.0.0-alpha.3",
     "lodash": "^4.17.4",

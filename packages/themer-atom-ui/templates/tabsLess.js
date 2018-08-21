@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .tab-bar {
   background-color: @tab-bar-background-color;
   border-bottom: 1px solid @base-border-color;

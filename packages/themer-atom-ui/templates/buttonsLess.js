@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .btn {
   color: lighten(@text-color, 6%);
   background-color: @button-background-color;

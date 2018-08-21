@@ -13,16 +13,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "babel --out-dir lib src",
-    "start": "watch 'npm run build' src",
-    "prepare": "npm run build",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "watch": "^1.0.1"
-  },
+  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },

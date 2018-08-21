@@ -9,15 +9,9 @@
   "author": "mjswensen",
   "license": "MIT",
   "scripts": {
-    "build": "babel --out-dir lib src",
-    "prepare": "npm run build",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
-  "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-preset-env": "^1.5.2",
-    "watch": "^1.0.2"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mjswensen/themer.git"

@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .tooltip {
   .tooltip-inner {
     line-height: 1;

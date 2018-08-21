@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .status-bar {
   font-size: @font-size;
   color: @text-color;

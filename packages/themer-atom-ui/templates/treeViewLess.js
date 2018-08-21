@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .tree-view-resizer {
   border-right: 1px solid @base-border-color;
 }

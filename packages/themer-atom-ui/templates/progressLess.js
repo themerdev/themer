@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .loading-spinner-large  { .loading-spinner(64px); }
 .loading-spinner-medium { .loading-spinner(48px); }
 .loading-spinner-small  { .loading-spinner(32px); }

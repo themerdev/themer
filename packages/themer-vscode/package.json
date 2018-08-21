@@ -7,19 +7,12 @@
     "node": ">=6.11"
   },
   "scripts": {
-    "build": "babel --out-dir lib src",
-    "prepare": "npm run build",
-    "watch": "watch 'npm run build' src",
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "author": "mjswensen",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "themer-colors-default": "^1.0.2",
-    "watch": "^1.0.2"
+    "themer-colors-default": "^1.0.2"
   },
   "peerDependencies": {
     "themer": "^2.1||^3"
@@ -27,9 +20,7 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {
-    "babel-runtime": "^6.26.0"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjswensen/themer.git"

@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 body {
   font-size: @font-size;
   color: @text-color;

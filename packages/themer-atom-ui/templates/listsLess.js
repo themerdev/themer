@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .list-group {
   li {
     padding-left: @component-padding/2;

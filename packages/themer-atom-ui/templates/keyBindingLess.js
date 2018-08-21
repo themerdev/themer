@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .key-binding {
   display: inline-block;
   margin-left: 1px;

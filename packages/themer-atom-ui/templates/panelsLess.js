@@ -1,4 +1,4 @@
-export default () => `
+module.exports = () => `
 .panel-heading {
   border-bottom: 1px solid @panel-heading-border-color;
   background-color: @panel-heading-background-color;

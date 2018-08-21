@@ -1,6 +1,6 @@
-import {version} from '../package.json';
+const {version} = require('../package.json');
 
-export default name =>
+module.exports = name =>
   JSON.stringify(
     {
       name: `themer-${name}-ui`,
