@@ -1,6 +1,0 @@
-language: node_js
-node_js:
-  - "6"
-  - "lts/*"
-
-script: npm run test
