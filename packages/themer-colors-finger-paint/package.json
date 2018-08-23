@@ -1,8 +1,11 @@
 {
   "name": "themer-colors-finger-paint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A warm and friendly color set for themer.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

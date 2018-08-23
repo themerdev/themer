@@ -1,10 +1,10 @@
 {
   "name": "themer-sublime-text",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Sublime Text theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
-    "node": ">=6.11"
+    "node": ">=8.11.4"
   },
   "author": "mjswensen",
   "license": "MIT",

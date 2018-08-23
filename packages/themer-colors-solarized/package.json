@@ -1,8 +1,11 @@
 {
   "name": "themer-colors-solarized",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A themer color set ported from the popular Solarized themes.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

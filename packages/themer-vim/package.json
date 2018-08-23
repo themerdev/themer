@@ -1,10 +1,10 @@
 {
   "name": "themer-vim",
-  "version": "2.2.9",
+  "version": "3.0.0",
   "description": "Vim template for themer.",
   "main": "lib/index.js",
   "engines": {
-    "node": ">=6.11"
+    "node": ">=8.11.4"
   },
   "author": "mjswensen",
   "repository": {

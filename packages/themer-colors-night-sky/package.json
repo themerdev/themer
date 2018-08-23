@@ -1,6 +1,6 @@
 {
   "name": "themer-colors-night-sky",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A dark color set for themer.",
   "main": "lib/index.js",
   "engines": {

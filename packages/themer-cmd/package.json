@@ -1,8 +1,11 @@
 {
   "name": "themer-cmd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A CMD.exe theme generator for themer.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
