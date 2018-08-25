@@ -1,6 +1,6 @@
 # themer-wallpaper-octagon [![Travis](https://img.shields.io/travis/mjswensen/themer-wallpaper-octagon.svg)](https://travis-ci.org/mjswensen/themer-wallpaper-octagon)
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([themer-colors-default](https://github.com/mjswensen/themer-colors-default)):
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([themer-colors-default](https://github.com/mjswensen/themer/packages/themer-colors-default)):
 
 ![desktop dark](https://cdn.rawgit.com/mjswensen/themer-wallpaper-octagon/05bea43827b8b5c66fc5a2fa3a57dd998354764d/assets/desktop-dark.svg)
 ![desktop light](https://cdn.rawgit.com/mjswensen/themer-wallpaper-octagon/05bea43827b8b5c66fc5a2fa3a57dd998354764d/assets/desktop-light.svg)

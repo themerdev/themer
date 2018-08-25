@@ -2,11 +2,11 @@
 
 A chilly color set for [themer](https://github.com/mjswensen/themer).
 
-Here's an example of `themer-colors-polar-ice` in [vim](https://github.com/mjswensen/themer-vim) and [iTerm](https://github.com/mjswensen/themer-iterm):
+Here's an example of `themer-colors-polar-ice` in [vim](https://github.com/mjswensen/themer/packages/themer-vim) and [iTerm](https://github.com/mjswensen/themer/packages/themer-iterm):
 
 ![Preview - dark](/assets/themer-colors-polar-ice-dark.png)
 
-And the light variant in [Sublime Text](https://github.com/mjswensen/themer-sublime-text):
+And the light variant in [Sublime Text](https://github.com/mjswensen/themer/packages/themer-sublime-text):
 
 ![Preview - light](/assets/themer-colors-polar-ice-light.png)
 

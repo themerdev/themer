@@ -4,7 +4,7 @@ An [Alfred.app](https://www.alfredapp.com/) theme generator for [themer](https:/
 
 ![themer Alfred preview](/assets/themer-alfred-preview.png)
 
-(Generated with [themer's "Polar Ice" color set](https://github.com/mjswensen/themer-colors-polar-ice) and shown with [themer's "Triangles" wallpaper template](https://github.com/mjswensen/themer-wallpaper-triangles).)
+(Generated with [themer's "Polar Ice" color set](https://github.com/mjswensen/themer/packages/themer-colors-polar-ice) and shown with [themer's "Triangles" wallpaper template](https://github.com/mjswensen/themer/packages/themer-wallpaper-triangles).)
 
 ## Installation & usage
 
