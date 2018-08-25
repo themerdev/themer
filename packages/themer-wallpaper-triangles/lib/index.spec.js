@@ -1,5 +1,5 @@
 const {render} = require('./index');
-const {colors} = require('themer-colors-default');
+const {colors} = require('../../themer-colors-default');
 
 describe('themer "triangles" wallpaper', () => {
   const test = (scenario, colors, totalDefaultFiles) => {

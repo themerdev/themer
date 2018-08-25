@@ -30,8 +30,7 @@
     "less": "^3.0.0-alpha.3",
     "lodash": "^4.17.4",
     "mkdirp-promise": "^5.0.1",
-    "pn": "^1.0.0",
-    "themer-colors-default": "^1.0.5"
+    "pn": "^1.0.0"
   },
   "peerDependencies": {
     "themer": "^2.1||^3"

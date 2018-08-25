@@ -1,4 +1,4 @@
-const { colors } = require('themer-colors-default'),
+const { colors } = require('../../themer-colors-default'),
   { render } = require('./index'),
   plist = require('plist');
 

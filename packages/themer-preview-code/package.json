@@ -23,9 +23,7 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-preview-code#readme",
-  "devDependencies": {
-    "themer-colors-default": "^1.0.4"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
   }

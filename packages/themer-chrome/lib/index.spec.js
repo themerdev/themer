@@ -1,7 +1,7 @@
 const path = require('path');
 const {pickBy} = require('lodash');
 const {render} = require('./index');
-const {colors} = require('themer-colors-default');
+const {colors} = require('../../themer-colors-default');
 const {version} = require('../package.json');
 
 describe('Chrome theme generator', () => {

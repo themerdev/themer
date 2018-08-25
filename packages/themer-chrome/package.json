@@ -28,9 +28,7 @@
     "color": "^2.0.0",
     "lodash": "^4.17.4"
   },
-  "devDependencies": {
-    "themer-colors-default": "^1.0.4"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "themer": "^2.1||^3"
   }

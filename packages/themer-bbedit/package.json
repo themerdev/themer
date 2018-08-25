@@ -29,9 +29,7 @@
     "lodash": "^4.17.4",
     "xml": "^1.0.1"
   },
-  "devDependencies": {
-    "themer-colors-default": "^1.0.5"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
   }

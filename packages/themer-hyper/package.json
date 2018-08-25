@@ -15,9 +15,7 @@
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
-  "devDependencies": {
-    "themer-colors-default": "^1.0.6"
-  },
+  "devDependencies": {},
   "dependencies": {
     "color": "^2.0.1"
   },

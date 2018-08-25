@@ -1,5 +1,5 @@
 const { render } = require('./index');
-const { colors } = require('themer-colors-default');
+const { colors } = require('../../themer-colors-default');
 
 describe('themer color set inline preview', () => {
   it('should use the color set name as the default name', done => {

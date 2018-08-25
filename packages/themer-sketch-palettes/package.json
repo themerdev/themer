@@ -25,9 +25,7 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-sketch-palettes#readme",
-  "devDependencies": {
-    "themer-colors-default": "^1.0.6"
-  },
+  "devDependencies": {},
   "dependencies": {
     "onecolor": "^3.0.5"
   },

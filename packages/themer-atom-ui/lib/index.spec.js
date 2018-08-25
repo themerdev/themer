@@ -5,7 +5,7 @@ const {render} = require('./index'),
   fs = require('pn/fs'),
   mkdirp = require('mkdirp-promise'),
   less = require('less'),
-  {colors} = require('themer-colors-default');
+  {colors} = require('../../themer-colors-default');
 
 describe('render', () => {
   const promisedFiles = Promise.all(render(colors));

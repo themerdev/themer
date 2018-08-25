@@ -19,9 +19,7 @@
   "dependencies": {
     "trianglify": "^1.2.0"
   },
-  "devDependencies": {
-    "themer-colors-default": "^1.0.6"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "themer": "^3"
   },

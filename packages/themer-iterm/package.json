@@ -14,9 +14,7 @@
   "dependencies": {
     "color": "^2.0.1"
   },
-  "devDependencies": {
-    "themer-colors-default": "^1.0.6"
-  },
+  "devDependencies": {},
   "repository": {
     "url": "git+ssh://git@github.com/mjswensen/themer.git",
     "type": "git"

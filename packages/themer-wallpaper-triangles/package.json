@@ -11,9 +11,7 @@
   },
   "author": "mjswensen",
   "license": "MIT",
-  "devDependencies": {
-    "themer-colors-default": "^1.0.2"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjswensen/themer.git"
