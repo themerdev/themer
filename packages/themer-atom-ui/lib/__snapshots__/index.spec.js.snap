@@ -129,7 +129,7 @@ atom-pane:last-child {
   background-color: #ff6975;
 }
 .btn-group > .btn {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: hsla(0, 0%, 0%, 0.2);
 }
 atom-text-editor[mini] {
   padding-left: 5px;
@@ -174,7 +174,7 @@ atom-text-editor[mini] .selection .region {
   padding: 0 5px;
   line-height: 2;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: .8em;
+  font-size: 0.8em;
   letter-spacing: 1px;
   border-radius: 2px;
   background-color: #282629;
@@ -202,7 +202,7 @@ atom-text-editor[mini] .selection .region {
   padding: 5px;
   border-radius: 2px;
   background-color: #474247;
-  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px 1px hsla(0, 0%, 0%, 0.3);
 }
 .select-list.popover-list .list-group {
   margin-top: 5px;
@@ -223,7 +223,7 @@ atom-text-editor[mini] .selection .region {
 atom-panel.modal {
   border: 1px solid #474247;
   border-top: none;
-  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px 1px hsla(0, 0%, 0%, 0.3);
 }
 .loading-spinner-large {
   display: block;
@@ -324,7 +324,7 @@ atom-panel.modal {
 .tab-bar .tab.is-dragging {
   background: #0e0d0f;
   border-color: transparent;
-  opacity: .5;
+  opacity: 0.5;
 }
 .tab-bar .tab.is-dragging .close-icon {
   visibility: hidden;
@@ -391,12 +391,12 @@ atom-panel.modal {
 }
 .tooltip .tooltip-inner {
   line-height: 1;
-  padding: .75em;
+  padding: 0.75em;
   white-space: nowrap;
   max-width: none;
 }
 .tooltip .keystroke {
-  padding: .15em .4em;
+  padding: 0.15em 0.4em;
   margin: 0 -0.3em 0 0.25em;
   border-radius: 2px;
   color: #FFFCFF;
@@ -544,7 +544,7 @@ atom-pane:last-child {
   background-color: #f36470;
 }
 .btn-group > .btn {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: hsla(0, 0%, 0%, 0.2);
 }
 atom-text-editor[mini] {
   padding-left: 5px;
@@ -589,7 +589,7 @@ atom-text-editor[mini] .selection .region {
   padding: 0 5px;
   line-height: 2;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: .8em;
+  font-size: 0.8em;
   letter-spacing: 1px;
   border-radius: 2px;
   background-color: #FFFCFF;
@@ -617,7 +617,7 @@ atom-text-editor[mini] .selection .region {
   padding: 5px;
   border-radius: 2px;
   background-color: #E0DCE0;
-  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px 1px hsla(0, 0%, 0%, 0.3);
 }
 .select-list.popover-list .list-group {
   margin-top: 5px;
@@ -638,7 +638,7 @@ atom-text-editor[mini] .selection .region {
 atom-panel.modal {
   border: 1px solid #E0DCE0;
   border-top: none;
-  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px 1px hsla(0, 0%, 0%, 0.3);
 }
 .loading-spinner-large {
   display: block;
@@ -739,7 +739,7 @@ atom-panel.modal {
 .tab-bar .tab.is-dragging {
   background: #ffc9ff;
   border-color: transparent;
-  opacity: .5;
+  opacity: 0.5;
 }
 .tab-bar .tab.is-dragging .close-icon {
   visibility: hidden;
@@ -806,12 +806,12 @@ atom-panel.modal {
 }
 .tooltip .tooltip-inner {
   line-height: 1;
-  padding: .75em;
+  padding: 0.75em;
   white-space: nowrap;
   max-width: none;
 }
 .tooltip .keystroke {
-  padding: .15em .4em;
+  padding: 0.15em 0.4em;
   margin: 0 -0.3em 0 0.25em;
   border-radius: 2px;
   color: #282629;
