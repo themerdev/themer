@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-nova#readme",
   "dependencies": {
-    "color": "^2.0.1",
+    "color": "^3.0.0",
     "nova-colors": "^2.1.5"
   },
   "devDependencies": {}

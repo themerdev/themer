@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/mjswensen/themer/packages/themer-chrome#readme",
   "dependencies": {
-    "color": "^2.0.0",
+    "color": "^3.0.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {},

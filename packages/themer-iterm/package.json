@@ -12,7 +12,7 @@
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
   "dependencies": {
-    "color": "^2.0.1"
+    "color": "^3.0.0"
   },
   "devDependencies": {},
   "repository": {

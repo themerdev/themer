@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "del": "^3.0.0",
-    "less": "^2.7.3",
+    "less": "^3.8.1",
     "mkdirp-promise": "^5.0.1",
     "pn": "^1.1.0"
   },

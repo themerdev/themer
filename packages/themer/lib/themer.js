@@ -1,7 +1,7 @@
 const fs = require('pn/fs'),
   mkdirp = require('mkdirp-promise'),
   path = require('path'),
-  Rx = require('rxjs/Rx'),
+  { Observable } = require('rxjs'),
   resolvePackage = require('./resolve'),
   getColors = require('./get-colors'),
   prepareColors = require('./prepare');
@@ -9,7 +9,7 @@ const fs = require('pn/fs'),
 const flatten = arr => [].concat.apply([], arr);
 
 module.exports = function themer(colorsPackageName, templatePackageNames, outDirName, extraArgs) {
-  return Rx.Observable.create(async observer => {
+  return Observable.create(async observer => {
     try {
       observer.next('resolving packages...');
       const resolvedPaths = await Promise.all([colorsPackageName, ...templatePackageNames].map(resolvePackage));

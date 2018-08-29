@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "color": "^2.0.1"
+    "color": "^3.0.0"
   },
   "peerDependencies": {
     "themer": "^2.1||^3"
