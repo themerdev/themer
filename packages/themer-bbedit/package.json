@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/packages/themer-bbedit#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/packages/themer-bbedit#readme",
   "dependencies": {
     "color": "^3.0.0",
     "lodash": "^4.17.4",

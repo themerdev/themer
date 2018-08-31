@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-default#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/packages/themer-colors-default#readme",
   "dependencies": {},
   "keywords": [
     "themer",

@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/packages/themer-colors-polar-ice#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/packages/themer-colors-polar-ice#readme",
   "devDependencies": {},
   "dependencies": {}
 }

@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/packages/themer-atom-ui#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/packages/themer-atom-ui#readme",
   "dependencies": {},
   "devDependencies": {
     "less": "^3.0.0-alpha.3",

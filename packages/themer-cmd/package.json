@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/packages/themer-cmd#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/packages/themer-cmd#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   },
