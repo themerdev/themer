@@ -1,4 +1,4 @@
-# themer-sketch-palettes [![Travis](https://img.shields.io/travis/mjswensen/themer-sketch-palettes.svg)](https://travis-ci.org/mjswensen/themer-sketch-palettes)
+# themer-sketch-palettes
 
 A [themer](https://github.com/mjswensen/themer) template for generating files compatible with the [andrewfiorillo/sketch-palettes](https://github.com/andrewfiorillo/sketch-palettes) Sketch plugin.
 

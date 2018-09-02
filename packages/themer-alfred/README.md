@@ -1,4 +1,4 @@
-# themer-alfred [![Travis](https://img.shields.io/travis/mjswensen/themer-alfred.svg)](https://travis-ci.org/mjswensen/themer-alfred)
+# themer-alfred
 
 An [Alfred.app](https://www.alfredapp.com/) theme generator for [themer](https://github.com/mjswensen/themer).
 

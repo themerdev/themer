@@ -1,4 +1,4 @@
-# themer-atom-ui [![Travis](https://img.shields.io/travis/mjswensen/themer-atom-ui.svg)](https://travis-ci.org/mjswensen/themer-atom-ui)
+# themer-atom-ui
 
 An Atom UI theme generator for [themer](https://github.com/mjswensen/themer).
 

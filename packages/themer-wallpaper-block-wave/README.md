@@ -1,9 +1,9 @@
-# themer-wallpaper-block-wave [![Travis](https://img.shields.io/travis/mjswensen/themer-wallpaper-block-wave.svg)](https://travis-ci.org/mjswensen/themer-wallpaper-block-wave)
+# themer-wallpaper-block-wave
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([themer-colors-default](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-default)):
 
-![desktop dark](https://cdn.rawgit.com/mjswensen/themer-wallpaper-block-wave/e64f5545b760f0c3882ac21d108fa6ba00174140/assets/desktop-dark.svg)
-![desktop light](https://cdn.rawgit.com/mjswensen/themer-wallpaper-block-wave/e64f5545b760f0c3882ac21d108fa6ba00174140/assets/desktop-light.svg)
+![desktop dark](https://cdn.rawgit.com/mjswensen/themer/f6294278/packages/themer-wallpaper-block-wave/assets/desktop-dark.svg)
+![desktop light](https://cdn.rawgit.com/mjswensen/themer/f6294278/packages/themer-wallpaper-block-wave/assets/desktop-light.svg)
 
 ## Installation & usage
 

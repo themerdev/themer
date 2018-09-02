@@ -1,4 +1,4 @@
-# themer-cmd [![Travis](https://img.shields.io/travis/mjswensen/themer-cmd.svg)](https://travis-ci.org/mjswensen/themer-cmd)
+# themer-cmd
 
 A CMD.exe theme generator for [themer](https://github.com/mjswensen/themer).
 

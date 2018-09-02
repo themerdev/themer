@@ -1,4 +1,4 @@
-# themer-vscode [![Travis](https://img.shields.io/travis/mjswensen/themer-vscode.svg)](https://travis-ci.org/mjswensen/themer-vscode)
+# themer-vscode
 
 A VS Code theme generator for [themer](https://github.com/mjswensen/themer).
 

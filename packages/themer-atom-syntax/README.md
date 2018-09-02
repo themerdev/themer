@@ -1,4 +1,4 @@
-# themer-atom-syntax [![Travis](https://img.shields.io/travis/mjswensen/themer-atom-syntax.svg)](https://travis-ci.org/mjswensen/themer-atom-syntax)
+# themer-atom-syntax
 
 An Atom syntax theme generator for [themer](https://github.com/mjswensen/themer).
 

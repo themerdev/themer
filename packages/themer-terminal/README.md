@@ -1,4 +1,4 @@
-# themer-terminal [![Travis](https://img.shields.io/travis/mjswensen/themer-terminal.svg)](https://travis-ci.org/mjswensen/themer-terminal)
+# themer-terminal
 
 A Terminal.app theme generator for [themer](https://github.com/mjswensen/themer).
 

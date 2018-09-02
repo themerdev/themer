@@ -1,4 +1,4 @@
-# themer-vim [![Travis](https://img.shields.io/travis/mjswensen/themer-vim.svg)](https://travis-ci.org/mjswensen/themer-vim)
+# themer-vim
 
 A vim theme template for [themer](https://github.com/mjswensen/themer).
 

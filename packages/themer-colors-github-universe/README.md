@@ -1,4 +1,4 @@
-# themer-colors-github-universe [![Travis](https://img.shields.io/travis/mjswensen/themer-colors-github-universe.svg)](https://travis-ci.org/mjswensen/themer-colors-github-universe)
+# themer-colors-github-universe
 
 A [themer](https://github.com/mjswensen/themer) color set based on the 2017 [GitHub Universe](https://githubuniverse.com/) color palette.
 

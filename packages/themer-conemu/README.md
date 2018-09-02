@@ -1,4 +1,4 @@
-# themer-conemu [![Travis](https://img.shields.io/travis/mjswensen/themer-conemu.svg)](https://travis-ci.org/mjswensen/themer-conemu)
+# themer-conemu
 
 A ConEmu theme generator for [themer](https://github.com/mjswensen/themer).
 

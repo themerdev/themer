@@ -1,4 +1,4 @@
-# themer-colors-nova [![Travis](https://img.shields.io/travis/mjswensen/themer-colors-nova.svg)](https://travis-ci.org/mjswensen/themer-colors-nova)
+# themer-colors-nova
 
 A [themer](https://github.com/mjswensen/themer) color set ported from the [Nova project](https://trevordmiller.com/projects/nova) by [@trevordmiller](https://github.com/trevordmiller).
 

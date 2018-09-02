@@ -1,4 +1,4 @@
-# themer-colors-polar-ice [![Travis](https://img.shields.io/travis/mjswensen/themer-colors-polar-ice.svg)](https://travis-ci.org/mjswensen/themer-colors-polar-ice)
+# themer-colors-polar-ice
 
 A chilly color set for [themer](https://github.com/mjswensen/themer).
 

@@ -1,4 +1,4 @@
-# themer-colors-lucid [![Travis](https://img.shields.io/travis/mjswensen/themer-colors-lucid.svg)](https://travis-ci.org/mjswensen/themer-colors-lucid)
+# themer-colors-lucid
 
 A [themer](https://github.com/mjswensen/themer) color set based on the [Lucidchart editor](https://lucidchart.com/demo).
 

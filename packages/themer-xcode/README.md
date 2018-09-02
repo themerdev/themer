@@ -1,4 +1,4 @@
-# themer-xcode [![Travis](https://img.shields.io/travis/mjswensen/themer-xcode.svg)](https://travis-ci.org/mjswensen/themer-xcode)
+# themer-xcode
 
 An Xcode theme generator for [themer](https://github.com/mjswensen/themer).
 

@@ -1,4 +1,4 @@
-# themer-iterm [![Travis](https://img.shields.io/travis/mjswensen/themer-iterm.svg)](https://travis-ci.org/mjswensen/themer-iterm)
+# themer-iterm
 
 An [iTerm](https://www.iterm2.com/) theme generator for [themer](https://github.com/mjswensen/themer).
 

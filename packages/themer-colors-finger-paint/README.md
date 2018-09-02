@@ -1,4 +1,4 @@
-# themer-colors-finger-paint [![Travis](https://img.shields.io/travis/mjswensen/themer-colors-finger-paint.svg)](https://travis-ci.org/mjswensen/themer-colors-finger-paint)
+# themer-colors-finger-paint
 
 A warm and friendly [themer](https://github.com/mjswensen/themer) color set.
 

@@ -1,10 +1,10 @@
-# themer-wallpaper-trianglify [![Travis](https://img.shields.io/travis/mjswensen/themer-wallpaper-trianglify.svg)](https://travis-ci.org/mjswensen/themer-wallpaper-trianglify)
+# themer-wallpaper-trianglify
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). It uses the popular [trianglify](https://github.com/qrohlf/trianglify) library to generate wallpapers from your color set.
 
 Here's a preview using [themer's default color set](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-default):
 
-![dark desktop](https://cdn.rawgit.com/mjswensen/themer-wallpaper-trianglify/82e7b265/assets/desktop-dark.svg)
+![dark desktop](https://cdn.rawgit.com/mjswensen/themer/f6294278/packages/themer-wallpaper-trianglify/assets/desktop-dark.svg)
 
 ## Installation & usage
 

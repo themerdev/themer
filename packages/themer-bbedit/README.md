@@ -1,4 +1,4 @@
-# themer-bbedit [![Travis](https://img.shields.io/travis/mjswensen/themer-bbedit.svg)](https://travis-ci.org/mjswensen/themer-bbedit)
+# themer-bbedit
 
 A BBEdit theme generator for [themer](https://github.com/mjswensen/themer).
 

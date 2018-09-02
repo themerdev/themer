@@ -1,8 +1,8 @@
-# themer-wallpaper-triangles [![Travis](https://img.shields.io/travis/mjswensen/themer-wallpaper-triangles.svg)](https://travis-ci.org/mjswensen/themer-wallpaper-triangles)
+# themer-wallpaper-triangles
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview using [themer's default color set](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-default):
 
-![dark desktop](https://cdn.rawgit.com/mjswensen/themer-wallpaper-triangles/ecf436f9edd35618c72ff8d944c9814b84809b2c/assets/desktop-dark.svg)
+![dark desktop](https://cdn.rawgit.com/mjswensen/themer/f6294278/packages/themer-wallpaper-triangles/assets/desktop-dark.svg)
 
 ## Installation & usage
 

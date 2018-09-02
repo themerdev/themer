@@ -1,4 +1,4 @@
-# themer-sublime-text [![Travis](https://img.shields.io/travis/mjswensen/themer-sublime-text.svg)](https://travis-ci.org/mjswensen/themer-sublime-text)
+# themer-sublime-text
 
 A Sublime Text theme generator for [themer](https://github.com/mjswensen/themer).
 
