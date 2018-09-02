@@ -8,7 +8,7 @@
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 
-![visual description](/assets/themer-description.png)
+![visual description](assets/themer-description.png)
 
 ## Table of Contents
 
@@ -83,7 +83,7 @@ npm run build
 
 Now check the `gen/` folder for your generated themes. Here's the result:
 
-![example usage result](/assets/example-usage.png)
+![example usage result](assets/example-usage.png)
 
 ## Themer color sets
 
