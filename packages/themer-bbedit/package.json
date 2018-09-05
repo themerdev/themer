@@ -1,6 +1,6 @@
 {
   "name": "themer-bbedit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A BBEdit theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
