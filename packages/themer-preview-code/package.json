@@ -1,6 +1,6 @@
 {
   "name": "themer-preview-code",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Color set preview template for themer.",
   "main": "lib/index.js",
   "engines": {
