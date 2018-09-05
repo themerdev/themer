@@ -1,6 +1,6 @@
 {
   "name": "themer-preview-inline",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Template for small, inline previews of themer color sets.",
   "main": "lib/index.js",
   "engines": {
