@@ -21,6 +21,11 @@
   ],
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/assets/themer-colors-polar-ice-dark.png",
+    "/assets/themer-colors-polar-ice-light.png",
+    "/lib/index.js"
+  ],
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },

@@ -18,6 +18,9 @@
   ],
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjswensen/themer.git"

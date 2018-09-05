@@ -16,6 +16,11 @@
   ],
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/assets/desktop-dark.svg",
+    "/lib/index.js",
+    "/lib/opts.js"
+  ],
   "dependencies": {
     "trianglify": "^1.2.0"
   },

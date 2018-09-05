@@ -11,6 +11,9 @@
   },
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
   "dependencies": {
     "color": "^3.0.0",
     "lodash": "^4.17.4"

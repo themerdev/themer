@@ -12,6 +12,17 @@
     "type": "git"
   },
   "license": "MIT",
+  "files": [
+    "/assets/example-usage.png",
+    "/assets/themer-description.png",
+    "/assets/icon.png",
+    "/bin/themer.js",
+    "/lib/get-colors.js",
+    "/lib/index.js",
+    "/lib/prepare.js",
+    "/lib/resolve.js",
+    "/lib/themer.js"
+  ],
   "bin": {
     "themer": "./bin/themer.js"
   },

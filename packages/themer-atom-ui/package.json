@@ -21,6 +21,27 @@
   ],
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/lib/index.js",
+    "/lib/templates/baseLess.js",
+    "/lib/templates/buttonsLess.js",
+    "/lib/templates/editorLess.js",
+    "/lib/templates/findAndReplaceLess.js",
+    "/lib/templates/gitLess.js",
+    "/lib/templates/indexLess.js",
+    "/lib/templates/keyBindingLess.js",
+    "/lib/templates/listsLess.js",
+    "/lib/templates/packageJson.js",
+    "/lib/templates/panelsLess.js",
+    "/lib/templates/progressLess.js",
+    "/lib/templates/sitesLess.js",
+    "/lib/templates/statusBarLess.js",
+    "/lib/templates/tabsLess.js",
+    "/lib/templates/textLess.js",
+    "/lib/templates/tooltipsLess.js",
+    "/lib/templates/treeViewLess.js",
+    "/lib/templates/uiVariablesLess.js"
+  ],
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },

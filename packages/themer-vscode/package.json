@@ -11,6 +11,9 @@
   },
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
   "devDependencies": {},
   "peerDependencies": {
     "themer": "^2.1||^3"

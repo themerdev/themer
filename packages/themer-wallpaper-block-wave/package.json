@@ -8,6 +8,12 @@
   },
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/assets/desktop-dark.svg",
+    "/assets/desktop-light.svg",
+    "/lib/index.js",
+    "/lib/weighted-random.js"
+  ],
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },

@@ -22,6 +22,10 @@
   ],
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/assets/preview.png",
+    "/lib/index.js"
+  ],  
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },

@@ -12,6 +12,9 @@
   },
   "author": "mjswensen",
   "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
   "scripts": {
     "prepublishOnly": "cp ../../LICENSE.md ./"
   },
