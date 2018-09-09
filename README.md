@@ -95,6 +95,7 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 | [themer-colors-night-sky](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-night-sky-dark-swatch.svg) | (dark only) |
 | [themer-colors-polar-ice](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-dark-swatch.svg) | ![themer-colors-polar-ice light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-light-swatch.svg) |
 | [themer-colors-finger-paint](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-finger-paint) | ![themer-colors-finger-paint dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-dark-swatch.svg) | ![themer-colors-finger-paint light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-light-swatch.svg) |
+| [themer-colors-monkey](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-monkey) | ![themer-colors-monkey dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-monkey-dark-swatch.svg) | ![themer-colors-monkey light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-monkey-light-swatch.svg) |
 
 ### Ports from third-party themes
 
