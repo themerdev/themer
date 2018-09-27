@@ -12,7 +12,7 @@ const PATTERN_HEIGHT = CELL_HEIGHT * 6;
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['themer-wallpaper-triangles-size']
+      options['themer-wallpaper-shirts-size']
     );
   } catch (e) {
     return [Promise.reject(e.message)];
