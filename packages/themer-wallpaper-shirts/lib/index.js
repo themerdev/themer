@@ -1,46 +1,13 @@
+const {
+  getSizesFromOptOrDefault,
+  deepFlatten,
+  colorSets: getColorSets,
+} = require('themer-utils');
+
 const CELL_WIDTH = 676;
 const CELL_HEIGHT = 720;
 const PATTERN_WIDTH = CELL_WIDTH * 8;
 const PATTERN_HEIGHT = CELL_HEIGHT * 6;
-
-// TODO: DRY this up
-const getSizesFromOptOrDefault = opt => {
-  if (opt) {
-    const unparsedSizes = Array.isArray(opt) ? opt : [opt];
-    return unparsedSizes.map(unparsedSize => {
-      const results = /(\d+)x(\d+)/.exec(unparsedSize);
-      if (results) {
-        const w = parseInt(results[1], 10);
-        const h = parseInt(results[2], 10);
-        return {
-          w,
-          h,
-        };
-      } else {
-        throw new Error(`Malformed resolution argument: ${unparsedSize}`);
-      }
-    });
-  } else {
-    return [
-      {
-        w: 2880,
-        h: 1800,
-      },
-      {
-        w: 750,
-        h: 1334,
-      },
-    ];
-  }
-};
-
-// TODO: DRY this up
-const deepFlatten = arr =>
-  arr.reduce(
-    (cumulative, inner) =>
-      cumulative.concat(Array.isArray(inner) ? deepFlatten(inner) : inner),
-    []
-  );
 
 const render = (colors, options) => {
   try {
@@ -51,8 +18,7 @@ const render = (colors, options) => {
     return [Promise.reject(e.message)];
   }
 
-  // TODO: DRY this up
-  const colorSets = Object.entries(colors).map(([name, colors]) => ({name, colors}));
+  const colorSets = getColorSets(colors);
 
   return deepFlatten(
     sizes.map(

@@ -23,7 +23,9 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/packages/themer-wallpaper-shirts#readme",
-  "dependencies": {},
+  "dependencies": {
+    "themer-utils": "^1.0.0"
+  },
   "peerDependencies": {
     "themer": "^3"
   },
