@@ -4,9 +4,11 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "jest": "^23.5.0"
   }
 }
