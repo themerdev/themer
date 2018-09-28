@@ -1,7 +1,8 @@
-const getSizesFromOptOrDefault = opt => {
+const getSizesFromOptOrDefault = (opt, patternSize) => {
+  let sizes;
   if (opt) {
     const unparsedSizes = Array.isArray(opt) ? opt : [opt];
-    return unparsedSizes.map(unparsedSize => {
+    sizes = unparsedSizes.map(unparsedSize => {
       const results = /(\d+)x(\d+)/.exec(unparsedSize);
       if (results) {
         const w = parseInt(results[1], 10);
@@ -15,7 +16,7 @@ const getSizesFromOptOrDefault = opt => {
       }
     });
   } else {
-    return [
+    sizes = [
       {
         w: 2880,
         h: 1800,
@@ -25,6 +26,14 @@ const getSizesFromOptOrDefault = opt => {
         h: 1334,
       },
     ];
+  }
+  if (patternSize) {
+    return sizes.map(size => ({
+      ...size,
+      s: patternSize && size.w / Math.round(size.w / patternSize),
+    }));
+  } else {
+    return sizes;
   }
 };
 

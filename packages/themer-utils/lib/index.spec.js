@@ -25,6 +25,12 @@ describe('getSizesFromOptOrDefault()', () => {
     expect(() => getSizesFromOptOrDefault('foo')).toThrow();
     expect(() => getSizesFromOptOrDefault(['bar', 'asdfx123'])).toThrow();
   });
+  it('should add a pixel-perfected pattern size to each output if provided one', () => {
+    expect(getSizesFromOptOrDefault(['2880x1800', '558x558'], 36)).toEqual([
+      { w: 2880, h: 1800, s: 36 },
+      { w: 558, h: 558, s: 34.875 }
+    ])
+  });
 });
 
 describe('deepFlatten()', () => {
