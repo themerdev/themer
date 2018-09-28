@@ -1,47 +1,14 @@
+const {
+  getSizesFromOptOrDefault,
+  colorSets: getColorSets,
+  deepFlatten,
+} = require('themer-utils');
 const weightedRandom = require('./weighted-random');
-
-const defaultBlockSize = 36;
-
-const getSizesFromOptOrDefault = opt => {
-  if (opt) {
-    const unparsedSizes = Array.isArray(opt) ? opt : [opt];
-    return unparsedSizes.map(unparsedSize => {
-      const results = /(\d+)x(\d+)/.exec(unparsedSize);
-      if (results) {
-        const w = parseInt(results[1], 10);
-        const h = parseInt(results[2], 10);
-        const s = w / Math.round(w / defaultBlockSize);
-        return {
-          w: w,
-          h: h,
-          s: s,
-        };
-      }
-      else {
-        throw new Error(`Malformed resolution argument: ${unparsedSize}`);
-      }
-    });
-  }
-  else {
-    return [
-      {
-        w: 2880,
-        h: 1800,
-        s: defaultBlockSize,
-      },
-      {
-        w: 750,
-        h: 1334,
-        s: defaultBlockSize,
-      }
-    ];
-  }
-};
 
 const render = (colors, options) => {
 
   try {
-    var sizes = getSizesFromOptOrDefault(options['themer-wallpaper-block-wave-size']);
+    var sizes = getSizesFromOptOrDefault(options['themer-wallpaper-block-wave-size'], 36);
   }
   catch(e) {
     return [Promise.reject(e.message)];
@@ -66,9 +33,7 @@ const render = (colors, options) => {
     ['shade7', 1],
   ]);
 
-  const colorSets = [{ name: 'dark', colors: colors.dark }, { name: 'light', colors: colors.light }].filter(colorSet => !!colorSet.colors);
-
-  const deepFlatten = arr => arr.reduce((cumulative, inner) => cumulative.concat(Array.isArray(inner) ? deepFlatten(inner) : inner), []);
+  const colorSets = getColorSets(colors);
 
   return deepFlatten(
     colorSets.map(colorSet => sizes.map(size => {
