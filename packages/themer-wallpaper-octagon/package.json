@@ -26,7 +26,9 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/packages/themer-wallpaper-octagon#readme",
-  "dependencies": {},
+  "dependencies": {
+    "themer-utils": "^1.1.0"
+  },
   "keywords": [
     "themer",
     "wallpaper",
