@@ -1,39 +1,8 @@
-const getSizesFromOptOrDefault = opt => {
-  if (opt) {
-    const unparsedSizes = Array.isArray(opt) ? opt : [opt];
-    return unparsedSizes.map(unparsedSize => {
-      const results = /(\d+)x(\d+)/.exec(unparsedSize);
-      if (results) {
-        const w = parseInt(results[1], 10);
-        const h = parseInt(results[2], 10);
-        return {
-          w,
-          h,
-        };
-      } else {
-        throw new Error(`Malformed resolution argument: ${unparsedSize}`);
-      }
-    });
-  } else {
-    return [
-      {
-        w: 2880,
-        h: 1800,
-      },
-      {
-        w: 750,
-        h: 1334,
-      },
-    ];
-  }
-};
-
-const deepFlatten = arr =>
-  arr.reduce(
-    (cumulative, inner) =>
-      cumulative.concat(Array.isArray(inner) ? deepFlatten(inner) : inner),
-    []
-  );
+const {
+  getSizesFromOptOrDefault,
+  colorSets: getColorSets,
+  deepFlatten,
+} = require('themer-utils');
 
 const render = (colors, options) => {
   try {
@@ -44,10 +13,7 @@ const render = (colors, options) => {
     return [Promise.reject(e.message)];
   }
 
-  const colorSets = [
-    {name: 'dark', colors: colors.dark},
-    {name: 'light', colors: colors.light},
-  ].filter(colorSet => !!colorSet.colors);
+  const colorSets = getColorSets(colors);
 
   return deepFlatten(
     sizes.map(size =>
