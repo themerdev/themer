@@ -1,11 +1,6 @@
 const Trianglify = require('trianglify'),
+  { deepFlatten } = require('themer-utils'),
   { getSizes, getVariances } = require('./opts');
-
-const deepFlatten = arr =>
-  arr.reduce(
-    (cumulative, inner) => cumulative.concat(Array.isArray(inner) ? deepFlatten(inner) : inner),
-    []
-  );
 
 const optionNames = {
   sizes: 'themer-wallpaper-trianglify-size',

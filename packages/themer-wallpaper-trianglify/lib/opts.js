@@ -1,34 +1,5 @@
-const assert = require('assert');
-
-const getSizes = opt => {
-  if (opt) {
-    const unparsedSizes = Array.isArray(opt) ? opt : [opt];
-    return unparsedSizes.map(unparsedSize => {
-      const results = /(\d+)x(\d+)/.exec(unparsedSize);
-      if (results) {
-        const w = parseInt(results[1], 10);
-        const h = parseInt(results[2], 10);
-        return {
-          w,
-          h,
-        };
-      } else {
-        throw new Error(`Malformed resolution argument: ${unparsedSize}`);
-      }
-    });
-  } else {
-    return [
-      {
-        w: 2880,
-        h: 1800,
-      },
-      {
-        w: 750,
-        h: 1334,
-      },
-    ];
-  }
-};
+const assert = require('assert'),
+  { getSizesFromOptOrDefault } = require('themer-utils');
 
 const getVariances = opt => {
   if (opt) {
@@ -48,6 +19,6 @@ const getVariances = opt => {
 };
 
 module.exports = {
-  getSizes,
+  getSizes: getSizesFromOptOrDefault,
   getVariances,
 };
