@@ -1,0 +1,36 @@
+{
+  "name": "themer-slack",
+  "version": "2.0.1",
+  "description": "A slack sidebar theme template for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "themer": "^2||^3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mjswensen/themer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack#readme",
+  "keywords": [
+    "themer",
+    "slack",
+    "sidebar",
+    "theme"
+  ]
+}

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://themer.mjswensen.com">
-    <img src="https://cdn.rawgit.com/mjswensen/themer/64dd8b7e/assets/icon.png" width="256" height="256" alt="Themer application icon" />
+    <img src="https://cdn.rawgit.com/mjswensen/themer/7de158b8/assets/icon.png" width="256" height="256" alt="Themer application icon" />
   </a>
 </p>
 
@@ -8,7 +8,7 @@
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 
-![visual description](https://cdn.rawgit.com/mjswensen/themer/64dd8b7e/assets/themer-description.png)
+![visual description](https://cdn.rawgit.com/mjswensen/themer/7de158b8/assets/themer-description.png)
 
 ## Table of Contents
 
@@ -54,7 +54,7 @@ themer \
   --out <directory>
 ```
 
-`themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [themer-colors-default](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-default)). The same is true for templates.
+`themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [themer-colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default)). The same is true for templates.
 
 ### Example workflow
 
@@ -83,7 +83,7 @@ npm run build
 
 Now check the `gen/` folder for your generated themes. Here's the result:
 
-![example usage result](https://cdn.rawgit.com/mjswensen/themer/64dd8b7e/assets/example-usage.png)
+![example usage result](https://cdn.rawgit.com/mjswensen/themer/7de158b8/assets/example-usage.png)
 
 ## Themer color sets
 
@@ -91,21 +91,21 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 
 | Name | Dark Preview | Light Preview |
 | --- | --- | --- |
-| [themer-colors-default](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-default) | ![themer-colors-default dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-dark-swatch.svg) | ![themer-colors-default light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-light-swatch.svg) |
-| [themer-colors-night-sky](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-night-sky-dark-swatch.svg) | (dark only) |
-| [themer-colors-polar-ice](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-dark-swatch.svg) | ![themer-colors-polar-ice light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-light-swatch.svg) |
-| [themer-colors-finger-paint](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-finger-paint) | ![themer-colors-finger-paint dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-dark-swatch.svg) | ![themer-colors-finger-paint light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-light-swatch.svg) |
-| [themer-colors-monkey](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-monkey) | ![themer-colors-monkey dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-monkey-dark-swatch.svg) | ![themer-colors-monkey light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-monkey-light-swatch.svg) |
+| [themer-colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default) | ![themer-colors-default dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-dark-swatch.svg) | ![themer-colors-default light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-light-swatch.svg) |
+| [themer-colors-night-sky](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-night-sky-dark-swatch.svg) | (dark only) |
+| [themer-colors-polar-ice](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-dark-swatch.svg) | ![themer-colors-polar-ice light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-polar-ice-light-swatch.svg) |
+| [themer-colors-finger-paint](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-finger-paint) | ![themer-colors-finger-paint dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-dark-swatch.svg) | ![themer-colors-finger-paint light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-finger-paint-light-swatch.svg) |
+| [themer-colors-monkey](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-monkey) | ![themer-colors-monkey dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-monkey-dark-swatch.svg) | ![themer-colors-monkey light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-monkey-light-swatch.svg) |
 
 ### Ports from third-party themes
 
 | Name | Dark Preview | Light Preview |
 | --- | --- | --- |
-| [themer-colors-one](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-one) | ![themer-colors-one dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-dark-swatch.svg) | ![themer-colors-one light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-light-swatch.svg) |
-| [themer-colors-lucid](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-lucid) | ![themer-colors-lucid dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-dark-swatch.svg) | ![themer-colors-lucid light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-light-swatch.svg) |
-| [themer-colors-solarized](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-solarized) | ![themer-colors-solarized dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-dark-swatch.svg) | ![themer-colors-solarized light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-light-swatch.svg) |
-| [themer-colors-github-universe](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-github-universe) | ![themer-colors-github-universe preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-github-universe-dark-swatch.svg) | (dark only) |
-| [themer-colors-nova](https://github.com/mjswensen/themer/tree/master/packages/themer-colors-nova) | ![themer-colors-nova preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-nova-dark-swatch.svg) | (dark only) |
+| [themer-colors-one](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-one) | ![themer-colors-one dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-dark-swatch.svg) | ![themer-colors-one light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-one-light-swatch.svg) |
+| [themer-colors-lucid](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-lucid) | ![themer-colors-lucid dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-dark-swatch.svg) | ![themer-colors-lucid light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-lucid-light-swatch.svg) |
+| [themer-colors-solarized](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-solarized) | ![themer-colors-solarized dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-dark-swatch.svg) | ![themer-colors-solarized light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-solarized-light-swatch.svg) |
+| [themer-colors-github-universe](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-github-universe) | ![themer-colors-github-universe preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-github-universe-dark-swatch.svg) | (dark only) |
+| [themer-colors-nova](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-nova) | ![themer-colors-nova preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-nova-dark-swatch.svg) | (dark only) |
 
 ### Create your own color set
 
@@ -203,41 +203,41 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 ### Terminals
 
-* [themer-hyper](https://github.com/mjswensen/themer/tree/master/packages/themer-hyper)
-* [themer-iterm](https://github.com/mjswensen/themer/tree/master/packages/themer-iterm)
-* [themer-terminal](https://github.com/mjswensen/themer/tree/master/packages/themer-terminal)
+* [themer-hyper](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-hyper)
+* [themer-iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-iterm)
+* [themer-terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-terminal)
 * [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
-* [themer-conemu](https://github.com/mjswensen/themer/tree/master/packages/themer-conemu)
-* [themer-cmd](https://github.com/mjswensen/themer/tree/master/packages/themer-cmd)
+* [themer-conemu](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-conemu)
+* [themer-cmd](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-cmd)
 * [0x52a1/themer-termite](https://github.com/0x52a1/themer-termite)
 * [0x52a1/themer-kitty](https://github.com/0x52a1/themer-kitty)
 
 ### Editors/IDEs
 
-* [themer-atom-syntax](https://github.com/mjswensen/themer/tree/master/packages/themer-atom-syntax)
-* [themer-atom-ui](https://github.com/mjswensen/themer/tree/master/packages/themer-atom-ui)
-* [themer-sublime-text](https://github.com/mjswensen/themer/tree/master/packages/themer-sublime-text)
-* [themer-vim](https://github.com/mjswensen/themer/tree/master/packages/themer-vim)
-* [themer-vim-lightline](https://github.com/mjswensen/themer/tree/master/packages/themer-vim-lightline)
-* [themer-vscode](https://github.com/mjswensen/themer/tree/master/packages/themer-vscode)
-* [themer-xcode](https://github.com/mjswensen/themer/tree/master/packages/themer-xcode)
-* [themer-bbedit](https://github.com/mjswensen/themer/tree/master/packages/themer-bbedit)
+* [themer-atom-syntax](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-syntax)
+* [themer-atom-ui](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-ui)
+* [themer-sublime-text](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sublime-text)
+* [themer-vim](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim)
+* [themer-vim-lightline](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim-lightline)
+* [themer-vscode](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vscode)
+* [themer-xcode](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-xcode)
+* [themer-bbedit](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-bbedit)
 * [tomselvi/themer-jetbrains](https://github.com/tomselvi/themer-jetbrains)
 
 ### Wallpapers
 
-* [themer-wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/packages/themer-wallpaper-block-wave)
-* [themer-wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/packages/themer-wallpaper-octagon)
-* [themer-wallpaper-triangles](https://github.com/mjswensen/themer/tree/master/packages/themer-wallpaper-triangles)
-* [themer-wallpaper-trianglify](https://github.com/mjswensen/themer/tree/master/packages/themer-wallpaper-trianglify)
+* [themer-wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-block-wave)
+* [themer-wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-octagon)
+* [themer-wallpaper-triangles](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-triangles)
+* [themer-wallpaper-trianglify](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-trianglify)
 
 ### Other
 
-* [themer-slack](https://github.com/mjswensen/themer/tree/master/packages/themer-slack)
-* [themer-alfred](https://github.com/mjswensen/themer/tree/master/packages/themer-alfred)
-* [themer-chrome](https://github.com/mjswensen/themer/tree/master/packages/themer-chrome)
+* [themer-slack](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack)
+* [themer-alfred](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-alfred)
+* [themer-chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-chrome)
 * [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
-* [themer-sketch-palettes](https://github.com/mjswensen/themer/tree/master/packages/themer-sketch-palettes)
+* [themer-sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sketch-palettes)
 * [tomselvi/themer-tmux](https://github.com/tomselvi/themer-tmux)
 
 ### Create your own template

@@ -1,0 +1,41 @@
+{
+  "name": "themer-atom-syntax",
+  "version": "2.0.1",
+  "description": "Atom syntax template for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "less": "^3.8.1",
+    "mkdirp-promise": "^5.0.1",
+    "pn": "^1.1.0"
+  },
+  "peerDependencies": {
+    "themer": "^2.1||^3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mjswensen/themer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-syntax#readme",
+  "keywords": [
+    "themer",
+    "atom",
+    "syntax",
+    "theme"
+  ]
+}

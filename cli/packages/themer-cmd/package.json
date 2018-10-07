@@ -1,0 +1,38 @@
+{
+  "name": "themer-cmd",
+  "version": "1.0.5",
+  "description": "A CMD.exe theme generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer.git"
+  },
+  "keywords": [
+    "themer",
+    "cmd",
+    "cmd.exe",
+    "theme"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-cmd#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  }
+}

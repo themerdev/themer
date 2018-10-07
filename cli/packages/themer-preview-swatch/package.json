@@ -1,0 +1,33 @@
+{
+  "name": "themer-preview-swatch",
+  "version": "1.0.5",
+  "description": "Color set preview template for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer.git"
+  },
+  "keywords": [
+    "themer",
+    "preview"
+  ],
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-preview-swatch#readme",
+  "devDependencies": {},
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  }
+}

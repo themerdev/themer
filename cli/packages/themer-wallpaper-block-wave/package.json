@@ -1,0 +1,38 @@
+{
+  "name": "themer-wallpaper-block-wave",
+  "version": "3.0.2",
+  "description": "Wallpaper generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js",
+    "/lib/weighted-random.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "devDependencies": {},
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer.git",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "themer": "^1.0.2||^2||^3"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-block-wave#readme",
+  "dependencies": {
+    "themer-utils": "^1.1.0"
+  },
+  "keywords": [
+    "themer",
+    "wallpaper",
+    "block-wave"
+  ]
+}
