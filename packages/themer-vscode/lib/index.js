@@ -284,8 +284,10 @@ const renderThemeFiles = colorSets =>
               "sideBarSectionHeader.foreground": shade6,
 
               // Editor groups & tabs
-              "editorGroup.background": shade1,
+              "editorPane.background": shade0,
+              "editorGroup.emptyBackground": shade0,
               "editorGroup.border": shade1,
+              "editorGroup.focusedEmptyBorder": shade1,
               "editorGroup.dropBackground": `${shade2}7f`,
               "editorGroupHeader.noTabsBackground": shade0,
               "editorGroupHeader.tabsBackground": shade0,
@@ -303,7 +305,7 @@ const renderThemeFiles = colorSets =>
               "editor.foreground": shade7,
               "editorLineNumber.foreground": shade2,
               "editorCursor.foreground": accent6,
-              "editor.selectionBackground": `${accent5}7f`,
+              "editor.selectionBackground": `${accent5}33`,
               "editor.selectionHighlightBackground": shade1,
               "editor.inactiveSelectionBackground": `${accent5}33`,
               "editor.wordHighlightBackground": `${accent6}7f`,
@@ -324,17 +326,17 @@ const renderThemeFiles = colorSets =>
               "editorBracketMatch.background": shade1,
               "editorBracketMatch.border": shade1,
               "editorOverviewRuler.border": shade1,
-              "editorOverviewRuler.findMatchForeground": `${accent2}7f`,
-              "editorOverviewRuler.rangeHighlightForeground": `${shade2}7f`,
-              "editorOverviewRuler.selectionHighlightForeground": `${shade1}7f`,
-              "editorOverviewRuler.wordHighlightForeground": `${shade2}7f`,
-              "editorOverviewRuler.wordHighlightStrongForeground": `${shade3}7f`,
-              "editorOverviewRuler.modifiedForeground": accent2,
-              "editorOverviewRuler.addedForeground": accent3,
-              "editorOverviewRuler.deletedForeground": accent0,
-              "editorOverviewRuler.errorForeground": accent0,
-              "editorOverviewRuler.warningForeground": accent1,
-              "editorOverviewRuler.infoForeground": accent5,
+              "editorOverviewRuler.findMatchForeground": `${accent2}bf`,
+              "editorOverviewRuler.rangeHighlightForeground": `${shade2}bf`,
+              "editorOverviewRuler.selectionHighlightForeground": `${shade1}bf`,
+              "editorOverviewRuler.wordHighlightForeground": `${shade2}bf`,
+              "editorOverviewRuler.wordHighlightStrongForeground": `${shade3}bf`,
+              "editorOverviewRuler.modifiedForeground": `${accent2}7f`,
+              "editorOverviewRuler.addedForeground": `${accent3}7f`,
+              "editorOverviewRuler.deletedForeground": `${accent0}7f`,
+              "editorOverviewRuler.errorForeground": `${accent0}7f`,
+              "editorOverviewRuler.warningForeground": `${accent1}7f`,
+              "editorOverviewRuler.infoForeground": `${accent5}7f`,
               "editorError.foreground": accent0,
               "editorError.border": shade7,
               "editorWarning.foreground": accent1,
@@ -345,10 +347,8 @@ const renderThemeFiles = colorSets =>
               "editorGutter.deletedBackground": accent0,
 
               // Diff editor colors
-              "diffEditor.insertedTextBackground": `${accent3}3f`,
-              "diffEditor.insertedTextBorder": transparent,
-              "diffEditor.removedTextBackground": `${accent0}3f`,
-              "diffEditor.removedTextBorder": transparent,
+              "diffEditor.insertedTextBackground": `${accent3}20`,
+              "diffEditor.removedTextBackground": `${accent0}20`,
 
               // Editor widget colors
               "editorWidget.background": shade1,
@@ -498,7 +498,7 @@ const renderThemeFiles = colorSets =>
                 name: "Comment",
                 scope: "comment",
                 settings: {
-                  foreground: shade2
+                  foreground: shade3
                 }
               },
               {
