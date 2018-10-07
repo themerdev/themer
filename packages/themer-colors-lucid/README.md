@@ -2,7 +2,7 @@
 
 A [themer](https://github.com/mjswensen/themer) color set based on the [Lucidchart editor](https://lucidchart.com/demo).
 
-![Preview](assets/preview.png)
+![Preview](https://cdn.rawgit.com/mjswensen/themer/64dd8b7e/packages/themer-colors-lucid/assets/preview.png)
 
 ## Installation & usage
 
