@@ -12,7 +12,6 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/assets/themer-alfred-preview.png",
     "/lib/index.js"
   ],
   "devDependencies": {},

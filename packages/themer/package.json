@@ -13,9 +13,6 @@
   },
   "license": "MIT",
   "files": [
-    "/assets/example-usage.png",
-    "/assets/themer-description.png",
-    "/assets/icon.png",
     "/bin/themer.js",
     "/lib/get-colors.js",
     "/lib/index.js",
@@ -27,7 +24,7 @@
     "themer": "./bin/themer.js"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../README.md ./ && cp ../../LICENSE.md ./ && cp -R ../../assets ./"
+    "prepublishOnly": "cp ../../README.md ./ && cp ../../LICENSE.md ./"
   },
   "dependencies": {
     "chalk": "^2.4.1",

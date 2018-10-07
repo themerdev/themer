@@ -23,7 +23,6 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/assets/preview.png",
     "/lib/index.js"
   ],
   "bugs": {
