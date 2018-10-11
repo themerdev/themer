@@ -2,8 +2,8 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using the ([themer-colors-monkey](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-monkey)) color set:
 
-![desktop dark](https://cdn.rawgit.com/mjswensen/themer/7de158b8/cli/packages/themer-wallpaper-shirts/assets/desktop-dark.svg)
-![desktop light](https://cdn.rawgit.com/mjswensen/themer/7de158b8/cli/packages/themer-wallpaper-shirts/assets/desktop-light.svg)
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-wallpaper-shirts/assets/desktop-dark.svg)
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-wallpaper-shirts/assets/desktop-light.svg)
 
 ## Installation & usage
 

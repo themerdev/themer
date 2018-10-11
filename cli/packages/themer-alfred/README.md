@@ -2,7 +2,7 @@
 
 An [Alfred.app](https://www.alfredapp.com/) theme generator for [themer](https://github.com/mjswensen/themer).
 
-![themer Alfred preview](https://cdn.rawgit.com/mjswensen/themer/7de158b8/cli/packages/themer-alfred/assets/themer-alfred-preview.png)
+![themer Alfred preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-alfred/assets/themer-alfred-preview.png)
 
 (Generated with [themer's "Polar Ice" color set](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-polar-ice) and shown with [themer's "Triangles" wallpaper template](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-triangles).)
 

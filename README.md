@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://themer.mjswensen.com">
-    <img src="https://cdn.rawgit.com/mjswensen/themer/7de158b8/assets/icon.png" width="256" height="256" alt="Themer application icon" />
+    <img src="https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/assets/icon.png" width="256" height="256" alt="Themer application icon" />
   </a>
 </p>
 
@@ -8,7 +8,7 @@
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 
-![visual description](https://cdn.rawgit.com/mjswensen/themer/7de158b8/assets/themer-description.png)
+![visual description](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/assets/themer-description.png)
 
 ## Table of Contents
 
@@ -83,7 +83,7 @@ npm run build
 
 Now check the `gen/` folder for your generated themes. Here's the result:
 
-![example usage result](https://cdn.rawgit.com/mjswensen/themer/7de158b8/assets/example-usage.png)
+![example usage result](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/assets/example-usage.png)
 
 ## Themer color sets
 
