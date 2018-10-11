@@ -1,6 +1,6 @@
 {
   "name": "themer-wallpaper-triangles",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A wallpaper generator for themer.",
   "main": "lib/index.js",
   "engines": {
