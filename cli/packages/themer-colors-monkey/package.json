@@ -1,6 +1,6 @@
 {
   "name": "themer-colors-monkey",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A color set for themer based on https://twitter.com/pwnela/status/908823633283502080.",
   "main": "lib/index.js",
   "engines": {
