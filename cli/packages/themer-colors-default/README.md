@@ -2,9 +2,9 @@
 
 A default color set for [themer](https://github.com/mjswensen/themer).
 
-![dark preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-dark-swatch.svg)
+![dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@6a7858561fdc72e85c87f691b89a765c21db0520/assets/preview/themer-colors-default-dark-swatch.svg)
 
-![light preview](https://themer.mjswensen.com/themer-preview-swatch/themer-colors-default-light-swatch.svg)
+![light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@6a7858561fdc72e85c87f691b89a765c21db0520/assets/preview/themer-colors-default-light-swatch.svg)
 
 ## Installation & usage
 

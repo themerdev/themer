@@ -2,7 +2,7 @@
 
 A dark blue theme for [themer](https://github.com/mjswensen/themer), with colors sampled from [this photo](https://unsplash.com/photos/oMpAz-DN-9I) by [Greg Rakozy](https://unsplash.com/@grakozy).
 
-![code preview](https://themer.mjswensen.com/themer-preview-code/themer-colors-night-sky-dark-code.svg)
+![swatch preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@6a7858561fdc72e85c87f691b89a765c21db0520/assets/preview/themer-colors-night-sky-dark-swatch.svg)
 
 ## Installation & usage
 
