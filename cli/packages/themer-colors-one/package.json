@@ -1,6 +1,6 @@
 {
   "name": "themer-colors-one",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A port of the popular Atom One themes.",
   "main": "lib/index.js",
   "engines": {
