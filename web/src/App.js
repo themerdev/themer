@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import { UrlStateProvider, UrlStateConsumer } from './UrlState';
+import { UrlStateProvider } from './UrlState';
 
-class App extends Component {
+import ForegroundColor from './ForegroundColor';
+
+export default class App extends Component {
   render() {
     return (
       <UrlStateProvider>
-        <UrlStateConsumer>
-          { ({ urlState, mergeState }) => (
-            <>
-              <pre>
-                <code>
-                  { JSON.stringify(urlState, null, 2) }
-                </code>
-              </pre>
-              <button onClick={ () => mergeState({ hello: 'world' + Math.random() }) }>HW</button>
-            </>
-          ) }
-        </UrlStateConsumer>
+        <div className="app">
+          <ForegroundColor>
+            { color => (
+              <h1 style={{ color }}>themer</h1>
+            ) }
+          </ForegroundColor>
+        </div>
       </UrlStateProvider>
     );
   }
 }
-
-export default App;
