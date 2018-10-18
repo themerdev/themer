@@ -10,4 +10,9 @@ body,
   height: 100%;
   font-family: 'Fira Code', monospace;
   font-size: 16px;
+  line-height: 1;
+}
+
+* {
+  box-sizing: border-box;
 }

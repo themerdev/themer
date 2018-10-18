@@ -4,6 +4,12 @@
 
 .container {
   width: 960px;
+  max-width: 100%;
   padding: 1rem;
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
