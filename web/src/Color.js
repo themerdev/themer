@@ -4,13 +4,14 @@ import { UrlStateConsumer } from './UrlState';
 export default function Color ({ children, colorKeys }) {
   return (
     <UrlStateConsumer>
-      { ({ getCascadedState }) => children(
-        getCascadedState(
+      { ({ getValueOrFallback }) => children(
+        getValueOrFallback(
           colorKeys.map(colorKey => [
             'colors',
-            getCascadedState(['activeColorSet']),
+            getValueOrFallback([['activeColorSet']]),
             colorKey
-          ])
+          ]),
+          true,
         )
       ) }
     </UrlStateConsumer>

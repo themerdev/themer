@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import createBrowserHistory from 'history/createBrowserHistory';
 import qs from 'qs';
-import { merge, has, get } from 'lodash';
+import { merge } from 'lodash';
+import Color from 'color';
+import getValueOrFallback from './getValueOrFallback';
 
 const UrlStateContext = React.createContext();
-const history = createBrowserHistory();
 
 const stateFromParams = search => qs.parse(search, { allowDots: true, ignoreQueryPrefix: true });
 const paramsFromState = state => qs.stringify(state, { allowDots: true, addQueryPrefix: true });
@@ -12,50 +12,50 @@ const paramsFromState = state => qs.stringify(state, { allowDots: true, addQuery
 const fallbackState = {
   colors: {
     dark: {
-      shade0: 'black',
-      shade1: 'black',
-      shade2: 'black',
-      shade3: 'black',
-      shade4: 'black',
-      shade5: 'black',
-      shade6: 'black',
-      shade7: 'white',
-      accent0: 'white',
-      accent1: 'white',
-      accent2: 'white',
-      accent3: 'white',
-      accent4: 'white',
-      accent5: 'white',
-      accent6: 'white',
-      accent7: 'white',
+      shade0: '#000000',
+      shade1: '#000000',
+      shade2: '#000000',
+      shade3: '#000000',
+      shade4: '#000000',
+      shade5: '#000000',
+      shade6: '#000000',
+      shade7: '#FFFFFF',
+      accent0: '#FFFFFF',
+      accent1: '#FFFFFF',
+      accent2: '#FFFFFF',
+      accent3: '#FFFFFF',
+      accent4: '#FFFFFF',
+      accent5: '#FFFFFF',
+      accent6: '#FFFFFF',
+      accent7: '#FFFFFF',
     },
     light: {
-      shade0: 'white',
-      shade1: 'white',
-      shade2: 'white',
-      shade3: 'white',
-      shade4: 'white',
-      shade5: 'white',
-      shade6: 'white',
-      shade7: 'black',
-      accent0: 'black',
-      accent1: 'black',
-      accent2: 'black',
-      accent3: 'black',
-      accent4: 'black',
-      accent5: 'black',
-      accent6: 'black',
-      accent7: 'black',
+      shade0: '#FFFFFF',
+      shade1: '#FFFFFF',
+      shade2: '#FFFFFF',
+      shade3: '#FFFFFF',
+      shade4: '#FFFFFF',
+      shade5: '#FFFFFF',
+      shade6: '#FFFFFF',
+      shade7: '#000000',
+      accent0: '#000000',
+      accent1: '#000000',
+      accent2: '#000000',
+      accent3: '#000000',
+      accent4: '#000000',
+      accent5: '#000000',
+      accent6: '#000000',
+      accent7: '#000000',
     },
   },
   activeColorSet: 'dark',
 };
 
 export class UrlStateProvider extends Component {
-  constructor(...args) {
-    super(...args);
-    this.state = stateFromParams(history.location.search);
-    this.listener = history.listen(location => {
+  constructor(props, ...args) {
+    super(props, ...args);
+    this.state = stateFromParams(props.history.location.search);
+    this.listener = props.history.listen(location => {
       this.setState(stateFromParams(location.search));
     });
   }
@@ -63,9 +63,7 @@ export class UrlStateProvider extends Component {
   render() {
     return (
       <UrlStateContext.Provider value={{
-        urlState: this.state, // may not need this any more
-        // urlState: merge({}, this.defaultState, this.state),
-        getCascadedState: this.getCascadedState,
+        getValueOrFallback: this.getValueOrFallback,
         mergeState: this.mergeState,
       }}>
         { this.props.children }
@@ -73,20 +71,19 @@ export class UrlStateProvider extends Component {
     );
   }
 
-  getCascadedState = (paths, fallbackPath = paths[paths.length - 1]) => {
-    for(let path of paths) {
-      // console.log('checking path', path);
-      if (has(this.state, path)) {
-        // console.log('returning', get(this.state, path));
-        return get(this.state, path);
-      }
-    }
-    // console.log('falling back', get(fallbackState, fallbackPath));
-    return get(fallbackState, fallbackPath);
+  getValueOrFallback = (paths, parseColor) => {
+    return getValueOrFallback(
+      this.state,
+      fallbackState,
+      paths,
+      parseColor
+        ? (v => Color(v).hex())
+        : null,
+    );
   }
 
   mergeState = (state) => {
-    history.replace(paramsFromState(merge({}, this.state, state)));
+    this.props.history.replace(paramsFromState(merge({}, this.state, state)));
   }
 
   componentWillUnmount() {

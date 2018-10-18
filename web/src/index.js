@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import 'reset.css/reset.css';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// TODO: Start here. Add some of the work you started in the other window. Maybe rebuild it and see if you get a better result.
+const history = createBrowserHistory();
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App history={ history } />, document.getElementById('root'));
 serviceWorker.register();

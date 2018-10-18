@@ -9,4 +9,5 @@ body,
 #root {
   height: 100%;
   font-family: 'Fira Code', monospace;
+  font-size: 16px;
 }

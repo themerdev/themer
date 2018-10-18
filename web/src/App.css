@@ -1,4 +1,9 @@
 .app {
   height: 100%;
-  background-color: lightpink;
+}
+
+.container {
+  width: 960px;
+  padding: 1rem;
+  margin: 0 auto;
 }
