@@ -49,6 +49,10 @@ const fallbackState = {
     },
   },
   activeColorSet: 'dark',
+  calculateIntermediaryShades: {
+    dark: true,
+    light: true,
+  }
 };
 
 export class UrlStateProvider extends Component {
