@@ -1,0 +1,13 @@
+.tab-container button {
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  padding: 0.25em 0.5em;
+  border-width: .0625rem;
+  border-style: solid;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.tab-container button + button {
+  margin-left: -0.0625rem;
+}

@@ -75,7 +75,7 @@ export class UrlStateProvider extends Component {
     );
   }
 
-  getValueOrFallback = (paths, parseColor) => {
+  getValueOrFallback = (paths, parseColor = false) => {
     return getValueOrFallback(
       this.state,
       fallbackState,
