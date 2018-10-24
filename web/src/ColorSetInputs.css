@@ -2,7 +2,7 @@
   font-size: 1rem;
   font-family: 'Fira Code', monospace;
   padding: 0.25em 0.5em;
-  border-width: .0625rem;
+  border-width: 0.0625rem;
   border-style: solid;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -10,4 +10,14 @@
 
 .tab-container button + button {
   margin-left: -0.0625rem;
+}
+
+.input-container {
+  padding: 1rem;
+  border-width: 0.0625rem;
+  border-style: solid;
+  margin-top: -0.0625rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }

@@ -1,0 +1,52 @@
+.color-input {
+  --input-size: 1.5rem;
+}
+
+.inputs-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  display: inline-block;
+  width: 8ch;
+}
+
+input[type="text"] {
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  line-height: 1rem;
+  border: none;
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+  padding: 0.125rem 0.25rem;
+  background: none;
+  height: var(--input-size);
+  box-sizing: border-box;
+}
+
+.swatch {
+  height: var(--input-size);
+  width: var(--input-size);
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+input[type="color"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.help {
+  font-size: 0.75rem;
+}

@@ -67,6 +67,7 @@ export class UrlStateProvider extends Component {
   render() {
     return (
       <UrlStateContext.Provider value={{
+        rawState: this.state,
         getValueOrFallback: this.getValueOrFallback,
         mergeState: this.mergeState,
       }}>
