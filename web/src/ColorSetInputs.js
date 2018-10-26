@@ -1,17 +1,19 @@
 import React, { PureComponent } from 'react';
 import { UrlStateConsumer } from './UrlState';
 import './ColorSetInputs.css';
-import Color from './Color';
+import ColorState from './ColorState';
 import ColorInput from './ColorInput';
+import Checkbox from './Checkbox';
+import CalculateIntermediaryShadesState from './CalculateIntermediaryShadesState';
 
 export default class ColorSetInputs extends PureComponent {
   render() {
     return (
       <UrlStateConsumer>
         { ({ getValueOrFallback, mergeState }) => {
-          const isDark = getValueOrFallback(['activeColorSet']) === 'dark';
+          const isDark = getValueOrFallback([['activeColorSet']]) === 'dark';
           return (
-            <Color>
+            <ColorState>
               { ({ getColor }) => {
                 const getTabStyle = active => ({
                   backgroundColor: active ? getColor('shade0') : getColor('shade2', 'shade0'),
@@ -36,6 +38,15 @@ export default class ColorSetInputs extends PureComponent {
                     <div className="input-container" style={{ borderColor: getColor('shade7') }}>
                       <ColorInput colorKey="shade0" help="background color" />
                       <ColorInput colorKey="shade7" help="foreground text" />
+                      <CalculateIntermediaryShadesState>
+                        { ({ getValue, setValue }) => (
+                          <Checkbox
+                            label="calculate intermediary shades"
+                            value={ getValue() }
+                            onChange={ setValue }
+                          />
+                        ) }
+                      </CalculateIntermediaryShadesState>
                       <ColorInput colorKey="accent0" help="error, vcs deletion" />
                       <ColorInput colorKey="accent1" help="syntax" />
                       <ColorInput colorKey="accent2" help="warning, vcs modification" />
@@ -48,7 +59,7 @@ export default class ColorSetInputs extends PureComponent {
                   </>
                 );
               } }
-            </Color>
+            </ColorState>
           );
         } }
       </UrlStateConsumer>

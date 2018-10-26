@@ -2,14 +2,14 @@ import React, { PureComponent } from 'react';
 import './App.css';
 import { UrlStateProvider } from './UrlState';
 
-import Color from './Color';
+import ColorState from './ColorState';
 import ColorSetInputs from './ColorSetInputs';
 
 export default class App extends PureComponent {
   render() {
     return (
       <UrlStateProvider history={ this.props.history }>
-        <Color>
+        <ColorState>
           { ({ getColor }) => (
             <div className="app" style={{ backgroundColor: getColor('shade0') }}>
               <div className="container">
@@ -36,7 +36,7 @@ export default class App extends PureComponent {
               </div>
             </div>
           ) }
-        </Color>
+        </ColorState>
       </UrlStateProvider>
     );
   }

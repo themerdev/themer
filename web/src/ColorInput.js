@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Color from './Color';
+import ColorState from './ColorState';
 import { Droplet } from './Icons';
 import './ColorInput.css';
 import getBestForeground from './getBestForeground';
@@ -7,7 +7,7 @@ import getBestForeground from './getBestForeground';
 export default class ColorInput extends PureComponent {
   render() {
     return (
-      <Color>
+      <ColorState>
         { ({ getColor, getRawColor, setColor }) => (
           <div className="color-input">
             <div className="inputs-wrapper">
@@ -47,7 +47,7 @@ export default class ColorInput extends PureComponent {
             <div className="help" style={{ color: getColor('shade4', 'shade7') }}>{ this.props.help }</div>
           </div>
         ) }
-      </Color>
+      </ColorState>
     )
   }
 }

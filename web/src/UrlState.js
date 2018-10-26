@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import qs from 'qs';
 import { merge } from 'lodash';
-import Color from 'color';
 import getValueOrFallback from './getValueOrFallback';
 
 const UrlStateContext = React.createContext();
@@ -76,14 +75,12 @@ export class UrlStateProvider extends Component {
     );
   }
 
-  getValueOrFallback = (paths, parseColor = false) => {
+  getValueOrFallback = (paths, parse) => {
     return getValueOrFallback(
       this.state,
       fallbackState,
       paths,
-      parseColor
-        ? (v => Color(v).hex())
-        : null,
+      parse,
     );
   }
 

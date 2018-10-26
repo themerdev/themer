@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.label {
+  margin-left: 0.5rem;
+  flex-grow: 1;
+}

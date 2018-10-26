@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import { UrlStateConsumer } from './UrlState';
 import { get } from 'lodash';
+import Color from 'color';
 
-export default class Color extends PureComponent {
+export default class ColorState extends PureComponent {
   render() {
     return (
       <UrlStateConsumer>
@@ -13,7 +14,7 @@ export default class Color extends PureComponent {
                 getValueOrFallback([['activeColorSet']]),
                 colorKey
               ]),
-              true,
+              v => Color(v).hex(),
             ),
           setColor: (key, value) => {
             mergeState({
