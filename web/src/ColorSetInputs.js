@@ -37,6 +37,18 @@ export default class ColorSetInputs extends PureComponent {
                     </div>
                     <div className="input-container" style={{ borderColor: getColor('shade7') }}>
                       <ColorInput colorKey="shade0" help="background color" />
+                      <CalculateIntermediaryShadesState>
+                        { ({ getValue }) => !getValue() && (
+                          <>
+                            <ColorInput colorKey="shade1" help="UI" />
+                            <ColorInput colorKey="shade2" help="UI, text selection" />
+                            <ColorInput colorKey="shade3" help="UI, code comments" />
+                            <ColorInput colorKey="shade4" help="UI" />
+                            <ColorInput colorKey="shade5" help="UI" />
+                            <ColorInput colorKey="shade6" help="foreground text" />
+                          </>
+                        ) }
+                      </CalculateIntermediaryShadesState>
                       <ColorInput colorKey="shade7" help="foreground text" />
                       <CalculateIntermediaryShadesState>
                         { ({ getValue, setValue }) => (
