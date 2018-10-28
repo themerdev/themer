@@ -30,8 +30,8 @@ export default class App extends PureComponent {
                     )
                   `,
                 }}></hr>
-                <p style={{ color: getColor('shade5', 'shade7')}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
-                <h2 style={{ color: getColor('shade6', 'shade7')}}>1. Define colors</h2>
+                <p style={{ color: getColor('shade6', 'shade7')}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
+                <h2 style={{ color: getColor('shade7', 'shade7')}}>1. Define colors</h2>
                 <ColorSetInputs />
               </div>
             </div>
