@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Check } from './Icons';
-import './Checkbox.css';
+import styles from './Checkbox.module.css';
 import ColorState from './ColorState';
 
 export default class Checkbox extends PureComponent {
@@ -8,9 +8,10 @@ export default class Checkbox extends PureComponent {
     return (
       <ColorState>
         { ({ getColor }) => (
-          <label className="wrapper" style={{ color: getColor('shade7') }}>
+          <label className={ styles.wrapper } style={{ color: getColor('shade7') }}>
             <input
               type="checkbox"
+              className={ styles.input }
               checked={ this.props.value }
               onChange={ evt => this.props.onChange(evt.target.checked) }
             />
@@ -19,7 +20,7 @@ export default class Checkbox extends PureComponent {
               outlineColor={ this.props.value ? 'transparent' : getColor('shade7') }
               checkColor={ this.props.value ? getColor('shade0') : 'transparent' }
             />
-            <span className="label">{ this.props.label }</span>
+            <span className={ styles.label }>{ this.props.label }</span>
           </label>
         ) }
       </ColorState>

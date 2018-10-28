@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { UrlStateConsumer } from './UrlState';
-import './ColorSetInputs.css';
+import styles from './ColorSetInputs.module.css';
 import ColorState from './ColorState';
 import ColorInput from './ColorInput';
 import Checkbox from './Checkbox';
@@ -25,7 +25,7 @@ export default class ColorSetInputs extends PureComponent {
                 });
                 return (
                   <>
-                    <div className="tab-container">
+                    <div className={ styles.tabContainer }>
                       <button
                         style={ getTabStyle(isDark) }
                         onClick={ () => mergeState({ activeColorSet: 'dark' }) }
@@ -35,7 +35,7 @@ export default class ColorSetInputs extends PureComponent {
                         onClick={ () => mergeState({ activeColorSet: 'light' }) }
                       >Light Variant</button>
                     </div>
-                    <div className="input-container" style={{ borderColor: getColor('shade7') }}>
+                    <div className={ styles.inputContainer } style={{ borderColor: getColor('shade7') }}>
                       <ColorInput colorKey="shade0" help="background color" />
                       <CalculateIntermediaryShadesState>
                         { ({ getValue }) => !getValue() && (

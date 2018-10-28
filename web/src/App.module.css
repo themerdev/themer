@@ -9,18 +9,18 @@
   margin: 0 auto;
 }
 
-h1 {
+.h1 {
   font-size: 2rem;
 }
 
-hr {
+.hr {
   height: 0.125rem;
   border: none;
   border-radius: 0.125rem;
   margin: 1.5rem 0;
 }
 
-h2 {
+.h2 {
   font-size: 1.5rem;
   margin: 1rem 0;
 }

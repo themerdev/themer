@@ -3,7 +3,7 @@
   align-items: center;
 }
 
-input[type="checkbox"] {
+.input {
   display: none;
 }
 

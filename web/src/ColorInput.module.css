@@ -1,8 +1,8 @@
-.color-input {
+.outerWrapper {
   --input-size: 1.5rem;
 }
 
-.inputs-wrapper {
+.inputsWrapper {
   display: flex;
   align-items: center;
 }
@@ -12,7 +12,7 @@
   width: 8ch;
 }
 
-input[type="text"] {
+.textInput {
   font-family: "Fira Code", monospace;
   font-size: 1rem;
   line-height: 1rem;
@@ -37,7 +37,7 @@ input[type="text"] {
   cursor: pointer;
 }
 
-input[type="color"] {
+.colorInput {
   opacity: 0;
   width: 0;
   height: 0;

@@ -1,4 +1,4 @@
-.tab-container button {
+.tabContainer button {
   font-size: 1rem;
   font-family: 'Fira Code', monospace;
   padding: 0.25em 0.5em;
@@ -8,11 +8,11 @@
   border-top-right-radius: 0.25rem;
 }
 
-.tab-container button + button {
+.tabContainer button + button {
   margin-left: -0.0625rem;
 }
 
-.input-container {
+.inputContainer {
   padding: 1rem;
   border-width: 0.0625rem;
   border-style: solid;

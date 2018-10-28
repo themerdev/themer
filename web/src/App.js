@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import { UrlStateProvider } from './UrlState';
 
 import ColorState from './ColorState';
@@ -11,10 +11,10 @@ export default class App extends PureComponent {
       <UrlStateProvider history={ this.props.history }>
         <ColorState>
           { ({ getColor }) => (
-            <div className="app" style={{ backgroundColor: getColor('shade0') }}>
-              <div className="container">
-                <h1 style={{ color: getColor('shade7') }}>themer</h1>
-                <hr style={{
+            <div className={ styles.app } style={{ backgroundColor: getColor('shade0') }}>
+              <div className={ styles.container }>
+                <h1 className={ styles.h1 } style={{ color: getColor('shade7') }}>themer</h1>
+                <hr className={ styles.hr } style={{
                   backgroundImage: `
                     linear-gradient(
                       to right,
@@ -31,7 +31,7 @@ export default class App extends PureComponent {
                   `,
                 }}></hr>
                 <p style={{ color: getColor('shade6', 'shade7')}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
-                <h2 style={{ color: getColor('shade7', 'shade7')}}>1. Define colors</h2>
+                <h2 className={ styles.h2 } style={{ color: getColor('shade7', 'shade7')}}>1. Define colors</h2>
                 <ColorSetInputs />
               </div>
             </div>

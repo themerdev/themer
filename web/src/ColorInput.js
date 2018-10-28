@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import ColorState from './ColorState';
 import { Droplet } from './Icons';
-import './ColorInput.css';
+import styles from './ColorInput.module.css';
 import getBestForeground from './getBestForeground';
 
 export default class ColorInput extends PureComponent {
@@ -9,12 +9,13 @@ export default class ColorInput extends PureComponent {
     return (
       <ColorState>
         { ({ getColor, getRawColor, setColor }) => (
-          <div className="color-input">
-            <div className="inputs-wrapper">
+          <div className={ styles.outerWrapper }>
+            <div className={ styles.inputsWrapper }>
               <label style={{ color: getColor('shade7') }}>
-                <span className="label">{ this.props.colorKey }</span>
+                <span className={ styles.label }>{ this.props.colorKey }</span>
                 <input
                   type="text"
+                  className={ styles.textInput }
                   style={{
                     color: getColor('shade7'),
                     borderBottomColor: getColor(this.props.colorKey, 'shade7'),
@@ -24,7 +25,7 @@ export default class ColorInput extends PureComponent {
                 />
               </label>
               <label
-                className="swatch"
+                className={ styles.swatch }
                 style={{
                   color: getBestForeground(
                     getColor('shade7'),
@@ -38,13 +39,14 @@ export default class ColorInput extends PureComponent {
                 <Droplet />
                 <input
                   type="color"
+                  className={ styles.colorInput }
                   value={ getColor(this.props.colorKey) }
                   onChange={ evt => setColor(this.props.colorKey, evt.target.value) }
                   tabIndex="-1"
                 />
               </label>
             </div>
-            <div className="help" style={{ color: getColor('shade4', 'shade7') }}>{ this.props.help }</div>
+            <div className={ styles.help } style={{ color: getColor('shade4', 'shade7') }}>{ this.props.help }</div>
           </div>
         ) }
       </ColorState>
