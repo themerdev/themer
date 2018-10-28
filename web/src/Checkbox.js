@@ -8,7 +8,10 @@ export default class Checkbox extends PureComponent {
     return (
       <ColorState>
         { ({ getColor }) => (
-          <label className={ styles.wrapper } style={{ color: getColor('shade7') }}>
+          <label
+            className={ [styles.wrapper, this.props.className].join(' ') }
+            style={{ color: getColor('shade7') }}
+          >
             <input
               type="checkbox"
               className={ styles.input }

@@ -12,6 +12,11 @@
   width: 8ch;
 }
 
+.textInputWrapper {
+  flex-grow: 1;
+  display: flex;
+}
+
 .textInput {
   font-family: "Fira Code", monospace;
   font-size: 1rem;
@@ -23,6 +28,8 @@
   background: none;
   height: var(--input-size);
   box-sizing: border-box;
+  width: 0;
+  flex-grow: 1;
 }
 
 .swatch {
