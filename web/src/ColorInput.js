@@ -38,7 +38,7 @@ export default class ColorInput extends PureComponent {
                 <Droplet />
                 <input
                   type="color"
-                  value={ getRawColor(this.props.colorKey) }
+                  value={ getColor(this.props.colorKey) }
                   onChange={ evt => setColor(this.props.colorKey, evt.target.value) }
                   tabIndex="-1"
                 />
