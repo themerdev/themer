@@ -75,9 +75,10 @@ export class UrlStateProvider extends Component {
     );
   }
 
-  getValueOrFallback = (paths, parse) => {
+  getValueOrFallback = (paths, parse, calculatedState) => {
     return getValueOrFallback(
       this.state,
+      calculatedState,
       fallbackState,
       paths,
       parse,

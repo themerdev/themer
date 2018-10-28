@@ -1,6 +1,6 @@
 import { has, get } from 'lodash';
 
-export default function getValueOrFallback(state, fallbackState, paths, parse) {
+export default function getValueOrFallback(state, calculatedState, fallbackState, paths, parse) {
   for (let path of paths) {
     if (has(state, path)) {
       if (parse) {
@@ -14,6 +14,9 @@ export default function getValueOrFallback(state, fallbackState, paths, parse) {
       else {
         return get(state, path);
       }
+    }
+    else if (has(calculatedState, path)) {
+      return get(calculatedState, path);
     }
     else {
       continue;
