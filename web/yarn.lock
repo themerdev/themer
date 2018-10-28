@@ -2224,9 +2224,9 @@ color-name@^1.0.0:
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 color-steps@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/color-steps/-/color-steps-1.0.1.tgz#d640b9b19aada10f9eaa5d98ac9087cb46167b4e"
-  integrity sha512-hty37bNHvUcNkkMCfrecjJWd2tQU8XfbZVVGB6VGt2pF3JQH65zaThEZpCBARYfDxUXtcOwiu4IubJAd8b8gXg==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/color-steps/-/color-steps-1.0.2.tgz#798767b8055aca5d1b8183ab31da07b2403bddbb"
+  integrity sha512-Pj8QfvoFakPb6kPcovfbJzoxPObzYUj7XhNCO2xiC7z8TdjOoMNwMOyIa2nLFP6JKssnAHAfI8EaqhaJg3uWVg==
   dependencies:
     onecolor "^3.0.5"
 
