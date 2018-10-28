@@ -1,22 +1,20 @@
-import { has, get } from 'lodash';
+import { has, get, merge } from 'lodash';
 
 export default function getValueOrFallback(state, calculatedState, fallbackState, paths, parse) {
+  const combinedState = merge({}, state, calculatedState);
   for (let path of paths) {
-    if (has(state, path)) {
+    if (has(combinedState, path)) {
       if (parse) {
         try {
-          return parse(get(state, path));
+          return parse(get(combinedState, path));
         }
         catch {
           continue;
         }
       }
       else {
-        return get(state, path);
+        return get(combinedState, path);
       }
-    }
-    else if (has(calculatedState, path)) {
-      return get(calculatedState, path);
     }
     else {
       continue;
