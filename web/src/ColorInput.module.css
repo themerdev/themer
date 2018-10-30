@@ -8,8 +8,7 @@
 }
 
 .label {
-  display: inline-block;
-  width: 8ch;
+  margin-right: 0.5rem;
 }
 
 .textInputWrapper {
@@ -56,4 +55,5 @@
 
 .help {
   font-size: 0.75rem;
+  margin-top: 0.25rem;
 }

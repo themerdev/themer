@@ -12,7 +12,7 @@ export default class ColorInput extends PureComponent {
           <div className={ [styles.outerWrapper, this.props.className].join(' ') } style={ this.props.style }>
             <div className={ styles.inputsWrapper }>
               <label className={ styles.textInputWrapper } style={{ color: getColor('shade7') }}>
-                <span className={ styles.label }>{ this.props.colorKey }</span>
+                <span className={ styles.label }>{ this.props.colorKey }:</span>
                 <input
                   type="text"
                   className={ styles.textInput }
