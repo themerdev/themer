@@ -3,24 +3,24 @@
 }
 
 .container {
-  width: 960px;
+  width: var(--size-large-13);
   max-width: 100%;
-  padding: 1rem;
+  padding: var(--size-large-1);
   margin: 0 auto;
 }
 
 .h1 {
-  font-size: 2rem;
+  font-size: var(--size-large-3);
 }
 
 .hr {
-  height: 0.125rem;
+  height: var(--size-small-5);
   border: none;
-  border-radius: 0.125rem;
-  margin: 1.5rem 0;
+  border-radius: var(--size-small-6);
+  margin: var(--size-large-1) 0;
 }
 
 .h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
+  font-size: var(--size-large-1);
+  margin: var(--size-regular) 0;
 }

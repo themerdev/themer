@@ -1,29 +1,29 @@
 .tabContainer button {
-  font-size: 1rem;
+  font-size: var(--size-regular);
   font-family: 'Fira Code', monospace;
-  padding: 0.25em 0.5em;
-  border-width: 0.0625rem;
+  padding: var(--size-small-4) var(--size-small-1);
+  border-width: var(--border-size);
   border-style: solid;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: var(--border-radius-size);
+  border-top-right-radius: var(--border-radius-size);
 }
 
 .tabContainer button + button {
-  margin-left: -0.0625rem;
+  margin-left: calc(var(--border-size) * -1);
 }
 
 .inputContainer {
-  padding: 1rem;
-  border-width: 0.0625rem;
+  padding: var(--size-large-1);
+  border-width: var(--border-size);
   border-style: solid;
-  margin-top: -0.0625rem;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  margin-top: calc(var(--border-size) * -1);
+  border-top-right-radius: var(--border-radius-size);
+  border-bottom-right-radius: var(--border-radius-size);
+  border-bottom-left-radius: var(--border-radius-size);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-column-gap: var(--size-large-1);
+  grid-row-gap: var(--size-large-1);
 }
 
 .shade0 {

@@ -7,10 +7,41 @@
 html,
 body,
 #root {
+  --size-ratio: 0.71;
+  --size-regular: 1rem;
+
+  --size-large-1: calc(var(--size-regular) / var(--size-ratio));
+  --size-large-2: calc(var(--size-large-1) / var(--size-ratio));
+  --size-large-3: calc(var(--size-large-2) / var(--size-ratio));
+  --size-large-4: calc(var(--size-large-3) / var(--size-ratio));
+  --size-large-5: calc(var(--size-large-4) / var(--size-ratio));
+  --size-large-6: calc(var(--size-large-5) / var(--size-ratio));
+  --size-large-7: calc(var(--size-large-6) / var(--size-ratio));
+  --size-large-8: calc(var(--size-large-7) / var(--size-ratio));
+  --size-large-9: calc(var(--size-large-8) / var(--size-ratio));
+  --size-large-10: calc(var(--size-large-9) / var(--size-ratio));
+  --size-large-11: calc(var(--size-large-10) / var(--size-ratio));
+  --size-large-12: calc(var(--size-large-11) / var(--size-ratio));
+  --size-large-13: calc(var(--size-large-12) / var(--size-ratio));
+  --size-large-14: calc(var(--size-large-13) / var(--size-ratio));
+  --size-large-15: calc(var(--size-large-14) / var(--size-ratio));
+
+  --size-small-1: calc(var(--size-regular) * var(--size-ratio));
+  --size-small-2: calc(var(--size-small-1) * var(--size-ratio));
+  --size-small-3: calc(var(--size-small-2) * var(--size-ratio));
+  --size-small-4: calc(var(--size-small-3) * var(--size-ratio));
+  --size-small-5: calc(var(--size-small-4) * var(--size-ratio));
+  --size-small-6: calc(var(--size-small-5) * var(--size-ratio));
+  --size-small-7: calc(var(--size-small-6) * var(--size-ratio));
+  --size-small-8: calc(var(--size-small-7) * var(--size-ratio));
+
+  --border-size: var(--size-small-6);
+  --border-radius-size: var(--size-small-5);
+
   height: 100%;
   font-family: 'Fira Code', monospace;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: calc(1 / var(--size-ratio));
 }
 
 * {

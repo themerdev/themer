@@ -1,5 +1,5 @@
 .outerWrapper {
-  --input-size: 1.5rem;
+  --input-size: var(--size-large-2);
 }
 
 .inputsWrapper {
@@ -8,22 +8,23 @@
 }
 
 .label {
-  margin-right: 0.5rem;
+  margin-right: var(--size-small-2);
 }
 
 .textInputWrapper {
   flex-grow: 1;
   display: flex;
+  align-items: baseline;
 }
 
 .textInput {
   font-family: "Fira Code", monospace;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: var(--size-regular);
+  line-height: var(--size-regular);
   border: none;
-  border-bottom-width: 0.125rem;
+  border-bottom-width: var(--size-small-6);
   border-bottom-style: solid;
-  padding: 0.125rem 0.25rem;
+  padding: var(--size-small-7) var(--size-small-6);
   background: none;
   height: var(--input-size);
   box-sizing: border-box;
@@ -34,9 +35,9 @@
 .swatch {
   height: var(--input-size);
   width: var(--input-size);
-  border-top-left-radius: 0.125rem;
-  border-top-right-radius: 0.125rem;
-  border-bottom-right-radius: 0.125rem;
+  border-top-left-radius: var(--size-small-6);
+  border-top-right-radius: var(--size-small-6);
+  border-bottom-right-radius: var(--size-small-6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +55,7 @@
 }
 
 .help {
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
+  font-size: var(--size-small-1);
+  margin-top: var(--size-small-5);
+  text-align: right;
 }
