@@ -4,6 +4,7 @@ import { UrlStateProvider } from './UrlState';
 
 import ColorState from './ColorState';
 import ColorSetInputs from './ColorSetInputs';
+import CodePreview from './CodePreview';
 
 export default class App extends PureComponent {
   render() {
@@ -31,8 +32,10 @@ export default class App extends PureComponent {
                   `,
                 }}></hr>
                 <p style={{ color: getColor('shade6', 'shade7')}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
-                <h2 className={ styles.h2 } style={{ color: getColor('shade7', 'shade7')}}>1. Define colors</h2>
+                <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>1. Define colors</h2>
                 <ColorSetInputs />
+                <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>2. Preview</h2>
+                <CodePreview />
               </div>
             </div>
           ) }
