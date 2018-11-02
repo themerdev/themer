@@ -7,7 +7,7 @@
 html,
 body,
 #root {
-  --size-ratio: 0.71;
+  --size-ratio: calc(5 / 7);
   --size-regular: 1rem;
 
   --size-large-1: calc(var(--size-regular) / var(--size-ratio));
@@ -36,7 +36,7 @@ body,
   --size-small-8: calc(var(--size-small-7) * var(--size-ratio));
 
   --border-size: var(--size-small-6);
-  --border-radius-size: var(--size-small-5);
+  --border-radius-size: var(--size-small-3);
 
   height: 100%;
   font-family: 'Fira Code', monospace;

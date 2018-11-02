@@ -16,7 +16,7 @@
 .hr {
   height: var(--size-small-5);
   border: none;
-  border-radius: var(--size-small-6);
+  border-radius: var(--border-radius-size);
   margin: var(--size-large-1) 0;
 }
 
