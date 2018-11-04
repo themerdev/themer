@@ -5,6 +5,7 @@ import { UrlStateProvider } from './UrlState';
 import ColorState from './ColorState';
 import ColorSetInputs from './ColorSetInputs';
 import CodePreview from './CodePreview';
+import TerminalPreview from './TerminalPreview';
 
 export default class App extends PureComponent {
   render() {
@@ -36,6 +37,7 @@ export default class App extends PureComponent {
                 <ColorSetInputs />
                 <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>2. Preview</h2>
                 <CodePreview />
+                <TerminalPreview />
               </div>
             </div>
           ) }
