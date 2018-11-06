@@ -1,0 +1,22 @@
+.tab {
+  font-size: var(--size-regular);
+  font-family: 'Fira Code', monospace;
+  padding: var(--size-small-4) var(--size-small-1);
+  border-width: var(--border-size);
+  border-style: solid;
+  border-top-left-radius: var(--border-radius-size);
+  border-top-right-radius: var(--border-radius-size);
+}
+
+.tab + .tab {
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.tabContent {
+  border-width: var(--border-size);
+  border-style: solid;
+  margin-top: calc(var(--border-size) * -1);
+  border-top-right-radius: var(--border-radius-size);
+  border-bottom-right-radius: var(--border-radius-size);
+  border-bottom-left-radius: var(--border-radius-size);
+}

@@ -51,7 +51,7 @@ const fallbackState = {
   calculateIntermediaryShades: {
     dark: true,
     light: true,
-  }
+  },
 };
 
 export class UrlStateProvider extends Component {
