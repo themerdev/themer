@@ -1,11 +1,4 @@
 .pre {
   white-space: pre;
-}
-
-.terminalCursor {
-  animation: blink-cursor 500ms steps(1) infinite alternate;
-}
-
-@keyframes blink-cursor {
-  50% { opacity: 0; }
+  overflow-x: scroll;
 }

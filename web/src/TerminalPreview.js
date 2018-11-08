@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import ColorState from './ColorState';
 import styles from './TerminalPreview.module.css';
+import { cursor } from './cursor.module.css';
 
 export default class TerminalPreview extends PureComponent {
   render() {
@@ -66,7 +67,7 @@ export default class TerminalPreview extends PureComponent {
               <span style={{ color: getColor('accent4') }}>~/project</span>
               <span style={{ color: getColor('accent7') }}>(branch*) </span>
               <span style={{ color: getColor('accent3') }}>|> </span>
-              <span style={{ backgroundColor: getColor('shade5', 'shade7') }} className={ styles.terminalCursor }> </span>
+              <span style={{ backgroundColor: getColor('shade5', 'shade7') }} className={ cursor }> </span>
             </code>
           </pre>
         ) }
