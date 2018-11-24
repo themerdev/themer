@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import CodePreview from './CodePreview';
 import TerminalPreview from './TerminalPreview';
 import Tabs from './Tabs';
-import styles from './TextPreviews.module.css';
 
 export default class TextPreviews extends PureComponent {
 
@@ -12,7 +11,7 @@ export default class TextPreviews extends PureComponent {
     return (
       <Tabs>
         { ({ tabClassName, getTabStyle, contentClassName, contentStyle }) => (
-          <>
+          <div>
             <div>
               <button
                 className={ tabClassName }
@@ -25,7 +24,7 @@ export default class TextPreviews extends PureComponent {
                 onClick={ () => this.setState({ activePreview: 'terminal' }) }
               >Terminal</button>
             </div>
-            <div className={ `${styles.previewContainer} ${contentClassName}` } style={ contentStyle }>
+            <div className={ contentClassName } style={ contentStyle }>
               { this.state.activePreview === 'code' ? (
                 <CodePreview />
               ) : null }
@@ -33,7 +32,7 @@ export default class TextPreviews extends PureComponent {
                 <TerminalPreview />
               ) : null }
             </div>
-          </>
+          </div>
         ) }
       </Tabs>
     );

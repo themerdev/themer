@@ -17,7 +17,10 @@ export default class Tabs extends PureComponent {
             borderLeftColor: getColor('shade7'),
           }),
           contentClassName: styles.tabContent,
-          contentStyle: { borderColor: getColor('shade7') },
+          contentStyle: {
+            borderColor: getColor('shade7'),
+            backgroundColor: getColor('shade0'),
+          },
         }) }
       </ColorState>
     );

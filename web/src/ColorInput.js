@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import ColorState from './ColorState';
-import { Droplet } from './Icons';
+import { DropletIcon } from './Icons';
 import styles from './ColorInput.module.css';
 import getBestForeground from './getBestForeground';
 
@@ -36,7 +36,7 @@ export default class ColorInput extends PureComponent {
                 }}
                 tabIndex="0"
               >
-                <Droplet />
+                <DropletIcon />
                 <input
                   type="color"
                   className={ styles.colorInput }

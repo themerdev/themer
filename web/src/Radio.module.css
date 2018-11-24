@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  margin-left: var(--size-small-2);
+  flex-grow: 1;
+}

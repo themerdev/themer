@@ -1,5 +1,7 @@
 .tab {
+  display: inline-block;
   font-size: var(--size-regular);
+  line-height: var(--line-height);
   font-family: 'Fira Code', monospace;
   padding: var(--size-small-4) var(--size-small-1);
   border-width: var(--border-size);
@@ -19,4 +21,5 @@
   border-top-right-radius: var(--border-radius-size);
   border-bottom-right-radius: var(--border-radius-size);
   border-bottom-left-radius: var(--border-radius-size);
+  padding: var(--size-large-1);
 }

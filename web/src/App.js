@@ -5,6 +5,7 @@ import { UrlStateProvider } from './UrlState';
 import ColorState from './ColorState';
 import ColorSetInputs from './ColorSetInputs';
 import TextPreviews from './TextPreviews';
+import WallpaperPreview from './WallpaperPreview';
 
 export default class App extends PureComponent {
   render() {
@@ -35,7 +36,10 @@ export default class App extends PureComponent {
                 <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>1. Define colors</h2>
                 <ColorSetInputs />
                 <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>2. Preview</h2>
-                <TextPreviews />
+                <div className={ styles.previewsContainer }>
+                  <TextPreviews />
+                  <WallpaperPreview />
+                </div>
               </div>
             </div>
           ) }

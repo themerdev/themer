@@ -1,28 +1,24 @@
 import React, { PureComponent } from 'react';
-import { CheckIcon } from './Icons';
-import styles from './Checkbox.module.css';
+import { RadioIcon } from './Icons';
 import ColorState from './ColorState';
+import styles from './Radio.module.css';
 
-export default class Checkbox extends PureComponent {
+export default class Radio extends PureComponent {
   render() {
     return (
       <ColorState>
         { ({ getColor }) => (
           <label
-            className={ [styles.wrapper, this.props.className].join(' ') }
+            className={ styles.wrapper }
             style={{ color: getColor('shade7') }}
           >
             <input
-              type="checkbox"
+              type="radio"
               className={ styles.input }
               checked={ this.props.value }
               onChange={ evt => this.props.onChange(evt.target.checked) }
             />
-            <CheckIcon
-              backgroundColor={ this.props.value ? getColor('shade7') : 'transparent' }
-              outlineColor={ this.props.value ? 'transparent' : getColor('shade7') }
-              checkColor={ this.props.value ? getColor('shade0') : 'transparent' }
-            />
+            <RadioIcon selected={ this.props.value } />
             <span className={ styles.label }>{ this.props.label }</span>
           </label>
         ) }

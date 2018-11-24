@@ -38,10 +38,12 @@ body,
   --border-size: var(--size-small-6);
   --border-radius-size: var(--size-small-3);
 
+  --line-height: calc(1 / var(--size-ratio));
+
   height: 100%;
   font-family: 'Fira Code', monospace;
   font-size: 16px;
-  line-height: calc(1 / var(--size-ratio));
+  line-height: var(--line-height);
 }
 
 * {

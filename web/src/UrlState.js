@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import qs from 'qs';
 import { merge } from 'lodash';
 import getValueOrFallback from './getValueOrFallback';
@@ -52,9 +52,10 @@ const fallbackState = {
     dark: true,
     light: true,
   },
+  activeWallpaper: 'none',
 };
 
-export class UrlStateProvider extends Component {
+export class UrlStateProvider extends PureComponent {
   constructor(props, ...args) {
     super(props, ...args);
     this.state = stateFromParams(props.history.location.search);
