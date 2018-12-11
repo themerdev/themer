@@ -11,6 +11,7 @@ export default class Radio extends PureComponent {
           <label
             className={ styles.wrapper }
             style={{ color: getColor('shade7') }}
+            tabIndex="0"
           >
             <input
               type="radio"

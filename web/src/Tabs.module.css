@@ -8,6 +8,7 @@
   border-style: solid;
   border-top-left-radius: var(--border-radius-size);
   border-top-right-radius: var(--border-radius-size);
+  cursor: pointer;
 }
 
 .tab + .tab {

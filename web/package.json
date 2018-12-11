@@ -11,7 +11,12 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
-    "reset.css": "^2.0.2"
+    "reset.css": "^2.0.2",
+    "themer-wallpaper-block-wave": "^3.0.3",
+    "themer-wallpaper-octagon": "^3.0.3",
+    "themer-wallpaper-shirts": "^1.0.3",
+    "themer-wallpaper-triangles": "^2.0.7",
+    "themer-wallpaper-trianglify": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
