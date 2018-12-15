@@ -8,12 +8,21 @@ describe('themer color set', () => {
   });
 
   it('should define all 16 required colors for each theme', () => {
-    const prefixes = [ 'accent', 'shade' ];
+    const prefixes = [
+      'accent0',
+      'accent1',
+      'accent2',
+      'accent3',
+      'accent4',
+      'accent5',
+      'accent6',
+      'accent7',
+      'shade0',
+      'shade7',
+    ];
     prefixes.forEach(prefix => {
-      for (let i = 0; i <= 7; i++) {
-        expect(colors.light[`${prefix}${i}`]).toBeDefined();
-        expect(colors.dark[`${prefix}${i}`]).toBeDefined();
-      }
+      expect(colors.light[prefix]).toBeDefined();
+      expect(colors.dark[prefix]).toBeDefined();
     });
   });
 

@@ -6,12 +6,21 @@ describe('themer-colors-night-sky', () => {
     expect(colors.dark).toBeDefined();
   });
 
-  it('should define all 16 required colors', () => {
-    const prefixes = [ 'accent', 'shade' ];
+  it('should define all required colors', () => {
+    const prefixes = [
+      'accent0',
+      'accent1',
+      'accent2',
+      'accent3',
+      'accent4',
+      'accent5',
+      'accent6',
+      'accent7',
+      'shade0',
+      'shade7',
+    ];
     prefixes.forEach(prefix => {
-      for (let i = 0; i <= 7; i++) {
-        expect(colors.dark[`${prefix}${i}`]).toBeDefined();
-      }
+      expect(colors.dark[prefix]).toBeDefined();
     });
   });
 
