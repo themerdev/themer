@@ -6815,6 +6815,11 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
+nova-colors@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/nova-colors/-/nova-colors-2.1.5.tgz#9d03da38e8b69b07aced888e4d9a44800caa5644"
+  integrity sha1-nQPaOOi2mwes7YiOTZpEgAyqVkQ=
+
 npm-bundled@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.5.tgz#3c1732b7ba936b3a10325aef616467c0ccbcc979"
@@ -9624,6 +9629,59 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+themer-colors-default@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/themer-colors-default/-/themer-colors-default-1.0.10.tgz#e552fa0438cbecde8028627a71371800a0076822"
+  integrity sha512-hS10/K4UOyj5ptzZ9WokNcnVTfT67Xnid0jcfjsD/ATU+N41V0B5lXFhixfui05pB6p+lM94tN8au+sOHvIwPw==
+
+themer-colors-finger-paint@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-finger-paint/-/themer-colors-finger-paint-2.0.0.tgz#bf9795fb83b68aeaaee42e9fdb323d8b2554cf83"
+  integrity sha512-NYYRxTrN7seBn7XGWebizD1cQQ/3U/pJc/bIit59VpiQb4ZC9XAojMlhPg/9FNoChLg/4G3EPHQOIMpOjqoy0A==
+
+themer-colors-github-universe@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-github-universe/-/themer-colors-github-universe-2.0.0.tgz#23d8e9eb7e59d119b95c26c206d3a6cc787c0b39"
+  integrity sha512-9BHQQOo48yk6aBOOPSxNG4/c5qmVK0S3tgluOgtl6+eKQuQ8BrIzJSeEtQwtt6AMzB/s9TiUyt/o5bf839fCJQ==
+
+themer-colors-lucid@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/themer-colors-lucid/-/themer-colors-lucid-1.0.3.tgz#94c53bacccd4e12fb23a782ffe87abea31f05451"
+  integrity sha512-VyuTWejI7lkLY78EDO6Umkgrki8DumvURdwjXNIfo26XBVlZoZW5ZEONyJiGITJbYfYaIudH53/wBWmEh2sy5g==
+
+themer-colors-monkey@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-monkey/-/themer-colors-monkey-2.0.0.tgz#6d0c68ebac04b7b9f0f7cb1fc52ab6e889baa0df"
+  integrity sha512-3mddqTDZuWo3tl21BAsMDgBrcLeQmI8zN4qRDv1SUSm48XxjrIvmlodU9OgNgyjYBH7YarhkBRp7J48F+LSQpQ==
+
+themer-colors-night-sky@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-night-sky/-/themer-colors-night-sky-2.0.0.tgz#931f307f0b0e4162837aa35d61cf8f57b039232a"
+  integrity sha512-3zGCGnJfwWmWVNGRYvU9b3VEGLkqb+QGl/KRxpoFoqWEymf1urRiTPd+EfpTB7la5AkGAsYLgnB6lPCppHYodw==
+
+themer-colors-nova@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/themer-colors-nova/-/themer-colors-nova-1.0.3.tgz#9b864e70469778572ff5b4747e883beb8cec5329"
+  integrity sha512-PVW/IV0h2yDuyr2Ocan5IS0oAMCYC+Ce7xht7nGhOHJRsR7pSlIud6sJzLdcmw8a67e3UUxgNz2SOCVx6QJMrA==
+  dependencies:
+    color "^3.0.0"
+    nova-colors "^2.1.5"
+
+themer-colors-one@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/themer-colors-one/-/themer-colors-one-1.0.8.tgz#c9cfbc69418cfb146fdda8648095480036f38402"
+  integrity sha512-IgBamqLL6cV1LZX5vq2C4sdhk8pcGByHSzkm7J8SigE1U4ngCIFcoMoNpFe0crkuv6pUKVXTwHcuKfnY2+pr8Q==
+
+themer-colors-polar-ice@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-polar-ice/-/themer-colors-polar-ice-2.0.0.tgz#f55cd20c0f308d165391c615cfe9db41b8e80276"
+  integrity sha512-mVvvIPuMaSIuoMPo00SxB7SO7K2kKz12cmCJ493xQhdPLyACxkgnp5IGo01Y5sHIFZ0sBgDi3c+Op5yVtaCF1Q==
+
+themer-colors-solarized@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/themer-colors-solarized/-/themer-colors-solarized-1.0.3.tgz#1de4f26c96b8273bed5489026c4502a2abe048e9"
+  integrity sha512-XqDMoxREMNEKHEJciWlbdvJKdIaqYFbWUKdHZUZdPGb5SkY+SyIJkqyJzbjWLYRbu9YlAiWIRXrmj1O1JaX9UA==
 
 themer-utils@^1.0.0, themer-utils@^1.1.0:
   version "1.1.1"

@@ -22,6 +22,14 @@
 
 .h2 {
   font-size: var(--size-large-1);
+  margin: var(--size-large-3) 0 var(--size-regular);
+}
+
+.help {
+  margin: 0 0 var(--size-regular);
+}
+
+.preBuilt {
   margin: var(--size-regular) 0;
 }
 

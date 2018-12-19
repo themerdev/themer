@@ -10,7 +10,7 @@ export default class Button extends PureComponent {
           <button
             className={ `${styles.button} ${this.props.className || ''}` }
             style={{
-              color: getColor('accent5', 'shade6', 'shade7'),
+              color: getColor('accent4', 'shade6', 'shade7'),
               '--button-resting-background-color': getColor('shade1', 'shade0'),
               '--button-hover-background-color': getColor('shade2', 'shade0'),
               '--button-active-background-color': getColor('shade0'),

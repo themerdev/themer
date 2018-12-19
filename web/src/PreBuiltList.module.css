@@ -1,0 +1,20 @@
+.linksets {
+  list-style: none inside none;
+}
+
+.linksets > li::before {
+  content: "- ";
+}
+
+.links {
+  list-style: none inside none;
+  display: inline;
+}
+
+.links > li {
+  display: inline;
+}
+
+.links > li:not(:first-child)::before {
+  content: ", ";
+}

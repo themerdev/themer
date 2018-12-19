@@ -6,6 +6,7 @@ import ColorState from './ColorState';
 import ColorSetInputs from './ColorSetInputs';
 import TextPreviews from './TextPreviews';
 import WallpaperPreview from './WallpaperPreview';
+import PreBuiltList from './PreBuiltList';
 
 export default class App extends PureComponent {
   render() {
@@ -37,7 +38,12 @@ export default class App extends PureComponent {
                 />
                 <p style={{ color: getColor('shade6', 'shade7')}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
                 <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>1. Define colors</h2>
+                <p className={ styles.help } style={{ color: getColor('shade6', 'shade7') }}>Input your colors using any CSS format (keyword, hsl, rgb, etc.), or click the droplet icon to get the system color picker.</p>
                 <ColorSetInputs />
+                <p className={ styles.preBuilt } style={{ color: getColor('shade6', 'shade7') }}>
+                  Or start with a pre-built color set:
+                </p>
+                <PreBuiltList />
                 <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>2. Preview</h2>
                 <div className={ styles.previewsContainer }>
                   <TextPreviews />

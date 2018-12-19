@@ -6,7 +6,7 @@ import getValueOrFallback from './getValueOrFallback';
 const UrlStateContext = React.createContext();
 
 const stateFromParams = search => qs.parse(search, { allowDots: true, ignoreQueryPrefix: true });
-const paramsFromState = state => qs.stringify(state, { allowDots: true, addQueryPrefix: true });
+export const paramsFromState = state => qs.stringify(state, { allowDots: true, addQueryPrefix: true });
 
 const fallbackState = {
   colors: {
