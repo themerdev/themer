@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import CodePreview from './CodePreview';
 import TerminalPreview from './TerminalPreview';
 import Tabs from './Tabs';
+import styles from './TextPreviews.module.css';
 
 export default class TextPreviews extends PureComponent {
 
@@ -11,7 +12,7 @@ export default class TextPreviews extends PureComponent {
     return (
       <Tabs>
         { ({ tabClassName, getTabStyle, contentClassName, contentStyle }) => (
-          <div>
+          <div className={ styles.wrapper }>
             <div>
               <button
                 className={ tabClassName }

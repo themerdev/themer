@@ -38,3 +38,10 @@
   grid-template-columns: calc((100% - var(--size-large-1)) * 2 / 3) calc((100% - var(--size-large-1)) / 3);
   grid-column-gap: var(--size-large-1);
 }
+
+@media (max-width: 48rem) {
+  .previewsContainer {
+    grid-template-columns: 1fr;
+    grid-row-gap: var(--size-large-1);
+  }
+}
