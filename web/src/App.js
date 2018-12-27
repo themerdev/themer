@@ -7,6 +7,7 @@ import ColorSetInputs from './ColorSetInputs';
 import TextPreviews from './TextPreviews';
 import WallpaperPreview from './WallpaperPreview';
 import PreBuiltList from './PreBuiltList';
+import Download from './Download';
 
 export default class App extends PureComponent {
   render() {
@@ -49,6 +50,9 @@ export default class App extends PureComponent {
                   <TextPreviews />
                   <WallpaperPreview />
                 </div>
+                <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>3. Download</h2>
+                <p className={ styles.help } style={{ color: getColor('shade6', 'shade7') }}>Select which themes you'd like to generate from your color set.</p>
+                <Download />
               </div>
             </div>
           ) }

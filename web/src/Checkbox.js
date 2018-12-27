@@ -10,7 +10,11 @@ export default class Checkbox extends PureComponent {
         { ({ getColor }) => (
           <label
             className={ [styles.wrapper, this.props.className].join(' ') }
-            style={{ color: getColor('shade7') }}
+            style={{
+              color: this.props.value && this.props.accentSelected
+                ? getColor('accent3', 'shade7')
+                : getColor('shade7'),
+            }}
             tabIndex="0"
           >
             <input
@@ -20,7 +24,11 @@ export default class Checkbox extends PureComponent {
               onChange={ evt => this.props.onChange(evt.target.checked) }
             />
             <CheckIcon
-              backgroundColor={ this.props.value ? getColor('shade7') : 'transparent' }
+              backgroundColor={
+                this.props.value
+                  ? ( this.props.accentSelected ? getColor('accent3', 'shade7')
+                  : getColor('shade7')) : 'transparent'
+              }
               outlineColor={ this.props.value ? 'transparent' : getColor('shade7') }
               checkColor={ this.props.value ? getColor('shade0') : 'transparent' }
             />
