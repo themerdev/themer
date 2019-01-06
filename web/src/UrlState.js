@@ -59,7 +59,10 @@ export class UrlStateProvider extends PureComponent {
   constructor(props, ...args) {
     super(props, ...args);
     this.state = stateFromParams(props.history.location.search);
-    this.listener = props.history.listen(location => {
+  }
+  
+  componentDidMount() {
+    this.unlisten = this.props.history.listen(location => {
       this.setState(stateFromParams(location.search));
     });
   }
@@ -91,7 +94,7 @@ export class UrlStateProvider extends PureComponent {
   }
 
   componentWillUnmount() {
-    this.listener();
+    this.unlisten();
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { UrlStateConsumer, paramsFromState } from './UrlState';
 import ColorState from './ColorState';
+import Link from './Link';
 import { has } from 'lodash';
 import styles from './PreBuiltList.module.css';
 
@@ -30,13 +31,7 @@ class PreBuiltLink extends PureComponent {
               light: !has(this.props.colors, 'light.shade1'),
             },
           };
-          return (
-            <ColorState>
-              { ({ getColor }) => (
-                <a style={{ color: getColor('accent5', 'shade7') }} href={ paramsFromState(preparedState) }>{ this.props.children }</a>
-              ) }
-            </ColorState>
-          );
+          return (<Link href={ paramsFromState(preparedState) }>{ this.props.children }</Link>);
         } }
       </UrlStateConsumer>
     );

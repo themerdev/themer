@@ -45,3 +45,31 @@
     grid-row-gap: var(--size-large-1);
   }
 }
+
+.shape {
+  padding: var(--size-large-2) 0;
+  position: relative;
+  text-align: center;
+}
+
+.shape::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: skewY(-2deg);
+  background-color: var(--shape-color);
+}
+
+.shape > * {
+  position: relative;
+}
+
+.footer {
+  padding: var(--size-large-3);
+  text-align: center;
+  font-size: var(--size-small-1);
+  margin-top: var(--size-small-1);
+}

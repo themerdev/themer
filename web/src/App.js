@@ -8,6 +8,7 @@ import TextPreviews from './TextPreviews';
 import WallpaperPreview from './WallpaperPreview';
 import PreBuiltList from './PreBuiltList';
 import Download from './Download';
+import Link from './Link';
 
 export default class App extends PureComponent {
   render() {
@@ -39,7 +40,7 @@ export default class App extends PureComponent {
                 />
                 <p style={{ color: getColor('shade6', 'shade7')}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
                 <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>1. Define colors</h2>
-                <p className={ styles.help } style={{ color: getColor('shade6', 'shade7') }}>Input your colors using any CSS format (keyword, hsl, rgb, etc.), or click the droplet icon to get the system color picker.</p>
+                <p className={ styles.help } style={{ color: getColor('shade6', 'shade7') }}>Input your colors using any CSS format (keyword, hsl, rgb, etc.).</p>
                 <ColorSetInputs />
                 <p className={ styles.preBuilt } style={{ color: getColor('shade6', 'shade7') }}>
                   Or start with a pre-built color set:
@@ -54,6 +55,18 @@ export default class App extends PureComponent {
                 <p className={ styles.help } style={{ color: getColor('shade6', 'shade7') }}>Select which themes you'd like to generate from your color set.</p>
                 <Download />
               </div>
+              <div className={ styles.shape } style={{ '--shape-color': getColor('shade1', 'shade0') }}>
+                <div className={ styles.container }>
+                  <p style={{ color: getColor('shade7') }}>
+                    <span style={{ color: getColor('accent1', 'shade7') }}>Pro tip:</span>
+                    {' '}
+                    The current URL uniquely identifies your current theme. Bookmark it, email it, or share it however you like.
+                  </p>
+                </div>
+              </div>
+              <footer className={ styles.footer } style={{ color: getColor('shade3', 'shade7') }}>
+                themer is free and open source software, made by <Link href="https://mjswensen.com">mjswensen</Link> with <Link href="https://github.com/mjswensen/themer/graphs/contributors">contributors</Link>, and is released under the MIT license
+              </footer>
             </div>
           ) }
         </ColorState>
