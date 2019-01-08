@@ -2,6 +2,11 @@
   min-height: 100%;
 }
 
+.app *::selection {
+  color: var(--selection-foreground-color);
+  background: var(--selection-background-color);
+}
+
 .container {
   width: var(--size-large-13);
   max-width: 100%;

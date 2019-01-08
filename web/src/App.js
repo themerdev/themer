@@ -16,7 +16,14 @@ export default class App extends PureComponent {
       <UrlStateProvider history={ this.props.history }>
         <ColorState>
           { ({ getColor }) => (
-            <div className={ styles.app } style={{ backgroundColor: getColor('shade0') }}>
+            <div
+              className={ styles.app }
+              style={{
+                backgroundColor: getColor('shade0'),
+                '--selection-foreground-color': getColor('shade0'),
+                '--selection-background-color': getColor('accent5'),
+              }}
+            >
               <div className={ styles.container }>
                 <h1 className={ styles.h1 } style={{ color: getColor('shade7') }}>themer</h1>
                 <hr
