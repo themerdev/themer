@@ -7,6 +7,15 @@
   background: var(--selection-background-color);
 }
 
+.app *:focus {
+  outline: none;
+}
+
+.app.keyboarding *:focus {
+  outline: var(--focus-outline-color) solid var(--border-size);
+  outline-offset: var(--size-small-3);
+}
+
 .container {
   width: var(--size-large-13);
   max-width: 100%;

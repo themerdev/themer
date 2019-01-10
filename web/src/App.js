@@ -11,17 +11,20 @@ import Download from './Download';
 import Link from './Link';
 
 export default class App extends PureComponent {
+  state = { keyboarding: false };
+
   render() {
     return (
       <UrlStateProvider history={ this.props.history }>
         <ColorState>
           { ({ getColor }) => (
             <div
-              className={ styles.app }
+              className={ `${styles.app} ${this.state.keyboarding ? styles.keyboarding : ''}` }
               style={{
                 backgroundColor: getColor('shade0'),
                 '--selection-foreground-color': getColor('shade0'),
                 '--selection-background-color': getColor('accent5'),
+                '--focus-outline-color': getColor('accent6'),
               }}
             >
               <div className={ styles.container }>
@@ -79,5 +82,25 @@ export default class App extends PureComponent {
         </ColorState>
       </UrlStateProvider>
     );
+  }
+
+  onKeyDown = (evt) => {
+    if (evt.key === 'Tab') {
+      this.setState({ keyboarding: true });
+    }
+  }
+
+  onMouseDown = () => {
+    this.setState({ keyboarding: false });
+  }
+
+  componentDidMount() {
+    window.document.addEventListener('keydown', this.onKeyDown);
+    window.document.addEventListener('mousedown', this.onMouseDown);
+  }
+
+  componentWillUnmount() {
+    window.document.removeEventListener('keydown', this.onKeyDown);
+    window.document.removeEventListener('mousedown', this.onMouseDown);
   }
 }
