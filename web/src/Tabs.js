@@ -11,10 +11,9 @@ export default class Tabs extends PureComponent {
           getTabStyle: active => ({
             backgroundColor: active ? getColor('shade0') : getColor('shade2', 'shade0'),
             color: getColor('shade7'),
-            borderTopColor: getColor('shade7'),
-            borderRightColor: getColor('shade7'),
-            borderBottomColor: active ? getColor('shade0') : getColor('shade7'),
-            borderLeftColor: getColor('shade7'),
+            borderColor: getColor('shade7'),
+            '--tab-bottom-overlap-color': active ? getColor('shade0') : getColor('shade2', 'shade0'),
+            '--tab-bottom-overlap-size': active ? 'calc(var(--border-size) * 2)' : 'var(--border-size)',
           }),
           contentClassName: styles.tabContent,
           contentStyle: {
