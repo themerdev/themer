@@ -9,6 +9,7 @@ import WallpaperPreview from './WallpaperPreview';
 import PreBuiltList from './PreBuiltList';
 import Download from './Download';
 import Link from './Link';
+import CopyUrl from './CopyUrl';
 
 export default class App extends PureComponent {
   state = { keyboarding: false };
@@ -71,6 +72,7 @@ export default class App extends PureComponent {
                     <span style={{ color: getColor('accent1', 'shade7') }}>Pro tip:</span>
                     {' '}
                     The current URL uniquely identifies your current theme. Bookmark it, email it, or share it however you like.
+                    <CopyUrl className={ styles.copyUrl }/>
                   </p>
                 </div>
               </div>

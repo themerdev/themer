@@ -81,6 +81,10 @@
   position: relative;
 }
 
+.copyUrl {
+  margin-top: var(--size-regular);
+}
+
 .footer {
   padding: var(--size-large-3);
   text-align: center;
