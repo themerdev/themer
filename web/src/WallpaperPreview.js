@@ -6,11 +6,11 @@ import styles from './WallpaperPreview.module.css';
 import ColorState from './ColorState';
 
 const wallpaperOptions = [
-  { value: 'themer-wallpaper-trianglify', label: '"Tranglify"'},
   { value: 'themer-wallpaper-block-wave', label: '"Block Wave"'},
   { value: 'themer-wallpaper-octagon', label: '"Octagon"'},
-  { value: 'themer-wallpaper-shirts', label: '"Shirts"'},
   { value: 'themer-wallpaper-triangles', label: '"Triangles"'},
+  { value: 'themer-wallpaper-trianglify', label: '"Tranglify"'},
+  { value: 'themer-wallpaper-shirts', label: '"Shirts"'},
 ];
 
 export default class WallpaperPreview extends PureComponent {
