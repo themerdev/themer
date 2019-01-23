@@ -3,6 +3,7 @@ import ColorState from './ColorState';
 import { DropletIcon } from './Icons';
 import styles from './ColorInput.module.css';
 import getBestForeground from './getBestForeground';
+import colorSupport from './colorInputSupport';
 
 export default class ColorInput extends PureComponent {
   render() {
@@ -22,6 +23,7 @@ export default class ColorInput extends PureComponent {
                   }}
                   value={ getRawColor(this.props.colorKey) }
                   onChange={ evt => setColor(this.props.colorKey, evt.target.value) }
+                  ref={ node => this.textInput = node }
                 />
               </label>
               <label
@@ -34,7 +36,13 @@ export default class ColorInput extends PureComponent {
                   ),
                   backgroundColor: getColor(this.props.colorKey, 'shade7'),
                 }}
-                tabIndex="0"
+                tabIndex="-1"
+                onClick={ evt => {
+                  if(!colorSupport) {
+                    evt.preventDefault();
+                    this.textInput.focus()
+                  }
+                } }
               >
                 <DropletIcon />
                 <input
