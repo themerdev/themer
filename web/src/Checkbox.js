@@ -4,6 +4,12 @@ import styles from './Checkbox.module.css';
 import ColorState from './ColorState';
 
 export default class Checkbox extends PureComponent {
+  onKeyDown = evt => {
+    if (evt.key === ' ' || evt.key === 'Enter') {
+      evt.preventDefault();
+      this.props.onChange(!this.props.value);
+    }
+  }
   render() {
     return (
       <ColorState>
@@ -16,6 +22,7 @@ export default class Checkbox extends PureComponent {
                 : getColor('shade7'),
             }}
             tabIndex="0"
+            onKeyDown={ this.onKeyDown }
           >
             <input
               type="checkbox"
