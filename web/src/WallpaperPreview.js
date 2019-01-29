@@ -16,6 +16,16 @@ const wallpaperOptions = [
 export default class WallpaperPreview extends PureComponent {
   
   state = { activePreview: null };
+
+  buttonRefs = new Map();
+
+  onModalClose = () => {
+    const button = this.buttonRefs.get(this.state.activePreview);
+    if (button) {
+      button.focus();
+    }
+    this.setState({ activePreview: null });
+  }
   
   render() {
     return (
@@ -32,6 +42,7 @@ export default class WallpaperPreview extends PureComponent {
                   <Button
                     key={ option.value }
                     onClick={ () => this.setState({ activePreview: option.value }) }
+                    ref={ n => this.buttonRefs.set(option.value, n) }
                   >Preview { option.label }</Button>
                 )) }
               </div>
@@ -60,7 +71,7 @@ export default class WallpaperPreview extends PureComponent {
                           accent7: getColor('accent7'),
                         }
                       }}
-                      onClose={ () => this.setState({ activePreview: null }) }
+                      onClose={ this.onModalClose }
                     />
                   ) }
                 </ColorState>

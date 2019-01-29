@@ -3,6 +3,9 @@ import ColorState from './ColorState';
 import styles from './Button.module.css';
 
 export default class Button extends PureComponent {
+  focus() {
+    this.button.focus();
+  }
   render() {
     return (
       <ColorState>
@@ -17,6 +20,7 @@ export default class Button extends PureComponent {
             }}
             onClick={ this.props.onClick }
             disabled={ this.props.disabled }
+            ref={ n => this.button = n }
           >{ this.props.children }</button>
         ) }
       </ColorState>

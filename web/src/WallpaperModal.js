@@ -53,6 +53,7 @@ export default class WallpaperModal extends PureComponent {
       this.setState({ image: 'none' });
     }
     window.document.addEventListener('keydown', this.escListener);
+    this.closeButton.focus();
   }
   componentWillUnmount() {
     window.document.removeEventListener('keydown', this.escListener);
@@ -77,6 +78,7 @@ export default class WallpaperModal extends PureComponent {
             <Button
               className={ styles.close }
               onClick={ this.props.onClose }
+              ref={ n => this.closeButton = n }
             >close</Button>
           </div>
         ) }
