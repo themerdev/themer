@@ -29,6 +29,11 @@ const getImagePromises = (pkg, colors, width, height) => {
 
 export default class WallpaperModal extends PureComponent {
   state = { image: null };
+  escListener = evt => {
+    if (evt.key === 'Escape') {
+      this.props.onClose();
+    }
+  }
   async componentDidMount() {
     try {
       const { devicePixelRatio } = window;
@@ -47,6 +52,10 @@ export default class WallpaperModal extends PureComponent {
     } catch {
       this.setState({ image: 'none' });
     }
+    window.document.addEventListener('keydown', this.escListener);
+  }
+  componentWillUnmount() {
+    window.document.removeEventListener('keydown', this.escListener);
   }
   render() {
     return (
