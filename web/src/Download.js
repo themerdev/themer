@@ -176,6 +176,21 @@ export default class DownloadOptions extends PureComponent {
                   label="“Shirts”"
                   accentSelected
                 />
+                <div
+                  className={ styles.wallpaperHint }
+                  style={{ color: getColor('shade3', 'shade7') }}
+                >
+                  Wallpapers will be rendered at the browser viewport's resolution.
+                </div>
+                { window.document.fullscreenEnabled ? (
+                  <Button
+                    className={ styles.fullscreen }
+                    small
+                    onClick={
+                      () => window.document.documentElement.requestFullscreen()
+                    }
+                  >Go fullscreen</Button>
+                ) : null }
               </fieldset>
               <fieldset style={{ borderColor: getColor('shade2', 'shade7') }}>
                 <legend style={{ color: getColor('shade5', 'shade7') }}>Other</legend>
@@ -215,7 +230,12 @@ export default class DownloadOptions extends PureComponent {
               { ({ rawState }) => (
                 <Button
                   onClick={ async () => {
-                    const zip = await generateZip(this.state, rawState.colors);
+                    const zip = await generateZip(
+                      this.state,
+                      rawState.colors,
+                      window.innerWidth * window.devicePixelRatio,
+                      window.innerHeight * window.devicePixelRatio,
+                    );
                     zip.generateAsync({ type: 'blob' }).then(contents => {
                       saveAs(contents, 'themer.zip');
                     });

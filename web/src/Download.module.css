@@ -29,3 +29,12 @@
   padding: 0 var(--size-small-2);
   margin-left: var(--size-regular);
 }
+
+.wallpaperHint {
+  font-size: var(--font-size-small);
+}
+
+.wallpaperHint,
+.fullscreen {
+  margin-top: var(--size-small-2);
+}

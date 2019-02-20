@@ -57,12 +57,25 @@ const templates = {
   xcode: { folderName: 'Xcode', render: renderXcode },
 };
 
-export default async function generateZip(selections, colors) {
+const resolutionOptions = {
+  wallpaperBlockWave: 'themer-wallpaper-block-wave-size',
+  wallpaperOctagon: 'themer-wallpaper-octagon-size',
+  wallpaperShirts: 'themer-wallpaper-shirts-size',
+  wallpaperTriangles: 'themer-wallpaper-triangles-size',
+  wallpaperTrianglify: 'themer-wallpaper-trianglify-size',
+}
+
+export default async function generateZip(selections, colors, width, height) {
   const zip = new JSZip();
   const preparedColors = prepareColors(colors, () => {});
   for (const [key, selected] of Object.entries(selections)) {
     if (selected) {
-      const files = await Promise.all(templates[key].render(preparedColors, {}));
+      const files = await Promise.all(templates[key].render(
+        preparedColors,
+        key in resolutionOptions
+          ? { [resolutionOptions[key]]: `${width}x${height}` }
+          : {},
+      ));
       files.forEach(file => {
         zip.folder(templates[key].folderName).file(file.name, file.contents);
       });

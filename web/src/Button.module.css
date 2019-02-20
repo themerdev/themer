@@ -1,5 +1,4 @@
 .button {
-  padding: var(--size-small-1) var(--size-large-1);
   border-style: solid;
   border-width: var(--border-size);
   border-radius: var(--border-radius-size);
@@ -11,6 +10,12 @@
   cursor: pointer;
   transition: background-color 75ms ease;
   background-color: var(--button-resting-background-color);
+}
+
+.small {
+  padding: var(--size-small-4) var(--size-small-1);
+  border-width: var(--small-border-size);
+  font-size: var(--font-size-small);
 }
 
 .button:hover {
