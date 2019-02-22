@@ -37,7 +37,9 @@ body,
 
   --border-size: var(--size-small-6);
   --small-border-size: var(--size-small-8);
+  --large-border-size: var(--size-small-5);
   --border-radius-size: var(--size-small-3);
+  --small-border-radius-size: var(--size-small-4);
 
   --font-size-small: var(--size-small-1);
   

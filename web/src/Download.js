@@ -229,6 +229,7 @@ export default class DownloadOptions extends PureComponent {
             <UrlStateConsumer>
               { ({ rawState }) => (
                 <Button
+                  special
                   onClick={ async () => {
                     const zip = await generateZip(
                       this.state,

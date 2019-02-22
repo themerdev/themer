@@ -18,6 +18,36 @@
   font-size: var(--font-size-small);
 }
 
+.special {
+  padding: var(--size-small-3) var(--size-large-1);
+  border: none;
+  font-size: var(--size-large-1);
+  background-image: linear-gradient(to right, var(--button-special-color-1), var(--button-special-color-2));
+  position: relative;
+}
+
+.special::before {
+  content: attr(data-text);
+  position: absolute;
+  top: var(--large-border-size);
+  right: var(--large-border-size);
+  bottom: var(--large-border-size);
+  left: var(--large-border-size);
+  border-radius: var(--small-border-radius-size);
+  background-color: var(--button-resting-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special:hover::before {
+  background-color: var(--button-hover-background-color);
+}
+
+.special:active::before {
+  background-color: var(--button-active-background-color);
+}
+
 .button:hover {
   background-color: var(--button-hover-background-color);
 }
