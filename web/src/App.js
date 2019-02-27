@@ -10,6 +10,7 @@ import PreBuiltList from './PreBuiltList';
 import Download from './Download';
 import Link from './Link';
 import CopyUrl from './CopyUrl';
+import StarCount from './StarCount';
 
 export default class App extends PureComponent {
   state = { keyboarding: false };
@@ -29,7 +30,10 @@ export default class App extends PureComponent {
               }}
             >
               <div className={ styles.container }>
-                <h1 className={ styles.h1 } style={{ color: getColor('shade7') }}>themer</h1>
+                <header className={ styles.header }>
+                  <h1 className={ styles.h1 } style={{ color: getColor('shade7') }}>themer</h1>
+                  <StarCount />
+                </header>
                 <hr
                   className={ styles.hr }
                   style={{
@@ -50,7 +54,7 @@ export default class App extends PureComponent {
                   }}
                 />
                 <p style={{ color: getColor('shade6', 'shade7')}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
-                <h2 className={ styles.h2 } style={{ color: getColor('shade7')}}>1. Define colors</h2>
+                <h2 className={ styles.h2 } style={{ color: getColor('shade7') }}>1. Define colors</h2>
                 <p className={ styles.help } style={{ color: getColor('shade6', 'shade7') }}>Input your colors using any CSS format (keyword, hsl, rgb, etc.).</p>
                 <ColorSetInputs />
                 <p className={ styles.preBuilt } style={{ color: getColor('shade6', 'shade7') }}>

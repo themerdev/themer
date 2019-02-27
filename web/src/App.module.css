@@ -23,6 +23,13 @@
   margin: 0 auto;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .h1 {
   font-size: var(--size-large-3);
 }

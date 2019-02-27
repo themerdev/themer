@@ -45,6 +45,8 @@ body,
   
   --line-height: calc(1 / var(--size-ratio));
 
+  --button-transition: background-color 75ms ease;
+
   height: 100%;
   font-family: 'Fira Code', monospace;
   font-size: 16px;
