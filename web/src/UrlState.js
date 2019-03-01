@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useState, useEffect } from 'react';
 import qs from 'qs';
 import { merge } from 'lodash';
 import getValueOrFallback from './getValueOrFallback';
@@ -52,50 +52,32 @@ const fallbackState = {
     dark: true,
     light: true,
   },
-  activeWallpaper: 'none',
 };
 
-export class UrlStateProvider extends PureComponent {
-  constructor(props, ...args) {
-    super(props, ...args);
-    this.state = stateFromParams(props.history.location.search);
-  }
-  
-  componentDidMount() {
-    this.unlisten = this.props.history.listen(location => {
-      this.setState(stateFromParams(location.search));
-    });
-  }
+export const UrlStateProvider = ({ history, children }) => {
+  const [state, setState] = useState(stateFromParams(history.location.search));
 
-  render() {
-    return (
-      <UrlStateContext.Provider value={{
-        rawState: this.state,
-        getValueOrFallback: this.getValueOrFallback,
-        mergeState: this.mergeState,
-      }}>
-        { this.props.children }
-      </UrlStateContext.Provider>
-    );
-  }
+  useEffect(() => {
+    return history.listen(location => {
+      setState(stateFromParams(location.search));
+    })
+  });
 
-  getValueOrFallback = (paths, parse, calculatedState) => {
-    return getValueOrFallback(
-      this.state,
-      calculatedState,
-      fallbackState,
-      paths,
-      parse,
-    );
-  }
-
-  mergeState = (state) => {
-    this.props.history.replace(paramsFromState(merge({}, this.state, state)));
-  }
-
-  componentWillUnmount() {
-    this.unlisten();
-  }
+  return (
+    <UrlStateContext.Provider value={{
+      rawState: state,
+      getValueOrFallback: (paths, parse, calculatedState) => getValueOrFallback(
+        state,
+        calculatedState,
+        fallbackState,
+        paths,
+        parse,
+      ),
+      mergeState: newState => history.replace(paramsFromState(merge({}, state, newState))),
+    }}>
+      { children }
+    </UrlStateContext.Provider>
+  );
 }
 
 export const UrlStateConsumer = UrlStateContext.Consumer;

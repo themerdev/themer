@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import 'reset.css/reset.css';
@@ -8,5 +8,8 @@ import * as serviceWorker from './serviceWorker';
 
 const history = createBrowserHistory();
 
-ReactDOM.render(<App history={ history } />, document.getElementById('root'));
+ReactDOM.render(
+  (<StrictMode><App history={ history } /></StrictMode>),
+  document.getElementById('root'),
+);
 serviceWorker.register();
