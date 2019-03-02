@@ -65,9 +65,53 @@ const resolutionOptions = {
   wallpaperTrianglify: 'themer-wallpaper-trianglify-size',
 }
 
-export default async function generateZip(selections, colors, width, height) {
+const installationLocations = {
+  alfred: { name: 'Alfred.app', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-alfred#output' },
+  atomSyntax: { name: 'Atom syntax', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-syntax#output' },
+  atomUi: { name: 'Atom UI', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-ui#output' },
+  bbedit: { name: 'BBEdit', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-bbedit#output' },
+  chrome: { name: 'Chrome', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-chrome#output' },
+  cmd: { name: 'CMD.exe', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-cmd#output' },
+  conemu: { name: 'ConEmu', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-conemu#output' },
+  gnomeTerminal: { name: 'GNOME Terminal', instructionsUrl: 'https://github.com/agarrharr/themer-gnome-terminal#installation--usage' },
+  hyper: { name: 'Hyper', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-hyper#output' },
+  iterm: { name: 'iTerm', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-iterm#output' },
+  jetbrains: { name: 'JetBrains', instructionsUrl: 'https://github.com/tomselvi/themer-jetbrains#output' },
+  kitty: { name: 'kitty', instructionsUrl: 'https://github.com/0x52a1/themer-kitty#output' },
+  sketchPalettes: { name: 'Sketch palettes', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sketch-palettes#output' },
+  slack: { name: 'Slack sidebar', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack#output' },
+  sublimeText: { name: 'Sublime Text', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sublime-text#output' },
+  termite: { name: 'Termite', instructionsUrl: 'https://github.com/0x52a1/themer-termite#installation-and-usage' },
+  tmux: { name: 'tmux', instructionsUrl: 'https://github.com/tomselvi/themer-tmux#output' },
+  vim: { name: 'Vim', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim#output' },
+  vimLightline: { name: 'Vim lightline', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim-lightline#output' },
+  vscode: { name: 'VS Code', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vscode#output' },
+  xcode: { name: 'Xcode', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-xcode#output' },
+}
+
+const instructions = (selections, url) => `# Installation
+
+Information on how to install your themer themes can be found in the following locations:
+
+${
+  Object.entries(selections)
+    .filter(([_, selected]) => selected)
+    .sort((a, b) => a[0] < b[0] ? -1 : 1)
+    .map(([key]) => installationLocations[key])
+    .filter(Boolean)
+    .map(({name, instructionsUrl}) => `* [${name}](${instructionsUrl})`)
+    .join('\n')
+}
+
+# Your theme's URL
+
+${url}
+`;
+
+export default async function generateZip(selections, colors, width, height, url) {
   const zip = new JSZip();
   const preparedColors = prepareColors(colors, () => {});
+  zip.file('Instructions.md', instructions(selections, url));
   for (const [key, selected] of Object.entries(selections)) {
     if (selected) {
       const files = await Promise.all(templates[key].render(

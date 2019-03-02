@@ -261,6 +261,7 @@ export default () => {
                     rawState.colors,
                     window.innerWidth * window.devicePixelRatio,
                     window.innerHeight * window.devicePixelRatio,
+                    window.location.href,
                   );
                   zip.generateAsync({ type: 'blob' }).then(contents => {
                     saveAs(contents, 'themer.zip');
