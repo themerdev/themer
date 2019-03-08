@@ -1,12 +1,11 @@
-import React from "react";
-import ColorState from "./ColorState";
+import React, { useContext } from "react";
+import ThemeContext from "./ThemeContext";
 
-export default props => (
-  <ColorState>
-    {({ getColor }) => (
-      <a style={{ color: getColor("accent5", "shade7") }} { ...props }>
-        { props.children }
-      </a>
-    )}
-  </ColorState>
-);
+export default props => {
+  const { getActiveColorOrFallback } = useContext(ThemeContext);
+  return (
+    <a style={{ color: getActiveColorOrFallback(['accent5']) }} { ...props }>
+      { props.children }
+    </a>
+  );
+};

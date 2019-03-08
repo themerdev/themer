@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ColorState from './ColorState';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import Button from './Button';
 import styles from './WallpaperModal.module.css';
 
@@ -8,6 +7,7 @@ import { render as octagonRender } from 'themer-wallpaper-octagon';
 import { render as shirtsRender } from 'themer-wallpaper-shirts';
 import { render as trianglesRender } from 'themer-wallpaper-triangles';
 import { render as trianglifyRender } from 'themer-wallpaper-trianglify';
+import ThemeContext from './ThemeContext';
 
 const getImagePromises = (pkg, colors, width, height) => {
   const options = { [`${pkg}-size`]: `${width}x${height}` };
@@ -42,6 +42,8 @@ export default ({ onClose, wallpaper, colors }) => {
     };
   });
 
+  const { getActiveColorOrFallback } = useContext(ThemeContext);
+
   const node = useRef(null);
   const button = useRef(null);
 
@@ -72,28 +74,24 @@ export default ({ onClose, wallpaper, colors }) => {
   }, [button]);
   
   return (
-    <ColorState>
-      { ({ getColor }) => (
+    <div
+      className={ styles.scrim }
+      style={{ backgroundColor: getActiveColorOrFallback(['shade0'], true) }}
+      ref={ node }
+    >
+      { image ? (
         <div
-          className={ styles.scrim }
-          style={{ backgroundColor: getColor('shade0') }}
-          ref={ node }
-        >
-          { image ? (
-            <div
-              className={ styles.image }
-              style={{ backgroundImage: image }}
-            />
-          ) : (
-            <span style={{ color: getColor('shade2', 'shade7') }}>loading...</span>
-          ) }
-          <Button
-            className={ styles.close }
-            onClick={ onClose }
-            ref={ button }
-          >close</Button>
-        </div>
+          className={ styles.image }
+          style={{ backgroundImage: image }}
+        />
+      ) : (
+        <span style={{ color: getActiveColorOrFallback(['shade2']) }}>loading...</span>
       ) }
-    </ColorState>
+      <Button
+        className={ styles.close }
+        onClick={ onClose }
+        ref={ button }
+      >close</Button>
+    </div>
   );
 }

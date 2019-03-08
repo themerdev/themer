@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
-import ColorState from './ColorState';
+import React, { forwardRef, useContext } from 'react';
 import styles from './Button.module.css';
+import ThemeContext from './ThemeContext';
 
 export default forwardRef(({
   small,
@@ -10,39 +10,36 @@ export default forwardRef(({
   disabled, 
   children,
 }, buttonRef) => {
+  const { getActiveColorOrFallback } = useContext(ThemeContext);
   const getColorKeys = () => {
     if (disabled) {
-      return ['shade3', 'shade0'];
+      return ['shade3'];
     } else if (small || special) {
       return ['shade7'];
     } else {
-      return ['accent4', 'shade6', 'shade7'];
+      return ['accent4', 'shade6'];
     }
   }
   return (
-    <ColorState>
-      { ({ getColor }) => (
-        <button
-          className={ [
-            styles.button,
-            small && styles.small,
-            special && styles.special,
-            className,
-          ].filter(Boolean).join(' ') }
-          data-text="Download"
-          style={{
-            color: getColor(...getColorKeys()),
-            '--button-resting-background-color': getColor('shade1', 'shade0'),
-            '--button-hover-background-color': getColor('shade2', 'shade0'),
-            '--button-active-background-color': getColor('shade0'),
-            '--button-special-color-1': getColor('accent1', 'shade7'),
-            '--button-special-color-2': getColor('accent7', 'shade7'),
-          }}
-          onClick={ onClick }
-          disabled={ disabled }
-          ref={ buttonRef }
-        >{ children }</button>
-      ) }
-    </ColorState>
+    <button
+      className={ [
+        styles.button,
+        small && styles.small,
+        special && styles.special,
+        className,
+      ].filter(Boolean).join(' ') }
+      data-text="Download"
+      style={{
+        color: getActiveColorOrFallback(getColorKeys()),
+        '--button-resting-background-color': getActiveColorOrFallback(['shade1'], true),
+        '--button-hover-background-color': getActiveColorOrFallback(['shade2'], true),
+        '--button-active-background-color': getActiveColorOrFallback(['shade0'], true),
+        '--button-special-color-1': getActiveColorOrFallback(['accent1']),
+        '--button-special-color-2': getActiveColorOrFallback(['accent7']),
+      }}
+      onClick={ onClick }
+      disabled={ disabled }
+      ref={ buttonRef }
+    >{ children }</button>
   );
 });

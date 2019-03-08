@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Checkbox from './Checkbox';
 import styles from './Download.module.css';
-import ColorState from './ColorState';
 import Button from './Button';
 import generateZip from './generateZip';
 import saveAs from 'file-saver';
-import { UrlStateConsumer } from './UrlState';
+import ThemeContext from './ThemeContext';
 
 export default () => {
   const [hyper, setHyper] = useState(false);
@@ -35,243 +34,238 @@ export default () => {
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [tmux, setTmux] = useState(false);
 
+  const { getActiveColorOrFallback, preparedColorSet } = useContext(ThemeContext);
+
   return (
-    <ColorState>
-      { ({ getColor }) => (
-        <>
-          <div className={ styles.fieldsetWrapper }>
-            <fieldset style={{ borderColor: getColor('shade2', 'shade7') }}>
-              <legend style={{ color: getColor('shade5', 'shade7') }}>Terminals</legend>
-              <Checkbox
-                value={ hyper }
-                onChange={ () => setHyper(!hyper) }
-                label="Hyper"
-                accentSelected
-              />
-              <Checkbox
-                value={ iterm }
-                onChange={ () => setIterm(!iterm) }
-                label="iTerm"
-                accentSelected
-              />
-              <Checkbox
-                value={ gnomeTerminal }
-                onChange={ () => setGnomeTerminal(!gnomeTerminal) }
-                label="GNOME Terminal"
-                accentSelected
-              />
-              <Checkbox
-                value={ conemu }
-                onChange={ () => setConemu(!conemu) }
-                label="ConEmu"
-                accentSelected
-              />
-              <Checkbox
-                value={ cmd }
-                onChange={ () => setCmd(!cmd) }
-                label="CMD.exe"
-                accentSelected
-              />
-              <Checkbox
-                value={ termite }
-                onChange={ () => setTermite(!termite) }
-                label="Termite"
-                accentSelected
-              />
-              <Checkbox
-                value={ kitty }
-                onChange={ () => setKitty(!kitty) }
-                label="kitty"
-                accentSelected
-              />
-            </fieldset>
-            <fieldset style={{ borderColor: getColor('shade2', 'shade7') }}>
-              <legend style={{ color: getColor('shade5', 'shade7') }}>Editors / IDEs</legend>
-              <Checkbox
-                value={ atomSyntax }
-                onChange={ () => setAtomSyntax(!atomSyntax) }
-                label="Atom (syntax)"
-                accentSelected
-              />
-              <Checkbox
-                value={ atomUi }
-                onChange={ () => setAtomUi(!atomUi) }
-                label="Atom (UI)"
-                accentSelected
-              />
-              <Checkbox
-                value={ sublimeText }
-                onChange={ () => setSublimeText(!sublimeText) }
-                label="Sublime Text"
-                accentSelected
-              />
-              <Checkbox
-                value={ vim }
-                onChange={ () => setVim(!vim) }
-                label="Vim"
-                accentSelected
-              />
-              <Checkbox
-                value={ vimLightline }
-                onChange={ () => setVimLightline(!vimLightline) }
-                label="lightline.vim"
-                accentSelected
-              />
-              <Checkbox
-                value={ vscode }
-                onChange={ () => setVscode(!vscode) }
-                label="VS Code"
-                accentSelected
-              />
-              <Checkbox
-                value={ xcode }
-                onChange={ () => setXcode(!xcode) }
-                label="Xcode"
-                accentSelected
-              />
-              <Checkbox
-                value={ bbedit }
-                onChange={ () => setBbedit(!bbedit) }
-                label="BBEdit"
-                accentSelected
-              />
-              <Checkbox
-                value={ jetbrains }
-                onChange={ () => setJetbrains(!jetbrains) }
-                label="JetBrains"
-                accentSelected
-              />
-            </fieldset>
-            <fieldset style={{ borderColor: getColor('shade2', 'shade7') }}>
-              <legend style={{ color: getColor('shade5', 'shade7') }}>Wallpapers</legend>
-              <Checkbox
-                value={ wallpaperBlockWave }
-                onChange={ () => setWallpaperBlockWave(!wallpaperBlockWave) }
-                label="“Block Wave”"
-                accentSelected
-              />
-              <Checkbox
-                value={ wallpaperOctagon }
-                onChange={ () => setWallpaperOctagon(!wallpaperOctagon) }
-                label="“Octagon”"
-                accentSelected
-              />
-              <Checkbox
-                value={ wallpaperTriangles }
-                onChange={ () => setWallpaperTriangles(!wallpaperTriangles) }
-                label="“Triangles”"
-                accentSelected
-              />
-              <Checkbox
-                value={ wallpaperTrianglify }
-                onChange={ () => setWallpaperTrianglify(!wallpaperTrianglify) }
-                label="“Trianglify”"
-                accentSelected
-              />
-              <Checkbox
-                value={ wallpaperShirts }
-                onChange={ () => setWallpaperShirts(!wallpaperShirts) }
-                label="“Shirts”"
-                accentSelected
-              />
-              <div
-                className={ styles.wallpaperHint }
-                style={{ color: getColor('shade3', 'shade7') }}
-              >
-                Wallpapers will be rendered at the browser viewport's resolution.
-              </div>
-              { window.document.fullscreenEnabled ? (
-                <Button
-                  className={ styles.fullscreen }
-                  small
-                  onClick={
-                    () => window.document.documentElement.requestFullscreen()
-                  }
-                >Go fullscreen</Button>
-              ) : null }
-            </fieldset>
-            <fieldset style={{ borderColor: getColor('shade2', 'shade7') }}>
-              <legend style={{ color: getColor('shade5', 'shade7') }}>Other</legend>
-              <Checkbox
-                value={ slack }
-                onChange={ () => setSlack(!slack) }
-                label="Slack sidebar"
-                accentSelected
-              />
-              <Checkbox
-                value={ alfred }
-                onChange={ () => setAlfred(!alfred) }
-                label="Alfred.app"
-                accentSelected
-              />
-              <Checkbox
-                value={ chrome }
-                onChange={ () => setChrome(!chrome) }
-                label="Chrome"
-                accentSelected
-              />
-              <Checkbox
-                value={ sketchPalettes }
-                onChange={ () => setSketchPalettes(!sketchPalettes) }
-                label="Sketch palettes"
-                accentSelected
-              />
-              <Checkbox
-                value={ tmux }
-                onChange={ () => setTmux(!tmux) }
-                label="tmux"
-                accentSelected
-              />
-            </fieldset>
+    <>
+      <div className={ styles.fieldsetWrapper }>
+        <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Terminals</legend>
+          <Checkbox
+            value={ hyper }
+            onChange={ () => setHyper(!hyper) }
+            label="Hyper"
+            accentSelected
+          />
+          <Checkbox
+            value={ iterm }
+            onChange={ () => setIterm(!iterm) }
+            label="iTerm"
+            accentSelected
+          />
+          <Checkbox
+            value={ gnomeTerminal }
+            onChange={ () => setGnomeTerminal(!gnomeTerminal) }
+            label="GNOME Terminal"
+            accentSelected
+          />
+          <Checkbox
+            value={ conemu }
+            onChange={ () => setConemu(!conemu) }
+            label="ConEmu"
+            accentSelected
+          />
+          <Checkbox
+            value={ cmd }
+            onChange={ () => setCmd(!cmd) }
+            label="CMD.exe"
+            accentSelected
+          />
+          <Checkbox
+            value={ termite }
+            onChange={ () => setTermite(!termite) }
+            label="Termite"
+            accentSelected
+          />
+          <Checkbox
+            value={ kitty }
+            onChange={ () => setKitty(!kitty) }
+            label="kitty"
+            accentSelected
+          />
+        </fieldset>
+        <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Editors / IDEs</legend>
+          <Checkbox
+            value={ atomSyntax }
+            onChange={ () => setAtomSyntax(!atomSyntax) }
+            label="Atom (syntax)"
+            accentSelected
+          />
+          <Checkbox
+            value={ atomUi }
+            onChange={ () => setAtomUi(!atomUi) }
+            label="Atom (UI)"
+            accentSelected
+          />
+          <Checkbox
+            value={ sublimeText }
+            onChange={ () => setSublimeText(!sublimeText) }
+            label="Sublime Text"
+            accentSelected
+          />
+          <Checkbox
+            value={ vim }
+            onChange={ () => setVim(!vim) }
+            label="Vim"
+            accentSelected
+          />
+          <Checkbox
+            value={ vimLightline }
+            onChange={ () => setVimLightline(!vimLightline) }
+            label="lightline.vim"
+            accentSelected
+          />
+          <Checkbox
+            value={ vscode }
+            onChange={ () => setVscode(!vscode) }
+            label="VS Code"
+            accentSelected
+          />
+          <Checkbox
+            value={ xcode }
+            onChange={ () => setXcode(!xcode) }
+            label="Xcode"
+            accentSelected
+          />
+          <Checkbox
+            value={ bbedit }
+            onChange={ () => setBbedit(!bbedit) }
+            label="BBEdit"
+            accentSelected
+          />
+          <Checkbox
+            value={ jetbrains }
+            onChange={ () => setJetbrains(!jetbrains) }
+            label="JetBrains"
+            accentSelected
+          />
+        </fieldset>
+        <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Wallpapers</legend>
+          <Checkbox
+            value={ wallpaperBlockWave }
+            onChange={ () => setWallpaperBlockWave(!wallpaperBlockWave) }
+            label="“Block Wave”"
+            accentSelected
+          />
+          <Checkbox
+            value={ wallpaperOctagon }
+            onChange={ () => setWallpaperOctagon(!wallpaperOctagon) }
+            label="“Octagon”"
+            accentSelected
+          />
+          <Checkbox
+            value={ wallpaperTriangles }
+            onChange={ () => setWallpaperTriangles(!wallpaperTriangles) }
+            label="“Triangles”"
+            accentSelected
+          />
+          <Checkbox
+            value={ wallpaperTrianglify }
+            onChange={ () => setWallpaperTrianglify(!wallpaperTrianglify) }
+            label="“Trianglify”"
+            accentSelected
+          />
+          <Checkbox
+            value={ wallpaperShirts }
+            onChange={ () => setWallpaperShirts(!wallpaperShirts) }
+            label="“Shirts”"
+            accentSelected
+          />
+          <div
+            className={ styles.wallpaperHint }
+            style={{ color: getActiveColorOrFallback(['shade3']) }}
+          >
+            Wallpapers will be rendered at the browser viewport's resolution.
           </div>
-          <UrlStateConsumer>
-            { ({ rawState }) => (
-              <Button
-                special
-                onClick={ async () => {
-                  const zip = await generateZip(
-                    {
-                      hyper,
-                      iterm,
-                      gnomeTerminal,
-                      conemu,
-                      cmd,
-                      termite,
-                      kitty,
-                      atomSyntax,
-                      atomUi,
-                      sublimeText,
-                      vim,
-                      vimLightline,
-                      vscode,
-                      xcode,
-                      bbedit,
-                      jetbrains,
-                      wallpaperBlockWave,
-                      wallpaperOctagon,
-                      wallpaperTriangles,
-                      wallpaperTrianglify,
-                      wallpaperShirts,
-                      slack,
-                      alfred,
-                      chrome,
-                      sketchPalettes,
-                      tmux,
-                    },
-                    rawState.colors,
-                    window.innerWidth * window.devicePixelRatio,
-                    window.innerHeight * window.devicePixelRatio,
-                    window.location.href,
-                  );
-                  zip.generateAsync({ type: 'blob' }).then(contents => {
-                    saveAs(contents, 'themer.zip');
-                  });
-                } }
-              >Download</Button>
-            ) }
-          </UrlStateConsumer>
-        </>
-      ) }
-    </ColorState>
+          { window.document.fullscreenEnabled ? (
+            <Button
+              className={ styles.fullscreen }
+              small
+              onClick={
+                () => window.document.documentElement.requestFullscreen()
+              }
+            >Go fullscreen</Button>
+          ) : null }
+        </fieldset>
+        <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Other</legend>
+          <Checkbox
+            value={ slack }
+            onChange={ () => setSlack(!slack) }
+            label="Slack sidebar"
+            accentSelected
+          />
+          <Checkbox
+            value={ alfred }
+            onChange={ () => setAlfred(!alfred) }
+            label="Alfred.app"
+            accentSelected
+          />
+          <Checkbox
+            value={ chrome }
+            onChange={ () => setChrome(!chrome) }
+            label="Chrome"
+            accentSelected
+          />
+          <Checkbox
+            value={ sketchPalettes }
+            onChange={ () => setSketchPalettes(!sketchPalettes) }
+            label="Sketch palettes"
+            accentSelected
+          />
+          <Checkbox
+            value={ tmux }
+            onChange={ () => setTmux(!tmux) }
+            label="tmux"
+            accentSelected
+          />
+        </fieldset>
+      </div>
+      <Button
+        special
+        disabled={ !preparedColorSet.dark && !preparedColorSet.light }
+        onClick={ async () => {
+          const zip = await generateZip(
+            {
+              hyper,
+              iterm,
+              gnomeTerminal,
+              conemu,
+              cmd,
+              termite,
+              kitty,
+              atomSyntax,
+              atomUi,
+              sublimeText,
+              vim,
+              vimLightline,
+              vscode,
+              xcode,
+              bbedit,
+              jetbrains,
+              wallpaperBlockWave,
+              wallpaperOctagon,
+              wallpaperTriangles,
+              wallpaperTrianglify,
+              wallpaperShirts,
+              slack,
+              alfred,
+              chrome,
+              sketchPalettes,
+              tmux,
+            },
+            preparedColorSet,
+            window.innerWidth * window.devicePixelRatio,
+            window.innerHeight * window.devicePixelRatio,
+            window.location.href,
+          );
+          zip.generateAsync({ type: 'blob' }).then(contents => {
+            saveAs(contents, 'themer.zip');
+          });
+        } }
+      >Download</Button>
+    </>
   );
 }

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import numeral from 'numeral';
 import styles from './StarCount.module.css';
-import ColorState from './ColorState';
+import ThemeContext from './ThemeContext';
 
 export default () => {
   const [count, setCount] = useState('');
@@ -16,34 +16,32 @@ export default () => {
     })();
   }, []);
 
+  const { getActiveColorOrFallback } = useContext(ThemeContext);
+
   return (
-    <ColorState>
-      { ({ getColor }) => (
-        <span
-          style={{
-            '--star-count-resting-background-color': getColor('shade1', 'shade0'),
-            '--star-count-hover-background-color': getColor('shade2', 'shade0'),
-            '--star-count-active-background-color': getColor('shade0'),
-          }}
-        >
-          <a
-            className={ styles.star }
-            style={{ color: getColor('shade7') }}
-            href="https://github.com/mjswensen/themer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Star on GitHub</a>
-          { count ? (
-            <a
-              className={ styles.stargazers }
-              style={{ color: getColor('shade7') }}
-              href="https://github.com/mjswensen/themer/stargazers"
-              target="_blank"
-              rel="noopener noreferrer"
-            >{ count }</a>
-          ) : null }
-        </span>
-      ) }
-    </ColorState>
+    <span
+      style={{
+        '--star-count-resting-background-color': getActiveColorOrFallback(['shade1'], true),
+        '--star-count-hover-background-color': getActiveColorOrFallback(['shade2'], true),
+        '--star-count-active-background-color': getActiveColorOrFallback(['shade0'], true),
+      }}
+    >
+      <a
+        className={ styles.star }
+        style={{ color: getActiveColorOrFallback(['shade7']) }}
+        href="https://github.com/mjswensen/themer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Star on GitHub</a>
+      { count ? (
+        <a
+          className={ styles.stargazers }
+          style={{ color: getActiveColorOrFallback(['shade7']) }}
+          href="https://github.com/mjswensen/themer/stargazers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{ count }</a>
+      ) : null }
+    </span>
   );
 }
