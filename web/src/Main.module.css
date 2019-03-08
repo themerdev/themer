@@ -34,6 +34,10 @@
   font-size: var(--size-large-3);
 }
 
+.h1 a {
+  text-decoration: none;
+}
+
 .hr {
   height: var(--size-small-5);
   border: none;

@@ -46,7 +46,7 @@ export default () => {
     >
       <div className={ styles.container }>
         <header className={ styles.header }>
-          <h1 className={ styles.h1 } style={{ color: getActiveColorOrFallback(['shade7']) }}>themer</h1>
+          <h1 className={ styles.h1 }><a href="/" style={{ color: getActiveColorOrFallback(['shade7']) }}>themer</a></h1>
           <StarCount />
         </header>
         <hr
