@@ -32,7 +32,7 @@ export default ({ className, value, accentSelected, onChange, label }) => {
           value
             ? ( accentSelected
               ? getActiveColorOrFallback(['accent3'])
-              : getActiveColorOrFallback('shade7')
+              : getActiveColorOrFallback(['shade7'])
             ) : 'transparent'
         }
         outlineColor={ value ? 'transparent' : getActiveColorOrFallback(['shade7']) }
