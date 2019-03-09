@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import Button from './Button';
+import Radio from './Radio';
 import styles from './WallpaperModal.module.css';
+import ThemeContext from './ThemeContext';
 
 import { render as blockWaveRender } from 'themer-wallpaper-block-wave';
 import { render as octagonRender } from 'themer-wallpaper-octagon';
 import { render as shirtsRender } from 'themer-wallpaper-shirts';
 import { render as trianglesRender } from 'themer-wallpaper-triangles';
 import { render as trianglifyRender } from 'themer-wallpaper-trianglify';
-import ThemeContext from './ThemeContext';
 
 const getImagePromises = (pkg, colors, width, height) => {
   const options = { [`${pkg}-size`]: `${width}x${height}` };
@@ -28,7 +29,8 @@ const getImagePromises = (pkg, colors, width, height) => {
 }
 
 export default ({ onClose, wallpaper, colors }) => {
-  const [image, setImage] = useState(null);
+  const [images, setImages] = useState([]);
+  const [imageIndex, setImageIndex] = useState(0);
   
   const escListener = evt => {
     if (evt.key === 'Escape') {
@@ -49,29 +51,28 @@ export default ({ onClose, wallpaper, colors }) => {
 
   useEffect(() => {
     (async () => {
-      try {
-        const { devicePixelRatio } = window;
-        const { width, height } = node.current.getBoundingClientRect();
-        const images = await Promise.all(
+      const { devicePixelRatio } = window;
+      const { width, height } = node.current.getBoundingClientRect();
+      setImages(
+        await Promise.all(
           getImagePromises(
             wallpaper,
             colors,
             width * devicePixelRatio,
             height * devicePixelRatio,
           )
-        );
-        setImage(
-          `url('data:image/svg+xml;utf8,${encodeURIComponent(images[0].contents.toString('utf8'))}')`,
-        );
-      } catch {
-        setImage('none');
-      }
+        ),
+      );
     })();
   }, [node, wallpaper, colors]);
 
   useEffect(() => {
     button.current.focus();
   }, [button]);
+
+  const backgroundImage = images[imageIndex]
+    ? `url('data:image/svg+xml;utf8,${encodeURIComponent(images[imageIndex].contents.toString('utf8'))}')`
+    : 'none';
   
   return (
     <div
@@ -79,19 +80,43 @@ export default ({ onClose, wallpaper, colors }) => {
       style={{ backgroundColor: getActiveColorOrFallback(['shade0'], true) }}
       ref={ node }
     >
-      { image ? (
+      { backgroundImage ? (
         <div
           className={ styles.image }
-          style={{ backgroundImage: image }}
+          style={{ backgroundImage }}
         />
       ) : (
         <span style={{ color: getActiveColorOrFallback(['shade2']) }}>loading...</span>
       ) }
-      <Button
-        className={ styles.close }
-        onClick={ onClose }
-        ref={ button }
-      >close</Button>
+      <span className={ styles.options }>
+        { images.length > 1
+            ? (
+                <span
+                  className={ styles.variations }
+                  style={{
+                    backgroundColor: getActiveColorOrFallback(['shade2'], true),
+                    borderColor: getActiveColorOrFallback(['shade4']),
+                  }}
+                >
+                  { images.map((_, i) => (
+                    <Radio
+                      key={ `${wallpaper}-${i}` }
+                      className={ styles.variation }
+                      color={ getActiveColorOrFallback(['shade7']) }
+                      onChange={ () => setImageIndex(i) }
+                      value={ i === imageIndex }
+                      label={ `Variation ${i + 1}` }
+                    />
+                  )) }
+                </span>
+              )
+            : null
+        }
+        <Button
+          onClick={ onClose }
+          ref={ button }
+        >Close</Button>
+      </span>
     </div>
   );
 }

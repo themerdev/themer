@@ -19,8 +19,24 @@
   background-size: cover;
 }
 
-.close {
+.options {
   position: absolute;
   top: var(--size-large-1);
   right: var(--size-large-1);
+  display: flex;
+  align-items: center;
+}
+
+.variations {
+  border-radius: var(--border-radius-size);
+  padding: var(--size-small-4) var(--size-small-1);
+  margin-right: var(--size-regular);
+  border-style: solid;
+  border-width: var(--border-size);
+  display: flex;
+  align-items: center;
+}
+
+.variation:not(:last-child) {
+  margin-right: var(--size-large-1);
 }
