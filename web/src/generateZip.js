@@ -93,6 +93,7 @@ const instructions = (selections, url) => `# Installation
 
 Information on how to install your themer themes can be found in the following locations:
 
+* [themer CLI documentation](https://github.com/mjswensen/themer)
 ${
   Object.entries(selections)
     .filter(([_, selected]) => selected)
@@ -108,10 +109,18 @@ ${
 ${url}
 `;
 
-export default async function generateZip(selections, colors, width, height, url) {
+const colorsForCli = (cliColors, url) => `// This file can be used with the themer CLI, see https://github.com/mjswensen/themer
+
+module.exports = ${JSON.stringify(cliColors, null, 2)};
+
+// Your theme's URL: ${url}
+`;
+
+export default async function generateZip(selections, colors, width, height, url, cliColors) {
   const zip = new JSZip();
   const preparedColors = prepareColors(colors, () => {});
   zip.file('Instructions.md', instructions(selections, url));
+  zip.file('colors.js', colorsForCli(cliColors, url));
   for (const [key, selected] of Object.entries(selections)) {
     if (selected) {
       const files = await Promise.all(templates[key].render(

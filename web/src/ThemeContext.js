@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import qs from 'qs';
-import { get, merge } from 'lodash';
+import { get, merge, mapValues, pick } from 'lodash';
 import Color from 'color';
 import colorSteps from 'color-steps';
 
@@ -243,6 +243,28 @@ export const ThemeProvider = ({ history, children }) => {
     ),
   };
 
+  const cliColorSet = mapValues(preparedColorSet, (colors, variant) => {
+    if ((variant === 'dark' && calculateIntermediaryDarkShades) || (variant === 'light' && calculateIntermediaryLightShades)) {
+      return pick(
+        colors,
+        [
+          'shade0',
+          'shade7',
+          'accent0',
+          'accent1',
+          'accent2',
+          'accent3',
+          'accent4',
+          'accent5',
+          'accent6',
+          'accent7',
+        ],
+      );
+    } else {
+      return colors;
+    }
+  });
+
   const getActiveRawColor = key => get(rawState, ['colors', activeColorSet, key], '');
 
   const setActiveRawColor = (key, value) => mergeState({
@@ -265,6 +287,7 @@ export const ThemeProvider = ({ history, children }) => {
       getActiveColorOrFallback,
       preparedColorSet,
       activePreparedColorSet,
+      cliColorSet,
       setActiveRawColor,
     }}>
       { children }

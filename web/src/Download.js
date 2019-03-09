@@ -34,7 +34,7 @@ export default () => {
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [tmux, setTmux] = useState(false);
 
-  const { getActiveColorOrFallback, preparedColorSet } = useContext(ThemeContext);
+  const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
 
   return (
     <>
@@ -260,6 +260,7 @@ export default () => {
             window.innerWidth * window.devicePixelRatio,
             window.innerHeight * window.devicePixelRatio,
             window.location.href,
+            cliColorSet,
           );
           zip.generateAsync({ type: 'blob' }).then(contents => {
             saveAs(contents, 'themer.zip');
