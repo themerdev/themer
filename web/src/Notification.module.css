@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 var(--size-regular);
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    transform var(--notification-transition-time) var(--notification-transition-function),
+    opacity var(--notification-transition-time) var(--notification-transition-function);
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  padding: var(--size-small-3) var(--size-small-1) var(--size-small-4);
+  border-style: solid;
+  border-width: var(--small-border-size);
+  border-top-left-radius: var(--border-radius-size);
+  border-top-right-radius: var(--border-radius-size);
+  border-color: currentColor;
+  border-bottom: none;
+}
+
+.visible {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.dismiss {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-left: var(--size-small-1);
+  color: var(--dismiss-resting-color);
+  transition: var(--notification-dismiss-transition);
+}
+
+.dismiss:hover {
+  color: var(--dismiss-hover-color);
+}
+
+.dismiss:active {
+  color: var(--dismiss-active-color);
+}

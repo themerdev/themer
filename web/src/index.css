@@ -46,6 +46,9 @@ body,
   --line-height: calc(1 / var(--size-ratio));
 
   --button-transition: background-color 75ms ease;
+  --notification-transition-time: 300ms;
+  --notification-transition-function: ease-in-out;
+  --notification-dismiss-transition: color 75ms ease;
 
   height: 100%;
   font-family: 'Fira Code', monospace;

@@ -10,6 +10,7 @@ import Link from './Link';
 import CopyUrl from './CopyUrl';
 import StarCount from './StarCount';
 import ThemeContext from './ThemeContext';
+import Notification from './Notification';
 
 export default () => {
   const [keyboarding, setKeyboarding] = useState(false);
@@ -98,6 +99,7 @@ export default () => {
       <footer className={ styles.footer } style={{ color: getActiveColorOrFallback(['shade3']) }}>
         themer is free and open source software, made by <Link href="https://mjswensen.com">mjswensen</Link> with <Link href="https://github.com/mjswensen/themer/graphs/contributors">contributors</Link>, and is released under the MIT license
       </footer>
+      <Notification />
     </div>
   );
 }

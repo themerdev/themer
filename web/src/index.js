@@ -12,4 +12,21 @@ ReactDOM.render(
   (<StrictMode><App history={ history } /></StrictMode>),
   document.getElementById('root'),
 );
-serviceWorker.register();
+serviceWorker.register({
+  onUpdate: () => {
+    window.dispatchEvent(
+      new CustomEvent(
+        'notificationmessage',
+        { detail: 'themer has been updated. Reload to use the latest version.' },
+      ),
+    );
+  },
+  onSuccess: () => {
+    window.dispatchEvent(
+      new CustomEvent(
+        'notificationmessage',
+        { detail: 'themer has been cached and is ready for offline use.' },
+      ),
+    );
+  }
+});

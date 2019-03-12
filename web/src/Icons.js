@@ -20,3 +20,9 @@ export const RadioIcon = ({ selected }) => (
     </g>
   </svg>
 );
+
+export const CloseIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3,3 L13,13 M3,13 L13,3" strokeWidth="2" fill="none" fillRule="evenodd" strokeLinecap="square" stroke="currentColor"/>
+  </svg>
+);
