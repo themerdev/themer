@@ -32,13 +32,13 @@ export default () => {
         <span style={{ color: activePreparedColorSet['shade1'], backgroundColor: activePreparedColorSet['shade0'] }} className={ styles.lineNumber }> 4 </span>
         {'\n'}
         <span style={{ color: activePreparedColorSet['shade1'], backgroundColor: activePreparedColorSet['shade0'] }} className={ styles.lineNumber }> 5 </span>
-        <span style={{ color: activePreparedColorSet['shade2'] }}>{'/**\n'}</span>
+        <span style={{ color: activePreparedColorSet['shade3'] }}>{'/**\n'}</span>
         <span style={{ color: activePreparedColorSet['shade1'], backgroundColor: activePreparedColorSet['shade0'] }} className={ styles.lineNumber }> 6 </span>
-        <span style={{ color: activePreparedColorSet['shade2'] }}> * Creates an object composed of the `object` properties `predicate` returns{'\n'}</span>
+        <span style={{ color: activePreparedColorSet['shade3'] }}> * Creates an object composed of the `object` properties `predicate` returns{'\n'}</span>
         <span style={{ color: activePreparedColorSet['shade1'], backgroundColor: activePreparedColorSet['shade0'] }} className={ styles.lineNumber }> 7 </span>
-        <span style={{ color: activePreparedColorSet['shade2'] }}> * truthy for. The predicate is invoked with two arguments: (value, key).{'\n'}</span>
+        <span style={{ color: activePreparedColorSet['shade3'] }}> * truthy for. The predicate is invoked with two arguments: (value, key).{'\n'}</span>
         <span style={{ color: activePreparedColorSet['shade1'], backgroundColor: activePreparedColorSet['shade0'] }} className={ styles.lineNumber }> 8 </span>
-        <span style={{ color: activePreparedColorSet['shade2'] }}> */{'\n'}</span>
+        <span style={{ color: activePreparedColorSet['shade3'] }}> */{'\n'}</span>
         <span style={{ color: activePreparedColorSet['shade1'], backgroundColor: activePreparedColorSet['shade0'] }} className={ styles.lineNumber }> 9 </span>
         <span style={{ color: activePreparedColorSet['accent7'] }}>function </span>
         <span style={{ color: activePreparedColorSet['accent2'] }}>pickBy</span>
