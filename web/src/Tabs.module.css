@@ -10,6 +10,7 @@
   border-top-left-radius: var(--border-radius-size);
   border-top-right-radius: var(--border-radius-size);
   cursor: pointer;
+  margin: 0;
 }
 
 .tab::after {

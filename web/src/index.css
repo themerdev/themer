@@ -10,30 +10,33 @@ body,
   --size-ratio: calc(5 / 7);
   --size-regular: 1rem;
 
-  --size-large-1: calc(var(--size-regular) / var(--size-ratio));
-  --size-large-2: calc(var(--size-large-1) / var(--size-ratio));
-  --size-large-3: calc(var(--size-large-2) / var(--size-ratio));
-  --size-large-4: calc(var(--size-large-3) / var(--size-ratio));
-  --size-large-5: calc(var(--size-large-4) / var(--size-ratio));
-  --size-large-6: calc(var(--size-large-5) / var(--size-ratio));
-  --size-large-7: calc(var(--size-large-6) / var(--size-ratio));
-  --size-large-8: calc(var(--size-large-7) / var(--size-ratio));
-  --size-large-9: calc(var(--size-large-8) / var(--size-ratio));
-  --size-large-10: calc(var(--size-large-9) / var(--size-ratio));
-  --size-large-11: calc(var(--size-large-10) / var(--size-ratio));
-  --size-large-12: calc(var(--size-large-11) / var(--size-ratio));
-  --size-large-13: calc(var(--size-large-12) / var(--size-ratio));
-  --size-large-14: calc(var(--size-large-13) / var(--size-ratio));
-  --size-large-15: calc(var(--size-large-14) / var(--size-ratio));
+  /*
+    Until CSS has support for rounding numbers, these are precalculated as follows:
+    for (let i = 1, ratio = 5/7; i <= 13; i++) { console.log(`--size-large-${i}: ${Math.round(16 / Math.pow(ratio, i))}px`); }
+    for (let i = 1, ratio = 5/7; i <= 8; i++) { console.log(`--size-small-${i}: ${Math.round(16 * Math.pow(ratio, i))}px`); }
+  */
+  --size-large-1: 22px;
+  --size-large-2: 31px;
+  --size-large-3: 44px;
+  --size-large-4: 61px;
+  --size-large-5: 86px;
+  --size-large-6: 120px;
+  --size-large-7: 169px;
+  --size-large-8: 236px;
+  --size-large-9: 331px;
+  --size-large-10: 463px;
+  --size-large-11: 648px;
+  --size-large-12: 907px;
+  --size-large-13: 1270px;
 
-  --size-small-1: calc(var(--size-regular) * var(--size-ratio));
-  --size-small-2: calc(var(--size-small-1) * var(--size-ratio));
-  --size-small-3: calc(var(--size-small-2) * var(--size-ratio));
-  --size-small-4: calc(var(--size-small-3) * var(--size-ratio));
-  --size-small-5: calc(var(--size-small-4) * var(--size-ratio));
-  --size-small-6: calc(var(--size-small-5) * var(--size-ratio));
-  --size-small-7: calc(var(--size-small-6) * var(--size-ratio));
-  --size-small-8: calc(var(--size-small-7) * var(--size-ratio));
+  --size-small-1: 11px;
+  --size-small-2: 8px;
+  --size-small-3: 6px;
+  --size-small-4: 4px;
+  --size-small-5: 3px;
+  --size-small-6: 2px;
+  --size-small-7: 2px;
+  --size-small-8: 1px;
 
   --border-size: var(--size-small-6);
   --small-border-size: var(--size-small-8);
