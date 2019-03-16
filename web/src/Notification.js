@@ -31,6 +31,7 @@ export default () => {
         >
           { message }
           <button
+            aria-label="Dismiss"
             className={ styles.dismiss }
             style={{
               '--dismiss-resting-color': getActiveColorOrFallback(['accent7']),

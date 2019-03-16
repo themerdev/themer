@@ -49,6 +49,7 @@ export default ({ className, style, colorKey, help }) => {
         >
           <DropletIcon />
           <input
+            aria-label={ `${colorKey} color picker` }
             type="color"
             className={ styles.colorInput }
             value={ getActiveColorOrFallback([colorKey], colorKey === 'shade0') }
