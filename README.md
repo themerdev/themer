@@ -29,11 +29,11 @@
   * [Other](#other)
   * [Create your own template](#create-your-own-template)
 * [About](#about)
-* [Themer GUI](#themer-gui)
+* [Themer's Web UI](#themers-web-ui)
 
 ## Installation
 
-_Don't love the command-line? Check out [the GUI](https://github.com/mjswensen/themer-gui)._
+_Don't love the command-line? Check out [the Web UI](https://themer.mjswensen.com/)._
 
 ```sh
 mkdir my-dotfiles && cd my-dotfiles
@@ -280,6 +280,6 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 2. It is more easily extensible with your own color sets and templates.
 3. It integrates better with your dotfiles, especially if you keep them under version control.
 
-## Themer GUI
+## Themer's Web UI
 
-If you'd prefer to develop your themes visually (and with a tight feedback loop), check out [`themer`'s GUI](https://github.com/mjswensen/themer-gui).
+If you'd prefer to develop your themes visually, check out [`themer`'s Web UI](https://themer.mjswensen.com), an offline-ready Progressive Web App.
