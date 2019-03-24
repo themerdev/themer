@@ -102,3 +102,7 @@
   font-size: var(--size-small-1);
   margin-top: var(--size-small-1);
 }
+
+.tip {
+  margin-top: var(--size-large-1);
+}
