@@ -17,16 +17,8 @@ serviceWorker.register({
     window.dispatchEvent(
       new CustomEvent(
         'notificationmessage',
-        { detail: 'themer has been updated. Reload to use the latest version.' },
+        { detail: 'themer has been updated and cached. Reload to use the latest version.' },
       ),
     );
   },
-  onSuccess: () => {
-    window.dispatchEvent(
-      new CustomEvent(
-        'notificationmessage',
-        { detail: 'themer has been cached and is ready for offline use.' },
-      ),
-    );
-  }
 });
