@@ -8,13 +8,14 @@
 }
 
 .label {
+  padding-bottom: calc(var(--size-small-6) + var(--size-small-7));
   margin-right: var(--size-small-2);
 }
 
 .textInputWrapper {
   flex-grow: 1;
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .textInput {
@@ -24,6 +25,7 @@
   border: none;
   border-bottom-width: var(--size-small-6);
   border-bottom-style: solid;
+  border-radius: 0;
   padding: var(--size-small-7) var(--size-small-6);
   background: none;
   height: var(--input-size);
