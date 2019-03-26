@@ -111,7 +111,7 @@ ${url}
 
 const colorsForCli = (cliColors, url) => `// This file can be used with the themer CLI, see https://github.com/mjswensen/themer
 
-module.exports = ${JSON.stringify(cliColors, null, 2)};
+module.exports.colors = ${JSON.stringify(cliColors, null, 2)};
 
 // Your theme's URL: ${url}
 `;
