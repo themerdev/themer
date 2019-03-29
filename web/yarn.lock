@@ -9390,6 +9390,11 @@ themer-colors-lucid@^1.0.3:
   resolved "https://registry.yarnpkg.com/themer-colors-lucid/-/themer-colors-lucid-1.0.3.tgz#94c53bacccd4e12fb23a782ffe87abea31f05451"
   integrity sha512-VyuTWejI7lkLY78EDO6Umkgrki8DumvURdwjXNIfo26XBVlZoZW5ZEONyJiGITJbYfYaIudH53/wBWmEh2sy5g==
 
+themer-colors-mojave@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-mojave/-/themer-colors-mojave-1.0.0.tgz#14583d573c81a2e3095602e07f91e48fce3dbafb"
+  integrity sha512-THDK9blW010lOnveUyq8gdCzj1B5h1RIUJV8M9zA4zo1HqDlZeFHaiyE2/aK6bI5heWAdWtbACVuAkbuut0UaQ==
+
 themer-colors-monkey@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/themer-colors-monkey/-/themer-colors-monkey-2.0.0.tgz#6d0c68ebac04b7b9f0f7cb1fc52ab6e889baa0df"

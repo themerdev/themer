@@ -14,6 +14,7 @@ import { colors as lucidColors } from 'themer-colors-lucid';
 import { colors as solarizedColors } from 'themer-colors-solarized';
 import { colors as githubUniverseColors } from 'themer-colors-github-universe';
 import { colors as novaColors } from 'themer-colors-nova';
+import { colors as mojaveColors } from 'themer-colors-mojave';
 
 const PreBuiltLink = ({ colors, children }) => {
   const { activeColorSet } = useContext(ThemeContext);
@@ -53,6 +54,7 @@ export default () => {
           <li><PreBuiltLink colors={ solarizedColors }>Solarized</PreBuiltLink></li>
           <li><PreBuiltLink colors={ githubUniverseColors }>GitHub Universe</PreBuiltLink></li>
           <li><PreBuiltLink colors={ novaColors }>Nova</PreBuiltLink></li>
+          <li><PreBuiltLink colors={ mojaveColors }>Mojave</PreBuiltLink></li>
         </ul>
       </li>
     </ul>
