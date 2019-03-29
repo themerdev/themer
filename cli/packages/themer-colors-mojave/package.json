@@ -1,0 +1,36 @@
+{
+  "name": "themer-colors-mojave",
+  "version": "1.0.0",
+  "description": "A color set for themer based on macOS Mojave.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "devDependencies": {},
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-mojave#readme",
+  "peerDependencies": {
+    "themer": "^3"
+  },
+  "dependencies": {},
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ]
+}
