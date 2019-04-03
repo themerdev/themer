@@ -17,7 +17,7 @@ serviceWorker.register({
     window.dispatchEvent(
       new CustomEvent(
         'notificationmessage',
-        { detail: 'themer has been updated and cached. Reload to use the latest version.' },
+        { detail: 'themer has been updated and cached. Close all themer tabs and reopen to use the latest version.' },
       ),
     );
   },
