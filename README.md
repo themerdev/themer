@@ -237,6 +237,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 * [themer-slack](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack)
 * [themer-alfred](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-alfred)
+* [themer-brave](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-brave)
 * [themer-chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-chrome)
 * [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
 * [themer-sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sketch-palettes)
