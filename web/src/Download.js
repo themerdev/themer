@@ -30,6 +30,7 @@ export default () => {
   const [wallpaperShirts, setWallpaperShirts] = useState(false);
   const [slack, setSlack] = useState(false);
   const [alfred, setAlfred] = useState(false);
+  const [brave, setBrave] = useState(false);
   const [chrome, setChrome] = useState(false);
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [tmux, setTmux] = useState(false);
@@ -204,6 +205,12 @@ export default () => {
             accentSelected
           />
           <Checkbox
+            value={ brave }
+            onChange={ () => setBrave(!brave) }
+            label="Brave"
+            accentSelected
+          />
+          <Checkbox
             value={ chrome }
             onChange={ () => setChrome(!chrome) }
             label="Chrome"
@@ -252,6 +259,7 @@ export default () => {
               wallpaperShirts,
               slack,
               alfred,
+              brave,
               chrome,
               sketchPalettes,
               tmux,

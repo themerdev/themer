@@ -9355,10 +9355,25 @@ themer-bbedit@^1.0.5:
     lodash "^4.17.4"
     xml "^1.0.1"
 
+themer-brave@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-brave/-/themer-brave-1.0.0.tgz#21affd6c2fff7809e3eb42c7d5bd8d19ec187e38"
+  integrity sha512-QNNkcyvz26AJp7iFZUsWHkJcsqnNueRpI3nYo6v91BGpheEjJ7fbZwEKRv0l3bs3eh5N/FbOTp+BLjC9EmgDLw==
+  dependencies:
+    themer-chrome "^1.1.0"
+
 themer-chrome@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/themer-chrome/-/themer-chrome-1.0.6.tgz#cebacb59d3e420fe3660b0fc631678e4c74fb3f9"
   integrity sha512-tsTbVFPAn8XYWXgf8Jt7cwTLPycP2HSx0AiYxD4MW97Wsg+k8sQswZrXZwl4xBn/fFktULZnY+gvQhi2iJCT6g==
+  dependencies:
+    color "^3.0.0"
+    lodash "^4.17.4"
+
+themer-chrome@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/themer-chrome/-/themer-chrome-1.1.0.tgz#0da1c4983573c0738187d4f8f650457708459e67"
+  integrity sha512-CjSZ2vwynrRxyInOORiomvcCHcd3GCh9/aaZi0tEkihz0mWe1WKzwPdDRRa8Ui1RuNhU3RtL5pxWXEbO7oCXBg==
   dependencies:
     color "^3.0.0"
     lodash "^4.17.4"

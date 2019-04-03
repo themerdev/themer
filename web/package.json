@@ -20,6 +20,7 @@
     "themer-atom-syntax": "^2.0.2",
     "themer-atom-ui": "^1.0.5",
     "themer-bbedit": "^1.0.5",
+    "themer-brave": "^1.0.0",
     "themer-chrome": "^1.0.6",
     "themer-cmd": "^1.0.6",
     "themer-colors-default": "^1.0.10",

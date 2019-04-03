@@ -27,12 +27,14 @@ import { render as renderWallpaperShirts } from 'themer-wallpaper-shirts';
 import { render as renderWallpaperTriangles } from 'themer-wallpaper-triangles';
 import { render as renderWallpaperTrianglify } from 'themer-wallpaper-trianglify';
 import { render as renderXcode } from 'themer-xcode';
+import { render as renderBrave } from 'themer-brave';
 
 const templates = {
   alfred: { folderName: 'Alfred', render: renderAlfred },
   atomSyntax: { folderName: 'Atom Syntax', render: renderAtomSyntax },
   atomUi: { folderName: 'Atom UI', render: renderAtomUi },
   bbedit: { folderName: 'BBEdit', render: renderBbedit },
+  brave: { folderName: 'Brave', render: renderBrave },
   chrome: { folderName: 'Chrome', render: renderChrome },
   cmd: { folderName: 'CMD', render: renderCmd },
   conemu: { folderName: 'ConEmu', render: renderConemu },
@@ -70,6 +72,7 @@ const installationLocations = {
   atomSyntax: { name: 'Atom syntax', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-syntax#output' },
   atomUi: { name: 'Atom UI', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-ui#output' },
   bbedit: { name: 'BBEdit', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-bbedit#output' },
+  brave: { name: 'Brave', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-brave#output' },
   chrome: { name: 'Chrome', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-chrome#output' },
   cmd: { name: 'CMD.exe', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-cmd#output' },
   conemu: { name: 'ConEmu', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-conemu#output' },
