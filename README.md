@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://themer.mjswensen.com">
+  <a href="https://themer.dev">
     <img src="https://cdn.jsdelivr.net/gh/mjswensen/themer@4e78b9a50a00bab7605b4996e428b9a6c4a000b0/assets/icon.png" width="384" height="384" alt="Themer logo" />
   </a>
 </p>
@@ -33,7 +33,7 @@
 
 ## Installation
 
-_Don't love the command-line? Check out [the Web UI](https://themer.mjswensen.com/)._
+_Don't love the command-line? Check out [the Web UI](https://themer.dev)._
 
 ```sh
 mkdir my-dotfiles && cd my-dotfiles
@@ -285,4 +285,4 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 
 ## Themer's Web UI
 
-If you'd prefer to develop your themes visually, check out [`themer`'s Web UI](https://themer.mjswensen.com), an offline-ready Progressive Web App.
+If you'd prefer to develop your themes visually, check out [`themer`'s Web UI](https://themer.dev), an offline-ready Progressive Web App.
