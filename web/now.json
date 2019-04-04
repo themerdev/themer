@@ -1,7 +1,7 @@
 {
   "name": "themer",
   "version": 2,
-  "alias": "themer.mjswensen.com",
+  "alias": "themer.dev",
   "builds": [
     { "src": "build/**", "use": "@now/static" }
   ],
