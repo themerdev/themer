@@ -3,7 +3,8 @@
   "version": 2,
   "alias": "themer.dev",
   "builds": [
-    { "src": "build/**", "use": "@now/static" }
+    { "src": "build/**", "use": "@now/static" },
+    { "src": "build/.well-known/**", "use": "@now/static" }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "build/$1" }
