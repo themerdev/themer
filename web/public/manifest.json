@@ -20,8 +20,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#FFFCFF",
-  "background_color": "#282629",
+  "theme_color": "#282629",
+  "background_color": "#FFFCFF",
   "categories": [
     "personalization",
     "productivity",
