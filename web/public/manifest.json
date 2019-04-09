@@ -20,6 +20,12 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#FF4050",
-  "background_color": "#282629"
+  "theme_color": "#FFFCFF",
+  "background_color": "#282629",
+  "categories": [
+    "personalization",
+    "productivity",
+    "utilities",
+    "developer tools"
+  ]
 }
