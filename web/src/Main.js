@@ -35,12 +35,16 @@ export default () => {
     }
   });
   const { getActiveColorOrFallback } = useContext(ThemeContext);
+  const backgroundColor = getActiveColorOrFallback(['shade0'], true);
+  useEffect(() => {
+    window.document.body.style.backgroundColor = backgroundColor;
+  }, [ backgroundColor ]);
   return (
     <div
       className={ `${styles.app} ${keyboarding ? styles.keyboarding : ''}` }
       style={{
-        backgroundColor: getActiveColorOrFallback(['shade0'], true),
-        '--selection-foreground-color': getActiveColorOrFallback(['shade0'], true),
+        backgroundColor,
+        '--selection-foreground-color': backgroundColor,
         '--selection-background-color': getActiveColorOrFallback(['accent5']),
         '--focus-outline-color': getActiveColorOrFallback(['accent6']),
       }}
