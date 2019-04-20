@@ -73,7 +73,7 @@ export default () => {
             `,
           }}
         />
-        <p style={{ color: getActiveColorOrFallback(['shade6'])}}>themer takes a set of colors and generates themes for your apps (editors, terminals, wallpapers, and more).</p>
+        <p style={{ color: getActiveColorOrFallback(['shade6'])}}>themer takes a set of colors and generates themes for your development environment (editors, terminals, wallpapers, and more).</p>
         <h2 className={ styles.h2 } style={{ color: getActiveColorOrFallback(['shade7']) }}>1. Define colors</h2>
         <p className={ styles.help } style={{ color: getActiveColorOrFallback(['shade6']) }}>Input your colors using any CSS format (keyword, hsl, rgb, etc.).</p>
         <ColorSetInputs />
