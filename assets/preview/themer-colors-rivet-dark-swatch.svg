@@ -1,0 +1,12 @@
+
+    <svg width="480px" height="160px" viewBox="0 0 480 160" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="shade-scale">
+          <stop stop-color="#faf9fc" offset="0%"></stop><stop stop-color="#d8d6db" offset="16.666666666666668%"></stop><stop stop-color="#b5b2ba" offset="33.333333333333336%"></stop><stop stop-color="#938f99" offset="50%"></stop><stop stop-color="#716c79" offset="66.66666666666667%"></stop><stop stop-color="#4f4958" offset="83.33333333333334%"></stop><stop stop-color="#2c2537" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <rect fill="#0a0216" x="0" y="0" width="480" height="160"></rect>
+      <circle fill="#f54456" cx="51" cy="49" r="21"></circle><circle fill="#fc7022" cx="105" cy="49" r="21"></circle><circle fill="#d6cd00" cx="159" cy="49" r="21"></circle><circle fill="#91e827" cx="213" cy="49" r="21"></circle><circle fill="#00c580" cx="267" cy="49" r="21"></circle><circle fill="#305dfb" cx="321" cy="49" r="21"></circle><circle fill="#7635de" cx="375" cy="49" r="21"></circle><circle fill="#f98fd1" cx="429" cy="49" r="21"></circle>
+      <rect fill="url(#shade-scale)" x="30" y="86" width="420" height="42" rx="3" ry="3"></rect>
+    </svg>
+  
