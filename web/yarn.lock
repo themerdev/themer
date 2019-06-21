@@ -9438,6 +9438,11 @@ themer-colors-polar-ice@^2.0.0:
   resolved "https://registry.yarnpkg.com/themer-colors-polar-ice/-/themer-colors-polar-ice-2.0.0.tgz#f55cd20c0f308d165391c615cfe9db41b8e80276"
   integrity sha512-mVvvIPuMaSIuoMPo00SxB7SO7K2kKz12cmCJ493xQhdPLyACxkgnp5IGo01Y5sHIFZ0sBgDi3c+Op5yVtaCF1Q==
 
+themer-colors-rivet@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-rivet/-/themer-colors-rivet-1.0.0.tgz#49fc7f073ef6cdb1e50ba752d5b7e7468ef97ee9"
+  integrity sha512-ckQIOnyO68HzGjiJs6huXHJryXeMI6Q2QaPk9YRfkegtVpcb0kBhlWq0NzqJPMBHdieS2f+TtMSWdUBMMMyIsA==
+
 themer-colors-solarized@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/themer-colors-solarized/-/themer-colors-solarized-1.0.3.tgz#1de4f26c96b8273bed5489026c4502a2abe048e9"
