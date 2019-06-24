@@ -15,6 +15,7 @@
 * [Installation](#installation)
 * [Usage](#usage)
   * [Example workflow](#example-workflow)
+  * [Example usage with `npx`](#example-usage-with-npx)
 * [Themer color sets](#themer-color-sets)
   * [Original color sets](#original-color-sets)
   * [Ports from third-party themes](#ports-from-third-party-themes)
@@ -41,6 +42,8 @@ npm install themer
 ```
 
 If you do not keep your dotfiles under version control, you can simply install themer globally with `npm -g install themer`.
+
+`themer` can also be used without installing, via `npx`—see [example below](#example-usage-with-npx).
 
 ## Usage
 
@@ -84,6 +87,21 @@ npm run build
 Now check the `gen/` folder for your generated themes. Here's the result:
 
 ![example usage result](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/assets/example-usage.png)
+
+### Example usage with `npx`
+
+```sh
+npx \
+  -p themer \
+  -p themer-colors-default \
+  -p themer-vim \
+  -p themer-wallpaper-block-wave \
+  themer \
+  -c themer-colors-default \
+  -t themer-vim \
+  -t themer-wallpaper-block-wave \
+  -o output
+```
 
 ## Themer color sets
 
