@@ -290,6 +290,8 @@ module.exports.render = function(colors, options) {
 
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
+Here's an [example template render function](https://github.com/mjswensen/themer/blob/master/cli/packages/themer-slack/lib/index.js) that generates a Slack sidebar theme from a `themer` color set.
+
 Once you've developed your template, consider publishing it on npm (with repository name starting with `themer-`) so that others can use it!
 
 ## About
