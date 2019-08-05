@@ -34,6 +34,7 @@ export default () => {
   const [chrome, setChrome] = useState(false);
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [tmux, setTmux] = useState(false);
+  const [prism, setPrism] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
 
@@ -228,6 +229,12 @@ export default () => {
             label="tmux"
             accentSelected
           />
+          <Checkbox
+            value={ prism }
+            onChange={ () => setPrism(!prism) }
+            label="Prism"
+            accentSelected
+          />
         </fieldset>
       </div>
       <Button
@@ -263,6 +270,7 @@ export default () => {
               chrome,
               sketchPalettes,
               tmux,
+              prism,
             },
             preparedColorSet,
             window.innerWidth * window.devicePixelRatio,

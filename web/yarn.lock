@@ -9484,6 +9484,11 @@ themer-kitty@^1.0.1:
   resolved "https://registry.yarnpkg.com/themer-kitty/-/themer-kitty-1.0.1.tgz#d0d6c2cd0ee89ce54ce3600aae7e2ae8de140f11"
   integrity sha512-BPobvzCrLOZaGsrWpV10nSWHPzCtyu+HnaRX9QjUiACL0JHGsYFD2e9XvLiCj8RYTk+Nq/cQ1LUcWZs82fuoMQ==
 
+themer-prism@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-prism/-/themer-prism-1.0.0.tgz#b79f2f60d8193a7d50d171e7794fbaa3cdce17be"
+  integrity sha512-+X41OJegNwJzG7QwMU65KypwkG+KEhlRzRcCg4Knx0zz1fy6wKTmm28Pisw8pNu8k1I9HF9/0DCAn7z++hKK7g==
+
 themer-sketch-palettes@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/themer-sketch-palettes/-/themer-sketch-palettes-1.0.3.tgz#5b52d0d4ab919c88b9bf1ceffa96f36c29620350"

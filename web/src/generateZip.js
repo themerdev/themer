@@ -28,6 +28,7 @@ import { render as renderWallpaperTriangles } from 'themer-wallpaper-triangles';
 import { render as renderWallpaperTrianglify } from 'themer-wallpaper-trianglify';
 import { render as renderXcode } from 'themer-xcode';
 import { render as renderBrave } from 'themer-brave';
+import { render as renderPrism } from 'themer-prism';
 
 const templates = {
   alfred: { folderName: 'Alfred', render: renderAlfred },
@@ -43,6 +44,7 @@ const templates = {
   iterm: { folderName: 'iTerm', render: renderIterm },
   jetbrains: { folderName: 'JetBrains', render: renderJetbrains },
   kitty: { folderName: 'kitty', render: renderKitty },
+  prism: { folderName: 'prism', render: renderPrism },
   sketchPalettes: { folderName: 'Sketch', render: renderSketchPalettes },
   slack: { folderName: 'Slack sidebar', render: renderSlack },
   sublimeText: { folderName: 'Sublime Text', render: renderSublimeText },
@@ -81,6 +83,7 @@ const installationLocations = {
   iterm: { name: 'iTerm', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-iterm#output' },
   jetbrains: { name: 'JetBrains', instructionsUrl: 'https://github.com/tomselvi/themer-jetbrains#output' },
   kitty: { name: 'kitty', instructionsUrl: 'https://github.com/0x52a1/themer-kitty#output' },
+  prism: { name: 'prism', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-prism#output' },
   sketchPalettes: { name: 'Sketch palettes', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sketch-palettes#output' },
   slack: { name: 'Slack sidebar', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack#output' },
   sublimeText: { name: 'Sublime Text', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sublime-text#output' },
