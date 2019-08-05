@@ -1,0 +1,35 @@
+{
+  "name": "themer-prism",
+  "version": "1.0.0",
+  "description": "A PrismJS theme generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "author": "Divyanshu Maithani <div.blackcat@gmail.com> (https://github.com/divyanshu013)",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "themer": "^2||^3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mjswensen/themer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-prism#readme",
+  "keywords": [
+    "themer",
+    "prism",
+    "theme"
+  ]
+}
