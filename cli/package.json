@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
-    "jest": "^23.5.0"
+    "jest": "^24.9.0"
   }
 }
