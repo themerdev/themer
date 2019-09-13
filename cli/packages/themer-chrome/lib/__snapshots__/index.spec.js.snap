@@ -7,54 +7,44 @@ Object {
   "theme": Object {
     "colors": Object {
       "bookmark_text": Array [
-        224,
-        220,
-        224,
+        255,
+        252,
+        255,
       ],
       "frame": Array [
         40,
         38,
         41,
       ],
-      "frame_inactive": Array [
+      "ntp_background": Array [
         71,
         66,
         71,
       ],
-      "frame_incognito": Array [
-        132,
-        126,
-        133,
-      ],
-      "frame_incognito_inactive": Array [
-        162,
-        157,
-        163,
-      ],
-      "ntp_background": Array [
-        40,
-        38,
-        41,
-      ],
-      "ntp_section": Array [
-        101,
-        96,
-        102,
-      ],
-      "ntp_section_text": Array [
+      "ntp_text": Array [
         255,
         252,
         255,
       ],
-      "ntp_text": Array [
-        224,
-        220,
-        224,
-      ],
       "tab_background_text": Array [
-        193,
-        188,
-        194,
+        255,
+        252,
+        255,
+      ],
+      "tab_background_text_inactive": Array [
+        255,
+        252,
+        255,
+      ],
+      "tab_background_text_incognito": Array [
+        255,
+        252,
+        255,
+      ],
+      "tab_background_text_incognito_inactive": Array [
+        255,
+        252,
+        255,
       ],
       "tab_text": Array [
         255,
@@ -65,6 +55,28 @@ Object {
         71,
         66,
         71,
+      ],
+    },
+    "tints": Object {
+      "buttons": Array [
+        0.5697167755991286,
+        0.5,
+        0.5,
+      ],
+      "frame_inactive": Array [
+        -1,
+        -1,
+        -1,
+      ],
+      "frame_incognito": Array [
+        0.7743589743589742,
+        1,
+        0.55,
+      ],
+      "frame_incognito_inactive": Array [
+        0.7743589743589742,
+        1,
+        0.55,
       ],
     },
   },
@@ -78,54 +90,44 @@ Object {
   "theme": Object {
     "colors": Object {
       "bookmark_text": Array [
-        71,
-        66,
-        71,
+        40,
+        38,
+        41,
       ],
       "frame": Array [
         224,
         220,
         224,
       ],
-      "frame_inactive": Array [
-        255,
-        252,
-        255,
-      ],
-      "frame_incognito": Array [
-        132,
-        126,
-        133,
-      ],
-      "frame_incognito_inactive": Array [
-        162,
-        157,
-        163,
-      ],
       "ntp_background": Array [
         255,
         252,
         255,
       ],
-      "ntp_section": Array [
-        193,
-        188,
-        194,
-      ],
-      "ntp_section_text": Array [
+      "ntp_text": Array [
         40,
         38,
         41,
       ],
-      "ntp_text": Array [
-        71,
-        66,
-        71,
-      ],
       "tab_background_text": Array [
-        101,
-        96,
-        102,
+        40,
+        38,
+        41,
+      ],
+      "tab_background_text_inactive": Array [
+        40,
+        38,
+        41,
+      ],
+      "tab_background_text_incognito": Array [
+        40,
+        38,
+        41,
+      ],
+      "tab_background_text_incognito_inactive": Array [
+        40,
+        38,
+        41,
       ],
       "tab_text": Array [
         40,
@@ -136,6 +138,28 @@ Object {
         255,
         252,
         255,
+      ],
+    },
+    "tints": Object {
+      "buttons": Array [
+        0.5692488262910799,
+        0.5,
+        0.5,
+      ],
+      "frame_inactive": Array [
+        -1,
+        -1,
+        -1,
+      ],
+      "frame_incognito": Array [
+        0.7745803357314148,
+        1,
+        0.45,
+      ],
+      "frame_incognito_inactive": Array [
+        0.7745803357314148,
+        1,
+        0.45,
       ],
     },
   },
