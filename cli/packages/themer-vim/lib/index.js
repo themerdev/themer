@@ -76,8 +76,8 @@ const render = (colors) => {
   exec "hi Constant ctermfg=".s:ctermaccent3
   exec "hi Character guifg=".s:guiaccent4
   exec "hi Character ctermfg=".s:ctermaccent4
-  exec "hi Identifier guifg=".s:guiaccent2." gui=none cterm=none"
-  exec "hi Identifier ctermfg=".s:ctermaccent2." cterm=none cterm=none"
+  exec "hi Identifier guifg=".s:guiaccent2." gui=none"
+  exec "hi Identifier ctermfg=".s:ctermaccent2." cterm=none"
   exec "hi Statement guifg=".s:guiaccent5
   exec "hi Statement ctermfg=".s:ctermaccent5
   exec "hi PreProc guifg=".s:guiaccent6
@@ -139,7 +139,7 @@ const render = (colors) => {
   exec "hi Cursor ctermfg=".s:ctermshade0
   exec "hi CursorColumn guibg=".s:guishade1
   exec "hi CursorColumn ctermbg=".s:ctermshade1
-  exec "hi CursorLine guibg=".s:guishade1." cterm=none"
+  exec "hi CursorLine guibg=".s:guishade1
   exec "hi CursorLine ctermbg=".s:ctermshade1." cterm=none"
   exec "hi Directory guifg=".s:guiaccent5
   exec "hi Directory ctermfg=".s:ctermaccent5
@@ -195,8 +195,8 @@ const render = (colors) => {
   exec "hi SpellLocal ctermfg=".s:ctermaccent4
   exec "hi SpellRare guifg=".s:guiaccent1
   exec "hi SpellRare ctermfg=".s:ctermaccent1
-  exec "hi StatusLine guifg=".s:guishade4." guibg=".s:guishade1." gui=none cterm=none"
-  exec "hi StatusLine ctermfg=".s:ctermshade4." ctermbg=".s:ctermshade1." cterm=none cterm=none"
+  exec "hi StatusLine guifg=".s:guishade4." guibg=".s:guishade1." gui=none"
+  exec "hi StatusLine ctermfg=".s:ctermshade4." ctermbg=".s:ctermshade1." cterm=none"
   exec "hi TabLine guifg=".s:guishade5." guibg=".s:guishade1
   exec "hi TabLine ctermfg=".s:ctermshade5." ctermbg=".s:ctermshade1
   exec "hi TabLineFill guibg=".s:guishade1
