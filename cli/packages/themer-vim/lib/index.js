@@ -190,7 +190,7 @@ const render = (colors) => {
   exec "hi SpellBad guifg=".s:guiaccent0
   exec "hi SpellBad ctermfg=".s:ctermaccent0." ctermbg=NONE cterm=undercurl"
   exec "hi SpellCap guifg=".s:guiaccent2
-  exec "hi SpellCap ctermfg=".s:ctermaccent2
+  exec "hi SpellCap ctermfg=".s:ctermaccent2." ctermbg=NONE cterm=undercurl"
   exec "hi SpellLocal guifg=".s:guiaccent4
   exec "hi SpellLocal ctermfg=".s:ctermaccent4
   exec "hi SpellRare guifg=".s:guiaccent1
