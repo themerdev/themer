@@ -188,7 +188,7 @@ const render = (colors) => {
   exec "hi SpecialKey guifg=".s:guiaccent7." guibg=".s:guishade0
   exec "hi SpecialKey ctermfg=".s:ctermaccent7." ctermbg=".s:ctermshade0
   exec "hi SpellBad guifg=".s:guiaccent0
-  exec "hi SpellBad ctermfg=".s:ctermaccent0
+  exec "hi SpellBad ctermfg=".s:ctermaccent0." ctermbg=NONE cterm=undercurl"
   exec "hi SpellCap guifg=".s:guiaccent2
   exec "hi SpellCap ctermfg=".s:ctermaccent2
   exec "hi SpellLocal guifg=".s:guiaccent4
