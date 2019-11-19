@@ -2,7 +2,33 @@ const convert = require('color-convert');
 
 const render = (colors) => {
 
-  const gtermToCterm = hexVal => convert.hex.ansi256(hexVal);
+  // HACK `color-convert`'s conversion to ANSI currently isn't that accurate for
+  // grays
+  const ansi256Colors = [];
+
+  for (let color = 0; color < 255; ++color) {
+    const hexVal = convert.ansi256.hex(color);
+    ansi256Colors.push(hexVal);
+  }
+
+  ansi256Colors.closest = function(hexVal) {
+    const [r, g, b] = convert.hex.rgb(hexVal);
+    let minDistance = Infinity;
+    let index; // NOTE equals ansi code
+    for (let i = 0; i < this.length; ++i) {
+      const [otherR, otherG, otherB] = convert.hex.rgb(this[i]);
+      const distance = (r - otherR) ** 2
+        + (g - otherG) ** 2
+        + (b - otherB) ** 2;
+      if (distance < minDistance) {
+        minDistance = distance;
+        index = i;
+      }
+    }
+    return index;
+  };
+
+  const gtermToCterm = hexVal => ansi256Colors.closest(hexVal);
 
   const colorVars = colorSet => `
   let s:guishade0 = "${colorSet.shade0}"
