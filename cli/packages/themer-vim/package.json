@@ -26,7 +26,9 @@
     "url": "https://github.com/mjswensen/themer/issues"
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim#readme",
-  "dependencies": {},
+  "dependencies": {
+    "color-convert": "^2.0.1"
+  },
   "keywords": [
     "themer",
     "vim",
