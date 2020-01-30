@@ -46,7 +46,7 @@ const renderPackageJsonFile = colorSets =>
           contributes: {
             themes: colorSets.map(colorSet => ({
               label: `Themer ${getHumanTheme(colorSet.theme)}`,
-              uiTheme: `vs-${colorSet.theme}`,
+              uiTheme: colorSet.theme === 'dark' ? 'vs-dark' : 'vs',
               path: path.join(
                 ".",
                 themesDirectory,

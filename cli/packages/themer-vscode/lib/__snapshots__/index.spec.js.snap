@@ -15,7 +15,7 @@ Object {
       Object {
         "label": "Themer Light",
         "path": "themes/themer-light-color-theme.json",
-        "uiTheme": "vs-light",
+        "uiTheme": "vs",
       },
     ],
   },
