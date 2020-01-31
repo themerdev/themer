@@ -9548,9 +9548,9 @@ themer-vim@^3.0.2:
     color-convert "^2.0.1"
 
 themer-vscode@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/themer-vscode/-/themer-vscode-2.1.1.tgz#698cf825a28aa1d28ec01d36e1c5cccaa991e1d0"
-  integrity sha512-RRdOwea3YYwZwBGmQTlxruHq1bbB+SkhCm9r8uahvLkaI8p92wy8vDfTZDwtG8qVyGsTbg/S//zMMoqCUc3aMA==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/themer-vscode/-/themer-vscode-2.1.2.tgz#6324ca10f655e4e9e26e9f9abe5f7a5a24fabb06"
+  integrity sha512-Yb6Fagl1x9Im+JmnqW7By6xA1ILdWZ4YIfPmZndLxJyR91JEdLMWAT/3/A/DXRvDqpMfMz81D00pi47vtqgMAA==
 
 themer-wallpaper-block-wave@^3.0.3:
   version "3.0.3"
