@@ -1,4 +1,5 @@
 import React, { useRef, useContext } from 'react';
+import numeral from 'numeral';
 import { DropletIcon } from './Icons';
 import styles from './ColorInput.module.css';
 import getBestForeground from './getBestForeground';
@@ -11,9 +12,17 @@ export default ({ className, style, colorKey, help }) => {
     getActiveColorOrFallback,
     getActiveRawColor,
     setActiveRawColor,
+    getActiveContrastFromBackground,
   } = useContext(ThemeContext);
+  const contrast = colorKey === 'shade0'
+    ? null
+    : numeral(getActiveContrastFromBackground(colorKey)).format('0.00');
   return (
-    <div className={ [styles.outerWrapper, className].join(' ') } style={ style }>
+    <div
+      className={ [styles.outerWrapper, className].join(' ') }
+      style={ style }
+      title={contrast && `Contrast ratio: ${contrast}`}
+    >
       <div className={ styles.inputsWrapper }>
         <label className={ styles.textInputWrapper } style={{ color: getActiveColorOrFallback(['shade7']) }}>
           <span className={ styles.label }>{ colorKey }:</span>

@@ -171,6 +171,12 @@ export const ThemeProvider = ({ history, children }) => {
   const getActiveColorOrFallback = (keys, background) =>
     getColorOrFallback(activeColorSet, keys, background);
 
+  const getActiveContrastFromBackground = (key) => {
+    const color = Color(getActiveColorOrFallback([key]));
+    const bg = Color(getActiveColorOrFallback(['shade0'], true));
+    return color.contrast(bg);
+  }
+
   const preparedFullColorSet = {
     dark: {
       shade0: getColorOrFallback('dark', ['shade0'], true),
@@ -289,6 +295,8 @@ export const ThemeProvider = ({ history, children }) => {
       activePreparedColorSet,
       cliColorSet,
       setActiveRawColor,
+
+      getActiveContrastFromBackground,
     }}>
       { children }
     </ThemeContext.Provider>
