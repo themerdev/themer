@@ -96,6 +96,7 @@ export default () => {
             <span style={{ color: getActiveColorOrFallback(['accent1']) }}>Pro tip:</span>
             {' '}
             The current URL uniquely identifies your current theme. Bookmark it, email it, or share it however you like.
+            {' '}
             <CopyUrl className={ styles.copyUrl }/>
           </p>
         </div>
