@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# themer [![Travis](https://img.shields.io/travis/mjswensen/themer/master.svg)](https://travis-ci.org/mjswensen/themer) [![Coveralls github](https://img.shields.io/coveralls/github/mjswensen/themer/master.svg)](https://coveralls.io/github/mjswensen/themer) [![npm](https://img.shields.io/npm/dt/themer.svg)](https://github.com/mjswensen/themer#installation)
+# themer [![npm](https://img.shields.io/npm/dt/themer.svg)](https://github.com/mjswensen/themer#installation)
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 
