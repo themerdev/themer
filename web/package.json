@@ -13,7 +13,7 @@
     "qs": "^6.5.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
+    "react-scripts": "3.3.1",
     "reset.css": "^2.0.2",
     "themer": "^3.1.6",
     "themer-alfred": "^1.0.9",
