@@ -1,0 +1,34 @@
+{
+  "name": "themer-colors-right-in-the-teals",
+  "version": "1.0.0",
+  "description": "A themer color set based on shades of teal.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.11"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "repository": {
+    "url": "git+ssh://git@github.com/mjswensen/themer.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-right-in-the-teals#readme",
+  "peerDependencies": {
+    "themer": "^3"
+  },
+  "keywords": [
+    "themer",
+    "colors",
+    "colorset",
+    "theme"
+  ]
+}
