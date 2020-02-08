@@ -16,6 +16,7 @@ import { colors as githubUniverseColors } from 'themer-colors-github-universe';
 import { colors as novaColors } from 'themer-colors-nova';
 import { colors as mojaveColors } from 'themer-colors-mojave';
 import { colors as rivetColors } from 'themer-colors-rivet';
+import { colors as rightInTheTealsColors} from 'themer-colors-right-in-the-teals';
 
 const PreBuiltLink = ({ colors, children }) => {
   const { activeColorSet } = useContext(ThemeContext);
@@ -44,6 +45,7 @@ export default () => {
           <li><PreBuiltLink colors={ polarIceColors }>Polar Ice</PreBuiltLink></li>
           <li><PreBuiltLink colors={ fingerPaintColors }>Finger Paint</PreBuiltLink></li>
           <li><PreBuiltLink colors={ monkeyColors }>Monkey</PreBuiltLink></li>
+          <li><PreBuiltLink colors={ rightInTheTealsColors }>Right in the Teals</PreBuiltLink></li>
         </ul>
       </li>
       <li>
