@@ -1,6 +1,10 @@
 # themer-wallpaper-diamonds
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer).
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using the [themer-colors-finger-paint](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-finger-paint) color set:
+
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@6c6fa108a6b0a4ddfc577c097f17ff385e9325f5/cli/packages/themer-wallpaper-diamonds/assets/desktop-dark.svg)
+
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@6c6fa108a6b0a4ddfc577c097f17ff385e9325f5/cli/packages/themer-wallpaper-diamonds/assets/desktop-light.svg)
 
 ## Installation & usage
 
