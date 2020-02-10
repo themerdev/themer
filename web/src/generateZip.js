@@ -22,6 +22,7 @@ import { render as renderVim } from 'themer-vim';
 import { render as renderVimLightline } from 'themer-vim-lightline';
 import { render as renderVscode } from 'themer-vscode';
 import { render as renderWallpaperBlockWave } from 'themer-wallpaper-block-wave';
+import { render as renderWallpaperDiamonds } from 'themer-wallpaper-diamonds';
 import { render as renderWallpaperOctagon } from 'themer-wallpaper-octagon';
 import { render as renderWallpaperShirts } from 'themer-wallpaper-shirts';
 import { render as renderWallpaperTriangles } from 'themer-wallpaper-triangles';
@@ -54,6 +55,7 @@ const templates = {
   vimLightline: { folderName: 'Vim lightline', render: renderVimLightline },
   vscode: { folderName: 'VS Code', render: renderVscode },
   wallpaperBlockWave: { folderName: 'Block Wave', render: renderWallpaperBlockWave },
+  wallpaperDiamonds: { folderName: 'Diamonds', render: renderWallpaperDiamonds },
   wallpaperOctagon: { folderName: 'Octagon', render: renderWallpaperOctagon },
   wallpaperShirts: { folderName: 'Shirts', render: renderWallpaperShirts },
   wallpaperTriangles: { folderName: 'Triangles', render: renderWallpaperTriangles },
@@ -63,6 +65,7 @@ const templates = {
 
 const resolutionOptions = {
   wallpaperBlockWave: 'themer-wallpaper-block-wave-size',
+  wallpaperDiamonds: 'themer-wallpaper-diamonds-size',
   wallpaperOctagon: 'themer-wallpaper-octagon-size',
   wallpaperShirts: 'themer-wallpaper-shirts-size',
   wallpaperTriangles: 'themer-wallpaper-triangles-size',

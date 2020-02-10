@@ -5,6 +5,7 @@ import styles from './WallpaperModal.module.css';
 import ThemeContext from './ThemeContext';
 
 import { render as blockWaveRender } from 'themer-wallpaper-block-wave';
+import { render as diamondsRender } from 'themer-wallpaper-diamonds';
 import { render as octagonRender } from 'themer-wallpaper-octagon';
 import { render as shirtsRender } from 'themer-wallpaper-shirts';
 import { render as trianglesRender } from 'themer-wallpaper-triangles';
@@ -15,6 +16,8 @@ const getImagePromises = (pkg, colors, width, height) => {
   switch (pkg) {
     case 'themer-wallpaper-block-wave':
       return blockWaveRender(colors, options);
+    case 'themer-wallpaper-diamonds':
+      return diamondsRender(colors, options);
     case 'themer-wallpaper-octagon':
       return octagonRender(colors, options);
     case 'themer-wallpaper-shirts':

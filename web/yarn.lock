@@ -9873,6 +9873,13 @@ themer-wallpaper-block-wave@^3.0.3:
   dependencies:
     themer-utils "^1.1.0"
 
+themer-wallpaper-diamonds@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-wallpaper-diamonds/-/themer-wallpaper-diamonds-1.0.0.tgz#b180f473807a6a1ecc06610a8b34252165a272fa"
+  integrity sha512-oahI+oDwL/arllXtP8rc/KBmTx+pxNjzugPZQQRW4IgFjxZ8cNTB2r+JTbSndqDMgQL2GsebhUbFAN+mgz3vLA==
+  dependencies:
+    themer-utils "^1.0.0"
+
 themer-wallpaper-octagon@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/themer-wallpaper-octagon/-/themer-wallpaper-octagon-3.0.3.tgz#8fa0060b4b89f148fe01540715d86ca1f0277740"

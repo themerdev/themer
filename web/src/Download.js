@@ -24,6 +24,7 @@ export default () => {
   const [bbedit, setBbedit] = useState(false);
   const [jetbrains, setJetbrains] = useState(false);
   const [wallpaperBlockWave, setWallpaperBlockWave] = useState(false);
+  const [wallpaperDiamonds, setWallpaperDiamonds] = useState(false);
   const [wallpaperOctagon, setWallpaperOctagon] = useState(false);
   const [wallpaperTriangles, setWallpaperTriangles] = useState(false);
   const [wallpaperTrianglify, setWallpaperTrianglify] = useState(false);
@@ -152,6 +153,12 @@ export default () => {
             accentSelected
           />
           <Checkbox
+            value={ wallpaperDiamonds }
+            onChange={ () => setWallpaperDiamonds(!wallpaperDiamonds) }
+            label="“Diamonds”"
+            accentSelected
+          />
+          <Checkbox
             value={ wallpaperOctagon }
             onChange={ () => setWallpaperOctagon(!wallpaperOctagon) }
             label="“Octagon”"
@@ -260,6 +267,7 @@ export default () => {
               bbedit,
               jetbrains,
               wallpaperBlockWave,
+              wallpaperDiamonds,
               wallpaperOctagon,
               wallpaperTriangles,
               wallpaperTrianglify,
