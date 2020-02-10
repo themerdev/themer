@@ -128,7 +128,7 @@ module.exports.colors = ${JSON.stringify(cliColors, null, 2)};
 export default async function generateZip(selections, colors, width, height, url, cliColors) {
   const zip = new JSZip();
   const preparedColors = prepareColors(colors, () => {});
-  zip.file('Instructions.md', instructions(selections, url));
+  zip.file('README.md', instructions(selections, url));
   zip.file('colors.js', colorsForCli(cliColors, url));
   for (const [key, selected] of Object.entries(selections)) {
     if (selected) {
