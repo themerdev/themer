@@ -252,6 +252,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-wallpaper-triangles](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-triangles)
 * [themer-wallpaper-trianglify](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-trianglify)
 * [themer-wallpaper-shirts](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-shirts)
+* [themer-wallpaper-diamonds](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-diamonds)
 
 ### Other
 
