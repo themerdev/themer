@@ -198,8 +198,6 @@ const renderThemeFiles = colorSets =>
       accent7
     } = colorSet.colors;
     const shadow = getShadow(colorSet);
-    const transparent = "#00000000";
-    const currentFileBackground = shade1;
     return Promise.resolve({
       name: path.join(
         packageName,
@@ -266,6 +264,13 @@ const renderThemeFiles = colorSets =>
               "list.inactiveSelectionForeground": shade7,
               "list.hoverForeground": shade5,
               "list.focusForeground": shade0,
+              "list.invalidItemForeground": accent0,
+              "list.errorForeground": accent0,
+              "list.warningForeground": accent2,
+              "listFilterWidget.background": shade1,
+              "listFilterWidget.outline": accent5,
+              "listFilterWidget.noMatchesOutline": accent0,
+              "tree.indentGuidesStroke": shade1,
 
               // Activity bar
               "activityBar.background": shade0,
@@ -292,11 +297,11 @@ const renderThemeFiles = colorSets =>
               "editorGroupHeader.noTabsBackground": shade0,
               "editorGroupHeader.tabsBackground": shade0,
               "editorGroupHeader.tabsBorder": shade0,
-              "tab.activeBackground": currentFileBackground,
-              "tab.activeForeground": shade5,
+              "tab.activeBackground": shade0,
+              "tab.activeForeground": shade6,
               "tab.border": shade0,
-              "tab.inactiveBackground": shade0,
-              "tab.inactiveForeground": shade4,
+              "tab.inactiveBackground": shade1,
+              "tab.inactiveForeground": shade3,
               "tab.unfocusedActiveForeground": shade3,
               "tab.unfocusedInactiveForeground": shade2,
 
@@ -370,7 +375,7 @@ const renderThemeFiles = colorSets =>
               "peekView.border": accent7,
               "peekViewEditor.background": shade1,
               "peekViewEditorGutter.background": shade1,
-              "peekViewEditor.matchHighlightBackground": accent2,
+              "peekViewEditor.matchHighlightBackground": `${accent2}7f`,
               "peekViewResult.background": shade1,
               "peekViewResult.fileForeground": shade6,
               "peekViewResult.lineForeground": shade2,
@@ -382,13 +387,16 @@ const renderThemeFiles = colorSets =>
               "peekViewTitleLabel.foreground": shade7,
 
               // Merge conflicts
-              "merge.currentHeaderBackground": accent4,
-              "merge.currentContentBackground": `${accent4}7f`,
-              "merge.incomingHeaderBackground": accent5,
-              "merge.incomingContentBackground": `${accent5}7f`,
+              "merge.currentHeaderBackground": `${accent4}4c`,
+              "merge.currentContentBackground": `${accent4}4c`,
+              "merge.incomingHeaderBackground": `${accent5}4c`,
+              "merge.incomingContentBackground": `${accent5}4c`,
+              "merge.commonContentBackground": `${accent6}4c`,
+              "merge.commonHeaderBackground": `${accent6}4c`,
               "merge.border": shade4,
               "editorOverviewRuler.currentContentForeground": accent4,
               "editorOverviewRuler.incomingContentForeground": accent5,
+              "editorOverviewRuler.commonContentForeground": accent6,
 
               // Panel colors
               "panel.background": shade0,
@@ -519,8 +527,7 @@ const renderThemeFiles = colorSets =>
                 name: "Invalid",
                 scope: "invalid",
                 settings: {
-                  background: accent0,
-                  foreground: shade1
+                  foreground: accent0
                 }
               },
               {
