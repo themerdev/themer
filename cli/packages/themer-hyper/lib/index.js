@@ -35,9 +35,11 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
     module.exports.decorateConfig = config => {
       return Object.assign({}, config, {
         cursorColor: '${Color(colorSet.colors.accent6).fade(0.5).rgb().string()}',
+        cursorAccentColor: '${colorSet.colors.shade0}',
         foregroundColor: '${colorSet.colors.shade6}',
         backgroundColor: '${colorSet.colors.shade0}',
-        borderColor: '${colorSet.colors.shade0}',
+        selectionColor: '${Color(colorSet.colors.accent5).fade(0.9).rgb().string()}',
+        borderColor: '${colorSet.colors.accent4}',
         colors: {
           black: '${colorSet.colors.shade0}',
           red: '${colorSet.colors.accent0}',
