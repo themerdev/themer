@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://themer.dev">
-    <img src="https://cdn.jsdelivr.net/gh/mjswensen/themer@4e78b9a50a00bab7605b4996e428b9a6c4a000b0/assets/icon.png" width="384" height="384" alt="Themer logo" />
+    <img src="https://cdn.jsdelivr.net/gh/mjswensen/themer@4e78b9a50a00bab7605b4996e428b9a6c4a000b0/assets/icon.png" width="384" alt="Themer logo" />
   </a>
 </p>
 
@@ -298,7 +298,7 @@ Once you've developed your template, consider publishing it on npm (with reposit
 
 ## About
 
-`themer` is inspired by [trevordmiller/nova](https://trevordmiller.github.io/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
+`themer` is inspired by [trevordmiller/nova](https://github.com/trevordmiller/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
 
 Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but:
 
