@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# themer ![CI](https://github.com/mjswensen/themer/workflows/CI/badge.svg?branch=master) [![npm](https://img.shields.io/npm/dt/themer.svg)](https://github.com/mjswensen/themer#installation)
+# themer ![CI](https://github.com/mjswensen/themer/workflows/CI/badge.svg?branch=master) [![npm](https://img.shields.io/npm/dt/themer.svg)](https://github.com/mjswensen/themer#installation) ![Twitter Follow](https://img.shields.io/twitter/follow/themerdev?style=social)
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 
@@ -12,6 +12,7 @@
 
 ## Table of Contents
 
+* [Support `themer`](#support-themer)
 * [Installation](#installation)
 * [Usage](#usage)
   * [Example workflow](#example-workflow)
@@ -31,6 +32,12 @@
   * [Create your own template](#create-your-own-template)
 * [About](#about)
 * [Themer's Web UI](#themers-web-ui)
+
+## Support `themer`
+
+* ⭐️ Star [`themer` on GitHub](https://github.com/mjswensen/themer)
+* 👋 Follow [@themerdev](https://twitter.com/themerdev) or [@mjswensen](https://twitter.com/mjswensen) on Twitter
+* 🦁 [Send a tip through the Brave Browser](https://brave.com/mjs684), either on [the repository page](https://github.com/mjswensen/themer) or [`themer`'s Web UI](https://themer.dev)
 
 ## Installation
 
