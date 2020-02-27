@@ -182,6 +182,8 @@ module.exports.colors = {
 };
 ```
 
+_Pro Tip: you can use [`themer`'s Web UI](https://themer.dev) to more easily select your colors, then click the "Download" button to generate a `colors.js` file._
+
 Then pass the path to your JS file to the `--colors` argument of `themer`.
 
 ```
@@ -210,6 +212,8 @@ To help you choose colors for your own color set, this is approximately how most
 | `shade5` | UI |
 | `shade6` | foreground text |
 | `shade7` | foreground text |
+
+See [`themer`'s Web UI](https://themer.dev) for a more visual representation of the color mappings.
 
 #### Tips
 
