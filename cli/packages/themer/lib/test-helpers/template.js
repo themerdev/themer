@@ -2,12 +2,14 @@ const path = require('path');
 
 const outputFileDirectory = 'foo',
   outputFileName = 'theme.txt',
-  outputFileContents = 'test';
+  outputFileContents = 'test',
+  readmeInstructions = 'instructions';
 
 module.exports = {
   outputFileDirectory,
   outputFileName,
   outputFileContents,
+  readmeInstructions,
   render: () => [
     Promise.resolve(
       {
@@ -16,4 +18,5 @@ module.exports = {
       }
     )
   ],
+  renderInstructions: (paths) => [readmeInstructions, ...paths].join('\n'),
 };

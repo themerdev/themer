@@ -8,7 +8,12 @@ const child_process = require('child_process'),
   readFile = promisify(fs.readFile),
   path = require('path'),
   wrap = require('./test-helpers/wrap'),
-  { outputFileDirectory, outputFileName, outputFileContents } = require('./test-helpers/template');
+  {
+    outputFileDirectory,
+    outputFileName,
+    outputFileContents,
+    readmeInstructions,
+  } = require('./test-helpers/template');
 
 describe('the themer command line interface', () => {
 
@@ -75,6 +80,13 @@ describe('the themer command line interface', () => {
       await execFile(pathToExecutable, args);
       const contents = await readFile(testOutputFile, 'utf8');
       expect(contents).toEqual(outputFileContents);
+    });
+
+    it('should render README.md properly', async () => {
+      await execFile(pathToExecutable, args);
+      const contents = await readFile(path.resolve(testOutputDir, 'README.md'), 'utf8');
+      expect(contents).toContain(readmeInstructions);
+      expect(contents).toContain(outputFileName);
     });
 
   });

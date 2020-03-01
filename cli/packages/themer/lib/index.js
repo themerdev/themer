@@ -1,5 +1,12 @@
 const path = require('path'),
   minimist = require('minimist'),
+  fs = require('fs'),
+  { promisify } = require('util'),
+  mkdir = promisify(fs.mkdir),
+  writeFile = promisify(fs.writeFile),
+  resolvePackage = require('./resolve'),
+  getColors = require('./get-colors'),
+  prepareColors = require('./prepare'),
   themer = require('./themer');
 
 (async function main() {
@@ -27,7 +34,26 @@ const path = require('path'),
         'out': 'o',
       },
     }));
-    await themer(args.colors, args.template, args.out, args);
+    console.log('resolving packages...');
+    const resolvedColorsPath = await resolvePackage(args.colors);
+    const rawColors = await getColors(resolvedColorsPath);
+    const colors = prepareColors(rawColors);
+    const templates = await Promise.all(
+      args.template.map(
+        async packageName => ({
+          name: path.basename(packageName),
+          ...require(await resolvePackage(packageName)),
+        }),
+      ),
+    );
+    console.log('rendering templates...');
+    const outputs = await themer(colors, templates, args);
+    console.log('writing files...');
+    for (const output of outputs) {
+      const outputFilePath = path.resolve(args.out, output.name);
+      await mkdir(path.dirname(outputFilePath), { recursive: true });
+      await writeFile(outputFilePath, output.contents);
+    }
     console.log('done!');
     process.exit(0);
   }
