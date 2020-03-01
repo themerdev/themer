@@ -1,7 +1,5 @@
 const prepareColors = require('./prepare');
 
-const noop = () => {};
-
 describe('the color set validation/preparation', () => {
   it('should convert valid CSS colors to hex', () => {
     const result = prepareColors({
@@ -23,7 +21,7 @@ describe('the color set validation/preparation', () => {
         accent6: '#000000',
         accent7: '#000000',
       },
-    }, noop);
+    });
     expect(result).toMatchSnapshot();
   });
   it('should be idempotent', () => {
@@ -46,8 +44,8 @@ describe('the color set validation/preparation', () => {
         accent6: 'purple',
         accent7: 'pink',
       },
-    }, noop);
-    const result2 = prepareColors(result1, noop);
+    });
+    const result2 = prepareColors(result1);
     expect(result1).toEqual(result2);
   });
   it('should properly fill in shades 1 through 6 when necessary', () => {
@@ -76,7 +74,7 @@ describe('the color set validation/preparation', () => {
         accent6: 'purple',
         accent7: 'pink',
       },
-    }, noop);
+    });
     expect(result).toMatchSnapshot();
   });
   it('should throw when passed an invalid color', () => {
@@ -100,7 +98,7 @@ describe('the color set validation/preparation', () => {
           accent6: 'purple',
           accent7: 'aif8sd09f8*dasdf7&F^^fajfd',
         },
-      }, noop);
+      });
     };
     expect(fn).toThrow();
   });
@@ -124,7 +122,7 @@ describe('the color set validation/preparation', () => {
           accent5: 'blue',
           accent6: 'purple',
         },
-      }, noop);
+      });
     };
     expect(fn).toThrow();
   });
@@ -148,7 +146,7 @@ describe('the color set validation/preparation', () => {
           accent6: 'purple',
           accent7: 'pink',
         },
-      }, noop);
+      });
     };
     expect(fn).toThrow();
   });

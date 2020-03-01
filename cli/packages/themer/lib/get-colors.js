@@ -1,6 +1,6 @@
 const fs = require('fs'),
-  util = require('util'),
-  readFile = util.promisify(fs.readFile),
+  { promisify } = require('util'),
+  readFile = promisify(fs.readFile),
   { safeLoad } = require('js-yaml'),
   one = require('onecolor');
 
@@ -23,28 +23,25 @@ const colorMap = {
   base0F: 'accent7',
 };
 
-module.exports = (resolvedPathToColors, message) => {
+module.exports = async function getColors(resolvedPathToColors) {
   if (/\.ya?ml$/.test(resolvedPathToColors)) {
-    message('parsing colors as base16 scheme...');
-    return readFile(resolvedPathToColors, 'utf8')
-      .then(safeLoad)
-      .then(base16 => {
-        const transformed = Object.entries(base16).reduce((colors, [key, value]) => {
-          if (key in colorMap) {
-            return {
-              ...colors,
-              [colorMap[key]]: one(value).hex(),
-            };
-          } else {
-            return colors;
-          }
-        }, {});
-        const isLight = one(base16.base00).lightness() > one(base16.base07).lightness();
+    console.log('parsing colors as base16 scheme...');
+    const base16 = safeLoad(await readFile(resolvedPathToColors, 'utf8'));
+    const transformed = Object.entries(base16).reduce((colors, [key, value]) => {
+      if (key in colorMap) {
         return {
-          [isLight ? 'light' : 'dark']: transformed,
+          ...colors,
+          [colorMap[key]]: one(value).hex(),
         };
-      });
+      } else {
+        return colors;
+      }
+    }, {});
+    const isLight = one(base16.base00).lightness() > one(base16.base07).lightness();
+    return {
+      [isLight ? 'light' : 'dark']: transformed,
+    };
   } else {
-    return Promise.resolve(require(resolvedPathToColors).colors);
+    return require(resolvedPathToColors).colors;
   }
 };

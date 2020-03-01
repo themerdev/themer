@@ -33,14 +33,14 @@ const mapValues = (obj, fn) => Object.entries(obj)
 
 const convertPaletteToHex = palette => mapValues(palette, color => one(color).hex());
 
-const preparePalette = (palette, name, message) => {
+const preparePalette = (palette, name) => {
   const keys = Object.keys(palette);
   if (allKeys.every(requiredKey => keys.includes(requiredKey))) {
     return convertPaletteToHex(palette);
   }
   if (minimumKeys.every(requiredKey => keys.includes(requiredKey))) {
     if(fillableKeys.every(prohibitedKey => !keys.includes(prohibitedKey))) {
-      message(`calculating shades 1 through 6 for ${name} palette...`);
+      console.log(`calculating shades 1 through 6 for ${name} palette...`);
       const filledPalette = colorSteps(palette.shade0, palette.shade7, fillableKeys.length)
         .reduce(
           (newPalette, calculatedShade, i) => ({
@@ -55,10 +55,10 @@ const preparePalette = (palette, name, message) => {
   throw new Error('Some colors were missing from the provided color set.');
 };
 
-module.exports = (colors, message) => {
-  message('validating colors...');
+module.exports = function prepare(colors) {
+  console.log('validating colors...');
   if (!colors.light && !colors.dark) {
     throw new Error('Color set must define either a dark or light palette (or both).');
   }
-  return mapValues(colors, (palette, paletteName) => preparePalette(palette, paletteName, message));
+  return mapValues(colors, (palette, paletteName) => preparePalette(palette, paletteName));
 };
