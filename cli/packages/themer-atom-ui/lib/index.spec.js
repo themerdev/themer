@@ -1,4 +1,4 @@
-const {render} = require('./index'),
+const {render, renderInstructions} = require('./index'),
   {pickBy} = require('lodash'),
   path = require('path'),
   os = require('os'),
@@ -75,5 +75,13 @@ describe('render', () => {
         });
         done();
       });
+  });
+});
+
+describe('renderInstructions', () => {
+  it('should provide installation instructions', async () => {
+    const files = await Promise.all(render(colors));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 });
