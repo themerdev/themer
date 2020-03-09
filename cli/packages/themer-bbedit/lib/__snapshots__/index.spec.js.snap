@@ -313,3 +313,12 @@ exports[`render should render a properly formatted BBEdit theme file 2`] = `
 </plist>
   "
 `;
+
+exports[`renderInstructions should provide installation instructions 1`] = `
+"
+Copy (or symlink) the files to \`~/Library/Application Support/BBEdit/Color Schemes/\`:
+
+    cp 'Themer Dark.bbColorScheme' '~/Library/Application Support/BBEdit/Color Schemes/'
+    cp 'Themer Light.bbColorScheme' '~/Library/Application Support/BBEdit/Color Schemes/'
+"
+`;
