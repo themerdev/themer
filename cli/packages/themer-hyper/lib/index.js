@@ -63,6 +63,24 @@ const renderIndexFiles = colorSets => colorSets.map(colorSet => Promise.resolve(
   `),
 }));
 
+const renderInstructions = paths => {
+  const directories = [...(new Set(paths.map(path.dirname)))];
+  return `
+First, copy (or symlink) the outputted package ${directories.length > 1 ? 'directories' : 'directory'} to the Hyper local plugins directory:
+
+${directories.map(dir => `    cp ${dir} ~/.hyper_plugins/local/`).join('\n')}
+
+Then edit \`~/.hyper.js\` and add the package to the \`localPlugins\` array:
+
+    ...
+    localPlugins: [
+      ${directories.map(dir => dir.split(path.sep)).map(dirs => dirs[dirs.length - 1]).map(dir => `'${dir}'`).join(' // or ')}
+    ],
+    ...
+  `;
+}
+
 module.exports = {
   render,
+  renderInstructions,
 };
