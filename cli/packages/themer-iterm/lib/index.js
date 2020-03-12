@@ -77,6 +77,13 @@ const render = (colors) => {
     });
 };
 
+const renderInstructions = paths => `
+1. Launch iTerm
+2. Press \`command\`-\`I\` to open the iTerm preferences
+3. Choose Colors > Color Presets... > Import... and choose the generated theme file (${paths.map(p => `\`${p}\``).join(' or ')})
+`;
+
 module.exports = {
   render,
+  renderInstructions,
 };

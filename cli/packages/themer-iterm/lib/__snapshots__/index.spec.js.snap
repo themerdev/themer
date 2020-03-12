@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`iTerm theme generator should provide installation instructions 1`] = `
+"
+1. Launch iTerm
+2. Press \`command\`-\`I\` to open the iTerm preferences
+3. Choose Colors > Color Presets... > Import... and choose the generated theme file (\`themer-iterm-dark.itermcolors\` or \`themer-iterm-light.itermcolors\`)
+"
+`;
