@@ -1,4 +1,4 @@
-const { render } = require('./index'),
+const { render, renderInstructions } = require('./index'),
   { colors } = require('../../themer-colors-default');
 
 describe('render', () => {
@@ -8,3 +8,11 @@ describe('render', () => {
     expect(files.length).toBe(2);
   });
 });
+
+describe('renderInstructions', () => {
+  it('should provide installation instructions', async () => {
+    const files = await Promise.all(render(colors));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
+  });
+})

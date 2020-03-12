@@ -137,6 +137,11 @@ const render = colors => Object.entries(colors).map(
   }),
 );
 
+const renderInstructions = paths => `
+In the HTML page where prism.js is being used, link to the generated stylesheet (${paths.map(p => `\`${p}\``).join(' or ')}).
+`;
+
 module.exports = {
   render,
+  renderInstructions,
 };
