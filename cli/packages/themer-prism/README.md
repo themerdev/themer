@@ -1,6 +1,6 @@
 # themer-prism
 
-A PrismJS theme generator for [themer](https://github.com/mjswensen/themer).
+A [PrismJS](https://prismjs.com/) theme generator for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
 
