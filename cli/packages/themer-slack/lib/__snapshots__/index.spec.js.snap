@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderInstructions should provide installation instructions 1`] = `
+"
+Copy the contents of \`themer-slack-dark.txt\` or \`themer-slack-light.txt\` and paste into the custom theme input in Slack's preferences.
+"
+`;
