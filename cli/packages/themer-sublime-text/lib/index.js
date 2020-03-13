@@ -151,6 +151,12 @@ const render = (colors) => {
     });
 };
 
+const renderInstructions = paths => `
+1. Copy (or symlink) the generated theme files (${paths.map(p => `\`${p}\``).join(' or ')}) to the \`User/\` packages folder (you can see where this folder is located by choosing the "Browse Packages..." menu option in Sublime Text).
+2. Choose the theme from the list of available color themes.
+`;
+
 module.exports = {
   render,
+  renderInstructions,
 };

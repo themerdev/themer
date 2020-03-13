@@ -1,5 +1,5 @@
 const { colors } = require('../../themer-colors-default'),
-  { render } = require('./index'),
+  { render, renderInstructions } = require('./index'),
   plist = require('plist');
 
 describe('themer Sublime Text theme generator', () => {
@@ -19,6 +19,12 @@ describe('themer Sublime Text theme generator', () => {
       const contents = file.contents.toString('utf8');
       expect(plist.parse.bind(plist, contents)).not.toThrow();
     });
+  });
+
+  it('should provide installation instructions', async () => {
+    const files = await Promise.all(render(colors));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 
 });
