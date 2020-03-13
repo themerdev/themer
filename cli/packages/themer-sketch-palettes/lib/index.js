@@ -21,3 +21,9 @@ module.exports.render = colors =>
       ),
     })
   );
+
+module.exports.renderInstructions = paths => `
+Load the generated theme ${paths.length > 1 ? 'files' : 'file'} into Sketch through the [sketch-palettes](https://github.com/andrewfiorillo/sketch-palettes) plugin.
+
+${paths.map(p => `* \`${p}\``).join('\n')}
+`;
