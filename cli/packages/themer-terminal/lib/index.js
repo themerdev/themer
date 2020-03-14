@@ -50,6 +50,13 @@ const render = (colors) => {
   });
 };
 
+const renderInstructions = (paths) => `
+1. Launch Terminal.app and open the preferences (\`cmd\`-\`,\`)
+2. Click Profile > (gear icon) > Import...
+3. Choose the generated ${paths.length > 1 ? 'files' : 'file'} (${paths.map(p => `\`${p}\``).join(' / ')})
+`;
+
 module.exports = {
   render,
+  renderInstructions,
 };

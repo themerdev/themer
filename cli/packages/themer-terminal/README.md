@@ -16,8 +16,4 @@ Then pass `themer-terminal` as a `-t` (`--template`) argument to `themer`:
 
     themer -c my-colors.js -t themer-terminal -o gen/
 
-## Output
-
-`themer-terminal` will generate a `themer-dark.terminal` or `themer-light.terminal` (or both), depending on which color set you passed to `themer`.
-
-To install your theme, press `cmd`-`,` to open the Terminal.app preferences, then click Profile > (Gear Icon) > Import... and choose the generated files.
+Installation instructions for the generated theme file(s) will be included in `<output dir>/README.md`.
