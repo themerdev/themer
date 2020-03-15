@@ -261,6 +261,15 @@ const render = (colors) => {
 
 };
 
+const renderInstructions = paths => `
+Copy or symlink \`${paths[0]}\` to \`~/.vim/colors/\`.
+
+Then set the colorscheme in \`.vimrc\`:
+
+    colo ThemerVim
+`;
+
 module.exports = {
   render,
+  renderInstructions,
 };
