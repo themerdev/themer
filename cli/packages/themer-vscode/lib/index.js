@@ -630,6 +630,23 @@ const renderThemeFiles = colorSets =>
     });
   });
 
+const renderInstructions = paths => {
+  const packageDirectory = paths.filter(p => p.includes('package.json')).map(path.dirname)[0];
+  const files = paths.map(p => path.basename(p));
+  const themeNames = [
+    files.includes('themer-dark-color-theme.json') && '"Themer Dark"',
+    files.includes('themer-light-color-theme.json') && '"Themer Light"',
+  ].filter(Boolean);
+  return `
+Copy (or symlink) the generated package directory into the VS Code extensions directory:
+
+    cp ${packageDirectory} ~/.vscode/extensions/
+
+Then reload or restart VS Code. The generated theme package should be in the list of installed extensions, and ${themeNames.join(' / ')} will be available in the list of themes.
+  `;
+};
+
 module.exports = {
   render,
+  renderInstructions,
 };
