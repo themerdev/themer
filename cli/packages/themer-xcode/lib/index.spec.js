@@ -1,4 +1,4 @@
-const {formatColorSet, render} = require('./index');
+const {formatColorSet, render, renderInstructions} = require('./index');
 const {colors} = require('../../themer-colors-default');
 
 describe('formatColorSet', () => {
@@ -23,5 +23,13 @@ describe('render', () => {
       });
       done();
     });
+  });
+});
+
+describe('renderInstructions', () => {
+  it('should provide installation instructions', async () => {
+    const files = await Promise.all(render(colors));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 });
