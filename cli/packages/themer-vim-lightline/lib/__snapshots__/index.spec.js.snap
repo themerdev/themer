@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themer vim lighline palette generator should provide installation instructions 1`] = `
+"
+Copy or symlink \`ThemerVimLightline.vim\` to \`~/.vim/autoload/lightline/colorscheme/\`.
+
+Then set the colorscheme in \`.vimrc\`:
+
+    let g:lightline = { 'colorscheme': 'ThemerVimLightline' }
+"
+`;
