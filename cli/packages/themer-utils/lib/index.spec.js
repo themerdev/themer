@@ -2,6 +2,7 @@ const {
   getSizesFromOptOrDefault,
   deepFlatten,
   colorSets,
+  listOutputFiles,
 } = require('./index');
 
 describe('getSizesFromOptOrDefault()', () => {
@@ -49,4 +50,16 @@ describe('getColorSets', () => {
       { name: 'light', colors: { baz: 'qux' } },
     ]);
   })
+});
+
+describe('listOutputFiles', () => {
+  it('should render a list of the arguments passed to it', () => {
+    expect(listOutputFiles(['foo', 'bar', 'baz']).trim()).toEqual(`
+Files generated:
+
+* \`foo\`
+* \`bar\`
+* \`baz\`
+    `.trim());
+  });
 });
