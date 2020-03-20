@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themer "diamonds" wallpaper should list outputfiles 1`] = `
+"
+Files generated:
+
+* \`themer-wallpaper-diamonds-dark-1000x1000.svg\`
+* \`themer-wallpaper-diamonds-light-1000x1000.svg\`
+"
+`;

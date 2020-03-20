@@ -2,6 +2,7 @@ const {
   getSizesFromOptOrDefault,
   deepFlatten,
   colorSets: getColorSets,
+  listOutputFiles,
 } = require('themer-utils');
 
 const SIZE = 100;
@@ -127,4 +128,7 @@ const render = (colors, options) => {
   );
 }
 
-module.exports = { render };
+module.exports = {
+  render,
+  renderInstructions: listOutputFiles,
+};

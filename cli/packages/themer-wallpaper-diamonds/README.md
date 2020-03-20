@@ -35,3 +35,4 @@ to which you would pass `<width>x<height>`. For example, to forego the default r
 
     themer -c my-colors.js -t themer-wallpaper-diamonds --themer-wallpaper-diamonds-size 1024x768 --themer-wallpaper-diamonds-size 320x960 -o gen
 
+The generated files will be listed in `<output dir>/README.md`.
