@@ -36,7 +36,7 @@
 ## Support `themer`
 
 * ⭐️ Star [`themer` on GitHub](https://github.com/mjswensen/themer)
-* 👋 Follow [@themerdev](https://twitter.com/themerdev) or [@mjswensen](https://twitter.com/mjswensen) on Twitter
+* 👋 Follow [@themerdev](https://twitter.com/themerdev) on Twitter
 * 🦁 [Send a tip through the Brave Browser](https://brave.com/mjs684), either on [the repository page](https://github.com/mjswensen/themer) or [`themer`'s Web UI](https://themer.dev)
 
 ## Installation
