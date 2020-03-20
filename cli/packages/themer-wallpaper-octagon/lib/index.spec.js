@@ -51,7 +51,7 @@ describe('themer "octagon" wallpaper', () => {
   test('when given only a dark theme', { dark: colors.dark }, 2);
   test('when given only a light theme', { light: colors.light }, 2);
 
-  it('should list outputfiles', async () => {
+  it('should list output files', async () => {
     const files = await Promise.all(render(colors, { 'themer-wallpaper-octagon-size': '1000x1000' }));
     const instructions = renderInstructions(files.map(({ name }) => name));
     expect(instructions).toMatchSnapshot();

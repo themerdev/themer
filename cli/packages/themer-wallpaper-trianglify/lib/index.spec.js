@@ -20,7 +20,7 @@ describe('themer trianglify wallpaper', () => {
       expect(file.contents.toString('utf8')).toMatchSnapshot();
     });
   });
-  it('should list outputfiles', async () => {
+  it('should list output files', async () => {
     const files = await Promise.all(
       render(
         colors,
