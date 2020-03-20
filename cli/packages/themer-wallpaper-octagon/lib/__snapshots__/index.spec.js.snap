@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themer "octagon" wallpaper should list outputfiles 1`] = `
+"
+Files generated:
+
+* \`themer-wallpaper-octagon-dark-1000x1000.svg\`
+* \`themer-wallpaper-octagon-light-1000x1000.svg\`
+"
+`;
