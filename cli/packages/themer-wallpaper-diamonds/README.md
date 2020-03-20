@@ -18,6 +18,8 @@ Then pass `themer-wallpaper-diamonds` as a `-t` (`--template`) arg to `themer`:
 
 `themer-wallpaper-diamonds` will generate SVG wallpapers to the output directory (`gen/` in this example). (You can then convert them to a bitmap format, if necessary, [using Chrome](https://umaar.com/dev-tips/156-element-screenshot/) or other tools.)
 
+The generated files will be listed in `<output dir>/README.md`.
+
 ### Default resolutions
 
 By default, `themer-wallpaper-diamonds` will output wallpapers at the following sizes:
@@ -34,5 +36,3 @@ By default, `themer-wallpaper-diamonds` will output wallpapers at the following 
 to which you would pass `<width>x<height>`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
     themer -c my-colors.js -t themer-wallpaper-diamonds --themer-wallpaper-diamonds-size 1024x768 --themer-wallpaper-diamonds-size 320x960 -o gen
-
-The generated files will be listed in `<output dir>/README.md`.
