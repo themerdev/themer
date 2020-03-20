@@ -33,3 +33,5 @@ By default, `themer-wallpaper-block-wave` will output wallpapers at the followin
 to which you would pass `<width>x<height>`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
     themer -c my-colors.js -t themer-wallpaper-block-wave --themer-wallpaper-block-wave-size 1024x768 --themer-wallpaper-block-wave-size 320x960 -o gen
+
+The generated files will be listed in `<output dir>/README.md`.

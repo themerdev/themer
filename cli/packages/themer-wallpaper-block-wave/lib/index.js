@@ -2,6 +2,7 @@ const {
   getSizesFromOptOrDefault,
   colorSets: getColorSets,
   deepFlatten,
+  listOutputFiles,
 } = require('themer-utils');
 const weightedRandom = require('./weighted-random');
 
@@ -89,4 +90,5 @@ const render = (colors, options) => {
 
 module.exports = {
   render,
+  renderInstructions: listOutputFiles
 };
