@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`themer "triangles" wallpaper should list outputfiles 1`] = `
+"
+Files generated:
+
+* \`themer-wallpaper-triangles-dark-1000x1000.svg\`
+* \`themer-wallpaper-triangles-light-1000x1000.svg\`
+"
+`;
+
 exports[`themer "triangles" wallpaper when given both a light and a dark theme and when rendering a given resolution should render valid SVG 1`] = `
 "
             <svg width=\\"600\\" height=\\"600\\" viewBox=\\"0 0 600 600\\" xmlns=\\"http://www.w3.org/2000/svg\\">
