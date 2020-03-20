@@ -1,6 +1,6 @@
 {
   "name": "themer-sketch-palettes",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A Sketch palettes generator for themer.",
   "main": "lib/index.js",
   "engines": {
