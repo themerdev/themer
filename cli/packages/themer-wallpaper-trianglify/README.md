@@ -42,3 +42,5 @@ to which you would pass `<width>x<height>`. For example, to forego the default r
     --themer-wallpaper-trianglify-variance <variance>
 
 Accepts a float between `0` and `1`, defaults to `0.75` (see [trianglify docs](https://github.com/qrohlf/trianglify#variance)). Like `--themer-wallpaper-trianglify-size`, this option can be provided multiple times—`themer` will generate a complete set of wallpapers for each value passed.
+
+The generated files will be listed in `<output dir>/README.md`.

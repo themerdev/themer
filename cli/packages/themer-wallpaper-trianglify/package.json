@@ -21,7 +21,7 @@
     "/lib/opts.js"
   ],
   "dependencies": {
-    "themer-utils": "^1.1.0",
+    "themer-utils": "^1.2.0",
     "trianglify": "^1.2.0"
   },
   "devDependencies": {},
