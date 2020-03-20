@@ -2,6 +2,7 @@ const {
   getSizesFromOptOrDefault,
   deepFlatten,
   colorSets: getColorSets,
+  listOutputFiles,
 } = require('themer-utils');
 
 const CELL_WIDTH = 676;
@@ -698,4 +699,5 @@ const render = (colors, options) => {
 
 module.exports = {
   render,
+  renderInstructions: listOutputFiles,
 };
