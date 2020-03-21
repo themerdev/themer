@@ -17,6 +17,8 @@ Then pass `themer-wallpaper-shirts` as a `-t` (`--template`) arg to `themer`:
 
 `themer-wallpaper-shirts` will generate SVG wallpapers to the output directory (`gen/` in this example). (You can then convert them to a bitmap format, if necessary, [using Chrome](https://umaar.com/dev-tips/156-element-screenshot/) or other tools.)
 
+The generated files will be listed in `<output dir>/README.md`.
+
 ### Default resolutions
 
 By default, `themer-wallpaper-shirts` will output wallpapers at the following sizes:

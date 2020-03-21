@@ -127,7 +127,17 @@ const render = colors => {
   });
 };
 
+const renderInstructions = paths => `
+Copy (or symlink) the generated theme ${paths.length > 1 ? 'files' : 'file'} to Xcode's themes directory:
+
+    mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+${paths.map(p => `    cp '${p}' ~/Library/Developer/Xcode/UserData/FontAndColorThemes/`).join('\n')}
+
+Then restart Xcode. The ${paths.length > 1 ? 'themes' : 'theme'} will be available in Preferences > Fonts and Colors.
+`;
+
 module.exports = {
   formatColorSet,
   render,
+  renderInstructions,
 };

@@ -58,6 +58,15 @@ const render = (colors) => {
 
 };
 
+const renderInstructions = paths => `
+Copy or symlink \`${paths[0]}\` to \`~/.vim/autoload/lightline/colorscheme/\`.
+
+Then set the colorscheme in \`.vimrc\`:
+
+    let g:lightline = { 'colorscheme': 'ThemerVimLightline' }
+`;
+
 module.exports = {
   render,
+  renderInstructions,
 };

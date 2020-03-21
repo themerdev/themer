@@ -1,6 +1,6 @@
 {
   "name": "themer-xcode",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "An Xcode theme generator for themer.",
   "main": "lib/index.js",
   "engines": {

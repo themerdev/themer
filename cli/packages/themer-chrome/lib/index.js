@@ -60,4 +60,15 @@ const render = colors => {
   return colorSets.map(colorSet => renderManifest(colorSet));
 };
 
-module.exports = {render};
+const renderInstructions = paths => {
+  const directories = new Set(paths.map(path.dirname));
+  return `
+1. Launch Chrome and go to \`chrome://extensions\`.
+2. Check the "Developer mode" checkbox at the top.
+3. Click the "Load unpacked extension..." button and choose the desired theme directory (${[...directories].map(dir => `\`${dir}\``).join(' or ')}).
+
+(To reset or remove the theme, visit \`chrome://settings\` and click "Reset to Default" in the "Appearance" section.)
+  `;
+}
+
+module.exports = {render, renderInstructions};

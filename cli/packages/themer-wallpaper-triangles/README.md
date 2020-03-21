@@ -16,6 +16,8 @@ Then pass `themer-wallpaper-triangles` as a `-t` (`--template`) arg to `themer`:
 
 `themer-wallpaper-triangles` will generate SVG wallpapers to the output directory (`gen/` in this example).
 
+The generated files will be listed in `<output dir>/README.md`.
+
 ### Default resolutions
 
 By default, `themer-wallpaper-triangles` will output wallpapers at the following sizes:

@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`themer "shirts" wallpaper should list output files 1`] = `
+"
+Files generated:
+
+* \`themer-wallpaper-shirts-dark-1000-1000.svg\`
+* \`themer-wallpaper-shirts-light-1000-1000.svg\`
+"
+`;
+
 exports[`themer "shirts" wallpaper should render valid SVG 1`] = `
 "
               <svg width=\\"2880\\" height=\\"1800\\" viewBox=\\"0 0 2880 1800\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\">

@@ -14,6 +14,11 @@ const render = colors => Object.entries(colors).map(
   })
 );
 
+const renderInstructions = paths => `
+Copy the contents of ${paths.map(p => `\`${p}\``).join(' or ')} and paste into the custom theme input in Slack's preferences.
+`;
+
 module.exports = {
   render,
+  renderInstructions,
 };

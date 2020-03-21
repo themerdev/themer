@@ -848,3 +848,13 @@ exports[`render function should properly render theme files 2`] = `
   ]
 }"
 `;
+
+exports[`renderInstructions function should provide installation instructions 1`] = `
+"
+Copy (or symlink) the generated package directory into the VS Code extensions directory:
+
+    cp theme-themer-vscode ~/.vscode/extensions/
+
+Then reload or restart VS Code. The generated theme package should be in the list of installed extensions, and \\"Themer Dark\\" / \\"Themer Light\\" will be available in the list of themes.
+  "
+`;

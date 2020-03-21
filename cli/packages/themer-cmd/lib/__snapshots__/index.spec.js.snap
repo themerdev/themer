@@ -49,3 +49,14 @@ exports[`render should render properly formatted CMD.exe theme .reg file 2`] = `
 \\"PopupColors\\"=dword:0000008b
     "
 `;
+
+exports[`renderInstructions should provide installation instructions 1`] = `
+"
+Simply double-click the desired theme file to add the color keys to the registry:
+
+* \`themer-dark.reg\`
+* \`themer-light.reg\`
+
+The scheme of CMD can then be configured with the \`color\` command. For example, use \`color 07\` to set the background and foreground to your color set's default.
+"
+`;

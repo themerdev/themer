@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderInstructions should provide installation instructions 1`] = `
+"
+In the HTML page where prism.js is being used, link to the generated stylesheet (\`themer-prism-dark.css\` or \`themer-prism-light.css\`).
+"
+`;

@@ -46,4 +46,12 @@ const render = colors =>
     }))
     .map(colorSet => renderTheme(colorSet));
 
-module.exports = {render};
+const renderInstructions = paths => `
+Simply double-click the desired theme file to add the color keys to the registry:
+
+${paths.map(p => `* \`${p}\``).join('\n')}
+
+The scheme of CMD can then be configured with the \`color\` command. For example, use \`color 07\` to set the background and foreground to your color set's default.
+`;
+
+module.exports = {render, renderInstructions};

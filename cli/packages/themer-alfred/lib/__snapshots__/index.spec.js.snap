@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`themer Alfred.app theme template should provide installation instructions 1`] = `
+"
+Simply open the files to import them into Alfred. Either double-click them in Finder or use the terminal:
+
+    open themer-alfred-dark.alfredappearance
+    open themer-alfred-light.alfredappearance
+"
+`;
+
 exports[`themer Alfred.app theme template should render properly 1`] = `
 "{
   \\"alfredtheme\\": {

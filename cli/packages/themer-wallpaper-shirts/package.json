@@ -1,6 +1,6 @@
 {
   "name": "themer-wallpaper-shirts",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A wallpaper generator for themer.",
   "main": "lib/index.js",
   "engines": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-shirts#readme",
   "dependencies": {
-    "themer-utils": "^1.0.0"
+    "themer-utils": "^1.2.0"
   },
   "peerDependencies": {
     "themer": "^3"

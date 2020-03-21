@@ -1,4 +1,4 @@
-const { render } = require('./index'),
+const { render, renderInstructions } = require('./index'),
   { colors } = require('../../themer-colors-default');
 
 describe('Terminal.app theme generator', () => {
@@ -17,6 +17,12 @@ describe('Terminal.app theme generator', () => {
     const files = await Promise.all(promisedFiles);
     files.forEach(file => expect(file.contents).toBeInstanceOf(Buffer));
     expect(files.some(file => /undefined/.test(file.contents.toString('utf8')))).toBe(false);
+  });
+
+  it('should provide installation instructions', async () => {
+    const files = await Promise.all(render(colors));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 
 });

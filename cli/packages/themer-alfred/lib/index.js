@@ -96,4 +96,13 @@ const render = (colors, options) => {
   });
 };
 
-module.exports = {render};
+const renderInstructions = (paths) => `
+Simply open the files to import them into Alfred. Either double-click them in Finder or use the terminal:
+
+${paths.map(path => `    open ${path}`).join('\n')}
+`;
+
+module.exports = {
+  render,
+  renderInstructions,
+};

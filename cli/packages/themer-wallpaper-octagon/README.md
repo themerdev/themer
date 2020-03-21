@@ -17,6 +17,8 @@ Then pass `themer-wallpaper-octagon` as a `-t` (`--template`) arg to `themer`:
 
 `themer-wallpaper-octagon` will generate SVG wallpapers to the output directory (`gen/` in this example).
 
+The generated files will be listed in `<output dir>/README.md`.
+
 ### Default resolutions
 
 By default, `themer-wallpaper-octagon` will output wallpapers at the following sizes:

@@ -1,6 +1,6 @@
 const path = require('path');
 const {pickBy} = require('lodash');
-const {render} = require('./index');
+const {render, renderInstructions} = require('./index');
 const {colors} = require('../../themer-colors-default');
 const {version} = require('../package.json');
 
@@ -27,5 +27,10 @@ describe('Chrome theme generator', () => {
       });
       done();
     });
+  });
+  it('should provide installation instructions', async () => {
+    const files = await Promise.all(render(colors));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 });

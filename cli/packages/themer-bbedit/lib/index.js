@@ -181,4 +181,12 @@ const render = colors => Object.keys(colors)
   }))
   .map(colorSet => renderTheme(colorSet));
 
-module.exports = { render };
+const destination = '~/Library/Application Support/BBEdit/Color Schemes/';
+
+const renderInstructions = paths => `
+Copy (or symlink) the files to \`${destination}\`:
+
+${paths.map(p => `    cp '${p}' '${destination}'`).join('\n')}
+`;
+
+module.exports = { render, renderInstructions };

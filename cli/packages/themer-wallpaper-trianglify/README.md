@@ -18,6 +18,8 @@ Then pass `themer-wallpaper-trianglify` as a `-t` (`--template`) arg to `themer`
 
 `themer-wallpaper-trianglify` will generate SVG wallpapers to the output directory (`gen/` in this example).
 
+The generated files will be listed in `<output dir>/README.md`.
+
 ### Default resolutions
 
 By default, `themer-wallpaper-trianglify` will output wallpapers at the following sizes:

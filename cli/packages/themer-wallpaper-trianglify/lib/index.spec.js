@@ -1,5 +1,5 @@
 const { colors } = require('../../themer-colors-default'),
-  { render } = require('./index');
+  { render, renderInstructions } = require('./index');
 
 describe('themer trianglify wallpaper', () => {
   it('should allow for specifying sizes', async () => {
@@ -19,5 +19,18 @@ describe('themer trianglify wallpaper', () => {
     files.forEach(file => {
       expect(file.contents.toString('utf8')).toMatchSnapshot();
     });
+  });
+  it('should list output files', async () => {
+    const files = await Promise.all(
+      render(
+        colors,
+        {
+          'themer-wallpaper-trianglify-size': '1000x1000',
+          'themer-wallpaper-trianglify-variance': '0.5',
+        },
+      )
+    );
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 });

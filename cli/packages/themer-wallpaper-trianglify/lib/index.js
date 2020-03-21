@@ -1,5 +1,5 @@
 const Trianglify = require('trianglify'),
-  { deepFlatten } = require('themer-utils'),
+  { deepFlatten, listOutputFiles } = require('themer-utils'),
   { getSizes, getVariances } = require('./opts');
 
 const optionNames = {
@@ -55,4 +55,5 @@ const render = (colors, options) => {
 
 module.exports = {
   render,
+  renderInstructions: listOutputFiles,
 };

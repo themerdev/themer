@@ -1,6 +1,6 @@
 {
   "name": "themer-vscode",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "description": "A VS Code theme generator for themer.",
   "main": "lib/index.js",
   "engines": {

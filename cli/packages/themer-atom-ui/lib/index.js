@@ -100,6 +100,20 @@ const render = colors =>
     ])
   );
 
+const renderInstructions = paths => {
+  const packages = new Set(
+    paths.map(path.dirname).filter(p => !p.endsWith('styles')),
+  );
+  return `
+Use the \`apm link\` command to install the generated theme ${packages.size > 1 ? 'packages' : 'package'} to Atom:
+
+${[...packages].map(pkg => `    apm link ${pkg}`).join('\n')}
+
+Then open/reload Atom and select the desired theme in the list of available UI themes.
+  `;
+};
+
 module.exports = {
   render,
+  renderInstructions,
 };

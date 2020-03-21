@@ -47,8 +47,15 @@ const deepFlatten = arr =>
 const colorSets = colors =>
   Object.entries(colors).map(([name, colors]) => ({name, colors}));
 
+const listOutputFiles = paths => `
+Files generated:
+
+${paths.map(p => `* \`${p}\``).join('\n')}
+`;
+
 module.exports = {
   getSizesFromOptOrDefault,
   deepFlatten,
   colorSets,
+  listOutputFiles,
 };

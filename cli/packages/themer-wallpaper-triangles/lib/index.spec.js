@@ -1,4 +1,4 @@
-const {render} = require('./index');
+const {render, renderInstructions} = require('./index');
 const {colors} = require('../../themer-colors-default');
 
 describe('themer "triangles" wallpaper', () => {
@@ -57,4 +57,10 @@ describe('themer "triangles" wallpaper', () => {
   test('when given both a light and a dark theme', colors, 4);
   test('when given only a dark theme', {dark: colors.dark}, 2);
   test('when given only a light theme', {light: colors.light}, 2);
+
+  it('should list output files', async () => {
+    const files = await Promise.all(render(colors, { 'themer-wallpaper-triangles-size': '1000x1000' }));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
+  });
 });

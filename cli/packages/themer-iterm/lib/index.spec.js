@@ -1,4 +1,4 @@
-const { render } = require('./index'),
+const { render, renderInstructions } = require('./index'),
   { colors } = require('../../themer-colors-default');
 
 describe('iTerm theme generator', () => {
@@ -15,6 +15,12 @@ describe('iTerm theme generator', () => {
   it('should render well-formed files without missing values', async () => {
     const files = await Promise.all(promisedFiles);
     expect(files.some(file => /undefined/.test(file.contents.toString('utf8')))).toBe(false);
+  });
+
+  it('should provide installation instructions', async () => {
+    const files = await Promise.all(render(colors));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 
 });

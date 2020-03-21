@@ -56,4 +56,13 @@ const render = colors => Object.keys(colors)
   }))
   .map(colorSet => renderTheme(colorSet));
 
-module.exports = { render };
+const renderInstructions = paths => `
+1. Open the ConEmu settings and navigate to Features > Colors. Take note of the location of \`ConEmu.xml\` for later.
+2. Create a new color scheme by typing a name in the "Schemes" field and clicking Save.
+3. Close ConEmu.
+4. Open \`ConEmu.xml\` and locate the color scheme name you typed in step 2.
+5. Replace the \`<value>\` elements \`ColorTable00\` through \`ColorTable31\` with the contents of your themer-generated XML (${paths.map(p => `\`${p}\``).join(' or ')}). Be sure to leave the others, like \`ExtendColors\`, etc. intact.
+6. Open ConEmu and select your theme again in settings.
+`;
+  
+module.exports = { render, renderInstructions };
