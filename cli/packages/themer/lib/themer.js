@@ -1,11 +1,17 @@
-module.exports = async function themer (colors, templates, extraArgs) {
+module.exports = async function themer(
+  colors,
+  templates,
+  extraArgs,
+  pathSeparator,
+  instructionsHead,
+) {
   const files = [];
   const instructions = [];
   for (const template of templates) {
     const outputs = (await Promise.all(template.render(colors, extraArgs)))
       .map(file => ({
         ...file,
-        name: `${template.name}/${file.name}`,
+        name: `${template.name}${pathSeparator}${file.name}`,
       }));
     files.push(...outputs);
     if (template.renderInstructions) {
@@ -18,7 +24,7 @@ module.exports = async function themer (colors, templates, extraArgs) {
     files.push({
       name: 'README.md',
       contents: Buffer.from(
-        `# themer - theme installation instructions\n\n${instructions.join('\n\n')}`,
+        `${instructionsHead}\n\n${instructions.join('\n\n')}`,
         'utf8'
       )
     })

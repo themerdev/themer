@@ -47,7 +47,13 @@ const path = require('path'),
       ),
     );
     console.log('rendering templates...');
-    const outputs = await themer(colors, templates, args);
+    const outputs = await themer(
+      colors,
+      templates,
+      args,
+      path.sep,
+      '# themer - theme installation instructions',
+    );
     console.log('writing files...');
     for (const output of outputs) {
       const outputFilePath = path.resolve(args.out, output.name);

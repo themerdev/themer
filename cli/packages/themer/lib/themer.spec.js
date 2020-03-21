@@ -1,4 +1,5 @@
-const themer = require('./themer');
+const themer = require('./themer'),
+  path = require('path');
 
 describe('themer core', () => {
   it('should produce a list of files from colors + templates', async () => {
@@ -34,6 +35,8 @@ describe('themer core', () => {
         },
       ],
       {},
+      path.sep,
+      '# test',
     );
     expect(outputs.length).toBe(2);
   });
