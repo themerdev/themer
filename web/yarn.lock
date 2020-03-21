@@ -10052,10 +10052,10 @@ themer-xcode@^2.0.5:
     color "^3.0.0"
     lodash "^4.17.4"
 
-themer@^3.1.6:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/themer/-/themer-3.2.0.tgz#3e838d5e3877641640fb0820b63d533d314b95e2"
-  integrity sha512-zk0dYDJfmZYayl4nspEjNgKxwPnTeJqKTE0wgLcI3khDAudCOm1F3LIgjBXxEyc91448qcFyUc4oUWinDhDnmw==
+themer@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/themer/-/themer-3.3.0.tgz#7f0c1ab502e827fe46d21c7c07024bacc691d068"
+  integrity sha512-LDAo7bYLhCo6J0/+qki9lrooNV+xYyT2/13pPVTwBpIWmBjPkFg1Acc6jZRgfoX3LIBkUfd92pBNce8Xd/h1+A==
   dependencies:
     color-steps "^1.0.1"
     js-yaml "^3.11.0"

@@ -1,66 +1,67 @@
 import prepareColors from 'themer/lib/prepare';
+import themer from 'themer/lib/themer';
 import JSZip from 'jszip';
 
-import { render as renderAlfred } from 'themer-alfred';
-import { render as renderAtomSyntax } from 'themer-atom-syntax';
-import { render as renderAtomUi } from 'themer-atom-ui';
-import { render as renderBbedit } from 'themer-bbedit';
-import { render as renderChrome } from 'themer-chrome';
-import { render as renderCmd } from 'themer-cmd';
-import { render as renderConemu } from 'themer-conemu';
-import { render as renderGnomeTerminal } from 'themer-gnome-terminal';
-import { render as renderHyper } from 'themer-hyper';
-import { render as renderIterm } from 'themer-iterm';
-import { render as renderJetbrains } from 'themer-jetbrains';
-import { render as renderKitty } from 'themer-kitty';
-import { render as renderSketchPalettes } from 'themer-sketch-palettes';
-import { render as renderSlack } from 'themer-slack';
-import { render as renderSublimeText } from 'themer-sublime-text';
-import { render as renderTermite } from 'themer-termite';
-import { render as renderTmux } from 'themer-tmux';
-import { render as renderVim } from 'themer-vim';
-import { render as renderVimLightline } from 'themer-vim-lightline';
-import { render as renderVscode } from 'themer-vscode';
-import { render as renderWallpaperBlockWave } from 'themer-wallpaper-block-wave';
-import { render as renderWallpaperDiamonds } from 'themer-wallpaper-diamonds';
-import { render as renderWallpaperOctagon } from 'themer-wallpaper-octagon';
-import { render as renderWallpaperShirts } from 'themer-wallpaper-shirts';
-import { render as renderWallpaperTriangles } from 'themer-wallpaper-triangles';
-import { render as renderWallpaperTrianglify } from 'themer-wallpaper-trianglify';
-import { render as renderXcode } from 'themer-xcode';
-import { render as renderBrave } from 'themer-brave';
-import { render as renderPrism } from 'themer-prism';
+import * as themerAlfred from 'themer-alfred';
+import * as themerAtomSyntax from 'themer-atom-syntax';
+import * as themerAtomUi from 'themer-atom-ui';
+import * as themerBbedit from 'themer-bbedit';
+import * as themerBrave from 'themer-brave';
+import * as themerChrome from 'themer-chrome';
+import * as themerCmd from 'themer-cmd';
+import * as themerConemu from 'themer-conemu';
+import * as themerGnomeTerminal from 'themer-gnome-terminal';
+import * as themerHyper from 'themer-hyper';
+import * as themerIterm from 'themer-iterm';
+import * as themerJetbrains from 'themer-jetbrains';
+import * as themerKitty from 'themer-kitty';
+import * as themerPrism from 'themer-prism';
+import * as themerSketchPalettes from 'themer-sketch-palettes';
+import * as themerSlack from 'themer-slack';
+import * as themerSublimeText from 'themer-sublime-text';
+import * as themerTermite from 'themer-termite';
+import * as themerTmux from 'themer-tmux';
+import * as themerVim from 'themer-vim';
+import * as themerVimLightline from 'themer-vim-lightline';
+import * as themerVscode from 'themer-vscode';
+import * as themerWallpaperBlockWave from 'themer-wallpaper-block-wave';
+import * as themerWallpaperDiamonds from 'themer-wallpaper-diamonds';
+import * as themerWallpaperOctagon from 'themer-wallpaper-octagon';
+import * as themerWallpaperShirts from 'themer-wallpaper-shirts';
+import * as themerWallpaperTriangles from 'themer-wallpaper-triangles';
+import * as themerWallpaperTrianglify from 'themer-wallpaper-trianglify';
+import * as themerXcode from 'themer-xcode';
 
 const templates = {
-  alfred: { folderName: 'Alfred', render: renderAlfred },
-  atomSyntax: { folderName: 'Atom Syntax', render: renderAtomSyntax },
-  atomUi: { folderName: 'Atom UI', render: renderAtomUi },
-  bbedit: { folderName: 'BBEdit', render: renderBbedit },
-  brave: { folderName: 'Brave', render: renderBrave },
-  chrome: { folderName: 'Chrome', render: renderChrome },
-  cmd: { folderName: 'CMD', render: renderCmd },
-  conemu: { folderName: 'ConEmu', render: renderConemu },
-  gnomeTerminal: { folderName: 'GNOME Terminal', render: renderGnomeTerminal },
-  hyper: { folderName: 'Hyper', render: renderHyper },
-  iterm: { folderName: 'iTerm', render: renderIterm },
-  jetbrains: { folderName: 'JetBrains', render: renderJetbrains },
-  kitty: { folderName: 'kitty', render: renderKitty },
-  prism: { folderName: 'prism', render: renderPrism },
-  sketchPalettes: { folderName: 'Sketch', render: renderSketchPalettes },
-  slack: { folderName: 'Slack sidebar', render: renderSlack },
-  sublimeText: { folderName: 'Sublime Text', render: renderSublimeText },
-  termite: { folderName: 'Termite', render: renderTermite },
-  tmux: { folderName: 'tmux', render: renderTmux },
-  vim: { folderName: 'Vim', render: renderVim },
-  vimLightline: { folderName: 'Vim lightline', render: renderVimLightline },
-  vscode: { folderName: 'VS Code', render: renderVscode },
-  wallpaperBlockWave: { folderName: 'Block Wave', render: renderWallpaperBlockWave },
-  wallpaperDiamonds: { folderName: 'Diamonds', render: renderWallpaperDiamonds },
-  wallpaperOctagon: { folderName: 'Octagon', render: renderWallpaperOctagon },
-  wallpaperShirts: { folderName: 'Shirts', render: renderWallpaperShirts },
-  wallpaperTriangles: { folderName: 'Triangles', render: renderWallpaperTriangles },
-  wallpaperTrianglify: { folderName: 'Trianglify', render: renderWallpaperTrianglify },
-  xcode: { folderName: 'Xcode', render: renderXcode },
+  alfred: { name: 'Alfred', ...themerAlfred },
+  atomSyntax: { name: 'Atom Syntax', ...themerAtomSyntax },
+  atomUi: { name: 'Atom UI', ...themerAtomUi },
+  bbedit: { name: 'BBEdit', ...themerBbedit },
+  brave: { name: 'Brave', ...themerBrave },
+  chrome: { name: 'Chrome', ...themerChrome },
+  cmd: { name: 'CMD', ...themerCmd },
+  conemu: { name: 'ConEmu', ...themerConemu },
+  gnomeTerminal: { name: 'GNOME Terminal', ...themerGnomeTerminal },
+  hyper: { name: 'Hyper', ...themerHyper },
+  iterm: { name: 'iTerm', ...themerIterm },
+  jetbrains: { name: 'JetBrains', ...themerJetbrains },
+  kitty: { name: 'kitty', ...themerKitty },
+  prism: { name: 'prism', ...themerPrism },
+  sketchPalettes: { name: 'Sketch', ...themerSketchPalettes },
+  slack: { name: 'Slack sidebar', ...themerSlack },
+  sublimeText: { name: 'Sublime Text', ...themerSublimeText },
+  termite: { name: 'Termite', ...themerTermite },
+  tmux: { name: 'tmux', ...themerTmux },
+  vim: { name: 'Vim', ...themerVim },
+  vimLightline: { name: 'Vim lightline', ...themerVimLightline },
+  vscode: { name: 'VS Code', ...themerVscode },
+  wallpaperBlockWave: { name: 'Block Wave Wallpaper', ...themerWallpaperBlockWave },
+  wallpaperDiamonds: { name: 'Diamonds Wallpaper', ...themerWallpaperDiamonds },
+  wallpaperOctagon: { name: 'Octagon Wallpaper', ...themerWallpaperOctagon },
+  wallpaperShirts: { name: 'Shirts Wallpaper', ...themerWallpaperShirts },
+  wallpaperTriangles: { name: 'Triangles Wallpaper', ...themerWallpaperTriangles },
+  wallpaperTrianglify: { name: 'Trianglify Wallpaper', ...themerWallpaperTrianglify },
+  xcode: { name: 'Xcode', ...themerXcode },
 };
 
 const resolutionOptions = {
@@ -72,51 +73,19 @@ const resolutionOptions = {
   wallpaperTrianglify: 'themer-wallpaper-trianglify-size',
 }
 
-const installationLocations = {
-  alfred: { name: 'Alfred.app', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-alfred#output' },
-  atomSyntax: { name: 'Atom syntax', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-syntax#output' },
-  atomUi: { name: 'Atom UI', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-ui#output' },
-  bbedit: { name: 'BBEdit', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-bbedit#output' },
-  brave: { name: 'Brave', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-brave#output' },
-  chrome: { name: 'Chrome', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-chrome#output' },
-  cmd: { name: 'CMD.exe', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-cmd#output' },
-  conemu: { name: 'ConEmu', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-conemu#output' },
-  gnomeTerminal: { name: 'GNOME Terminal', instructionsUrl: 'https://github.com/agarrharr/themer-gnome-terminal#installation--usage' },
-  hyper: { name: 'Hyper', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-hyper#output' },
-  iterm: { name: 'iTerm', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-iterm#output' },
-  jetbrains: { name: 'JetBrains', instructionsUrl: 'https://github.com/tomselvi/themer-jetbrains#output' },
-  kitty: { name: 'kitty', instructionsUrl: 'https://github.com/0x52a1/themer-kitty#output' },
-  prism: { name: 'prism', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-prism#output' },
-  sketchPalettes: { name: 'Sketch palettes', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sketch-palettes#output' },
-  slack: { name: 'Slack sidebar', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack#output' },
-  sublimeText: { name: 'Sublime Text', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sublime-text#output' },
-  termite: { name: 'Termite', instructionsUrl: 'https://github.com/0x52a1/themer-termite#installation-and-usage' },
-  tmux: { name: 'tmux', instructionsUrl: 'https://github.com/tomselvi/themer-tmux#output' },
-  vim: { name: 'Vim', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim#output' },
-  vimLightline: { name: 'Vim lightline', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim-lightline#output' },
-  vscode: { name: 'VS Code', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vscode#output' },
-  xcode: { name: 'Xcode', instructionsUrl: 'https://github.com/mjswensen/themer/tree/master/cli/packages/themer-xcode#output' },
-}
+const instructions = url => `# \`themer\`
 
-const instructions = (selections, url) => `# Installation
-
-Information on how to install your themer themes can be found in the following locations:
-
-* [themer CLI documentation](https://github.com/mjswensen/themer)
-${
-  Object.entries(selections)
-    .filter(([_, selected]) => selected)
-    .sort((a, b) => a[0] < b[0] ? -1 : 1)
-    .map(([key]) => installationLocations[key])
-    .filter(Boolean)
-    .map(({name, instructionsUrl}) => `* [${name}](${instructionsUrl})`)
-    .join('\n')
-}
-
-# Your theme's URL
+Your theme's unique URL:
 
 ${url}
-`;
+
+If you find \`themer\` useful, here are some ways to support the project:
+
+* Star [\`themer\` on GitHub](https://github.com/mjswensen/themer)
+* Follow [@themerdev](https://twitter.com/themerdev) on Twitter
+* [Send a tip through the Brave Browser](https://brave.com/the537), either on [the repository page](https://github.com/mjswensen/themer) or [the Web UI](https://themer.dev)
+
+# Installation instructions`;
 
 const colorsForCli = (cliColors, url) => `// This file can be used with the themer CLI, see https://github.com/mjswensen/themer
 
@@ -127,21 +96,28 @@ module.exports.colors = ${JSON.stringify(cliColors, null, 2)};
 
 export default async function generateZip(selections, colors, width, height, url, cliColors) {
   const zip = new JSZip();
-  const preparedColors = prepareColors(colors, () => {});
-  zip.file('README.md', instructions(selections, url));
-  zip.file('colors.js', colorsForCli(cliColors, url));
-  for (const [key, selected] of Object.entries(selections)) {
-    if (selected) {
-      const files = await Promise.all(templates[key].render(
-        preparedColors,
-        key in resolutionOptions
-          ? { [resolutionOptions[key]]: `${width}x${height}` }
-          : {},
-      ));
-      files.forEach(file => {
-        zip.folder(templates[key].folderName).file(file.name, file.contents);
-      });
-    }
+  const preparedColors = prepareColors(colors);
+  const selectedKeys = Array.from(Object.entries(selections))
+    .filter(([_, selected]) => selected)
+    .map(([key]) => key);
+  const selectedTemplates = selectedKeys.map(key => templates[key]);
+  const extraArgs = selectedKeys.reduce(
+    (acc, key) => ({
+      ...acc,
+      [resolutionOptions[key]]: `${width}x${height}`
+    }),
+    {},
+  );
+  const files = await themer(
+    preparedColors,
+    selectedTemplates,
+    extraArgs,
+    '/',
+    instructions(url),
+  );
+  for (const file of files) {
+    zip.file(file.name, file.contents);
   }
+  zip.file('colors.js', colorsForCli(cliColors, url));
   return zip;
 }
