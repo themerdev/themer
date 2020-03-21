@@ -64,6 +64,8 @@ themer \
   --out <directory>
 ```
 
+Your generated theme files, as well as a README on how to install them, will be written to the output directory.
+
 `themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [themer-colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default)). The same is true for templates.
 
 ### Example workflow
