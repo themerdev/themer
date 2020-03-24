@@ -103,6 +103,7 @@
   margin-top: var(--size-small-1);
 }
 
-.tip {
+.tip,
+.follow {
   margin-top: var(--size-large-1);
 }

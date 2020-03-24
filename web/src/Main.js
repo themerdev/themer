@@ -103,6 +103,7 @@ export default () => {
       </div>
       <footer className={ styles.footer } style={{ color: getActiveColorOrFallback(['shade3']) }}>
         <div>themer is free and open source software, made by <Link href="https://mjswensen.com">mjswensen</Link> with <Link href="https://github.com/mjswensen/themer/graphs/contributors">contributors</Link>, and is released under the MIT license</div>
+        <div className={ styles.follow }>follow <Link href="https://twitter.com/themerdev">@themerdev</Link> on Twitter for new themes, wallpapers, and features as soon as they launch</div>
         <div className={ styles.tip }>enjoying themer? send a tip through <Link href="https://brave.com/the537">Brave</Link></div>
       </footer>
       <Notification />
