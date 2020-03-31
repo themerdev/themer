@@ -640,7 +640,7 @@ const renderInstructions = paths => {
   return `
 Copy (or symlink) the generated package directory into the VS Code extensions directory:
 
-    cp ${packageDirectory} ~/.vscode/extensions/
+    cp -R '${packageDirectory}' ~/.vscode/extensions/
 
 Then reload or restart VS Code. The generated theme package should be in the list of installed extensions, and ${themeNames.join(' / ')} will be available in the list of themes.
   `;
