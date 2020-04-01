@@ -1,9 +1,12 @@
 const { render, renderInstructions } = require('./index'),
   { colors } = require('../../themer-colors-default'),
-  del = require('del'),
-  fs = require('pn/fs'),
+  os = require('os'),
+  fs = require('fs'),
+  { promisify } = require('util'),
+  writeFile = promisify(fs.writeFile),
+  readFile = promisify(fs.readFile),
+  mkdir = promisify(fs.mkdir),
   less = require('less'),
-  mkdirp = require('mkdirp-promise'),
   path = require('path');
 
 describe('render function', () => {
@@ -30,9 +33,7 @@ describe('render function', () => {
     }
   };
 
-  const outputDir = 'test-output';
-
-  afterAll(() => { del(outputDir); });
+  const outputDir = path.join(os.tmpdir(), new Date().valueOf().toString());
 
   it('should properly render package.json files', async () => await basicFileCheck(/package\.json/));
   it('should properly render color variables files', async () => await basicFileCheck(/colors\.less/));
@@ -58,25 +59,26 @@ describe('render function', () => {
 
   it('should produce valid, compilable less', async () => {
     const files = await promisedFiles;
-    const outputFilePaths = await Promise.all(files.map(file => {
+    const outputFilePaths = await Promise.all(files.map(async file => {
       const outputFilePath = path.resolve(outputDir, file.name);
-      return mkdirp(path.dirname(outputFilePath))
-        .then(() => fs.writeFile(outputFilePath, file.contents))
-        .then(() => outputFilePath);
+      await mkdir(path.dirname(outputFilePath), { recursive: true })
+      await writeFile(outputFilePath, file.contents);
+      return outputFilePath;
     }));
     const indexFilePaths = outputFilePaths.filter(outputFilePath => /index\.less/.test(outputFilePath));
     expect(indexFilePaths.length).toBe(2);
     const wrapped = await wrap(() => Promise.all(
       indexFilePaths.map(
-        indexFilePath => fs.readFile(indexFilePath, 'utf8').then(
-          contents => less.render(
+        async indexFilePath => {
+          const contents = await readFile(indexFilePath, 'utf8')
+          return await less.render(
             contents,
             {
               paths: [path.dirname(indexFilePath)],
               filename: path.basename(indexFilePath),
             },
-          )
-        )
+          );
+        }
       )
     ));
     expect(wrapped).not.toThrow();

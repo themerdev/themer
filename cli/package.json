@@ -7,6 +7,6 @@
     "test": "jest --coverage"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^25.2.4"
   }
 }

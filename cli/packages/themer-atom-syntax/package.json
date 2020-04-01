@@ -15,10 +15,7 @@
     "prepublishOnly": "cp ../../../LICENSE.md ./"
   },
   "devDependencies": {
-    "del": "^3.0.0",
-    "less": "^3.8.1",
-    "mkdirp-promise": "^5.0.1",
-    "pn": "^1.1.0"
+    "less": "^3.8.1"
   },
   "peerDependencies": {
     "themer": "^2.1||^3"

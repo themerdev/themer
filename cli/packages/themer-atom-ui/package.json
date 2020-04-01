@@ -48,10 +48,8 @@
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-ui#readme",
   "dependencies": {},
   "devDependencies": {
-    "less": "^3.0.0-alpha.3",
-    "lodash": "^4.17.4",
-    "mkdirp-promise": "^5.0.1",
-    "pn": "^1.0.0"
+    "less": "^3.11.1",
+    "lodash": "^4.17.4"
   },
   "peerDependencies": {
     "themer": "^2.1||^3"
