@@ -4,8 +4,8 @@ exports[`themer Alfred.app theme template should provide installation instructio
 "
 Simply open the files to import them into Alfred. Either double-click them in Finder or use the terminal:
 
-    open themer-alfred-dark.alfredappearance
-    open themer-alfred-light.alfredappearance
+    open 'themer-alfred-dark.alfredappearance'
+    open 'themer-alfred-light.alfredappearance'
 "
 `;
 
