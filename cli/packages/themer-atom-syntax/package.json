@@ -1,6 +1,6 @@
 {
   "name": "themer-atom-syntax",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Atom syntax template for themer.",
   "main": "lib/index.js",
   "engines": {
