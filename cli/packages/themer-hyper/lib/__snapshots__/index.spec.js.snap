@@ -4,8 +4,8 @@ exports[`Hyper.app theme generator should provide installation instructions 1`] 
 "
 First, copy (or symlink) the outputted package directories to the Hyper local plugins directory:
 
-    cp themer-hyper-dark ~/.hyper_plugins/local/
-    cp themer-hyper-light ~/.hyper_plugins/local/
+    cp -R 'themer-hyper-dark' ~/.hyper_plugins/local/
+    cp -R 'themer-hyper-light' ~/.hyper_plugins/local/
 
 Then edit \`~/.hyper.js\` and add the package to the \`localPlugins\` array:
 

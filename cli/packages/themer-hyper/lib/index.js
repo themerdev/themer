@@ -68,7 +68,7 @@ const renderInstructions = paths => {
   return `
 First, copy (or symlink) the outputted package ${directories.length > 1 ? 'directories' : 'directory'} to the Hyper local plugins directory:
 
-${directories.map(dir => `    cp ${dir} ~/.hyper_plugins/local/`).join('\n')}
+${directories.map(dir => `    cp -R '${dir}' ~/.hyper_plugins/local/`).join('\n')}
 
 Then edit \`~/.hyper.js\` and add the package to the \`localPlugins\` array:
 
