@@ -1,12 +1,1 @@
-
-    <svg width="480px" height="160px" viewBox="0 0 480 160" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="shade-scale">
-          <stop stop-color="#e0e2dd" offset="0%"></stop><stop stop-color="#caccc6" offset="16.666666666666668%"></stop><stop stop-color="#b5b5b0" offset="33.333333333333336%"></stop><stop stop-color="#9f9f99" offset="50%"></stop><stop stop-color="#898982" offset="66.66666666666667%"></stop><stop stop-color="#73736b" offset="83.33333333333334%"></stop><stop stop-color="#5e5c55" offset="100%"></stop>
-        </linearGradient>
-      </defs>
-      <rect fill="#48463e" x="0" y="0" width="480" height="160"></rect>
-      <circle fill="#e29288" cx="51" cy="49" r="21"></circle><circle fill="#e4a572" cx="105" cy="49" r="21"></circle><circle fill="#dbb66d" cx="159" cy="49" r="21"></circle><circle fill="#a4cc78" cx="213" cy="49" r="21"></circle><circle fill="#71ca98" cx="267" cy="49" r="21"></circle><circle fill="#7eb9d0" cx="321" cy="49" r="21"></circle><circle fill="#bb91b7" cx="375" cy="49" r="21"></circle><circle fill="#c08da4" cx="429" cy="49" r="21"></circle>
-      <rect fill="url(#shade-scale)" x="30" y="86" width="420" height="42" rx="3" ry="3"></rect>
-    </svg>
-  
+<svg height="160" viewBox="0 0 480 160" width="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0" stop-color="#e0e2dd"/><stop offset=".16666666667" stop-color="#caccc6"/><stop offset=".33333333333" stop-color="#b5b5b0"/><stop offset=".5" stop-color="#9f9f99"/><stop offset=".66666666667" stop-color="#898982"/><stop offset=".83333333333" stop-color="#73736b"/><stop offset="1" stop-color="#5e5c55"/></linearGradient><path d="m0 0h480v160h-480z" fill="#48463e"/><circle cx="51" cy="49" fill="#e29288" r="21"/><circle cx="105" cy="49" fill="#e4a572" r="21"/><circle cx="159" cy="49" fill="#dbb66d" r="21"/><circle cx="213" cy="49" fill="#a4cc78" r="21"/><circle cx="267" cy="49" fill="#71ca98" r="21"/><circle cx="321" cy="49" fill="#7eb9d0" r="21"/><circle cx="375" cy="49" fill="#bb91b7" r="21"/><circle cx="429" cy="49" fill="#c08da4" r="21"/><rect fill="url(#a)" height="42" rx="3" width="420" x="30" y="86"/></svg>
