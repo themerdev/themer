@@ -2,6 +2,8 @@
 
 exports[`themer vim lighline palette generator should provide installation instructions 1`] = `
 "
+Make sure that the \`background\` option is set in \`.vimrc\`.
+
 Copy or symlink \`ThemerVimLightline.vim\` to \`~/.vim/autoload/lightline/colorscheme/\`.
 
 Then set the colorscheme in \`.vimrc\`:

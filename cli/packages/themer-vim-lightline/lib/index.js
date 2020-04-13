@@ -59,6 +59,8 @@ const render = (colors) => {
 };
 
 const renderInstructions = paths => `
+Make sure that the \`background\` option is set in \`.vimrc\`.
+
 Copy or symlink \`${paths[0]}\` to \`~/.vim/autoload/lightline/colorscheme/\`.
 
 Then set the colorscheme in \`.vimrc\`:
