@@ -6,6 +6,7 @@ Copy or symlink \`ThemerVim.vim\` to \`~/.vim/colors/\`.
 
 Then set the colorscheme in \`.vimrc\`:
 
+    \\" The background option must be set before running this command.
     colo ThemerVim
 "
 `;
