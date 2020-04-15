@@ -2,8 +2,8 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([themer-colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default)):
 
-![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-wallpaper-block-wave/assets/desktop-dark.svg)
-![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-wallpaper-block-wave/assets/desktop-light.svg)
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-block-wave/assets/desktop-dark.svg)
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-block-wave/assets/desktop-light.svg)
 
 ## Installation & usage
 

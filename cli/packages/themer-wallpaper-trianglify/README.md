@@ -4,7 +4,7 @@ A wallpaper template for [themer](https://github.com/mjswensen/themer). It uses 
 
 Here's a preview using [themer's default color set](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default):
 
-![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-wallpaper-trianglify/assets/desktop-dark.svg)
+![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-trianglify/assets/desktop-dark.svg)
 
 ## Installation & usage
 
