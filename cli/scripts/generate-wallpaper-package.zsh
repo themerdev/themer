@@ -133,13 +133,11 @@ const { render } = require('./index');
 const { colors } = require('../../themer-colors-default');
 
 describe('themer "TODO" wallpaper', () => {
-  it('should render valid SVG', done => {
-    Promise.all(render(colors, {})).then(files => {
-      files.forEach(file => {
-        expect(file.contents.toString('utf8')).toMatchSnapshot();
-      });
-      done();
+  it('should render valid SVG', async () => {
+    const files = await Promise.all(render(colors, {}));
+    files.forEach(file => {
+      expect(file.contents.toString('utf8')).toMatchSnapshot();
     });
-  })
+  });
 });
 EOF
