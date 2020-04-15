@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-brave#readme",
   "dependencies": {
-    "themer-chrome": "^1.2.0"
+    "themer-chrome": "^1.2.1"
   },
   "devDependencies": {},
   "peerDependencies": {
