@@ -36,6 +36,16 @@ Object {
         252,
         255,
       ],
+      "omnibox_background": Array [
+        40,
+        38,
+        41,
+      ],
+      "omnibox_text": Array [
+        255,
+        252,
+        255,
+      ],
       "tab_background_text": Array [
         255,
         252,
@@ -115,6 +125,16 @@ Object {
         255,
       ],
       "ntp_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "omnibox_background": Array [
+        224,
+        220,
+        224,
+      ],
+      "omnibox_text": Array [
         40,
         38,
         41,
