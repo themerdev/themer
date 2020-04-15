@@ -33,6 +33,8 @@ const renderManifest = (colorSet) => {
               tab_background_text_incognito_inactive: colorSet.rgbColors.shade7,
               tab_text: colorSet.rgbColors.shade7,
               toolbar: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              omnibox_text: colorSet.isDark ? colorSet.rgbColors.shade6 : colorSet.rgbColors.shade1,
+              omnibox_background: colorSet.isDark ? colorSet.rgbColors.shade0 : colorSet.rgbColors.shade7,
             },
             tints: {
               buttons: [colorSet.hslColors.accent5[0] / 360, 0.5, 0.5],
