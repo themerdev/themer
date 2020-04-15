@@ -9875,16 +9875,16 @@ themer-bbedit@^1.0.5:
     xml "^1.0.1"
 
 themer-brave@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/themer-brave/-/themer-brave-1.1.0.tgz#b76d02d43d5cc91620f7b2ff79fbc2feb8cce75c"
-  integrity sha512-Kn5KEoC/+PhgIghPLa/EhQ6FztCFlHyjuGqLwfK911V1IdegeKjtz9uXxHP48rrfx2rdPHEnS+kytKc7PZw8ag==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/themer-brave/-/themer-brave-1.1.1.tgz#46881f1a3809f0e0fcf3de0698306fc259441500"
+  integrity sha512-g0Tawg1qNRoxskEYBx7N+iHX/Jj2Nsr34mWCJLT0cWk47Ks11sFy9rxqw8HhNVmc4Z8/4pbVX8XTeerkfXVnTw==
   dependencies:
-    themer-chrome "^1.2.0"
+    themer-chrome "^1.2.1"
 
-themer-chrome@^1.0.6, themer-chrome@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/themer-chrome/-/themer-chrome-1.2.0.tgz#6c681a3d9a7126e7bb69ea8c49cb67f1c7d9f589"
-  integrity sha512-5S0CZuh329Iaelp42TIbH6+JvMonfhTYo0rsr+tTPx07eTwzoGuF+aUJDzTEHCmvgr3ee5FGf+DcwlQ6eLLQPw==
+themer-chrome@^1.0.6, themer-chrome@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/themer-chrome/-/themer-chrome-1.2.1.tgz#a3a502bbecf3ea8ee415a0ec388eeb5f7c5f2558"
+  integrity sha512-xoT63wmXHSsPKD+/6Ca5iXOI++j6e73xtA4ZUcjHbNc2fnHhWMxxqZ85cGB53k7kRKfAaiDTgmc0MXF3ScPo8g==
   dependencies:
     color "^3.0.0"
     lodash "^4.17.4"
