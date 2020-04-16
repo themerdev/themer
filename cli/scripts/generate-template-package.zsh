@@ -49,7 +49,7 @@ cat << EOF > $PACKAGE/package.json
   },
   "keywords": [
     "themer",
-    "$NAME"
+    "$1"
   ]
 }
 EOF
@@ -94,7 +94,7 @@ cat << EOF > $LIB/index.spec.js
 const { render } = require('./index');
 const { colors } = require('../../themer-colors-default');
 
-describe('themer $NAME theme generator', () => {
+describe('themer $1 theme generator', () => {
   // TODO
 });
 EOF
