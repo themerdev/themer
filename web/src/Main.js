@@ -11,6 +11,7 @@ import CopyUrl from './CopyUrl';
 import StarCount from './StarCount';
 import ThemeContext from './ThemeContext';
 import Notification from './Notification';
+import TwitterHandle from './TwitterHandle';
 
 export default () => {
   const [keyboarding, setKeyboarding] = useState(false);
@@ -52,7 +53,10 @@ export default () => {
       <div className={ styles.container }>
         <header className={ styles.header }>
           <h1 className={ styles.h1 }><a href="/" style={{ color: getActiveColorOrFallback(['shade7']) }}>themer</a></h1>
-          <StarCount />
+          <span>
+            <TwitterHandle />
+            <StarCount />
+          </span>
         </header>
         <hr
           className={ styles.hr }
