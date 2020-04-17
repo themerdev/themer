@@ -18,14 +18,3 @@
 .handle:active {
   background-color: var(--handle-active-background-color);
 }
-
-.svg {
-  height: var(--size-large-1);
-  width: var(--size-large-1);
-  margin-right: var(--size-small-5);
-  vertical-align: middle;
-}
-
-.bird{
-  fill: currentColor;
-}
