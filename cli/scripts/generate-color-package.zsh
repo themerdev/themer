@@ -78,6 +78,44 @@ mkdir $LIB
 
 cat << EOF > $LIB/index.js
 // TODO
+module.exports.colors = {
+  dark: {
+    shade0: '',
+    shade1: '',
+    shade2: '',
+    shade3: '',
+    shade4: '',
+    shade5: '',
+    shade6: '',
+    shade7: '',
+    accent0: '',
+    accent1: '',
+    accent2: '',
+    accent3: '',
+    accent4: '',
+    accent5: '',
+    accent6: '',
+    accent7: '',
+  },
+  light: {
+    shade0: '',
+    shade1: '',
+    shade2: '',
+    shade3: '',
+    shade4: '',
+    shade5: '',
+    shade6: '',
+    shade7: '',
+    accent0: '',
+    accent1: '',
+    accent2: '',
+    accent3: '',
+    accent4: '',
+    accent5: '',
+    accent6: '',
+    accent7: '',
+  },
+};
 EOF
 
 cat << EOF > $LIB/index.spec.js
