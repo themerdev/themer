@@ -136,6 +136,7 @@ npx \
 | [themer-colors-nova](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-nova) | ![themer-colors-nova preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-nova-dark-swatch.svg) | (dark only) |
 | [themer-colors-mojave](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-mojave) | ![themer-colors-mojave dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-mojave-dark-swatch.svg) | ![themer-colors-mojave light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-mojave-light-swatch.svg) |
 | [themer-colors-rivet](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-rivet) | ![themer-colors-rivet dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-rivet-dark-swatch.svg) | ![themer-colors-rivet light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-rivet-light-swatch.svg) |
+| [themer-colors-dracula](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-dracula) | ![themer-colors-dracula preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@0a1c71ce1fd01ec56daca72be8b04db6d81b16b5/assets/preview/themer-colors-dracula-dark-swatch.svg) | (dark only) |
 
 ### Create your own color set
 
