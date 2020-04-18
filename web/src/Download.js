@@ -7,6 +7,7 @@ import saveAs from 'file-saver';
 import ThemeContext from './ThemeContext';
 
 export default () => {
+  const [alacritty, setAlacritty] = useState(false);
   const [hyper, setHyper] = useState(false);
   const [iterm, setIterm] = useState(false);
   const [gnomeTerminal, setGnomeTerminal] = useState(false);
@@ -44,6 +45,12 @@ export default () => {
       <div className={ styles.fieldsetWrapper }>
         <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
           <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Terminals</legend>
+          <Checkbox
+            value={ alacritty }
+            onChange={ () => setAlacritty(!alacritty) }
+            label="Alacritty"
+            accentSelected
+          />
           <Checkbox
             value={ hyper }
             onChange={ () => setHyper(!hyper) }
@@ -250,6 +257,7 @@ export default () => {
         onClick={ async () => {
           const zip = await generateZip(
             {
+              alacritty,
               hyper,
               iterm,
               gnomeTerminal,

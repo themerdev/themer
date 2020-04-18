@@ -2770,7 +2770,7 @@ color-string@^1.5.2:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@^3.0.0, color@^3.1.0:
+color@^3.0.0, color@^3.1.0, color@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/color/-/color-3.1.2.tgz#68148e7f85d41ad7649c5fa8c8106f098d229e10"
   integrity sha512-vXTJhHebByxZn3lDvDJYw4lR5+uB3vuoHsuYA5AKuxRVn5wzzIfQKGLBmgdVRHKTJYeK5rvJcHnrd0Li49CFpg==
@@ -9849,6 +9849,13 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+themer-alacritty@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-alacritty/-/themer-alacritty-1.0.0.tgz#4d3ba62da4df1acd4da649a5e66787752cb34be4"
+  integrity sha512-IdCODj37VIE8mCRDDqvQc5HoqqBGCScevmp9V4TOmvCd7/IlYQJKzZJtpWhJvnutj82GjsvA8VhSCbQxKugXzg==
+  dependencies:
+    color "^3.1.2"
 
 themer-alfred@^1.0.9:
   version "1.1.1"

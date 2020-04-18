@@ -2,6 +2,7 @@ import prepareColors from 'themer/lib/prepare';
 import themer from 'themer/lib/themer';
 import JSZip from 'jszip';
 
+import * as themerAlacritty from 'themer-alacritty';
 import * as themerAlfred from 'themer-alfred';
 import * as themerAtomSyntax from 'themer-atom-syntax';
 import * as themerAtomUi from 'themer-atom-ui';
@@ -33,6 +34,7 @@ import * as themerWallpaperTrianglify from 'themer-wallpaper-trianglify';
 import * as themerXcode from 'themer-xcode';
 
 const templates = {
+  alacritty: { name: 'Alacritty', ...themerAlacritty },
   alfred: { name: 'Alfred', ...themerAlfred },
   atomSyntax: { name: 'Atom Syntax', ...themerAtomSyntax },
   atomUi: { name: 'Atom UI', ...themerAtomUi },
