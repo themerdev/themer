@@ -51,7 +51,8 @@ cat << EOF > $PACKAGE/package.json
     "themer",
     "colors",
     "colorset",
-    "theme"
+    "theme",
+    "$1"
   ]
 }
 EOF
