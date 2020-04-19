@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Firefox theme generator should provide installation instructions 1`] = `
+"
+1. npm i -g web-ext
+2. web-ext run -s (\`Themer Dark\` or \`Themer Light\`).
+3. publish it at https://addons.mozilla.org/en-US/developers/addon/submit/distribution
+  "
+`;
+
+exports[`Firefox theme generator should render properly formatted manifest files 1`] = `
+Object {
+  "manifest_version": 2,
+  "name": "Themer Dark",
+  "theme": Object {
+    "colors": Object {
+      "bookmark_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "frame": Array [
+        40,
+        38,
+        41,
+      ],
+      "frame_inactive": Array [
+        71,
+        66,
+        71,
+      ],
+      "icons": Array [
+        255,
+        252,
+        255,
+      ],
+      "icons_attention": Array [
+        255,
+        252,
+        255,
+      ],
+      "ntp_background": Array [
+        71,
+        66,
+        71,
+      ],
+      "ntp_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "popup": Array [
+        71,
+        66,
+        71,
+      ],
+      "popup_border": Array [
+        71,
+        66,
+        71,
+      ],
+      "popup_highlight": Array [
+        224,
+        220,
+        224,
+      ],
+      "popup_highlight_text": Array [
+        101,
+        96,
+        102,
+      ],
+      "popup_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "sidebar": Array [
+        71,
+        66,
+        71,
+      ],
+      "sidebar_border": Array [
+        71,
+        66,
+        71,
+      ],
+      "sidebar_highlight": Array [
+        101,
+        96,
+        102,
+      ],
+      "sidebar_highlight_text": Array [
+        224,
+        220,
+        224,
+      ],
+      "sidebar_text": Array [
+        224,
+        220,
+        224,
+      ],
+      "tab_background_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "tab_loading": Array [
+        255,
+        252,
+        255,
+      ],
+      "tab_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "toolbar": Array [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_bottom_separator": Array [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_field": Array [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_field_border": Array [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_field_border_focus": Array [
+        101,
+        96,
+        102,
+      ],
+      "toolbar_field_highlight_text": Array [
+        101,
+        96,
+        102,
+      ],
+      "toolbar_field_separator": Array [
+        40,
+        38,
+        41,
+      ],
+      "toolbar_field_text": Array [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field_text_focus": Array [
+        255,
+        252,
+        255,
+      ],
+    },
+  },
+}
+`;
+
+exports[`Firefox theme generator should render properly formatted manifest files 2`] = `
+Object {
+  "manifest_version": 2,
+  "name": "Themer Light",
+  "theme": Object {
+    "colors": Object {
+      "bookmark_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "frame": Array [
+        224,
+        220,
+        224,
+      ],
+      "frame_inactive": Array [
+        255,
+        252,
+        255,
+      ],
+      "icons": Array [
+        40,
+        38,
+        41,
+      ],
+      "icons_attention": Array [
+        40,
+        38,
+        41,
+      ],
+      "ntp_background": Array [
+        255,
+        252,
+        255,
+      ],
+      "ntp_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "popup": Array [
+        255,
+        252,
+        255,
+      ],
+      "popup_border": Array [
+        255,
+        252,
+        255,
+      ],
+      "popup_highlight": Array [
+        71,
+        66,
+        71,
+      ],
+      "popup_highlight_text": Array [
+        193,
+        188,
+        194,
+      ],
+      "popup_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "sidebar": Array [
+        255,
+        252,
+        255,
+      ],
+      "sidebar_border": Array [
+        255,
+        252,
+        255,
+      ],
+      "sidebar_highlight": Array [
+        193,
+        188,
+        194,
+      ],
+      "sidebar_highlight_text": Array [
+        71,
+        66,
+        71,
+      ],
+      "sidebar_text": Array [
+        71,
+        66,
+        71,
+      ],
+      "tab_background_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "tab_loading": Array [
+        40,
+        38,
+        41,
+      ],
+      "tab_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "toolbar": Array [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_bottom_separator": Array [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field": Array [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field_border": Array [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field_border_focus": Array [
+        193,
+        188,
+        194,
+      ],
+      "toolbar_field_highlight_text": Array [
+        193,
+        188,
+        194,
+      ],
+      "toolbar_field_separator": Array [
+        224,
+        220,
+        224,
+      ],
+      "toolbar_field_text": Array [
+        40,
+        38,
+        41,
+      ],
+      "toolbar_field_text_focus": Array [
+        40,
+        38,
+        41,
+      ],
+    },
+  },
+}
+`;
