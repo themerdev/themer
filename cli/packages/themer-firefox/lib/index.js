@@ -25,22 +25,33 @@ const renderManifest = (colorSet) => {
             colors: {
               bookmark_text: colorSet.rgbColors.shade7,
               frame: colorSet.isDark ? colorSet.rgbColors.shade0 : colorSet.rgbColors.shade1,
+              frame_inactive: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              icons_attention: colorSet.rgbColors.shade7,
+              icons: colorSet.rgbColors.shade7,
               ntp_background: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
               ntp_text: colorSet.rgbColors.shade7,
+              popup_highlight_text: colorSet.rgbColors.shade2, 
+              popup_highlight: colorSet.rgbColors.shade6,
+              toolbar_field_highlight_text: colorSet.rgbColors.shade2, 
+              popup_border: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              popup_text: colorSet.rgbColors.shade7,
+              popup: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              sidebar_border: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              sidebar_highlight_text: colorSet.rgbColors.shade6,
+              sidebar_highlight: colorSet.rgbColors.shade2,
+              sidebar_text: colorSet.rgbColors.shade6,
+              sidebar:  colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
               tab_background_text: colorSet.rgbColors.shade7,
-              tab_background_text_inactive: colorSet.rgbColors.shade7,
-              tab_background_text_incognito: colorSet.rgbColors.shade7,
-              tab_background_text_incognito_inactive: colorSet.rgbColors.shade7,
+              tab_loading: colorSet.rgbColors.shade7,
               tab_text: colorSet.rgbColors.shade7,
+              toolbar_bottom_separator:  colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              toolbar_field_border: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              toolbar_field_separator: colorSet.isDark ? colorSet.rgbColors.shade0 : colorSet.rgbColors.shade1,
+              toolbar_field_text_focus: colorSet.rgbColors.shade7,
+              toolbar_field_text: colorSet.rgbColors.shade7,
+              toolbar_field: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
+              toolbar_field_border_focus: colorSet.rgbColors.shade2,
               toolbar: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
-              omnibox_text: colorSet.rgbColors.shade7,
-              omnibox_background: colorSet.isDark ? colorSet.rgbColors.shade0 : colorSet.rgbColors.shade1,
-            },
-            tints: {
-              buttons: [colorSet.hslColors.accent5[0] / 360, 0.5, 0.5],
-              frame_inactive: [-1, -1, -1],
-              frame_incognito: [colorSet.hslColors.accent6[0] / 360, 1.0, colorSet.isDark ? 0.55 : 0.45],
-              frame_incognito_inactive: [colorSet.hslColors.accent6[0] / 360, 1.0, colorSet.isDark ? 0.55 : 0.45],
             },
           },
         },
@@ -65,11 +76,8 @@ const render = colors => {
 const renderInstructions = paths => {
   const directories = new Set(paths.map(path.dirname));
   return `
-1. Launch Chrome and go to \`chrome://extensions\`.
-2. Check the "Developer mode" checkbox at the top.
-3. Click the "Load unpacked extension..." button and choose the desired theme directory (${[...directories].map(dir => `\`${dir}\``).join(' or ')}).
-
-(To reset or remove the theme, visit \`chrome://settings\` and click "Reset to Default" in the "Appearance" section.)
+1. npm i -g web-ext \`chrome://extensions\`.
+2. web-ext run -s (${[...directories].map(dir => `\`${dir}\``).join(' or ')}).
   `;
 }
 
