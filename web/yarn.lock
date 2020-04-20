@@ -9908,6 +9908,11 @@ themer-colors-default@^1.0.10:
   resolved "https://registry.yarnpkg.com/themer-colors-default/-/themer-colors-default-1.0.10.tgz#e552fa0438cbecde8028627a71371800a0076822"
   integrity sha512-hS10/K4UOyj5ptzZ9WokNcnVTfT67Xnid0jcfjsD/ATU+N41V0B5lXFhixfui05pB6p+lM94tN8au+sOHvIwPw==
 
+themer-colors-dracula@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-dracula/-/themer-colors-dracula-1.0.0.tgz#831b80ce9f30c543014e10b64e37fa4927debf8d"
+  integrity sha512-7HN57Pd23Y0rSnZ7bRdQj+EHQeWyXMWWzEVtAgJaP/xrMNlA9eD0UeGW6Fnn0GBXD3V62Gg4sY4nVUluYAQ4ng==
+
 themer-colors-finger-paint@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/themer-colors-finger-paint/-/themer-colors-finger-paint-2.0.0.tgz#bf9795fb83b68aeaaee42e9fdb323d8b2554cf83"
@@ -9965,6 +9970,11 @@ themer-colors-rivet@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/themer-colors-rivet/-/themer-colors-rivet-1.0.0.tgz#49fc7f073ef6cdb1e50ba752d5b7e7468ef97ee9"
   integrity sha512-ckQIOnyO68HzGjiJs6huXHJryXeMI6Q2QaPk9YRfkegtVpcb0kBhlWq0NzqJPMBHdieS2f+TtMSWdUBMMMyIsA==
+
+themer-colors-seti@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/themer-colors-seti/-/themer-colors-seti-1.0.0.tgz#7da0df7417ed8f87ac333d181368cb1f8bf029d4"
+  integrity sha512-NFgGaMvIfAZiojKVbqH4PbZ61Fa2jyv0rJqSHBOgNAViNtX2PauH7d9pFELZh/bonmEZWQ+V1EEBLn2zLWTtMw==
 
 themer-colors-solarized@^1.0.3:
   version "1.0.3"

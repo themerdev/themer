@@ -17,6 +17,8 @@ import { colors as novaColors } from 'themer-colors-nova';
 import { colors as mojaveColors } from 'themer-colors-mojave';
 import { colors as rivetColors } from 'themer-colors-rivet';
 import { colors as rightInTheTealsColors} from 'themer-colors-right-in-the-teals';
+import { colors as draculaColors } from 'themer-colors-dracula';
+import { colors as setiColors } from 'themer-colors-seti';
 
 const PreBuiltLink = ({ colors, children }) => {
   const { activeColorSet } = useContext(ThemeContext);
@@ -59,6 +61,8 @@ export default () => {
           <li><PreBuiltLink colors={ novaColors }>Nova</PreBuiltLink></li>
           <li><PreBuiltLink colors={ mojaveColors }>Mojave</PreBuiltLink></li>
           <li><PreBuiltLink colors={ rivetColors }>Rivet</PreBuiltLink></li>
+          <li><PreBuiltLink colors={ draculaColors }>Dracula</PreBuiltLink></li>
+          <li><PreBuiltLink colors={ setiColors }>Seti</PreBuiltLink></li>
         </ul>
       </li>
     </ul>
