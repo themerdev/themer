@@ -76,8 +76,9 @@ const render = colors => {
 const renderInstructions = paths => {
   const directories = new Set(paths.map(path.dirname));
   return `
-1. npm i -g web-ext \`chrome://extensions\`.
+1. npm i -g web-ext
 2. web-ext run -s (${[...directories].map(dir => `\`${dir}\``).join(' or ')}).
+3. publish it at https://addons.mozilla.org/en-US/developers/addon/submit/distribution
   `;
 }
 

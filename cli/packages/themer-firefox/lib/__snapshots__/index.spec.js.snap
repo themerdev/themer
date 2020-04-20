@@ -2,8 +2,9 @@
 
 exports[`Firefox theme generator should provide installation instructions 1`] = `
 "
-1. npm i -g web-ext \`chrome://extensions\`.
+1. npm i -g web-ext
 2. web-ext run -s (\`Themer Dark\` or \`Themer Light\`).
+3. publish it at https://addons.mozilla.org/en-US/developers/addon/submit/distribution
   "
 `;
 
