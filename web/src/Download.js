@@ -34,6 +34,7 @@ export default () => {
   const [alfred, setAlfred] = useState(false);
   const [brave, setBrave] = useState(false);
   const [chrome, setChrome] = useState(false);
+  const [firefox, setFirefox] = useState(false);
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [tmux, setTmux] = useState(false);
   const [prism, setPrism] = useState(false);
@@ -229,6 +230,12 @@ export default () => {
             value={ chrome }
             onChange={ () => setChrome(!chrome) }
             label="Chrome"
+            accentSelected
+          />
+          <Checkbox
+            value={ firefox }
+            onChange={ () => setFirefox(!firefox) }
+            label="Firefox"
             accentSelected
           />
           <Checkbox

@@ -23,6 +23,7 @@
     "themer-bbedit": "^1.0.5",
     "themer-brave": "^1.0.0",
     "themer-chrome": "^1.0.6",
+    "themer-firefox": "^1.0.0",
     "themer-cmd": "^1.0.6",
     "themer-colors-default": "^1.0.10",
     "themer-colors-dracula": "^1.0.0",
