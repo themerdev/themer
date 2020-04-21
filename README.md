@@ -239,6 +239,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 ### Terminals
 
+* [themer-alacritty](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-alacritty)
 * [themer-hyper](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-hyper)
 * [themer-iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-iterm)
 * [themer-terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-terminal)
@@ -273,6 +274,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 * [themer-slack](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack)
 * [themer-alfred](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-alfred)
+* [themer-firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-firefox-color)
 * [themer-brave](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-brave)
 * [themer-chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-chrome)
 * [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
