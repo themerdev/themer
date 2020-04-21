@@ -1,7 +1,7 @@
 {
   "name": "themer-firefox",
   "version": "1.0.0",
-  "description": "A firefox theme generator for themer.",
+  "description": "A Firefox theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
     "node": ">=8.11.4"
@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-firefox#readme",
   "dependencies": {
-    "color": "^3.0.0",
-    "lodash": "^4.17.4"
+    "color": "^3.1.2",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {},
   "peerDependencies": {
