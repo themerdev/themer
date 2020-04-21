@@ -11,6 +11,7 @@ import * as themerBrave from 'themer-brave';
 import * as themerChrome from 'themer-chrome';
 import * as themerCmd from 'themer-cmd';
 import * as themerConemu from 'themer-conemu';
+import * as themerFirefoxColor from 'themer-firefox-color';
 import * as themerGnomeTerminal from 'themer-gnome-terminal';
 import * as themerHyper from 'themer-hyper';
 import * as themerIterm from 'themer-iterm';
@@ -43,6 +44,7 @@ const templates = {
   chrome: { name: 'Chrome', ...themerChrome },
   cmd: { name: 'CMD', ...themerCmd },
   conemu: { name: 'ConEmu', ...themerConemu },
+  firefoxColor: { name: 'Firefox Color', ...themerFirefoxColor },
   gnomeTerminal: { name: 'GNOME Terminal', ...themerGnomeTerminal },
   hyper: { name: 'Hyper', ...themerHyper },
   iterm: { name: 'iTerm', ...themerIterm },

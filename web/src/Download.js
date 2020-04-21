@@ -37,6 +37,7 @@ export default () => {
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [tmux, setTmux] = useState(false);
   const [prism, setPrism] = useState(false);
+  const [firefoxColor, setFirefoxColor] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
 
@@ -220,6 +221,12 @@ export default () => {
             accentSelected
           />
           <Checkbox
+            value={ firefoxColor }
+            onChange={ () => setFirefoxColor(!firefoxColor) }
+            label="Firefox Color"
+            accentSelected
+          />
+          <Checkbox
             value={ brave }
             onChange={ () => setBrave(!brave) }
             label="Brave"
@@ -287,6 +294,7 @@ export default () => {
               sketchPalettes,
               tmux,
               prism,
+              firefoxColor,
             },
             preparedColorSet,
             window.innerWidth * window.devicePixelRatio,
