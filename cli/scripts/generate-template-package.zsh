@@ -70,6 +70,8 @@ Install this module wherever you have \`themer\` installed:
 Then pass \`$NAME\` as a \`-t\` (\`--template\`) arg to \`themer\`:
 
     themer -c my-colors.js -t $NAME -o gen
+
+Installation instructions for the generated theme(s) will be included in `<output dir>/README.md`.
 EOF
 
 LIB="$PACKAGE/lib"
