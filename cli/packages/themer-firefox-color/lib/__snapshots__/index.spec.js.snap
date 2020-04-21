@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Firefox Color theme generator should provide installation instructions 1`] = `
+"
+1. Install the [Firefox Color addon](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/).
+2. Open 'themer-dark.url' or 'themer-light.url' with Firefox.
+3. Click \\"Yep\\" when prompted to apply the custom theme.
+  "
+`;
+
+exports[`Firefox Color theme generator should render properly formatted URL files 1`] = `
+"[InternetShortcut]
+URL=https://color.firefox.com/?theme=XQAAAALuAAAAAAAAAABBKYhm849SCia2CaaEGccwS-xMDPsBebG2I_RrkiURirvHziNpI_Cb72qRKUSk6OmYiRYbZCGSHycHqtL8xEs0e3BV9DgEtBWLd-7GsSffvatgKrnK8uv02CHQ6fB9t6hCdIbY3-WC2BSRY0m0QqCoG6AbLiY_vmsx2b7E6HtCFWIoaSeSu16tz7qO0xAN_-CcwAA"
+`;
+
+exports[`Firefox Color theme generator should render properly formatted URL files 2`] = `
+"[InternetShortcut]
+URL=https://color.firefox.com/?theme=XQAAAALuAAAAAAAAAABBKYhm849SCia2CaaEGccwS-xMDPsqvXkIar7P3WAz_0_vKJT7iEJtj8x0vXqSTPvPfcMWn5gLXzBq6HG3JOcFju9hNiDcQxElbxRAZoYe9hL61LsYPJSeOyHybdeYymSd5dSe6uRFiYRYYfPwSP2Nsu4OEUPjYlx_tUNtcF_mfSik5LG13FfIvPabH__IsIAA"
+`;
