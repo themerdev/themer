@@ -2,9 +2,13 @@
 
 exports[`Firefox Color theme generator should provide installation instructions 1`] = `
 "
-1. Install the [Firefox Color addon](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/).
-2. Open 'themer-dark.url' or 'themer-light.url' with Firefox.
+The Firefox Color add-on allows for simple theming without the need for a developer account or package review process by Mozilla.
+
+1. Install the [Firefox Color add-on](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/).
+2. Open 'themer-dark.url' or 'themer-light.url' directly with Firefox.
 3. Click \\"Yep\\" when prompted to apply the custom theme.
+
+For a more fully featured Firefox theme, see themer's Firefox theme add-on generator.
   "
 `;
 

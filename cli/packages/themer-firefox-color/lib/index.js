@@ -37,9 +37,13 @@ const render = colors => {
 
 const renderInstructions = paths => {
   return `
-1. Install the [Firefox Color addon](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/).
-2. Open ${paths.map(p => `'${p}'`).join(' or ')} with Firefox.
+The Firefox Color add-on allows for simple theming without the need for a developer account or package review process by Mozilla.
+
+1. Install the [Firefox Color add-on](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/).
+2. Open ${paths.map(p => `'${p}'`).join(' or ')} directly with Firefox.
 3. Click "Yep" when prompted to apply the custom theme.
+
+For a more fully featured Firefox theme, see themer's Firefox theme add-on generator.
   `;
 }
 
