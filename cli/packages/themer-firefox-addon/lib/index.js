@@ -76,9 +76,15 @@ const render = colors => {
 const renderInstructions = paths => {
   const directories = new Set(paths.map(path.dirname));
   return `
-1. npm i -g web-ext
-2. web-ext run -s (${[...directories].map(dir => `\`${dir}\``).join(' or ')}).
-3. publish it at https://addons.mozilla.org/en-US/developers/addon/submit/distribution
+To use the generated extension package, the code will need to be packaged up and signed by Mozilla.
+
+To package the code in preparation for submission, the \`web-ext\` tool can be used:
+
+    npx web-ext build --source-dir ${[...directories].map(dir => `'${dir}'`).join(' # or ')}
+
+Then the package can be submitted to Mozilla for review in the [Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/addon/submit/distribution).
+
+To theme Firefox without the need to create a developer account and go through the extension review process, see themer's integration with [Firefox Color](https://color.firefox.com).
   `;
 }
 
