@@ -1,6 +1,7 @@
 import prepareColors from 'themer/lib/prepare';
 import themer from 'themer/lib/themer';
 import JSZip from 'jszip';
+import { flatten } from 'lodash';
 
 import * as themerAlacritty from 'themer-alacritty';
 import * as themerAlfred from 'themer-alfred';
@@ -11,6 +12,7 @@ import * as themerBrave from 'themer-brave';
 import * as themerChrome from 'themer-chrome';
 import * as themerCmd from 'themer-cmd';
 import * as themerConemu from 'themer-conemu';
+import * as themerFirefoxAddon from 'themer-firefox-addon';
 import * as themerFirefoxColor from 'themer-firefox-color';
 import * as themerGnomeTerminal from 'themer-gnome-terminal';
 import * as themerHyper from 'themer-hyper';
@@ -44,7 +46,10 @@ const templates = {
   chrome: { name: 'Chrome', ...themerChrome },
   cmd: { name: 'CMD', ...themerCmd },
   conemu: { name: 'ConEmu', ...themerConemu },
-  firefoxColor: { name: 'Firefox Color', ...themerFirefoxColor },
+  firefox: [
+    { name: 'Firefox Add-on', ...themerFirefoxAddon },
+    { name: 'Firefox Color', ...themerFirefoxColor },
+  ],
   gnomeTerminal: { name: 'GNOME Terminal', ...themerGnomeTerminal },
   hyper: { name: 'Hyper', ...themerHyper },
   iterm: { name: 'iTerm', ...themerIterm },
@@ -104,7 +109,9 @@ export default async function generateZip(selections, colors, width, height, url
   const selectedKeys = Array.from(Object.entries(selections))
     .filter(([_, selected]) => selected)
     .map(([key]) => key);
-  const selectedTemplates = selectedKeys.map(key => templates[key]);
+  const selectedTemplates = flatten(
+    selectedKeys.map(key => Array.isArray(templates[key]) ? templates[key] : [templates[key]]),
+  );
   const extraArgs = selectedKeys.reduce(
     (acc, key) => ({
       ...acc,

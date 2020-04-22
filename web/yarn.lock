@@ -10042,10 +10042,18 @@ themer-conemu@^1.0.5:
   dependencies:
     lodash "^4.17.4"
 
-themer-firefox-color@^1.0.0:
+themer-firefox-addon@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/themer-firefox-color/-/themer-firefox-color-1.0.0.tgz#fa6e29be7f566f244a8bbce0ea6173f9627798df"
-  integrity sha512-CcjKkxjIqBcq95FeDQwcMQtHTqMG7FoMZTAuvFUmSQPtvHu3qdfEfHqbTnSnVF35/VOufILZMJtfxWdh/Su7ew==
+  resolved "https://registry.yarnpkg.com/themer-firefox-addon/-/themer-firefox-addon-1.0.0.tgz#5aa4cb9714751bb026d2cbef10ff404cd2219eaa"
+  integrity sha512-tvV3bCHpcioGVdiFmLBrOT3QfeBABWJZy8FYLLUojYPaAo4BZo/F+nVQdJ6WyBTHN/Xb/my2Dc7JEPaI79h1zg==
+  dependencies:
+    color "^3.1.2"
+    lodash "^4.17.15"
+
+themer-firefox-color@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/themer-firefox-color/-/themer-firefox-color-1.0.1.tgz#6cf7c5984b55ebe5376c4bb8646ebad90784260c"
+  integrity sha512-Y2Y5I2dxAcskJPK2vxK8Qpz+qUaryGyyPD6/5JlcT7qhqcBUxQAiZIbrrEBkIHtnFypvL3WWbh8BUNxGiLtR7w==
   dependencies:
     "@babel/runtime" "^7.9.2"
     color "^3.1.2"
