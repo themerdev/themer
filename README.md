@@ -252,7 +252,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 ### Editors/IDEs
 
 * [@themer/atom-syntax](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-syntax)
-* [themer-atom-ui](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-ui)
+* [@themer/atom-ui](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-ui)
 * [themer-sublime-text](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sublime-text)
 * [themer-vim](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim)
 * [themer-vim-lightline](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim-lightline)

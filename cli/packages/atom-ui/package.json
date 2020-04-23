@@ -1,5 +1,5 @@
 {
-  "name": "themer-atom-ui",
+  "name": "@themer/atom-ui",
   "version": "1.1.2",
   "description": "An Atom UI theme generator for themer.",
   "main": "lib/index.js",
@@ -45,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-atom-ui#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/atom-ui#readme",
   "dependencies": {},
   "devDependencies": {
     "less": "^3.11.1",
