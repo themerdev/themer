@@ -1,4 +1,4 @@
-# themer-alfred
+# @themer/alfred
 
 An [Alfred.app](https://www.alfredapp.com/) theme generator for [themer](https://github.com/mjswensen/themer).
 
@@ -10,10 +10,10 @@ An [Alfred.app](https://www.alfredapp.com/) theme generator for [themer](https:/
 
 Install this module wherever you have `themer` installed:
 
-    npm install themer-alfred
+    npm install @themer/alfred
 
-Then pass `themer-alfred` as a `-t` (`--template`) arg to `themer`:
+Then pass `@themer/alfred` as a `-t` (`--template`) arg to `themer`:
 
-    themer -c my-colors.js -t themer-alfred -o gen
+    themer -c my-colors.js -t @themer/alfred -o gen
 
 Installation instructions for the generated theme file(s) will be included in `<output dir>/README.md`.
