@@ -2,7 +2,7 @@ const { render, renderInstructions } = require('./index');
 const { colors } = require('../../themer-colors-default');
 const singleThemeColors = { light: colors.light };
 
-describe('themer themer-alacritty theme generator', () => {
+describe('themer alacritty theme generator', () => {
 
   const promisedFilesDefault = Promise.all(render(colors));
   const promisedFilesSingleTheme = Promise.all(render(singleThemeColors));
