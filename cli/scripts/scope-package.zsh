@@ -24,3 +24,10 @@ sed -i '' -E "s|$OLD_NAME|$NEW_NAME|g" $NEW_PACKAGE_DIR/.yarnrc
 # README.md -> find/replace
 
 sed -i '' -E "s|$OLD_NAME|$NEW_NAME|g" $NEW_PACKAGE_DIR/README.md
+
+# Misc
+
+echo "TODO (manual tasks):"
+echo "  - see if any tests need to be renamed"
+echo "  - find other instances of $OLD_NAME in the repo"
+echo "  - publish new package and tag the commit $NEW_NAME-vX.X.X"
