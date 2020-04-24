@@ -1,5 +1,5 @@
 {
-  "name": "themer-cmd",
+  "name": "@themer/cmd",
   "version": "1.1.0",
   "description": "A CMD.exe theme generator for themer.",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-cmd#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/cmd#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   },
