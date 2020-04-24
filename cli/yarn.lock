@@ -3308,14 +3308,6 @@ test-exclude@^6.0.0:
     glob "^7.1.4"
     minimatch "^3.0.4"
 
-themer-chrome@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/themer-chrome/-/themer-chrome-1.2.1.tgz#a3a502bbecf3ea8ee415a0ec388eeb5f7c5f2558"
-  integrity sha512-xoT63wmXHSsPKD+/6Ca5iXOI++j6e73xtA4ZUcjHbNc2fnHhWMxxqZ85cGB53k7kRKfAaiDTgmc0MXF3ScPo8g==
-  dependencies:
-    color "^3.0.0"
-    lodash "^4.17.4"
-
 throat@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"

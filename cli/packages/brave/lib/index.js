@@ -1,4 +1,4 @@
-const { render, renderInstructions: renderChromeInstructions } = require('themer-chrome');
+const { render, renderInstructions: renderChromeInstructions } = require('@themer/chrome');
 
 const renderInstructions = paths =>
   renderChromeInstructions(paths)
