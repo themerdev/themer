@@ -30,4 +30,21 @@ sed -i '' -E "s|$OLD_NAME|$NEW_NAME|g" $NEW_PACKAGE_DIR/README.md
 echo "TODO (manual tasks):"
 echo "  - see if any tests need to be renamed"
 echo "  - find other instances of $OLD_NAME in the repo"
-echo "  - publish new package and tag the commit $NEW_NAME-vX.X.X"
+echo "  - Review diffs and stage changes (next step is commit)"
+
+read "?Ready to proceed? "
+
+# Test - assumes pwd is cli/
+
+yarn
+yarn test
+
+# Commit, publish, and tag
+
+read "HUMAN_NAME?Human readable name: "
+git commit -m "Scope $HUMAN_NAME package"
+
+npm publish $NEW_PACKAGE_DIR --access public --otp $TOTP
+
+read "VERSION?Version published: "
+git tag "$NEW_NAME-v$VERSION"
