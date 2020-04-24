@@ -277,7 +277,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-firefox-addon)
 * [themer-firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-firefox-color)
 * [themer-brave](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-brave)
-* [themer-chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-chrome)
+* [@themer/chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/chrome)
 * [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
 * [themer-sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sketch-palettes)
 * [tomselvi/themer-tmux](https://github.com/tomselvi/themer-tmux)
