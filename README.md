@@ -258,7 +258,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-vim-lightline](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim-lightline)
 * [themer-vscode](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vscode)
 * [themer-xcode](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-xcode)
-* [themer-bbedit](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-bbedit)
+* [@themer/bbedit](https://github.com/mjswensen/themer/tree/master/cli/packages/bbedit)
 * [tomselvi/themer-jetbrains](https://github.com/tomselvi/themer-jetbrains)
 
 ### Wallpapers
