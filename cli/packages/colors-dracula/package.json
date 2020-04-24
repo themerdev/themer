@@ -1,5 +1,5 @@
 {
-  "name": "themer-colors-dracula",
+  "name": "@themer/colors-dracula",
   "version": "1.0.0",
   "description": "A themer color set ported from the popular Dracula theme.",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-dracula#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/colors-dracula#readme",
   "peerDependencies": {
     "themer": "^3"
   },
