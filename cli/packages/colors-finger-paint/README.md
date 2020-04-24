@@ -1,4 +1,4 @@
-# themer-colors-finger-paint
+# @themer/colors-finger-paint
 
 A warm and friendly [themer](https://github.com/mjswensen/themer) color set.
 
@@ -10,8 +10,8 @@ A warm and friendly [themer](https://github.com/mjswensen/themer) color set.
 
 Install this module wherever you have `themer` installed:
 
-    npm install themer-colors-finger-paint
+    npm install @themer/colors-finger-paint
 
-Then pass `themer-colors-finger-paint` as a `-c` (`--colors`) arg to `themer`:
+Then pass `@themer/colors-finger-paint` as a `-c` (`--colors`) arg to `themer`:
 
-    themer -c themer-colors-finger-paint ...
+    themer -c @themer/colors-finger-paint ...
