@@ -1,4 +1,4 @@
-# themer-colors-github-universe
+# @themer/colors-github-universe
 
 A [themer](https://github.com/mjswensen/themer) color set based on the 2017 [GitHub Universe](https://githubuniverse.com/) color palette.
 
@@ -8,8 +8,8 @@ A [themer](https://github.com/mjswensen/themer) color set based on the 2017 [Git
 
 Install this module wherever you have `themer` installed:
 
-    npm install themer-colors-github-universe
+    npm install @themer/colors-github-universe
 
-Then pass `themer-colors-github-universe` as a `-c` (`--colors`) arg to `themer`:
+Then pass `@themer/colors-github-universe` as a `-c` (`--colors`) arg to `themer`:
 
-    themer -c themer-colors-github-universe ...
+    themer -c @themer/colors-github-universe ...
