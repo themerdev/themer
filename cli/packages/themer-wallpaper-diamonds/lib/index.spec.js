@@ -1,5 +1,5 @@
 const { render, renderInstructions } = require('./index');
-const { colors } = require('../../themer-colors-default');
+const { colors } = require('../../colors-default');
 
 describe('themer "diamonds" wallpaper', () => {
   it('should not contain "undefined" in the SVG output', async () => {

@@ -1,5 +1,5 @@
 const {render, renderInstructions} = require('./index');
-const {colors} = require('../../themer-colors-default');
+const {colors} = require('../../colors-default');
 
 describe('Firefox Color theme generator', () => {
   it('should render properly formatted URL files', async () => {

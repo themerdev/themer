@@ -1,6 +1,6 @@
 const path = require("path"),
   { render, renderInstructions } = require("./index"),
-  { colors } = require("../../themer-colors-default");
+  { colors } = require("../../colors-default");
 
 describe("render function", () => {
   const promisedFiles = Promise.all(render(colors));

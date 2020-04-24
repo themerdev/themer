@@ -1,5 +1,5 @@
 const { render, renderInstructions } = require('./index'),
-  { colors } = require('../../themer-colors-default');
+  { colors } = require('../../colors-default');
 
 describe('themer "block wave" wallpaper', () => {
 

@@ -1,4 +1,4 @@
-const { colors } = require('../../themer-colors-default'),
+const { colors } = require('../../colors-default'),
   { render, renderInstructions } = require('./index');
 
 describe('themer trianglify wallpaper', () => {

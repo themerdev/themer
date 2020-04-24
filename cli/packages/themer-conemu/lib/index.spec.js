@@ -1,5 +1,5 @@
 const { render, renderInstructions } = require('./index');
-const { colors } = require('../../themer-colors-default');
+const { colors } = require('../../colors-default');
 
 describe('render', () => {
   it('should render properly formatted ConEmu theme xml', async () => {

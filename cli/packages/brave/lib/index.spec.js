@@ -1,5 +1,5 @@
 const { render, renderInstructions } = require('./index');
-const { colors } = require('../../themer-colors-default');
+const { colors } = require('../../colors-default');
 
 describe('Brave theme generator', () => {
   it('should provide installation instructions', async () => {

@@ -1,5 +1,5 @@
 const {formatColorSet, render, renderInstructions} = require('./index');
-const {colors} = require('../../themer-colors-default');
+const {colors} = require('../../colors-default');
 
 describe('formatColorSet', () => {
   it('should properly format from hex to space-delimited rounded decimal', () => {

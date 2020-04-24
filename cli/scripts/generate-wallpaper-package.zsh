@@ -130,7 +130,7 @@ EOF
 
 cat << EOF > $LIB/index.spec.js
 const { render } = require('./index');
-const { colors } = require('../../themer-colors-default');
+const { colors } = require('../../colors-default');
 
 describe('themer "TODO" wallpaper', () => {
   it('should render valid SVG', async () => {

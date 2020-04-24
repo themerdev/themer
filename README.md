@@ -66,7 +66,7 @@ themer \
 
 Your generated theme files, as well as a README on how to install them, will be written to the output directory.
 
-`themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [themer-colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default)). The same is true for templates.
+`themer` can create themes from your custom color sets (see ["Create your own color set"](#create-your-own-color-set) below) or from color sets published on npm (see [@themer/colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default)). The same is true for templates.
 
 ### Example workflow
 
@@ -74,7 +74,7 @@ Say you wanted to generate a vim theme and desktop background using `themer`'s d
 
 ```sh
 cd my-dotfiles
-npm install themer themer-colors-default themer-vim themer-wallpaper-block-wave
+npm install themer @themer/colors-default themer-vim themer-wallpaper-block-wave
 ```
 
 Then edit your `package.json`:
@@ -82,7 +82,7 @@ Then edit your `package.json`:
 ```json
   ...
   "scripts": {
-    "build": "themer -c themer-colors-default -t themer-vim -t themer-wallpaper-block-wave -o gen"
+    "build": "themer -c @themer/colors-default -t themer-vim -t themer-wallpaper-block-wave -o gen"
   },
   ...
 ```
@@ -102,11 +102,11 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 ```sh
 npx \
   -p themer \
-  -p themer-colors-default \
+  -p @themer/colors-default \
   -p themer-vim \
   -p themer-wallpaper-block-wave \
   themer \
-  -c themer-colors-default \
+  -c @themer/colors-default \
   -t themer-vim \
   -t themer-wallpaper-block-wave \
   -o output
@@ -118,7 +118,7 @@ npx \
 
 | Name | Dark Preview | Light Preview |
 | --- | --- | --- |
-| [themer-colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default) | ![themer-colors-default dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-default-dark-swatch.svg) | ![themer-colors-default light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-default-light-swatch.svg) |
+| [@themer/colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default) | ![@themer/colors-default dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-default-dark-swatch.svg) | ![@themer/colors-default light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-default-light-swatch.svg) |
 | [themer-colors-night-sky](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-night-sky) | ![themer-colors-night-sky dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-night-sky-dark-swatch.svg) | (dark only) |
 | [themer-colors-polar-ice](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-polar-ice) | ![themer-colors-polar-ice dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-polar-ice-dark-swatch.svg) | ![themer-colors-polar-ice light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-polar-ice-light-swatch.svg) |
 | [themer-colors-finger-paint](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-finger-paint) | ![themer-colors-finger-paint dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-finger-paint-dark-swatch.svg) | ![themer-colors-finger-paint light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-finger-paint-light-swatch.svg) |

@@ -8,7 +8,7 @@ const { render, renderInstructions } = require('./index'),
   readFile = promisify(fs.readFile),
   mkdir = promisify(fs.mkdir),
   less = require('less'),
-  { colors } = require('../../themer-colors-default');
+  { colors } = require('../../colors-default');
 
 describe('render', () => {
   const promisedFiles = Promise.all(render(colors));

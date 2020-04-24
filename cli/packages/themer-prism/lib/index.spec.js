@@ -1,5 +1,5 @@
 const { render, renderInstructions } = require('./index'),
-  { colors } = require('../../themer-colors-default');
+  { colors } = require('../../colors-default');
 
 describe('render', () => {
   const promisedFiles = Promise.all(render(colors));

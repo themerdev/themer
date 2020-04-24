@@ -1,6 +1,6 @@
 # themer-wallpaper-block-wave
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([themer-colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-default)):
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([@themer/colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default)):
 
 ![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-block-wave/assets/desktop-dark.svg)
 ![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-block-wave/assets/desktop-light.svg)

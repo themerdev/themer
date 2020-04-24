@@ -1,4 +1,4 @@
-# themer-colors-default
+# @themer/colors-default
 
 A default color set for [themer](https://github.com/mjswensen/themer).
 
@@ -10,8 +10,8 @@ A default color set for [themer](https://github.com/mjswensen/themer).
 
 Install this module wherever you have `themer` installed:
 
-    npm install themer-colors-default
+    npm install @themer/colors-default
 
-Then pass `themer-colors-default` as a `-c` (`--colors`) arg to `themer`:
+Then pass `@themer/colors-default` as a `-c` (`--colors`) arg to `themer`:
 
-    themer -c themer-colors-default ...
+    themer -c @themer/colors-default ...

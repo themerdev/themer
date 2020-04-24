@@ -1,5 +1,5 @@
 const { render, renderInstructions } = require('./index'),
-  { colors } = require('../../themer-colors-default'),
+  { colors } = require('../../colors-default'),
   os = require('os'),
   fs = require('fs'),
   { promisify } = require('util'),

@@ -1,5 +1,5 @@
 const { render, renderInstructions } = require('./index');
-const { colors } = require('../../themer-colors-default');
+const { colors } = require('../../colors-default');
 const singleThemeColors = { light: colors.light };
 
 describe('themer alacritty theme generator', () => {
