@@ -25,6 +25,15 @@ sed -i '' -E "s|$OLD_NAME|$NEW_NAME|g" $NEW_PACKAGE_DIR/.yarnrc
 
 sed -i '' -E "s|$OLD_NAME|$NEW_NAME|g" $NEW_PACKAGE_DIR/README.md
 
+# Root README.md -> find/replace
+
+ROOT_README="$(realpath "$(dirname $0:A)/../../README.md")"
+
+sed -i '' -E "s|\[$OLD_NAME\]|\[$NEW_NAME\]|" $ROOT_README
+sed -i '' -E "s|packages/$OLD_NAME|packages/$1|" $ROOT_README
+sed -i '' -E "s|$OLD_NAME dark preview|$NEW_NAME dark preview|" $ROOT_README
+sed -i '' -E "s|$OLD_NAME light preview|$NEW_NAME light preview|" $ROOT_README
+
 # Misc
 
 echo "TODO (manual tasks):"
