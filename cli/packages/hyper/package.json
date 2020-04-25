@@ -1,5 +1,5 @@
 {
-  "name": "themer-hyper",
+  "name": "@themer/hyper",
   "version": "3.1.1",
   "description": "A Hyper.app plugin generator for themer.",
   "main": "lib/index.js",
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-hyper#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/hyper#readme",
   "keywords": [
     "themer",
     "hyper",
