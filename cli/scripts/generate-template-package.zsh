@@ -1,11 +1,11 @@
 #!/bin/zsh
 
-NAME="themer-$1"
+NAME="@themer/$1"
 
 echo Generating $NAME...
 
 PACKAGES_DIR="$(realpath "$(dirname $0:A)/../packages")"
-PACKAGE="$PACKAGES_DIR/$NAME"
+PACKAGE="$PACKAGES_DIR/$1"
 
 mkdir $PACKAGE
 
@@ -43,7 +43,7 @@ cat << EOF > $PACKAGE/package.json
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/$NAME#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/$1#readme",
   "peerDependencies": {
     "themer": "^3"
   },
@@ -71,7 +71,7 @@ Then pass \`$NAME\` as a \`-t\` (\`--template\`) arg to \`themer\`:
 
     themer -c my-colors.js -t $NAME -o gen
 
-Installation instructions for the generated theme(s) will be included in `<output dir>/README.md`.
+Installation instructions for the generated theme(s) will be included in \`<output dir>/README.md\`.
 EOF
 
 LIB="$PACKAGE/lib"

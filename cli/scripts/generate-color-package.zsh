@@ -1,11 +1,12 @@
 #!/bin/zsh
 
-NAME="themer-colors-$1"
+DIR="colors-$1"
+NAME="@themer/$DIR"
 
 echo Generating $NAME...
 
 PACKAGES_DIR="$(realpath "$(dirname $0:A)/../packages")"
-PACKAGE="$PACKAGES_DIR/$NAME"
+PACKAGE="$PACKAGES_DIR/$DIR"
 
 mkdir $PACKAGE
 
@@ -43,7 +44,7 @@ cat << EOF > $PACKAGE/package.json
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/$NAME#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/$DIR#readme",
   "peerDependencies": {
     "themer": "^3"
   },
