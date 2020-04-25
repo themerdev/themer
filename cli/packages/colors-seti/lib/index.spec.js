@@ -1,6 +1,6 @@
 const { colors } = require('./index');
 
-describe('themer-colors-seti', () => {
+describe('colors-seti', () => {
   it('should define all required colors for a dark theme only', () => {
     const prefixes = [
       'accent0',
