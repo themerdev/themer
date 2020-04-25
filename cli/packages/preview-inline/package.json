@@ -1,5 +1,5 @@
 {
-  "name": "themer-preview-inline",
+  "name": "@themer/preview-inline",
   "version": "1.0.5",
   "description": "Template for small, inline previews of themer color sets.",
   "main": "lib/index.js",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-preview-inline#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/preview-inline#readme",
   "devDependencies": {},
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
