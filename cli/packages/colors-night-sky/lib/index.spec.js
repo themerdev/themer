@@ -1,6 +1,6 @@
 const { colors } = require('./index');
 
-describe('themer-colors-night-sky', () => {
+describe('colors-night-sky', () => {
 
   it('should contain a dark theme', () => {
     expect(colors.dark).toBeDefined();
