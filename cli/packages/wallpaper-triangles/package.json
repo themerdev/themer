@@ -1,5 +1,5 @@
 {
-  "name": "themer-wallpaper-triangles",
+  "name": "@themer/wallpaper-triangles",
   "version": "2.1.0",
   "description": "A wallpaper generator for themer.",
   "main": "lib/index.js",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-triangles#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-triangles#readme",
   "dependencies": {
     "@themer/utils": "^1.2.0"
   },
