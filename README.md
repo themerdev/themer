@@ -74,7 +74,7 @@ Say you wanted to generate a vim theme and desktop background using `themer`'s d
 
 ```sh
 cd my-dotfiles
-npm install themer @themer/colors-default @themer/vim themer-wallpaper-block-wave
+npm install themer @themer/colors-default @themer/vim @themer/wallpaper-block-wave
 ```
 
 Then edit your `package.json`:
@@ -82,7 +82,7 @@ Then edit your `package.json`:
 ```json
   ...
   "scripts": {
-    "build": "themer -c @themer/colors-default -t @themer/vim -t themer-wallpaper-block-wave -o gen"
+    "build": "themer -c @themer/colors-default -t @themer/vim -t @themer/wallpaper-block-wave -o gen"
   },
   ...
 ```
@@ -104,11 +104,11 @@ npx \
   -p themer \
   -p @themer/colors-default \
   -p @themer/vim \
-  -p themer-wallpaper-block-wave \
+  -p @themer/wallpaper-block-wave \
   themer \
   -c @themer/colors-default \
   -t @themer/vim \
-  -t themer-wallpaper-block-wave \
+  -t @themer/wallpaper-block-wave \
   -o output
 ```
 
@@ -263,7 +263,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 ### Wallpapers
 
-* [themer-wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-block-wave)
+* [@themer/wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-block-wave)
 * [themer-wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-octagon)
 * [themer-wallpaper-triangles](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-triangles)
 * [themer-wallpaper-trianglify](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-trianglify)
