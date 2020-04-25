@@ -2,7 +2,7 @@
 
 A chilly color set for [themer](https://github.com/mjswensen/themer).
 
-Here's an example of `@themer/colors-polar-ice` in [vim](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim) and [iTerm](https://github.com/mjswensen/themer/tree/master/cli/packages/iterm):
+Here's an example of `@themer/colors-polar-ice` in [vim](https://github.com/mjswensen/themer/tree/master/cli/packages/vim) and [iTerm](https://github.com/mjswensen/themer/tree/master/cli/packages/iterm):
 
 ![Preview - dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-colors-polar-ice/assets/themer-colors-polar-ice-dark.png)
 

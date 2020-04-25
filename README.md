@@ -74,7 +74,7 @@ Say you wanted to generate a vim theme and desktop background using `themer`'s d
 
 ```sh
 cd my-dotfiles
-npm install themer @themer/colors-default themer-vim themer-wallpaper-block-wave
+npm install themer @themer/colors-default @themer/vim themer-wallpaper-block-wave
 ```
 
 Then edit your `package.json`:
@@ -82,7 +82,7 @@ Then edit your `package.json`:
 ```json
   ...
   "scripts": {
-    "build": "themer -c @themer/colors-default -t themer-vim -t themer-wallpaper-block-wave -o gen"
+    "build": "themer -c @themer/colors-default -t @themer/vim -t themer-wallpaper-block-wave -o gen"
   },
   ...
 ```
@@ -103,11 +103,11 @@ Now check the `gen/` folder for your generated themes. Here's the result:
 npx \
   -p themer \
   -p @themer/colors-default \
-  -p themer-vim \
+  -p @themer/vim \
   -p themer-wallpaper-block-wave \
   themer \
   -c @themer/colors-default \
-  -t themer-vim \
+  -t @themer/vim \
   -t themer-wallpaper-block-wave \
   -o output
 ```
@@ -254,7 +254,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/atom-syntax](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-syntax)
 * [@themer/atom-ui](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-ui)
 * [@themer/sublime-text](https://github.com/mjswensen/themer/tree/master/cli/packages/sublime-text)
-* [themer-vim](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim)
+* [@themer/vim](https://github.com/mjswensen/themer/tree/master/cli/packages/vim)
 * [themer-vim-lightline](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim-lightline)
 * [themer-vscode](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vscode)
 * [themer-xcode](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-xcode)
