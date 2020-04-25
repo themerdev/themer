@@ -281,6 +281,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
 * [themer-sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sketch-palettes)
 * [tomselvi/themer-tmux](https://github.com/tomselvi/themer-tmux)
+* [@themer/prism](https://github.com/mjswensen/themer/tree/master/cli/packages/prism)
 
 ### Create your own template
 
