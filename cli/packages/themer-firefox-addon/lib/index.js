@@ -46,7 +46,7 @@ const renderManifest = (colorSet) => {
               tab_text: colorSet.rgbColors.shade7,
               toolbar_bottom_separator:  colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
               toolbar_field_border: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
-              toolbar_field_separator: colorSet.isDark ? colorSet.rgbColors.shade0 : colorSet.rgbColors.shade1,
+              toolbar_field_separator: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
               toolbar_field_text_focus: colorSet.rgbColors.shade7,
               toolbar_field_text: colorSet.rgbColors.shade7,
               toolbar_field: colorSet.isDark ? colorSet.rgbColors.shade1 : colorSet.rgbColors.shade0,
@@ -83,6 +83,8 @@ To package the code in preparation for submission, the \`web-ext\` tool can be u
     npx web-ext build --source-dir ${[...directories].map(dir => `'${dir}'`).join(' # or ')}
 
 Then the package can be submitted to Mozilla for review in the [Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/addon/submit/distribution).
+
+Learn more about Firefox themes from [extensionworkshop.com](https://extensionworkshop.com/documentation/themes/)
 
 To theme Firefox without the need to create a developer account and go through the extension review process, see themer's integration with [Firefox Color](https://color.firefox.com).
   `;
