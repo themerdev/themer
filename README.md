@@ -272,7 +272,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 ### Other
 
-* [themer-slack](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack)
+* [@themer/slack](https://github.com/mjswensen/themer/tree/master/cli/packages/slack)
 * [@themer/alfred](https://github.com/mjswensen/themer/tree/master/cli/packages/alfred)
 * [@themer/firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-addon)
 * [@themer/firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-color)
@@ -311,7 +311,7 @@ module.exports.render = function(colors, options) {
 
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
-Here's an [example template render function](https://github.com/mjswensen/themer/blob/master/cli/packages/themer-slack/lib/index.js) that generates a Slack sidebar theme from a `themer` color set.
+Here's an [example template render function](https://github.com/mjswensen/themer/blob/master/cli/packages/slack/lib/index.js) that generates a Slack sidebar theme from a `themer` color set.
 
 Once you've developed your template, consider publishing it on npm (with repository name starting with `themer-`) so that others can use it!
 
