@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# themer ![CI](https://github.com/mjswensen/themer/workflows/CI/badge.svg?branch=master) [![npm](https://img.shields.io/npm/dt/themer.svg)](https://github.com/mjswensen/themer#installation) ![Twitter Follow](https://img.shields.io/twitter/follow/themerdev?style=social)
+# themer ![CI](https://github.com/mjswensen/themer/workflows/CI/badge.svg?branch=master) [![Twitter Follow](https://img.shields.io/twitter/follow/themerdev?style=social)](https://twitter.com/themerdev)
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 
@@ -119,25 +119,25 @@ npx \
 | Name | Dark Preview | Light Preview |
 | --- | --- | --- |
 | [@themer/colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default) | ![@themer/colors-default dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-default-dark-swatch.svg) | ![@themer/colors-default light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-default-light-swatch.svg) |
-| [@themer/colors-night-sky](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-night-sky) | ![@themer/colors-night-sky dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-night-sky-dark-swatch.svg) | (dark only) |
-| [@themer/colors-polar-ice](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-polar-ice) | ![@themer/colors-polar-ice dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-polar-ice-dark-swatch.svg) | ![@themer/colors-polar-ice light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-polar-ice-light-swatch.svg) |
 | [@themer/colors-finger-paint](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-finger-paint) | ![@themer/colors-finger-paint dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-finger-paint-dark-swatch.svg) | ![@themer/colors-finger-paint light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-finger-paint-light-swatch.svg) |
 | [@themer/colors-monkey](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-monkey) | ![@themer/colors-monkey dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-monkey-dark-swatch.svg) | ![@themer/colors-monkey light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-monkey-light-swatch.svg) |
+| [@themer/colors-night-sky](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-night-sky) | ![@themer/colors-night-sky dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-night-sky-dark-swatch.svg) | (dark only) |
+| [@themer/colors-polar-ice](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-polar-ice) | ![@themer/colors-polar-ice dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-polar-ice-dark-swatch.svg) | ![@themer/colors-polar-ice light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-polar-ice-light-swatch.svg) |
 | [@themer/colors-right-in-the-teals](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-right-in-the-teals) | ![@themer/colors-right-in-the-teals dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-right-in-the-teals-dark-swatch.svg) | ![@themer/colors-right-in-the-teals light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-right-in-the-teals-light-swatch.svg) |
 
 ### Ports from third-party themes
 
 | Name | Dark Preview | Light Preview |
 | --- | --- | --- |
-| [@themer/colors-one](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-one) | ![@themer/colors-one dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-one-dark-swatch.svg) | ![@themer/colors-one light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-one-light-swatch.svg) |
-| [@themer/colors-lucid](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-lucid) | ![@themer/colors-lucid dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-lucid-dark-swatch.svg) | ![@themer/colors-lucid light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-lucid-light-swatch.svg) |
-| [@themer/colors-solarized](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-solarized) | ![@themer/colors-solarized dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-solarized-dark-swatch.svg) | ![@themer/colors-solarized light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-solarized-light-swatch.svg) |
-| [@themer/colors-github-universe](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-github-universe) | ![!themer/colors-github-universe preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-github-universe-dark-swatch.svg) | (dark only) |
-| [@themer/colors-nova](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-nova) | ![@themer/colors-nova preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-nova-dark-swatch.svg) | (dark only) |
-| [@themer/colors-mojave](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-mojave) | ![@themer/colors-mojave dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-mojave-dark-swatch.svg) | ![@themer/colors-mojave light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-mojave-light-swatch.svg) |
-| [@themer/colors-rivet](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-rivet) | ![@themer/colors-rivet dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-rivet-dark-swatch.svg) | ![@themer/colors-rivet light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-rivet-light-swatch.svg) |
 | [@themer/colors-dracula](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-dracula) | ![@themer/colors-dracula dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@0a1c71ce1fd01ec56daca72be8b04db6d81b16b5/assets/preview/themer-colors-dracula-dark-swatch.svg) | (dark only) |
+| [@themer/colors-github-universe](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-github-universe) | ![!themer/colors-github-universe preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-github-universe-dark-swatch.svg) | (dark only) |
+| [@themer/colors-lucid](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-lucid) | ![@themer/colors-lucid dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-lucid-dark-swatch.svg) | ![@themer/colors-lucid light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-lucid-light-swatch.svg) |
+| [@themer/colors-mojave](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-mojave) | ![@themer/colors-mojave dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-mojave-dark-swatch.svg) | ![@themer/colors-mojave light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-mojave-light-swatch.svg) |
+| [@themer/colors-nova](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-nova) | ![@themer/colors-nova preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-nova-dark-swatch.svg) | (dark only) |
+| [@themer/colors-one](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-one) | ![@themer/colors-one dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-one-dark-swatch.svg) | ![@themer/colors-one light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-one-light-swatch.svg) |
+| [@themer/colors-rivet](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-rivet) | ![@themer/colors-rivet dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-rivet-dark-swatch.svg) | ![@themer/colors-rivet light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-rivet-light-swatch.svg) |
 | [@themer/colors-seti](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-seti) | ![@themer/colors-seti dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@a0deeb0588fd67dec53ad506b302df9e493ad837/assets/preview/themer-colors-seti-dark-swatch.svg) | (dark only) |
+| [@themer/colors-solarized](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-solarized) | ![@themer/colors-solarized dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-solarized-dark-swatch.svg) | ![@themer/colors-solarized light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/assets/preview/themer-colors-solarized-light-swatch.svg) |
 
 ### Create your own color set
 
@@ -240,48 +240,48 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 ### Terminals
 
 * [@themer/alacritty](https://github.com/mjswensen/themer/tree/master/cli/packages/alacritty)
+* [@themer/cmd](https://github.com/mjswensen/themer/tree/master/cli/packages/cmd)
+* [@themer/conemu](https://github.com/mjswensen/themer/tree/master/cli/packages/conemu)
 * [@themer/hyper](https://github.com/mjswensen/themer/tree/master/cli/packages/hyper)
 * [@themer/iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/iterm)
 * [@themer/terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/terminal)
-* [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
-* [@themer/conemu](https://github.com/mjswensen/themer/tree/master/cli/packages/conemu)
-* [@themer/cmd](https://github.com/mjswensen/themer/tree/master/cli/packages/cmd)
-* [0x52a1/themer-termite](https://github.com/0x52a1/themer-termite)
 * [0x52a1/themer-kitty](https://github.com/0x52a1/themer-kitty)
+* [0x52a1/themer-termite](https://github.com/0x52a1/themer-termite)
+* [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
 
 ### Editors/IDEs
 
 * [@themer/atom-syntax](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-syntax)
 * [@themer/atom-ui](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-ui)
+* [@themer/bbedit](https://github.com/mjswensen/themer/tree/master/cli/packages/bbedit)
 * [@themer/sublime-text](https://github.com/mjswensen/themer/tree/master/cli/packages/sublime-text)
-* [@themer/vim](https://github.com/mjswensen/themer/tree/master/cli/packages/vim)
 * [@themer/vim-lightline](https://github.com/mjswensen/themer/tree/master/cli/packages/vim-lightline)
+* [@themer/vim](https://github.com/mjswensen/themer/tree/master/cli/packages/vim)
 * [@themer/vscode](https://github.com/mjswensen/themer/tree/master/cli/packages/vscode)
 * [@themer/xcode](https://github.com/mjswensen/themer/tree/master/cli/packages/xcode)
-* [@themer/bbedit](https://github.com/mjswensen/themer/tree/master/cli/packages/bbedit)
 * [tomselvi/themer-jetbrains](https://github.com/tomselvi/themer-jetbrains)
 
 ### Wallpapers
 
 * [@themer/wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-block-wave)
+* [@themer/wallpaper-diamonds](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-diamonds)
 * [@themer/wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-octagon)
+* [@themer/wallpaper-shirts](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-shirts)
 * [@themer/wallpaper-triangles](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-triangles)
 * [@themer/wallpaper-trianglify](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-trianglify)
-* [@themer/wallpaper-shirts](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-shirts)
-* [@themer/wallpaper-diamonds](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-diamonds)
 
 ### Other
 
-* [@themer/slack](https://github.com/mjswensen/themer/tree/master/cli/packages/slack)
 * [@themer/alfred](https://github.com/mjswensen/themer/tree/master/cli/packages/alfred)
-* [@themer/firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-addon)
-* [@themer/firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-color)
 * [@themer/brave](https://github.com/mjswensen/themer/tree/master/cli/packages/brave)
 * [@themer/chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/chrome)
-* [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
-* [@themer/sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/sketch-palettes)
-* [tomselvi/themer-tmux](https://github.com/tomselvi/themer-tmux)
+* [@themer/firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-addon)
+* [@themer/firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-color)
 * [@themer/prism](https://github.com/mjswensen/themer/tree/master/cli/packages/prism)
+* [@themer/sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/sketch-palettes)
+* [@themer/slack](https://github.com/mjswensen/themer/tree/master/cli/packages/slack)
+* [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
+* [tomselvi/themer-tmux](https://github.com/tomselvi/themer-tmux)
 
 ### Create your own template
 
