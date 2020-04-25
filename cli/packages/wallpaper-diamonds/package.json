@@ -1,5 +1,5 @@
 {
-  "name": "themer-wallpaper-diamonds",
+  "name": "@themer/wallpaper-diamonds",
   "version": "1.1.0",
   "description": "A wallpaper generator for themer.",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-diamonds#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-diamonds#readme",
   "dependencies": {
     "@themer/utils": "^1.2.0"
   },
