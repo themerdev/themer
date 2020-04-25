@@ -241,7 +241,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 * [@themer/alacritty](https://github.com/mjswensen/themer/tree/master/cli/packages/alacritty)
 * [@themer/hyper](https://github.com/mjswensen/themer/tree/master/cli/packages/hyper)
-* [themer-iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-iterm)
+* [@themer/iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/iterm)
 * [themer-terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-terminal)
 * [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
 * [@themer/conemu](https://github.com/mjswensen/themer/tree/master/cli/packages/conemu)
