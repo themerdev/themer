@@ -44,7 +44,7 @@ yarn test
 read "HUMAN_NAME?Human readable name: "
 git commit -m "Scope $HUMAN_NAME package"
 
-npm publish $NEW_PACKAGE_DIR --access public --otp $TOTP
+npm publish $NEW_PACKAGE_DIR --access public
 
 read "VERSION?Version published: "
 git tag "$NEW_NAME-v$VERSION"
