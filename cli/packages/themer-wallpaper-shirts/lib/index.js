@@ -3,7 +3,7 @@ const {
   deepFlatten,
   colorSets: getColorSets,
   listOutputFiles,
-} = require('themer-utils');
+} = require('@themer/utils');
 
 const CELL_WIDTH = 676;
 const CELL_HEIGHT = 720;

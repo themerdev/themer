@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-octagon#readme",
   "dependencies": {
-    "themer-utils": "^1.2.0"
+    "@themer/utils": "^1.2.0"
   },
   "keywords": [
     "themer",

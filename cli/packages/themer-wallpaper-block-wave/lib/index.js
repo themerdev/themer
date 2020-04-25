@@ -3,7 +3,7 @@ const {
   colorSets: getColorSets,
   deepFlatten,
   listOutputFiles,
-} = require('themer-utils');
+} = require('@themer/utils');
 const weightedRandom = require('./weighted-random');
 
 const render = (colors, options) => {

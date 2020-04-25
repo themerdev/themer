@@ -1,5 +1,5 @@
 const assert = require('assert'),
-  { getSizesFromOptOrDefault } = require('themer-utils');
+  { getSizesFromOptOrDefault } = require('@themer/utils');
 
 const getVariances = opt => {
   if (opt) {

@@ -1,5 +1,5 @@
 const Trianglify = require('trianglify'),
-  { deepFlatten, listOutputFiles } = require('themer-utils'),
+  { deepFlatten, listOutputFiles } = require('@themer/utils'),
   { getSizes, getVariances } = require('./opts');
 
 const optionNames = {

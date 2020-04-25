@@ -3,7 +3,7 @@ const {
   deepFlatten,
   colorSets: getColorSets,
   listOutputFiles,
-} = require('themer-utils');
+} = require('@themer/utils');
 
 const SIZE = 100;
 const DIAGONAL = Math.sqrt(2 * Math.pow(SIZE, 2));
