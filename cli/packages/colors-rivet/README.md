@@ -1,4 +1,4 @@
-# themer-colors-rivet
+# @themer/colors-rivet
 
 A color set for [themer](https://github.com/mjswensen/themer) based on the design system for [Rivet, Inc.](https://www.rivethealth.com).
 
@@ -8,8 +8,8 @@ A color set for [themer](https://github.com/mjswensen/themer) based on the desig
 
 Install this module wherever you have `themer` installed:
 
-    npm install themer-colors-rivet
+    npm install @themer/colors-rivet
 
-Then pass `themer-colors-rivet` as a `-c` (`--colors`) arg to `themer`:
+Then pass `@themer/colors-rivet` as a `-c` (`--colors`) arg to `themer`:
 
-    themer -c themer-colors-rivet ...
+    themer -c @themer/colors-rivet ...
