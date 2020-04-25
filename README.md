@@ -244,7 +244,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [themer-iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-iterm)
 * [themer-terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-terminal)
 * [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
-* [themer-conemu](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-conemu)
+* [@themer/conemu](https://github.com/mjswensen/themer/tree/master/cli/packages/conemu)
 * [@themer/cmd](https://github.com/mjswensen/themer/tree/master/cli/packages/cmd)
 * [0x52a1/themer-termite](https://github.com/0x52a1/themer-termite)
 * [0x52a1/themer-kitty](https://github.com/0x52a1/themer-kitty)
