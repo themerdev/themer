@@ -1,6 +1,6 @@
 # themer-wallpaper-shirts
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using the [themer-colors-monkey](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-monkey) color set:
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using the [@themer/colors-monkey](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-monkey) color set:
 
 ![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-shirts/assets/desktop-dark.svg)
 ![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-shirts/assets/desktop-light.svg)

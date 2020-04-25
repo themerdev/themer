@@ -1,6 +1,6 @@
 const { colors } = require('./index');
 
-describe('themer-colors-monkey', () => {
+describe('colors-monkey', () => {
   it('should define all required colors', () => {
     const prefixes = [
       'accent0',

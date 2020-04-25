@@ -1,5 +1,5 @@
 {
-  "name": "themer-colors-monkey",
+  "name": "@themer/colors-monkey",
   "version": "2.0.0",
   "description": "A color set for themer based on https://twitter.com/pwnela/status/908823633283502080.",
   "main": "lib/index.js",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-monkey#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/colors-monkey#readme",
   "peerDependencies": {
     "themer": "^3"
   },
