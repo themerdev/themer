@@ -6,7 +6,7 @@ Here's an example of `@themer/colors-polar-ice` in [vim](https://github.com/mjsw
 
 ![Preview - dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-colors-polar-ice/assets/themer-colors-polar-ice-dark.png)
 
-And the light variant in [Sublime Text](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-sublime-text):
+And the light variant in [Sublime Text](https://github.com/mjswensen/themer/tree/master/cli/packages/sublime-text):
 
 ![Preview - light](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-colors-polar-ice/assets/themer-colors-polar-ice-light.png)
 
