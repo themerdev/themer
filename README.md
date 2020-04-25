@@ -264,7 +264,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 ### Wallpapers
 
 * [@themer/wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-block-wave)
-* [themer-wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-octagon)
+* [@themer/wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-octagon)
 * [themer-wallpaper-triangles](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-triangles)
 * [themer-wallpaper-trianglify](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-trianglify)
 * [themer-wallpaper-shirts](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-wallpaper-shirts)
