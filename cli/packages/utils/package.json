@@ -1,5 +1,5 @@
 {
-  "name": "themer-utils",
+  "name": "@themer/utils",
   "version": "1.2.0",
   "description": "Common functions used across various themer templates.",
   "main": "lib/index.js",
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-utils#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/utils#readme",
   "keywords": [
     "themer",
     "utils"
