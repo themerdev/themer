@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`themer-colors-nova should export valid themer color set 1`] = `
+exports[`colors-nova should export valid themer color set 1`] = `
 Object {
   "dark": Object {
     "accent0": "#DF8C8C",
