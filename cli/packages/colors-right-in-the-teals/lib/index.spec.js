@@ -1,6 +1,6 @@
 const { colors } = require('./index');
 
-describe('themer-colors-right-in-the-teals', () => {
+describe('colors-right-in-the-teals', () => {
   it('should define all required colors', () => {
     const prefixes = [
       'accent0',
