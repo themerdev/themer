@@ -1,5 +1,5 @@
 {
-  "name": "themer-colors-polar-ice",
+  "name": "@themer/colors-polar-ice",
   "version": "2.0.0",
   "description": "A chilly color set for themer.",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-polar-ice#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/colors-polar-ice#readme",
   "peerDependencies": {
     "themer": "^3"
   },
