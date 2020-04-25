@@ -1,5 +1,5 @@
 {
-  "name": "themer-colors-lucid",
+  "name": "@themer/colors-lucid",
   "version": "1.0.3",
   "description": "A color set for themer based on the Lucidchart editor.",
   "main": "lib/index.js",
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-colors-lucid#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/colors-lucid#readme",
   "devDependencies": {},
   "dependencies": {}
 }
