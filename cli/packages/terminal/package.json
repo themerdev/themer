@@ -1,5 +1,5 @@
 {
-  "name": "themer-terminal",
+  "name": "@themer/terminal",
   "version": "2.1.0",
   "description": "A Terminal.app theme generator for themer.",
   "main": "lib/index.js",
@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/themer-terminal#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/terminal#readme",
   "keywords": [
     "themer",
     "terminal",
