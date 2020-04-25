@@ -274,7 +274,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 * [themer-slack](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-slack)
 * [@themer/alfred](https://github.com/mjswensen/themer/tree/master/cli/packages/alfred)
-* [themer-firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-firefox-addon)
+* [@themer/firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-addon)
 * [themer-firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/themer-firefox-color)
 * [@themer/brave](https://github.com/mjswensen/themer/tree/master/cli/packages/brave)
 * [@themer/chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/chrome)
