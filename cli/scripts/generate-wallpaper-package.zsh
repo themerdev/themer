@@ -17,8 +17,8 @@ LICENSE.md
 EOF
 
 cat << EOF > $PACKAGE/.yarnrc
-version-tag-prefix $NAME-v
-version-git-message $NAME-v%s
+version-tag-prefix "$NAME-v"
+version-git-message "$NAME-v%s"
 EOF
 
 cat << EOF > $PACKAGE/package.json
