@@ -4,16 +4,16 @@ import Radio from './Radio';
 import styles from './WallpaperModal.module.css';
 import ThemeContext from './ThemeContext';
 
-import { render as blockWaveRender } from 'themer-wallpaper-block-wave';
-import { render as diamondsRender } from 'themer-wallpaper-diamonds';
-import { render as octagonRender } from 'themer-wallpaper-octagon';
-import { render as shirtsRender } from 'themer-wallpaper-shirts';
-import { render as trianglesRender } from 'themer-wallpaper-triangles';
-import { render as trianglifyRender } from 'themer-wallpaper-trianglify';
+import { render as blockWaveRender } from '@themer/wallpaper-block-wave';
+import { render as diamondsRender } from '@themer/wallpaper-diamonds';
+import { render as octagonRender } from '@themer/wallpaper-octagon';
+import { render as shirtsRender } from '@themer/wallpaper-shirts';
+import { render as trianglesRender } from '@themer/wallpaper-triangles';
+import { render as trianglifyRender } from '@themer/wallpaper-trianglify';
 
-const getImagePromises = (pkg, colors, width, height) => {
-  const options = { [`${pkg}-size`]: `${width}x${height}` };
-  switch (pkg) {
+const getImagePromises = (wallpaper, colors, width, height) => {
+  const options = { [`${wallpaper}-size`]: `${width}x${height}` };
+  switch (wallpaper) {
     case 'themer-wallpaper-block-wave':
       return blockWaveRender(colors, options);
     case 'themer-wallpaper-diamonds':
@@ -27,7 +27,7 @@ const getImagePromises = (pkg, colors, width, height) => {
     case 'themer-wallpaper-trianglify':
       return trianglifyRender(colors, options);
     default:
-      throw new Error(`${pkg} not found`);
+      throw new Error(`${wallpaper} not found`);
   }
 }
 

@@ -4,21 +4,21 @@ import { has } from 'lodash';
 import styles from './PreBuiltList.module.css';
 import ThemeContext, { paramsFromState } from './ThemeContext';
 
-import { colors as defaultColors } from 'themer-colors-default';
-import { colors as nightSkyColors } from 'themer-colors-night-sky';
-import { colors as polarIceColors } from 'themer-colors-polar-ice';
-import { colors as fingerPaintColors} from 'themer-colors-finger-paint';
-import { colors as monkeyColors } from 'themer-colors-monkey';
-import { colors as oneColors } from 'themer-colors-one';
-import { colors as lucidColors } from 'themer-colors-lucid';
-import { colors as solarizedColors } from 'themer-colors-solarized';
-import { colors as githubUniverseColors } from 'themer-colors-github-universe';
-import { colors as novaColors } from 'themer-colors-nova';
-import { colors as mojaveColors } from 'themer-colors-mojave';
-import { colors as rivetColors } from 'themer-colors-rivet';
-import { colors as rightInTheTealsColors} from 'themer-colors-right-in-the-teals';
-import { colors as draculaColors } from 'themer-colors-dracula';
-import { colors as setiColors } from 'themer-colors-seti';
+import { colors as defaultColors } from '@themer/colors-default';
+import { colors as draculaColors } from '@themer/colors-dracula';
+import { colors as fingerPaintColors} from '@themer/colors-finger-paint';
+import { colors as githubUniverseColors } from '@themer/colors-github-universe';
+import { colors as lucidColors } from '@themer/colors-lucid';
+import { colors as mojaveColors } from '@themer/colors-mojave';
+import { colors as monkeyColors } from '@themer/colors-monkey';
+import { colors as nightSkyColors } from '@themer/colors-night-sky';
+import { colors as novaColors } from '@themer/colors-nova';
+import { colors as oneColors } from '@themer/colors-one';
+import { colors as polarIceColors } from '@themer/colors-polar-ice';
+import { colors as rightInTheTealsColors} from '@themer/colors-right-in-the-teals';
+import { colors as rivetColors } from '@themer/colors-rivet';
+import { colors as setiColors } from '@themer/colors-seti';
+import { colors as solarizedColors } from '@themer/colors-solarized';
 
 const PreBuiltLink = ({ colors, children }) => {
   const { activeColorSet } = useContext(ThemeContext);
