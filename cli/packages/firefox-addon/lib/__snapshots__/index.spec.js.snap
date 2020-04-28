@@ -10,6 +10,8 @@ To package the code in preparation for submission, the \`web-ext\` tool can be u
 
 Then the package can be submitted to Mozilla for review in the [Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/addon/submit/distribution).
 
+Learn more about Firefox themes from [extensionworkshop.com](https://extensionworkshop.com/documentation/themes/)
+
 To theme Firefox without the need to create a developer account and go through the extension review process, see themer's integration with [Firefox Color](https://color.firefox.com).
   "
 `;
@@ -151,9 +153,9 @@ Object {
         102,
       ],
       "toolbar_field_separator": Array [
-        40,
-        38,
-        41,
+        71,
+        66,
+        71,
       ],
       "toolbar_field_text": Array [
         255,
@@ -307,9 +309,9 @@ Object {
         194,
       ],
       "toolbar_field_separator": Array [
-        224,
-        220,
-        224,
+        255,
+        252,
+        255,
       ],
       "toolbar_field_text": Array [
         40,
