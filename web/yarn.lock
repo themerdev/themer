@@ -1400,9 +1400,9 @@
     lodash "^4.17.4"
 
 "@themer/firefox-addon@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@themer/firefox-addon/-/firefox-addon-1.0.0.tgz#5c1213f24e8d3ddf8537725bcf5a855ed596c57f"
-  integrity sha512-S+U5CCfi3DQ6TgbQqcYk4qLwmJry7nsMVJiSNhqxdFarTLOiO9eCf1dRGHkHo9d5psYRZVLohuYfgdMPHOK1qg==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@themer/firefox-addon/-/firefox-addon-1.0.1.tgz#6352ae09a34c8430135cdd59ed60cd8be4485305"
+  integrity sha512-FjRD6qYB7sX8me1Dtt4kDHBozmju8sAUXKsId29dGjSdIS4Fd4CHcCSpgAVGO9Z34jHtOY9/X494zDLJJqVm0g==
   dependencies:
     color "^3.1.2"
     lodash "^4.17.15"
