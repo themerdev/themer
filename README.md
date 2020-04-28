@@ -29,6 +29,7 @@
   * [Editors/IDEs](#editorsides)
   * [Wallpapers](#wallpapers)
   * [Other](#other)
+  * [Community](#community)
   * [Create your own template](#create-your-own-template)
 * [About](#about)
 * [Themer's Web UI](#themers-web-ui)
@@ -245,9 +246,6 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/hyper](https://github.com/mjswensen/themer/tree/master/cli/packages/hyper)
 * [@themer/iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/iterm)
 * [@themer/terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/terminal)
-* [0x52a1/themer-kitty](https://github.com/0x52a1/themer-kitty)
-* [0x52a1/themer-termite](https://github.com/0x52a1/themer-termite)
-* [agarrharr/themer-gnome-terminal](https://github.com/agarrharr/themer-gnome-terminal)
 
 ### Editors/IDEs
 
@@ -259,7 +257,6 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/vim](https://github.com/mjswensen/themer/tree/master/cli/packages/vim)
 * [@themer/vscode](https://github.com/mjswensen/themer/tree/master/cli/packages/vscode)
 * [@themer/xcode](https://github.com/mjswensen/themer/tree/master/cli/packages/xcode)
-* [tomselvi/themer-jetbrains](https://github.com/tomselvi/themer-jetbrains)
 
 ### Wallpapers
 
@@ -280,8 +277,20 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/prism](https://github.com/mjswensen/themer/tree/master/cli/packages/prism)
 * [@themer/sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/sketch-palettes)
 * [@themer/slack](https://github.com/mjswensen/themer/tree/master/cli/packages/slack)
-* [PDDStudio/themer-android](https://github.com/PDDStudio/themer-android)
-* [tomselvi/themer-tmux](https://github.com/tomselvi/themer-tmux)
+
+### Community
+
+* [~0x52a1/themer-kitty](https://www.npmjs.com/package/themer-kitty)
+* [~0x52a1/themer-termite](https://www.npmjs.com/package/themer-termite)
+* [~agarrharr/themer-gnome-terminal](https://www.npmjs.com/package/themer-gnome-terminal)
+* [~dguo/themer-colors-blood-moon](https://www.npmjs.com/package/themer-colors-blood-moon)
+* [~dtkerr/themer-i3](https://www.npmjs.com/package/themer-i3)
+* [~dtkerr/themer-m4](https://www.npmjs.com/package/themer-m4)
+* [~jtroyer/themer-mattermost](https://www.npmjs.com/package/themer-mattermost)
+* [~rubenverg/themer-windows-terminal](https://www.npmjs.com/package/themer-windows-terminal)
+* [~tomselvi/themer-jetbrains](https://www.npmjs.com/package/themer-jetbrains)
+* [~tomselvi/themer-mintty](https://www.npmjs.com/package/themer-mintty)
+* [~tomselvi/themer-tmux](https://www.npmjs.com/package/themer-tmux)
 
 ### Create your own template
 
