@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themer xresources theme generator renders instructions 1`] = `
+"
+Copy the contents of 'themer-dark.Xresources' or 'themer-light.Xresources' into your .xresources configuration file.
+"
+`;
+
+exports[`themer xresources theme generator renders valid theme files 1`] = `
+"
+! general
+*background: #282629
+*foreground: #E0DCE0
+*cursor: #CC78FA
+
+! blacks
+*color0: #656066
+*color8: #847E85
+
+! reds
+*color1: #FF4050
+*color9: #FF6673
+
+! greens
+*color2: #A4CC35
+*color10: #B6D65D
+
+! yellows
+*color3: #FFD24A
+*color11: #FFDA6E
+
+! blues
+*color4: #66BFFF
+*color12: #85CBFF
+
+! magentas
+*color5: #F553BF
+*color13: #F775CC
+
+! cyans
+*color6: #26C99E
+*color14: #51D3B1
+
+! whites
+*color7: #E0DCE0
+*color15: #FFFCFF
+"
+`;
+
+exports[`themer xresources theme generator renders valid theme files 2`] = `
+"
+! general
+*background: #FFFCFF
+*foreground: #474247
+*cursor: #BF65F0
+
+! blacks
+*color0: #474247
+*color8: #656066
+
+! reds
+*color1: #F03E4D
+*color9: #F36471
+
+! greens
+*color2: #97BD2D
+*color10: #ACCA57
+
+! yellows
+*color3: #EEBA21
+*color11: #F1C74D
+
+! blues
+*color4: #53A6E1
+*color12: #75B7E7
+
+! magentas
+*color5: #EE4EB8
+*color13: #F171C6
+
+! cyans
+*color6: #1FC598
+*color14: #4CD0AD
+
+! whites
+*color7: #C1BCC2
+*color15: #E0DCE0
+"
+`;
