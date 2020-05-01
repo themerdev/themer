@@ -45,6 +45,7 @@
     "@themer/wallpaper-triangles": "^2.1.0",
     "@themer/wallpaper-trianglify": "^1.1.0",
     "@themer/xcode": "^2.1.0",
+    "@themer/xresources": "^1.0.0",
     "color": "^3.1.0",
     "color-steps": "^1.0.1",
     "file-saver": "^2.0.0",

@@ -38,6 +38,7 @@ export default () => {
   const [tmux, setTmux] = useState(false);
   const [prism, setPrism] = useState(false);
   const [firefox, setFirefox] = useState(false);
+  const [xresources, setXresources] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
 
@@ -256,6 +257,12 @@ export default () => {
             label="Prism"
             accentSelected
           />
+          <Checkbox
+            value={ xresources }
+            onChange={ () => setXresources(!xresources) }
+            label="Xresources"
+            accentSelected
+          />
         </fieldset>
       </div>
       <Button
@@ -295,6 +302,7 @@ export default () => {
               tmux,
               prism,
               firefox,
+              xresources,
             },
             preparedColorSet,
             window.innerWidth * window.devicePixelRatio,

@@ -1527,6 +1527,13 @@
     color "^3.0.0"
     lodash "^4.17.4"
 
+"@themer/xresources@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/xresources/-/xresources-1.0.0.tgz#4d3d213d9456d73895c70912083b90bb224c50bb"
+  integrity sha512-w+B4JIcH2iXG3SWTjUESnvnMe8eItnTqgAyGZbzLqM3Pf6IRBSXwUo0h2p0L4T4Y9IaPzySx1i8wUP+hIUAAww==
+  dependencies:
+    color "^3.1.2"
+
 "@types/babel__core@^7.1.0":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.7.tgz#1dacad8840364a57c98d0dd4855c6dd3752c6b89"
