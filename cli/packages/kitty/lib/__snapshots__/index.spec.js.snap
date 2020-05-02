@@ -14,7 +14,7 @@ bell_border_color #F28144
 active_tab_foreground #E0DCE0
 active_tab_background #282629
 
-inactive_tab_foreground #847E85
+inactive_tab_foreground #C1BCC2
 inactive_tab_background #474247
 
 foreground #E0DCE0
@@ -72,7 +72,7 @@ bell_border_color #F37735
 active_tab_foreground #474247
 active_tab_background #FFFCFF
 
-inactive_tab_foreground #A29DA3
+inactive_tab_foreground #656066
 inactive_tab_background #E0DCE0
 
 foreground #474247

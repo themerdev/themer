@@ -20,7 +20,7 @@ bell_border_color ${colors.accent1}
 active_tab_foreground ${colors.shade6}
 active_tab_background ${colors.shade0}
 
-inactive_tab_foreground ${colors.shade3}
+inactive_tab_foreground ${colors.shade5}
 inactive_tab_background ${colors.shade1}
 
 foreground ${colors.shade6}
