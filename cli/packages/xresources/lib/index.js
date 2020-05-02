@@ -7,43 +7,44 @@ const brightMix = (colors, key, isDark) =>
     .mix(isDark ? Color(colors.shade7) : Color(colors.shade0), MIX)
     .hex();
 
+const format = hex => `rgb:${Color(hex).rgb().array().map(n => n.toString('16')).join('/')}`;
+
 const renderTheme = (colors, isDark) => `
 ! general
-*background: ${colors.shade0}
-*foreground: ${colors.shade6}
-*cursor: ${colors.accent6}
+*background: ${format(colors.shade0)}
+*foreground: ${format(colors.shade6)}
 
 ! blacks
-*color0: ${isDark ? colors.shade2 : colors.shade6}
-*color8: ${isDark ? colors.shade3 : colors.shade5}
+*color0: ${format(isDark ? colors.shade2 : colors.shade6)}
+*color8: ${format(isDark ? colors.shade3 : colors.shade5)}
 
 ! reds
-*color1: ${colors.accent0}
-*color9: ${brightMix(colors, 'accent0', isDark)}
+*color1: ${format(colors.accent0)}
+*color9: ${format(brightMix(colors, 'accent0', isDark))}
 
 ! greens
-*color2: ${colors.accent3}
-*color10: ${brightMix(colors, 'accent3', isDark)}
+*color2: ${format(colors.accent3)}
+*color10: ${format(brightMix(colors, 'accent3', isDark))}
 
 ! yellows
-*color3: ${colors.accent2}
-*color11: ${brightMix(colors, 'accent2', isDark)}
+*color3: ${format(colors.accent2)}
+*color11: ${format(brightMix(colors, 'accent2', isDark))}
 
 ! blues
-*color4: ${colors.accent5}
-*color12: ${brightMix(colors, 'accent5', isDark)}
+*color4: ${format(colors.accent5)}
+*color12: ${format(brightMix(colors, 'accent5', isDark))}
 
 ! magentas
-*color5: ${colors.accent7}
-*color13: ${brightMix(colors, 'accent7', isDark)}
+*color5: ${format(colors.accent7)}
+*color13: ${format(brightMix(colors, 'accent7', isDark))}
 
 ! cyans
-*color6: ${colors.accent4}
-*color14: ${brightMix(colors, 'accent4', isDark)}
+*color6: ${format(colors.accent4)}
+*color14: ${format(brightMix(colors, 'accent4', isDark))}
 
 ! whites
-*color7: ${isDark ? colors.shade6 : colors.shade2}
-*color15: ${isDark ? colors.shade7 : colors.shade1}
+*color7: ${format(isDark ? colors.shade6 : colors.shade2)}
+*color15: ${format(isDark ? colors.shade7 : colors.shade1)}
 `;
 
 const render = colors => Object.entries(colors)
