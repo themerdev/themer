@@ -54,7 +54,7 @@ const render = colors => Object.entries(colors)
   }));
 
 const renderInstructions = paths => `
-Copy the contents of ${paths.map(p => `'${p}'`).join(' or ')} into your .xresources configuration file.
+Copy the contents of ${paths.map(p => `'${p}'`).join(' or ')} into your .Xresources configuration file, or load it with \`xrdb\`.
 `;
 
 module.exports = {

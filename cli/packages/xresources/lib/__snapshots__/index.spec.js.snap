@@ -2,7 +2,7 @@
 
 exports[`themer xresources theme generator renders instructions 1`] = `
 "
-Copy the contents of 'themer-dark.Xresources' or 'themer-light.Xresources' into your .xresources configuration file.
+Copy the contents of 'themer-dark.Xresources' or 'themer-light.Xresources' into your .Xresources configuration file, or load it with \`xrdb\`.
 "
 `;
 
