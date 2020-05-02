@@ -31,6 +31,7 @@
     "@themer/firefox-color": "^1.0.1",
     "@themer/hyper": "^3.1.1",
     "@themer/iterm": "^2.1.0",
+    "@themer/kitty": "^1.0.0",
     "@themer/prism": "^1.1.0",
     "@themer/sketch-palettes": "^1.1.0",
     "@themer/slack": "^2.1.0",
@@ -61,7 +62,6 @@
     "themer": "^3.3.0",
     "themer-gnome-terminal": "1.0.1",
     "themer-jetbrains": "1.0.1",
-    "themer-kitty": "1.0.1",
     "themer-termite": "1.0.1",
     "themer-tmux": "1.0.4"
   },

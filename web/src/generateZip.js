@@ -18,7 +18,7 @@ import * as themerGnomeTerminal from 'themer-gnome-terminal';
 import * as themerHyper from '@themer/hyper';
 import * as themerIterm from '@themer/iterm';
 import * as themerJetbrains from 'themer-jetbrains';
-import * as themerKitty from 'themer-kitty';
+import * as themerKitty from '@themer/kitty';
 import * as themerPrism from '@themer/prism';
 import * as themerSketchPalettes from '@themer/sketch-palettes';
 import * as themerSlack from '@themer/slack';

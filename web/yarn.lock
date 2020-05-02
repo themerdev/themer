@@ -1430,6 +1430,13 @@
   dependencies:
     color "^3.0.0"
 
+"@themer/kitty@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/kitty/-/kitty-1.0.0.tgz#84951bd7506ef244177a34c8975f7665bd4cd3a2"
+  integrity sha512-JlDgJmqTkOCytqa+th7I5c6RXT3fV66JlgwxYjBdtjCDCxHeHHBw5NI1pw9kN3cKP54AlkInWmtOArgONIZa+A==
+  dependencies:
+    color "^3.1.2"
+
 "@themer/prism@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@themer/prism/-/prism-1.1.0.tgz#8fa81889813fd3168bc74f630366266e1d67dbc5"
@@ -10191,11 +10198,6 @@ themer-jetbrains@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/themer-jetbrains/-/themer-jetbrains-1.0.1.tgz#28c4e6d05716406157c49c45938ef2ada11776f6"
   integrity sha512-HKk91Sh98HQTgxlrVF2caCH7QRxXTQx0mcMHWKjoh+M1m6Qs1BRKGtXt1nXkQHQeD2H3/7Xe09Qaz4pKS2Dx6g==
-
-themer-kitty@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/themer-kitty/-/themer-kitty-1.0.1.tgz#d0d6c2cd0ee89ce54ce3600aae7e2ae8de140f11"
-  integrity sha512-BPobvzCrLOZaGsrWpV10nSWHPzCtyu+HnaRX9QjUiACL0JHGsYFD2e9XvLiCj8RYTk+Nq/cQ1LUcWZs82fuoMQ==
 
 themer-termite@1.0.1:
   version "1.0.1"
