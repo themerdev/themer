@@ -1528,9 +1528,9 @@
     lodash "^4.17.4"
 
 "@themer/xresources@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@themer/xresources/-/xresources-1.0.0.tgz#4d3d213d9456d73895c70912083b90bb224c50bb"
-  integrity sha512-w+B4JIcH2iXG3SWTjUESnvnMe8eItnTqgAyGZbzLqM3Pf6IRBSXwUo0h2p0L4T4Y9IaPzySx1i8wUP+hIUAAww==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@themer/xresources/-/xresources-1.0.2.tgz#5bbcd6343fc34e81df508a895723322df9b26554"
+  integrity sha512-oWDfFez7fe5tG9cdPEo5+2Py5PoSQSI66HNOVQxdFPRoeZ4l+BfnWYrIlzYCxSkLlgjAikN0JbytBRzf3x6L0A==
   dependencies:
     color "^3.1.2"
 
