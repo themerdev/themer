@@ -1,6 +1,6 @@
 {
   "name": "@themer/xresources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An X resources template for themer",
   "main": "lib/index.js",
   "engines": {
