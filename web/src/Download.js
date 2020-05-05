@@ -39,6 +39,7 @@ export default () => {
   const [prism, setPrism] = useState(false);
   const [firefox, setFirefox] = useState(false);
   const [xresources, setXresources] = useState(false);
+  const [wox, setWox] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
 
@@ -263,6 +264,12 @@ export default () => {
             label="Xresources"
             accentSelected
           />
+          <Checkbox
+            value={ wox }
+            onChange={ () => setWox(!wox) }
+            label="Wox"
+            accentSelected
+          />
         </fieldset>
       </div>
       <Button
@@ -303,6 +310,7 @@ export default () => {
               prism,
               firefox,
               xresources,
+              wox,
             },
             preparedColorSet,
             window.innerWidth * window.devicePixelRatio,

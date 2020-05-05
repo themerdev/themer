@@ -34,6 +34,7 @@ import * as themerWallpaperOctagon from '@themer/wallpaper-octagon';
 import * as themerWallpaperShirts from '@themer/wallpaper-shirts';
 import * as themerWallpaperTriangles from '@themer/wallpaper-triangles';
 import * as themerWallpaperTrianglify from '@themer/wallpaper-trianglify';
+import * as themerWox from '@themer/wox';
 import * as themerXcode from '@themer/xcode';
 import * as themerXresources from '@themer/xresources';
 
@@ -71,6 +72,7 @@ const templates = {
   wallpaperShirts: { name: 'Shirts Wallpaper', ...themerWallpaperShirts },
   wallpaperTriangles: { name: 'Triangles Wallpaper', ...themerWallpaperTriangles },
   wallpaperTrianglify: { name: 'Trianglify Wallpaper', ...themerWallpaperTrianglify },
+  wox: { name: 'Wox', ...themerWox },
   xcode: { name: 'Xcode', ...themerXcode },
   xresources: { name: 'Xresources', ...themerXresources },
 };
