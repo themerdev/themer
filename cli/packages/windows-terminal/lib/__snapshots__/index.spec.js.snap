@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themer Windows Terminal theme generator should generate well-formatted themes 1`] = `
+"{
+  \\"name\\": \\"Themer Dark\\",
+  \\"background\\": \\"#282629\\",
+  \\"foreground\\": \\"#E0DCE0\\",
+  \\"cursorColor\\": \\"#CC78FA\\",
+  \\"selectionBackground\\": \\"#66BFFF\\",
+  \\"black\\": \\"#656066\\",
+  \\"brightBlack\\": \\"#847E85\\",
+  \\"red\\": \\"#FF4050\\",
+  \\"brightRed\\": \\"#FF6673\\",
+  \\"green\\": \\"#A4CC35\\",
+  \\"brightGreen\\": \\"#B6D65D\\",
+  \\"brightYellow\\": \\"#FFDA6E\\",
+  \\"blue\\": \\"#66BFFF\\",
+  \\"brightBlue\\": \\"#85CBFF\\",
+  \\"purple\\": \\"#CC78FA\\",
+  \\"brightPurple\\": \\"#D692FB\\",
+  \\"cyan\\": \\"#26C99E\\",
+  \\"brightCyan\\": \\"#51D3B1\\",
+  \\"white\\": \\"#E0DCE0\\",
+  \\"brightWhite\\": \\"#FFFCFF\\"
+}"
+`;
+
+exports[`themer Windows Terminal theme generator should generate well-formatted themes 2`] = `
+"{
+  \\"name\\": \\"Themer Light\\",
+  \\"background\\": \\"#FFFCFF\\",
+  \\"foreground\\": \\"#474247\\",
+  \\"cursorColor\\": \\"#BF65F0\\",
+  \\"selectionBackground\\": \\"#53A6E1\\",
+  \\"black\\": \\"#474247\\",
+  \\"brightBlack\\": \\"#656066\\",
+  \\"red\\": \\"#F03E4D\\",
+  \\"brightRed\\": \\"#F36471\\",
+  \\"green\\": \\"#97BD2D\\",
+  \\"brightGreen\\": \\"#ACCA57\\",
+  \\"brightYellow\\": \\"#F1C74D\\",
+  \\"blue\\": \\"#53A6E1\\",
+  \\"brightBlue\\": \\"#75B7E7\\",
+  \\"purple\\": \\"#BF65F0\\",
+  \\"brightPurple\\": \\"#CC83F3\\",
+  \\"cyan\\": \\"#1FC598\\",
+  \\"brightCyan\\": \\"#4CD0AD\\",
+  \\"white\\": \\"#C1BCC2\\",
+  \\"brightWhite\\": \\"#E0DCE0\\"
+}"
+`;
+
+exports[`themer Windows Terminal theme generator should provide installation instructions 1`] = `
+"
+1. Open the Windows Terminal settings (\`Ctrl\`-\`,\`)
+2. Add the contents of 'themer-dark.json' and 'themer-light.json' to the \`schemes\` array in \`profile.json\`
+3. Set the \`colorScheme\` property to the desired scheme name (\\"Themer Dark\\" or \\"Themer Light\\") in the profiles section of \`profile.json\`, e.g.:
+
+    \\"profiles\\": {
+      \\"defaults\\": {
+        \\"colorScheme\\": \\"Themer Dark\\"
+      }
+    }
+"
+`;
+
+exports[`themer Windows Terminal theme generator should provide installation instructions 2`] = `
+"
+1. Open the Windows Terminal settings (\`Ctrl\`-\`,\`)
+2. Add the contents of 'themer-light.json' to the \`schemes\` array in \`profile.json\`
+3. Set the \`colorScheme\` property to the desired scheme name (\\"Themer Light\\") in the profiles section of \`profile.json\`, e.g.:
+
+    \\"profiles\\": {
+      \\"defaults\\": {
+        \\"colorScheme\\": \\"Themer Light\\"
+      }
+    }
+"
+`;
