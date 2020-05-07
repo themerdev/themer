@@ -1526,6 +1526,13 @@
     "@themer/utils" "^1.2.0"
     trianglify "^1.2.0"
 
+"@themer/windows-terminal@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/windows-terminal/-/windows-terminal-1.0.0.tgz#eaf04e50619ed5d4d662afe406a8957f9dbf6b90"
+  integrity sha512-nenCOS0p2OsAb4fZOaVORXZ5pHlzvQnboj6UfGwRVu4EaEpMNEeA3wUoQRZA4WEMG5/yvbFQYZrMwsJVmP8dug==
+  dependencies:
+    color "^3.1.2"
+
 "@themer/wox@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@themer/wox/-/wox-1.0.0.tgz#be7583a313c2be6685aba1c12643de49d8191ccb"

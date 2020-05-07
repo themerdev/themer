@@ -40,6 +40,7 @@ export default () => {
   const [firefox, setFirefox] = useState(false);
   const [xresources, setXresources] = useState(false);
   const [wox, setWox] = useState(false);
+  const [windowsTerminal, setWindowsTerminal] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
 
@@ -94,6 +95,12 @@ export default () => {
             value={ kitty }
             onChange={ () => setKitty(!kitty) }
             label="kitty"
+            accentSelected
+          />
+          <Checkbox
+            value={ windowsTerminal }
+            onChange={ () => setWindowsTerminal(!windowsTerminal) }
+            label="Windows Terminal"
             accentSelected
           />
         </fieldset>
@@ -311,6 +318,7 @@ export default () => {
               firefox,
               xresources,
               wox,
+              windowsTerminal,
             },
             preparedColorSet,
             window.innerWidth * window.devicePixelRatio,
