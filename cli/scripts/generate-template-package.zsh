@@ -59,8 +59,6 @@ cat << EOF > $PACKAGE/README.md
 
 A TODO template for [themer](https://github.com/mjswensen/themer).
 
-TODO
-
 ## Installation & usage
 
 Install this module wherever you have \`themer\` installed:
@@ -93,7 +91,7 @@ module.exports = {
 EOF
 
 cat << EOF > $LIB/index.spec.js
-const { render } = require('./index');
+const { render, renderInstructions } = require('./index');
 const { colors } = require('../../colors-default');
 
 describe('themer $1 theme generator', () => {
