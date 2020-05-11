@@ -6,8 +6,32 @@ describe('themer Windows Terminal theme generator', () => {
 
   it('should generate well-formatted themes', async () => {
     const files = await promisedFiles;
+    const hexMatcher = expect.stringMatching(/#[a-zA-Z0-9]{6}/);
     for (const file of files) {
-      expect(file.contents.toString('utf8')).toMatchSnapshot();
+      const theme = JSON.parse(file.contents.toString('utf8'));
+      expect(theme).toMatchObject({
+        background: hexMatcher,
+        black: hexMatcher,
+        blue: hexMatcher,
+        brightBlack: hexMatcher,
+        brightBlue: hexMatcher,
+        brightCyan: hexMatcher,
+        brightGreen: hexMatcher,
+        brightPurple: hexMatcher,
+        brightRed: hexMatcher,
+        brightWhite: hexMatcher,
+        brightYellow: hexMatcher,
+        cursorColor: hexMatcher,
+        cyan: hexMatcher,
+        foreground: hexMatcher,
+        green: hexMatcher,
+        name: expect.stringContaining('Themer'),
+        purple: hexMatcher,
+        red: hexMatcher,
+        selectionBackground: hexMatcher,
+        white: hexMatcher,
+        yellow: hexMatcher,
+      })
     }
   });
 

@@ -27,7 +27,7 @@ const renderTheme = ([firstLetter, ...letters], colors, isDark) => JSON.stringif
     green: colors.accent3,
     brightGreen: brightMix(colors, 'accent3', isDark),
 
-    yellow: colors.accen2,
+    yellow: colors.accent2,
     brightYellow: brightMix(colors, 'accent2', isDark),
 
     blue: colors.accent5,
