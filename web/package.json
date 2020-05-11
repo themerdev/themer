@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sentry/browser": "^5.15.5",
     "@themer/alacritty": "^1.0.0",
     "@themer/alfred": "^1.1.2",
     "@themer/atom-syntax": "^2.1.2",
