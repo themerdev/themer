@@ -1527,9 +1527,9 @@
     trianglify "^1.2.0"
 
 "@themer/windows-terminal@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@themer/windows-terminal/-/windows-terminal-1.0.0.tgz#eaf04e50619ed5d4d662afe406a8957f9dbf6b90"
-  integrity sha512-nenCOS0p2OsAb4fZOaVORXZ5pHlzvQnboj6UfGwRVu4EaEpMNEeA3wUoQRZA4WEMG5/yvbFQYZrMwsJVmP8dug==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@themer/windows-terminal/-/windows-terminal-1.0.1.tgz#34a938791494186a7459905c75377a9306b71542"
+  integrity sha512-aGRM8O9Wg6xAG6+r/eDLEGkOjPxcODRfXFy0RKk2/YzsWvfCWVmMxb2OHBHUH6RzfbUL55Xow3C6LsjXFStnfQ==
   dependencies:
     color "^3.1.2"
 
