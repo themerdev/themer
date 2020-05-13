@@ -118,6 +118,8 @@ const render = (colors) => {
   exec "hi Error ctermfg=".s:ctermaccent0." ctermbg=".s:ctermshade1
   exec "hi Todo guifg=".s:guiaccent0." guibg=".s:guishade1
   exec "hi Todo ctermfg=".s:ctermaccent0." ctermbg=".s:ctermshade1
+  exec "hi Function guifg=".s:guiaccent1
+  exec "hi Function ctermfg=".s:ctermaccent1
 
   " GitGutter
 
