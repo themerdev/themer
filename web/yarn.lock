@@ -1524,9 +1524,9 @@
   integrity sha512-hVvsIR2KxNDLaNQm0cZKarRWqoH9RTruI+r2hvubESjEJAhR8t39mDj9rZIM+b0M5HDJl1KmbEDWGdDaihKfPQ==
 
 "@themer/vim@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@themer/vim/-/vim-3.2.1.tgz#ae306c7a321da6b3e01d46a23331b8279816a3f6"
-  integrity sha512-sMJ5pZTR/uRP2CNxf2aYWxV/wjMriJtRVByIxcfjwGCcaYC9wmOhVVPRXU8YUD1ViL/xs96M7qgxlrH1Hpzt3g==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@themer/vim/-/vim-3.3.0.tgz#27071aab5c34e2ee1e40f53317ed9215209998a2"
+  integrity sha512-A/MI8kjFBgeitq+vS89PALxl6MvdSANMFxOjkb5tdiYrvmOkBgHc4cNr5frkH9iIEEceEw0fW/LXoaGP5/msYQ==
   dependencies:
     color-convert "^2.0.1"
 
