@@ -1451,6 +1451,11 @@
   dependencies:
     lodash "^4.17.4"
 
+"@themer/emacs@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/emacs/-/emacs-1.0.0.tgz#9f578a70128084bed33d3f525d683c0242f0c98c"
+  integrity sha512-D/l5451R96KxgLI0w+10oPHjo4GmI9sdOnoBVnoJ5lx8pG1yeMDqVjom2EXdFPxhrHinSaJC2aGHIeq/9kQiSw==
+
 "@themer/firefox-addon@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@themer/firefox-addon/-/firefox-addon-1.0.1.tgz#6352ae09a34c8430135cdd59ed60cd8be4485305"

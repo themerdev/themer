@@ -41,6 +41,7 @@ export default () => {
   const [xresources, setXresources] = useState(false);
   const [wox, setWox] = useState(false);
   const [windowsTerminal, setWindowsTerminal] = useState(false);
+  const [emacs, setEmacs] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
 
@@ -158,6 +159,12 @@ export default () => {
             value={ jetbrains }
             onChange={ () => setJetbrains(!jetbrains) }
             label="JetBrains"
+            accentSelected
+          />
+          <Checkbox
+            value={ emacs }
+            onChange={ () => setEmacs(!emacs) }
+            label="Emacs"
             accentSelected
           />
         </fieldset>
@@ -319,6 +326,7 @@ export default () => {
               xresources,
               wox,
               windowsTerminal,
+              emacs,
             },
             preparedColorSet,
             window.innerWidth * window.devicePixelRatio,
