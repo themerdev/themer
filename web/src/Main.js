@@ -91,7 +91,7 @@ export default () => {
           <WallpaperPreview />
         </div>
         <h2 className={ styles.h2 } style={{ color: getActiveColorOrFallback(['shade7'])}}>3. Download</h2>
-        <p className={ styles.help } style={{ color: getActiveColorOrFallback(['shade6']) }}>Select which themes you'd like to generate from your color set.</p>
+        <p className={ styles.help } style={{ color: getActiveColorOrFallback(['shade6']) }}>Select which themes you'd like to generate from your color set. Installation instructions will be included in a README file.</p>
         <Download />
       </div>
       <div className={ styles.shape } style={{ '--shape-color': getActiveColorOrFallback(['shade1'], true) }}>
