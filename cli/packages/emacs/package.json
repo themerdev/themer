@@ -1,6 +1,6 @@
 {
   "name": "@themer/emacs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An emacs theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
