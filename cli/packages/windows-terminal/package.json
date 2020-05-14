@@ -1,7 +1,7 @@
 {
   "name": "@themer/windows-terminal",
   "version": "1.0.1",
-  "description": "TODO",
+  "description": "A Windows Terminal theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
     "node": ">=8.11.4"
