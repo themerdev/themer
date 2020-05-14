@@ -243,7 +243,11 @@ const render = colors => Object.entries(colors).map(async ([key, colors]) => ({
 }));
 
 const renderInstructions = paths => `
-Copy (or symlink) the generated theme ${paths.length === 1 ? 'file' : 'files'} into \`~/.emacs.d/\`, then load the theme in \`init.el\`:
+Copy (or symlink) the generated theme ${paths.length === 1 ? 'file' : 'files'} into \`~/.emacs.d/\`:
+
+    ${paths.map(p => `cp '${p}' ~/.emacs.d/`).join('\n    ')}
+
+Then load the desired theme in \`init.el\`:
 
     ${paths.map(p => `(load-theme '${basename(p, '-theme.el')} t)`).join('\n    ;; or\n    ')}
 `;
