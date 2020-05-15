@@ -1,7 +1,7 @@
 import prepareColors from 'themer/lib/prepare';
 import themer from 'themer/lib/themer';
 import JSZip from 'jszip';
-import { flatten } from 'lodash';
+import { flatten, sortBy } from 'lodash';
 
 import * as themerAlacritty from '@themer/alacritty';
 import * as themerAlfred from '@themer/alfred';
@@ -117,8 +117,11 @@ export default async function generateZip(selections, colors, width, height, url
   const selectedKeys = Array.from(Object.entries(selections))
     .filter(([_, selected]) => selected)
     .map(([key]) => key);
-  const selectedTemplates = flatten(
-    selectedKeys.map(key => Array.isArray(templates[key]) ? templates[key] : [templates[key]]),
+  const selectedTemplates = sortBy(
+    flatten(
+      selectedKeys.map(key => Array.isArray(templates[key]) ? templates[key] : [templates[key]]),
+    ),
+    template => template.name.toLowerCase(),
   );
   const extraArgs = selectedKeys.reduce(
     (acc, key) => ({

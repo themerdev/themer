@@ -57,6 +57,24 @@ export default () => {
             accentSelected
           />
           <Checkbox
+            value={ cmd }
+            onChange={ () => setCmd(!cmd) }
+            label="CMD.exe"
+            accentSelected
+          />
+          <Checkbox
+            value={ conemu }
+            onChange={ () => setConemu(!conemu) }
+            label="ConEmu"
+            accentSelected
+          />
+          <Checkbox
+            value={ gnomeTerminal }
+            onChange={ () => setGnomeTerminal(!gnomeTerminal) }
+            label="GNOME Terminal"
+            accentSelected
+          />
+          <Checkbox
             value={ hyper }
             onChange={ () => setHyper(!hyper) }
             label="Hyper"
@@ -69,33 +87,15 @@ export default () => {
             accentSelected
           />
           <Checkbox
-            value={ gnomeTerminal }
-            onChange={ () => setGnomeTerminal(!gnomeTerminal) }
-            label="GNOME Terminal"
-            accentSelected
-          />
-          <Checkbox
-            value={ conemu }
-            onChange={ () => setConemu(!conemu) }
-            label="ConEmu"
-            accentSelected
-          />
-          <Checkbox
-            value={ cmd }
-            onChange={ () => setCmd(!cmd) }
-            label="CMD.exe"
+            value={ kitty }
+            onChange={ () => setKitty(!kitty) }
+            label="kitty"
             accentSelected
           />
           <Checkbox
             value={ termite }
             onChange={ () => setTermite(!termite) }
             label="Termite"
-            accentSelected
-          />
-          <Checkbox
-            value={ kitty }
-            onChange={ () => setKitty(!kitty) }
-            label="kitty"
             accentSelected
           />
           <Checkbox
@@ -120,6 +120,30 @@ export default () => {
             accentSelected
           />
           <Checkbox
+            value={ bbedit }
+            onChange={ () => setBbedit(!bbedit) }
+            label="BBEdit"
+            accentSelected
+          />
+          <Checkbox
+            value={ emacs }
+            onChange={ () => setEmacs(!emacs) }
+            label="Emacs"
+            accentSelected
+          />
+          <Checkbox
+            value={ jetbrains }
+            onChange={ () => setJetbrains(!jetbrains) }
+            label="JetBrains"
+            accentSelected
+          />
+          <Checkbox
+            value={ vimLightline }
+            onChange={ () => setVimLightline(!vimLightline) }
+            label="lightline.vim"
+            accentSelected
+          />
+          <Checkbox
             value={ sublimeText }
             onChange={ () => setSublimeText(!sublimeText) }
             label="Sublime Text"
@@ -132,12 +156,6 @@ export default () => {
             accentSelected
           />
           <Checkbox
-            value={ vimLightline }
-            onChange={ () => setVimLightline(!vimLightline) }
-            label="lightline.vim"
-            accentSelected
-          />
-          <Checkbox
             value={ vscode }
             onChange={ () => setVscode(!vscode) }
             label="VS Code"
@@ -147,24 +165,6 @@ export default () => {
             value={ xcode }
             onChange={ () => setXcode(!xcode) }
             label="Xcode"
-            accentSelected
-          />
-          <Checkbox
-            value={ bbedit }
-            onChange={ () => setBbedit(!bbedit) }
-            label="BBEdit"
-            accentSelected
-          />
-          <Checkbox
-            value={ jetbrains }
-            onChange={ () => setJetbrains(!jetbrains) }
-            label="JetBrains"
-            accentSelected
-          />
-          <Checkbox
-            value={ emacs }
-            onChange={ () => setEmacs(!emacs) }
-            label="Emacs"
             accentSelected
           />
         </fieldset>
@@ -189,6 +189,12 @@ export default () => {
             accentSelected
           />
           <Checkbox
+            value={ wallpaperShirts }
+            onChange={ () => setWallpaperShirts(!wallpaperShirts) }
+            label="“Shirts”"
+            accentSelected
+          />
+          <Checkbox
             value={ wallpaperTriangles }
             onChange={ () => setWallpaperTriangles(!wallpaperTriangles) }
             label="“Triangles”"
@@ -198,12 +204,6 @@ export default () => {
             value={ wallpaperTrianglify }
             onChange={ () => setWallpaperTrianglify(!wallpaperTrianglify) }
             label="“Trianglify”"
-            accentSelected
-          />
-          <Checkbox
-            value={ wallpaperShirts }
-            onChange={ () => setWallpaperShirts(!wallpaperShirts) }
-            label="“Shirts”"
             accentSelected
           />
           <div
@@ -225,21 +225,9 @@ export default () => {
         <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
           <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Other</legend>
           <Checkbox
-            value={ slack }
-            onChange={ () => setSlack(!slack) }
-            label="Slack sidebar"
-            accentSelected
-          />
-          <Checkbox
             value={ alfred }
             onChange={ () => setAlfred(!alfred) }
             label="Alfred.app"
-            accentSelected
-          />
-          <Checkbox
-            value={ firefox }
-            onChange={ () => setFirefox(!firefox) }
-            label="Firefox"
             accentSelected
           />
           <Checkbox
@@ -255,15 +243,9 @@ export default () => {
             accentSelected
           />
           <Checkbox
-            value={ sketchPalettes }
-            onChange={ () => setSketchPalettes(!sketchPalettes) }
-            label="Sketch palettes"
-            accentSelected
-          />
-          <Checkbox
-            value={ tmux }
-            onChange={ () => setTmux(!tmux) }
-            label="tmux"
+            value={ firefox }
+            onChange={ () => setFirefox(!firefox) }
+            label="Firefox"
             accentSelected
           />
           <Checkbox
@@ -273,15 +255,33 @@ export default () => {
             accentSelected
           />
           <Checkbox
-            value={ xresources }
-            onChange={ () => setXresources(!xresources) }
-            label="Xresources"
+            value={ sketchPalettes }
+            onChange={ () => setSketchPalettes(!sketchPalettes) }
+            label="Sketch palettes"
+            accentSelected
+          />
+          <Checkbox
+            value={ slack }
+            onChange={ () => setSlack(!slack) }
+            label="Slack sidebar"
+            accentSelected
+          />
+          <Checkbox
+            value={ tmux }
+            onChange={ () => setTmux(!tmux) }
+            label="tmux"
             accentSelected
           />
           <Checkbox
             value={ wox }
             onChange={ () => setWox(!wox) }
             label="Wox"
+            accentSelected
+          />
+          <Checkbox
+            value={ xresources }
+            onChange={ () => setXresources(!xresources) }
+            label="Xresources"
             accentSelected
           />
         </fieldset>
@@ -293,40 +293,40 @@ export default () => {
           const zip = await generateZip(
             {
               alacritty,
-              hyper,
-              iterm,
-              gnomeTerminal,
-              conemu,
-              cmd,
-              termite,
-              kitty,
+              alfred,
               atomSyntax,
               atomUi,
+              bbedit,
+              brave,
+              chrome,
+              cmd,
+              conemu,
+              emacs,
+              firefox,
+              gnomeTerminal,
+              hyper,
+              iterm,
+              jetbrains,
+              kitty,
+              prism,
+              sketchPalettes,
+              slack,
               sublimeText,
+              termite,
+              tmux,
               vim,
               vimLightline,
               vscode,
-              xcode,
-              bbedit,
-              jetbrains,
               wallpaperBlockWave,
               wallpaperDiamonds,
               wallpaperOctagon,
+              wallpaperShirts,
               wallpaperTriangles,
               wallpaperTrianglify,
-              wallpaperShirts,
-              slack,
-              alfred,
-              brave,
-              chrome,
-              sketchPalettes,
-              tmux,
-              prism,
-              firefox,
-              xresources,
-              wox,
               windowsTerminal,
-              emacs,
+              wox,
+              xcode,
+              xresources,
             },
             preparedColorSet,
             window.innerWidth * window.devicePixelRatio,
