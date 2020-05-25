@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "stripe": "^8.54.0"
+  },
+  "scripts": {
+    "start": "env-cmd netlify dev --functions . --port 3001"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}
