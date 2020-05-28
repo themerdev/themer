@@ -5,6 +5,8 @@ import Button from './Button';
 import generateZip from './generateZip';
 import saveAs from 'file-saver';
 import ThemeContext from './ThemeContext';
+import PriceInput from './PriceInput';
+import CheckoutModal from './CheckoutModal';
 
 export default () => {
   const [alacritty, setAlacritty] = useState(false);
@@ -44,7 +46,60 @@ export default () => {
   const [emacs, setEmacs] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
+  
+  const download = async () => {
+    const zip = await generateZip(
+      {
+        alacritty,
+        alfred,
+        atomSyntax,
+        atomUi,
+        bbedit,
+        brave,
+        chrome,
+        cmd,
+        conemu,
+        emacs,
+        firefox,
+        gnomeTerminal,
+        hyper,
+        iterm,
+        jetbrains,
+        kitty,
+        prism,
+        sketchPalettes,
+        slack,
+        sublimeText,
+        termite,
+        tmux,
+        vim,
+        vimLightline,
+        vscode,
+        wallpaperBlockWave,
+        wallpaperDiamonds,
+        wallpaperOctagon,
+        wallpaperShirts,
+        wallpaperTriangles,
+        wallpaperTrianglify,
+        windowsTerminal,
+        wox,
+        xcode,
+        xresources,
+      },
+      preparedColorSet,
+      window.innerWidth * window.devicePixelRatio,
+      window.innerHeight * window.devicePixelRatio,
+      window.location.href,
+      cliColorSet,
+    );
+    zip.generateAsync({ type: 'blob' }).then(contents => {
+      saveAs(contents, 'themer.zip');
+    });
+  };
 
+  const [price, setPrice] = useState({ code: 'usd', amount: 900 });
+  const [showCheckoutModal, setShowCheckoutModal] = useState(false);
+  
   return (
     <>
       <div className={ styles.fieldsetWrapper }>
@@ -286,59 +341,22 @@ export default () => {
           />
         </fieldset>
       </div>
-      <Button
-        special
-        disabled={ !preparedColorSet.dark && !preparedColorSet.light }
-        onClick={ async () => {
-          const zip = await generateZip(
-            {
-              alacritty,
-              alfred,
-              atomSyntax,
-              atomUi,
-              bbedit,
-              brave,
-              chrome,
-              cmd,
-              conemu,
-              emacs,
-              firefox,
-              gnomeTerminal,
-              hyper,
-              iterm,
-              jetbrains,
-              kitty,
-              prism,
-              sketchPalettes,
-              slack,
-              sublimeText,
-              termite,
-              tmux,
-              vim,
-              vimLightline,
-              vscode,
-              wallpaperBlockWave,
-              wallpaperDiamonds,
-              wallpaperOctagon,
-              wallpaperShirts,
-              wallpaperTriangles,
-              wallpaperTrianglify,
-              windowsTerminal,
-              wox,
-              xcode,
-              xresources,
-            },
-            preparedColorSet,
-            window.innerWidth * window.devicePixelRatio,
-            window.innerHeight * window.devicePixelRatio,
-            window.location.href,
-            cliColorSet,
-          );
-          zip.generateAsync({ type: 'blob' }).then(contents => {
-            saveAs(contents, 'themer.zip');
-          });
-        } }
-      >Download</Button>
+      <div className={ styles.inputs }>
+        <span style={{ color: getActiveColorOrFallback(['shade6']) }}>Pay what you want:</span>
+        <PriceInput className={ styles.priceInput } value={ price } onChange={ setPrice } />
+        <Button
+          special
+          disabled={ !preparedColorSet.dark && !preparedColorSet.light }
+          onClick={ () => price.amount > 0 ? setShowCheckoutModal(true) : download() }
+        >{ price.amount > 0 ? 'Purchase' : 'Download' }</Button>
+      </div>
+      { showCheckoutModal ? (
+        <CheckoutModal
+          price={ price }
+          onClose={ () => setShowCheckoutModal(false) }
+          onComplete={ download }
+        />
+      ) : null }
     </>
   );
 }

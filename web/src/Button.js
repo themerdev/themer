@@ -5,9 +5,11 @@ import ThemeContext from './ThemeContext';
 export default forwardRef(({
   small,
   special,
+  secondary,
   className,
   onClick,
-  disabled, 
+  disabled,
+  type,
   children,
 }, buttonRef) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
@@ -16,19 +18,22 @@ export default forwardRef(({
       return ['shade3'];
     } else if (small || special) {
       return ['shade7'];
+    } else if (secondary) {
+      return ['shade6'];
     } else {
       return ['accent4', 'shade6'];
     }
   }
   return (
     <button
+      type={ type }
       className={ [
         styles.button,
         small && styles.small,
         special && styles.special,
         className,
       ].filter(Boolean).join(' ') }
-      data-text="Download"
+      data-text={ children }
       style={{
         color: getActiveColorOrFallback(getColorKeys()),
         '--button-resting-background-color': getActiveColorOrFallback(['shade1'], true),

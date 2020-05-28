@@ -1,0 +1,51 @@
+.scrim {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  border-radius: var(--border-radius-size);
+  border-width: var(--large-border-size);
+  border-style: solid;
+  width: var(--size-large-9);
+  max-width: calc(100% - calc(var(--size-regular) * 2));
+  padding: var(--size-regular);
+}
+
+.form {
+  text-align: center;
+}
+
+.card {
+  border-width: var(--small-border-size);
+  border-style: solid;
+  border-radius: var(--small-border-radius-size);
+  padding: var(--size-small-2);
+}
+
+.cancel {
+  margin-right: var(--size-small-1);
+}
+
+.submit {
+  margin-top: var(--size-regular);
+}
+
+.error {
+  margin-top: var(--size-small-1);
+}
+
+.successWrapper {
+  text-align: center;
+}
+
+.close {
+  margin-top: var(--size-regular);
+}
