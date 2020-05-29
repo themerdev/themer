@@ -39,7 +39,11 @@ const Form = ({ price, onClose, onComplete }) => {
           body: JSON.stringify(price)
         });
       const data = await response.json();
-      setClientSecret(data.clientSecret);
+      if (response.status === 200) {
+        setClientSecret(data.clientSecret);
+      } else {
+        setError(data.message);
+      }
     })();
   }, [price]);
 
