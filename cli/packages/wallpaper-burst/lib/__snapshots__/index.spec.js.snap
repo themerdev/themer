@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themer "burst" wallpaper should list output files 1`] = `
+"
+Files generated:
+
+* \`themer-wallpaper-burst-dark-2880x1800.svg\`
+* \`themer-wallpaper-burst-light-2880x1800.svg\`
+* \`themer-wallpaper-burst-dark-750x1334.svg\`
+* \`themer-wallpaper-burst-light-750x1334.svg\`
+"
+`;
