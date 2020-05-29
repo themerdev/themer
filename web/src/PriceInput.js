@@ -8,7 +8,7 @@ const toValueDecimal = display => Math.round(+display * 100);
 const toDisplayZeroDecimal = value => value;
 const toValueZeroDecimal = display => display;
 
-const currencyOptions = [
+export const currencyOptions = [
   {
     label: 'AUD',
     isoCode: 'aud',

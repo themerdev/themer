@@ -12,6 +12,7 @@ import ThemeContext from './ThemeContext';
 import Banner from './Banner';
 import Button from './Button';
 import useEscListener from './useEscListener';
+import { currencyOptions } from './PriceInput';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
@@ -137,6 +138,7 @@ const Form = ({ price, onClose, onComplete }) => {
 export default ({ price, onClose, onComplete }) => {
   useEscListener(onClose);
   const { getActiveColorOrFallback } = useContext(ThemeContext);
+  const currency = currencyOptions.find(({isoCode}) => isoCode === price.code);
   return (
     <div
       className={ styles.scrim }
@@ -152,6 +154,14 @@ export default ({ price, onClose, onComplete }) => {
           boxShadow: `0 0 var(--size-large-1) var(--size-large-1) ${getActiveColorOrFallback(['shade0'], true)}`,
         }}
       >
+        <div
+          className={ styles.price }
+          style={{ color: getActiveColorOrFallback(['shade7']) }}
+        >
+          Total:{' '}
+          <span className={ styles.symbol }>{currency.symbol}</span>
+          {currency.toDisplay(price.amount)}
+        </div>
         <Elements stripe={ stripePromise }>
           <Form price={ price } onClose={ onClose } onComplete={ onComplete } />
         </Elements>
