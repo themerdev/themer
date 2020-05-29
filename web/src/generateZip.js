@@ -30,6 +30,7 @@ import * as themerVim from '@themer/vim';
 import * as themerVimLightline from '@themer/vim-lightline';
 import * as themerVscode from '@themer/vscode';
 import * as themerWallpaperBlockWave from '@themer/wallpaper-block-wave';
+import * as themerWallpaperBurst from '@themer/wallpaper-burst';
 import * as themerWallpaperDiamonds from '@themer/wallpaper-diamonds';
 import * as themerWallpaperOctagon from '@themer/wallpaper-octagon';
 import * as themerWallpaperShirts from '@themer/wallpaper-shirts';
@@ -70,6 +71,7 @@ const templates = {
   vimLightline: { name: 'Vim lightline', ...themerVimLightline },
   vscode: { name: 'VS Code', ...themerVscode },
   wallpaperBlockWave: { name: 'Block Wave Wallpaper', ...themerWallpaperBlockWave },
+  wallpaperBurst: { name: 'Burst Wallpaper', ...themerWallpaperBurst },
   wallpaperDiamonds: { name: 'Diamonds Wallpaper', ...themerWallpaperDiamonds },
   wallpaperOctagon: { name: 'Octagon Wallpaper', ...themerWallpaperOctagon },
   wallpaperShirts: { name: 'Shirts Wallpaper', ...themerWallpaperShirts },
