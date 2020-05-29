@@ -85,6 +85,7 @@ const templates = {
 
 const resolutionOptions = {
   wallpaperBlockWave: 'themer-wallpaper-block-wave-size',
+  wallpaperBurst: 'themer-wallpaper-burst-size',
   wallpaperDiamonds: 'themer-wallpaper-diamonds-size',
   wallpaperOctagon: 'themer-wallpaper-octagon-size',
   wallpaperShirts: 'themer-wallpaper-shirts-size',
