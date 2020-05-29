@@ -27,6 +27,7 @@ export default () => {
   const [bbedit, setBbedit] = useState(false);
   const [jetbrains, setJetbrains] = useState(false);
   const [wallpaperBlockWave, setWallpaperBlockWave] = useState(false);
+  const [wallpaperBurst, setWallpaperBurst] = useState(false);
   const [wallpaperDiamonds, setWallpaperDiamonds] = useState(false);
   const [wallpaperOctagon, setWallpaperOctagon] = useState(false);
   const [wallpaperTriangles, setWallpaperTriangles] = useState(false);
@@ -76,6 +77,7 @@ export default () => {
         vimLightline,
         vscode,
         wallpaperBlockWave,
+        wallpaperBurst,
         wallpaperDiamonds,
         wallpaperOctagon,
         wallpaperShirts,
@@ -229,6 +231,12 @@ export default () => {
             value={ wallpaperBlockWave }
             onChange={ () => setWallpaperBlockWave(!wallpaperBlockWave) }
             label="“Block Wave”"
+            accentSelected
+          />
+          <Checkbox
+            value={ wallpaperBurst }
+            onChange={ () => setWallpaperBurst(!wallpaperBurst) }
+            label="“Burst”"
             accentSelected
           />
           <Checkbox

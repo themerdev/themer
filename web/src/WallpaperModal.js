@@ -6,6 +6,7 @@ import ThemeContext from './ThemeContext';
 import useEscListener from './useEscListener';
 
 import { render as blockWaveRender } from '@themer/wallpaper-block-wave';
+import { render as burstRender } from '@themer/wallpaper-burst';
 import { render as diamondsRender } from '@themer/wallpaper-diamonds';
 import { render as octagonRender } from '@themer/wallpaper-octagon';
 import { render as shirtsRender } from '@themer/wallpaper-shirts';
@@ -17,6 +18,8 @@ const getImagePromises = (wallpaper, colors, width, height) => {
   switch (wallpaper) {
     case 'themer-wallpaper-block-wave':
       return blockWaveRender(colors, options);
+    case 'themer-wallpaper-burst':
+      return burstRender(colors, options);
     case 'themer-wallpaper-diamonds':
       return diamondsRender(colors, options);
     case 'themer-wallpaper-octagon':

@@ -1530,7 +1530,7 @@
   dependencies:
     plist "^3.0.1"
 
-"@themer/utils@^1.2.0":
+"@themer/utils@^1.0.0", "@themer/utils@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@themer/utils/-/utils-1.2.0.tgz#5082d94648a3abe87cbad1abe3918fc32138b4f2"
   integrity sha512-NmzIHqX0jtdj+i3nM5t6S8D+AzHPUfMf7bMu9ydqaWq9x/gT/+mx3MQlN5Kvc2YZrZ2jIPIHBbztLzMugYgBmw==
@@ -1558,6 +1558,13 @@
   integrity sha512-gom6/UUTrepqD37LXXNgCguxpw2vtSuSjotq+svsCJrO+VJabQfRec1f1zsVlJzXbuYkR9ORV14JfmFxM03y+Q==
   dependencies:
     "@themer/utils" "^1.2.0"
+
+"@themer/wallpaper-burst@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/wallpaper-burst/-/wallpaper-burst-1.0.0.tgz#92997b56cecf93eaf34b90f962b1f24a220c7808"
+  integrity sha512-ldmApVNFRSt531Ykc5f/3OyDi75OVlGsImYJaPJQrUjWZly9sn30CyM5Ej3co3FaaLYkMXiFJea5pHO/0xZJ8w==
+  dependencies:
+    "@themer/utils" "^1.0.0"
 
 "@themer/wallpaper-diamonds@^1.1.0":
   version "1.1.0"
