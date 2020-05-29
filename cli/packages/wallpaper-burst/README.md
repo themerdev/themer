@@ -2,6 +2,12 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
+Shown here with [@themer/colors-solarized](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-solarized):
+
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@c53f020686307b5baa555bb40e8c0855c9093ec7/cli/packages/wallpaper-burst/assets/themer-wallpaper-burst-dark-2880x1800.svg)
+
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@c53f020686307b5baa555bb40e8c0855c9093ec7/cli/packages/wallpaper-burst/assets/themer-wallpaper-burst-light-2880x1800.svg)
+
 ## Installation & usage
 
 Install this module wherever you have `themer` installed:
