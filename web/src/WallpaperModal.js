@@ -3,6 +3,7 @@ import Button from './Button';
 import Radio from './Radio';
 import styles from './WallpaperModal.module.css';
 import ThemeContext from './ThemeContext';
+import useEscListener from './useEscListener';
 
 import { render as blockWaveRender } from '@themer/wallpaper-block-wave';
 import { render as diamondsRender } from '@themer/wallpaper-diamonds';
@@ -35,17 +36,7 @@ export default ({ onClose, wallpaper, colors }) => {
   const [images, setImages] = useState([]);
   const [imageIndex, setImageIndex] = useState(0);
   
-  const escListener = evt => {
-    if (evt.key === 'Escape') {
-      onClose();
-    }
-  };
-  useEffect(() => {
-    window.document.addEventListener('keydown', escListener);
-    return () => {
-      window.document.removeEventListener('keydown', escListener);
-    };
-  });
+  useEscListener(onClose);
 
   const { getActiveColorOrFallback } = useContext(ThemeContext);
 

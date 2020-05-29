@@ -38,3 +38,13 @@
 .fullscreen {
   margin-top: var(--size-small-2);
 }
+
+.inputs {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--size-small-5);
+}
+
+.priceInput {
+  margin: 0 var(--size-regular);
+}
