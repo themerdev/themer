@@ -245,13 +245,16 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/conemu](https://github.com/mjswensen/themer/tree/master/cli/packages/conemu)
 * [@themer/hyper](https://github.com/mjswensen/themer/tree/master/cli/packages/hyper)
 * [@themer/iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/iterm)
+* [@themer/kitty](https://github.com/mjswensen/themer/tree/master/cli/packages/kitty)
 * [@themer/terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/terminal)
+* [@themer/windows-terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/windows-terminal)
 
 ### Editors/IDEs
 
 * [@themer/atom-syntax](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-syntax)
 * [@themer/atom-ui](https://github.com/mjswensen/themer/tree/master/cli/packages/atom-ui)
 * [@themer/bbedit](https://github.com/mjswensen/themer/tree/master/cli/packages/bbedit)
+* [@themer/emacs](https://github.com/mjswensen/themer/tree/master/cli/packages/emacs)
 * [@themer/sublime-text](https://github.com/mjswensen/themer/tree/master/cli/packages/sublime-text)
 * [@themer/vim-lightline](https://github.com/mjswensen/themer/tree/master/cli/packages/vim-lightline)
 * [@themer/vim](https://github.com/mjswensen/themer/tree/master/cli/packages/vim)
@@ -261,6 +264,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 ### Wallpapers
 
 * [@themer/wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-block-wave)
+* [@themer/wallpaper-burst](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-burst)
 * [@themer/wallpaper-diamonds](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-diamonds)
 * [@themer/wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-octagon)
 * [@themer/wallpaper-shirts](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-shirts)
@@ -277,6 +281,8 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/prism](https://github.com/mjswensen/themer/tree/master/cli/packages/prism)
 * [@themer/sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/sketch-palettes)
 * [@themer/slack](https://github.com/mjswensen/themer/tree/master/cli/packages/slack)
+* [@themer/wox](https://github.com/mjswensen/themer/tree/master/cli/packages/wox)
+* [@themer/xresources](https://github.com/mjswensen/themer/tree/master/cli/packages/xresources)
 
 ### Community
 
