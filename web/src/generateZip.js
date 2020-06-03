@@ -20,6 +20,7 @@ import * as themerHyper from '@themer/hyper';
 import * as themerIterm from '@themer/iterm';
 import * as themerJetbrains from 'themer-jetbrains';
 import * as themerKitty from '@themer/kitty';
+import * as themerKonsole from '@themer/konsole';
 import * as themerPrism from '@themer/prism';
 import * as themerSketchPalettes from '@themer/sketch-palettes';
 import * as themerSlack from '@themer/slack';
@@ -61,6 +62,7 @@ const templates = {
   iterm: { name: 'iTerm', ...themerIterm },
   jetbrains: { name: 'JetBrains', ...themerJetbrains },
   kitty: { name: 'kitty', ...themerKitty },
+  konsole: { name: 'Konsole', ...themerKonsole },
   prism: { name: 'prism', ...themerPrism },
   sketchPalettes: { name: 'Sketch', ...themerSketchPalettes },
   slack: { name: 'Slack sidebar', ...themerSlack },

@@ -1506,6 +1506,13 @@
   dependencies:
     color "^3.1.2"
 
+"@themer/konsole@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/konsole/-/konsole-1.0.0.tgz#bbfa056403d421844a6539cf9fe2fda3f37fb545"
+  integrity sha512-oYEP3PNJzRhJNUWb1qdZlzp2BDFfb1WLJGA6Y4lf4aGljousVKxQXahMXYzUp0fbPTX2IxDbULmlq+kObJr2qQ==
+  dependencies:
+    color "^3.1.2"
+
 "@themer/prism@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@themer/prism/-/prism-1.1.0.tgz#8fa81889813fd3168bc74f630366266e1d67dbc5"

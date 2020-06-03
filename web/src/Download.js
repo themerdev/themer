@@ -45,6 +45,7 @@ export default () => {
   const [wox, setWox] = useState(false);
   const [windowsTerminal, setWindowsTerminal] = useState(false);
   const [emacs, setEmacs] = useState(false);
+  const [konsole, setKonsole] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
   
@@ -67,6 +68,7 @@ export default () => {
         iterm,
         jetbrains,
         kitty,
+        konsole,
         prism,
         sketchPalettes,
         slack,
@@ -147,6 +149,12 @@ export default () => {
             value={ kitty }
             onChange={ () => setKitty(!kitty) }
             label="kitty"
+            accentSelected
+          />
+          <Checkbox
+            value={ konsole }
+            onChange={ () => setKonsole(!konsole) }
+            label="Konsole"
             accentSelected
           />
           <Checkbox
