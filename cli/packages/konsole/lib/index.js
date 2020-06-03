@@ -87,7 +87,7 @@ const render = colors => Object.entries(colors)
   }));
 
 const renderInstructions = paths => `
-Copy (or symlink) the generated ${paths.length > 0 ? 'files' : 'file'} to \`~/.local/share/konsole\`:
+Copy (or symlink) the generated ${paths.length > 0 ? 'files' : 'file'} to \`~/.local/share/konsole/\`:
 
     ${paths.map(p => `cp '${p}' ~/.local/share/konsole/`).join('\n    ')}
 

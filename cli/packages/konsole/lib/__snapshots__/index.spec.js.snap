@@ -138,7 +138,7 @@ Opacity=1
 
 exports[`themer konsole theme generator should provide installation instructions 1`] = `
 "
-Copy (or symlink) the generated files to \`~/.local/share/konsole\`:
+Copy (or symlink) the generated files to \`~/.local/share/konsole/\`:
 
     cp 'themer-dark.colorscheme' ~/.local/share/konsole/
     cp 'themer-light.colorscheme' ~/.local/share/konsole/
