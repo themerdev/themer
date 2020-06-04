@@ -8,6 +8,7 @@ import { colors as defaultColors } from '@themer/colors-default';
 import { colors as draculaColors } from '@themer/colors-dracula';
 import { colors as fingerPaintColors} from '@themer/colors-finger-paint';
 import { colors as githubUniverseColors } from '@themer/colors-github-universe';
+import { colors as greenAsAWhistleColors } from '@themer/colors-green-as-a-whistle';
 import { colors as lucidColors } from '@themer/colors-lucid';
 import { colors as mojaveColors } from '@themer/colors-mojave';
 import { colors as monkeyColors } from '@themer/colors-monkey';
@@ -48,6 +49,7 @@ export default () => {
           <li><PreBuiltLink colors={ fingerPaintColors }>Finger Paint</PreBuiltLink></li>
           <li><PreBuiltLink colors={ monkeyColors }>Monkey</PreBuiltLink></li>
           <li><PreBuiltLink colors={ rightInTheTealsColors }>Right in the Teals</PreBuiltLink></li>
+          <li><PreBuiltLink colors={ greenAsAWhistleColors }>Green as a Whistle</PreBuiltLink></li>
         </ul>
       </li>
       <li>

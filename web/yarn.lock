@@ -1398,6 +1398,11 @@
   resolved "https://registry.yarnpkg.com/@themer/colors-github-universe/-/colors-github-universe-2.0.0.tgz#59696f937b2c6534c27a5531ca8f6c62230c7504"
   integrity sha512-GI4Owu2NF1uZa6ahGcfkwqUsyIGvR+jf91dwijraCasLUWBLFlcZFsthKsgqtrONXnkqEqXOsTV8EpSi0OSZzg==
 
+"@themer/colors-green-as-a-whistle@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/colors-green-as-a-whistle/-/colors-green-as-a-whistle-1.0.0.tgz#38efa103f2bde9769ec188427b7cfc7f2e00aa15"
+  integrity sha512-yCQyHDvx9VvKcOMSs4jEeg6YZrjLiM3jrg9/McEuQclbSivVGBvKMN2O2oLCEPwRFCV+4YQr9XvwRw6gSL4P7Q==
+
 "@themer/colors-lucid@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@themer/colors-lucid/-/colors-lucid-1.0.3.tgz#8657c1e9e9a80cbf2f9da3449cbb46bfec45a417"
