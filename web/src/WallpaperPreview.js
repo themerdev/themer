@@ -28,7 +28,7 @@ export default () => {
     setActivePreview(null);
   }
 
-  const { activePreparedColorSet } = useContext(ThemeContext);
+  const { activeColorSet, activePreparedColorSet } = useContext(ThemeContext);
 
   return (
     <Tabs>
@@ -52,7 +52,7 @@ export default () => {
               <WallpaperModal
                 wallpaper={ activePreview }
                 colors={{
-                  current: activePreparedColorSet
+                  [activeColorSet]: activePreparedColorSet
                 }}
                 onClose={ onModalClose }
               />
