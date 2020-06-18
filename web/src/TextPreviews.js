@@ -15,12 +15,18 @@ export default () => {
             <button
               className={ tabClassName }
               style={ getTabStyle(activePreview === 'code') }
-              onClick={ () => setActivePreview('code') }
+              onClick={ () => {
+                setActivePreview('code');
+                window.__ssa__log('change active preview', { preview: 'code' });
+              } }
             >Code</button>
             <button
               className={ tabClassName }
               style={ getTabStyle(activePreview === 'terminal') }
-              onClick={ () => setActivePreview('terminal') }
+              onClick={ () => {
+                setActivePreview('terminal');
+                window.__ssa__log('change active preview', { preview: 'terminal' });
+              } }
             >Terminal</button>
           </div>
           <div className={ contentClassName } style={ contentStyle }>

@@ -50,46 +50,47 @@ export default () => {
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
   
   const download = async () => {
+    const selections = {
+      alacritty,
+      alfred,
+      atomSyntax,
+      atomUi,
+      bbedit,
+      brave,
+      chrome,
+      cmd,
+      conemu,
+      emacs,
+      firefox,
+      gnomeTerminal,
+      hyper,
+      iterm,
+      jetbrains,
+      kitty,
+      konsole,
+      prism,
+      sketchPalettes,
+      slack,
+      sublimeText,
+      termite,
+      tmux,
+      vim,
+      vimLightline,
+      vscode,
+      wallpaperBlockWave,
+      wallpaperBurst,
+      wallpaperDiamonds,
+      wallpaperOctagon,
+      wallpaperShirts,
+      wallpaperTriangles,
+      wallpaperTrianglify,
+      windowsTerminal,
+      wox,
+      xcode,
+      xresources,
+    };
     const zip = await generateZip(
-      {
-        alacritty,
-        alfred,
-        atomSyntax,
-        atomUi,
-        bbedit,
-        brave,
-        chrome,
-        cmd,
-        conemu,
-        emacs,
-        firefox,
-        gnomeTerminal,
-        hyper,
-        iterm,
-        jetbrains,
-        kitty,
-        konsole,
-        prism,
-        sketchPalettes,
-        slack,
-        sublimeText,
-        termite,
-        tmux,
-        vim,
-        vimLightline,
-        vscode,
-        wallpaperBlockWave,
-        wallpaperBurst,
-        wallpaperDiamonds,
-        wallpaperOctagon,
-        wallpaperShirts,
-        wallpaperTriangles,
-        wallpaperTrianglify,
-        windowsTerminal,
-        wox,
-        xcode,
-        xresources,
-      },
+      selections,
       preparedColorSet,
       window.innerWidth * window.devicePixelRatio,
       window.innerHeight * window.devicePixelRatio,
@@ -99,6 +100,7 @@ export default () => {
     zip.generateAsync({ type: 'blob' }).then(contents => {
       saveAs(contents, 'themer.zip');
     });
+    window.__ssa__log('download zip', { selections });
   };
 
   const [price, setPrice] = useState({ code: 'usd', amount: 900 });
@@ -287,9 +289,10 @@ export default () => {
             <Button
               className={ styles.fullscreen }
               small
-              onClick={
-                () => window.document.documentElement.requestFullscreen()
-              }
+              onClick={ () => {
+                window.document.documentElement.requestFullscreen();
+                window.__ssa__log('go fullscreen');
+              } }
             >Go fullscreen</Button>
           ) : null }
         </fieldset>
@@ -359,17 +362,31 @@ export default () => {
       </div>
       <div className={ styles.inputs }>
         <span style={{ color: getActiveColorOrFallback(['shade6']) }}>Pay what you want:</span>
-        <PriceInput className={ styles.priceInput } value={ price } onChange={ setPrice } />
+        <PriceInput className={ styles.priceInput } value={ price } onChange={ price => {
+          setPrice(price);
+          window.__ssa__log('change price', { price });
+        } } />
         <Button
           special
           disabled={ !preparedColorSet.dark && !preparedColorSet.light }
-          onClick={ () => price.amount > 0 ? setShowCheckoutModal(true) : download() }
+          onClick={ () => {
+            if (price.amount > 0) {
+              setShowCheckoutModal(true);
+              window.__ssa__log('open checkout modal');
+            }
+            else {
+              download();
+            }
+          } }
         >{ price.amount > 0 ? 'Purchase' : 'Download' }</Button>
       </div>
       { showCheckoutModal ? (
         <CheckoutModal
           price={ price }
-          onClose={ () => setShowCheckoutModal(false) }
+          onClose={ () => {
+            setShowCheckoutModal(false);
+            window.__ssa__log('close checkout modal');
+          } }
           onComplete={ download }
         />
       ) : null }

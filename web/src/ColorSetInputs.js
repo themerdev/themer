@@ -21,12 +21,18 @@ export default () => {
             <button
               className={ tabClassName }
               style={ getTabStyle(isDark) }
-              onClick={ () => setActiveColorSet('dark') }
+              onClick={ () => {
+                setActiveColorSet('dark');
+                window.__ssa__log('change active color set', { set: 'dark' });
+              } }
             >Dark Variant</button>
             <button
               className={ tabClassName }
               style={ getTabStyle(!isDark) }
-              onClick={ () => setActiveColorSet('light') }
+              onClick={ () => {
+                setActiveColorSet('light');
+                window.__ssa__log('change active color set', { set: 'light' });
+              } }
             >Light Variant</button>
           </div>
           <div className={ `${styles.inputContainer} ${contentClassName}` } style={ contentStyle }>
@@ -50,7 +56,10 @@ export default () => {
               className={ styles.checkbox }
               label="calculate intermediary shades"
               value={ activeCalculateIntermediaryShades }
-              onChange={ setActiveCalculateIntermediaryShades }
+              onChange={ value => {
+                setActiveCalculateIntermediaryShades(value);
+                window.__ssa__log('change calculate intermediary shades', { value, set: activeColorSet });
+              } }
             />
             <ColorInput className={ styles.accent0 } colorKey="accent0" help="error, vcs deletion" />
             <ColorInput className={ styles.accent1 } colorKey="accent1" help="syntax" />

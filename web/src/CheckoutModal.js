@@ -88,11 +88,13 @@ const Form = ({ price, onClose, onComplete }) => {
     if (payload.error) {
       setError(`Payment failed: ${payload.error.message}`);
       setProcessing(false);
+      window.__ssa__log('payment failed', { message: payload.error.message });
     } else {
       setError(null);
       setProcessing(false);
       setSucceeded(true);
       onComplete();
+      window.__ssa__log('payment complete');
     }
   };
   

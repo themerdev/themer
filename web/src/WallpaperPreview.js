@@ -43,7 +43,10 @@ export default () => {
               { wallpaperOptions.map(option => (
                 <Button
                   key={ option.value }
-                  onClick={ () => setActivePreview(option.value) }
+                  onClick={ () => {
+                    setActivePreview(option.value);
+                    window.__ssa__log('preview wallpaper', { wallpaper: option.value });
+                  } }
                   ref={ buttonRefs.get(option.value) }
                 >Preview { option.label }</Button>
               )) }
@@ -54,7 +57,10 @@ export default () => {
                 colors={{
                   [activeColorSet]: activePreparedColorSet
                 }}
-                onClose={ onModalClose }
+                onClose={ () => {
+                  onModalClose();
+                  window.__ssa__log('close wallpaper modal');
+                } }
               />
             ) : null }
           </div>

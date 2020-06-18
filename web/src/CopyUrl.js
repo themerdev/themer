@@ -24,7 +24,10 @@ export default ({ className }) => {
     return (
       <Button
         className={ className }
-        onClick={ copy }
+        onClick={ () => {
+          copy();
+          window.__ssa__log('copy URL');
+        } }
         disabled={ disabled }
       >{ buttonText.padEnd(ORIGINAL_TEXT.length, '\u00a0') }</Button>
     );

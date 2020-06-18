@@ -100,7 +100,10 @@ export default ({ onClose, wallpaper, colors }) => {
                       key={ `${wallpaper}-${i}` }
                       className={ styles.variation }
                       color={ getActiveColorOrFallback(['shade7']) }
-                      onChange={ () => setImageIndex(i) }
+                      onChange={ () => {
+                        setImageIndex(i);
+                        window.__ssa__log('change wallpaper preview image index', { index: i });
+                      } }
                       value={ i === imageIndex }
                       label={ `Variation ${i + 1}` }
                     />
