@@ -1559,6 +1559,13 @@
   dependencies:
     color-convert "^2.0.1"
 
+"@themer/visual-studio@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/visual-studio/-/visual-studio-1.0.0.tgz#97da3f0b29d8f9cf5e5e5ba8f89d4d3b666ad732"
+  integrity sha512-QzL3zqjYcamVIStsKtBtBhc/8Du5HcGDx4ls7pDxZuFiUlZ7XNI0M/3tz5g3OKidi5Z+WrjQO/ejJJd037pXug==
+  dependencies:
+    color "^3.1.2"
+
 "@themer/vscode@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@themer/vscode/-/vscode-2.2.1.tgz#95921b4c685bb18642b61092ed27ca7dfe98523d"

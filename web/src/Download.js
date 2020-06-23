@@ -34,6 +34,7 @@ export default () => {
   const [tmux, setTmux] = useState(false);
   const [vim, setVim] = useState(false);
   const [vimLightline, setVimLightline] = useState(false);
+  const [visualStudio, setVisualStudio] = useState(false);
   const [vscode, setVscode] = useState(false);
   const [wallpaperBlockWave, setWallpaperBlockWave] = useState(false);
   const [wallpaperBurst, setWallpaperBurst] = useState(false);
@@ -76,6 +77,7 @@ export default () => {
       tmux,
       vim,
       vimLightline,
+      visualStudio,
       vscode,
       wallpaperBlockWave,
       wallpaperBurst,
@@ -220,6 +222,12 @@ export default () => {
             value={ vim }
             onChange={ () => setVim(!vim) }
             label="Vim"
+            accentSelected
+          />
+          <Checkbox
+            value={ visualStudio }
+            onChange={ () => setVisualStudio(!visualStudio) }
+            label="Visual Studio"
             accentSelected
           />
           <Checkbox

@@ -44,6 +44,7 @@
     "@themer/sublime-text": "^2.1.0",
     "@themer/vim": "^3.2.1",
     "@themer/vim-lightline": "^3.1.1",
+    "@themer/visual-studio": "^1.0.0",
     "@themer/vscode": "^2.2.1",
     "@themer/wallpaper-block-wave": "^3.1.0",
     "@themer/wallpaper-burst": "^1.0.0",

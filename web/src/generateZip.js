@@ -29,6 +29,7 @@ import * as themerTermite from 'themer-termite';
 import * as themerTmux from 'themer-tmux';
 import * as themerVim from '@themer/vim';
 import * as themerVimLightline from '@themer/vim-lightline';
+import * as themerVisualStudio from '@themer/visual-studio';
 import * as themerVscode from '@themer/vscode';
 import * as themerWallpaperBlockWave from '@themer/wallpaper-block-wave';
 import * as themerWallpaperBurst from '@themer/wallpaper-burst';
@@ -71,6 +72,7 @@ const templates = {
   tmux: { name: 'tmux', ...themerTmux },
   vim: { name: 'Vim', ...themerVim },
   vimLightline: { name: 'Vim lightline', ...themerVimLightline },
+  visualStudio: { name: 'Visual Studio', ...themerVisualStudio },
   vscode: { name: 'VS Code', ...themerVscode },
   wallpaperBlockWave: { name: 'Block Wave Wallpaper', ...themerWallpaperBlockWave },
   wallpaperBurst: { name: 'Burst Wallpaper', ...themerWallpaperBurst },
