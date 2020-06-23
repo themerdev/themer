@@ -1,0 +1,35 @@
+{
+  "name": "@themer/visual-studio",
+  "version": "1.0.0",
+  "description": "A Visual Studio theme settings generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjswensen/themer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjswensen/themer/issues"
+  },
+  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/visual-studio#readme",
+  "peerDependencies": {
+    "themer": "^3"
+  },
+  "keywords": [
+    "themer",
+    "visual studio"
+  ],
+  "dependencies": {
+    "color": "^3.1.2"
+  }
+}
