@@ -260,6 +260,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/sublime-text](https://github.com/mjswensen/themer/tree/master/cli/packages/sublime-text)
 * [@themer/vim-lightline](https://github.com/mjswensen/themer/tree/master/cli/packages/vim-lightline)
 * [@themer/vim](https://github.com/mjswensen/themer/tree/master/cli/packages/vim)
+* [@themer/visual-studio](https://github.com/mjswensen/themer/tree/master/cli/packages/visual-studio)
 * [@themer/vscode](https://github.com/mjswensen/themer/tree/master/cli/packages/vscode)
 * [@themer/xcode](https://github.com/mjswensen/themer/tree/master/cli/packages/xcode)
 
