@@ -108,6 +108,7 @@ If you find \`themer\` useful, here are some ways to support the project:
 * Star [\`themer\` on GitHub](https://github.com/mjswensen/themer)
 * Follow [@themerdev](https://twitter.com/themerdev) on Twitter
 * [Send a tip through the Brave Browser](https://brave.com/the537), either on [the repository page](https://github.com/mjswensen/themer) or [the Web UI](https://themer.dev)
+* Pay what you want when downloading your theme from [themer.dev](https://themer.dev)
 
 # Installation instructions`;
 
