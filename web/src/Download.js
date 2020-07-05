@@ -7,6 +7,7 @@ import saveAs from 'file-saver';
 import ThemeContext from './ThemeContext';
 import PriceInput from './PriceInput';
 import CheckoutModal from './CheckoutModal';
+import SupportModal from './SupportModal';
 
 export default () => {
   const [alacritty, setAlacritty] = useState(false);
@@ -49,7 +50,11 @@ export default () => {
   const [xresources, setXresources] = useState(false);
 
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
-  
+
+  const [price, setPrice] = useState({ code: 'usd', amount: 900 });
+  const [showCheckoutModal, setShowCheckoutModal] = useState(false);
+  const [showSupportModal, setShowSupportModal] = useState(false);
+
   const download = async () => {
     const selections = {
       alacritty,
@@ -99,15 +104,13 @@ export default () => {
       window.location.href,
       cliColorSet,
     );
-    zip.generateAsync({ type: 'blob' }).then(contents => {
-      saveAs(contents, 'themer.zip');
-    });
+    const contents = await zip.generateAsync({ type: 'blob' })
+    saveAs(contents, 'themer.zip');
     window.__ssa__log('download zip', { selections });
+    setShowSupportModal(true);
+    window.__ssa__log('open support modal');
   };
 
-  const [price, setPrice] = useState({ code: 'usd', amount: 900 });
-  const [showCheckoutModal, setShowCheckoutModal] = useState(false);
-  
   return (
     <>
       <div className={ styles.fieldsetWrapper }>
@@ -395,7 +398,18 @@ export default () => {
             setShowCheckoutModal(false);
             window.__ssa__log('close checkout modal');
           } }
-          onComplete={ download }
+          onComplete={ () => {
+            setShowCheckoutModal(false);
+            download();
+          } }
+        />
+      ) : null }
+      { showSupportModal ? (
+        <SupportModal
+          onClose={ () => {
+            setShowSupportModal(false);
+            window.__ssa__log('close support modal');
+          } }
         />
       ) : null }
     </>

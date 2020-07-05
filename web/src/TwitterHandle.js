@@ -14,7 +14,7 @@ export default () => {
         '--handle-active-background-color': getActiveColorOrFallback(['shade0'], true),
         color: getActiveColorOrFallback(['shade7']),
       }}
-      href="https://twitter.com/themerdev"
+      href="https://twitter.com/intent/follow?screen_name=themerdev"
       target="_blank"
       rel="noopener noreferrer"
     >Follow @themerdev</a>

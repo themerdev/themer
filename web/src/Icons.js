@@ -26,3 +26,11 @@ export const CloseIcon = () => (
     <path d="M3,3 L13,13 M3,13 L13,3" strokeWidth="2" fill="none" fillRule="evenodd" strokeLinecap="square" stroke="currentColor"/>
   </svg>
 );
+
+export const ExternalIcon = ({ className }) => (
+  <svg className={ className } width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2L3 2C1.89543 2 1 2.89543 1 4V13C1 14.1046 1.89543 15 3 15H12C13.1046 15 14 14.1046 14 13V10H12V13H3L3 4H6V2Z" fill="currentColor"/>
+    <path d="M14.5 7V2.5C14.5 1.94772 14.0523 1.5 13.5 1.5H9" stroke="currentColor" fill="none"/>
+    <path d="M6 10L14 2" stroke="currentColor"/>
+  </svg>
+);
