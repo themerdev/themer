@@ -16,6 +16,10 @@ export default ({ className, style, colorKey, help }) => {
     getActiveContrastFromBackground,
   } = useContext(ThemeContext);
   const debouncedLogEvent = useCallback(debounce(window.__ssa__log, 1000), []);
+  const debouncedSetActiveRawColor = useCallback(
+    debounce(setActiveRawColor, 100),
+    [setActiveRawColor],
+  );
   const contrast = colorKey === 'shade0'
     ? null
     : numeral(getActiveContrastFromBackground(colorKey)).format('0.00');
@@ -68,7 +72,7 @@ export default ({ className, style, colorKey, help }) => {
             className={ styles.colorInput }
             value={ getActiveColorOrFallback([colorKey], colorKey === 'shade0') }
             onChange={ evt => {
-              setActiveRawColor(colorKey, evt.target.value);
+              debouncedSetActiveRawColor(colorKey, evt.target.value);
               debouncedLogEvent('change raw color', { inputType: 'color' });
             } }
             tabIndex="-1"
