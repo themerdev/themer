@@ -1,4 +1,5 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useCallback } from 'react';
+import { debounce } from 'lodash';
 import numeral from 'numeral';
 import { DropletIcon } from './Icons';
 import styles from './ColorInput.module.css';
@@ -14,6 +15,7 @@ export default ({ className, style, colorKey, help }) => {
     setActiveRawColor,
     getActiveContrastFromBackground,
   } = useContext(ThemeContext);
+  const debouncedLogEvent = useCallback(debounce(window.__ssa__log, 1000), []);
   const contrast = colorKey === 'shade0'
     ? null
     : numeral(getActiveContrastFromBackground(colorKey)).format('0.00');
@@ -34,7 +36,10 @@ export default ({ className, style, colorKey, help }) => {
               borderBottomColor: getActiveColorOrFallback([colorKey]),
             }}
             value={ getActiveRawColor(colorKey) }
-            onChange={ evt => setActiveRawColor(colorKey, evt.target.value) }
+            onChange={ evt => {
+              setActiveRawColor(colorKey, evt.target.value);
+              debouncedLogEvent('change raw color', { inputType: 'text' });
+            } }
             ref={ textInput }
           />
         </label>
@@ -62,7 +67,10 @@ export default ({ className, style, colorKey, help }) => {
             type="color"
             className={ styles.colorInput }
             value={ getActiveColorOrFallback([colorKey], colorKey === 'shade0') }
-            onChange={ evt => setActiveRawColor(colorKey, evt.target.value) }
+            onChange={ evt => {
+              setActiveRawColor(colorKey, evt.target.value);
+              debouncedLogEvent('change raw color', { inputType: 'color' });
+            } }
             tabIndex="-1"
           />
         </label>
