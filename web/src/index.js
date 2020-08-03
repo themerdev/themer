@@ -7,7 +7,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import * as Sentry from '@sentry/browser'
 
-Sentry.init({dsn: "https://9f43906c1ad243f4a3ee46f26e1ad0b2@o390880.ingest.sentry.io/5236092"});
+Sentry.init({
+  dsn: "https://9f43906c1ad243f4a3ee46f26e1ad0b2@o390880.ingest.sentry.io/5236092",
+  environment: process.env.NODE_ENV,
+  release: process.env.REACT_APP_VERSION,
+});
 
 const history = createBrowserHistory();
 
