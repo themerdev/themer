@@ -1468,6 +1468,13 @@
   dependencies:
     lodash "^4.17.4"
 
+"@themer/css@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/css/-/css-1.0.0.tgz#561c65c38242d5a27380c8257081f5388f21b2bb"
+  integrity sha512-y5kYQbXKZ3O9Mvb4bfNDUE5MoQKDjKQUtiLpc216Po56nsgbZz5cZCOLRzkA8F0XyPBqS1CBD1CA54pE45xt3Q==
+  dependencies:
+    color "^3.1.2"
+
 "@themer/emacs@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@themer/emacs/-/emacs-1.0.1.tgz#6ed7c67c4551260bb3a60242807e9a361b09f18e"

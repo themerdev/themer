@@ -31,6 +31,7 @@
     "@themer/colors-seti": "^1.0.0",
     "@themer/colors-solarized": "^1.0.3",
     "@themer/conemu": "^1.1.0",
+    "@themer/css": "^1.0.0",
     "@themer/emacs": "^1.0.0",
     "@themer/firefox-addon": "^1.0.0",
     "@themer/firefox-color": "^1.0.1",

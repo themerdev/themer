@@ -12,6 +12,7 @@ import * as themerBrave from '@themer/brave';
 import * as themerChrome from '@themer/chrome';
 import * as themerCmd from '@themer/cmd';
 import * as themerConemu from '@themer/conemu';
+import * as themerCss from '@themer/css';
 import * as themerEmacs from '@themer/emacs';
 import * as themerFirefoxAddon from '@themer/firefox-addon';
 import * as themerFirefoxColor from '@themer/firefox-color';
@@ -53,6 +54,7 @@ const templates = {
   chrome: { name: 'Chrome', ...themerChrome },
   cmd: { name: 'CMD', ...themerCmd },
   conemu: { name: 'ConEmu', ...themerConemu },
+  css: { name: 'CSS', ...themerCss },
   emacs: { name: 'Emacs', ...themerEmacs },
   firefox: [
     { name: 'Firefox Add-on', ...themerFirefoxAddon },

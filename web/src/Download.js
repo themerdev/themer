@@ -19,6 +19,7 @@ export default () => {
   const [chrome, setChrome] = useState(false);
   const [cmd, setCmd] = useState(false);
   const [conemu, setConemu] = useState(false);
+  const [css, setCss] = useState(false);
   const [emacs, setEmacs] = useState(false);
   const [firefox, setFirefox] = useState(false);
   const [gnomeTerminal, setGnomeTerminal] = useState(false);
@@ -66,6 +67,7 @@ export default () => {
       chrome,
       cmd,
       conemu,
+      css,
       emacs,
       firefox,
       gnomeTerminal,
@@ -325,6 +327,12 @@ export default () => {
             value={ chrome }
             onChange={ () => setChrome(!chrome) }
             label="Chrome"
+            accentSelected
+          />
+          <Checkbox
+            value={ css }
+            onChange={ () => setCss(!css) }
+            label="CSS"
             accentSelected
           />
           <Checkbox
