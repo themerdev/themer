@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/conemu#readme",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {},
   "peerDependencies": {
