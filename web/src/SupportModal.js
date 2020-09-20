@@ -33,6 +33,7 @@ export default ({ onClose }) => {
         target="_blank"
         rel="noopener noreferrer"
         external={ true }
+        onClick={ () => window.__ssa__log('click tweet button') }
       >Tweet</ButtonLink>
       <p
         className={ styles.prompt }
@@ -45,7 +46,8 @@ export default ({ onClose }) => {
         target="_blank"
         rel="noopener noreferrer"
         external={ true }
-      >Follow</ButtonLink>
+        onClick={ () => window.__ssa__log('click follow button') }
+        >Follow</ButtonLink>
     </Modal>
   );
 }

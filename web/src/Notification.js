@@ -38,7 +38,10 @@ export default () => {
               '--dismiss-hover-color': getActiveColorOrFallback(['shade7']),
               '--dismiss-active-color': getActiveColorOrFallback(['shade5']),
             }}
-            onClick={ () => setVisible(false) }
+            onClick={ () => {
+              setVisible(false);
+              window.__ssa__log('dismiss update notification');
+            } }
           >
             <CloseIcon />
           </button>
