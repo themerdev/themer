@@ -32,6 +32,7 @@
   * [Community](#community)
   * [Create your own template](#create-your-own-template)
 * [About](#about)
+* [Contributing](#contributing)
 * [Themer's Web UI](#themers-web-ui)
 
 ## Support `themer`
@@ -342,6 +343,10 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 1. It is lighter, and simpler to use.
 2. It is more easily extensible with your own color sets and templates.
 3. It integrates better with your dotfiles, especially if you keep them under version control.
+
+## Contributing
+
+For instructions on how to contribute to `themer`, see [CONTRIBUTING.md](https://github.com/mjswensen/themer/blob/master/.github/CONTRIBUTING.md) and [`themer`'s code of conduct](https://github.com/mjswensen/themer/blob/master/CODE_OF_CONDUCT.md).
 
 ## Themer's Web UI
 
