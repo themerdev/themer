@@ -43,7 +43,7 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ history, children }) => {
   const [rawState, setRawState] = useState(stateFromParams(history.location.search));
   useEffect(() => {
-    return history.listen(location => {
+    return history.listen(({ location }) => {
       setRawState(stateFromParams(location.search));
     });
   });
