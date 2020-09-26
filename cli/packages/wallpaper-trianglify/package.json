@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "@themer/utils": "^1.2.0",
-    "trianglify": "^1.2.0"
+    "trianglify": "^4.0.0"
   },
   "devDependencies": {},
   "peerDependencies": {
