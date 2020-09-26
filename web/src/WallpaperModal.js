@@ -68,7 +68,9 @@ export default ({ onClose, wallpaper, colors }) => {
   }, [button]);
 
   const backgroundImage = images[imageIndex]
-    ? `url('data:image/svg+xml;utf8,${encodeURIComponent(images[imageIndex].contents.toString('utf8'))}')`
+    ? wallpaper === 'themer-wallpaper-trianglify'
+    ? `url("data:image/svg+xml;utf8,${encodeURIComponent(images[imageIndex].contents.toString('utf8'))}")`
+    : `url('data:image/svg+xml;utf8,${encodeURIComponent(images[imageIndex].contents.toString('utf8'))}')`
     : 'none';
   
   return (
