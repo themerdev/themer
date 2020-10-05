@@ -1758,6 +1758,11 @@
   dependencies:
     plist "^3.0.1"
 
+"@themer/terminator@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/terminator/-/terminator-1.0.0.tgz#388e2f6f407b3da943fcca12db10579cf1f6a176"
+  integrity sha512-H+uXptFVbiiyFz5D+tkumcd+5KcH+WcRQjXfynkSKV7dRqQnLw6aalp6ms+5nDWCM/jyF46TO0AWXRpCwVhpxg==
+
 "@themer/utils@^1.0.0", "@themer/utils@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@themer/utils/-/utils-1.2.0.tgz#5082d94648a3abe87cbad1abe3918fc32138b4f2"

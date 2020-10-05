@@ -43,6 +43,7 @@
     "@themer/sketch-palettes": "^1.1.0",
     "@themer/slack": "^2.1.0",
     "@themer/sublime-text": "^2.1.0",
+    "@themer/terminator": "^1.0.0",
     "@themer/vim": "^3.2.1",
     "@themer/vim-lightline": "^3.1.1",
     "@themer/visual-studio": "^1.0.0",

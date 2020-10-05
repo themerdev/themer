@@ -32,6 +32,7 @@ export default () => {
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [slack, setSlack] = useState(false);
   const [sublimeText, setSublimeText] = useState(false);
+  const [terminator, setTerminator] = useState(false);
   const [termite, setTermite] = useState(false);
   const [tmux, setTmux] = useState(false);
   const [vim, setVim] = useState(false);
@@ -80,6 +81,7 @@ export default () => {
       sketchPalettes,
       slack,
       sublimeText,
+      terminator,
       termite,
       tmux,
       vim,
@@ -164,6 +166,12 @@ export default () => {
             value={ konsole }
             onChange={ () => setKonsole(!konsole) }
             label="Konsole"
+            accentSelected
+          />
+          <Checkbox
+            value={ terminator }
+            onChange={ () => setTerminator(!terminator) }
+            label="Terminator"
             accentSelected
           />
           <Checkbox
