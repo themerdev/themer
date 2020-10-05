@@ -1,6 +1,6 @@
 # @themer/terminator
 
-A TODO template for [themer](https://github.com/mjswensen/themer).
+A Terminator template for [themer](https://github.com/mjswensen/themer).
 
 ## Installation & usage
 

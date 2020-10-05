@@ -1,7 +1,7 @@
 {
   "name": "@themer/terminator",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "A Terminator theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
     "node": ">=8.11.4"
