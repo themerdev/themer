@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderInstructions should provide installation instructions 1`] = `
+"
+Copy the contents of \`themer-terminator-dark.txt\` or \`themer-terminator-light.txt\` to the Terminator's config file.
+
+The config file is usually located at \`~/.config/terminator/config\`.
+
+You can paste it as a new profile, or copy the contents into your existing profile.
+
+Finally, restart Terminator to see the new theme.
+"
+`;
