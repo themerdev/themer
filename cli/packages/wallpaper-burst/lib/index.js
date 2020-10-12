@@ -4,6 +4,8 @@ const {
   colorSets: getColorSets,
   listOutputFiles,
 } = require('@themer/utils');
+const { createCanvas } = require('canvas');
+const Color = require('color');
 
 const SIZE = 70;
 const MAX_DISTANCE = SIZE * 5;
@@ -18,81 +20,71 @@ const getClampedPoint = (x1, y1, maxX, maxY) => {
 }
 
 const renderImage = (size, colorSet) => {
+  const canvas = createCanvas(size.w, size.h);
+  const ctx = canvas.getContext('2d');
+
   const focalPoint = {
     x: size.w * 0.5,
     y: size.h * 0.5,
+  };
+
+  ctx.fillStyle = colorSet.colors.shade0;
+  ctx.fillRect(0, 0, size.w, size.h);
+
+  const gradient = ctx.createRadialGradient(
+    focalPoint.x,
+    focalPoint.y,
+    0,
+    focalPoint.x,
+    focalPoint.y,
+    Math.min(size.w, size.h) / 2
+  );
+  gradient.addColorStop(
+    0,
+    Color(colorSet.name === 'dark' ? colorSet.colors.shade1 : colorSet.colors.shade0)
+      .alpha(0.25)
+      .rgb()
+      .string()
+  );
+  gradient.addColorStop(
+    0.7,
+    colorSet.name === 'dark' ? colorSet.colors.shade0 : colorSet.colors.shade1
+  );
+  
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, size.w, size.h);
+
+  const xCount = Math.round(size.w / SIZE);
+  const yCount = Math.round(size.h / SIZE);
+  const cellWidth = size.w / xCount;
+  const cellHeight = size.h / yCount;
+  for (let i = 0; i < xCount; i++) {
+    for (let j = 0; j < yCount; j++) {
+      const x1 = i * cellWidth + Math.random() * cellWidth;
+      const y1 = j * cellHeight + Math.random() * cellHeight;
+      const [x2, y2] = getClampedPoint(x1, y1, focalPoint.x, focalPoint.y);
+      const accent = (Math.round(i / xCount * 8 + (Math.random() * LEAK_FACTOR * 2 - LEAK_FACTOR)) + 8) % 8;
+      const color = colorSet.colors[`accent${accent}`];
+      const transparentColor = Color(color).alpha(0).rgb().string();
+      const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
+      gradient.addColorStop(0.02, colorSet.colors.shade7);
+      gradient.addColorStop(0.3, color);
+      gradient.addColorStop(0.5, transparentColor);
+      ctx.lineCap = 'round';
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = gradient;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+    }
   }
-  return `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="${size.w}"
-      height="${size.h}"
-      viewBox="0 0 ${size.w} ${size.h}"
-    >
-      <defs>
-        <radialGradient id="burst">
-          <stop
-            offset="0%"
-            stop-color="${colorSet.name === 'dark' ? colorSet.colors.shade1 : colorSet.colors.shade0}"
-            stop-opacity="0.25"
-          />
-          <stop
-            offset="70%"
-            stop-color="${colorSet.name === 'dark' ? colorSet.colors.shade0 : colorSet.colors.shade1}"
-          />
-        </radialGradient>
-      </defs>
-      <rect x="0" y="0" width="100%" height="100%" fill="${colorSet.colors.shade0}" />
-      <rect x="0" y="0" width="100%" height="100%" fill="url(#burst)" />
-      ${
-        Array(Math.round(size.w / SIZE))
-          .fill(null)
-          .map((_, i, { length: xCount }) =>
-            Array(Math.round(size.h / SIZE))
-              .fill(null)
-              .map((_, j, { length: yCount }) => {
-                const cellWidth = size.w / xCount;
-                const cellHeight = size.h / yCount;
-                const x1 = i * cellWidth + Math.random() * cellWidth;
-                const y1 = j * cellHeight + Math.random() * cellHeight;
-                const [x2, y2] = getClampedPoint(x1, y1, focalPoint.x, focalPoint.y);
-                const accent = (Math.round(i / xCount * 8 + (Math.random() * LEAK_FACTOR * 2 - LEAK_FACTOR)) + 8) % 8;
-                const color = colorSet.colors[`accent${accent}`];
-                const id = `${i}-${j}`;
-                return `
-                  <defs>
-                    <linearGradient
-                      id="${id}"
-                      gradientUnits="userSpaceOnUse"
-                      x1="${x1}"
-                      y1="${y1}"
-                      x2="${x2}"
-                      y2="${y2}"
-                    >
-                      <stop offset="2%" stop-color="${colorSet.colors.shade7}" />
-                      <stop offset="30%" stop-color="${color}" />
-                      <stop offset="50%" stop-color="${color}" stop-opacity="0" />
-                    </linearGradient>
-                  </defs>
-                  <line
-                    x1="${x1}"
-                    y1="${y1}"
-                    x2="${x2}"
-                    y2="${y2}"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke="url(#${id})"
-                  />
-                `;
-                }
-              )
-              .join('\n'),
-          )
-          .join('\n')
-      }
-    </svg>
-  `;
-}
+  
+  return Buffer.from(
+    canvas.toDataURL().replace('data:image/png;base64,', ''),
+    'base64',
+  );
+};
 
 const render = (colors, options) => {
   try {
@@ -108,12 +100,12 @@ const render = (colors, options) => {
   return deepFlatten(
     sizes.map(
       size => colorSets.map(colorSet => Promise.resolve({
-        name: `themer-wallpaper-burst-${colorSet.name}-${size.w}x${size.h}.svg`,
-        contents: Buffer.from(renderImage(size, colorSet), 'utf8'),
+        name: `themer-wallpaper-burst-${colorSet.name}-${size.w}x${size.h}.png`,
+        contents: renderImage(size, colorSet),
       })),
     ),
   );
-}
+};
 
 module.exports = {
   render,
