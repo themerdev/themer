@@ -1,0 +1,51 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "iterate",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "onchange",
+        "--initial",
+        "${file}",
+        "--",
+        "./themer/bin/themer.js",
+          "-c", "./${input:colorSet}",
+          "-t", "${file}",
+          "-o", "${workspaceFolder}/cli/tmp"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/cli/packages"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "colorSet",
+      "type": "pickString",
+      "description": "Color set package",
+      "options": [
+        "colors-default",
+        "colors-dracula",
+        "colors-finger-paint",
+        "colors-github-universe",
+        "colors-green-as-a-whistle",
+        "colors-lucid",
+        "colors-mojave",
+        "colors-monkey",
+        "colors-night-sky",
+        "colors-nova",
+        "colors-one",
+        "colors-polar-ice",
+        "colors-right-in-the-teals",
+        "colors-rivet",
+        "colors-seti"
+      ],
+      "default": "colors-default"
+    }
+  ]
+}
