@@ -4,6 +4,8 @@ const {
   colorSets: getColorSets,
   listOutputFiles,
 } = require('@themer/utils');
+const { createCanvas } = require('canvas');
+const Color = require('color');
 
 const SIZE = 100;
 const DIAGONAL = Math.sqrt(2 * Math.pow(SIZE, 2));
@@ -31,65 +33,59 @@ function* diamonds(rowCount, columnCount, colorSet) {
       const cy = i * DIAGONAL / 2;
       const anchoredRandomColorKey = () => randomColorKey((i / rowCount + j / columnCount) / 2);
       if (Math.random() < 0.3) {
-        yield `
-          <path
-            d="
-              M${cx},${cy - DIAGONAL / 2}
-              l${DIAGONAL/2},${DIAGONAL/2}
-              l${DIAGONAL/-2},${DIAGONAL/2}
-              l${DIAGONAL/-2},${DIAGONAL/-2}
-              z
-            "
-            fill="${colorSet.colors[anchoredRandomColorKey()]}"
-            opacity="${minRandom(0.2)}"
-          />
-        `;
+        yield {
+          color: colorSet.colors[anchoredRandomColorKey()],
+          opacity: minRandom(0.2),
+          commands: [
+            { command: 'moveTo', args: [cx, cy - DIAGONAL / 2] },
+            { command: 'lineTo', args: [cx + DIAGONAL / 2, cy] },
+            { command: 'lineTo', args: [cx, cy + DIAGONAL / 2] },
+            { command: 'lineTo', args: [cx - DIAGONAL / 2, cy] },
+            { command: 'closePath', args: [] },
+          ],
+        };
       } else if (Math.random() < 0.1) {
-        yield `
-          <path
-            d="
-              M${cx - DIAGONAL / 2},${cy}
-              l${DIAGONAL/2},${DIAGONAL/-2}
-              l${DIAGONAL/2},${DIAGONAL/2}
-              z
-            "
-            fill="${colorSet.colors[anchoredRandomColorKey()]}"
-            opacity="${minRandom(0.2)}"
-          />
-          <path
-            d="
-              M${cx - DIAGONAL / 2},${cy}
-              l${DIAGONAL},0
-              l${DIAGONAL/-2},${DIAGONAL/2}
-              z
-            "
-            fill="${colorSet.colors[anchoredRandomColorKey()]}"
-            opacity="${minRandom(0.2)}"
-          />
-        `;
+        yield {
+          color: colorSet.colors[anchoredRandomColorKey()],
+          opacity: minRandom(0.2),
+          commands: [
+            { command: 'moveTo', args: [cx - DIAGONAL / 2, cy] },
+            { command: 'lineTo', args: [cx, cy - DIAGONAL / 2] },
+            { command: 'lineTo', args: [cx + DIAGONAL / 2, cy] },
+            { command: 'closePath', args: [] },
+          ],
+        };
+        yield {
+          color: colorSet.colors[anchoredRandomColorKey()],
+          opacity: minRandom(0.2),
+          commands: [
+            { command: 'moveTo', args: [cx - DIAGONAL / 2, cy] },
+            { command: 'lineTo', args: [cx + DIAGONAL / 2, cy] },
+            { command: 'lineTo', args: [cx, cy + DIAGONAL / 2] },
+            { command: 'closePath', args: [] },
+          ],
+        };
       } else {
-        yield `
-          <path
-            d="
-              M${cx},${cy - DIAGONAL / 2}
-              l0,${DIAGONAL}
-              l${DIAGONAL/-2},${DIAGONAL/-2}
-              z
-            "
-            fill="${colorSet.colors[anchoredRandomColorKey()]}"
-            opacity="${minRandom(0.2)}"
-          />
-          <path
-            d="
-              M${cx},${cy - DIAGONAL / 2}
-              l${DIAGONAL/2},${DIAGONAL/2}
-              l${DIAGONAL/-2},${DIAGONAL/2}
-              z
-            "
-            fill="${colorSet.colors[anchoredRandomColorKey()]}"
-            opacity="${minRandom(0.2)}"
-          />
-        `;
+        yield {
+          color: colorSet.colors[anchoredRandomColorKey()],
+          opacity: minRandom(0.2),
+          commands: [
+            { command: 'moveTo', args: [cx, cy - DIAGONAL / 2] },
+            { command: 'lineTo', args: [cx, cy + DIAGONAL / 2] },
+            { command: 'lineTo', args: [cx - DIAGONAL / 2, cy] },
+            { command: 'closePath', args: [] },
+          ],
+        };
+        yield {
+          color: colorSet.colors[anchoredRandomColorKey()],
+          opacity: minRandom(0.2),
+          commands: [
+            { command: 'moveTo', args: [cx, cy - DIAGONAL / 2] },
+            { command: 'lineTo', args: [cx + DIAGONAL / 2, cy] },
+            { command: 'lineTo', args: [cx, cy + DIAGONAL / 2] },
+            { command: 'closePath', args: [] },
+          ],
+        }
       }
     }
   }
@@ -108,22 +104,31 @@ const render = (colors, options) => {
 
   return deepFlatten(
     sizes.map(
-      size => colorSets.map(colorSet => {
-        const rowCount = Math.ceil(size.h / (DIAGONAL / 2));
-        const columnCount = Math.ceil(size.w / DIAGONAL);
-        return Promise.resolve({
-          name: `themer-wallpaper-diamonds-${colorSet.name}-${size.w}x${size.h}.svg`,
-          contents: Buffer.from(
-            `
-              <svg width="${size.w}" height="${size.h}" viewBox="0 0 ${size.w} ${size.h}" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="0" width="${size.w}" height="${size.h}" fill="${colorSet.colors.shade0}" />
-                ${Array.from(diamonds(rowCount, columnCount, colorSet)).join('\n')}
-              </svg>
-            `,
-            'utf8',
-          ),
-        });
-      }),
+      size => colorSets.map(
+        async colorSet => {
+          const rowCount = Math.ceil(size.h / (DIAGONAL / 2));
+          const columnCount = Math.ceil(size.w / DIAGONAL);
+          const canvas = createCanvas(size.w, size.h);
+          const ctx = canvas.getContext('2d');
+
+          ctx.fillStyle = colorSet.colors.shade0;
+          ctx.fillRect(0, 0, size.w, size.h);
+
+          for (const diamond of diamonds(rowCount, columnCount, colorSet)) {
+            ctx.beginPath();
+            ctx.fillStyle = Color(diamond.color).alpha(diamond.opacity).rgb().string();
+            for (const { command, args } of diamond.commands) {
+              ctx[command](...args);
+            }
+            ctx.fill();
+          }
+
+          return {
+            name: `themer-wallpaper-diamonds-${colorSet.name}-${size.w}x${size.h}.png`,
+            contents: Buffer.from(canvas.toDataURL().replace('data:image/png;base64,', ''), 'base64'),
+          };
+        }
+      ),
     ),
   );
 }
