@@ -2,13 +2,10 @@ const { render, renderInstructions } = require('./index');
 const { colors } = require('../../colors-default');
 
 describe('themer "shirts" wallpaper', () => {
-  it('should render valid SVG', done => {
-    Promise.all(render(colors, {})).then(files => {
-      files.forEach(file => {
-        expect(file.contents.toString('utf8')).toMatchSnapshot();
-      });
-      done();
-    });
+  it(`should return 4 PNG files to write`, async () => {
+    const files = await Promise.all(render(colors, {}));
+    expect(files.length).toBe(4);
+    expect(files.filter(file => /\.png/.test(file.name)).length).toBe(4);
   });
   it('should list output files', async () => {
     const files = await Promise.all(render(colors, { 'themer-wallpaper-shirts-size': '1000x1000' }));
