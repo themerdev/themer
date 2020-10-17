@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-triangles#readme",
   "dependencies": {
-    "@themer/utils": "^1.2.0"
+    "@themer/utils": "^1.2.0",
+    "canvas": "^2.6.1"
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
