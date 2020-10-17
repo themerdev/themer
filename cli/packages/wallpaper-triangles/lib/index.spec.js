@@ -6,22 +6,12 @@ describe('themer "triangles" wallpaper', () => {
     describe(scenario, () => {
       describe('and when rendering only default resolutions', () => {
         const promises = render(colors, {});
-
         it(`should return ${totalDefaultFiles} files to write`, done => {
           Promise.all(promises).then(files => {
             expect(files.length).toBe(totalDefaultFiles);
-            expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(
+            expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
               totalDefaultFiles
             );
-            done();
-          });
-        });
-
-        it('should render valid SVG', done => {
-          Promise.all(promises).then(files => {
-            files.filter(file => /\.svg/.test(file.name)).forEach(file => {
-              expect(file.contents.toString('utf8')).toMatchSnapshot();
-            });
             done();
           });
         });
@@ -31,22 +21,12 @@ describe('themer "triangles" wallpaper', () => {
         const promises = render(colors, {
           'themer-wallpaper-triangles-size': '600x600',
         });
-
         it(`should return ${totalDefaultFiles / 2} files to write`, done => {
           Promise.all(promises).then(files => {
             expect(files.length).toBe(totalDefaultFiles / 2);
-            expect(files.filter(file => /\.svg/.test(file.name)).length).toBe(
+            expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
               totalDefaultFiles / 2
             );
-            done();
-          });
-        });
-
-        it('should render valid SVG', done => {
-          Promise.all(promises).then(files => {
-            files.filter(file => /\.svg/.test(file.name)).forEach(file => {
-              expect(file.contents.toString('utf8')).toMatchSnapshot();
-            });
             done();
           });
         });
