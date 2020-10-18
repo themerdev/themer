@@ -1,6 +1,6 @@
 {
   "name": "@themer/wallpaper-octagon",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "Wallpaper generator for themer.",
   "main": "lib/index.js",
   "engines": {
