@@ -2,9 +2,9 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). It uses the popular [trianglify](https://github.com/qrohlf/trianglify) library to generate wallpapers from your color set.
 
-Here's a preview using [themer's default color set](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default):
+Here's a preview using [themer's default color set (dark variant)](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default):
 
-![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-trianglify/assets/desktop-dark.svg)
+![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@6b157118bcaa51c3031801a1a213f78db294578b/cli/packages/wallpaper-trianglify/assets/themer-wallpaper-trianglify-dark-2880x1800-0.75-1.png)
 
 ## Installation & usage
 
@@ -16,7 +16,7 @@ Then pass `@themer/wallpaper-trianglify` as a `-t` (`--template`) arg to `themer
 
     themer -c my-colors.js -t @themer/wallpaper-trianglify -o gen
 
-`@themer/wallpaper-trianglify` will generate SVG wallpapers to the output directory (`gen/` in this example).
+`@themer/wallpaper-trianglify` will generate PNG wallpapers to the output directory (`gen/` in this example).
 
 The generated files will be listed in `<output dir>/README.md`.
 
