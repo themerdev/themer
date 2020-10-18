@@ -6,29 +6,23 @@ describe('themer "triangles" wallpaper', () => {
     describe(scenario, () => {
       describe('and when rendering only default resolutions', () => {
         const promises = render(colors, {});
-        it(`should return ${totalDefaultFiles} files to write`, done => {
-          Promise.all(promises).then(files => {
-            expect(files.length).toBe(totalDefaultFiles);
-            expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
-              totalDefaultFiles
-            );
-            done();
-          });
+        it(`should return ${totalDefaultFiles} files to write`, async () => {
+          const files = await Promise.all(promises);
+          expect(files.length).toBe(totalDefaultFiles);
+          expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
+            totalDefaultFiles
+          );
         });
       });
 
       describe('and when rendering a given resolution', () => {
-        const promises = render(colors, {
-          'themer-wallpaper-triangles-size': '600x600',
-        });
-        it(`should return ${totalDefaultFiles / 2} files to write`, done => {
-          Promise.all(promises).then(files => {
-            expect(files.length).toBe(totalDefaultFiles / 2);
-            expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
-              totalDefaultFiles / 2
-            );
-            done();
-          });
+        const promises = render(colors, { 'themer-wallpaper-triangles-size': '600x600' });
+        it(`should return ${totalDefaultFiles / 2} files to write`, async () => {
+          const files = await Promise.all(promises);
+          expect(files.length).toBe(totalDefaultFiles / 2);
+          expect(files.filter(file => /\.png/.test(file.name)).length).toBe(
+            totalDefaultFiles / 2
+          );
         });
       });
     });
