@@ -1,6 +1,7 @@
 const trianglify = require('trianglify'),
   { deepFlatten, listOutputFiles } = require('@themer/utils'),
   { getSizes, getVariances } = require('./opts');
+const { createCanvas } = require('canvas');
 
 const optionNames = {
   sizes: 'themer-wallpaper-trianglify-size',
@@ -25,25 +26,20 @@ const render = (colors, options) => {
           },
         ].map((configuration, configurationIdx) =>
           variances.map(variance =>
-            sizes.map(size =>
-              new Promise((resolve, reject) => {
-                try {
-                  const pattern = trianglify({
-                    width: size.w,
-                    height: size.h,
-                    variance,
-                    ...configuration,
-                  });
-                  const svgString = pattern.toSVGTree({includeNamespace: true}).toString();
-                  resolve({
-                    name: `themer-wallpaper-trianglify-${colorSetName}-${size.w}x${size.h}-${variance}-${configurationIdx+1}.svg`,
-                    contents: Buffer.from(svgString, 'utf8'),
-                  });
-                } catch (e) {
-                  reject(e.message);
-                }
-              })
-            )
+            sizes.map(async size => {
+              const pattern = trianglify({
+                width: size.w,
+                height: size.h,
+                variance,
+                ...configuration,
+              });
+              const canvas = createCanvas(size.w, size.h);
+              pattern.toCanvas(canvas, { scaling: false, applyCssScaling: false });
+              return {
+                name: `themer-wallpaper-trianglify-${colorSetName}-${size.w}x${size.h}-${variance}-${configurationIdx+1}.png`,
+                contents: Buffer.from(canvas.toDataURL().replace('data:image/png;base64,', ''), 'base64'),
+              };
+            })
           )
         )
       )
