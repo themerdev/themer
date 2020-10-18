@@ -2,9 +2,9 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using the [@themer/colors-finger-paint](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-finger-paint) color set:
 
-![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-diamonds/assets/desktop-dark.svg)
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@8e41155aa7d906e4212df29c67e2799420e08753/cli/packages/wallpaper-diamonds/assets/themer-wallpaper-diamonds-dark-2880x1800.png)
 
-![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-diamonds/assets/desktop-light.svg)
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@8e41155aa7d906e4212df29c67e2799420e08753/cli/packages/wallpaper-diamonds/assets/themer-wallpaper-diamonds-light-2880x1800.png)
 
 ## Installation & usage
 
@@ -16,7 +16,7 @@ Then pass `@themer/wallpaper-diamonds` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t @themer/wallpaper-diamonds -o gen
 
-`@themer/wallpaper-diamonds` will generate SVG wallpapers to the output directory (`gen/` in this example). (You can then convert them to a bitmap format, if necessary, [using Chrome](https://umaar.com/dev-tips/156-element-screenshot/) or other tools.)
+`@themer/wallpaper-diamonds` will generate PNG wallpapers to the output directory (`gen/` in this example).
 
 The generated files will be listed in `<output dir>/README.md`.
 
