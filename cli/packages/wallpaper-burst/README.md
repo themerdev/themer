@@ -4,9 +4,9 @@ A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
 Shown here with [@themer/colors-solarized](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-solarized):
 
-![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@c53f020686307b5baa555bb40e8c0855c9093ec7/cli/packages/wallpaper-burst/assets/themer-wallpaper-burst-dark-2880x1800.svg)
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@d8bcb110cd259ee5aa7c7025cfe6f0b214e28554/cli/packages/wallpaper-burst/assets/themer-wallpaper-burst-dark-2880x1800.png)
 
-![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@c53f020686307b5baa555bb40e8c0855c9093ec7/cli/packages/wallpaper-burst/assets/themer-wallpaper-burst-light-2880x1800.svg)
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@d8bcb110cd259ee5aa7c7025cfe6f0b214e28554/cli/packages/wallpaper-burst/assets/themer-wallpaper-burst-light-2880x1800.png)
 
 ## Installation & usage
 
@@ -18,7 +18,7 @@ Then pass `@themer/wallpaper-burst` as a `-t` (`--template`) arg to `themer`:
 
     themer -c my-colors.js -t @themer/wallpaper-burst -o gen
 
-`@themer/wallpaper-burst` will generate SVG wallpapers to the output directory (`gen/` in this example). (You can then convert them to a bitmap format, if necessary.)
+`@themer/wallpaper-burst` will generate PNG wallpapers to the output directory (`gen/` in this example).
 
 ### Default resolutions
 
