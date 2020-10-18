@@ -2,8 +2,8 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview rendered using themer's default color set ([@themer/colors-default](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default)):
 
-![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-block-wave/assets/desktop-dark.svg)
-![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-block-wave/assets/desktop-light.svg)
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@68cf78f754e4797e46ed5dfbe76168ddb85a2886/cli/packages/wallpaper-block-wave/assets/desktop-dark.png)
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@68cf78f754e4797e46ed5dfbe76168ddb85a2886/cli/packages/wallpaper-block-wave/assets/desktop-light.png)
 
 ## Installation & usage
 
@@ -15,7 +15,7 @@ Then pass `@themer/wallpaper-block-wave` as a `-t` (`--template`) arg to `themer
 
     themer -c my-colors.js -t @themer/wallpaper-block-wave -o gen
 
-`@themer/wallpaper-block-wave` will generate SVG wallpapers to the output directory (`gen/` in this example). (You can then convert them to a bitmap format, if necessary, [using Chrome](https://umaar.com/dev-tips/156-element-screenshot/) or other tools.)
+`@themer/wallpaper-block-wave` will generate PNG wallpapers to the output directory (`gen/` in this example).
 
 The generated files will be listed in `<output dir>/README.md`.
 
