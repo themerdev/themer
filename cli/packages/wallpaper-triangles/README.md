@@ -1,8 +1,8 @@
 # @themer/wallpaper-triangles
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview using [themer's default color set](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default):
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview using [themer's default color set (dark variant)](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default):
 
-![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@399430ac7b58691dc436761b1a03614898df92ba/cli/packages/themer-wallpaper-triangles/assets/desktop-dark.svg)
+![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@3429c1e8916b7a2917885e3e93a81c969de9cd73/cli/packages/wallpaper-triangles/assets/themer-wallpaper-triangles-dark-2880x1800.png)
 
 ## Installation & usage
 
@@ -14,7 +14,7 @@ Then pass `@themer/wallpaper-triangles` as a `-t` (`--template`) arg to `themer`
 
     themer -c my-colors.js -t @themer/wallpaper-triangles -o gen
 
-`@themer/wallpaper-triangles` will generate SVG wallpapers to the output directory (`gen/` in this example).
+`@themer/wallpaper-triangles` will generate PNG wallpapers to the output directory (`gen/` in this example).
 
 The generated files will be listed in `<output dir>/README.md`.
 
