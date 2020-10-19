@@ -38,6 +38,7 @@ const getImagePromises = (wallpaper, colors, width, height) => {
 export default ({ onClose, wallpaper, colors }) => {
   const [images, setImages] = useState([]);
   const [imageIndex, setImageIndex] = useState(0);
+  const [backgroundImage, setBackgroundImage] = useState('none');
   
   useEscListener(onClose);
 
@@ -67,12 +68,21 @@ export default ({ onClose, wallpaper, colors }) => {
     button.current.focus();
   }, [button]);
 
-  const backgroundImage = images[imageIndex]
-    ? wallpaper === 'themer-wallpaper-trianglify'
-    ? `url("data:image/svg+xml;utf8,${encodeURIComponent(images[imageIndex].contents.toString('utf8'))}")`
-    : `url('data:image/svg+xml;utf8,${encodeURIComponent(images[imageIndex].contents.toString('utf8'))}')`
-    : 'none';
-  
+  useEffect(() => {
+    let url;
+    if (images[imageIndex]) {
+      url = URL.createObjectURL(new Blob([images[imageIndex].contents], { type: 'image/png' }));
+      setBackgroundImage(`url("${url}")`);
+    } else {
+      setBackgroundImage('none');
+    }
+    return () => {
+      if (url) {
+        URL.revokeObjectURL(url);
+      }
+    }
+  }, [images, imageIndex]);
+
   return (
     <div
       className={ styles.scrim }
