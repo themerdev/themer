@@ -43,7 +43,8 @@
         "colors-polar-ice",
         "colors-right-in-the-teals",
         "colors-rivet",
-        "colors-seti"
+        "colors-seti",
+        "colors-solarized"
       ],
       "default": "colors-default"
     }
