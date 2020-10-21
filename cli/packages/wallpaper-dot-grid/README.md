@@ -1,6 +1,10 @@
 # @themer/wallpaper-dot-grid
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer).
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here is a preview rendered with [themer's default color set](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default):
+
+![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@6ff5f39dc25e23036f8d1f0b30f85a124abe743e/cli/packages/wallpaper-dot-grid/assets/themer-wallpaper-dot-grid-dark-2880x1800-2.png)
+
+![desktop light](https://cdn.jsdelivr.net/gh/mjswensen/themer@6ff5f39dc25e23036f8d1f0b30f85a124abe743e/cli/packages/wallpaper-dot-grid/assets/themer-wallpaper-dot-grid-light-2880x1800-1.png)
 
 ## Installation & usage
 
