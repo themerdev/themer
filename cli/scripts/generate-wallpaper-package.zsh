@@ -3,6 +3,7 @@
 DIR="wallpaper-$1"
 NAME="@themer/$DIR"
 ARG_PREFIX="themer-wallpaper-$1"
+SIZE_ARG="$ARG_PREFIX-size"
 
 echo Generating $NAME...
 
@@ -47,7 +48,8 @@ cat << EOF > $PACKAGE/package.json
   },
   "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/$DIR#readme",
   "dependencies": {
-    "@themer/utils": "^1.0.0"
+    "@themer/utils": "^1.0.0",
+    "canvas": "^2.6.1"
   },
   "peerDependencies": {
     "themer": "^3"
@@ -64,7 +66,7 @@ cat << EOF > $PACKAGE/README.md
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
-TODO
+TODO: Add preview images
 
 ## Installation & usage
 
@@ -76,7 +78,7 @@ Then pass \`$NAME\` as a \`-t\` (\`--template\`) arg to \`themer\`:
 
     themer -c my-colors.js -t $NAME -o gen
 
-\`$NAME\` will generate SVG wallpapers to the output directory (\`gen/\` in this example). (You can then convert them to a bitmap format, if necessary, [using Chrome](https://umaar.com/dev-tips/156-element-screenshot/) or other tools.)
+\`$NAME\` will generate PNG wallpapers to the output directory (\`gen/\` in this example).
 
 ### Default resolutions
 
@@ -89,12 +91,11 @@ By default, \`$NAME\` will output wallpapers at the following sizes:
 
 \`$NAME\` adds the following argument to \`themer\`:
 
-    --$ARG_PREFIX-size
+    --$SIZE_ARG
 
 to which you would pass \`<width>x<height>\`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
-    themer -c my-colors.js -t $NAME --$ARG_PREFIX-size 1024x768 --$ARG_PREFIX-size 320x960 -o gen
-
+    themer -c my-colors.js -t $NAME --$SIZE_ARG 1024x768 --$SIZE_ARG 320x960 -o gen
 EOF
 
 LIB="$PACKAGE/lib"
@@ -105,12 +106,13 @@ const {
   getSizesFromOptOrDefault,
   deepFlatten,
   colorSets: getColorSets,
+  listOutputFiles,
 } = require('@themer/utils');
 
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['$ARG_PREFIX-size']
+      options['$SIZE_ARG']
     );
   } catch (e) {
     return [Promise.reject(e.message)];
@@ -127,19 +129,26 @@ const render = (colors, options) => {
   );
 }
 
-module.exports = { render };
+module.exports = {
+  render,
+  renderInstructions: listOutputFiles,
+};
 EOF
 
 cat << EOF > $LIB/index.spec.js
-const { render } = require('./index');
+const { render, renderInstructions } = require('./index');
 const { colors } = require('../../colors-default');
 
 describe('themer "$1" wallpaper', () => {
-  it('should render valid SVG', async () => {
+  it('should return 4 PNG files to write', async () => {
     const files = await Promise.all(render(colors, {}));
-    files.forEach(file => {
-      expect(file.contents.toString('utf8')).toMatchSnapshot();
-    });
+    expect(files.length).toBe(4);
+    expect(files.filter(file => /\.png/.test(file.name)).length).toBe(4);
+  });
+  it('should list output files', async () => {
+    const files = await Promise.all(render(colors, { '$SIZE_ARG': '1000x1000' }));
+    const instructions = renderInstructions(files.map(({ name }) => name));
+    expect(instructions).toMatchSnapshot();
   });
 });
 EOF
