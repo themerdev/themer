@@ -249,7 +249,9 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/hyper](https://github.com/mjswensen/themer/tree/master/cli/packages/hyper)
 * [@themer/iterm](https://github.com/mjswensen/themer/tree/master/cli/packages/iterm)
 * [@themer/kitty](https://github.com/mjswensen/themer/tree/master/cli/packages/kitty)
+* [@themer/konsole](https://github.com/mjswensen/themer/tree/master/cli/packages/konsole)
 * [@themer/terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/terminal)
+* [@themer/terminator](https://github.com/mjswensen/themer/tree/master/cli/packages/terminator)
 * [@themer/windows-terminal](https://github.com/mjswensen/themer/tree/master/cli/packages/windows-terminal)
 
 ### Editors/IDEs
@@ -270,6 +272,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-block-wave)
 * [@themer/wallpaper-burst](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-burst)
 * [@themer/wallpaper-diamonds](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-diamonds)
+* [@themer/wallpaper-dot-grid](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-dot-grid)
 * [@themer/wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-octagon)
 * [@themer/wallpaper-shirts](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-shirts)
 * [@themer/wallpaper-triangles](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-triangles)
