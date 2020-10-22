@@ -42,6 +42,7 @@ export default () => {
   const [wallpaperBlockWave, setWallpaperBlockWave] = useState(false);
   const [wallpaperBurst, setWallpaperBurst] = useState(false);
   const [wallpaperDiamonds, setWallpaperDiamonds] = useState(false);
+  const [wallpaperDotGrid, setWallpaperDotGrid] = useState(false);
   const [wallpaperOctagon, setWallpaperOctagon] = useState(false);
   const [wallpaperShirts, setWallpaperShirts] = useState(false);
   const [wallpaperTriangles, setWallpaperTriangles] = useState(false);
@@ -91,6 +92,7 @@ export default () => {
       wallpaperBlockWave,
       wallpaperBurst,
       wallpaperDiamonds,
+      wallpaperDotGrid,
       wallpaperOctagon,
       wallpaperShirts,
       wallpaperTriangles,
@@ -274,6 +276,12 @@ export default () => {
             value={ wallpaperDiamonds }
             onChange={ () => setWallpaperDiamonds(!wallpaperDiamonds) }
             label="“Diamonds”"
+            accentSelected
+          />
+          <Checkbox
+            value={ wallpaperDotGrid }
+            onChange={ () => setWallpaperDotGrid(!wallpaperDotGrid) }
+            label="“Dot Grid”"
             accentSelected
           />
           <Checkbox
