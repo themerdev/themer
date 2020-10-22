@@ -36,6 +36,7 @@ import * as themerVscode from '@themer/vscode';
 import * as themerWallpaperBlockWave from '@themer/wallpaper-block-wave';
 import * as themerWallpaperBurst from '@themer/wallpaper-burst';
 import * as themerWallpaperDiamonds from '@themer/wallpaper-diamonds';
+import * as themerWallpaperDotGrid from '@themer/wallpaper-dot-grid';
 import * as themerWallpaperOctagon from '@themer/wallpaper-octagon';
 import * as themerWallpaperShirts from '@themer/wallpaper-shirts';
 import * as themerWallpaperTriangles from '@themer/wallpaper-triangles';
@@ -81,6 +82,7 @@ const templates = {
   wallpaperBlockWave: { name: 'Block Wave Wallpaper', ...themerWallpaperBlockWave },
   wallpaperBurst: { name: 'Burst Wallpaper', ...themerWallpaperBurst },
   wallpaperDiamonds: { name: 'Diamonds Wallpaper', ...themerWallpaperDiamonds },
+  wallpaperDotGrid: { name: 'Dot Grid Wallpaper', ...themerWallpaperDotGrid },
   wallpaperOctagon: { name: 'Octagon Wallpaper', ...themerWallpaperOctagon },
   wallpaperShirts: { name: 'Shirts Wallpaper', ...themerWallpaperShirts },
   wallpaperTriangles: { name: 'Triangles Wallpaper', ...themerWallpaperTriangles },
@@ -95,11 +97,12 @@ const resolutionOptions = {
   wallpaperBlockWave: 'themer-wallpaper-block-wave-size',
   wallpaperBurst: 'themer-wallpaper-burst-size',
   wallpaperDiamonds: 'themer-wallpaper-diamonds-size',
+  wallpaperDotGrid: 'themer-wallpaper-dot-grid-size',
   wallpaperOctagon: 'themer-wallpaper-octagon-size',
   wallpaperShirts: 'themer-wallpaper-shirts-size',
   wallpaperTriangles: 'themer-wallpaper-triangles-size',
   wallpaperTrianglify: 'themer-wallpaper-trianglify-size',
-}
+};
 
 const instructions = url => `# \`themer\`
 

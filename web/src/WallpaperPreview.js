@@ -9,6 +9,7 @@ const wallpaperOptions = [
   { value: 'themer-wallpaper-block-wave', label: '"Block Wave"'},
   { value: 'themer-wallpaper-burst', label: '"Burst"'},
   { value: 'themer-wallpaper-diamonds', label: '"Diamonds"'},
+  { value: 'themer-wallpaper-dot-grid', label: '"Dot Grid"'},
   { value: 'themer-wallpaper-octagon', label: '"Octagon"'},
   { value: 'themer-wallpaper-triangles', label: '"Triangles"'},
   { value: 'themer-wallpaper-trianglify', label: '"Tranglify"'},

@@ -8,6 +8,7 @@ import useEscListener from './useEscListener';
 import { render as blockWaveRender } from '@themer/wallpaper-block-wave';
 import { render as burstRender } from '@themer/wallpaper-burst';
 import { render as diamondsRender } from '@themer/wallpaper-diamonds';
+import { render as dotGridRender } from '@themer/wallpaper-dot-grid';
 import { render as octagonRender } from '@themer/wallpaper-octagon';
 import { render as shirtsRender } from '@themer/wallpaper-shirts';
 import { render as trianglesRender } from '@themer/wallpaper-triangles';
@@ -22,6 +23,8 @@ const getImagePromises = (wallpaper, colors, width, height) => {
       return burstRender(colors, options);
     case 'themer-wallpaper-diamonds':
       return diamondsRender(colors, options);
+    case 'themer-wallpaper-dot-grid':
+      return dotGridRender(colors, options);
     case 'themer-wallpaper-octagon':
       return octagonRender(colors, options);
     case 'themer-wallpaper-shirts':
