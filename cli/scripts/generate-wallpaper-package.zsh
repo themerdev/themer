@@ -2,8 +2,8 @@
 
 DIR="wallpaper-$1"
 NAME="@themer/$DIR"
-ARG_PREFIX="themer-wallpaper-$1"
-SIZE_ARG="$ARG_PREFIX-size"
+PREFIXED_NAME="themer-wallpaper-$1"
+SIZE_ARG="$PREFIXED_NAME-size"
 
 echo Generating $NAME...
 
@@ -108,6 +108,7 @@ const {
   colorSets: getColorSets,
   listOutputFiles,
 } = require('@themer/utils');
+const { createCanvas } = require('canvas');
 
 const render = (colors, options) => {
   try {
@@ -122,8 +123,19 @@ const render = (colors, options) => {
 
   return deepFlatten(
     sizes.map(
-      size => colorSets.map(colorSet => {
+      size => colorSets.map(async colorSet => {
+        const canvas = createCanvas(size.w, size.h);
+        const ctx = canvas.getContext('2d');
+
         // TODO
+
+        return {
+          name: \`$PREFIXED_NAME-\${colorSet.name}-\${size.w}x\${size.h}.png\`,
+          contents: Buffer.from(
+            canvas.toDataURL().replace('data:image/png;base64,', ''),
+            'base64',
+          ),
+        };
       }),
     ),
   );
