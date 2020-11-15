@@ -283,6 +283,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/alfred](https://github.com/mjswensen/themer/tree/master/cli/packages/alfred)
 * [@themer/brave](https://github.com/mjswensen/themer/tree/master/cli/packages/brave)
 * [@themer/chrome](https://github.com/mjswensen/themer/tree/master/cli/packages/chrome)
+* [@themer/css](https://github.com/mjswensen/themer/tree/master/cli/packages/css)
 * [@themer/firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-addon)
 * [@themer/firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-color)
 * [@themer/prism](https://github.com/mjswensen/themer/tree/master/cli/packages/prism)
