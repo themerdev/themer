@@ -3,8 +3,8 @@ const {
   colorSets: getColorSets,
   deepFlatten,
   listOutputFiles,
+  weightedRandom,
 } = require('@themer/utils');
-const weightedRandom = require('./weighted-random');
 const { createCanvas } = require('canvas');
 const Color = require('color');
 
