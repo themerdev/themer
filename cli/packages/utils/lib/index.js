@@ -53,9 +53,16 @@ Files generated:
 ${paths.map(p => `* \`${p}\``).join('\n')}
 `;
 
+const weightedRandom = map => {
+  const cumulativeWeights = [...map.values()].reduce((c, weight, i) => c.concat(weight + (i === 0 ? 0 : c[i-1])), []);
+  const random = cumulativeWeights[cumulativeWeights.length-1] * Math.random();
+  return [...map.keys()][cumulativeWeights.findIndex(cw => random < cw)];
+};
+
 module.exports = {
   getSizesFromOptOrDefault,
   deepFlatten,
   colorSets,
   listOutputFiles,
+  weightedRandom,
 };
