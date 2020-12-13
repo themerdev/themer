@@ -271,6 +271,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 
 * [@themer/wallpaper-block-wave](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-block-wave)
 * [@themer/wallpaper-burst](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-burst)
+* [@themer/wallpaper-circuits](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-circuits)
 * [@themer/wallpaper-diamonds](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-diamonds)
 * [@themer/wallpaper-dot-grid](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-dot-grid)
 * [@themer/wallpaper-octagon](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-octagon)
