@@ -1768,6 +1768,11 @@
   resolved "https://registry.yarnpkg.com/@themer/utils/-/utils-1.2.0.tgz#5082d94648a3abe87cbad1abe3918fc32138b4f2"
   integrity sha512-NmzIHqX0jtdj+i3nM5t6S8D+AzHPUfMf7bMu9ydqaWq9x/gT/+mx3MQlN5Kvc2YZrZ2jIPIHBbztLzMugYgBmw==
 
+"@themer/utils@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@themer/utils/-/utils-1.3.0.tgz#ec75b56ba101d879b82f432f0184620cd5819aa4"
+  integrity sha512-79YoqTT21SwUepYVO9bIAvOCl0XiBgDWF5mJIZK0f6OvAXDaeR+4Dk+kU0Sg7jm4NcQS1M5SjSPColg1FHfveg==
+
 "@themer/vim-lightline@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@themer/vim-lightline/-/vim-lightline-3.1.1.tgz#cfb532e1a38c62505fea975138dbafec0bc6db15"
@@ -1809,6 +1814,14 @@
     "@themer/utils" "^1.0.0"
     canvas "^2.6.1"
     color "^3.1.3"
+
+"@themer/wallpaper-circuits@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@themer/wallpaper-circuits/-/wallpaper-circuits-1.0.1.tgz#bf23b028b2909b0ee4b4c36c7b51d22dadc73c8f"
+  integrity sha512-mOQE3IyCRvd4/ZJHKDIK/7WDRv5JX78UDCY80RMC1oZ6DKaGSVRvjGZn3zWDpYDpL+5jqGlGnlwxwE+s67ydfw==
+  dependencies:
+    "@themer/utils" "^1.3.0"
+    canvas "^2.6.1"
 
 "@themer/wallpaper-diamonds@^2.0.1":
   version "2.0.1"

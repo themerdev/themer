@@ -41,6 +41,7 @@ export default () => {
   const [vscode, setVscode] = useState(false);
   const [wallpaperBlockWave, setWallpaperBlockWave] = useState(false);
   const [wallpaperBurst, setWallpaperBurst] = useState(false);
+  const [wallpaperCircuits, setWallpaperCircuits] = useState(false);
   const [wallpaperDiamonds, setWallpaperDiamonds] = useState(false);
   const [wallpaperDotGrid, setWallpaperDotGrid] = useState(false);
   const [wallpaperOctagon, setWallpaperOctagon] = useState(false);
@@ -91,6 +92,7 @@ export default () => {
       vscode,
       wallpaperBlockWave,
       wallpaperBurst,
+      wallpaperCircuits,
       wallpaperDiamonds,
       wallpaperDotGrid,
       wallpaperOctagon,
@@ -270,6 +272,12 @@ export default () => {
             value={ wallpaperBurst }
             onChange={ () => setWallpaperBurst(!wallpaperBurst) }
             label="“Burst”"
+            accentSelected
+          />
+          <Checkbox
+            value={ wallpaperCircuits }
+            onChange={ () => setWallpaperCircuits(!wallpaperCircuits) }
+            label="“Circuits”"
             accentSelected
           />
           <Checkbox

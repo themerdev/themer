@@ -7,6 +7,7 @@ import useEscListener from './useEscListener';
 
 import { render as blockWaveRender } from '@themer/wallpaper-block-wave';
 import { render as burstRender } from '@themer/wallpaper-burst';
+import { render as circuitsRender } from '@themer/wallpaper-circuits';
 import { render as diamondsRender } from '@themer/wallpaper-diamonds';
 import { render as dotGridRender } from '@themer/wallpaper-dot-grid';
 import { render as octagonRender } from '@themer/wallpaper-octagon';
@@ -21,6 +22,8 @@ const getImagePromises = (wallpaper, colors, width, height) => {
       return blockWaveRender(colors, options);
     case 'themer-wallpaper-burst':
       return burstRender(colors, options);
+    case 'themer-wallpaper-circuits':
+      return circuitsRender(colors, options);
     case 'themer-wallpaper-diamonds':
       return diamondsRender(colors, options);
     case 'themer-wallpaper-dot-grid':

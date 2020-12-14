@@ -8,6 +8,7 @@ import ThemeContext from './ThemeContext';
 const wallpaperOptions = [
   { value: 'themer-wallpaper-block-wave', label: '"Block Wave"'},
   { value: 'themer-wallpaper-burst', label: '"Burst"'},
+  { value: 'themer-wallpaper-circuits', label: '"Circuits"'},
   { value: 'themer-wallpaper-diamonds', label: '"Diamonds"'},
   { value: 'themer-wallpaper-dot-grid', label: '"Dot Grid"'},
   { value: 'themer-wallpaper-octagon', label: '"Octagon"'},

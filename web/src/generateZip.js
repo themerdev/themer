@@ -35,6 +35,7 @@ import * as themerVisualStudio from '@themer/visual-studio';
 import * as themerVscode from '@themer/vscode';
 import * as themerWallpaperBlockWave from '@themer/wallpaper-block-wave';
 import * as themerWallpaperBurst from '@themer/wallpaper-burst';
+import * as themerWallpaperCircuits from '@themer/wallpaper-circuits';
 import * as themerWallpaperDiamonds from '@themer/wallpaper-diamonds';
 import * as themerWallpaperDotGrid from '@themer/wallpaper-dot-grid';
 import * as themerWallpaperOctagon from '@themer/wallpaper-octagon';
@@ -81,6 +82,7 @@ const templates = {
   vscode: { name: 'VS Code', ...themerVscode },
   wallpaperBlockWave: { name: 'Block Wave Wallpaper', ...themerWallpaperBlockWave },
   wallpaperBurst: { name: 'Burst Wallpaper', ...themerWallpaperBurst },
+  wallpaperCircuits: { name: 'Circuits Wallpaper', ...themerWallpaperCircuits },
   wallpaperDiamonds: { name: 'Diamonds Wallpaper', ...themerWallpaperDiamonds },
   wallpaperDotGrid: { name: 'Dot Grid Wallpaper', ...themerWallpaperDotGrid },
   wallpaperOctagon: { name: 'Octagon Wallpaper', ...themerWallpaperOctagon },
@@ -96,6 +98,7 @@ const templates = {
 const resolutionOptions = {
   wallpaperBlockWave: 'themer-wallpaper-block-wave-size',
   wallpaperBurst: 'themer-wallpaper-burst-size',
+  wallpaperCircuits: 'themer-wallpaper-circuits-size',
   wallpaperDiamonds: 'themer-wallpaper-diamonds-size',
   wallpaperDotGrid: 'themer-wallpaper-dot-grid-size',
   wallpaperOctagon: 'themer-wallpaper-octagon-size',
