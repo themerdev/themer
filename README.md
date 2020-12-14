@@ -287,6 +287,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [@themer/css](https://github.com/mjswensen/themer/tree/master/cli/packages/css)
 * [@themer/firefox-addon](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-addon)
 * [@themer/firefox-color](https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-color)
+* [@themer/keypirinha](https://github.com/mjswensen/themer/tree/master/cli/packages/keypirinha)
 * [@themer/prism](https://github.com/mjswensen/themer/tree/master/cli/packages/prism)
 * [@themer/sketch-palettes](https://github.com/mjswensen/themer/tree/master/cli/packages/sketch-palettes)
 * [@themer/slack](https://github.com/mjswensen/themer/tree/master/cli/packages/slack)
