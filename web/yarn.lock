@@ -1720,6 +1720,11 @@
   dependencies:
     color "^3.0.0"
 
+"@themer/keypirinha@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themer/keypirinha/-/keypirinha-1.0.0.tgz#a5f88ff7ccaa82aee1f49a4653c1db36f726a040"
+  integrity sha512-qOTCO/gfcrYP+cxPaRChDP87WavuKKk0sSgZK0/7diCe0bJT8XMAXlmulqAsHuW1tzi3shHu5C9MSAu/klrDKQ==
+
 "@themer/kitty@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@themer/kitty/-/kitty-1.0.0.tgz#84951bd7506ef244177a34c8975f7665bd4cd3a2"

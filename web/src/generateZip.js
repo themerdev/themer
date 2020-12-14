@@ -20,6 +20,7 @@ import * as themerGnomeTerminal from 'themer-gnome-terminal';
 import * as themerHyper from '@themer/hyper';
 import * as themerIterm from '@themer/iterm';
 import * as themerJetbrains from 'themer-jetbrains';
+import * as themerKeypirinha from '@themer/keypirinha';
 import * as themerKitty from '@themer/kitty';
 import * as themerKonsole from '@themer/konsole';
 import * as themerPrism from '@themer/prism';
@@ -67,6 +68,7 @@ const templates = {
   hyper: { name: 'Hyper', ...themerHyper },
   iterm: { name: 'iTerm', ...themerIterm },
   jetbrains: { name: 'JetBrains', ...themerJetbrains },
+  keypirinha: { name: 'Keypirinha', ...themerKeypirinha },
   kitty: { name: 'kitty', ...themerKitty },
   konsole: { name: 'Konsole', ...themerKonsole },
   prism: { name: 'prism', ...themerPrism },

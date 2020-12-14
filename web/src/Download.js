@@ -26,6 +26,7 @@ export default () => {
   const [hyper, setHyper] = useState(false);
   const [iterm, setIterm] = useState(false);
   const [jetbrains, setJetbrains] = useState(false);
+  const [keypirinha, setKeypirinha] = useState(false);
   const [kitty, setKitty] = useState(false);
   const [konsole, setKonsole] = useState(false);
   const [prism, setPrism] = useState(false);
@@ -77,6 +78,7 @@ export default () => {
       hyper,
       iterm,
       jetbrains,
+      keypirinha,
       kitty,
       konsole,
       prism,
@@ -363,6 +365,12 @@ export default () => {
             value={ firefox }
             onChange={ () => setFirefox(!firefox) }
             label="Firefox"
+            accentSelected
+          />
+          <Checkbox
+            value={ keypirinha }
+            onChange={ () => setKeypirinha(!keypirinha) }
+            label="Keypirinha"
             accentSelected
           />
           <Checkbox

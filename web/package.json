@@ -37,6 +37,7 @@
     "@themer/firefox-color": "^1.0.1",
     "@themer/hyper": "^3.1.1",
     "@themer/iterm": "^2.1.0",
+    "@themer/keypirinha": "^1.0.0",
     "@themer/kitty": "^1.0.0",
     "@themer/konsole": "^1.0.0",
     "@themer/prism": "^1.1.0",
