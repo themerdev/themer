@@ -202,24 +202,26 @@ themer -c path/to/my/colors.js ...
 
 To help you choose colors for your own color set, this is approximately how most `themer` templates will utilize your colors:
 
-| Color Key | Typical Usage |
-| --------- | ------------- |
-| `accent0` | error, VCS deletion |
-| `accent1` | syntax |
-| `accent2` | warning, VCS modification |
-| `accent3` | success, VCS addition |
-| `accent4` | syntax |
-| `accent5` | syntax |
-| `accent6` | syntax, caret/cursor |
-| `accent7` | syntax, special |
-| `shade0` | background color |
-| `shade1` | UI |
-| `shade2` | UI, text selection |
-| `shade3` | UI, code comments |
-| `shade4` | UI |
-| `shade5` | UI |
-| `shade6` | foreground text |
-| `shade7` | foreground text |
+| Color Key | Typical Usage | Conventional Color* |
+| --------- | ------------- | ------------------- |
+| `accent0` | error, VCS deletion | Red |
+| `accent1` | syntax | Orange |
+| `accent2` | warning, VCS modification | Yellow |
+| `accent3` | success, VCS addition | Green |
+| `accent4` | syntax | Cyan |
+| `accent5` | syntax | Blue |
+| `accent6` | syntax, caret/cursor | |
+| `accent7` | syntax, special | Magenta |
+| `shade0` | background color | |
+| `shade1` | UI | |
+| `shade2` | UI, text selection | |
+| `shade3` | UI, code comments | |
+| `shade4` | UI | |
+| `shade5` | UI | |
+| `shade6` | foreground text | |
+| `shade7` | foreground text | |
+
+_*Conventional color is suggested for consistency with ANSI color names in terminal themes, but is not a hard requirement._
 
 See [`themer`'s Web UI](https://themer.dev) for a more visual representation of the color mappings.
 

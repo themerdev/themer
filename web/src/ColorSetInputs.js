@@ -61,14 +61,14 @@ export default () => {
                 window.__ssa__log('change calculate intermediary shades', { value, set: activeColorSet });
               } }
             />
-            <ColorInput className={ styles.accent0 } colorKey="accent0" help="error, vcs deletion" />
+            <ColorInput className={ styles.accent0 } colorKey="accent0" help="error, vcs deletion, ANSI red" />
             <ColorInput className={ styles.accent1 } colorKey="accent1" help="syntax" />
-            <ColorInput className={ styles.accent2 } colorKey="accent2" help="warning, vcs modification" />
-            <ColorInput className={ styles.accent3 } colorKey="accent3" help="success, vcs addition" />
-            <ColorInput className={ styles.accent4 } colorKey="accent4" help="syntax" />
-            <ColorInput className={ styles.accent5 } colorKey="accent5" help="syntax" />
+            <ColorInput className={ styles.accent2 } colorKey="accent2" help="warning, vcs modification, ANSI yellow" />
+            <ColorInput className={ styles.accent3 } colorKey="accent3" help="success, vcs addition, ANSI green" />
+            <ColorInput className={ styles.accent4 } colorKey="accent4" help="syntax, ANSI cyan" />
+            <ColorInput className={ styles.accent5 } colorKey="accent5" help="syntax, ANSI blue" />
             <ColorInput className={ styles.accent6 } colorKey="accent6" help="syntax, caret/cursor" />
-            <ColorInput className={ styles.accent7 } colorKey="accent7" help="syntax, special" />
+            <ColorInput className={ styles.accent7 } colorKey="accent7" help="syntax, special, ANSI magenta" />
           </div>
         </>
       ) }
