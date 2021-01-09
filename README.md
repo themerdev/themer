@@ -305,6 +305,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 * [~dtkerr/themer-i3](https://www.npmjs.com/package/themer-i3)
 * [~dtkerr/themer-m4](https://www.npmjs.com/package/themer-m4)
 * [~jtroyer/themer-mattermost](https://www.npmjs.com/package/themer-mattermost)
+* [~lafleurdeboum/themer-powerline-rs](https://www.npmjs.com/package/themer-powerline-rs)
 * [~rubenverg/themer-windows-terminal](https://www.npmjs.com/package/themer-windows-terminal)
 * [~tomselvi/themer-jetbrains](https://www.npmjs.com/package/themer-jetbrains)
 * [~tomselvi/themer-mintty](https://www.npmjs.com/package/themer-mintty)
