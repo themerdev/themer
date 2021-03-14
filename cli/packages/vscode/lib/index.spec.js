@@ -61,13 +61,7 @@ describe("render function", () => {
     );
     expect(themeFiles.length).toBe(2);
     themeFiles.forEach(themeFile => {
-      const contents = themeFile.contents.toString("utf8");
-      const keys = [...contents.matchAll(/^\s{4}"(.+?)"/gm)]
-        .map(match => match[1])
-        .sort((a, b) => a < b ? -1 : 1);
-      const uniqKeys = [...(new Set(keys))];
-      expect(keys).toEqual(uniqKeys);
-      expect(contents).toMatchSnapshot();
+      expect(themeFile.contents.toString("utf8")).toMatchSnapshot();
     });
   });
 });
