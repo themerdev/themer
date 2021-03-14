@@ -210,20 +210,46 @@ const renderThemeFiles = colorSets =>
             name: `Themer ${getHumanTheme(colorSet.theme)}`,
             type: colorSet.theme,
             colors: {
+              // See this page for a reference of available theme colors:
+              // https://code.visualstudio.com/api/references/theme-color
+
               // Base colors
               focusBorder: accent6,
               foreground: shade7,
               "widget.shadow": shadow,
               "selection.background": shade2,
+              descriptionForeground: shade6,
               errorForeground: accent0,
+              "icon.foreground": shade6,
+              "sash.hoverBorder": accent5,
+
+              // Window border
+              // Omitted: window.activeBorder
+              // Omitted: window.inactiveBorder
+
+              // Text colors
+              "textBlockQuote.background": shade1,
+              "textBlockQuote.border": shade1,
+              "textCodeBlock.background": shade0,
+              "textLink.activeForeground": accent4,
+              "textLink.foreground": accent5,
+              "textPreformat.foreground": accent1,
+              "textSeparator.foreground": shade4,
 
               // Button control
               "button.background": accent5,
               "button.foreground": shade0,
               "button.hoverBackground": accent4,
+              "button.secondaryForeground": shade0,
+              "button.secondaryBackground": shade6,
+              "button.secondaryHoverBackground": shade5,
+              "checkbox.background": accent5,
+              "checkbox.foreground": shade0,
+              "checkbox.border": shade1,
 
               // Dropdown control
               "dropdown.background": shade1,
+              "dropdown.listBackground": shade1,
               "dropdown.border": shade1,
               "dropdown.foreground": shade6,
 
@@ -232,12 +258,17 @@ const renderThemeFiles = colorSets =>
               "input.border": shade1,
               "input.foreground": shade6,
               "input.placeholderForeground": shade2,
+              "inputOption.activeBackground": shade2,
               "inputOption.activeBorder": accent4,
+              "inputOption.activeForeground": shade7,
               "inputValidation.errorBackground": shade1,
+              "inputValidation.errorForeground": accent0,
               "inputValidation.errorBorder": accent0,
               "inputValidation.infoBackground": shade1,
+              "inputValidation.infoForeground": accent5,
               "inputValidation.infoBorder": accent5,
               "inputValidation.warningBackground": shade1,
+              "inputValidation.warningForeground": accent1,
               "inputValidation.warningBorder": accent1,
 
               // Scroll bar control
@@ -254,85 +285,146 @@ const renderThemeFiles = colorSets =>
               "progressBar.background": accent3,
 
               // Lists and trees
-              "list.activeSelectionBackground": `${accent3}7f`,
-              "list.activeSelectionForeground": shade0,
-              "list.dropBackground": shade3,
-              "list.focusBackground": shade3,
+              "list.activeSelectionBackground": `${accent6}33`,
+              "list.activeSelectionForeground": shade7,
+              "list.dropBackground": shade1,
+              "list.focusBackground": `${shade2}33`,
+              "list.focusForeground": shade7,
               "list.highlightForeground": accent2,
-              "list.hoverBackground": shade1,
-              "list.inactiveSelectionBackground": shade1,
-              "list.inactiveSelectionForeground": shade7,
-              "list.hoverForeground": shade5,
-              "list.focusForeground": shade0,
+              "list.hoverBackground": `${shade1}33`,
+              "list.hoverForeground": shade7,
+              "list.inactiveSelectionBackground": `${shade2}3f`,
+              "list.inactiveSelectionForeground": shade6,
+              "list.inactiveFocusBackground": `${shade1}3f`,
               "list.invalidItemForeground": accent0,
               "list.errorForeground": accent0,
               "list.warningForeground": accent2,
               "listFilterWidget.background": shade1,
               "listFilterWidget.outline": accent5,
               "listFilterWidget.noMatchesOutline": accent0,
+              "list.filterMatchBackground": `${accent2}33`,
+              "list.filterMatchBorder": `${accent2}33`,
               "tree.indentGuidesStroke": shade1,
+              "list.deemphasizedForeground": shade4,
 
               // Activity bar
               "activityBar.background": shade0,
-              "activityBar.dropBackground": shade1,
+              "activityBar.dropBorder": accent5,
               "activityBar.foreground": shade5,
+              "activityBar.inactiveForeground": shade4,
               "activityBar.border": shade0,
               "activityBarBadge.background": accent6,
               "activityBarBadge.foreground": shade0,
+              "activityBar.activeBorder": shade6,
+              "activityBar.activeBackground": `${shade1}33`,
+              "activityBar.activeFocusBorder": accent6,
 
               // Side bar
               "sideBar.background": shade0,
               "sideBar.foreground": shade6,
               "sideBar.border": shade1,
+              "sideBar.dropBackground": `${shade1}3f`,
               "sideBarTitle.foreground": shade5,
               "sideBarSectionHeader.background": shade2,
               "sideBarSectionHeader.foreground": shade6,
+              "sideBarSectionHeader.border": shade0,
+
+              // Minimap
+              "minimap.findMatchHighlight": accent2,
+              "minimap.selectionHighlight": `${accent5}80`,
+              "minimap.errorHighlight": `${accent0}80`,
+              "minimap.warningHighlight": `${accent1}80`,
+              "minimap.background": shade0,
+              "minimapSlider.background": `${shade1}33`,
+              "minimapSlider.hoverBackground": `${shade2}33`,
+              "minimapSlider.activeBackground": `${shade3}33`,
+              "minimapGutter.addedBackground": `${accent3}80`,
+              "minimapGutter.modifiedBackground": `${accent2}80`,
+              "minimapGutter.deletedBackground": `${accent0}80`,
 
               // Editor groups & tabs
-              "editorPane.background": shade0,
-              "editorGroup.emptyBackground": shade0,
               "editorGroup.border": shade1,
-              "editorGroup.focusedEmptyBorder": shade1,
               "editorGroup.dropBackground": `${shade2}7f`,
               "editorGroupHeader.noTabsBackground": shade0,
               "editorGroupHeader.tabsBackground": shade0,
               "editorGroupHeader.tabsBorder": shade0,
+              "editorGroupHeader.border": shade0,
+              "editorGroup.emptyBackground": shade0,
+              "editorGroup.focusedEmptyBorder": shade1,
               "tab.activeBackground": shade0,
+              "tab.unfocusedActiveBackground": shade0,
               "tab.activeForeground": shade6,
               "tab.border": shade0,
+              // Omitted: tab.activeBorder
+              // Omitted: tab.unfocusedActiveBorder
+              // Omitted: tab.activeBorderTop
+              // Omitted: tab.unfocusedActiveBorderTop
+              "tab.lastPinnedBorder": accent7,
               "tab.inactiveBackground": shade1,
+              "tab.unfocusedInactiveBackground": shade1,
               "tab.inactiveForeground": shade3,
               "tab.unfocusedActiveForeground": shade3,
               "tab.unfocusedInactiveForeground": shade2,
+              "tab.hoverBackground": `${shade1}80`,
+              "tab.unfocusedHoverBackground": `${shade1}80`,
+              "tab.hoverForeground": shade5,
+              "tab.unfocusedHoverForeground": shade4,
+              // Omitted: tab.hoverBorder
+              // Omitted: tab.unfocusedHoverBorder
+              "tab.activeModifiedBorder": accent2,
+              "tab.inactiveModifiedBorder": accent2,
+              "tab.unfocusedActiveModifiedBorder": accent2,
+              "tab.unfocusedInactiveModifiedBorder": accent2,
+              "editorPane.background": shade0,
 
               // Editor colors
               "editor.background": shade0,
               "editor.foreground": shade7,
               "editorLineNumber.foreground": shade2,
+              "editorLineNumber.activeForeground": shade4,
+              "editorCursor.background": shade0,
               "editorCursor.foreground": accent6,
               "editor.selectionBackground": `${accent5}33`,
-              "editor.selectionHighlightBackground": shade1,
+              "editor.selectionForeground": shade7,
               "editor.inactiveSelectionBackground": `${accent5}33`,
-              "editor.wordHighlightBackground": `${accent6}7f`,
-              "editor.wordHighlightStrongBackground": `${accent7}7f`,
-              "editor.findMatchBackground": `${accent2}7f`,
-              "editor.findMatchHighlightBackground": `${accent2}3f`,
+              "editor.selectionHighlightBackground": shade1,
+              // Omitted: editor.selectionHighlightBorder
+              "editor.wordHighlightBackground": `${accent6}33`,
+              // Omitted: editor.wordHighlightBorder
+              "editor.wordHighlightStrongBackground": `${accent7}33`,
+              // Omitted: editor.wordHighlightStrongBorder
+              "editor.findMatchBackground": `${accent2}66`,
+              "editor.findMatchHighlightBackground": `${accent2}33`,
               "editor.findRangeHighlightBackground": shade1,
-              "editor.hoverHighlightBackground": shade2,
+              // Omitted: editor.findMatchBorder
+              // Omitted: editor.findMatchHighlightBorder
+              // Omitted: editor.findRangeHighlightBorder
+              // Omitted: searchEditor.findMatchBackground
+              // Omitted: searchEditor.findMatchBorder
+              // Omitted: searchEditor.textInputBorder
+              "editor.hoverHighlightBackground": `${shade2}7f`,
               "editor.lineHighlightBackground": shade0,
               "editor.lineHighlightBorder": shade1,
               "editorLink.activeForeground": accent4,
-              "editor.rangeHighlightBackground": shade1,
+              // Omitted: editor.rangeHighlightBackground
+              "editor.rangeHighlightBorder": `${accent2}7f`,
+              "editor.symbolHighlightBackground": `${accent6}33`,
+              // Omitted: editor.symbolHighlightBorder
               "editorWhitespace.foreground": shade1,
               "editorIndentGuide.background": shade1,
               "editorIndentGuide.activeBackground": shade2,
               "editorRuler.foreground": shade1,
+              // Omitted: editor.linkedEditingBackground
               "editorCodeLens.foreground": shade5,
+              "editorLightBulb.foreground": accent2,
+              "editorLightBulbAutoFix.foreground": accent5,
               "editorBracketMatch.background": shade1,
-              "editorBracketMatch.border": shade1,
+              "editorBracketMatch.border": shade2,
+              "editor.foldBackground": `${shade1}66`,
               "editorOverviewRuler.border": shade1,
               "editorOverviewRuler.findMatchForeground": `${accent2}bf`,
               "editorOverviewRuler.rangeHighlightForeground": `${shade2}bf`,
+              // START HERE.
               "editorOverviewRuler.selectionHighlightForeground": `${shade1}bf`,
               "editorOverviewRuler.wordHighlightForeground": `${shade2}bf`,
               "editorOverviewRuler.wordHighlightStrongForeground": `${shade3}bf`,
@@ -342,47 +434,72 @@ const renderThemeFiles = colorSets =>
               "editorOverviewRuler.errorForeground": `${accent0}7f`,
               "editorOverviewRuler.warningForeground": `${accent1}7f`,
               "editorOverviewRuler.infoForeground": `${accent5}7f`,
+              "editorOverviewRuler.bracketMatchForeground": shade3,
               "editorError.foreground": accent0,
               "editorError.border": shade7,
+              // Omitted: editorError.background
               "editorWarning.foreground": accent1,
               "editorWarning.border": shade6,
+              // Omitted: editorWarning.background
+              "editorInfo.foreground": accent5,
+              "editorInfo.border": shade5,
+              // Omitted: editorInfo.background
+              "editorHint.foreground": accent7,
+              "editorHint.border": shade4,
+              "problemsErrorIcon.foreground": accent0,
+              "problemsWarningIcon.foreground": accent1,
+              "problemsInfoIcon.foreground": accent5,
+              // Omitted: editorUnnecessaryCode.border
+              "editorUnnecessaryCode.opacity": "#0000007f",
               "editorGutter.background": shade0,
               "editorGutter.modifiedBackground": accent2,
               "editorGutter.addedBackground": accent3,
               "editorGutter.deletedBackground": accent0,
+              "editorGutter.commentRangeForeground": shade3,
+              "editorGutter.foldingControlForeground": shade5,
 
               // Diff editor colors
               "diffEditor.insertedTextBackground": `${accent3}20`,
+              // Omitted: diffEditor.insertedTextBorder
               "diffEditor.removedTextBackground": `${accent0}20`,
+              // Omitted: diffEditor.removedTextBorder
+              "diffEditor.border": shade1,
+              "diffEditor.diagonalFill": `${shade1}7f`,
 
               // Editor widget colors
+              "editorWidget.foreground": shade6,
               "editorWidget.background": shade1,
               "editorWidget.border": shade1,
+              "editorWidget.resizeBorder": accent5,
               "editorSuggestWidget.background": shade1,
               "editorSuggestWidget.border": shade1,
               "editorSuggestWidget.foreground": shade6,
               "editorSuggestWidget.highlightForeground": accent7,
               "editorSuggestWidget.selectedBackground": shade2,
+              "editorHoverWidget.foreground": shade6,
               "editorHoverWidget.background": shade1,
               "editorHoverWidget.border": shade1,
+              "editorHoverWidget.statusBarBackground": `${accent5}33`,
               "debugExceptionWidget.background": shade1,
               "debugExceptionWidget.border": shade1,
               "editorMarkerNavigation.background": shade1,
               "editorMarkerNavigationError.background": accent0,
               "editorMarkerNavigationWarning.background": accent1,
+              "editorMarkerNavigationInfo.background": accent5,
 
               // Peek view colors
               "peekView.border": accent7,
-              "peekViewEditor.background": shade1,
-              "peekViewEditorGutter.background": shade1,
+              "peekViewEditor.background": `${shade1}7f`,
+              "peekViewEditorGutter.background": `${shade1}7f`,
               "peekViewEditor.matchHighlightBackground": `${accent2}7f`,
+              // Omitted: peekViewEditor.matchHighlightBorder
               "peekViewResult.background": shade1,
               "peekViewResult.fileForeground": shade6,
               "peekViewResult.lineForeground": shade2,
               "peekViewResult.matchHighlightBackground": accent2,
               "peekViewResult.selectionBackground": shade3,
               "peekViewResult.selectionForeground": shade7,
-              "peekViewTitle.background": shade2,
+              "peekViewTitle.background": shade1,
               "peekViewTitleDescription.foreground": shade5,
               "peekViewTitleLabel.foreground": shade7,
 
@@ -391,9 +508,9 @@ const renderThemeFiles = colorSets =>
               "merge.currentContentBackground": `${accent4}4c`,
               "merge.incomingHeaderBackground": `${accent5}4c`,
               "merge.incomingContentBackground": `${accent5}4c`,
+              "merge.border": shade4,
               "merge.commonContentBackground": `${accent6}4c`,
               "merge.commonHeaderBackground": `${accent6}4c`,
-              "merge.border": shade4,
               "editorOverviewRuler.currentContentForeground": accent4,
               "editorOverviewRuler.incomingContentForeground": accent5,
               "editorOverviewRuler.commonContentForeground": accent6,
@@ -401,24 +518,38 @@ const renderThemeFiles = colorSets =>
               // Panel colors
               "panel.background": shade0,
               "panel.border": shade1,
+              "panel.dropBorder": accent5,
               "panelTitle.activeBorder": shade3,
               "panelTitle.activeForeground": shade6,
               "panelTitle.inactiveForeground": shade4,
+              // Omitted: panelInput.border
+              "panelSection.border": shade1,
+              "panelSection.dropBackground": `${shade1}3f`,
+              "panelSectionHeader.background": shade2,
+              "panelSectionHeader.foreground": shade6,
+              "panelSectionHeader.border": shade0,
+
+              // Preview colors
+              "imagePreview.border": shade1,
 
               // Status bar colors
               "statusBar.background": accent5,
               "statusBar.foreground": shade0,
-              "statusBar.border": `${accent5}7f`,
+              "statusBar.border": shade0,
               "statusBar.debuggingBackground": accent1,
               "statusBar.debuggingForeground": shade0,
-              "statusBar.debuggingBorder": `${accent1}7f`,
+              "statusBar.debuggingBorder": shade0,
               "statusBar.noFolderBackground": accent6,
               "statusBar.noFolderForeground": shade0,
-              "statusBar.noFolderBorder": `${accent6}7f`,
+              "statusBar.noFolderBorder": shade0,
               "statusBarItem.activeBackground": accent4,
               "statusBarItem.hoverBackground": accent3,
               "statusBarItem.prominentBackground": accent4,
               "statusBarItem.prominentHoverBackground": accent3,
+              "statusBarItem.remoteBackground": accent4,
+              "statusBarItem.remoteForeground": shade0,
+              "statusBarItem.errorBackground": accent0,
+              "statusBarItem.errorForeground": shade0,
 
               // Title bar colors
 
@@ -426,31 +557,50 @@ const renderThemeFiles = colorSets =>
               "titleBar.activeForeground": shade5,
               "titleBar.inactiveBackground": shade0,
               "titleBar.inactiveForeground": shade3,
+              // Omitted: titleBar.border
+
+              // Menu bar colors
+              "menubar.selectionForeground": shade7,
+              "menubar.selectionBackground": shade1,
+              // Omitted: menubar.selectionBorder
+              "menu.foreground": shade6,
+              "menu.background": shade0,
+              "menu.selectionForeground": shade7,
+              "menu.selectionBackground": shade1,
+              // Omitted: menu.selectionBorder
+              "menu.separatorBackground": shade2,
+              // Omitted: menu.border
 
               // Notification dialog colors
-              "notification.background": shade1,
-              "notification.foreground": shade7,
-              "notification.buttonBackground": accent5,
-              "notification.buttonHoverBackground": accent4,
-              "notification.buttonForeground": shade0,
-              "notification.infoBackground": accent5,
-              "notification.infoForeground": shade0,
-              "notification.warningBackground": accent1,
-              "notification.warningForeground": shade0,
-              "notification.errorBackground": accent0,
-              "notification.errorForeground": shade0,
+              // Omitted: notificationCenter.border
+              "notificationCenterHeader.foreground": shade6,
+              "notificationCenterHeader.background": shade2,
+              "notificationToast.border": shade3,
+              "notifications.foreground": shade7,
+              "notifications.background": shade1,
+              "notifications.border": shade3,
+              "notificationLink.foreground": accent5,
+              "notificationsErrorIcon.foreground": accent0,
+              "notificationsWarningIcon.foreground": accent1,
+              "notificationsInfoIcon.foreground": accent5,
 
               // Extensions
               "extensionButton.prominentForeground": shade0,
               "extensionButton.prominentBackground": accent5,
               "extensionButton.prominentHoverBackground": accent4,
+              "extensionBadge.remoteBackground": accent7,
+              "extensionBadge.remoteForeground": shade0,
 
               // Quick picker
-              "pickerGroup.border": shade5,
-              "pickerGroup.foreground": shade7,
+              "pickerGroup.border": shade2,
+              "pickerGroup.foreground": shade4,
+              "quickInput.background": shade1,
+              "quickInput.foreground": shade7,
+              "quickInputTitle.background": shade2,
 
               // Integrated terminal colors
               "terminal.background": shade0,
+              // Omitted: terminal.border
               "terminal.foreground": shade6,
               "terminal.ansiBlack": shade0,
               "terminal.ansiBlue": accent5,
@@ -472,20 +622,203 @@ const renderThemeFiles = colorSets =>
               "terminalCursor.background": shade1,
               "terminalCursor.foreground": shade5,
 
-              // Debug
+              // Debug colors
               "debugToolBar.background": shade1,
+              "debugToolBar.border": shade2,
+              "editor.stackFrameHighlightBackground": `${accent4}3f`,
+              "editor.focusedStackFrameHighlightBackground": `${accent3}3f`,
+              "debugView.exceptionLabelForeground": accent2,
+              "debugView.exceptionLabelBackground": shade1,
+              "debugView.stateLabelForeground": accent5,
+              "debugView.stateLabelBackground": shade1,
+              "debugView.valueChangedHighlight": `${accent2}33`,
+              "debugTokenExpression.name": accent5,
+              "debugTokenExpression.value": shade7,
+              "debugTokenExpression.string": accent3,
+              "debugTokenExpression.boolean": accent6,
+              "debugTokenExpression.number": accent7,
+              "debugTokenExpression.error": accent0,
+
+              // Testing view colors
+              "testing.iconFailed": accent0,
+              "testing.iconErrored": accent0,
+              "testing.iconPassed": accent3,
+              "testing.runAction": accent5,
+              "testing.iconQueued": accent4,
+              "testing.iconUnset": accent7,
+              "testing.iconSkipped": accent2,
+              "testing.peekBorder": shade3,
+              "testing.message.error.decorationForeground": accent0,
+              "testing.message.error.lineBackground": accent0,
+              "testing.message.warning.decorationForeground": accent1,
+              "testing.message.warning.lineBackground": accent1,
+              "testing.message.info.decorationForeground": accent5,
+              "testing.message.info.lineBackground": accent5,
+              "testing.message.hint.decorationForeground": accent6,
+              "testing.message.hint.lineBackground": accent6,
 
               // Welcome page
+              "welcomePage.background": shade0,
               "welcomePage.buttonBackground": shade1,
               "welcomePage.buttonHoverBackground": shade2,
+              "welcomePage.progress.background": accent5,
+              "welcomePage.progress.foreground": shade0,
               "walkThrough.embeddedEditorBackground": shade0,
 
+              // Source control
+              "scm.providerBorder": shade2,
+              
               // Git
+              "gitDecoration.addedResourceForeground": accent3,
               "gitDecoration.modifiedResourceForeground": accent2,
+              "gitDecoration.stageModifiedResourceForeground": accent4,
               "gitDecoration.deletedResourceForeground": accent0,
+              "gitDecoration.stageDeletedResourceForeground": accent0,
               "gitDecoration.untrackedResourceForeground": accent6,
               "gitDecoration.ignoredResourceForeground": shade3,
-              "gitDecoration.conflictingResourceForeground": accent4
+              "gitDecoration.conflictingResourceForeground": accent4,
+              "gitDecoration.submoduleResourceForeground": accent7,
+
+              // Settings editor
+              "settings.headerForeground": shade7,
+              "settings.modifiedItemIndicator": accent4,
+              "settings.dropdownBackground": shade1,
+              "settings.dropdownForeground": shade6,
+              // Omitted: settings.dropdownBorder
+              "settings.dropdownListBorder": shade2,
+              "settings.checkboxBackground": accent5,
+              "settings.checkboxForeground": shade0,
+              "settings.checkboxBorder": accent5,
+              "settings.textInputBackground": shade1,
+              "settings.textInputForeground": shade6,
+              // Omitted: settings.textInputBorder
+              "settings.numberInputBackground": shade1,
+              "settings.numberInputForeground": shade6,
+              // Omitted: settings.numberInputBorder
+              "settings.focusedRowBackground": shade0,
+              "notebook.focusedRowBorder": accent6,
+              "notebook.rowHoverBackground": `${shade1}7f`,
+
+              // Breadcrumbs
+              "breadcrumb.foreground": shade5,
+              "breadcrumb.background": shade0,
+              "breadcrumb.focusForeground": shade6,
+              "breadcrumb.activeSelectionForeground": shade7,
+              "breadcrumbPicker.background": shade0,
+
+              // Snippets
+              "editor.snippetTabstopHighlightBackground": `${shade1}7f`,
+              // Omitted: editor.snippetTabstopHighlightBorder
+              "editor.snippetFinalTabstopHighlightBackground": `${shade2}7f`,
+              // Omitted: editor.snippetFinalTabstopHighlightBorder
+
+              // Symbol icons
+              "symbolIcon.arrayForeground": accent7,
+              "symbolIcon.booleanForeground": accent6,
+              "symbolIcon.classForeground": accent5,
+              "symbolIcon.colorForeground": accent4,
+              "symbolIcon.constantForeground": accent3,
+              "symbolIcon.constructorForeground": accent6,
+              "symbolIcon.enumeratorForeground": accent4,
+              "symbolIcon.enumeratorMemberForeground": accent5,
+              "symbolIcon.eventForeground": accent1,
+              "symbolIcon.fieldForeground": accent0,
+              "symbolIcon.fileForeground": shade6,
+              "symbolIcon.folderForeground": shade5,
+              "symbolIcon.functionForeground": accent6,
+              "symbolIcon.interfaceForeground": accent0,
+              "symbolIcon.keyForeground": accent2,
+              "symbolIcon.keywordForeground": accent5,
+              "symbolIcon.methodForeground": accent4,
+              "symbolIcon.moduleForeground": accent4,
+              "symbolIcon.namespaceForeground": accent5,
+              "symbolIcon.nullForeground": accent0,
+              "symbolIcon.numberForeground": accent1,
+              "symbolIcon.objectForeground": shade7,
+              "symbolIcon.operatorForeground": accent0,
+              "symbolIcon.packageForeground": accent1,
+              "symbolIcon.propertyForeground": accent4,
+              "symbolIcon.referenceForeground": accent1,
+              "symbolIcon.snippetForeground": shade5,
+              "symbolIcon.stringForeground": accent3,
+              "symbolIcon.structForeground": accent5,
+              "symbolIcon.textForeground": shade7,
+              "symbolIcon.typeParameterForeground": accent5,
+              "symbolIcon.unitForeground": accent2,
+              "symbolIcon.variableForeground": accent1,
+
+              // Debug icons
+              "debugIcon.breakpointForeground": accent0,
+              "debugIcon.breakpointDisabledForeground": shade4,
+              "debugIcon.breakpointUnverifiedForeground": shade5,
+              "debugIcon.breakpointCurrentStackframeForeground": accent3,
+              "debugIcon.breakpointStackframeForeground": accent2,
+              "debugIcon.startForeground": accent3,
+              "debugIcon.pauseForeground": accent5,
+              "debugIcon.stopForeground": accent0,
+              "debugIcon.disconnectForeground": accent1,
+              "debugIcon.restartForeground": accent7,
+              "debugIcon.stepOverForeground": shade7,
+              "debugIcon.stepIntoForeground": shade7,
+              "debugIcon.stepOutForeground": shade7,
+              "debugIcon.continueForeground": accent3,
+              "debugIcon.stepBackForeground": shade7,
+              "debugConsole.infoForeground": accent5,
+              "debugConsole.warningForeground": accent1,
+              "debugConsole.errorForeground": accent0,
+              "debugConsole.sourceForeground": accent6,
+              "debugConsoleInputIcon.foreground": shade4,
+
+              // Notebook
+              "notebook.cellBorderColor": `${shade1}3f`,
+              "notebook.focusedEditorBorder": shade1,
+              "notebookStatusSuccessIcon.foreground": accent3,
+              "notebookStatusErrorIcon.foreground": accent0,
+              "notebookStatusRunningIcon.foreground": accent5,
+              "notebook.outputContainerBackgroundColor": shade0,
+              "notebook.cellToolbarSeparator": `${shade1}3f`,
+              "notebook.focusedCellBackground": `${shade1}7f`,
+              "notebook.cellHoverBackground": `${shade1}3f`,
+              "notebook.focusedCellBorder": accent6,
+              "notebook.focusedCellShadow": '#0000003f',
+              "notebook.selectedCellBorder": shade4,
+              "notebook.cellStatusBarItemHoverBackground": `${shade1}3f`,
+              "notebook.cellInsertionIndicator": accent3,
+              "notebookScrollbarSlider.background": `${shade3}7f`,
+              "notebookScrollbarSlider.hoverBackground": `${shade4}7f`,
+              "notebookScrollbarSlider.activeBackground": `${shade5}7f`,
+              "notebook.symbolHighlightBackground": `${accent6}3f`,
+              // Duplicate: notebook.rowHoverBackground
+              // Duplicate: notebook.focusedRowBorder
+              "notebook.inactiveFocusedCellBorder": shade5,
+
+              // Chart
+              "charts.foreground": shade6,
+              "charts.lines": shade3,
+              "charts.red": accent0,
+              "charts.blue": accent5,
+              "charts.yellow": accent2,
+              "charts.orange": accent1,
+              "charts.green": accent3,
+              "charts.purple": accent6,
+
+              // Testing
+              "testing.iconFailed": accent1,
+              "testing.iconErrored": accent0,
+              "testing.iconPassed": accent3,
+              "testing.runAction": accent5,
+              "testing.iconQueued": accent4,
+              "testing.iconUnset": shade5,
+              "testing.iconSkipped": shade4,
+              "testing.peekBorder": shade3,
+              "testing.message.error.decorationForeground": accent0,
+              "testing.message.error.lineBackground": `${accent0}3f`,
+              "testing.message.warning.decorationForeground": accent1,
+              "testing.message.warning.lineBackground": `${accent1}3f`,
+              "testing.message.info.decorationForeground": accent5,
+              "testing.message.info.lineBackground": `${accent5}3f`,
+              "testing.message.hint.decorationForeground": accent7,
+              "testing.message.hint.lineBackground": `${accent7}3f`,
             },
             tokenColors: [
               {

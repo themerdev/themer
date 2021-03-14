@@ -54,14 +54,20 @@ describe("render function", () => {
     expect(file.contents.toString("utf8")).toMatchSnapshot();
   });
 
-  it("should properly render theme files", async () => {
+  it("should properly render theme files with no duplicate keys", async () => {
     const files = await promisedFiles;
     const themeFiles = files.filter(file =>
       /color-theme\.json/.test(file.name)
     );
     expect(themeFiles.length).toBe(2);
     themeFiles.forEach(themeFile => {
-      expect(themeFile.contents.toString("utf8")).toMatchSnapshot();
+      const contents = themeFile.contents.toString("utf8");
+      const keys = [...contents.matchAll(/^\s{4}"(.+?)"/gm)]
+        .map(match => match[1])
+        .sort((a, b) => a < b ? -1 : 1);
+      const uniqKeys = [...(new Set(keys))];
+      expect(keys).toEqual(uniqKeys);
+      expect(contents).toMatchSnapshot();
     });
   });
 });

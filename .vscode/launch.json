@@ -5,6 +5,17 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Debug current test",
+      "cwd": "${workspaceFolder}/cli",
+      "program": "node_modules/.bin/jest",
+      "args": [
+        "--runInBand",
+        "${relativeFile}"
+      ],
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "Run",
