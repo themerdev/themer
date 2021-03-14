@@ -1797,10 +1797,10 @@
   dependencies:
     color "^3.1.2"
 
-"@themer/vscode@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@themer/vscode/-/vscode-2.2.1.tgz#95921b4c685bb18642b61092ed27ca7dfe98523d"
-  integrity sha512-D2HluW5bCcstaDZ30z4UAUanxFdxxE1O3knETY2IzSygpe6XjgHAJvNB6VZFTXECogocDNre9IvgZm65fqG29w==
+"@themer/vscode@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@themer/vscode/-/vscode-2.3.0.tgz#c261a6d05087da28e12b3f3d321872cc3662f730"
+  integrity sha512-il+TJRzXz02eOJYLfc071Bg6bLO9UL/HvipzAOmbCAZfxBPycOn9G1/QDWkEBekSz7P9LWNxTCS+u5HTHPzxeQ==
 
 "@themer/wallpaper-block-wave@^4.0.1":
   version "4.0.1"
