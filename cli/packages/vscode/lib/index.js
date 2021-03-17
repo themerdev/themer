@@ -288,7 +288,7 @@ const renderThemeFiles = colorSets =>
               "list.activeSelectionBackground": `${accent6}33`,
               "list.activeSelectionForeground": shade7,
               "list.dropBackground": shade1,
-              "list.focusBackground": `${shade2}33`,
+              "list.focusBackground": `${shade3}3f`,
               "list.focusForeground": shade7,
               "list.highlightForeground": accent2,
               "list.hoverBackground": `${shade1}33`,
@@ -393,7 +393,7 @@ const renderThemeFiles = colorSets =>
               // Omitted: editor.wordHighlightBorder
               "editor.wordHighlightStrongBackground": `${accent7}33`,
               // Omitted: editor.wordHighlightStrongBorder
-              "editor.findMatchBackground": `${accent2}66`,
+              "editor.findMatchBackground": `${accent2}3f`,
               "editor.findMatchHighlightBackground": `${accent2}33`,
               "editor.findRangeHighlightBackground": shade1,
               // Omitted: editor.findMatchBorder
@@ -406,8 +406,8 @@ const renderThemeFiles = colorSets =>
               "editor.lineHighlightBackground": shade0,
               "editor.lineHighlightBorder": shade1,
               "editorLink.activeForeground": accent4,
-              // Omitted: editor.rangeHighlightBackground
-              "editor.rangeHighlightBorder": `${accent2}7f`,
+              "editor.rangeHighlightBackground": `${accent2}33`,
+              // Omitted: editor.rangeHighlightBorder
               "editor.symbolHighlightBackground": `${accent6}33`,
               // Omitted: editor.symbolHighlightBorder
               "editorWhitespace.foreground": shade1,
