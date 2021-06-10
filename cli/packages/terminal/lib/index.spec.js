@@ -13,9 +13,12 @@ describe('Terminal.app theme generator', () => {
     expect(files.some(file => /light/.test(file.name))).toBe(true);
   });
 
-  it('should render well-formed files without missing values', async () => {
+  it('should render well-formed theme files', async () => {
     const files = await Promise.all(promisedFiles);
-    files.forEach(file => expect(file.contents).toBeInstanceOf(Buffer));
+    files.forEach(file => {
+      expect(file.contents).toBeInstanceOf(Buffer);
+      expect(file.contents.toString('utf8')).toMatchSnapshot();
+    });
     expect(files.some(file => /undefined/.test(file.contents.toString('utf8')))).toBe(false);
   });
 
