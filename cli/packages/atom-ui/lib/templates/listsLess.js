@@ -1,7 +1,7 @@
 module.exports = () => `
 .list-group {
   li {
-    padding-left: @component-padding/2;
+    padding-left: (@component-padding / 2);
 
     &.selected {
       color: @text-color-selected;
@@ -19,7 +19,7 @@ module.exports = () => `
 
 .select-list {
   li {
-    padding: @component-padding/2 @component-padding;
+    padding: (@component-padding / 2) @component-padding;
   }
   .status {
     float: right;
@@ -27,7 +27,7 @@ module.exports = () => `
 }
 
 .select-list.popover-list {
-  @popover-list-padding: @component-padding/2;
+  @popover-list-padding: (@component-padding / 2);
 
   padding: @popover-list-padding;
   border-radius: @component-border-radius;

@@ -3,7 +3,6 @@ const { render, renderInstructions } = require('./index'),
 
 describe('Terminal.app theme generator', () => {
 
-  global.jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000 * 60 * 5;
   const promisedFiles = render(colors, {});
 
   it('should render two files when given a color set with both a light and a dark theme', async () => {

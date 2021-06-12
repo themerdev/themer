@@ -943,7 +943,7 @@ exports[`render should render properly-formatted theme files 4`] = `
 exports[`render should render properly-formatted theme files 5`] = `
 "
 atom-text-editor[mini] {
-  padding-left: @component-padding/2;
+  padding-left: (@component-padding / 2);
   color: @text-color;
   border-radius: @component-border-radius;
   background-color: @input-background-color;
@@ -987,7 +987,7 @@ exports[`render should render properly-formatted theme files 8`] = `
 .key-binding {
   display: inline-block;
   margin-left: 1px;
-  padding: 0 @component-padding/2;
+  padding: 0 (@component-padding / 2);
   line-height: 2;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: .8em;
@@ -1002,7 +1002,7 @@ exports[`render should render properly-formatted theme files 9`] = `
 "
 .list-group {
   li {
-    padding-left: @component-padding/2;
+    padding-left: (@component-padding / 2);
 
     &.selected {
       color: @text-color-selected;
@@ -1020,7 +1020,7 @@ exports[`render should render properly-formatted theme files 9`] = `
 
 .select-list {
   li {
-    padding: @component-padding/2 @component-padding;
+    padding: (@component-padding / 2) @component-padding;
   }
   .status {
     float: right;
@@ -1028,7 +1028,7 @@ exports[`render should render properly-formatted theme files 9`] = `
 }
 
 .select-list.popover-list {
-  @popover-list-padding: @component-padding/2;
+  @popover-list-padding: (@component-padding / 2);
 
   padding: @popover-list-padding;
   border-radius: @component-border-radius;
@@ -1456,7 +1456,7 @@ exports[`render should render properly-formatted theme files 22`] = `
 exports[`render should render properly-formatted theme files 23`] = `
 "
 atom-text-editor[mini] {
-  padding-left: @component-padding/2;
+  padding-left: (@component-padding / 2);
   color: @text-color;
   border-radius: @component-border-radius;
   background-color: @input-background-color;
@@ -1500,7 +1500,7 @@ exports[`render should render properly-formatted theme files 26`] = `
 .key-binding {
   display: inline-block;
   margin-left: 1px;
-  padding: 0 @component-padding/2;
+  padding: 0 (@component-padding / 2);
   line-height: 2;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: .8em;
@@ -1515,7 +1515,7 @@ exports[`render should render properly-formatted theme files 27`] = `
 "
 .list-group {
   li {
-    padding-left: @component-padding/2;
+    padding-left: (@component-padding / 2);
 
     &.selected {
       color: @text-color-selected;
@@ -1533,7 +1533,7 @@ exports[`render should render properly-formatted theme files 27`] = `
 
 .select-list {
   li {
-    padding: @component-padding/2 @component-padding;
+    padding: (@component-padding / 2) @component-padding;
   }
   .status {
     float: right;
@@ -1541,7 +1541,7 @@ exports[`render should render properly-formatted theme files 27`] = `
 }
 
 .select-list.popover-list {
-  @popover-list-padding: @component-padding/2;
+  @popover-list-padding: (@component-padding / 2);
 
   padding: @popover-list-padding;
   border-radius: @component-border-radius;

@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "color-steps": "^1.0.1",
-    "js-yaml": "^3.11.0",
+    "js-yaml": "^4.1.0",
     "minimist": "^1.2.5",
     "onecolor": "^3.0.5"
   },

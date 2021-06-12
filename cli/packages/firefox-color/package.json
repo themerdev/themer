@@ -34,6 +34,6 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "color": "^3.1.2",
-    "json-url": "^2.6.0"
+    "json-url": "^3.0.0"
   }
 }

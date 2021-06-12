@@ -1,6 +1,6 @@
 module.exports = () => `
 atom-text-editor[mini] {
-  padding-left: @component-padding/2;
+  padding-left: (@component-padding / 2);
   color: @text-color;
   border-radius: @component-border-radius;
   background-color: @input-background-color;

@@ -15,7 +15,7 @@
     "prepublishOnly": "cp ../../../LICENSE.md ./"
   },
   "devDependencies": {
-    "less": "^3.8.1"
+    "less": "^4.1.1"
   },
   "peerDependencies": {
     "themer": "^2.1||^3"
