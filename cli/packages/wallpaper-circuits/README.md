@@ -2,7 +2,7 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
-Shown here with [@themer/colors-green-as-a-whistle](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-green-as-a-whistle):
+Shown here with [@themer/colors-green-as-a-whistle](https://github.com/mjswensen/themer/tree/main/cli/packages/colors-green-as-a-whistle):
 
 ![mobile dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@62eb2382e1ecadfc711256d8ed27c83970bdd65e/cli/packages/wallpaper-circuits/assets/themer-wallpaper-circuits-dark-750x1334.png)
 

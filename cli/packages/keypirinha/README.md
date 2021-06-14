@@ -4,7 +4,7 @@ A [Keypirinha](https://keypirinha.com/) template for [themer](https://github.com
 
 ![themer Keypirinha preview](assets/themer-keypirinha-preview.png)
 
-(Generated with [themer's "Lucid" color set](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-lucid) and shown with [themer's "Block Wave" wallpaper template](https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-block-wave))
+(Generated with [themer's "Lucid" color set](https://github.com/mjswensen/themer/tree/main/cli/packages/colors-lucid) and shown with [themer's "Block Wave" wallpaper template](https://github.com/mjswensen/themer/tree/main/cli/packages/wallpaper-block-wave))
 
 ## Installation & usage
 

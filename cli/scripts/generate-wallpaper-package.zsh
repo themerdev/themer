@@ -46,7 +46,7 @@ cat << EOF > $PACKAGE/package.json
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/$DIR#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/$DIR#readme",
   "dependencies": {
     "@themer/utils": "^1.0.0",
     "canvas": "^2.6.1"

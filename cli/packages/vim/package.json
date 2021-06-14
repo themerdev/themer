@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/vim#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/vim#readme",
   "dependencies": {
     "color-convert": "^2.0.1"
   },

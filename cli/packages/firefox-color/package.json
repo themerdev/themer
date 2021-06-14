@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/firefox-color#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/firefox-color#readme",
   "peerDependencies": {
     "themer": "^3"
   },

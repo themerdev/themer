@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/brave#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/brave#readme",
   "dependencies": {
     "@themer/chrome": "^1.2.1"
   },

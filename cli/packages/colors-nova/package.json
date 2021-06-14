@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/colors-nova#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/colors-nova#readme",
   "dependencies": {
     "color": "^3.0.0",
     "nova-colors": "^2.1.5"

@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to themer! All contributions are welcome, and are expected to adhere to [the code of conduct](https://github.com/mjswensen/themer/blob/master/CODE_OF_CONDUCT.md). Below are some guidelines for the most effective ways you can help build themer.
+Thanks for contributing to themer! All contributions are welcome, and are expected to adhere to [the code of conduct](https://github.com/mjswensen/themer/blob/main/CODE_OF_CONDUCT.md). Below are some guidelines for the most effective ways you can help build themer.
 
 * [Log a bug](#log-a-bug)
 * [Request a theme template](#request-a-theme-template)

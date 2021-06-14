@@ -2,7 +2,7 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer).
 
-Shown here with [@themer/colors-solarized](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-solarized):
+Shown here with [@themer/colors-solarized](https://github.com/mjswensen/themer/tree/main/cli/packages/colors-solarized):
 
 ![desktop dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@d8bcb110cd259ee5aa7c7025cfe6f0b214e28554/cli/packages/wallpaper-burst/assets/themer-wallpaper-burst-dark-2880x1800.png)
 

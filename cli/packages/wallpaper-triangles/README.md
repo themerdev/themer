@@ -1,6 +1,6 @@
 # @themer/wallpaper-triangles
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview using [themer's default color set (dark variant)](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default):
+A wallpaper template for [themer](https://github.com/mjswensen/themer). Here's a preview using [themer's default color set (dark variant)](https://github.com/mjswensen/themer/tree/main/cli/packages/colors-default):
 
 ![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@3429c1e8916b7a2917885e3e93a81c969de9cd73/cli/packages/wallpaper-triangles/assets/themer-wallpaper-triangles-dark-2880x1800.png)
 

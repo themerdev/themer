@@ -2,7 +2,7 @@
 
 A wallpaper template for [themer](https://github.com/mjswensen/themer). It uses the popular [trianglify](https://github.com/qrohlf/trianglify) library to generate wallpapers from your color set.
 
-Here's a preview using [themer's default color set (dark variant)](https://github.com/mjswensen/themer/tree/master/cli/packages/colors-default):
+Here's a preview using [themer's default color set (dark variant)](https://github.com/mjswensen/themer/tree/main/cli/packages/colors-default):
 
 ![dark desktop](https://cdn.jsdelivr.net/gh/mjswensen/themer@6b157118bcaa51c3031801a1a213f78db294578b/cli/packages/wallpaper-trianglify/assets/themer-wallpaper-trianglify-dark-2880x1800-0.75-1.png)
 

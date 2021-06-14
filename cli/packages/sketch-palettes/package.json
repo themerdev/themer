@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/sketch-palettes#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/sketch-palettes#readme",
   "devDependencies": {},
   "dependencies": {
     "onecolor": "^3.0.5"

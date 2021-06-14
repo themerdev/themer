@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/mjswensen/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/master/cli/packages/wallpaper-circuits#readme",
+  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/wallpaper-circuits#readme",
   "dependencies": {
     "@themer/utils": "^1.3.0",
     "canvas": "^2.6.1"
