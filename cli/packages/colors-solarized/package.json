@@ -1,6 +1,6 @@
 {
   "name": "@themer/colors-solarized",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A themer color set ported from the popular Solarized themes.",
   "main": "lib/index.js",
   "engines": {
