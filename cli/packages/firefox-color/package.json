@@ -1,6 +1,6 @@
 {
   "name": "@themer/firefox-color",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Firefox Color theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
