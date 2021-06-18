@@ -1,6 +1,6 @@
 {
   "name": "@themer/wallpaper-block-wave",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Wallpaper generator for themer.",
   "main": "lib/index.js",
   "engines": {
