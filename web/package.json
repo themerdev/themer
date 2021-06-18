@@ -81,11 +81,16 @@
     "themer-termite": "1.0.1",
     "themer-tmux": "1.0.4"
   },
+  "devDependencies": {
+    "prettier": "2.3.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write .",
+    "start": "react-scripts start",
+    "test:format": "prettier --check .",
+    "test:unit": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,6 +1,6 @@
-const {version} = require('../../package.json');
+const { version } = require('../../package.json');
 
-module.exports = name =>
+module.exports = (name) =>
   JSON.stringify(
     {
       name: `themer-${name}-ui`,
@@ -13,5 +13,5 @@ module.exports = name =>
       },
     },
     null,
-    2
+    2,
   );

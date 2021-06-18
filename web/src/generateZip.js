@@ -82,15 +82,24 @@ const templates = {
   vimLightline: { name: 'Vim lightline', ...themerVimLightline },
   visualStudio: { name: 'Visual Studio', ...themerVisualStudio },
   vscode: { name: 'VS Code', ...themerVscode },
-  wallpaperBlockWave: { name: 'Block Wave Wallpaper', ...themerWallpaperBlockWave },
+  wallpaperBlockWave: {
+    name: 'Block Wave Wallpaper',
+    ...themerWallpaperBlockWave,
+  },
   wallpaperBurst: { name: 'Burst Wallpaper', ...themerWallpaperBurst },
   wallpaperCircuits: { name: 'Circuits Wallpaper', ...themerWallpaperCircuits },
   wallpaperDiamonds: { name: 'Diamonds Wallpaper', ...themerWallpaperDiamonds },
   wallpaperDotGrid: { name: 'Dot Grid Wallpaper', ...themerWallpaperDotGrid },
   wallpaperOctagon: { name: 'Octagon Wallpaper', ...themerWallpaperOctagon },
   wallpaperShirts: { name: 'Shirts Wallpaper', ...themerWallpaperShirts },
-  wallpaperTriangles: { name: 'Triangles Wallpaper', ...themerWallpaperTriangles },
-  wallpaperTrianglify: { name: 'Trianglify Wallpaper', ...themerWallpaperTrianglify },
+  wallpaperTriangles: {
+    name: 'Triangles Wallpaper',
+    ...themerWallpaperTriangles,
+  },
+  wallpaperTrianglify: {
+    name: 'Trianglify Wallpaper',
+    ...themerWallpaperTrianglify,
+  },
   windowsTerminal: { name: 'Windows Terminal', ...themerWindowsTerminal },
   wox: { name: 'Wox', ...themerWox },
   xcode: { name: 'Xcode', ...themerXcode },
@@ -109,7 +118,7 @@ const resolutionOptions = {
   wallpaperTrianglify: 'themer-wallpaper-trianglify-size',
 };
 
-const instructions = url => `# \`themer\`
+const instructions = (url) => `# \`themer\`
 
 Your theme's unique URL:
 
@@ -124,14 +133,24 @@ If you find \`themer\` useful, here are some ways to support the project:
 
 # Installation instructions`;
 
-const colorsForCli = (cliColors, url) => `// This file can be used with the themer CLI, see https://github.com/mjswensen/themer
+const colorsForCli = (
+  cliColors,
+  url,
+) => `// This file can be used with the themer CLI, see https://github.com/mjswensen/themer
 
 module.exports.colors = ${JSON.stringify(cliColors, null, 2)};
 
 // Your theme's URL: ${url}
 `;
 
-export default async function generateZip(selections, colors, width, height, url, cliColors) {
+export default async function generateZip(
+  selections,
+  colors,
+  width,
+  height,
+  url,
+  cliColors,
+) {
   const zip = new JSZip();
   const preparedColors = prepareColors(colors);
   const selectedKeys = Array.from(Object.entries(selections))
@@ -139,14 +158,16 @@ export default async function generateZip(selections, colors, width, height, url
     .map(([key]) => key);
   const selectedTemplates = sortBy(
     flatten(
-      selectedKeys.map(key => Array.isArray(templates[key]) ? templates[key] : [templates[key]]),
+      selectedKeys.map((key) =>
+        Array.isArray(templates[key]) ? templates[key] : [templates[key]],
+      ),
     ),
-    template => template.name.toLowerCase(),
+    (template) => template.name.toLowerCase(),
   );
   const extraArgs = selectedKeys.reduce(
     (acc, key) => ({
       ...acc,
-      [resolutionOptions[key]]: `${width}x${height}`
+      [resolutionOptions[key]]: `${width}x${height}`,
     }),
     {},
   );

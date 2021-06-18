@@ -13,11 +13,13 @@ const LEAK_FACTOR = 0.25;
 
 const getClampedPoint = (x1, y1, maxX, maxY) => {
   const distance = Math.sqrt(Math.pow(maxX - x1, 2) + Math.pow(maxY - y1, 2));
-  const x2 = x1 + MAX_DISTANCE / distance * (maxX - x1);
-  const y2 = y1 + MAX_DISTANCE / distance * (maxY - y1);
-  const croppedDistance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  const x2 = x1 + (MAX_DISTANCE / distance) * (maxX - x1);
+  const y2 = y1 + (MAX_DISTANCE / distance) * (maxY - y1);
+  const croppedDistance = Math.sqrt(
+    Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2),
+  );
   return croppedDistance > distance ? [maxX, maxY] : [x2, y2];
-}
+};
 
 const renderImage = (size, colorSet) => {
   const canvas = createCanvas(size.w, size.h);
@@ -37,20 +39,24 @@ const renderImage = (size, colorSet) => {
     0,
     focalPoint.x,
     focalPoint.y,
-    Math.min(size.w, size.h) / 2
+    Math.min(size.w, size.h) / 2,
   );
   gradient.addColorStop(
     0,
-    Color(colorSet.name === 'dark' ? colorSet.colors.shade1 : colorSet.colors.shade0)
+    Color(
+      colorSet.name === 'dark'
+        ? colorSet.colors.shade1
+        : colorSet.colors.shade0,
+    )
       .alpha(0.25)
       .rgb()
-      .string()
+      .string(),
   );
   gradient.addColorStop(
     0.7,
-    colorSet.name === 'dark' ? colorSet.colors.shade0 : colorSet.colors.shade1
+    colorSet.name === 'dark' ? colorSet.colors.shade0 : colorSet.colors.shade1,
   );
-  
+
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, size.w, size.h);
 
@@ -63,7 +69,12 @@ const renderImage = (size, colorSet) => {
       const x1 = i * cellWidth + Math.random() * cellWidth;
       const y1 = j * cellHeight + Math.random() * cellHeight;
       const [x2, y2] = getClampedPoint(x1, y1, focalPoint.x, focalPoint.y);
-      const accent = (Math.round(i / xCount * 8 + (Math.random() * LEAK_FACTOR * 2 - LEAK_FACTOR)) + 8) % 8;
+      const accent =
+        (Math.round(
+          (i / xCount) * 8 + (Math.random() * LEAK_FACTOR * 2 - LEAK_FACTOR),
+        ) +
+          8) %
+        8;
       const color = colorSet.colors[`accent${accent}`];
       const transparentColor = Color(color).alpha(0).rgb().string();
       const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
@@ -79,7 +90,7 @@ const renderImage = (size, colorSet) => {
       ctx.stroke();
     }
   }
-  
+
   return Buffer.from(
     canvas.toDataURL().replace('data:image/png;base64,', ''),
     'base64',
@@ -89,7 +100,7 @@ const renderImage = (size, colorSet) => {
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['themer-wallpaper-burst-size']
+      options['themer-wallpaper-burst-size'],
     );
   } catch (e) {
     return [Promise.reject(e.message)];
@@ -98,11 +109,13 @@ const render = (colors, options) => {
   const colorSets = getColorSets(colors);
 
   return deepFlatten(
-    sizes.map(
-      size => colorSets.map(colorSet => Promise.resolve({
-        name: `themer-wallpaper-burst-${colorSet.name}-${size.w}x${size.h}.png`,
-        contents: renderImage(size, colorSet),
-      })),
+    sizes.map((size) =>
+      colorSets.map((colorSet) =>
+        Promise.resolve({
+          name: `themer-wallpaper-burst-${colorSet.name}-${size.w}x${size.h}.png`,
+          contents: renderImage(size, colorSet),
+        }),
+      ),
     ),
   );
 };

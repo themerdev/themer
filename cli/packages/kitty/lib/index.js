@@ -63,16 +63,16 @@ mark3_foreground ${colors.shade0}
 mark3_background ${colors.accent2}
 `;
 
-const render = colors => Object.entries(colors)
-  .map(async ([name, colors])=> ({
+const render = (colors) =>
+  Object.entries(colors).map(async ([name, colors]) => ({
     name: `themer-${name}.conf`,
     contents: Buffer.from(renderTheme(colors, name === 'dark'), 'utf8'),
   }));
 
-const renderInstructions = paths => `
+const renderInstructions = (paths) => `
 In the kitty configuration file (usually \`~/.config/kitty/kitty.conf\`), \`include\` the generated theme file:
 
-${paths.map(p => `    include ${p}`).join('\n')}
+${paths.map((p) => `    include ${p}`).join('\n')}
 `;
 
 module.exports = {

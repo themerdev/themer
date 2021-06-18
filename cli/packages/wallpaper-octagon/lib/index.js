@@ -7,39 +7,40 @@ const {
 const { loadImage, createCanvas } = require('canvas');
 
 const render = (colors, options) => {
-
   try {
-    var sizes = getSizesFromOptOrDefault(options['themer-wallpaper-octagon-size'], 36);
-  }
-  catch(e) {
+    var sizes = getSizesFromOptOrDefault(
+      options['themer-wallpaper-octagon-size'],
+      36,
+    );
+  } catch (e) {
     return [Promise.reject(e.message)];
   }
 
   const colorSets = getColorSets(colors);
 
-  const getOctagonPathData = size => `
-    M ${size/6} ${0}
-    l ${size/9} ${size/9}
-    l ${size/2.25} ${0}
-    l ${size/9} ${size/-9}
-    l ${size/6} ${size/6}
-    l ${size/-9} ${size/9}
-    l ${0} ${size/2.25}
-    l ${size/9} ${size/9}
-    l ${size/-6} ${size/6}
-    l ${size/-9} ${size/-9}
-    l ${size/-2.25} ${0}
-    l ${size/-9} ${size/9}
-    l ${size/-6} ${size/-6}
-    l ${size/9} ${size/-9}
-    l ${0} ${size/-2.25}
-    l ${size/-9} ${size/-9}
+  const getOctagonPathData = (size) => `
+    M ${size / 6} ${0}
+    l ${size / 9} ${size / 9}
+    l ${size / 2.25} ${0}
+    l ${size / 9} ${size / -9}
+    l ${size / 6} ${size / 6}
+    l ${size / -9} ${size / 9}
+    l ${0} ${size / 2.25}
+    l ${size / 9} ${size / 9}
+    l ${size / -6} ${size / 6}
+    l ${size / -9} ${size / -9}
+    l ${size / -2.25} ${0}
+    l ${size / -9} ${size / 9}
+    l ${size / -6} ${size / -6}
+    l ${size / 9} ${size / -9}
+    l ${0} ${size / -2.25}
+    l ${size / -9} ${size / -9}
     z
   `;
 
   return deepFlatten(
-    colorSets.map(colorSet =>
-      sizes.map(async size => {
+    colorSets.map((colorSet) =>
+      sizes.map(async (size) => {
         const colorList = [
           colorSet.colors.accent0,
           colorSet.colors.accent1,
@@ -53,11 +54,25 @@ const render = (colors, options) => {
 
         const radius = -300;
         const point1 = { x: 0, y: radius };
-        const point2 = { x: (radius * Math.sin(Math.PI / (colorList.length / -2))).toPrecision(5), y: (radius * Math.cos(Math.PI / (colorList.length / -2))).toPrecision(5) };
-        const point3 = { x: (radius * Math.sin(3 * Math.PI / (colorList.length / -2))).toPrecision(5), y: (radius * Math.cos(3 * Math.PI / (colorList.length / -2))).toPrecision(5) };
+        const point2 = {
+          x: (radius * Math.sin(Math.PI / (colorList.length / -2))).toPrecision(
+            5,
+          ),
+          y: (radius * Math.cos(Math.PI / (colorList.length / -2))).toPrecision(
+            5,
+          ),
+        };
+        const point3 = {
+          x: (
+            radius * Math.sin((3 * Math.PI) / (colorList.length / -2))
+          ).toPrecision(5),
+          y: (
+            radius * Math.cos((3 * Math.PI) / (colorList.length / -2))
+          ).toPrecision(5),
+        };
 
         const paths = colorList.map((color, i) => ({
-          r: i * Math.PI / -4 * 180 / Math.PI,
+          r: (((i * Math.PI) / -4) * 180) / Math.PI,
           c: color,
         }));
 
@@ -184,13 +199,19 @@ const render = (colors, options) => {
         const canvas = createCanvas(size.w, size.h);
         const ctx = canvas.getContext('2d');
 
-        const url = `data:image/svg+xml;base64,${Buffer.from(svg, 'utf8').toString('base64')}`;
+        const url = `data:image/svg+xml;base64,${Buffer.from(
+          svg,
+          'utf8',
+        ).toString('base64')}`;
         const img = await loadImage(url);
         ctx.drawImage(img, 0, 0);
 
         return {
           name: `themer-wallpaper-octagon-${colorSet.name}-${size.w}x${size.h}.png`,
-          contents: Buffer.from(canvas.toDataURL().replace('data:image/png;base64,', ''), 'base64'),
+          contents: Buffer.from(
+            canvas.toDataURL().replace('data:image/png;base64,', ''),
+            'base64',
+          ),
         };
       }),
     ),

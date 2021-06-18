@@ -11,9 +11,11 @@ const path = require('path'),
 
 (async function main() {
   try {
-    const args = (parsedArgs => {
+    const args = ((parsedArgs) => {
       if (parsedArgs.colors === undefined) {
-        throw new Error('Please provide a package name or file containing colors');
+        throw new Error(
+          'Please provide a package name or file containing colors',
+        );
       }
       if (parsedArgs.template === undefined) {
         throw new Error('Please provide at least one template to render');
@@ -23,28 +25,31 @@ const path = require('path'),
       }
       return {
         ...parsedArgs,
-        template: typeof parsedArgs.template === 'string' ? [parsedArgs.template] : parsedArgs.template,
+        template:
+          typeof parsedArgs.template === 'string'
+            ? [parsedArgs.template]
+            : parsedArgs.template,
         out: path.resolve(parsedArgs.out),
       };
-    })(minimist(process.argv.slice(2), {
-      string: ['colors', 'template', 'out'],
-      alias: {
-        'colors': 'c',
-        'template': 't',
-        'out': 'o',
-      },
-    }));
+    })(
+      minimist(process.argv.slice(2), {
+        string: ['colors', 'template', 'out'],
+        alias: {
+          colors: 'c',
+          template: 't',
+          out: 'o',
+        },
+      }),
+    );
     console.log('resolving packages...');
     const resolvedColorsPath = await resolvePackage(args.colors);
     const rawColors = await getColors(resolvedColorsPath);
     const colors = prepareColors(rawColors);
     const templates = await Promise.all(
-      args.template.map(
-        async packageName => ({
-          name: path.basename(packageName),
-          ...require(await resolvePackage(packageName)),
-        }),
-      ),
+      args.template.map(async (packageName) => ({
+        name: path.basename(packageName),
+        ...require(await resolvePackage(packageName)),
+      })),
     );
     console.log('rendering templates...');
     const outputs = await themer(
@@ -62,8 +67,7 @@ const path = require('path'),
     }
     console.log('done!');
     process.exit(0);
-  }
-  catch (err) {
+  } catch (err) {
     console.error(err);
     process.exit(1);
   }

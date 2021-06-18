@@ -39,13 +39,13 @@ const getImagePromises = (wallpaper, colors, width, height) => {
     default:
       throw new Error(`${wallpaper} not found`);
   }
-}
+};
 
 export default ({ onClose, wallpaper, colors }) => {
   const [images, setImages] = useState([]);
   const [imageIndex, setImageIndex] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState('none');
-  
+
   useEscListener(onClose);
 
   const { getActiveColorOrFallback } = useContext(ThemeContext);
@@ -64,7 +64,7 @@ export default ({ onClose, wallpaper, colors }) => {
             colors,
             width * devicePixelRatio,
             height * devicePixelRatio,
-          )
+          ),
         ),
       );
     })();
@@ -77,7 +77,9 @@ export default ({ onClose, wallpaper, colors }) => {
   useEffect(() => {
     let url;
     if (images[imageIndex]) {
-      url = URL.createObjectURL(new Blob([images[imageIndex].contents], { type: 'image/png' }));
+      url = URL.createObjectURL(
+        new Blob([images[imageIndex].contents], { type: 'image/png' }),
+      );
       setBackgroundImage(`url("${url}")`);
     } else {
       setBackgroundImage('none');
@@ -86,55 +88,52 @@ export default ({ onClose, wallpaper, colors }) => {
       if (url) {
         URL.revokeObjectURL(url);
       }
-    }
+    };
   }, [images, imageIndex]);
 
   return (
     <div
-      className={ styles.scrim }
+      className={styles.scrim}
       style={{ backgroundColor: getActiveColorOrFallback(['shade0'], true) }}
-      ref={ node }
+      ref={node}
     >
-      { backgroundImage ? (
-        <div
-          className={ styles.image }
-          style={{ backgroundImage }}
-        />
+      {backgroundImage ? (
+        <div className={styles.image} style={{ backgroundImage }} />
       ) : (
-        <span style={{ color: getActiveColorOrFallback(['shade2']) }}>loading...</span>
-      ) }
-      <span className={ styles.options }>
-        { images.length > 1
-            ? (
-                <span
-                  className={ styles.variations }
-                  style={{
-                    backgroundColor: getActiveColorOrFallback(['shade2'], true),
-                    borderColor: getActiveColorOrFallback(['shade4']),
-                  }}
-                >
-                  { images.map((_, i) => (
-                    <Radio
-                      key={ `${wallpaper}-${i}` }
-                      className={ styles.variation }
-                      color={ getActiveColorOrFallback(['shade7']) }
-                      onChange={ () => {
-                        setImageIndex(i);
-                        window.__ssa__log('change wallpaper preview image index', { index: i });
-                      } }
-                      value={ i === imageIndex }
-                      label={ `Variation ${i + 1}` }
-                    />
-                  )) }
-                </span>
-              )
-            : null
-        }
-        <Button
-          onClick={ onClose }
-          ref={ button }
-        >Close</Button>
+        <span style={{ color: getActiveColorOrFallback(['shade2']) }}>
+          loading...
+        </span>
+      )}
+      <span className={styles.options}>
+        {images.length > 1 ? (
+          <span
+            className={styles.variations}
+            style={{
+              backgroundColor: getActiveColorOrFallback(['shade2'], true),
+              borderColor: getActiveColorOrFallback(['shade4']),
+            }}
+          >
+            {images.map((_, i) => (
+              <Radio
+                key={`${wallpaper}-${i}`}
+                className={styles.variation}
+                color={getActiveColorOrFallback(['shade7'])}
+                onChange={() => {
+                  setImageIndex(i);
+                  window.__ssa__log('change wallpaper preview image index', {
+                    index: i,
+                  });
+                }}
+                value={i === imageIndex}
+                label={`Variation ${i + 1}`}
+              />
+            ))}
+          </span>
+        ) : null}
+        <Button onClick={onClose} ref={button}>
+          Close
+        </Button>
       </span>
     </div>
   );
-}
+};

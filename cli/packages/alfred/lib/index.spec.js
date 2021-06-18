@@ -3,9 +3,9 @@ const { colors } = require('../../colors-default');
 
 describe('themer Alfred.app theme template', () => {
   it('should render properly', async () => {
-    const files = await Promise.all(render(colors))
+    const files = await Promise.all(render(colors));
     expect(files.length).toBe(2);
-    files.forEach(file => {
+    files.forEach((file) => {
       expect(file.contents.toString('utf8')).toMatchSnapshot();
     });
   });

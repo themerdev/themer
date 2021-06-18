@@ -8,15 +8,18 @@ module.exports = async function themer(
   const files = [];
   const instructions = [];
   for (const template of templates) {
-    const outputs = (await Promise.all(template.render(colors, extraArgs)))
-      .map(file => ({
+    const outputs = (await Promise.all(template.render(colors, extraArgs))).map(
+      (file) => ({
         ...file,
         name: `${template.name}${pathSeparator}${file.name}`,
-      }));
+      }),
+    );
     files.push(...outputs);
     if (template.renderInstructions) {
       instructions.push(
-        `## ${template.name}\n\n${template.renderInstructions(outputs.map(({ name }) => name)).trim()}`,
+        `## ${template.name}\n\n${template
+          .renderInstructions(outputs.map(({ name }) => name))
+          .trim()}`,
       );
     }
   }
@@ -25,9 +28,9 @@ module.exports = async function themer(
       name: 'README.md',
       contents: Buffer.from(
         `${instructionsHead}\n\n${instructions.join('\n\n')}`,
-        'utf8'
-      )
-    })
+        'utf8',
+      ),
+    });
   }
   return files;
-}
+};

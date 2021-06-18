@@ -17,16 +17,16 @@ const render = (colors, options) => {
       colorSets.map(([colorSetName, colors]) =>
         [
           {
-            xColors: [ colors.accent4, colors.accent6 ],
-            yColors: [ colors.shade7, colors.shade0 ],
+            xColors: [colors.accent4, colors.accent6],
+            yColors: [colors.shade7, colors.shade0],
           },
           {
-            xColors: [ colors.accent2, colors.accent7 ],
-            yColors: [ colors.shade7, colors.shade0 ],
+            xColors: [colors.accent2, colors.accent7],
+            yColors: [colors.shade7, colors.shade0],
           },
         ].map((configuration, configurationIdx) =>
-          variances.map(variance =>
-            sizes.map(async size => {
+          variances.map((variance) =>
+            sizes.map(async (size) => {
               const pattern = trianglify({
                 width: size.w,
                 height: size.h,
@@ -34,18 +34,26 @@ const render = (colors, options) => {
                 ...configuration,
               });
               const canvas = createCanvas(size.w, size.h);
-              pattern.toCanvas(canvas, { scaling: false, applyCssScaling: false });
+              pattern.toCanvas(canvas, {
+                scaling: false,
+                applyCssScaling: false,
+              });
               return {
-                name: `themer-wallpaper-trianglify-${colorSetName}-${size.w}x${size.h}-${variance}-${configurationIdx+1}.png`,
-                contents: Buffer.from(canvas.toDataURL().replace('data:image/png;base64,', ''), 'base64'),
+                name: `themer-wallpaper-trianglify-${colorSetName}-${size.w}x${
+                  size.h
+                }-${variance}-${configurationIdx + 1}.png`,
+                contents: Buffer.from(
+                  canvas.toDataURL().replace('data:image/png;base64,', ''),
+                  'base64',
+                ),
               };
-            })
-          )
-        )
-      )
+            }),
+          ),
+        ),
+      ),
     );
   } catch (e) {
-    return [ Promise.reject(e.message) ];
+    return [Promise.reject(e.message)];
   }
 };
 

@@ -9,27 +9,32 @@ export default ({ children, footer, onClose }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return (
     <div
-      className={ styles.scrim }
+      className={styles.scrim}
       style={{
-        backgroundColor: Color(getActiveColorOrFallback(['shade0'], true)).fade(0.25).hsl(),
+        backgroundColor: Color(getActiveColorOrFallback(['shade0'], true))
+          .fade(0.25)
+          .hsl(),
       }}
     >
       <div
-        className={ styles.content }
+        className={styles.content}
         style={{
           backgroundColor: getActiveColorOrFallback(['shade0'], true),
           borderColor: getActiveColorOrFallback(['shade7']),
-          boxShadow: `0 0 var(--size-large-1) var(--size-large-1) ${getActiveColorOrFallback(['shade0'], true)}`,
+          boxShadow: `0 0 var(--size-large-1) var(--size-large-1) ${getActiveColorOrFallback(
+            ['shade0'],
+            true,
+          )}`,
         }}
       >
-        <div className={ styles.body }>{ children }</div>
+        <div className={styles.body}>{children}</div>
         <footer
-          className={ styles.footer }
+          className={styles.footer}
           style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
         >
-          { footer }
+          {footer}
         </footer>
       </div>
     </div>
-  )
-}
+  );
+};

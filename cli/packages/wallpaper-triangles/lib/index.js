@@ -9,7 +9,7 @@ const { createCanvas, loadImage } = require('canvas');
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['themer-wallpaper-triangles-size']
+      options['themer-wallpaper-triangles-size'],
     );
   } catch (e) {
     return [Promise.reject(e.message)];
@@ -18,16 +18,10 @@ const render = (colors, options) => {
   const colorSets = getColorSets(colors);
 
   return deepFlatten(
-    sizes.map(size =>
-      colorSets.map(async colorSet => {
-        const {
-          shade0,
-          shade7,
-          accent0,
-          accent2,
-          accent4,
-          accent7,
-        } = colorSet.colors;
+    sizes.map((size) =>
+      colorSets.map(async (colorSet) => {
+        const { shade0, shade7, accent0, accent2, accent4, accent7 } =
+          colorSet.colors;
         const svg = `
           <svg width="${size.w}" height="${size.h}" viewBox="0 0 ${size.w} ${size.h}" xmlns="http://www.w3.org/2000/svg">
             <style>
@@ -75,16 +69,22 @@ const render = (colors, options) => {
         const canvas = createCanvas(size.w, size.h);
         const ctx = canvas.getContext('2d');
 
-        const url = `data:image/svg+xml;base64,${Buffer.from(svg, 'utf8').toString('base64')}`;
+        const url = `data:image/svg+xml;base64,${Buffer.from(
+          svg,
+          'utf8',
+        ).toString('base64')}`;
         const img = await loadImage(url);
         ctx.drawImage(img, 0, 0);
-        
+
         return {
           name: `themer-wallpaper-triangles-${colorSet.name}-${size.w}x${size.h}.png`,
-          contents: Buffer.from(canvas.toDataURL().replace('data:image/png;base64,', ''), 'base64'),
+          contents: Buffer.from(
+            canvas.toDataURL().replace('data:image/png;base64,', ''),
+            'base64',
+          ),
         };
-      })
-    )
+      }),
+    ),
   );
 };
 

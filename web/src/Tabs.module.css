@@ -4,7 +4,8 @@
   font-size: var(--size-regular);
   line-height: var(--line-height);
   font-family: 'Fira Code', monospace;
-  padding: var(--size-small-4) var(--size-small-1) calc(var(--size-small-4) - var(--border-size));
+  padding: var(--size-small-4) var(--size-small-1)
+    calc(var(--size-small-4) - var(--border-size));
   border-width: var(--border-size);
   border-style: solid;
   border-top-left-radius: var(--border-radius-size);

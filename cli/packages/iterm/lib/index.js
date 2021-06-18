@@ -1,26 +1,41 @@
 const Color = require('color');
 
 const render = (colors) => {
-  return [{ name: 'dark', colors: colors.dark }, { name: 'light', colors: colors.light }]
-    .filter(colorSet => !!colorSet.colors)
-    .map(colorSet => {
+  return [
+    { name: 'dark', colors: colors.dark },
+    { name: 'light', colors: colors.light },
+  ]
+    .filter((colorSet) => !!colorSet.colors)
+    .map((colorSet) => {
       const colorMap = {
-        ansi0: colorSet.name === 'dark' ? colorSet.colors.shade0 : colorSet.colors.shade7,
+        ansi0:
+          colorSet.name === 'dark'
+            ? colorSet.colors.shade0
+            : colorSet.colors.shade7,
         ansi1: colorSet.colors.accent0,
         ansi2: colorSet.colors.accent3,
         ansi3: colorSet.colors.accent2,
         ansi4: colorSet.colors.accent5,
         ansi5: colorSet.colors.accent7,
         ansi6: colorSet.colors.accent4,
-        ansi7: colorSet.name === 'dark' ? colorSet.colors.shade6 : colorSet.colors.shade1,
-        ansi8: colorSet.name === 'dark' ? colorSet.colors.shade1 : colorSet.colors.shade6,
+        ansi7:
+          colorSet.name === 'dark'
+            ? colorSet.colors.shade6
+            : colorSet.colors.shade1,
+        ansi8:
+          colorSet.name === 'dark'
+            ? colorSet.colors.shade1
+            : colorSet.colors.shade6,
         ansi9: colorSet.colors.accent1,
         ansi10: colorSet.colors.accent4,
         ansi11: colorSet.colors.accent2,
         ansi12: colorSet.colors.accent5,
         ansi13: colorSet.colors.accent7,
         ansi14: colorSet.colors.accent4,
-        ansi15: colorSet.name === 'dark' ? colorSet.colors.shade7 : colorSet.colors.shade0,
+        ansi15:
+          colorSet.name === 'dark'
+            ? colorSet.colors.shade7
+            : colorSet.colors.shade0,
         background: colorSet.colors.shade0,
         foreground: colorSet.colors.shade7,
         cursor: colorSet.colors.accent6,
@@ -73,14 +88,19 @@ const render = (colors) => {
         </dict>
       </plist>
       `;
-      return Promise.resolve({ name: `themer-iterm-${colorSet.name}.itermcolors`, contents: Buffer.from(template, 'utf8') });
+      return Promise.resolve({
+        name: `themer-iterm-${colorSet.name}.itermcolors`,
+        contents: Buffer.from(template, 'utf8'),
+      });
     });
 };
 
-const renderInstructions = paths => `
+const renderInstructions = (paths) => `
 1. Launch iTerm
 2. Press \`command\`-\`I\` to open the iTerm preferences
-3. Choose Colors > Color Presets... > Import... and choose the generated theme file (${paths.map(p => `\`${p}\``).join(' or ')})
+3. Choose Colors > Color Presets... > Import... and choose the generated theme file (${paths
+  .map((p) => `\`${p}\``)
+  .join(' or ')})
 `;
 
 module.exports = {

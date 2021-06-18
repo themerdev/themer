@@ -54,7 +54,8 @@ export default () => {
   const [xcode, setXcode] = useState(false);
   const [xresources, setXresources] = useState(false);
 
-  const { getActiveColorOrFallback, preparedColorSet, cliColorSet } = useContext(ThemeContext);
+  const { getActiveColorOrFallback, preparedColorSet, cliColorSet } =
+    useContext(ThemeContext);
 
   const [price, setPrice] = useState({ code: 'usd', amount: 900 });
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
@@ -114,7 +115,7 @@ export default () => {
       window.location.href,
       cliColorSet,
     );
-    const contents = await zip.generateAsync({ type: 'blob' })
+    const contents = await zip.generateAsync({ type: 'blob' });
     saveAs(contents, 'themer.zip');
     window.__ssa__log('download zip', { selections });
     setShowSupportModal(true);
@@ -123,335 +124,352 @@ export default () => {
 
   return (
     <>
-      <div className={ styles.fieldsetWrapper }>
+      <div className={styles.fieldsetWrapper}>
         <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
-          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Terminals</legend>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>
+            Terminals
+          </legend>
           <Checkbox
-            value={ alacritty }
-            onChange={ () => setAlacritty(!alacritty) }
-            label="Alacritty"
+            value={alacritty}
+            onChange={() => setAlacritty(!alacritty)}
+            label='Alacritty'
             accentSelected
           />
           <Checkbox
-            value={ cmd }
-            onChange={ () => setCmd(!cmd) }
-            label="CMD.exe"
+            value={cmd}
+            onChange={() => setCmd(!cmd)}
+            label='CMD.exe'
             accentSelected
           />
           <Checkbox
-            value={ conemu }
-            onChange={ () => setConemu(!conemu) }
-            label="ConEmu"
+            value={conemu}
+            onChange={() => setConemu(!conemu)}
+            label='ConEmu'
             accentSelected
           />
           <Checkbox
-            value={ gnomeTerminal }
-            onChange={ () => setGnomeTerminal(!gnomeTerminal) }
-            label="GNOME Terminal"
+            value={gnomeTerminal}
+            onChange={() => setGnomeTerminal(!gnomeTerminal)}
+            label='GNOME Terminal'
             accentSelected
           />
           <Checkbox
-            value={ hyper }
-            onChange={ () => setHyper(!hyper) }
-            label="Hyper"
+            value={hyper}
+            onChange={() => setHyper(!hyper)}
+            label='Hyper'
             accentSelected
           />
           <Checkbox
-            value={ iterm }
-            onChange={ () => setIterm(!iterm) }
-            label="iTerm"
+            value={iterm}
+            onChange={() => setIterm(!iterm)}
+            label='iTerm'
             accentSelected
           />
           <Checkbox
-            value={ kitty }
-            onChange={ () => setKitty(!kitty) }
-            label="kitty"
+            value={kitty}
+            onChange={() => setKitty(!kitty)}
+            label='kitty'
             accentSelected
           />
           <Checkbox
-            value={ konsole }
-            onChange={ () => setKonsole(!konsole) }
-            label="Konsole"
+            value={konsole}
+            onChange={() => setKonsole(!konsole)}
+            label='Konsole'
             accentSelected
           />
           <Checkbox
-            value={ terminator }
-            onChange={ () => setTerminator(!terminator) }
-            label="Terminator"
+            value={terminator}
+            onChange={() => setTerminator(!terminator)}
+            label='Terminator'
             accentSelected
           />
           <Checkbox
-            value={ termite }
-            onChange={ () => setTermite(!termite) }
-            label="Termite"
+            value={termite}
+            onChange={() => setTermite(!termite)}
+            label='Termite'
             accentSelected
           />
           <Checkbox
-            value={ windowsTerminal }
-            onChange={ () => setWindowsTerminal(!windowsTerminal) }
-            label="Windows Terminal"
+            value={windowsTerminal}
+            onChange={() => setWindowsTerminal(!windowsTerminal)}
+            label='Windows Terminal'
             accentSelected
           />
         </fieldset>
         <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
-          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Editors / IDEs</legend>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>
+            Editors / IDEs
+          </legend>
           <Checkbox
-            value={ atomSyntax }
-            onChange={ () => setAtomSyntax(!atomSyntax) }
-            label="Atom (syntax)"
+            value={atomSyntax}
+            onChange={() => setAtomSyntax(!atomSyntax)}
+            label='Atom (syntax)'
             accentSelected
           />
           <Checkbox
-            value={ atomUi }
-            onChange={ () => setAtomUi(!atomUi) }
-            label="Atom (UI)"
+            value={atomUi}
+            onChange={() => setAtomUi(!atomUi)}
+            label='Atom (UI)'
             accentSelected
           />
           <Checkbox
-            value={ bbedit }
-            onChange={ () => setBbedit(!bbedit) }
-            label="BBEdit"
+            value={bbedit}
+            onChange={() => setBbedit(!bbedit)}
+            label='BBEdit'
             accentSelected
           />
           <Checkbox
-            value={ emacs }
-            onChange={ () => setEmacs(!emacs) }
-            label="Emacs"
+            value={emacs}
+            onChange={() => setEmacs(!emacs)}
+            label='Emacs'
             accentSelected
           />
           <Checkbox
-            value={ jetbrains }
-            onChange={ () => setJetbrains(!jetbrains) }
-            label="JetBrains"
+            value={jetbrains}
+            onChange={() => setJetbrains(!jetbrains)}
+            label='JetBrains'
             accentSelected
           />
           <Checkbox
-            value={ vimLightline }
-            onChange={ () => setVimLightline(!vimLightline) }
-            label="lightline.vim"
+            value={vimLightline}
+            onChange={() => setVimLightline(!vimLightline)}
+            label='lightline.vim'
             accentSelected
           />
           <Checkbox
-            value={ sublimeText }
-            onChange={ () => setSublimeText(!sublimeText) }
-            label="Sublime Text"
+            value={sublimeText}
+            onChange={() => setSublimeText(!sublimeText)}
+            label='Sublime Text'
             accentSelected
           />
           <Checkbox
-            value={ vim }
-            onChange={ () => setVim(!vim) }
-            label="Vim"
+            value={vim}
+            onChange={() => setVim(!vim)}
+            label='Vim'
             accentSelected
           />
           <Checkbox
-            value={ visualStudio }
-            onChange={ () => setVisualStudio(!visualStudio) }
-            label="Visual Studio"
+            value={visualStudio}
+            onChange={() => setVisualStudio(!visualStudio)}
+            label='Visual Studio'
             accentSelected
           />
           <Checkbox
-            value={ vscode }
-            onChange={ () => setVscode(!vscode) }
-            label="VS Code"
+            value={vscode}
+            onChange={() => setVscode(!vscode)}
+            label='VS Code'
             accentSelected
           />
           <Checkbox
-            value={ xcode }
-            onChange={ () => setXcode(!xcode) }
-            label="Xcode"
+            value={xcode}
+            onChange={() => setXcode(!xcode)}
+            label='Xcode'
             accentSelected
           />
         </fieldset>
         <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
-          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Wallpapers</legend>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>
+            Wallpapers
+          </legend>
           <Checkbox
-            value={ wallpaperBlockWave }
-            onChange={ () => setWallpaperBlockWave(!wallpaperBlockWave) }
-            label="“Block Wave”"
+            value={wallpaperBlockWave}
+            onChange={() => setWallpaperBlockWave(!wallpaperBlockWave)}
+            label='“Block Wave”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperBurst }
-            onChange={ () => setWallpaperBurst(!wallpaperBurst) }
-            label="“Burst”"
+            value={wallpaperBurst}
+            onChange={() => setWallpaperBurst(!wallpaperBurst)}
+            label='“Burst”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperCircuits }
-            onChange={ () => setWallpaperCircuits(!wallpaperCircuits) }
-            label="“Circuits”"
+            value={wallpaperCircuits}
+            onChange={() => setWallpaperCircuits(!wallpaperCircuits)}
+            label='“Circuits”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperDiamonds }
-            onChange={ () => setWallpaperDiamonds(!wallpaperDiamonds) }
-            label="“Diamonds”"
+            value={wallpaperDiamonds}
+            onChange={() => setWallpaperDiamonds(!wallpaperDiamonds)}
+            label='“Diamonds”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperDotGrid }
-            onChange={ () => setWallpaperDotGrid(!wallpaperDotGrid) }
-            label="“Dot Grid”"
+            value={wallpaperDotGrid}
+            onChange={() => setWallpaperDotGrid(!wallpaperDotGrid)}
+            label='“Dot Grid”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperOctagon }
-            onChange={ () => setWallpaperOctagon(!wallpaperOctagon) }
-            label="“Octagon”"
+            value={wallpaperOctagon}
+            onChange={() => setWallpaperOctagon(!wallpaperOctagon)}
+            label='“Octagon”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperShirts }
-            onChange={ () => setWallpaperShirts(!wallpaperShirts) }
-            label="“Shirts”"
+            value={wallpaperShirts}
+            onChange={() => setWallpaperShirts(!wallpaperShirts)}
+            label='“Shirts”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperTriangles }
-            onChange={ () => setWallpaperTriangles(!wallpaperTriangles) }
-            label="“Triangles”"
+            value={wallpaperTriangles}
+            onChange={() => setWallpaperTriangles(!wallpaperTriangles)}
+            label='“Triangles”'
             accentSelected
           />
           <Checkbox
-            value={ wallpaperTrianglify }
-            onChange={ () => setWallpaperTrianglify(!wallpaperTrianglify) }
-            label="“Trianglify”"
+            value={wallpaperTrianglify}
+            onChange={() => setWallpaperTrianglify(!wallpaperTrianglify)}
+            label='“Trianglify”'
             accentSelected
           />
           <div
-            className={ styles.wallpaperHint }
+            className={styles.wallpaperHint}
             style={{ color: getActiveColorOrFallback(['shade3']) }}
           >
             Wallpapers will be rendered at the browser viewport's resolution.
           </div>
-          { window.document.fullscreenEnabled ? (
+          {window.document.fullscreenEnabled ? (
             <Button
-              className={ styles.fullscreen }
+              className={styles.fullscreen}
               small
-              onClick={ () => {
+              onClick={() => {
                 window.document.documentElement.requestFullscreen();
                 window.__ssa__log('go fullscreen');
-              } }
-            >Go fullscreen</Button>
-          ) : null }
+              }}
+            >
+              Go fullscreen
+            </Button>
+          ) : null}
         </fieldset>
         <fieldset style={{ borderColor: getActiveColorOrFallback(['shade2']) }}>
-          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>Other</legend>
+          <legend style={{ color: getActiveColorOrFallback(['shade5']) }}>
+            Other
+          </legend>
           <Checkbox
-            value={ alfred }
-            onChange={ () => setAlfred(!alfred) }
-            label="Alfred.app"
+            value={alfred}
+            onChange={() => setAlfred(!alfred)}
+            label='Alfred.app'
             accentSelected
           />
           <Checkbox
-            value={ brave }
-            onChange={ () => setBrave(!brave) }
-            label="Brave"
+            value={brave}
+            onChange={() => setBrave(!brave)}
+            label='Brave'
             accentSelected
           />
           <Checkbox
-            value={ chrome }
-            onChange={ () => setChrome(!chrome) }
-            label="Chrome"
+            value={chrome}
+            onChange={() => setChrome(!chrome)}
+            label='Chrome'
             accentSelected
           />
           <Checkbox
-            value={ css }
-            onChange={ () => setCss(!css) }
-            label="CSS"
+            value={css}
+            onChange={() => setCss(!css)}
+            label='CSS'
             accentSelected
           />
           <Checkbox
-            value={ firefox }
-            onChange={ () => setFirefox(!firefox) }
-            label="Firefox"
+            value={firefox}
+            onChange={() => setFirefox(!firefox)}
+            label='Firefox'
             accentSelected
           />
           <Checkbox
-            value={ keypirinha }
-            onChange={ () => setKeypirinha(!keypirinha) }
-            label="Keypirinha"
+            value={keypirinha}
+            onChange={() => setKeypirinha(!keypirinha)}
+            label='Keypirinha'
             accentSelected
           />
           <Checkbox
-            value={ prism }
-            onChange={ () => setPrism(!prism) }
-            label="Prism"
+            value={prism}
+            onChange={() => setPrism(!prism)}
+            label='Prism'
             accentSelected
           />
           <Checkbox
-            value={ sketchPalettes }
-            onChange={ () => setSketchPalettes(!sketchPalettes) }
-            label="Sketch palettes"
+            value={sketchPalettes}
+            onChange={() => setSketchPalettes(!sketchPalettes)}
+            label='Sketch palettes'
             accentSelected
           />
           <Checkbox
-            value={ slack }
-            onChange={ () => setSlack(!slack) }
-            label="Slack sidebar"
+            value={slack}
+            onChange={() => setSlack(!slack)}
+            label='Slack sidebar'
             accentSelected
           />
           <Checkbox
-            value={ tmux }
-            onChange={ () => setTmux(!tmux) }
-            label="tmux"
+            value={tmux}
+            onChange={() => setTmux(!tmux)}
+            label='tmux'
             accentSelected
           />
           <Checkbox
-            value={ wox }
-            onChange={ () => setWox(!wox) }
-            label="Wox"
+            value={wox}
+            onChange={() => setWox(!wox)}
+            label='Wox'
             accentSelected
           />
           <Checkbox
-            value={ xresources }
-            onChange={ () => setXresources(!xresources) }
-            label="Xresources"
+            value={xresources}
+            onChange={() => setXresources(!xresources)}
+            label='Xresources'
             accentSelected
           />
         </fieldset>
       </div>
-      <div className={ styles.inputs }>
-        <span style={{ color: getActiveColorOrFallback(['shade6']) }}>Pay what you want:</span>
-        <PriceInput className={ styles.priceInput } value={ price } onChange={ price => {
-          setPrice(price);
-          window.__ssa__log('change price', { price });
-        } } />
+      <div className={styles.inputs}>
+        <span style={{ color: getActiveColorOrFallback(['shade6']) }}>
+          Pay what you want:
+        </span>
+        <PriceInput
+          className={styles.priceInput}
+          value={price}
+          onChange={(price) => {
+            setPrice(price);
+            window.__ssa__log('change price', { price });
+          }}
+        />
         <Button
           special
-          disabled={ !preparedColorSet.dark && !preparedColorSet.light }
-          onClick={ () => {
+          disabled={!preparedColorSet.dark && !preparedColorSet.light}
+          onClick={() => {
             if (price.amount > 0) {
               setShowCheckoutModal(true);
               window.__ssa__log('open checkout modal');
-            }
-            else {
+            } else {
               download();
             }
-          } }
-        >{ price.amount > 0 ? 'Purchase' : 'Download' }</Button>
+          }}
+        >
+          {price.amount > 0 ? 'Purchase' : 'Download'}
+        </Button>
       </div>
-      { showCheckoutModal ? (
+      {showCheckoutModal ? (
         <CheckoutModal
-          price={ price }
-          onClose={ () => {
+          price={price}
+          onClose={() => {
             setShowCheckoutModal(false);
             window.__ssa__log('close checkout modal');
-          } }
-          onComplete={ () => {
+          }}
+          onComplete={() => {
             setShowCheckoutModal(false);
             download();
-          } }
+          }}
         />
-      ) : null }
-      { showSupportModal ? (
+      ) : null}
+      {showSupportModal ? (
         <SupportModal
-          onClose={ () => {
+          onClose={() => {
             setShowSupportModal(false);
             window.__ssa__log('close support modal');
-          } }
+          }}
         />
-      ) : null }
+      ) : null}
     </>
   );
-}
+};

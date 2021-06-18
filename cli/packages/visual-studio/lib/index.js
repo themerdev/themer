@@ -1,16 +1,17 @@
 const Color = require('color');
 
-const format = hex =>
+const format = (hex) =>
   '0x00' +
-    Color(hex)
-      .rgb()
-      .array()
-      .reverse()
-      .map(n => Math.round(n))
-      .map(n => n.toString('16').toUpperCase())
-      .join('');
+  Color(hex)
+    .rgb()
+    .array()
+    .reverse()
+    .map((n) => Math.round(n))
+    .map((n) => n.toString('16').toUpperCase())
+    .join('');
 
-const mix = (aHex, bHex, mix = 0.5) => format(Color(aHex).mix(Color(bHex), mix));
+const mix = (aHex, bHex, mix = 0.5) =>
+  format(Color(aHex).mix(Color(bHex), mix));
 
 const renderTheme = (
   {
@@ -48,7 +49,11 @@ const renderTheme = (
     >
       <PropertyValue name="Version">2</PropertyValue>
       <FontsAndColors Version="2.0">
-        <Theme Id="{${isDark ? '1DED0138-47CE-435E-84EF-9EC1F439B749' : 'DE3DBBCD-F642-433C-8353-8F1DF4370ABA'}}" />
+        <Theme Id="{${
+          isDark
+            ? '1DED0138-47CE-435E-84EF-9EC1F439B749'
+            : 'DE3DBBCD-F642-433C-8353-8F1DF4370ABA'
+        }}" />
         <Categories>
           <Category GUID="{FA937F7B-C0D2-46B8-9F10-A7A92642B384}" FontIsDefault="Yes">
             <Items>
@@ -1898,17 +1903,19 @@ const renderTheme = (
   </Category>
 </UserSettings>`;
 
-const render = colors => Object.entries(colors)
-  .map(async ([name, colors])=> ({
+const render = (colors) =>
+  Object.entries(colors).map(async ([name, colors]) => ({
     name: `themer-${name}.vssettings`,
     contents: Buffer.from(renderTheme(colors, name === 'dark'), 'utf8'),
   }));
 
-const renderInstructions = paths => `
+const renderInstructions = (paths) => `
 1. Select Tools > Import and Export Settings...
 2. Choose the "Import selected environment settings" option
 3. Choose whether or not to save a backup of current settings
-4. Click "Browse..." and choose the generated theme file (${paths.map(p => `'${p}'`).join(' or ')})
+4. Click "Browse..." and choose the generated theme file (${paths
+  .map((p) => `'${p}'`)
+  .join(' or ')})
 5. Click "Finish"
 `;
 

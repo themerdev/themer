@@ -1,7 +1,6 @@
 const { colors } = require('./index');
 
 describe('themer color set', () => {
-
   it('should contain both a light and a dark theme', () => {
     expect(colors.light).toBeDefined();
     expect(colors.dark).toBeDefined();
@@ -20,10 +19,9 @@ describe('themer color set', () => {
       'shade0',
       'shade7',
     ];
-    prefixes.forEach(prefix => {
+    prefixes.forEach((prefix) => {
       expect(colors.light[prefix]).toBeDefined();
       expect(colors.dark[prefix]).toBeDefined();
     });
   });
-
 });

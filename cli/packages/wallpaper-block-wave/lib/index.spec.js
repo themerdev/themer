@@ -9,15 +9,23 @@ describe('themer "block wave" wallpaper', () => {
         it(`should return ${totalDefaultFiles} files to write`, async () => {
           const files = await Promise.all(promises);
           expect(files.length).toBe(totalDefaultFiles);
-          expect(files.filter(file => /\.png/.test(file.name)).length).toBe(totalDefaultFiles);
+          expect(files.filter((file) => /\.png/.test(file.name)).length).toBe(
+            totalDefaultFiles,
+          );
         });
       });
       describe('and when rendering a custom resolution', () => {
-        const promises = render(colors, { 'themer-wallpaper-block-wave-size': '600x600' });
-        it(`should return ${totalDefaultFiles / 2} files to write`, async () => {
+        const promises = render(colors, {
+          'themer-wallpaper-block-wave-size': '600x600',
+        });
+        it(`should return ${
+          totalDefaultFiles / 2
+        } files to write`, async () => {
           const files = await Promise.all(promises);
           expect(files.length).toBe(totalDefaultFiles / 2);
-          expect(files.filter(file => /\.png/.test(file.name)).length).toBe(totalDefaultFiles / 2);
+          expect(files.filter((file) => /\.png/.test(file.name)).length).toBe(
+            totalDefaultFiles / 2,
+          );
         });
       });
     });
@@ -28,7 +36,9 @@ describe('themer "block wave" wallpaper', () => {
   test('when given only a light theme', { light: colors.light }, 2);
 
   it('should list output files', async () => {
-    const files = await Promise.all(render(colors, { 'themer-wallpaper-block-wave-size': '1000x1000' }));
+    const files = await Promise.all(
+      render(colors, { 'themer-wallpaper-block-wave-size': '1000x1000' }),
+    );
     const instructions = renderInstructions(files.map(({ name }) => name));
     expect(instructions).toMatchSnapshot();
   });

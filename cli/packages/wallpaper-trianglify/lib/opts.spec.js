@@ -9,7 +9,10 @@ describe('@themer/wallpaper-trianglify options', () => {
     expect(getSizes('200x200')).toEqual([{ h: 200, w: 200 }]);
   });
   it('should parse multiple resolution options', () => {
-    expect(getSizes(['100x200', '300x400'])).toEqual([{ w: 100, h: 200}, { w: 300, h: 400 }]);
+    expect(getSizes(['100x200', '300x400'])).toEqual([
+      { w: 100, h: 200 },
+      { w: 300, h: 400 },
+    ]);
   });
   it('should throw when a malformed resolution option is given', () => {
     expect(() => getSizes('100xFoo')).toThrow();

@@ -1,6 +1,5 @@
 const render = (colors) => {
-
-  const colorVars = colorSet => `
+  const colorVars = (colorSet) => `
   let s:shade0 = "${colorSet.shade0}"
   let s:shade1 = "${colorSet.shade1}"
   let s:shade2 = "${colorSet.shade2}"
@@ -21,17 +20,25 @@ const render = (colors) => {
 
   const theme = `
 
-  ${'dark' in colors ? `
+  ${
+    'dark' in colors
+      ? `
   if &background == 'dark'
     ${colorVars(colors.dark)}
   endif
-  ` : ''}
+  `
+      : ''
+  }
 
-  ${'light' in colors ? `
+  ${
+    'light' in colors
+      ? `
   if &background == 'light'
     ${colorVars(colors.light)}
   endif
-  ` : ''}
+  `
+      : ''
+  }
 
   let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
   let s:p.normal.left = [ [ s:shade1, s:accent5 ], [ s:shade7, s:shade2 ] ]
@@ -54,11 +61,15 @@ const render = (colors) => {
 
   `;
 
-  return [Promise.resolve({ name: 'ThemerVimLightline.vim', contents: Buffer.from(theme, 'utf8') })];
-
+  return [
+    Promise.resolve({
+      name: 'ThemerVimLightline.vim',
+      contents: Buffer.from(theme, 'utf8'),
+    }),
+  ];
 };
 
-const renderInstructions = paths => `
+const renderInstructions = (paths) => `
 Make sure that the \`background\` option is set in \`.vimrc\`.
 
 Copy or symlink \`${paths[0]}\` to \`~/.vim/autoload/lightline/colorscheme/\`.

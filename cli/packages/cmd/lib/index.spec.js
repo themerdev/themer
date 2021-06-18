@@ -1,11 +1,11 @@
-const {render, renderInstructions} = require('./index');
-const {colors} = require('../../colors-default');
+const { render, renderInstructions } = require('./index');
+const { colors } = require('../../colors-default');
 
 describe('render', () => {
   it('should render properly formatted CMD.exe theme .reg file', async () => {
-    const files = await Promise.all(render(colors))
+    const files = await Promise.all(render(colors));
     expect(files.length).toBe(2);
-    files.forEach(file => {
+    files.forEach((file) => {
       expect(/themer-(dark|light)\.reg/.test(file.name)).toBe(true);
       expect(file.contents.toString('utf8')).toMatchSnapshot();
     });

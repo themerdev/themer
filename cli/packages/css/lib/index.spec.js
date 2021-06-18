@@ -7,7 +7,7 @@ describe('themer css theme generator', () => {
   it('should generate valid CSS', async () => {
     const files = await promisedFiles;
     expect(files.length).toBe(3);
-    files.forEach(file => {
+    files.forEach((file) => {
       const contents = file.contents.toString('utf8');
       expect(contents).toMatchSnapshot();
     });

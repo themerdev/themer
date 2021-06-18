@@ -2,10 +2,10 @@ const { render, renderInstructions } = require('./index');
 const { colors } = require('../../colors-default');
 
 describe('render', () => {
-  it('should render properly formatted .sketchpalette files', done => {
-    Promise.all(render(colors)).then(files => {
+  it('should render properly formatted .sketchpalette files', (done) => {
+    Promise.all(render(colors)).then((files) => {
       expect(files.length).toBe(2);
-      files.forEach(file => {
+      files.forEach((file) => {
         expect(file.contents.toString('utf8')).toMatchSnapshot();
       });
       done();
@@ -19,4 +19,4 @@ describe('renderInstructions', () => {
     const instructions = renderInstructions(files.map(({ name }) => name));
     expect(instructions).toMatchSnapshot();
   });
-})
+});

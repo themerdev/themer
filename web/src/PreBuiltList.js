@@ -6,7 +6,7 @@ import ThemeContext, { paramsFromState } from './ThemeContext';
 
 import { colors as defaultColors } from '@themer/colors-default';
 import { colors as draculaColors } from '@themer/colors-dracula';
-import { colors as fingerPaintColors} from '@themer/colors-finger-paint';
+import { colors as fingerPaintColors } from '@themer/colors-finger-paint';
 import { colors as githubUniverseColors } from '@themer/colors-github-universe';
 import { colors as greenAsAWhistleColors } from '@themer/colors-green-as-a-whistle';
 import { colors as lucidColors } from '@themer/colors-lucid';
@@ -16,7 +16,7 @@ import { colors as nightSkyColors } from '@themer/colors-night-sky';
 import { colors as novaColors } from '@themer/colors-nova';
 import { colors as oneColors } from '@themer/colors-one';
 import { colors as polarIceColors } from '@themer/colors-polar-ice';
-import { colors as rightInTheTealsColors} from '@themer/colors-right-in-the-teals';
+import { colors as rightInTheTealsColors } from '@themer/colors-right-in-the-teals';
 import { colors as rivetColors } from '@themer/colors-rivet';
 import { colors as setiColors } from '@themer/colors-seti';
 import { colors as solarizedColors } from '@themer/colors-solarized';
@@ -26,45 +26,86 @@ const PreBuiltLink = ({ colors, children }) => {
   const oppositeColorSet = activeColorSet === 'dark' ? 'light' : 'dark';
   const preparedState = {
     colors,
-    activeColorSet: has(colors, activeColorSet) ? activeColorSet : oppositeColorSet,
+    activeColorSet: has(colors, activeColorSet)
+      ? activeColorSet
+      : oppositeColorSet,
     calculateIntermediaryShades: {
       dark: !has(colors, 'dark.shade1'),
       light: !has(colors, 'light.shade1'),
     },
   };
-  return (<Link href={ paramsFromState(preparedState) }>{ children }</Link>);
+  return <Link href={paramsFromState(preparedState)}>{children}</Link>;
 };
 
 export default () => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return (
-    <ul className={ styles.linksets } style={{ color: getActiveColorOrFallback(['shade5']) }}>
+    <ul
+      className={styles.linksets}
+      style={{ color: getActiveColorOrFallback(['shade5']) }}
+    >
       <li>
-        Original color sets:
-        {' '}
-        <ul className={ styles.links } >
-          <li><PreBuiltLink colors={ defaultColors }>Default</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ nightSkyColors }>Night Sky</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ polarIceColors }>Polar Ice</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ fingerPaintColors }>Finger Paint</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ monkeyColors }>Monkey</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ rightInTheTealsColors }>Right in the Teals</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ greenAsAWhistleColors }>Green as a Whistle</PreBuiltLink></li>
+        Original color sets:{' '}
+        <ul className={styles.links}>
+          <li>
+            <PreBuiltLink colors={defaultColors}>Default</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={nightSkyColors}>Night Sky</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={polarIceColors}>Polar Ice</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={fingerPaintColors}>Finger Paint</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={monkeyColors}>Monkey</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={rightInTheTealsColors}>
+              Right in the Teals
+            </PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={greenAsAWhistleColors}>
+              Green as a Whistle
+            </PreBuiltLink>
+          </li>
         </ul>
       </li>
       <li>
-        Ports from third party themes:
-        {' '}
-        <ul className={ styles.links }>
-          <li><PreBuiltLink colors={ oneColors }>One</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ lucidColors }>Lucid</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ solarizedColors }>Solarized</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ githubUniverseColors }>GitHub Universe</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ novaColors }>Nova</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ mojaveColors }>Mojave</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ rivetColors }>Rivet</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ draculaColors }>Dracula</PreBuiltLink></li>
-          <li><PreBuiltLink colors={ setiColors }>Seti</PreBuiltLink></li>
+        Ports from third party themes:{' '}
+        <ul className={styles.links}>
+          <li>
+            <PreBuiltLink colors={oneColors}>One</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={lucidColors}>Lucid</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={solarizedColors}>Solarized</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={githubUniverseColors}>
+              GitHub Universe
+            </PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={novaColors}>Nova</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={mojaveColors}>Mojave</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={rivetColors}>Rivet</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={draculaColors}>Dracula</PreBuiltLink>
+          </li>
+          <li>
+            <PreBuiltLink colors={setiColors}>Seti</PreBuiltLink>
+          </li>
         </ul>
       </li>
     </ul>

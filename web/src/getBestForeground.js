@@ -6,8 +6,7 @@ export default (option1, option2, background) => {
   const bg = Color(background);
   if (op1.contrast(bg) > op2.contrast(bg)) {
     return op1.hex();
-  }
-  else {
+  } else {
     return op2.hex();
   }
 };

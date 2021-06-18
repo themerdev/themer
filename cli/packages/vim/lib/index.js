@@ -1,7 +1,6 @@
 const convert = require('color-convert');
 
 const render = (colors) => {
-
   // HACK `color-convert`'s conversion to ANSI currently isn't that accurate for
   // grays
   const ansi256Colors = [];
@@ -11,15 +10,14 @@ const render = (colors) => {
     ansi256Colors.push(hexVal);
   }
 
-  ansi256Colors.closest = function(hexVal) {
+  ansi256Colors.closest = function (hexVal) {
     const [r, g, b] = convert.hex.rgb(hexVal);
     let minDistance = Infinity;
     let index; // NOTE equals ansi code
     for (let i = 0; i < this.length; ++i) {
       const [otherR, otherG, otherB] = convert.hex.rgb(this[i]);
-      const distance = (r - otherR) ** 2
-        + (g - otherG) ** 2
-        + (b - otherB) ** 2;
+      const distance =
+        (r - otherR) ** 2 + (g - otherG) ** 2 + (b - otherB) ** 2;
       if (distance < minDistance) {
         minDistance = distance;
         index = i;
@@ -28,9 +26,9 @@ const render = (colors) => {
     return index;
   };
 
-  const gtermToCterm = hexVal => ansi256Colors.closest(hexVal);
+  const gtermToCterm = (hexVal) => ansi256Colors.closest(hexVal);
 
-  const colorVars = colorSet => `
+  const colorVars = (colorSet) => `
   let s:guishade0 = "${colorSet.shade0}"
   let s:guishade1 = "${colorSet.shade1}"
   let s:guishade2 = "${colorSet.shade2}"
@@ -67,17 +65,25 @@ const render = (colors) => {
 
   const theme = `
 
-  ${'dark' in colors ? `
+  ${
+    'dark' in colors
+      ? `
   if &background == 'dark'
     ${colorVars(colors.dark)}
   endif
-  ` : ''}
+  `
+      : ''
+  }
 
-  ${'light' in colors ? `
+  ${
+    'light' in colors
+      ? `
   if &background == 'light'
     ${colorVars(colors.light)}
   endif
-  ` : ''}
+  `
+      : ''
+  }
 
   highlight clear
   syntax reset
@@ -259,11 +265,15 @@ const render = (colors) => {
   unlet s:ctermshade0 s:ctermshade1 s:ctermshade2 s:ctermshade3 s:ctermshade4 s:ctermshade5 s:ctermshade6 s:ctermshade7 s:ctermaccent0 s:ctermaccent1 s:ctermaccent2 s:ctermaccent3 s:ctermaccent4 s:ctermaccent5 s:ctermaccent6 s:ctermaccent7
   `;
 
-  return [Promise.resolve({name: 'ThemerVim.vim', contents: Buffer.from(theme, 'utf8')})];
-
+  return [
+    Promise.resolve({
+      name: 'ThemerVim.vim',
+      contents: Buffer.from(theme, 'utf8'),
+    }),
+  ];
 };
 
-const renderInstructions = paths => `
+const renderInstructions = (paths) => `
 Copy or symlink \`${paths[0]}\` to \`~/.vim/colors/\`.
 
 Then set the colorscheme in \`.vimrc\`:

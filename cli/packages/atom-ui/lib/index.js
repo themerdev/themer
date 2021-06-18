@@ -18,13 +18,13 @@ const path = require('path'),
   treeViewLess = require('./templates/treeViewLess'),
   uiVariablesLess = require('./templates/uiVariablesLess');
 
-const flatten = arr => [].concat.apply([], arr);
+const flatten = (arr) => [].concat.apply([], arr);
 
-const getDirectory = name => `themer-${name}-ui`;
+const getDirectory = (name) => `themer-${name}-ui`;
 
-const render = colors =>
+const render = (colors) =>
   flatten(
-    Object.keys(colors).map(name => [
+    Object.keys(colors).map((name) => [
       Promise.resolve({
         name: path.join(getDirectory(name), 'package.json'),
         contents: Buffer.from(packageJson(name), 'utf8'),
@@ -97,17 +97,19 @@ const render = colors =>
         name: path.join(getDirectory(name), 'styles', 'ui-variables.less'),
         contents: Buffer.from(uiVariablesLess(colors[name]), 'utf8'),
       }),
-    ])
+    ]),
   );
 
-const renderInstructions = paths => {
+const renderInstructions = (paths) => {
   const packages = new Set(
-    paths.map(path.dirname).filter(p => !p.endsWith('styles')),
+    paths.map(path.dirname).filter((p) => !p.endsWith('styles')),
   );
   return `
-Use the \`apm link\` command to install the generated theme ${packages.size > 1 ? 'packages' : 'package'} to Atom:
+Use the \`apm link\` command to install the generated theme ${
+    packages.size > 1 ? 'packages' : 'package'
+  } to Atom:
 
-${[...packages].map(pkg => `    apm link '${pkg}'`).join('\n')}
+${[...packages].map((pkg) => `    apm link '${pkg}'`).join('\n')}
 
 Then open/reload Atom and select the desired theme in the list of available UI themes.
   `;

@@ -1,9 +1,9 @@
 const render = (colors, options) => {
   const colorSets = [
-    {name: 'dark', colors: colors.dark},
-    {name: 'light', colors: colors.light},
-  ].filter(colorSet => !!colorSet.colors);
-  return colorSets.map(colorSet => {
+    { name: 'dark', colors: colors.dark },
+    { name: 'light', colors: colors.light },
+  ].filter((colorSet) => !!colorSet.colors);
+  return colorSets.map((colorSet) => {
     const {
       shade0,
       shade1,
@@ -88,9 +88,9 @@ const render = (colors, options) => {
             },
           },
           null,
-          2
+          2,
         ),
-        'utf8'
+        'utf8',
       ),
     });
   });
@@ -99,7 +99,7 @@ const render = (colors, options) => {
 const renderInstructions = (paths) => `
 Simply open the files to import them into Alfred. Either double-click them in Finder or use the terminal:
 
-${paths.map(path => `    open '${path}'`).join('\n')}
+${paths.map((path) => `    open '${path}'`).join('\n')}
 `;
 
 module.exports = {

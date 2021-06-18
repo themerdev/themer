@@ -31,7 +31,7 @@ describe('themer Windows Terminal theme generator', () => {
         selectionBackground: hexMatcher,
         white: hexMatcher,
         yellow: hexMatcher,
-      })
+      });
     }
   });
 

@@ -16,7 +16,7 @@ describe('render', () => {
   it('should render one package directory for each theme in the colorset', async () => {
     const files = await promisedFiles;
     const packages = new Set();
-    files.forEach(file => {
+    files.forEach((file) => {
       const packageName = file.name.split(path.sep)[0];
       packages.add(packageName);
     });
@@ -25,13 +25,13 @@ describe('render', () => {
 
   it('should render properly-formatted theme files', async () => {
     const files = await promisedFiles;
-    files.forEach(file => {
+    files.forEach((file) => {
       if (path.basename(file.name) === 'package.json') {
         expect(
           pickBy(
             JSON.parse(file.contents.toString('utf8')),
-            (v, k) => k !== 'version'
-          )
+            (v, k) => k !== 'version',
+          ),
         ).toMatchSnapshot();
       } else {
         expect(file.contents.toString('utf8')).toMatchSnapshot();
@@ -43,27 +43,27 @@ describe('render', () => {
     const tmp = path.join(os.tmpdir(), new Date().valueOf().toString());
     const files = await promisedFiles;
     const outputFilePaths = await Promise.all(
-      files.map(async file => {
+      files.map(async (file) => {
         const outputFilePath = path.resolve(tmp, file.name);
         await mkdir(path.dirname(outputFilePath), { recursive: true });
         await writeFile(outputFilePath, file.contents);
         return outputFilePath;
       }),
     );
-    const indexFilePaths = outputFilePaths.filter(outputFilePath =>
-      /index\.less/.test(outputFilePath)
+    const indexFilePaths = outputFilePaths.filter((outputFilePath) =>
+      /index\.less/.test(outputFilePath),
     );
     expect(indexFilePaths.length).toBe(2);
     const compiledContents = await Promise.all(
-      indexFilePaths.map(async indexFilePath => {
-        const contents = await readFile(indexFilePath, 'utf8')
+      indexFilePaths.map(async (indexFilePath) => {
+        const contents = await readFile(indexFilePath, 'utf8');
         return await less.render(contents, {
           paths: [path.dirname(indexFilePath)],
           filename: path.basename(indexFilePath),
         });
       }),
     );
-    compiledContents.forEach(contents => {
+    compiledContents.forEach((contents) => {
       expect(contents.css).toMatchSnapshot();
     });
   });

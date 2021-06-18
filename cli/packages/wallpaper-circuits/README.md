@@ -24,8 +24,8 @@ Then pass `@themer/wallpaper-circuits` as a `-t` (`--template`) arg to `themer`:
 
 By default, `@themer/wallpaper-circuits` will output wallpapers at the following sizes:
 
-* 2880 by 1800 (desktop)
-* 750 by 1334 (device)
+- 2880 by 1800 (desktop)
+- 750 by 1334 (device)
 
 ### Custom resolutions
 

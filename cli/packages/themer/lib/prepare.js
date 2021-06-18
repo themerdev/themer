@@ -25,30 +25,34 @@ const fillableKeys = [
 
 const allKeys = minimumKeys.concat(fillableKeys);
 
-const mapValues = (obj, fn) => Object.entries(obj)
-  .reduce(
+const mapValues = (obj, fn) =>
+  Object.entries(obj).reduce(
     (acc, [key, value]) => ({ ...acc, [key]: fn(value, key) }),
     {},
   );
 
-const convertPaletteToHex = palette => mapValues(palette, color => one(color).hex());
+const convertPaletteToHex = (palette) =>
+  mapValues(palette, (color) => one(color).hex());
 
 const preparePalette = (palette, name) => {
   const keys = Object.keys(palette);
-  if (allKeys.every(requiredKey => keys.includes(requiredKey))) {
+  if (allKeys.every((requiredKey) => keys.includes(requiredKey))) {
     return convertPaletteToHex(palette);
   }
-  if (minimumKeys.every(requiredKey => keys.includes(requiredKey))) {
-    if(fillableKeys.every(prohibitedKey => !keys.includes(prohibitedKey))) {
+  if (minimumKeys.every((requiredKey) => keys.includes(requiredKey))) {
+    if (fillableKeys.every((prohibitedKey) => !keys.includes(prohibitedKey))) {
       console.log(`calculating shades 1 through 6 for ${name} palette...`);
-      const filledPalette = colorSteps(palette.shade0, palette.shade7, fillableKeys.length)
-        .reduce(
-          (newPalette, calculatedShade, i) => ({
-            ...newPalette,
-            [fillableKeys[i]]: calculatedShade,
-          }),
-          palette,
-        );
+      const filledPalette = colorSteps(
+        palette.shade0,
+        palette.shade7,
+        fillableKeys.length,
+      ).reduce(
+        (newPalette, calculatedShade, i) => ({
+          ...newPalette,
+          [fillableKeys[i]]: calculatedShade,
+        }),
+        palette,
+      );
       return convertPaletteToHex(filledPalette);
     }
   }
@@ -58,7 +62,11 @@ const preparePalette = (palette, name) => {
 module.exports = function prepare(colors) {
   console.log('validating colors...');
   if (!colors.light && !colors.dark) {
-    throw new Error('Color set must define either a dark or light palette (or both).');
+    throw new Error(
+      'Color set must define either a dark or light palette (or both).',
+    );
   }
-  return mapValues(colors, (palette, paletteName) => preparePalette(palette, paletteName));
+  return mapValues(colors, (palette, paletteName) =>
+    preparePalette(palette, paletteName),
+  );
 };

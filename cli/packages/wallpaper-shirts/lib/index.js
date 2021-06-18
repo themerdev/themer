@@ -14,7 +14,7 @@ const PATTERN_HEIGHT = CELL_HEIGHT * 6;
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['themer-wallpaper-shirts-size']
+      options['themer-wallpaper-shirts-size'],
     );
   } catch (e) {
     return [Promise.reject(e.message)];
@@ -23,8 +23,8 @@ const render = (colors, options) => {
   const colorSets = getColorSets(colors);
 
   return deepFlatten(
-    sizes.map(
-      size => colorSets.map(async colorSet => {
+    sizes.map((size) =>
+      colorSets.map(async (colorSet) => {
         const {
           shade0,
           shade1,
@@ -48,12 +48,26 @@ const render = (colors, options) => {
         const adjustedCellHeight = CELL_HEIGHT / scaleFactor;
         const cellCountX = size.w / adjustedCellWidth;
         const cellCountY = size.h / adjustedCellHeight;
-        const surpriseX = Math.floor(cellCountX / 2) * adjustedCellWidth + (Math.floor(cellCountY / 2) % 2 === 0 ? 0 : (adjustedCellWidth / 2));
+        const surpriseX =
+          Math.floor(cellCountX / 2) * adjustedCellWidth +
+          (Math.floor(cellCountY / 2) % 2 === 0 ? 0 : adjustedCellWidth / 2);
         const surpriseY = Math.floor(cellCountY / 2) * adjustedCellHeight;
         const svg = `
-          <svg width="${size.w}" height="${size.h}" viewBox="0 0 ${size.w} ${size.h}" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="${size.w}"
+            height="${size.h}"
+            viewBox="0 0 ${size.w} ${size.h}"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <defs>
-              <pattern id="bg" width="${PATTERN_WIDTH / scaleFactor}" height="${PATTERN_HEIGHT / scaleFactor}" viewBox="0 0 ${PATTERN_WIDTH} ${PATTERN_HEIGHT}" patternUnits="userSpaceOnUse">
+              <pattern
+                id="bg"
+                width="${PATTERN_WIDTH / scaleFactor}"
+                height="${PATTERN_HEIGHT / scaleFactor}"
+                viewBox="0 0 ${PATTERN_WIDTH} ${PATTERN_HEIGHT}"
+                patternUnits="userSpaceOnUse"
+              >
                 <rect width="${PATTERN_WIDTH}" height="${PATTERN_HEIGHT}" fill="${shade0}"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M296.113 238.887L204 292.069L236.125 347.71L273 326.42V480.569H335.021H341H403.021V326.42L439.897 347.71L472.021 292.069L380.77 239.385C376.138 258.429 358.97 272.569 338.5 272.569C317.852 272.569 300.564 258.183 296.113 238.887Z" fill="${accent1}"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1006.96 280.022C1010.86 283.886 1017.14 283.886 1021.04 280.022L1062.07 239.35L1125 275.82L1102.2 315.468L1077.38 301.085C1072.73 310.807 1065.66 329.016 1065.31 350.255C1064.87 377.153 1076.72 451.89 1080.34 474.047V480.836H1018H1010H947.662V474.047C951.284 451.89 963.131 377.153 962.692 350.255C962.345 329.016 955.266 310.807 950.622 301.085L925.804 315.468L903 275.82L965.928 239.35L1006.96 280.022Z" fill="url(#paint0_linear)"/>
@@ -691,13 +705,19 @@ const render = (colors, options) => {
         const canvas = createCanvas(size.w, size.h);
         const ctx = canvas.getContext('2d');
 
-        const url = `data:image/svg+xml;base64,${Buffer.from(svg, 'utf8').toString('base64')}`;
+        const url = `data:image/svg+xml;base64,${Buffer.from(
+          svg,
+          'utf8',
+        ).toString('base64')}`;
         const img = await loadImage(url);
         ctx.drawImage(img, 0, 0);
-        
+
         return {
           name: `themer-wallpaper-shirts-${colorSet.name}-${size.w}-${size.h}.png`,
-          contents: Buffer.from(canvas.toDataURL().replace('data:image/png;base64,', ''), 'base64'),
+          contents: Buffer.from(
+            canvas.toDataURL().replace('data:image/png;base64,', ''),
+            'base64',
+          ),
         };
       }),
     ),

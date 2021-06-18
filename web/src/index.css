@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'Fira Code';
-  src: local('Fira Code'), url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/woff2/FiraCode-Regular.woff2) format('woff2');
+  src: local('Fira Code'),
+    url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/woff2/FiraCode-Regular.woff2)
+      format('woff2');
   font-weight: 400;
 }
 
@@ -45,7 +47,7 @@ body,
   --small-border-radius-size: var(--size-small-4);
 
   --font-size-small: var(--size-small-1);
-  
+
   --line-height: calc(1 / var(--size-ratio));
 
   --button-transition: background-color 75ms ease;

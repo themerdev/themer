@@ -19,7 +19,7 @@
 }
 
 .textInput {
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   font-size: var(--size-regular);
   line-height: var(--size-regular);
   border: none;

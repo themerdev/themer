@@ -1,14 +1,14 @@
-const {mapValues} = require('lodash');
+const { mapValues } = require('lodash');
 
-const formatColors = colors =>
-  mapValues(colors, hex => {
+const formatColors = (colors) =>
+  mapValues(colors, (hex) => {
     const elements = hex.replace('#', '').match(/.{2}/g);
     elements.push('00');
     elements.reverse();
     return elements.join('');
   });
 
-const renderTheme = colorSet =>
+const renderTheme = (colorSet) =>
   Promise.resolve({
     name: `themer-${colorSet.name}.reg`,
     contents: Buffer.from(
@@ -34,24 +34,24 @@ const renderTheme = colorSet =>
 "ScreenColors"=dword:00000007
 "PopupColors"=dword:0000008b
     `,
-      'utf8'
+      'utf8',
     ),
   });
 
-const render = colors =>
+const render = (colors) =>
   Object.keys(colors)
-    .map(name => ({
+    .map((name) => ({
       name,
       colors: formatColors(colors[name]),
     }))
-    .map(colorSet => renderTheme(colorSet));
+    .map((colorSet) => renderTheme(colorSet));
 
-const renderInstructions = paths => `
+const renderInstructions = (paths) => `
 Simply double-click the desired theme file to add the color keys to the registry:
 
-${paths.map(p => `* \`${p}\``).join('\n')}
+${paths.map((p) => `* \`${p}\``).join('\n')}
 
 The scheme of CMD can then be configured with the \`color\` command. For example, use \`color 07\` to set the background and foreground to your color set's default.
 `;
 
-module.exports = {render, renderInstructions};
+module.exports = { render, renderInstructions };

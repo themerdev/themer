@@ -15,4 +15,4 @@ describe('renderInstructions', () => {
     const instructions = renderInstructions(files.map(({ name }) => name));
     expect(instructions).toMatchSnapshot();
   });
-})
+});

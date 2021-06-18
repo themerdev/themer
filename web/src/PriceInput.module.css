@@ -9,7 +9,8 @@
   border-style: solid;
   border-top-left-radius: var(--border-radius-size);
   border-bottom-left-radius: var(--border-radius-size);
-  padding: var(--size-small-4) var(--size-small-4) var(--size-small-4) var(--size-small-2);
+  padding: var(--size-small-4) var(--size-small-4) var(--size-small-4)
+    var(--size-small-2);
 }
 
 .amountInput {
@@ -39,7 +40,8 @@
   border-top-right-radius: var(--border-radius-size);
   border-bottom-right-radius: var(--border-radius-size);
   border-bottom-left-radius: 0;
-  padding: var(--size-small-4) var(--size-large-1) var(--size-small-4) var(--size-small-1);
+  padding: var(--size-small-4) var(--size-large-1) var(--size-small-4)
+    var(--size-small-1);
   margin: 0;
   appearance: none;
   background-repeat: no-repeat;

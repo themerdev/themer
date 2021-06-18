@@ -1,6 +1,6 @@
 const Color = require('color');
 
-const schemeName = key => `themer-${key}`;
+const schemeName = (key) => `themer-${key}`;
 
 const MIX = 0.2;
 
@@ -14,12 +14,13 @@ const dimMix = (name, colors, key) =>
     .mix(name === 'dark' ? Color(colors.shade0) : Color(colors.shade7), MIX)
     .hex();
 
-const render = colors => {
+const render = (colors) => {
   const document = `
 # Themer Alacritty
 
 schemes:
-  ${Object.entries(colors).map(([name, colors]) => `${schemeName(name)}: &${name}
+  ${Object.entries(colors).map(
+    ([name, colors]) => `${schemeName(name)}: &${name}
     primary:
       background: '${colors.shade0}'
       foreground: '${colors.shade6}'
@@ -61,7 +62,8 @@ schemes:
       magenta: '${dimMix(name, colors, 'accent7')}'
       cyan: '${dimMix(name, colors, 'accent4')}'
       white: '${name === 'dark' ? colors.shade5 : colors.shade3}'
-  `).join(`
+  `,
+  ).join(`
 
   `)}
 `;

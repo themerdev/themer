@@ -16,7 +16,7 @@ function anchoredRandom(anchor, factor = 3) {
 
 function randomColorKey(anchor) {
   if (Math.random < 0.5) {
-    return `shade${1 + Math.round(anchoredRandom(anchor) * 7) % 7}`;
+    return `shade${1 + (Math.round(anchoredRandom(anchor) * 7) % 7)}`;
   } else {
     return `accent${Math.round(anchoredRandom(anchor) * 8) % 8}`;
   }
@@ -29,9 +29,10 @@ function minRandom(min) {
 function* diamonds(rowCount, columnCount, colorSet) {
   for (let i = 0; i <= rowCount; i++) {
     for (let j = 0; j <= columnCount; j++) {
-      const cx = j * DIAGONAL + ((DIAGONAL / 2) * (i % 2));
-      const cy = i * DIAGONAL / 2;
-      const anchoredRandomColorKey = () => randomColorKey((i / rowCount + j / columnCount) / 2);
+      const cx = j * DIAGONAL + (DIAGONAL / 2) * (i % 2);
+      const cy = (i * DIAGONAL) / 2;
+      const anchoredRandomColorKey = () =>
+        randomColorKey((i / rowCount + j / columnCount) / 2);
       if (Math.random() < 0.3) {
         yield {
           color: colorSet.colors[anchoredRandomColorKey()],
@@ -85,7 +86,7 @@ function* diamonds(rowCount, columnCount, colorSet) {
             { command: 'lineTo', args: [cx, cy + DIAGONAL / 2] },
             { command: 'closePath', args: [] },
           ],
-        }
+        };
       }
     }
   }
@@ -94,7 +95,7 @@ function* diamonds(rowCount, columnCount, colorSet) {
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['themer-wallpaper-diamonds-size']
+      options['themer-wallpaper-diamonds-size'],
     );
   } catch (e) {
     return [Promise.reject(e.message)];
@@ -103,35 +104,39 @@ const render = (colors, options) => {
   const colorSets = getColorSets(colors);
 
   return deepFlatten(
-    sizes.map(
-      size => colorSets.map(
-        async colorSet => {
-          const rowCount = Math.ceil(size.h / (DIAGONAL / 2));
-          const columnCount = Math.ceil(size.w / DIAGONAL);
-          const canvas = createCanvas(size.w, size.h);
-          const ctx = canvas.getContext('2d');
+    sizes.map((size) =>
+      colorSets.map(async (colorSet) => {
+        const rowCount = Math.ceil(size.h / (DIAGONAL / 2));
+        const columnCount = Math.ceil(size.w / DIAGONAL);
+        const canvas = createCanvas(size.w, size.h);
+        const ctx = canvas.getContext('2d');
 
-          ctx.fillStyle = colorSet.colors.shade0;
-          ctx.fillRect(0, 0, size.w, size.h);
+        ctx.fillStyle = colorSet.colors.shade0;
+        ctx.fillRect(0, 0, size.w, size.h);
 
-          for (const diamond of diamonds(rowCount, columnCount, colorSet)) {
-            ctx.beginPath();
-            ctx.fillStyle = Color(diamond.color).alpha(diamond.opacity).rgb().string();
-            for (const { command, args } of diamond.commands) {
-              ctx[command](...args);
-            }
-            ctx.fill();
+        for (const diamond of diamonds(rowCount, columnCount, colorSet)) {
+          ctx.beginPath();
+          ctx.fillStyle = Color(diamond.color)
+            .alpha(diamond.opacity)
+            .rgb()
+            .string();
+          for (const { command, args } of diamond.commands) {
+            ctx[command](...args);
           }
-
-          return {
-            name: `themer-wallpaper-diamonds-${colorSet.name}-${size.w}x${size.h}.png`,
-            contents: Buffer.from(canvas.toDataURL().replace('data:image/png;base64,', ''), 'base64'),
-          };
+          ctx.fill();
         }
-      ),
+
+        return {
+          name: `themer-wallpaper-diamonds-${colorSet.name}-${size.w}x${size.h}.png`,
+          contents: Buffer.from(
+            canvas.toDataURL().replace('data:image/png;base64,', ''),
+            'base64',
+          ),
+        };
+      }),
     ),
   );
-}
+};
 
 module.exports = {
   render,

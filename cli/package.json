@@ -4,9 +4,12 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "jest"
+    "format": "prettier --write .",
+    "test:format": "prettier --check .",
+    "test:unit": "jest"
   },
   "devDependencies": {
-    "jest": "^27.0.4"
+    "jest": "^27.0.4",
+    "prettier": "2.3.1"
   }
 }

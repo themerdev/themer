@@ -153,14 +153,18 @@ const renderTheme = (name, colors, isDark) => `
   \`(magit-diff-file-header ((,class (:foreground ,shade6 :background ,shade2))))
   \`(lazy-highlight ((,class (:foreground ,shade6 :background ,shade2))))
   \`(term ((,class (:foreground ,shade6 :background ,shade0))))
-  \`(term-color-black ((,class (:foreground ,${isDark ? 'shade2' : 'shade6'} :background ,shade0))))
+  \`(term-color-black ((,class (:foreground ,${
+    isDark ? 'shade2' : 'shade6'
+  } :background ,shade0))))
   \`(term-color-blue ((,class (:foreground ,accent5 :background ,shade0))))
   \`(term-color-red ((,class (:foreground ,accent0 :background ,shade0))))
   \`(term-color-green ((,class (:foreground ,accent3 :background ,shade0))))
   \`(term-color-yellow ((,class (:foreground ,accent2 :background ,shade0))))
   \`(term-color-magenta ((,class (:foreground ,accent7 :background ,shade0))))
   \`(term-color-cyan ((,class (:foreground ,accent4 :background ,shade0))))
-  \`(term-color-white ((,class (:foreground ,${isDark ? 'shade6' : 'shade2'} :background ,shade0))))
+  \`(term-color-white ((,class (:foreground ,${
+    isDark ? 'shade6' : 'shade2'
+  } :background ,shade0))))
   \`(rainbow-delimiters-unmatched-face ((,class :foreground ,accent0)))
   \`(helm-header ((,class (:foreground ,shade6 :background ,shade0 :underline nil :box nil))))
   \`(helm-source-header ((,class (:foreground ,accent1 :background ,shade0 :underline nil :weight bold))))
@@ -237,19 +241,24 @@ const renderTheme = (name, colors, isDark) => `
 ;;; themer-${name}-theme.el ends here
 `;
 
-const render = colors => Object.entries(colors).map(async ([key, colors]) => ({
-  name: `themer-${key}-theme.el`,
-  contents: Buffer.from(renderTheme(key, colors, key === 'dark'), 'utf8'),
-}));
+const render = (colors) =>
+  Object.entries(colors).map(async ([key, colors]) => ({
+    name: `themer-${key}-theme.el`,
+    contents: Buffer.from(renderTheme(key, colors, key === 'dark'), 'utf8'),
+  }));
 
-const renderInstructions = paths => `
-Copy (or symlink) the generated theme ${paths.length === 1 ? 'file' : 'files'} into \`~/.emacs.d/\`:
+const renderInstructions = (paths) => `
+Copy (or symlink) the generated theme ${
+  paths.length === 1 ? 'file' : 'files'
+} into \`~/.emacs.d/\`:
 
-    ${paths.map(p => `cp '${p}' ~/.emacs.d/`).join('\n    ')}
+    ${paths.map((p) => `cp '${p}' ~/.emacs.d/`).join('\n    ')}
 
 Then load the desired theme in \`init.el\`:
 
-    ${paths.map(p => `(load-theme '${basename(p, '-theme.el')} t)`).join('\n    ;; or\n    ')}
+    ${paths
+      .map((p) => `(load-theme '${basename(p, '-theme.el')} t)`)
+      .join('\n    ;; or\n    ')}
 `;
 
 module.exports = {

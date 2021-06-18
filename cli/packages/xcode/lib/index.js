@@ -1,22 +1,22 @@
 const _ = require('lodash');
 const Color = require('color');
 
-const formatColorSet = colors =>
-  _.mapValues(colors, hex =>
+const formatColorSet = (colors) =>
+  _.mapValues(colors, (hex) =>
     Color(hex)
       .rgb()
       .array()
       .concat(255)
-      .map(component => _.round(component / 255, 6))
-      .join(' ')
+      .map((component) => _.round(component / 255, 6))
+      .join(' '),
   );
 
-const render = colors => {
+const render = (colors) => {
   const colorSets = [
-    {name: 'dark', colors: colors.dark && formatColorSet(colors.dark)},
-    {name: 'light', colors: colors.light && formatColorSet(colors.light)},
-  ].filter(colorSet => !!colorSet.colors);
-  return colorSets.map(colorSet => {
+    { name: 'dark', colors: colors.dark && formatColorSet(colors.dark) },
+    { name: 'light', colors: colors.light && formatColorSet(colors.light) },
+  ].filter((colorSet) => !!colorSet.colors);
+  return colorSets.map((colorSet) => {
     const {
       shade0,
       shade1,
@@ -121,19 +121,28 @@ const render = colors => {
             </dict>
           </dict>
         </plist>`,
-        'utf8'
+        'utf8',
       ),
     });
   });
 };
 
-const renderInstructions = paths => `
-Copy (or symlink) the generated theme ${paths.length > 1 ? 'files' : 'file'} to Xcode's themes directory:
+const renderInstructions = (paths) => `
+Copy (or symlink) the generated theme ${
+  paths.length > 1 ? 'files' : 'file'
+} to Xcode's themes directory:
 
     mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
-${paths.map(p => `    cp '${p}' ~/Library/Developer/Xcode/UserData/FontAndColorThemes/`).join('\n')}
+${paths
+  .map(
+    (p) =>
+      `    cp '${p}' ~/Library/Developer/Xcode/UserData/FontAndColorThemes/`,
+  )
+  .join('\n')}
 
-Then restart Xcode. The ${paths.length > 1 ? 'themes' : 'theme'} will be available in Preferences > Fonts and Colors.
+Then restart Xcode. The ${
+  paths.length > 1 ? 'themes' : 'theme'
+} will be available in Preferences > Fonts and Colors.
 `;
 
 module.exports = {

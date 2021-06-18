@@ -2,22 +2,42 @@ const { render, renderInstructions } = require('./index');
 const { colors } = require('../../colors-default');
 
 describe('themer keypirinha theme generator', () => {
-  const promisedFiles = Promise.all(render(colors))
-  const colorPropertyNames = ['color_background','color_foreground','color_faded','color_accent','color_warn','color_title','color_status','color_textbox_back','color_listitem_back','color_listitem_title','color_listitem_desc','color_listitem_tips','color_listitem_selected_back','color_listitem_selected_title','color_listitem_selected_desc','color_listitem_selected_tips'];
+  const promisedFiles = Promise.all(render(colors));
+  const colorPropertyNames = [
+    'color_background',
+    'color_foreground',
+    'color_faded',
+    'color_accent',
+    'color_warn',
+    'color_title',
+    'color_status',
+    'color_textbox_back',
+    'color_listitem_back',
+    'color_listitem_title',
+    'color_listitem_desc',
+    'color_listitem_tips',
+    'color_listitem_selected_back',
+    'color_listitem_selected_title',
+    'color_listitem_selected_desc',
+    'color_listitem_selected_tips',
+  ];
 
   it('should generate well-formatted themes', async () => {
     const files = await promisedFiles;
     expect(files.length).toBe(2);
-    files.forEach(file => {
+    files.forEach((file) => {
       expect(/themer-keypirinha-(dark|light)\.ini/.test(file.name)).toBe(true);
       fileLines = file.contents.toString('utf8').split('\n');
-      expect(/\[theme\/Themer(Dark|Light)Colors\]/.test(fileLines[0])).toBe(true);
-      for(let i=1; i<fileLines.length; i++) {
-        if(fileLines[i] === '')
-          continue;
-        else  {
+      expect(/\[theme\/Themer(Dark|Light)Colors\]/.test(fileLines[0])).toBe(
+        true,
+      );
+      for (let i = 1; i < fileLines.length; i++) {
+        if (fileLines[i] === '') continue;
+        else {
           [colorPropertyName, color] = fileLines[i].split('=');
-          expect(colorPropertyNames.indexOf(colorPropertyName.trim())).toBeGreaterThan(-1)
+          expect(
+            colorPropertyNames.indexOf(colorPropertyName.trim()),
+          ).toBeGreaterThan(-1);
           expect(/^#[a-fA-F0-9]+$/.test(color.trim())).toBe(true);
         }
       }

@@ -8,9 +8,10 @@
   padding: 0 var(--size-regular);
   opacity: 0;
   transform: translateY(100%);
-  transition:
-    transform var(--notification-transition-time) var(--notification-transition-function),
-    opacity var(--notification-transition-time) var(--notification-transition-function);
+  transition: transform var(--notification-transition-time)
+      var(--notification-transition-function),
+    opacity var(--notification-transition-time)
+      var(--notification-transition-function);
 }
 
 .notification {

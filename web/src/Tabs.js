@@ -6,10 +6,12 @@ export default ({ children }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return children({
     tabClassName: styles.tab,
-    getTabStyle: active => ({
-      backgroundColor: active ? getActiveColorOrFallback(['shade0'], true) : getActiveColorOrFallback(['shade2'], true),
-      color: getActiveColorOrFallback(['shade7']),
-      borderColor: getActiveColorOrFallback(['shade7']),
+    getTabStyle: (active) => ({
+      'backgroundColor': active
+        ? getActiveColorOrFallback(['shade0'], true)
+        : getActiveColorOrFallback(['shade2'], true),
+      'color': getActiveColorOrFallback(['shade7']),
+      'borderColor': getActiveColorOrFallback(['shade7']),
       '--tab-bottom-overlap-color': active
         ? getActiveColorOrFallback(['shade0'], true)
         : getActiveColorOrFallback(['shade2'], true),

@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe } from '@stripe/stripe-js';
 import {
   Elements,
   CardElement,
   useStripe,
-  useElements
-} from "@stripe/react-stripe-js";
+  useElements,
+} from '@stripe/react-stripe-js';
 import styles from './CheckoutModal.module.css';
 import ThemeContext from './ThemeContext';
 import Banner from './Banner';
@@ -17,7 +17,9 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const CheckoutModal = ({ price, onClose, onComplete }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
-  const currency = currencyOptions.find(({isoCode}) => isoCode === price.code);
+  const currency = currencyOptions.find(
+    ({ isoCode }) => isoCode === price.code,
+  );
 
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
@@ -30,14 +32,13 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
 
   useEffect(() => {
     (async function fetchIntent() {
-      const response = await window
-        .fetch('/.netlify/functions/intent', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(price)
-        });
+      const response = await window.fetch('/.netlify/functions/intent', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(price),
+      });
       const data = await response.json();
       if (response.status === 200) {
         setClientSecret(data.clientSecret);
@@ -50,13 +51,13 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
   const cardStyle = {
     style: {
       base: {
-        color: getActiveColorOrFallback(['shade7']),
-        fontFamily: '"Fira Code", monospace',
-        fontSmoothing: "antialiased",
-        fontSize: "16px",
-        "::placeholder": {
-          color: getActiveColorOrFallback(['shade5'])
-        }
+        'color': getActiveColorOrFallback(['shade7']),
+        'fontFamily': '"Fira Code", monospace',
+        'fontSmoothing': 'antialiased',
+        'fontSize': '16px',
+        '::placeholder': {
+          color: getActiveColorOrFallback(['shade5']),
+        },
       },
       invalid: {
         color: getActiveColorOrFallback(['accent0']),
@@ -66,24 +67,24 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
         color: getActiveColorOrFallback(['accent3']),
         iconColor: getActiveColorOrFallback(['accent3']),
       },
-    }
+    },
   };
 
-  const cardChange = async evt => {
+  const cardChange = async (evt) => {
     setDisabled(evt.empty);
-    setError(evt.error ? evt.error.message : "");
+    setError(evt.error ? evt.error.message : '');
   };
 
-  const submit = async evt => {
+  const submit = async (evt) => {
     evt.preventDefault();
     setProcessing(true);
     const payload = await stripe.confirmCardPayment(clientSecret, {
       payment_method: {
         card: elements.getElement(CardElement),
         billing_details: {
-          name: evt.target.name.value
-        }
-      }
+          name: evt.target.name.value,
+        },
+      },
     });
     if (payload.error) {
       setError(`Payment failed: ${payload.error.message}`);
@@ -97,40 +98,44 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
       window.__ssa__log('payment complete');
     }
   };
-  
+
   return (
-    <form className={ styles.form } onSubmit={submit}>
-      <Modal onClose={ onClose } footer={ (
-        <>
-          <Button
-            type="button"
-            className={ styles.cancel }
-            secondary
-            onClick={ onClose }
-          >Cancel</Button>
-          <Button disabled={ disabled || processing || succeeded }>
-            {processing ? 'Processing...' : 'Pay & download' }
-          </Button>
-        </>
-      ) }>
+    <form className={styles.form} onSubmit={submit}>
+      <Modal
+        onClose={onClose}
+        footer={
+          <>
+            <Button
+              type='button'
+              className={styles.cancel}
+              secondary
+              onClick={onClose}
+            >
+              Cancel
+            </Button>
+            <Button disabled={disabled || processing || succeeded}>
+              {processing ? 'Processing...' : 'Pay & download'}
+            </Button>
+          </>
+        }
+      >
         <div
-          className={ styles.price }
+          className={styles.price}
           style={{ color: getActiveColorOrFallback(['shade7']) }}
         >
-          Total:{' '}
-          <span className={ styles.symbol }>{currency.symbol}</span>
+          Total: <span className={styles.symbol}>{currency.symbol}</span>
           {currency.toDisplay(price.amount)}
         </div>
         <div
-          className={ styles.card }
+          className={styles.card}
           style={{ borderColor: getActiveColorOrFallback(['shade7']) }}
         >
-          <CardElement options={ cardStyle } onChange={ cardChange } />
+          <CardElement options={cardStyle} onChange={cardChange} />
         </div>
         {error ? (
           <Banner
-            className={ styles.error }
-            color={ getActiveColorOrFallback(['accent0']) }
+            className={styles.error}
+            color={getActiveColorOrFallback(['accent0'])}
           >
             {error}
           </Banner>
@@ -138,10 +143,10 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
       </Modal>
     </form>
   );
-}
+};
 
-export default props => (
-  <Elements stripe={ stripePromise }>
-    <CheckoutModal { ...props } />
+export default (props) => (
+  <Elements stripe={stripePromise}>
+    <CheckoutModal {...props} />
   </Elements>
 );

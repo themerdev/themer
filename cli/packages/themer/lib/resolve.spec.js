@@ -3,7 +3,6 @@ const path = require('path'),
   wrap = require('./test-helpers/wrap');
 
 describe('the package resolver', () => {
-
   const helperDir = path.resolve(__dirname, 'test-helpers');
 
   it('should resolve local files', async () => {
@@ -18,7 +17,9 @@ describe('the package resolver', () => {
   });
 
   it('should fail to resolve nonexistent paths', async () => {
-    const wrapped = await wrap(() => resolvePackage(path.resolve(__dirname, 'foo', 'bar', 'baz.js')));
+    const wrapped = await wrap(() =>
+      resolvePackage(path.resolve(__dirname, 'foo', 'bar', 'baz.js')),
+    );
     expect(wrapped).toThrow();
   });
 
@@ -26,6 +27,4 @@ describe('the package resolver', () => {
     const wrapped = await wrap(() => resolvePackage('not-installed'));
     expect(wrapped).toThrow();
   });
-
 });
-

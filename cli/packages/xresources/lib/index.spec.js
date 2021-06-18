@@ -5,7 +5,7 @@ describe('themer xresources theme generator', () => {
   const promisedFiles = Promise.all(render(colors));
   it('renders valid theme files', async () => {
     const files = await promisedFiles;
-    files.forEach(file => {
+    files.forEach((file) => {
       expect(file.contents.toString('utf8')).toMatchSnapshot();
     });
   });

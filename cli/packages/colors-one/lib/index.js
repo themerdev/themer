@@ -1,7 +1,5 @@
 module.exports.colors = {
-
   dark: {
-
     accent0: '#e06c75',
     accent1: '#d19a66',
     accent2: '#e5c07b',
@@ -19,11 +17,9 @@ module.exports.colors = {
     shade5: '#828997',
     shade6: '#979eab',
     shade7: '#abb2bf',
-
   },
 
   light: {
-
     accent0: '#e45649',
     accent1: '#986801',
     accent2: '#c18401',
@@ -41,7 +37,5 @@ module.exports.colors = {
     shade5: '#696c77',
     shade6: '#51535D',
     shade7: '#383a42',
-
   },
-
 };

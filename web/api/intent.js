@@ -12,7 +12,7 @@ exports.handler = async function (event) {
       contentType: 'application/json',
       body: JSON.stringify({
         clientSecret: paymentIntent.client_secret,
-      })
+      }),
     };
   } catch (err) {
     return {
@@ -21,6 +21,6 @@ exports.handler = async function (event) {
       body: JSON.stringify({
         message: err.raw.message,
       }),
-    }
+    };
   }
-}
+};

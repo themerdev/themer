@@ -1,16 +1,19 @@
 const Color = require('color');
 const codec = require('json-url')('lzma');
 
-const urlFile = url => `
+const urlFile = (url) =>
+  `
 [InternetShortcut]
 URL=${url}
 `.trim();
 
-const render = colors => {
+const render = (colors) => {
   return Object.entries(colors).map(async ([key, colors]) => {
     const rgbColors = Object.fromEntries(
-      Object.entries(colors)
-        .map(([key, color]) => [key, Color(color).object()]),
+      Object.entries(colors).map(([key, color]) => [
+        key,
+        Color(color).object(),
+      ]),
     );
     const isDark = key === 'dark';
     const theme = await codec.compress({
@@ -31,21 +34,21 @@ const render = colors => {
     return {
       name: `themer-${key}.url`,
       contents: Buffer.from(urlFile(url), 'utf8'),
-    }
+    };
   });
 };
 
-const renderInstructions = paths => {
+const renderInstructions = (paths) => {
   return `
 The Firefox Color add-on allows for simple theming without the need for a developer account or package review process by Mozilla.
 
 1. Install the [Firefox Color add-on](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/).
-2. Open ${paths.map(p => `'${p}'`).join(' or ')} directly with Firefox.
+2. Open ${paths.map((p) => `'${p}'`).join(' or ')} directly with Firefox.
 3. Click "Yep" when prompted to apply the custom theme.
 
 For a more fully featured Firefox theme, see themer's Firefox theme add-on generator.
   `;
-}
+};
 
 module.exports = {
   render,

@@ -2,7 +2,7 @@ const getSizesFromOptOrDefault = (opt, patternSize) => {
   let sizes;
   if (opt) {
     const unparsedSizes = Array.isArray(opt) ? opt : [opt];
-    sizes = unparsedSizes.map(unparsedSize => {
+    sizes = unparsedSizes.map((unparsedSize) => {
       const results = /(\d+)x(\d+)/.exec(unparsedSize);
       if (results) {
         const w = parseInt(results[1], 10);
@@ -28,7 +28,7 @@ const getSizesFromOptOrDefault = (opt, patternSize) => {
     ];
   }
   if (patternSize) {
-    return sizes.map(size => ({
+    return sizes.map((size) => ({
       ...size,
       s: patternSize && size.w / Math.round(size.w / patternSize),
     }));
@@ -37,26 +37,30 @@ const getSizesFromOptOrDefault = (opt, patternSize) => {
   }
 };
 
-const deepFlatten = arr =>
+const deepFlatten = (arr) =>
   arr.reduce(
     (cumulative, inner) =>
       cumulative.concat(Array.isArray(inner) ? deepFlatten(inner) : inner),
-    []
+    [],
   );
 
-const colorSets = colors =>
-  Object.entries(colors).map(([name, colors]) => ({name, colors}));
+const colorSets = (colors) =>
+  Object.entries(colors).map(([name, colors]) => ({ name, colors }));
 
-const listOutputFiles = paths => `
+const listOutputFiles = (paths) => `
 Files generated:
 
-${paths.map(p => `* \`${p}\``).join('\n')}
+${paths.map((p) => `* \`${p}\``).join('\n')}
 `;
 
-const weightedRandom = map => {
-  const cumulativeWeights = [...map.values()].reduce((c, weight, i) => c.concat(weight + (i === 0 ? 0 : c[i-1])), []);
-  const random = cumulativeWeights[cumulativeWeights.length-1] * Math.random();
-  return [...map.keys()][cumulativeWeights.findIndex(cw => random < cw)];
+const weightedRandom = (map) => {
+  const cumulativeWeights = [...map.values()].reduce(
+    (c, weight, i) => c.concat(weight + (i === 0 ? 0 : c[i - 1])),
+    [],
+  );
+  const random =
+    cumulativeWeights[cumulativeWeights.length - 1] * Math.random();
+  return [...map.keys()][cumulativeWeights.findIndex((cw) => random < cw)];
 };
 
 module.exports = {

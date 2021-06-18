@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 export default function useEscListener(handler) {
-  const escListener = evt => {
+  const escListener = (evt) => {
     if (evt.key === 'Escape') {
       handler();
     }
@@ -12,4 +12,4 @@ export default function useEscListener(handler) {
       window.document.removeEventListener('keydown', escListener);
     };
   });
-};
+}

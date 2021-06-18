@@ -23,8 +23,8 @@ The generated files will be listed in `<output dir>/README.md`.
 
 By default, `@themer/wallpaper-shirts` will output wallpapers at the following sizes:
 
-* 2880 by 1800 (desktop)
-* 750 by 1334 (device)
+- 2880 by 1800 (desktop)
+- 750 by 1334 (device)
 
 ### Custom resolutions
 

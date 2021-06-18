@@ -16,7 +16,6 @@ const child_process = require('child_process'),
   } = require('./test-helpers/template');
 
 describe('the themer command line interface', () => {
-
   const pathToExecutable = path.resolve(__dirname, '..', 'bin', 'themer.js');
 
   it('should fail if no arguments are provided', async () => {
@@ -25,24 +24,27 @@ describe('the themer command line interface', () => {
   });
 
   it('should fail if given unresolvable arguments', async () => {
-    const args = [
-      '-c', 'fake',
-      '-t', 'fake',
-      '-o', 'fake',
-    ];
+    const args = ['-c', 'fake', '-t', 'fake', '-o', 'fake'];
     const wrapped = await wrap(() => execFile(pathToExecutable, args));
     expect(wrapped).toThrow();
   });
 
   describe('when given valid arguments', () => {
-
     const testOutputDir = path.resolve(tmpdir(), 'test-output');
     const templateName = 'template.js';
-    const testOutputFile = path.resolve(testOutputDir, templateName, outputFileDirectory, outputFileName);
+    const testOutputFile = path.resolve(
+      testOutputDir,
+      templateName,
+      outputFileDirectory,
+      outputFileName,
+    );
     const args = [
-      '-c', path.resolve(__dirname, 'test-helpers', 'colors.js'),
-      '-t', path.resolve(__dirname, 'test-helpers', templateName),
-      '-o', testOutputDir,
+      '-c',
+      path.resolve(__dirname, 'test-helpers', 'colors.js'),
+      '-t',
+      path.resolve(__dirname, 'test-helpers', templateName),
+      '-o',
+      testOutputDir,
     ];
 
     afterEach(() => exec(`rm -rf ${testOutputDir}`));
@@ -60,13 +62,17 @@ describe('the themer command line interface', () => {
 
     it('should create a directory for each template, named after the template', async () => {
       await execFile(pathToExecutable, args);
-      const wrapped = await wrap(() => access(path.resolve(testOutputDir, templateName)));
+      const wrapped = await wrap(() =>
+        access(path.resolve(testOutputDir, templateName)),
+      );
       expect(wrapped).not.toThrow();
     });
 
     it('should render any subdirectories that the templates might specify', async () => {
       await execFile(pathToExecutable, args);
-      const wrapped = await wrap(() => access(path.resolve(testOutputDir, templateName, outputFileDirectory)));
+      const wrapped = await wrap(() =>
+        access(path.resolve(testOutputDir, templateName, outputFileDirectory)),
+      );
       expect(wrapped).not.toThrow();
     });
 
@@ -84,11 +90,12 @@ describe('the themer command line interface', () => {
 
     it('should render README.md properly', async () => {
       await execFile(pathToExecutable, args);
-      const contents = await readFile(path.resolve(testOutputDir, 'README.md'), 'utf8');
+      const contents = await readFile(
+        path.resolve(testOutputDir, 'README.md'),
+        'utf8',
+      );
       expect(contents).toContain(readmeInstructions);
       expect(contents).toContain(outputFileName);
     });
-
   });
-
 });

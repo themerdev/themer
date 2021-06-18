@@ -16,25 +16,28 @@ const themator = (theme, colorSet) => {
     colorSet.accent6,
     colorSet.accent7,
     colorSet.shade7,
-  ]
+  ];
 
   return `[[Themer ${theme}]]
   background_color = "${colorSet.shade0}"
   cursor_color = "${colorSet.shade6}"
   foreground_color = "${colorSet.shade6}"
-  palette = "${palette.join(":")}"
-`
-}
+  palette = "${palette.join(':')}"
+`;
+};
 
-const render = colors => Object.entries(colors).map(
-  ([theme, colorSet]) => Promise.resolve({
-    name: `themer-terminator-${theme}.txt`,
-    contents: Buffer.from(themator(theme, colorSet)),
-  })
-);
+const render = (colors) =>
+  Object.entries(colors).map(([theme, colorSet]) =>
+    Promise.resolve({
+      name: `themer-terminator-${theme}.txt`,
+      contents: Buffer.from(themator(theme, colorSet)),
+    }),
+  );
 
-const renderInstructions = paths => `
-Copy the contents of ${paths.map(p => `\`${p}\``).join(' or ')} to the Terminator's config file.
+const renderInstructions = (paths) => `
+Copy the contents of ${paths
+  .map((p) => `\`${p}\``)
+  .join(' or ')} to the Terminator's config file.
 
 The config file is usually located at \`~/.config/terminator/config\`.
 

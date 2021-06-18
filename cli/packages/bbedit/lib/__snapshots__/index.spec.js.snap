@@ -2,9 +2,9 @@
 
 exports[`render should render a properly formatted BBEdit theme file 1`] = `
 "
-    <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
-    <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
-    <plist version=\\"1.0\\">
+        <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+        <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
+        <plist version=\\"1.0\\">
   <dict>
     <key>BackgroundColor</key>
     <string>rgba(0.1568627450980392, 0.14901960784313725, 0.1607843137254902, 1.00)</string>
@@ -154,14 +154,14 @@ exports[`render should render a properly formatted BBEdit theme file 1`] = `
     <string>rgba(1, 0.25098039215686274, 0.3137254901960784, 1.00)</string>
   </dict>
 </plist>
-  "
+      "
 `;
 
 exports[`render should render a properly formatted BBEdit theme file 2`] = `
 "
-    <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
-    <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
-    <plist version=\\"1.0\\">
+        <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+        <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
+        <plist version=\\"1.0\\">
   <dict>
     <key>BackgroundColor</key>
     <string>rgba(1, 0.9882352941176471, 1, 1.00)</string>
@@ -311,7 +311,7 @@ exports[`render should render a properly formatted BBEdit theme file 2`] = `
     <string>rgba(0.9411764705882353, 0.24313725490196078, 0.30196078431372547, 1.00)</string>
   </dict>
 </plist>
-  "
+      "
 `;
 
 exports[`renderInstructions should provide installation instructions 1`] = `

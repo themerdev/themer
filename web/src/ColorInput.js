@@ -20,35 +20,39 @@ export default ({ className, style, colorKey, help }) => {
     debounce(setActiveRawColor, 100),
     [setActiveRawColor],
   );
-  const contrast = colorKey === 'shade0'
-    ? null
-    : numeral(getActiveContrastFromBackground(colorKey)).format('0.00');
+  const contrast =
+    colorKey === 'shade0'
+      ? null
+      : numeral(getActiveContrastFromBackground(colorKey)).format('0.00');
   return (
     <div
-      className={ [styles.outerWrapper, className].join(' ') }
-      style={ style }
+      className={[styles.outerWrapper, className].join(' ')}
+      style={style}
       title={contrast && `Contrast ratio: ${contrast}`}
     >
-      <div className={ styles.inputsWrapper }>
-        <label className={ styles.textInputWrapper } style={{ color: getActiveColorOrFallback(['shade7']) }}>
-          <span className={ styles.label }>{ colorKey }:</span>
+      <div className={styles.inputsWrapper}>
+        <label
+          className={styles.textInputWrapper}
+          style={{ color: getActiveColorOrFallback(['shade7']) }}
+        >
+          <span className={styles.label}>{colorKey}:</span>
           <input
-            type="text"
-            className={ styles.textInput }
+            type='text'
+            className={styles.textInput}
             style={{
               color: getActiveColorOrFallback(['shade7']),
               borderBottomColor: getActiveColorOrFallback([colorKey]),
             }}
-            value={ getActiveRawColor(colorKey) }
-            onChange={ evt => {
+            value={getActiveRawColor(colorKey)}
+            onChange={(evt) => {
               setActiveRawColor(colorKey, evt.target.value);
               debouncedLogEvent('change raw color', { inputType: 'text' });
-            } }
-            ref={ textInput }
+            }}
+            ref={textInput}
           />
         </label>
         <label
-          className={ styles.swatch }
+          className={styles.swatch}
           style={{
             color: getBestForeground(
               getActiveColorOrFallback(['shade7']),
@@ -57,29 +61,34 @@ export default ({ className, style, colorKey, help }) => {
             ),
             backgroundColor: getActiveColorOrFallback([colorKey]),
           }}
-          tabIndex="-1"
-          onClick={ evt => {
-            if(!colorSupport) {
+          tabIndex='-1'
+          onClick={(evt) => {
+            if (!colorSupport) {
               evt.preventDefault();
-              textInput.current.focus()
+              textInput.current.focus();
             }
-          } }
+          }}
         >
           <DropletIcon />
           <input
-            aria-label={ `${colorKey} color picker` }
-            type="color"
-            className={ styles.colorInput }
-            value={ getActiveColorOrFallback([colorKey], colorKey === 'shade0') }
-            onChange={ evt => {
+            aria-label={`${colorKey} color picker`}
+            type='color'
+            className={styles.colorInput}
+            value={getActiveColorOrFallback([colorKey], colorKey === 'shade0')}
+            onChange={(evt) => {
               debouncedSetActiveRawColor(colorKey, evt.target.value);
               debouncedLogEvent('change raw color', { inputType: 'color' });
-            } }
-            tabIndex="-1"
+            }}
+            tabIndex='-1'
           />
         </label>
       </div>
-      <div className={ styles.help } style={{ color: getActiveColorOrFallback(['shade4']) }}>{ help }</div>
+      <div
+        className={styles.help}
+        style={{ color: getActiveColorOrFallback(['shade4']) }}
+      >
+        {help}
+      </div>
     </div>
-  )
+  );
 };

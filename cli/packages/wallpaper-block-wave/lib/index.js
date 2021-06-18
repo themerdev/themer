@@ -9,11 +9,12 @@ const { createCanvas } = require('canvas');
 const Color = require('color');
 
 const render = (colors, options) => {
-
   try {
-    var sizes = getSizesFromOptOrDefault(options['themer-wallpaper-block-wave-size'], 36);
-  }
-  catch(e) {
+    var sizes = getSizesFromOptOrDefault(
+      options['themer-wallpaper-block-wave-size'],
+      36,
+    );
+  } catch (e) {
     return [Promise.reject(e.message)];
   }
 
@@ -43,7 +44,7 @@ const render = (colors, options) => {
       sizes
         .map((size) => {
           let blockMaxSize = size.s / 3;
-          let blockMinSize = blockMaxSize * 2/3;
+          let blockMinSize = (blockMaxSize * 2) / 3;
           let blocks = [];
           for (let i = 0; i < size.w; i += size.s) {
             for (let j = 0; j < size.h; j += size.s) {
@@ -51,7 +52,9 @@ const render = (colors, options) => {
               let xPosition = (i + size.s / 2) / size.w;
               let yPosition = (j + size.s / 2) / size.h;
               let positionScaleFactor = Math.abs(xPosition - yPosition);
-              let blockSize = blockMaxSize - (blockMaxSize - blockMinSize) * positionScaleFactor;
+              let blockSize =
+                blockMaxSize -
+                (blockMaxSize - blockMinSize) * positionScaleFactor;
               let padding = (size.s - blockSize) / 2;
               blocks.push({
                 x: i + padding,
@@ -96,7 +99,7 @@ const render = (colors, options) => {
           gradient.addColorStop(0, colorSet.colors.shade0);
           gradient.addColorStop(
             0.5,
-            Color(colorSet.colors.shade0).alpha(0).rgb().string()
+            Color(colorSet.colors.shade0).alpha(0).rgb().string(),
           );
           gradient.addColorStop(1, colorSet.colors.shade0);
           ctx.fillStyle = gradient;
@@ -106,15 +109,15 @@ const render = (colors, options) => {
             name: `themer-wallpaper-block-wave-${colorSet.name}-${size.w}x${size.h}.png`,
             contents: Buffer.from(
               canvas.toDataURL().replace('data:image/png;base64,', ''),
-              'base64'
+              'base64',
             ),
           };
-        })
-    )
+        }),
+    ),
   );
 };
 
 module.exports = {
   render,
-  renderInstructions: listOutputFiles
+  renderInstructions: listOutputFiles,
 };

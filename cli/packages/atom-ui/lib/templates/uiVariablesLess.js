@@ -1,4 +1,4 @@
-module.exports = colors => `
+module.exports = (colors) => `
 // Themer colors
 
 @accent0: ${colors.accent0};

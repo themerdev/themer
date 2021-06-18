@@ -13,8 +13,8 @@ describe('colors-mojave', () => {
       'accent7',
       'shade0',
       'shade7',
-    ]
-    prefixes.forEach(prefix => {
+    ];
+    prefixes.forEach((prefix) => {
       expect(colors.dark[prefix]).toBeDefined();
       expect(colors.light[prefix]).toBeDefined();
     });

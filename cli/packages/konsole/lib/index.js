@@ -2,16 +2,13 @@ const Color = require('color');
 
 const MIX = 0.2;
 
-const format = color => color.rgb().round().array().join(',');
+const format = (color) => color.rgb().round().array().join(',');
 
-const standard = color => format(Color(color));
+const standard = (color) => format(Color(color));
 
 const brightMix = (color, colors, isDark) =>
   format(
-    Color(color).mix(
-      isDark ? Color(colors.shade7) : Color(colors.shade0),
-      MIX,
-    )
+    Color(color).mix(isDark ? Color(colors.shade7) : Color(colors.shade0), MIX),
   );
 
 const renderTheme = (colors, isDark) => `
@@ -80,16 +77,18 @@ Description=Themer ${isDark ? 'Dark' : 'Light'}
 Opacity=1
 `;
 
-const render = colors => Object.entries(colors)
-  .map(async ([name, colors])=> ({
+const render = (colors) =>
+  Object.entries(colors).map(async ([name, colors]) => ({
     name: `themer-${name}.colorscheme`,
     contents: Buffer.from(renderTheme(colors, name === 'dark'), 'utf8'),
   }));
 
-const renderInstructions = paths => `
-Copy (or symlink) the generated ${paths.length > 0 ? 'files' : 'file'} to \`~/.local/share/konsole/\`:
+const renderInstructions = (paths) => `
+Copy (or symlink) the generated ${
+  paths.length > 0 ? 'files' : 'file'
+} to \`~/.local/share/konsole/\`:
 
-    ${paths.map(p => `cp '${p}' ~/.local/share/konsole/`).join('\n    ')}
+    ${paths.map((p) => `cp '${p}' ~/.local/share/konsole/`).join('\n    ')}
 
 Then choose the desired theme in Konsole > Settings > Edit Current Profile > Appearance.
 `;

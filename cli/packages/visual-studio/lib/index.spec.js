@@ -5,7 +5,7 @@ describe('themer visual-studio theme generator', () => {
   it('should render valid theme files', async () => {
     const files = await Promise.all(render(colors));
     expect(files.length).toBe(2);
-    files.forEach(file => {
+    files.forEach((file) => {
       expect(file.contents.toString('utf8')).toMatchSnapshot();
     });
   });

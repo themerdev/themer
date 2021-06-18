@@ -3,7 +3,7 @@
 }
 
 .linksets > li::before {
-  content: "- ";
+  content: '- ';
 }
 
 .links {
@@ -16,5 +16,5 @@
 }
 
 .links > li:not(:first-child)::before {
-  content: ", ";
+  content: ', ';
 }

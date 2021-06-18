@@ -1,7 +1,6 @@
 const { colors } = require('./index');
 
 describe('colors-night-sky', () => {
-
   it('should contain a dark theme', () => {
     expect(colors.dark).toBeDefined();
   });
@@ -19,9 +18,8 @@ describe('colors-night-sky', () => {
       'shade0',
       'shade7',
     ];
-    prefixes.forEach(prefix => {
+    prefixes.forEach((prefix) => {
       expect(colors.dark[prefix]).toBeDefined();
     });
   });
-
 });

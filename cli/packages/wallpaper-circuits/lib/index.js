@@ -35,7 +35,7 @@ class Point {
 const render = (colors, options) => {
   try {
     var sizes = getSizesFromOptOrDefault(
-      options['themer-wallpaper-circuits-size']
+      options['themer-wallpaper-circuits-size'],
     );
   } catch (e) {
     return [Promise.reject(e.message)];
@@ -44,8 +44,8 @@ const render = (colors, options) => {
   const colorSets = getColorSets(colors);
 
   return deepFlatten(
-    sizes.map(
-      size => colorSets.map(async colorSet => {
+    sizes.map((size) =>
+      colorSets.map(async (colorSet) => {
         const canvas = createCanvas(size.w, size.h);
         const ctx = canvas.getContext('2d');
 
@@ -53,8 +53,12 @@ const render = (colors, options) => {
         ctx.fillRect(0, 0, size.w, size.h);
 
         // Calculate the drawing area
-        const columnCount = Math.floor((size.w - BORDER_SIZE * 2) / GRID_CELL_SIZE);
-        const rowCount = Math.floor((size.h - BORDER_SIZE * 2) / GRID_CELL_SIZE);
+        const columnCount = Math.floor(
+          (size.w - BORDER_SIZE * 2) / GRID_CELL_SIZE,
+        );
+        const rowCount = Math.floor(
+          (size.h - BORDER_SIZE * 2) / GRID_CELL_SIZE,
+        );
         const gridWidth = columnCount * GRID_CELL_SIZE;
         const gridHeight = rowCount * GRID_CELL_SIZE;
         const gridOriginX = (size.w - gridWidth) / 2;
@@ -75,10 +79,21 @@ const render = (colors, options) => {
             new Point(1, 0),
             new Point(0, 1),
             new Point(-1, 0),
-          ].filter(option => previous ? !(option.x === previous.x && option.y === previous.y) : true);
+          ].filter((option) =>
+            previous
+              ? !(option.x === previous.x && option.y === previous.y)
+              : true,
+          );
           for (let tryCount = 0; tryCount < FIND_PATH_TRY_COUNT; tryCount++) {
-            const proposed = Point.add(start, options[Math.floor(Math.random() * options.length)]);
-            if (gridCellState.has(proposed.x) && gridCellState.get(proposed.x).has(proposed.y) && gridCellState.get(proposed.x).get(proposed.y) === null) {
+            const proposed = Point.add(
+              start,
+              options[Math.floor(Math.random() * options.length)],
+            );
+            if (
+              gridCellState.has(proposed.x) &&
+              gridCellState.get(proposed.x).has(proposed.y) &&
+              gridCellState.get(proposed.x).get(proposed.y) === null
+            ) {
               return proposed;
             }
           }
@@ -91,13 +106,19 @@ const render = (colors, options) => {
 
         function getCenter(point) {
           return new Point(
-            gridOriginX + point.x * GRID_CELL_SIZE + GRID_CELL_SIZE / 2 + jitter(),
-            gridOriginY + point.y * GRID_CELL_SIZE + GRID_CELL_SIZE / 2 + jitter(),
+            gridOriginX +
+              point.x * GRID_CELL_SIZE +
+              GRID_CELL_SIZE / 2 +
+              jitter(),
+            gridOriginY +
+              point.y * GRID_CELL_SIZE +
+              GRID_CELL_SIZE / 2 +
+              jitter(),
           );
         }
 
         const paths = [];
-        
+
         for (const [x, column] of gridCellState.entries()) {
           for (const [y, cell] of column.entries()) {
             if (cell === null) {
@@ -106,7 +127,12 @@ const render = (colors, options) => {
               const points = [current.clone()];
               gridCellState.get(current.x).set(current.y, true);
               let next;
-              while ((next = getNext(current, previous && Point.subtract(previous, current))) !== null) {
+              while (
+                (next = getNext(
+                  current,
+                  previous && Point.subtract(previous, current),
+                )) !== null
+              ) {
                 points.push(next.clone());
                 gridCellState.get(next.x).set(next.y, true);
                 previous = current;
@@ -117,23 +143,26 @@ const render = (colors, options) => {
           }
         }
 
-        function getStrokeStyle () {
-          return weightedRandom(new Map([
-            [colorSet.colors.shade2, 50],
-            [colorSet.colors.accent0, 1],
-            [colorSet.colors.accent1, 1],
-            [colorSet.colors.accent2, 1],
-            [colorSet.colors.accent3, 1],
-            [colorSet.colors.accent4, 1],
-            [colorSet.colors.accent5, 1],
-            [colorSet.colors.accent6, 1],
-            [colorSet.colors.accent7, 1],
-          ]));
+        function getStrokeStyle() {
+          return weightedRandom(
+            new Map([
+              [colorSet.colors.shade2, 50],
+              [colorSet.colors.accent0, 1],
+              [colorSet.colors.accent1, 1],
+              [colorSet.colors.accent2, 1],
+              [colorSet.colors.accent3, 1],
+              [colorSet.colors.accent4, 1],
+              [colorSet.colors.accent5, 1],
+              [colorSet.colors.accent6, 1],
+              [colorSet.colors.accent7, 1],
+            ]),
+          );
         }
 
-        paths.forEach(points => {
+        paths.forEach((points) => {
           // Draw connecting path
-          ctx.strokeStyle = points.length > 1 ? getStrokeStyle() : colorSet.colors.shade1;
+          ctx.strokeStyle =
+            points.length > 1 ? getStrokeStyle() : colorSet.colors.shade1;
           ctx.lineWidth = 2.5;
 
           ctx.beginPath();
@@ -175,7 +204,7 @@ const render = (colors, options) => {
       }),
     ),
   );
-}
+};
 
 module.exports = {
   render,

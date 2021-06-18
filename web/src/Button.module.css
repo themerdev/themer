@@ -22,7 +22,11 @@
   padding: var(--size-small-3) var(--size-large-1);
   border: none;
   font-size: var(--size-large-1);
-  background-image: linear-gradient(to right, var(--button-special-color-1), var(--button-special-color-2));
+  background-image: linear-gradient(
+    to right,
+    var(--button-special-color-1),
+    var(--button-special-color-2)
+  );
   position: relative;
 }
 

@@ -6,16 +6,18 @@ const ORIGINAL_TEXT = 'Copy URL';
 export default ({ className }) => {
   const [buttonText, setButtonText] = useState(ORIGINAL_TEXT);
   const [disabled, setDisabled] = useState(false);
-  
+
   const copy = async () => {
     try {
-      await window.navigator.clipboard.writeText(window.location.href)
+      await window.navigator.clipboard.writeText(window.location.href);
       setButtonText('Copied!');
       window.setTimeout(() => {
         setButtonText(ORIGINAL_TEXT);
       }, 1000);
     } catch (e) {
-      window.alert('Clipboard write failed. This application may not have permission to access the clipboard. Please copy the URL directly from the address bar.');
+      window.alert(
+        'Clipboard write failed. This application may not have permission to access the clipboard. Please copy the URL directly from the address bar.',
+      );
       setDisabled(true);
     }
   };
@@ -23,15 +25,17 @@ export default ({ className }) => {
   if (window.navigator.clipboard) {
     return (
       <Button
-        className={ className }
-        onClick={ () => {
+        className={className}
+        onClick={() => {
           copy();
           window.__ssa__log('copy URL');
-        } }
-        disabled={ disabled }
-      >{ buttonText.padEnd(ORIGINAL_TEXT.length, '\u00a0') }</Button>
+        }}
+        disabled={disabled}
+      >
+        {buttonText.padEnd(ORIGINAL_TEXT.length, '\u00a0')}
+      </Button>
     );
   } else {
     return null;
   }
-}
+};
