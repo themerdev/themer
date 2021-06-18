@@ -1,6 +1,6 @@
 {
   "name": "@themer/kitty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A kitty template for themer.",
   "main": "lib/index.js",
   "engines": {
