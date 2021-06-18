@@ -1,6 +1,6 @@
 {
   "name": "@themer/chrome",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A Chrome theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
