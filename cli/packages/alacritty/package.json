@@ -1,6 +1,6 @@
 {
   "name": "@themer/alacritty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A themer template for the alacritty terminal emulator",
   "main": "lib/index.js",
   "engines": {
