@@ -1,6 +1,6 @@
 {
   "name": "@themer/prism",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A PrismJS theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
