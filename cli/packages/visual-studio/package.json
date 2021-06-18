@@ -1,6 +1,6 @@
 {
   "name": "@themer/visual-studio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Visual Studio theme settings generator for themer.",
   "main": "lib/index.js",
   "engines": {
