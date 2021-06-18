@@ -1,6 +1,6 @@
 {
   "name": "@themer/colors-seti",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A themer color set ported from the popular Seti theme.",
   "main": "lib/index.js",
   "engines": {
