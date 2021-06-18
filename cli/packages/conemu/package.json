@@ -1,6 +1,6 @@
 {
   "name": "@themer/conemu",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A ConEmu theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
