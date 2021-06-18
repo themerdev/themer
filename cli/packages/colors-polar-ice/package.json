@@ -1,6 +1,6 @@
 {
   "name": "@themer/colors-polar-ice",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A chilly color set for themer.",
   "main": "lib/index.js",
   "engines": {
