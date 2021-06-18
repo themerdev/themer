@@ -1,6 +1,6 @@
 {
   "name": "@themer/windows-terminal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Windows Terminal theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
