@@ -1,6 +1,6 @@
 {
   "name": "@themer/terminal",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "A Terminal.app theme generator for themer.",
   "main": "lib/index.js",
   "engines": {
