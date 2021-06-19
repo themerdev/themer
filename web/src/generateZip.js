@@ -27,6 +27,7 @@ import * as themerPrism from '@themer/prism';
 import * as themerSketchPalettes from '@themer/sketch-palettes';
 import * as themerSlack from '@themer/slack';
 import * as themerSublimeText from '@themer/sublime-text';
+import * as themerTerminal from '@themer/terminal';
 import * as themerTerminator from '@themer/terminator';
 import * as themerTermite from 'themer-termite';
 import * as themerTmux from 'themer-tmux';
@@ -75,6 +76,7 @@ const templates = {
   sketchPalettes: { name: 'Sketch', ...themerSketchPalettes },
   slack: { name: 'Slack sidebar', ...themerSlack },
   sublimeText: { name: 'Sublime Text', ...themerSublimeText },
+  terminal: { name: 'Terminal', ...themerTerminal },
   terminator: { name: 'Terminator', ...themerTerminator },
   termite: { name: 'Termite', ...themerTermite },
   tmux: { name: 'tmux', ...themerTmux },

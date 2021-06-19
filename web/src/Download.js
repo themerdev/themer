@@ -33,6 +33,7 @@ const Download = () => {
   const [sketchPalettes, setSketchPalettes] = useState(false);
   const [slack, setSlack] = useState(false);
   const [sublimeText, setSublimeText] = useState(false);
+  const [terminal, setTerminal] = useState(false);
   const [terminator, setTerminator] = useState(false);
   const [termite, setTermite] = useState(false);
   const [tmux, setTmux] = useState(false);
@@ -86,6 +87,7 @@ const Download = () => {
       sketchPalettes,
       slack,
       sublimeText,
+      terminal,
       terminator,
       termite,
       tmux,
@@ -175,6 +177,12 @@ const Download = () => {
             value={konsole}
             onChange={() => setKonsole(!konsole)}
             label='Konsole'
+            accentSelected
+          />
+          <Checkbox
+            value={terminal}
+            onChange={() => setTerminal(!terminal)}
+            label='Terminal.app'
             accentSelected
           />
           <Checkbox

@@ -1963,6 +1963,13 @@
   dependencies:
     plist "^3.0.1"
 
+"@themer/terminal@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@themer/terminal/-/terminal-2.3.0.tgz#27952a969fef55f27de7563c4e1d38a20415ad9f"
+  integrity sha512-Pu0J/106smPoXMTkYjd93aWNd4Xnof85v0kn7KUkRs9HCCO5MHjDBcoNjDl2YudcM19lJl+gdFJW52ODBwq2Dw==
+  dependencies:
+    color "^3.1.3"
+
 "@themer/terminator@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@themer/terminator/-/terminator-1.0.1.tgz#8fe8226af83c35b502f587a98d7883b4467babba"
