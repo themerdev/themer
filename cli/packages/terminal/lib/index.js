@@ -1,3 +1,5 @@
+const Color = require('color');
+
 // Prior art: stayradiated/termcolors and chriskempson/base16-builder
 const toData = (hex) => {
   const code = [
@@ -15,38 +17,36 @@ const toData = (hex) => {
       'hex',
     ),
   ];
-  const srgb = [
-    (parseInt(hex.slice(1, 3), 16) / 0xff).toFixed(10),
-    (parseInt(hex.slice(3, 5), 16) / 0xff).toFixed(10),
-    (parseInt(hex.slice(5, 7), 16) / 0xff).toFixed(10),
-  ].join(' ');
+  const srgb = Color(hex)
+    .rgb()
+    .array()
+    .map((channel) => (channel / 255).toFixed(10))
+    .join(' ');
   return Buffer.from(
     code[0].toString('binary') + srgb + code[1].toString('binary'),
     'binary',
   ).toString('base64');
 };
 
-const renderTheme = (
-  theme,
-  {
+const renderTheme = (theme, colors) => {
+  const {
     shade0,
     shade1,
-    shade2,
-    shade3,
-    shade4,
-    shade5,
     shade6,
     shade7,
     accent0,
-    accent1,
     accent2,
     accent3,
     accent4,
     accent5,
     accent6,
     accent7,
-  },
-) => `
+  } = colors;
+  function brighten(hex) {
+    const bright = theme === 'dark' ? shade7 : shade0;
+    return Color(hex).mix(Color(bright), 0.25).hex();
+  }
+  return `
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -66,7 +66,7 @@ const renderTheme = (
     <key>SelectionColor</key>
     <data>${toData(accent7)}</data>
     <key>ANSIBlackColor</key>
-    <data>${toData(shade0)}</data>
+    <data>${theme === 'dark' ? toData(shade0) : toData(shade7)}</data>
     <key>ANSIRedColor</key>
     <data>${toData(accent0)}</data>
     <key>ANSIGreenColor</key>
@@ -80,26 +80,27 @@ const renderTheme = (
     <key>ANSICyanColor</key>
     <data>${toData(accent4)}</data>
     <key>ANSIWhiteColor</key>
-    <data>${toData(shade6)}</data>
+    <data>${theme === 'dark' ? toData(shade6) : toData(shade1)}</data>
     <key>ANSIBrightBlackColor</key>
-    <data>${toData(shade1)}</data>
+    <data>${theme === 'dark' ? toData(shade1) : toData(shade6)}</data>
     <key>ANSIBrightRedColor</key>
-    <data>${toData(accent1)}</data>
+    <data>${toData(brighten(accent0))}</data>
     <key>ANSIBrightGreenColor</key>
-    <data>${toData(accent4)}</data>
+    <data>${toData(brighten(accent3))}</data>
     <key>ANSIBrightYellowColor</key>
-    <data>${toData(accent2)}</data>
+    <data>${toData(brighten(accent2))}</data>
     <key>ANSIBrightBlueColor</key>
-    <data>${toData(accent5)}</data>
+    <data>${toData(brighten(accent5))}</data>
     <key>ANSIBrightMagentaColor</key>
-    <data>${toData(accent7)}</data>
+    <data>${toData(brighten(accent7))}</data>
     <key>ANSIBrightCyanColor</key>
-    <data>${toData(accent4)}</data>
+    <data>${toData(brighten(accent4))}</data>
     <key>ANSIBrightWhiteColor</key>
-    <data>${toData(shade7)}</data>
+    <data>${theme === 'dark' ? toData(shade7) : toData(shade0)}</data>
   </dict>
 </plist>
-`;
+  `;
+};
 
 const render = (colors) =>
   Object.entries(colors).map(async ([theme, colors]) => {

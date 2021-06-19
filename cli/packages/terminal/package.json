@@ -31,5 +31,8 @@
     "terminal",
     "terminal.app",
     "theme"
-  ]
+  ],
+  "dependencies": {
+    "color": "^3.1.3"
+  }
 }
