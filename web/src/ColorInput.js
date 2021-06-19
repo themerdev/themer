@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useCallback } from 'react';
+import { useRef, useContext, useCallback } from 'react';
 import { debounce } from 'lodash';
 import numeral from 'numeral';
 import { DropletIcon } from './Icons';
@@ -7,7 +7,7 @@ import getBestForeground from './getBestForeground';
 import colorSupport from './colorInputSupport';
 import ThemeContext from './ThemeContext';
 
-export default ({ className, style, colorKey, help }) => {
+const ColorInput = ({ className, style, colorKey, help }) => {
   const textInput = useRef(null);
   const {
     getActiveColorOrFallback,
@@ -15,9 +15,12 @@ export default ({ className, style, colorKey, help }) => {
     setActiveRawColor,
     getActiveContrastFromBackground,
   } = useContext(ThemeContext);
-  const debouncedLogEvent = useCallback(debounce(window.__ssa__log, 1000), []);
+  const debouncedLogEvent = useCallback(
+    (...args) => debounce(window.__ssa__log, 1000)(...args),
+    [],
+  );
   const debouncedSetActiveRawColor = useCallback(
-    debounce(setActiveRawColor, 100),
+    (...args) => debounce(setActiveRawColor, 100)(...args),
     [setActiveRawColor],
   );
   const contrast =
@@ -92,3 +95,5 @@ export default ({ className, style, colorKey, help }) => {
     </div>
   );
 };
+
+export default ColorInput;

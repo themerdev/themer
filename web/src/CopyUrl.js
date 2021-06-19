@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from './Button';
 
 const ORIGINAL_TEXT = 'Copy URL';
 
-export default ({ className }) => {
+const CopyUrl = ({ className }) => {
   const [buttonText, setButtonText] = useState(ORIGINAL_TEXT);
   const [disabled, setDisabled] = useState(false);
 
@@ -39,3 +39,5 @@ export default ({ className }) => {
     return null;
   }
 };
+
+export default CopyUrl;

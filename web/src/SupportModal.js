@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Banner from './Banner';
 import Button from './Button';
 import Modal from './Modal';
@@ -6,7 +6,7 @@ import ThemeContext from './ThemeContext';
 import ButtonLink from './ButtonLink';
 import styles from './SupportModal.module.css';
 
-export default ({ onClose }) => {
+const SupportModal = ({ onClose }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   const tweetIntentUrl =
     'https://twitter.com/intent/tweet' +
@@ -61,3 +61,5 @@ export default ({ onClose }) => {
     </Modal>
   );
 };
+
+export default SupportModal;

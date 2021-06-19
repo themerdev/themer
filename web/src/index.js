@@ -1,10 +1,10 @@
-import React, { StrictMode } from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
 import 'reset.css/reset.css';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { register } from './serviceWorkerRegistration';
 import * as Sentry from '@sentry/browser';
 
 Sentry.init({
@@ -21,12 +21,20 @@ ReactDOM.render(
   </StrictMode>,
   document.getElementById('root'),
 );
-serviceWorker.register({
+
+register({
+  onSuccess: () => {
+    window.dispatchEvent(
+      new CustomEvent('notificationmessage', {
+        detail: 'themer.dev has been cached locally for offline use.',
+      }),
+    );
+  },
   onUpdate: () => {
     window.dispatchEvent(
       new CustomEvent('notificationmessage', {
         detail:
-          'themer has been updated and cached. Close all themer tabs and reopen to use the latest version.',
+          'themer.dev has been upgraded. Reload to get the latest version.',
       }),
     );
   },

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CodePreview from './CodePreview';
 import TerminalPreview from './TerminalPreview';
 import Tabs from './Tabs';
 import styles from './TextPreviews.module.css';
 
-export default () => {
+const TextPreviews = () => {
   const [activePreview, setActivePreview] = useState('code');
 
   return (
@@ -44,3 +44,5 @@ export default () => {
     </Tabs>
   );
 };
+
+export default TextPreviews;

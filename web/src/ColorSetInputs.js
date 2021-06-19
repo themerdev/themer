@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styles from './ColorSetInputs.module.css';
 import ColorInput from './ColorInput';
 import Checkbox from './Checkbox';
 import Tabs from './Tabs';
 import ThemeContext from './ThemeContext';
 
-export default () => {
+const ColorSetInputs = () => {
   const {
     activeCalculateIntermediaryShades,
     setActiveCalculateIntermediaryShades,
@@ -148,3 +148,5 @@ export default () => {
     </Tabs>
   );
 };
+
+export default ColorSetInputs;

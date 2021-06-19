@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import styles from './Main.module.css';
 
 import ColorSetInputs from './ColorSetInputs';
@@ -13,7 +13,7 @@ import ThemeContext from './ThemeContext';
 import Notification from './Notification';
 import TwitterHandle from './TwitterHandle';
 
-export default () => {
+const Main = () => {
   const [keyboarding, setKeyboarding] = useState(false);
   const onKeyDown = (evt) => {
     if (evt.key === 'Tab') {
@@ -175,3 +175,5 @@ export default () => {
     </div>
   );
 };
+
+export default Main;

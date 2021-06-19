@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styles from './CodePreview.module.css';
 import { cursor } from './cursor.module.css';
 import ThemeContext from './ThemeContext';
 
-export default () => {
+const CodePreview = () => {
   const { activePreparedColorSet } = useContext(ThemeContext);
   const fgs1 = { color: activePreparedColorSet['shade1'] },
     fgs3 = { color: activePreparedColorSet['shade3'] },
@@ -132,3 +132,5 @@ export default () => {
     </pre>
   );
 };
+
+export default CodePreview;

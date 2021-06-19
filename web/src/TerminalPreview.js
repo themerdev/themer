@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styles from './TerminalPreview.module.css';
 import { cursor } from './cursor.module.css';
 import ThemeContext from './ThemeContext';
 
-export default () => {
+const TerminalPreview = () => {
   const { activePreparedColorSet } = useContext(ThemeContext);
   const fgs0 = { color: activePreparedColorSet['shade0'] },
     fgs2 = { color: activePreparedColorSet['shade2'] },
@@ -83,3 +83,5 @@ export default () => {
     </pre>
   );
 };
+
+export default TerminalPreview;

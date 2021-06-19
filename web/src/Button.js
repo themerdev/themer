@@ -1,8 +1,8 @@
-import React, { forwardRef, useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 import styles from './Button.module.css';
 import ThemeContext from './ThemeContext';
 
-export default forwardRef(
+const Button = forwardRef(
   (
     { small, special, secondary, className, onClick, disabled, type, children },
     buttonRef,
@@ -57,3 +57,5 @@ export default forwardRef(
     );
   },
 );
+
+export default Button;

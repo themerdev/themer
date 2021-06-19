@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import styles from './Tabs.module.css';
 import ThemeContext from './ThemeContext';
 
-export default ({ children }) => {
+const Tabs = ({ children }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return children({
     tabClassName: styles.tab,
@@ -26,3 +26,5 @@ export default ({ children }) => {
     },
   });
 };
+
+export default Tabs;

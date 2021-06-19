@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import styles from './Notification.module.css';
 import ThemeContext from './ThemeContext';
 import { CloseIcon } from './Icons';
 
-export default () => {
+const Notification = () => {
   const [message, setMessage] = useState('');
   const [visible, setVisible] = useState(false);
 
@@ -50,3 +50,5 @@ export default () => {
     </span>
   );
 };
+
+export default Notification;

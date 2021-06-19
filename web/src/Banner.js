@@ -1,8 +1,7 @@
-import React from 'react';
 import Color from 'color';
 import styles from './Banner.module.css';
 
-export default ({ className, color, children }) => (
+const Banner = ({ className, color, children }) => (
   <div
     role='alert'
     className={[className, styles.banner].filter(Boolean).join(' ')}
@@ -14,3 +13,5 @@ export default ({ className, color, children }) => (
     {children}
   </div>
 );
+
+export default Banner;

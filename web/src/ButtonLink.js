@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import ThemeContext from './ThemeContext';
 import { ExternalIcon } from './Icons';
 import styles from './ButtonLink.module.css';
 
-export default ({ external, children, ...props }) => {
+const ButtonLink = ({ external, children, ...props }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return (
     <a
@@ -30,3 +30,5 @@ export default ({ external, children, ...props }) => {
     </a>
   );
 };
+
+export default ButtonLink;

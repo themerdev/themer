@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import qs from 'qs';
 import { get, merge, mapValues, pick } from 'lodash';
 import Color from 'color';

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import {
   Elements,
@@ -145,8 +145,10 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
   );
 };
 
-export default (props) => (
+const WrappedCheckoutModal = (props) => (
   <Elements stripe={stripePromise}>
     <CheckoutModal {...props} />
   </Elements>
 );
+
+export default WrappedCheckoutModal;

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styles from './PriceInput.module.css';
 import ThemeContext from './ThemeContext';
 
@@ -123,7 +123,7 @@ const triangle = (color) =>
 </svg>
 `.trim();
 
-export default ({ className, value: { amount, code }, onChange }) => {
+const PriceInput = ({ className, value: { amount, code }, onChange }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   const option = currencyOptions.find(({ isoCode }) => isoCode === code);
   return (
@@ -173,3 +173,5 @@ export default ({ className, value: { amount, code }, onChange }) => {
     </span>
   );
 };
+
+export default PriceInput;

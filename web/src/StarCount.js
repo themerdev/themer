@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import numeral from 'numeral';
 import styles from './StarCount.module.css';
 import ThemeContext from './ThemeContext';
 
-export default () => {
+const StarCount = () => {
   const [count, setCount] = useState('');
 
   useEffect(() => {
@@ -60,3 +60,5 @@ export default () => {
     </span>
   );
 };
+
+export default StarCount;

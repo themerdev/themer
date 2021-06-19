@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Link from './Link';
 import { has } from 'lodash';
 import styles from './PreBuiltList.module.css';
@@ -37,7 +37,7 @@ const PreBuiltLink = ({ colors, children }) => {
   return <Link href={paramsFromState(preparedState)}>{children}</Link>;
 };
 
-export default () => {
+const PreBuiltList = () => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return (
     <ul
@@ -111,3 +111,5 @@ export default () => {
     </ul>
   );
 };
+
+export default PreBuiltList;

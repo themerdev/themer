@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { CheckIcon } from './Icons';
 import styles from './Checkbox.module.css';
 import ThemeContext from './ThemeContext';
 
-export default ({ className, value, accentSelected, onChange, label }) => {
+const Checkbox = ({ className, value, accentSelected, onChange, label }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return (
     <label
@@ -47,3 +47,5 @@ export default ({ className, value, accentSelected, onChange, label }) => {
     </label>
   );
 };
+
+export default Checkbox;

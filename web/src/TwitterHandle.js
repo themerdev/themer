@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styles from './TwitterHandle.module.css';
 import ThemeContext from './ThemeContext';
 
-export default () => {
+const TwitterHandle = () => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
 
   return (
@@ -31,3 +31,5 @@ export default () => {
     </a>
   );
 };
+
+export default TwitterHandle;

@@ -1,31 +1,48 @@
-import React, { useState, useRef, useContext } from 'react';
+import { useState, useRef, useContext } from 'react';
 import Tabs from './Tabs';
 import WallpaperModal from './WallpaperModal';
 import Button from './Button';
 import styles from './WallpaperPreview.module.css';
 import ThemeContext from './ThemeContext';
 
-const wallpaperOptions = [
-  { value: 'themer-wallpaper-block-wave', label: '"Block Wave"' },
-  { value: 'themer-wallpaper-burst', label: '"Burst"' },
-  { value: 'themer-wallpaper-circuits', label: '"Circuits"' },
-  { value: 'themer-wallpaper-diamonds', label: '"Diamonds"' },
-  { value: 'themer-wallpaper-dot-grid', label: '"Dot Grid"' },
-  { value: 'themer-wallpaper-octagon', label: '"Octagon"' },
-  { value: 'themer-wallpaper-triangles', label: '"Triangles"' },
-  { value: 'themer-wallpaper-trianglify', label: '"Tranglify"' },
-  { value: 'themer-wallpaper-shirts', label: '"Shirts"' },
-];
-
-export default () => {
+const WallpaperPreview = () => {
   const [activePreview, setActivePreview] = useState(null);
 
-  const buttonRefs = new Map(
-    wallpaperOptions.map((option) => [option.value, useRef(null)]),
-  );
+  const wallpaperOptions = new Map([
+    [
+      'themer-wallpaper-block-wave',
+      { label: '"Block Wave"', buttonRef: useRef(null) },
+    ],
+    ['themer-wallpaper-burst', { label: '"Burst"', buttonRef: useRef(null) }],
+    [
+      'themer-wallpaper-circuits',
+      { label: '"Circuits"', buttonRef: useRef(null) },
+    ],
+    [
+      'themer-wallpaper-diamonds',
+      { label: '"Diamonds"', buttonRef: useRef(null) },
+    ],
+    [
+      'themer-wallpaper-dot-grid',
+      { label: '"Dot Grid"', buttonRef: useRef(null) },
+    ],
+    [
+      'themer-wallpaper-octagon',
+      { label: '"Octagon"', buttonRef: useRef(null) },
+    ],
+    [
+      'themer-wallpaper-triangles',
+      { label: '"Triangles"', buttonRef: useRef(null) },
+    ],
+    [
+      'themer-wallpaper-trianglify',
+      { label: '"Tranglify"', buttonRef: useRef(null) },
+    ],
+    ['themer-wallpaper-shirts', { label: '"Shirts"', buttonRef: useRef(null) }],
+  ]);
 
   const onModalClose = () => {
-    const button = buttonRefs.get(activePreview);
+    const button = wallpaperOptions.get(activePreview).buttonRef;
     if (button.current) {
       button.current.focus();
     }
@@ -43,20 +60,22 @@ export default () => {
           </span>
           <div className={contentClassName} style={contentStyle}>
             <div className={styles.buttons}>
-              {wallpaperOptions.map((option) => (
-                <Button
-                  key={option.value}
-                  onClick={() => {
-                    setActivePreview(option.value);
-                    window.__ssa__log('preview wallpaper', {
-                      wallpaper: option.value,
-                    });
-                  }}
-                  ref={buttonRefs.get(option.value)}
-                >
-                  Preview {option.label}
-                </Button>
-              ))}
+              {Array.from(wallpaperOptions.entries()).map(
+                ([value, { label, buttonRef }]) => (
+                  <Button
+                    key={value}
+                    onClick={() => {
+                      setActivePreview(value);
+                      window.__ssa__log('preview wallpaper', {
+                        wallpaper: value,
+                      });
+                    }}
+                    ref={buttonRef}
+                  >
+                    Preview {label}
+                  </Button>
+                ),
+              )}
             </div>
             {activePreview ? (
               <WallpaperModal
@@ -76,3 +95,5 @@ export default () => {
     </Tabs>
   );
 };
+
+export default WallpaperPreview;

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import Checkbox from './Checkbox';
 import styles from './Download.module.css';
 import Button from './Button';
@@ -9,7 +9,7 @@ import PriceInput from './PriceInput';
 import CheckoutModal from './CheckoutModal';
 import SupportModal from './SupportModal';
 
-export default () => {
+const Download = () => {
   const [alacritty, setAlacritty] = useState(false);
   const [alfred, setAlfred] = useState(false);
   const [atomSyntax, setAtomSyntax] = useState(false);
@@ -473,3 +473,5 @@ export default () => {
     </>
   );
 };
+
+export default Download;

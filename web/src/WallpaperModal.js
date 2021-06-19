@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import Button from './Button';
 import Radio from './Radio';
 import styles from './WallpaperModal.module.css';
@@ -41,7 +41,7 @@ const getImagePromises = (wallpaper, colors, width, height) => {
   }
 };
 
-export default ({ onClose, wallpaper, colors }) => {
+const WallpaperModal = ({ onClose, wallpaper, colors }) => {
   const [images, setImages] = useState([]);
   const [imageIndex, setImageIndex] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState('none');
@@ -137,3 +137,5 @@ export default ({ onClose, wallpaper, colors }) => {
     </div>
   );
 };
+
+export default WallpaperModal;

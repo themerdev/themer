@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Color from 'color';
 import useEscListener from './useEscListener';
 import ThemeContext from './ThemeContext';
 import styles from './Modal.module.css';
 
-export default ({ children, footer, onClose }) => {
+const Modal = ({ children, footer, onClose }) => {
   useEscListener(onClose);
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return (
@@ -38,3 +38,5 @@ export default ({ children, footer, onClose }) => {
     </div>
   );
 };
+
+export default Modal;
