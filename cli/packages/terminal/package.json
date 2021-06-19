@@ -9,7 +9,6 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/gen.swift",
     "/lib/index.js"
   ],
   "scripts": {
