@@ -164,8 +164,8 @@ const Main = () => {
         </div>
         <div className={styles.support}>
           enjoying themer? show your support by purchasing a theme, sending a
-          tip through <Link href='https://brave.com/the537'>Brave</Link>, or
-          starring the{' '}
+          tip through <Link href='https://brave.com'>Brave</Link>, or starring
+          the{' '}
           <Link href='https://github.com/mjswensen/themer'>
             GitHub repository
           </Link>
