@@ -1,6 +1,8 @@
 {
   "name": "themer",
-  "image": "node:14",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
   "remoteUser": "node",
   "extensions": ["esbenp.prettier-vscode"]
 }

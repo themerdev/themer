@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-NAME="@themer/$1"
+NAME="@themerdev/$1"
 
 echo Generating $NAME...
 
@@ -38,12 +38,12 @@ cat << EOF > $PACKAGE/package.json
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/$1#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/$1#readme",
   "peerDependencies": {
     "themer": "^3"
   },
@@ -57,7 +57,7 @@ EOF
 cat << EOF > $PACKAGE/README.md
 # $NAME
 
-A TODO template for [themer](https://github.com/mjswensen/themer).
+A TODO template for [themer](https://github.com/themerdev/themer).
 
 ## Installation & usage
 

@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 DIR="colors-$1"
-NAME="@themer/$DIR"
+NAME="@themerdev/$DIR"
 
 echo Generating $NAME...
 
@@ -38,13 +38,13 @@ cat << EOF > $PACKAGE/package.json
     "prepublishOnly": "cp ../../../LICENSE.md ./"
   },
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/$DIR#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/$DIR#readme",
   "peerDependencies": {
     "themer": "^3"
   },
@@ -61,7 +61,7 @@ EOF
 cat << EOF > $PACKAGE/README.md
 # $NAME
 
-A [themer](https://github.com/mjswensen/themer) color set based on TODO
+A [themer](https://github.com/themerdev/themer) color set based on TODO
 
 ## Installation & usage
 

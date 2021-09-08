@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 DIR="wallpaper-$1"
-NAME="@themer/$DIR"
+NAME="@themerdev/$DIR"
 PREFIXED_NAME="themer-wallpaper-$1"
 SIZE_ARG="$PREFIXED_NAME-size"
 
@@ -41,14 +41,14 @@ cat << EOF > $PACKAGE/package.json
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/$DIR#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/$DIR#readme",
   "dependencies": {
-    "@themer/utils": "^1.0.0",
+    "@themerdev/utils": "^1.0.0",
     "canvas": "^2.6.1"
   },
   "peerDependencies": {
@@ -64,7 +64,7 @@ EOF
 cat << EOF > $PACKAGE/README.md
 # $NAME
 
-A wallpaper template for [themer](https://github.com/mjswensen/themer).
+A wallpaper template for [themer](https://github.com/themerdev/themer).
 
 TODO: Add preview images
 
@@ -107,7 +107,7 @@ const {
   deepFlatten,
   colorSets: getColorSets,
   listOutputFiles,
-} = require('@themer/utils');
+} = require('@themerdev/utils');
 const { createCanvas } = require('canvas');
 
 const render = (colors, options) => {
