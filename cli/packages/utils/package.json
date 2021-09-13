@@ -1,5 +1,5 @@
 {
-  "name": "@themer/utils",
+  "name": "@themerdev/utils",
   "version": "1.3.1",
   "description": "Common functions used across various themer templates.",
   "main": "lib/index.js",
@@ -19,12 +19,13 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer.git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "directory": "cli/packages/utils"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/utils#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/utils#readme",
   "keywords": [
     "themer",
     "utils"
