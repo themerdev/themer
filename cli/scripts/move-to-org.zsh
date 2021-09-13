@@ -10,7 +10,7 @@ PACKAGES_DIR="$(realpath "$(dirname $0:A)/../packages")"
 PACKAGE="$PACKAGES_DIR/$1"
 
 find \
-  $PACKAGE/**/* \
+  $PACKAGE \
   -type f \
   | xargs \
     --replace=__FILE__ \
