@@ -1,7 +1,7 @@
 const {
   render,
   renderInstructions: renderChromeInstructions,
-} = require('@themer/chrome');
+} = require('@themerdev/chrome');
 
 const renderInstructions = (paths) =>
   renderChromeInstructions(paths)

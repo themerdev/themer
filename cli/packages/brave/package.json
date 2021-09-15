@@ -1,5 +1,5 @@
 {
-  "name": "@themer/brave",
+  "name": "@themerdev/brave",
   "version": "1.1.2",
   "description": "A Brave theme generator for themer.",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/brave"
   },
   "keywords": [
     "themer",
@@ -24,11 +25,11 @@
     "/lib/index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/brave#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/brave#readme",
   "dependencies": {
-    "@themer/chrome": "^1.2.1"
+    "@themerdev/chrome": "^1.2.1"
   },
   "devDependencies": {},
   "peerDependencies": {
