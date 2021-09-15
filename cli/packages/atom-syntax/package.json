@@ -1,5 +1,5 @@
 {
-  "name": "@themer/atom-syntax",
+  "name": "@themerdev/atom-syntax",
   "version": "2.1.4",
   "description": "Atom syntax template for themer.",
   "main": "lib/index.js",
@@ -23,12 +23,13 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer.git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "directory": "cli/packages/atom-syntax"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/atom-syntax#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/atom-syntax#readme",
   "keywords": [
     "themer",
     "atom",
