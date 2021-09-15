@@ -1,5 +1,5 @@
 {
-  "name": "@themer/bbedit",
+  "name": "@themerdev/bbedit",
   "version": "1.1.1",
   "description": "A BBEdit theme generator for themer.",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/bbedit"
   },
   "keywords": [
     "themer",
@@ -24,9 +25,9 @@
     "/lib/index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/bbedit#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/bbedit#readme",
   "dependencies": {
     "color": "^3.0.0",
     "lodash": "^4.17.4",
