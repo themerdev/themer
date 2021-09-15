@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+echo "Updating package and repository references..."
+
 OLD_PACKAGE_SCOPE="@themer/"
 NEW_PACKAGE_SCOPE="@themerdev/"
 
@@ -25,3 +27,20 @@ cat \
   | jq \
     ".repository = .repository + {directory:\"cli/packages/$1\"}" \
     > $PACKAGE/package.json
+
+echo "TODO: review diffs and stage changes"
+read "READY?Ready ('y' to proceed)? "
+[[ $READY != 'y' ]] && exit 1
+
+echo "Comitting..."
+git commit -m "Move $1 to @themerdev"
+
+echo "Publishing to npm..."
+npm publish $PACKAGE --access public
+
+echo "Tagging commit..."
+read "VERSION?Version published: "
+git tag "$NEW_PACKAGE_SCOPE$1-v$VERSION"
+
+echo "Deprecating old package..."
+npm deprecate "$OLD_PACKAGE_SCOPE$1" "Moved to $NEW_PACKAGE_SCOPE$1"
