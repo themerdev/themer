@@ -1,5 +1,5 @@
 {
-  "name": "@themer/alacritty",
+  "name": "@themerdev/alacritty",
   "version": "1.0.1",
   "description": "A themer template for the alacritty terminal emulator",
   "main": "lib/index.js",
@@ -16,12 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/alacritty"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/alacritty#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/alacritty#readme",
   "peerDependencies": {
     "themer": "^3"
   },
