@@ -22,11 +22,10 @@ find \
       --expression="s|$OLD_REPO_PATH|$NEW_REPO_PATH|g" \
       __FILE__
 
-cat \
-  $PACKAGE/package.json \
-  | jq \
-    ".repository = .repository + {directory:\"cli/packages/$1\"}" \
-    > $PACKAGE/package.json
+jq ".repository = .repository + {directory:\"cli/packages/$1\"}" \
+  < $PACKAGE/package.json \
+  > $PACKAGE/new.package.json
+mv $PACKAGE/new.package.json $PACKAGE/package.json
 
 echo "TODO: review diffs and stage changes"
 read "READY?Ready ('y' to proceed)? "
@@ -35,12 +34,14 @@ read "READY?Ready ('y' to proceed)? "
 echo "Comitting..."
 git commit -m "Move $1 to @themerdev"
 
+read "OTP?npm OTP: "
+
 echo "Publishing to npm..."
-npm publish $PACKAGE --access public
+npm publish $PACKAGE --access public --otp $OTP
 
 echo "Tagging commit..."
-read "VERSION?Version published: "
+VERSION="$(jq --raw-output '.version' < $PACKAGE/package.json)"
 git tag "$NEW_PACKAGE_SCOPE$1-v$VERSION"
 
 echo "Deprecating old package..."
-npm deprecate "$OLD_PACKAGE_SCOPE$1" "Moved to $NEW_PACKAGE_SCOPE$1"
+npm deprecate "$OLD_PACKAGE_SCOPE$1" "Moved to $NEW_PACKAGE_SCOPE$1" --otp $OTP
