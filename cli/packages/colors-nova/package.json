@@ -1,5 +1,5 @@
 {
-  "name": "@themer/colors-nova",
+  "name": "@themerdev/colors-nova",
   "version": "1.0.4",
   "description": "A themer port of the beautiful Nova color set.",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/colors-nova"
   },
   "keywords": [
     "themer",
@@ -26,9 +27,9 @@
     "/lib/index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/colors-nova#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-nova#readme",
   "dependencies": {
     "color": "^3.0.0",
     "nova-colors": "^2.1.5"
