@@ -1,5 +1,5 @@
 {
-  "name": "@themer/colors-one",
+  "name": "@themerdev/colors-one",
   "version": "1.0.9",
   "description": "A port of the popular Atom One themes.",
   "main": "lib/index.js",
@@ -17,12 +17,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer.git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "directory": "cli/packages/colors-one"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/colors-one#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-one#readme",
   "dependencies": {},
   "keywords": [
     "themer",
