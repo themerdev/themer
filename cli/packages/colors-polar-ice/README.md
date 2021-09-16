@@ -1,21 +1,21 @@
-# @themer/colors-polar-ice
+# @themerdev/colors-polar-ice
 
-A chilly color set for [themer](https://github.com/mjswensen/themer).
+A chilly color set for [themer](https://github.com/themerdev/themer).
 
-Here's an example of `@themer/colors-polar-ice` in [vim](https://github.com/mjswensen/themer/tree/main/cli/packages/vim) and [iTerm](https://github.com/mjswensen/themer/tree/main/cli/packages/iterm):
+Here's an example of `@themerdev/colors-polar-ice` in [vim](https://github.com/themerdev/themer/tree/main/cli/packages/vim) and [iTerm](https://github.com/themerdev/themer/tree/main/cli/packages/iterm):
 
-![Preview - dark](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-colors-polar-ice/assets/themer-colors-polar-ice-dark.png)
+![Preview - dark](https://cdn.jsdelivr.net/gh/themerdev/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-colors-polar-ice/assets/themer-colors-polar-ice-dark.png)
 
-And the light variant in [Sublime Text](https://github.com/mjswensen/themer/tree/main/cli/packages/sublime-text):
+And the light variant in [Sublime Text](https://github.com/themerdev/themer/tree/main/cli/packages/sublime-text):
 
-![Preview - light](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-colors-polar-ice/assets/themer-colors-polar-ice-light.png)
+![Preview - light](https://cdn.jsdelivr.net/gh/themerdev/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/cli/packages/themer-colors-polar-ice/assets/themer-colors-polar-ice-light.png)
 
 ## Installation & usage
 
 Install this module wherever you have `themer` installed:
 
-    npm install @themer/colors-polar-ice
+    npm install @themerdev/colors-polar-ice
 
-Then pass `@themer/colors-polar-ice` as a `-c` (`--colors`) arg to `themer`:
+Then pass `@themerdev/colors-polar-ice` as a `-c` (`--colors`) arg to `themer`:
 
-    themer -c @themer/colors-polar-ice ...
+    themer -c @themerdev/colors-polar-ice ...
