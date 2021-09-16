@@ -1,5 +1,5 @@
 {
-  "name": "@themer/colors-solarized",
+  "name": "@themerdev/colors-solarized",
   "version": "1.0.4",
   "description": "A themer color set ported from the popular Solarized themes.",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/colors-solarized"
   },
   "keywords": [
     "themer",
@@ -26,8 +27,8 @@
     "/lib/index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/colors-solarized#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-solarized#readme",
   "devDependencies": {}
 }
