@@ -1,6 +1,6 @@
-# @themer/colors-dracula
+# @themerdev/colors-dracula
 
-A [themer](https://github.com/mjswensen/themer) color set based on the [Dracula theme](https://github.com/dracula/dracula-theme) by [Zeno Rocha](https://zenorocha.com/).
+A [themer](https://github.com/themerdev/themer) color set based on the [Dracula theme](https://github.com/dracula/dracula-theme) by [Zeno Rocha](https://zenorocha.com/).
 
 This theme is ported from the original open-source Dracula—see [draculatheme.com/pro](https://draculatheme.com/pro) for Dracula Pro.
 
@@ -8,8 +8,8 @@ This theme is ported from the original open-source Dracula—see [draculatheme.c
 
 Install this module wherever you have `themer` installed:
 
-    npm install @themer/colors-dracula
+    npm install @themerdev/colors-dracula
 
-Then pass `@themer/colors-dracula` as a `-c` (`--colors`) arg to `themer`:
+Then pass `@themerdev/colors-dracula` as a `-c` (`--colors`) arg to `themer`:
 
-    themer -c @themer/colors-dracula ...
+    themer -c @themerdev/colors-dracula ...
