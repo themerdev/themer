@@ -1,5 +1,5 @@
 {
-  "name": "@themer/colors-rivet",
+  "name": "@themerdev/colors-rivet",
   "version": "1.0.1",
   "description": "A color set for themer based on the design system for Rivet, Inc.",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/colors-rivet"
   },
   "keywords": [
     "themer",
@@ -26,9 +27,9 @@
     "/lib/index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/colors-rivet#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-rivet#readme",
   "peerDependencies": {
     "themer": "^3"
   },
