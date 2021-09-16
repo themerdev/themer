@@ -1,10 +1,10 @@
-# @themer/colors-right-in-the-teals
+# @themerdev/colors-right-in-the-teals
 
-A [themer](https://github.com/mjswensen/themer) color set based on shades of teal.
+A [themer](https://github.com/themerdev/themer) color set based on shades of teal.
 
 ## Dark preview
 
-![Dark variant preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@285c963b5e9e25a0c898dfc0d7495fa1479c6a47/cli/packages/themer-colors-right-in-the-teals/assets/preview-dark.jpg)
+![Dark variant preview](https://cdn.jsdelivr.net/gh/themerdev/themer@285c963b5e9e25a0c898dfc0d7495fa1479c6a47/cli/packages/themer-colors-right-in-the-teals/assets/preview-dark.jpg)
 
 <p align="center">
   <em>
@@ -14,7 +14,7 @@ A [themer](https://github.com/mjswensen/themer) color set based on shades of tea
 
 ## Light preview
 
-![Light variant preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@285c963b5e9e25a0c898dfc0d7495fa1479c6a47/cli/packages/themer-colors-right-in-the-teals/assets/preview-light.jpg)
+![Light variant preview](https://cdn.jsdelivr.net/gh/themerdev/themer@285c963b5e9e25a0c898dfc0d7495fa1479c6a47/cli/packages/themer-colors-right-in-the-teals/assets/preview-light.jpg)
 
 <p align="center">
   <em>
@@ -26,8 +26,8 @@ A [themer](https://github.com/mjswensen/themer) color set based on shades of tea
 
 Install this module wherever you have `themer` installed:
 
-    npm install @themer/colors-right-in-the-teals
+    npm install @themerdev/colors-right-in-the-teals
 
-Then pass `@themer/colors-right-in-the-teals` as a `-c` (`--colors`) arg to `themer`:
+Then pass `@themerdev/colors-right-in-the-teals` as a `-c` (`--colors`) arg to `themer`:
 
-    themer -c @themer/colors-right-in-the-teals ...
+    themer -c @themerdev/colors-right-in-the-teals ...

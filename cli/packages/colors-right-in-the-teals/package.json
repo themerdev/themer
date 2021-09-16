@@ -1,5 +1,5 @@
 {
-  "name": "@themer/colors-right-in-the-teals",
+  "name": "@themerdev/colors-right-in-the-teals",
   "version": "1.0.1",
   "description": "A themer color set based on shades of teal.",
   "main": "lib/index.js",
@@ -15,13 +15,14 @@
     "prepublishOnly": "cp ../../../LICENSE.md ./"
   },
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
-    "type": "git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli/packages/colors-right-in-the-teals"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/colors-right-in-the-teals#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-right-in-the-teals#readme",
   "peerDependencies": {
     "themer": "^3"
   },
