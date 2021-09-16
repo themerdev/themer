@@ -1,5 +1,5 @@
 {
-  "name": "@themer/colors-default",
+  "name": "@themerdev/colors-default",
   "version": "1.0.11",
   "description": "A default color set for themer.",
   "main": "lib/index.js",
@@ -8,8 +8,9 @@
   },
   "author": "mjswensen",
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
-    "type": "git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli/packages/colors-default"
   },
   "license": "MIT",
   "files": [
@@ -20,9 +21,9 @@
   },
   "devDependencies": {},
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/colors-default#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-default#readme",
   "dependencies": {},
   "keywords": [
     "themer",
