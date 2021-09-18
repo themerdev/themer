@@ -1,5 +1,5 @@
 {
-  "name": "@themer/firefox-addon",
+  "name": "@themerdev/firefox-addon",
   "version": "1.0.2",
   "description": "A Firefox theme generator for themer.",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/firefox-addon"
   },
   "keywords": [
     "themer",
@@ -24,9 +25,9 @@
     "/lib/index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/firefox-addon#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/firefox-addon#readme",
   "dependencies": {
     "color": "^3.1.2",
     "lodash": "^4.17.15"
