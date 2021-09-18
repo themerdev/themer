@@ -1,5 +1,5 @@
 {
-  "name": "@themer/firefox-color",
+  "name": "@themerdev/firefox-color",
   "version": "1.0.3",
   "description": "A Firefox Color theme generator for themer.",
   "main": "lib/index.js",
@@ -16,12 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/firefox-color"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/firefox-color#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/firefox-color#readme",
   "peerDependencies": {
     "themer": "^3"
   },
