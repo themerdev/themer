@@ -1,15 +1,15 @@
-# @themer/kitty
+# @themerdev/kitty
 
-A [kitty](https://sw.kovidgoyal.net/kitty/) template for [themer](https://github.com/mjswensen/themer).
+A [kitty](https://sw.kovidgoyal.net/kitty/) template for [themer](https://github.com/themerdev/themer).
 
 ## Installation & usage
 
 Install this module wherever you have `themer` installed:
 
-    npm install @themer/kitty
+    npm install @themerdev/kitty
 
-Then pass `@themer/kitty` as a `-t` (`--template`) arg to `themer`:
+Then pass `@themerdev/kitty` as a `-t` (`--template`) arg to `themer`:
 
-    themer -c my-colors.js -t @themer/kitty -o gen
+    themer -c my-colors.js -t @themerdev/kitty -o gen
 
 Installation instructions for the generated theme(s) will be included in `<output dir>/README.md`.
