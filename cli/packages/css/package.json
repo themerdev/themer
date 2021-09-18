@@ -1,5 +1,5 @@
 {
-  "name": "@themer/css",
+  "name": "@themerdev/css",
   "version": "1.0.1",
   "description": "A CSS theme generator for themer.",
   "main": "lib/index.js",
@@ -16,12 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/css"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/css#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/css#readme",
   "peerDependencies": {
     "themer": "^3"
   },
