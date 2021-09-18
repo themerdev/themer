@@ -1,5 +1,5 @@
 {
-  "name": "@themer/emacs",
+  "name": "@themerdev/emacs",
   "version": "1.0.2",
   "description": "An emacs theme generator for themer.",
   "main": "lib/index.js",
@@ -16,12 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/emacs"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/emacs#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/emacs#readme",
   "peerDependencies": {
     "themer": "^3"
   },
