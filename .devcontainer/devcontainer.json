@@ -4,5 +4,6 @@
     "dockerfile": "./Dockerfile"
   },
   "remoteUser": "node",
-  "extensions": ["esbenp.prettier-vscode"]
+  "extensions": ["esbenp.prettier-vscode"],
+  "postCreateCommand": "cd cli && yarn && cd ../web && yarn"
 }
