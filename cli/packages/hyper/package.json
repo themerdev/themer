@@ -1,5 +1,5 @@
 {
-  "name": "@themer/hyper",
+  "name": "@themerdev/hyper",
   "version": "3.1.2",
   "description": "A Hyper.app plugin generator for themer.",
   "main": "lib/index.js",
@@ -7,8 +7,9 @@
     "node": ">=8.11.4"
   },
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
-    "type": "git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli/packages/hyper"
   },
   "author": "mjswensen",
   "license": "MIT",
@@ -26,9 +27,9 @@
     "themer": "^2.1||^3"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/hyper#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/hyper#readme",
   "keywords": [
     "themer",
     "hyper",
