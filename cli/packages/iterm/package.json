@@ -1,5 +1,5 @@
 {
-  "name": "@themer/iterm",
+  "name": "@themerdev/iterm",
   "version": "2.1.1",
   "description": "iTerm2 theme generator for themer.",
   "main": "lib/index.js",
@@ -19,16 +19,17 @@
   },
   "devDependencies": {},
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
-    "type": "git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli/packages/iterm"
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/iterm#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/iterm#readme",
   "keywords": [
     "themer",
     "iterm",
