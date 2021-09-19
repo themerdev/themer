@@ -1,5 +1,5 @@
 {
-  "name": "@themer/vim-lightline",
+  "name": "@themerdev/vim-lightline",
   "version": "3.1.2",
   "description": "Themer generator for vim lightline plugin.",
   "main": "lib/index.js",
@@ -7,8 +7,9 @@
     "node": ">=8.11.4"
   },
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
-    "type": "git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli/packages/vim-lightline"
   },
   "author": "mjswensen",
   "license": "MIT",
@@ -23,9 +24,9 @@
     "themer": "^1.0.2||^2||^3"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/vim-lightline#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/vim-lightline#readme",
   "dependencies": {},
   "keywords": [
     "themer",
