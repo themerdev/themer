@@ -27,7 +27,10 @@ jq ".repository = .repository + {directory:\"cli/packages/$1\"}" \
   > $PACKAGE/new.package.json
 mv $PACKAGE/new.package.json $PACKAGE/package.json
 
-echo "TODO: review diffs and stage changes"
+echo "Staging changed files..."
+git add -- $PACKAGE
+
+echo "TODO: review staged diffs"
 read "READY?Ready ('y' to proceed)? "
 [[ $READY != 'y' ]] && exit 1
 
