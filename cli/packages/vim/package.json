@@ -1,5 +1,5 @@
 {
-  "name": "@themer/vim",
+  "name": "@themerdev/vim",
   "version": "3.3.1",
   "description": "Vim template for themer.",
   "main": "lib/index.js",
@@ -8,8 +8,9 @@
   },
   "author": "mjswensen",
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
-    "type": "git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli/packages/vim"
   },
   "license": "MIT",
   "files": [
@@ -23,9 +24,9 @@
     "themer": "^1.0.2||^2||^3"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/vim#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/vim#readme",
   "dependencies": {
     "color-convert": "^2.0.1"
   },
