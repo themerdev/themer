@@ -1,5 +1,5 @@
 {
-  "name": "@themer/terminal",
+  "name": "@themerdev/terminal",
   "version": "2.3.0",
   "description": "A Terminal.app theme generator for themer.",
   "main": "lib/index.js",
@@ -20,12 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mjswensen/themer.git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "directory": "cli/packages/terminal"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/terminal#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/terminal#readme",
   "keywords": [
     "themer",
     "terminal",
