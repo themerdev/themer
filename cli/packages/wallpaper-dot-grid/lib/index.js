@@ -3,7 +3,7 @@ const {
   deepFlatten,
   colorSets: getColorSets,
   listOutputFiles,
-} = require('@themer/utils');
+} = require('@themerdev/utils');
 const { createCanvas } = require('canvas');
 const { scalePow } = require('d3-scale');
 const { Perlin2 } = require('tumult');
