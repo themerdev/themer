@@ -1,3 +1,3 @@
-# @themer/preview-code
+# @themerdev/preview-code
 
-[themer](https://github.com/mjswensen/themer) template for previewing color sets.
+[themer](https://github.com/themerdev/themer) template for previewing color sets.

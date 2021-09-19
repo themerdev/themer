@@ -1,5 +1,5 @@
 {
-  "name": "@themer/preview-code",
+  "name": "@themerdev/preview-code",
   "version": "1.0.7",
   "description": "Color set preview template for themer.",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/preview-code"
   },
   "keywords": [
     "themer",
@@ -23,9 +24,9 @@
     "/lib/index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/preview-code#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/preview-code#readme",
   "devDependencies": {},
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
