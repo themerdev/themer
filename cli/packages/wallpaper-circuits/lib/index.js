@@ -4,7 +4,7 @@ const {
   colorSets: getColorSets,
   listOutputFiles,
   weightedRandom,
-} = require('@themer/utils');
+} = require('@themerdev/utils');
 const { createCanvas } = require('canvas');
 
 const BORDER_SIZE = 75;
