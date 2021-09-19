@@ -1,5 +1,5 @@
 {
-  "name": "@themer/wallpaper-octagon",
+  "name": "@themerdev/wallpaper-octagon",
   "version": "4.0.2",
   "description": "Wallpaper generator for themer.",
   "main": "lib/index.js",
@@ -16,18 +16,19 @@
   },
   "devDependencies": {},
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
-    "type": "git"
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli/packages/wallpaper-octagon"
   },
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/wallpaper-octagon#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/wallpaper-octagon#readme",
   "dependencies": {
-    "@themer/utils": "^1.2.0",
+    "@themerdev/utils": "^1.2.0",
     "canvas": "^2.6.1"
   },
   "keywords": [
