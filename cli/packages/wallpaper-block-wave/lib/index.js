@@ -4,7 +4,7 @@ const {
   deepFlatten,
   listOutputFiles,
   weightedRandom,
-} = require('@themer/utils');
+} = require('@themerdev/utils');
 const { createCanvas } = require('canvas');
 const Color = require('color');
 
