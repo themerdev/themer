@@ -1,5 +1,5 @@
 {
-  "name": "@themer/xresources",
+  "name": "@themerdev/xresources",
   "version": "1.0.3",
   "description": "An X resources template for themer",
   "main": "lib/index.js",
@@ -16,12 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/xresources"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/xresources#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/xresources#readme",
   "peerDependencies": {
     "themer": "^3"
   },
