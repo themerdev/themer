@@ -1,5 +1,5 @@
 {
-  "name": "@themer/windows-terminal",
+  "name": "@themerdev/windows-terminal",
   "version": "1.0.3",
   "description": "A Windows Terminal theme generator for themer.",
   "main": "lib/index.js",
@@ -16,12 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/windows-terminal"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/windows-terminal#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/windows-terminal#readme",
   "peerDependencies": {
     "themer": "^3"
   },
