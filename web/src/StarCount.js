@@ -10,7 +10,7 @@ const StarCount = () => {
     (async () => {
       try {
         const response = await fetch(
-          'https://api.github.com/repos/mjswensen/themer',
+          'https://api.github.com/repos/themerdev/themer',
         );
         const { stargazers_count: count } = await response.json();
         setCount(numeral(count).format('0.0a'));
@@ -40,7 +40,7 @@ const StarCount = () => {
       <a
         className={styles.star}
         style={{ color: getActiveColorOrFallback(['shade7']) }}
-        href='https://github.com/mjswensen/themer'
+        href='https://github.com/themerdev/themer'
         target='_blank'
         rel='noopener noreferrer'
       >
@@ -50,7 +50,7 @@ const StarCount = () => {
         <a
           className={styles.stargazers}
           style={{ color: getActiveColorOrFallback(['shade7']) }}
-          href='https://github.com/mjswensen/themer/stargazers'
+          href='https://github.com/themerdev/themer/stargazers'
           target='_blank'
           rel='noopener noreferrer'
         >

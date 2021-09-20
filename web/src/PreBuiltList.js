@@ -4,22 +4,22 @@ import { has } from 'lodash';
 import styles from './PreBuiltList.module.css';
 import ThemeContext, { paramsFromState } from './ThemeContext';
 
-import { colors as defaultColors } from '@themer/colors-default';
-import { colors as draculaColors } from '@themer/colors-dracula';
-import { colors as fingerPaintColors } from '@themer/colors-finger-paint';
-import { colors as githubUniverseColors } from '@themer/colors-github-universe';
-import { colors as greenAsAWhistleColors } from '@themer/colors-green-as-a-whistle';
-import { colors as lucidColors } from '@themer/colors-lucid';
-import { colors as mojaveColors } from '@themer/colors-mojave';
-import { colors as monkeyColors } from '@themer/colors-monkey';
-import { colors as nightSkyColors } from '@themer/colors-night-sky';
-import { colors as novaColors } from '@themer/colors-nova';
-import { colors as oneColors } from '@themer/colors-one';
-import { colors as polarIceColors } from '@themer/colors-polar-ice';
-import { colors as rightInTheTealsColors } from '@themer/colors-right-in-the-teals';
-import { colors as rivetColors } from '@themer/colors-rivet';
-import { colors as setiColors } from '@themer/colors-seti';
-import { colors as solarizedColors } from '@themer/colors-solarized';
+import { colors as defaultColors } from '@themerdev/colors-default';
+import { colors as draculaColors } from '@themerdev/colors-dracula';
+import { colors as fingerPaintColors } from '@themerdev/colors-finger-paint';
+import { colors as githubUniverseColors } from '@themerdev/colors-github-universe';
+import { colors as greenAsAWhistleColors } from '@themerdev/colors-green-as-a-whistle';
+import { colors as lucidColors } from '@themerdev/colors-lucid';
+import { colors as mojaveColors } from '@themerdev/colors-mojave';
+import { colors as monkeyColors } from '@themerdev/colors-monkey';
+import { colors as nightSkyColors } from '@themerdev/colors-night-sky';
+import { colors as novaColors } from '@themerdev/colors-nova';
+import { colors as oneColors } from '@themerdev/colors-one';
+import { colors as polarIceColors } from '@themerdev/colors-polar-ice';
+import { colors as rightInTheTealsColors } from '@themerdev/colors-right-in-the-teals';
+import { colors as rivetColors } from '@themerdev/colors-rivet';
+import { colors as setiColors } from '@themerdev/colors-seti';
+import { colors as solarizedColors } from '@themerdev/colors-solarized';
 
 const PreBuiltLink = ({ colors, children }) => {
   const { activeColorSet } = useContext(ThemeContext);

@@ -5,15 +5,15 @@ import styles from './WallpaperModal.module.css';
 import ThemeContext from './ThemeContext';
 import useEscListener from './useEscListener';
 
-import { render as blockWaveRender } from '@themer/wallpaper-block-wave';
-import { render as burstRender } from '@themer/wallpaper-burst';
-import { render as circuitsRender } from '@themer/wallpaper-circuits';
-import { render as diamondsRender } from '@themer/wallpaper-diamonds';
-import { render as dotGridRender } from '@themer/wallpaper-dot-grid';
-import { render as octagonRender } from '@themer/wallpaper-octagon';
-import { render as shirtsRender } from '@themer/wallpaper-shirts';
-import { render as trianglesRender } from '@themer/wallpaper-triangles';
-import { render as trianglifyRender } from '@themer/wallpaper-trianglify';
+import { render as blockWaveRender } from '@themerdev/wallpaper-block-wave';
+import { render as burstRender } from '@themerdev/wallpaper-burst';
+import { render as circuitsRender } from '@themerdev/wallpaper-circuits';
+import { render as diamondsRender } from '@themerdev/wallpaper-diamonds';
+import { render as dotGridRender } from '@themerdev/wallpaper-dot-grid';
+import { render as octagonRender } from '@themerdev/wallpaper-octagon';
+import { render as shirtsRender } from '@themerdev/wallpaper-shirts';
+import { render as trianglesRender } from '@themerdev/wallpaper-triangles';
+import { render as trianglifyRender } from '@themerdev/wallpaper-trianglify';
 
 const getImagePromises = (wallpaper, colors, width, height) => {
   const options = { [`${wallpaper}-size`]: `${width}x${height}` };

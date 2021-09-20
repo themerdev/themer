@@ -152,7 +152,7 @@ const Main = () => {
         <div>
           themer is open source software, made by{' '}
           <Link href='https://mjswensen.com'>mjswensen</Link> with{' '}
-          <Link href='https://github.com/mjswensen/themer/graphs/contributors'>
+          <Link href='https://github.com/themerdev/themer/graphs/contributors'>
             contributors
           </Link>
           , and is released under the MIT license
@@ -163,10 +163,14 @@ const Main = () => {
           launch
         </div>
         <div className={styles.support}>
-          enjoying themer? show your support by purchasing a theme, sending a
-          tip through <Link href='https://brave.com'>Brave</Link>, or starring
+          enjoying themer? show your support by purchasing a theme, sponsoring
           the{' '}
-          <Link href='https://github.com/mjswensen/themer'>
+          <Link href='https://github.com/sponsors/themerdev'>
+            @themerdev GitHub org
+          </Link>
+          , sending a tip through <Link href='https://brave.com'>Brave</Link>,
+          or starring the{' '}
+          <Link href='https://github.com/themerdev/themer'>
             GitHub repository
           </Link>
         </div>

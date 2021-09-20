@@ -3,51 +3,51 @@ import themer from 'themer/lib/themer';
 import JSZip from 'jszip';
 import { flatten, sortBy } from 'lodash';
 
-import * as themerAlacritty from '@themer/alacritty';
-import * as themerAlfred from '@themer/alfred';
-import * as themerAtomSyntax from '@themer/atom-syntax';
-import * as themerAtomUi from '@themer/atom-ui';
-import * as themerBbedit from '@themer/bbedit';
-import * as themerBrave from '@themer/brave';
-import * as themerChrome from '@themer/chrome';
-import * as themerCmd from '@themer/cmd';
-import * as themerConemu from '@themer/conemu';
-import * as themerCss from '@themer/css';
-import * as themerEmacs from '@themer/emacs';
-import * as themerFirefoxAddon from '@themer/firefox-addon';
-import * as themerFirefoxColor from '@themer/firefox-color';
+import * as themerAlacritty from '@themerdev/alacritty';
+import * as themerAlfred from '@themerdev/alfred';
+import * as themerAtomSyntax from '@themerdev/atom-syntax';
+import * as themerAtomUi from '@themerdev/atom-ui';
+import * as themerBbedit from '@themerdev/bbedit';
+import * as themerBrave from '@themerdev/brave';
+import * as themerChrome from '@themerdev/chrome';
+import * as themerCmd from '@themerdev/cmd';
+import * as themerConemu from '@themerdev/conemu';
+import * as themerCss from '@themerdev/css';
+import * as themerEmacs from '@themerdev/emacs';
+import * as themerFirefoxAddon from '@themerdev/firefox-addon';
+import * as themerFirefoxColor from '@themerdev/firefox-color';
 import * as themerGnomeTerminal from 'themer-gnome-terminal';
-import * as themerHyper from '@themer/hyper';
-import * as themerIterm from '@themer/iterm';
+import * as themerHyper from '@themerdev/hyper';
+import * as themerIterm from '@themerdev/iterm';
 import * as themerJetbrains from 'themer-jetbrains';
-import * as themerKeypirinha from '@themer/keypirinha';
-import * as themerKitty from '@themer/kitty';
-import * as themerKonsole from '@themer/konsole';
-import * as themerPrism from '@themer/prism';
-import * as themerSketchPalettes from '@themer/sketch-palettes';
-import * as themerSlack from '@themer/slack';
-import * as themerSublimeText from '@themer/sublime-text';
-import * as themerTerminal from '@themer/terminal';
-import * as themerTerminator from '@themer/terminator';
+import * as themerKeypirinha from '@themerdev/keypirinha';
+import * as themerKitty from '@themerdev/kitty';
+import * as themerKonsole from '@themerdev/konsole';
+import * as themerPrism from '@themerdev/prism';
+import * as themerSketchPalettes from '@themerdev/sketch-palettes';
+import * as themerSlack from '@themerdev/slack';
+import * as themerSublimeText from '@themerdev/sublime-text';
+import * as themerTerminal from '@themerdev/terminal';
+import * as themerTerminator from '@themerdev/terminator';
 import * as themerTermite from 'themer-termite';
 import * as themerTmux from 'themer-tmux';
-import * as themerVim from '@themer/vim';
-import * as themerVimLightline from '@themer/vim-lightline';
-import * as themerVisualStudio from '@themer/visual-studio';
-import * as themerVscode from '@themer/vscode';
-import * as themerWallpaperBlockWave from '@themer/wallpaper-block-wave';
-import * as themerWallpaperBurst from '@themer/wallpaper-burst';
-import * as themerWallpaperCircuits from '@themer/wallpaper-circuits';
-import * as themerWallpaperDiamonds from '@themer/wallpaper-diamonds';
-import * as themerWallpaperDotGrid from '@themer/wallpaper-dot-grid';
-import * as themerWallpaperOctagon from '@themer/wallpaper-octagon';
-import * as themerWallpaperShirts from '@themer/wallpaper-shirts';
-import * as themerWallpaperTriangles from '@themer/wallpaper-triangles';
-import * as themerWallpaperTrianglify from '@themer/wallpaper-trianglify';
-import * as themerWindowsTerminal from '@themer/windows-terminal';
-import * as themerWox from '@themer/wox';
-import * as themerXcode from '@themer/xcode';
-import * as themerXresources from '@themer/xresources';
+import * as themerVim from '@themerdev/vim';
+import * as themerVimLightline from '@themerdev/vim-lightline';
+import * as themerVisualStudio from '@themerdev/visual-studio';
+import * as themerVscode from '@themerdev/vscode';
+import * as themerWallpaperBlockWave from '@themerdev/wallpaper-block-wave';
+import * as themerWallpaperBurst from '@themerdev/wallpaper-burst';
+import * as themerWallpaperCircuits from '@themerdev/wallpaper-circuits';
+import * as themerWallpaperDiamonds from '@themerdev/wallpaper-diamonds';
+import * as themerWallpaperDotGrid from '@themerdev/wallpaper-dot-grid';
+import * as themerWallpaperOctagon from '@themerdev/wallpaper-octagon';
+import * as themerWallpaperShirts from '@themerdev/wallpaper-shirts';
+import * as themerWallpaperTriangles from '@themerdev/wallpaper-triangles';
+import * as themerWallpaperTrianglify from '@themerdev/wallpaper-trianglify';
+import * as themerWindowsTerminal from '@themerdev/windows-terminal';
+import * as themerWox from '@themerdev/wox';
+import * as themerXcode from '@themerdev/xcode';
+import * as themerXresources from '@themerdev/xresources';
 
 const templates = {
   alacritty: { name: 'Alacritty', ...themerAlacritty },
@@ -128,17 +128,18 @@ ${url}
 
 If you find \`themer\` useful, here are some ways to support the project:
 
-* Star [\`themer\` on GitHub](https://github.com/mjswensen/themer)
-* Follow [@themerdev](https://twitter.com/themerdev) on Twitter
-* [Send a tip through the Brave Browser](https://brave.com/the537), either on [the repository page](https://github.com/mjswensen/themer) or [the Web UI](https://themer.dev)
-* Pay what you want when downloading your theme from [themer.dev](https://themer.dev)
+- Star [\`themer\` on GitHub](https://github.com/themerdev/themer)
+- Follow [@themerdev](https://twitter.com/themerdev) on Twitter
+- [Send a tip through the Brave Browser](https://brave.com/the537), either on [the repository page](https://github.com/themerdev/themer) or [the Web UI](https://themer.dev)
+- Pay what you want when downloading your theme from [themer.dev](https://themer.dev)
+- [Sponsor the @themerdev GitHub org](https://github.com/sponsors/themerdev)
 
 # Installation instructions`;
 
 const colorsForCli = (
   cliColors,
   url,
-) => `// This file can be used with the themer CLI, see https://github.com/mjswensen/themer
+) => `// This file can be used with the themer CLI, see https://github.com/themerdev/themer
 
 module.exports.colors = ${JSON.stringify(cliColors, null, 2)};
 
