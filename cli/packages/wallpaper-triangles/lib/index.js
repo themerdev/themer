@@ -3,7 +3,7 @@ const {
   colorSets: getColorSets,
   deepFlatten,
   listOutputFiles,
-} = require('@themer/utils');
+} = require('@themerdev/utils');
 const { createCanvas, loadImage } = require('canvas');
 
 const render = (colors, options) => {
