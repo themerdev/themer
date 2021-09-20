@@ -3,7 +3,7 @@ const {
   deepFlatten,
   colorSets: getColorSets,
   listOutputFiles,
-} = require('@themer/utils');
+} = require('@themerdev/utils');
 const { createCanvas, loadImage } = require('canvas');
 
 const CELL_WIDTH = 676;
