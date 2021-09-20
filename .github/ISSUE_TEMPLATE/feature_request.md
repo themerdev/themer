@@ -1,14 +1,14 @@
 ---
 name: Feature request
 about: Suggest an idea for themer
-title: ''
-labels: ''
-assignees: ''
+title: ""
+labels: ""
+assignees: ""
 ---
 
 # New theme template request
 
-If you are requesting theme support for a new tool or program, use this section. Otherwise, delete it and continue with "Other feature request" below. See also [CONTRIBUTING.md](https://github.com/mjswensen/themer/blob/main/.github/CONTRIBUTING.md) for more information.
+If you are requesting theme support for a new tool or program, use this section. Otherwise, delete it and continue with "Other feature request" below. See also [CONTRIBUTING.md](https://github.com/themerdev/themer/blob/main/.github/CONTRIBUTING.md) for more information.
 
 ## Website
 

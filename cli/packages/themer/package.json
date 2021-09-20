@@ -8,7 +8,7 @@
   },
   "author": "mjswensen",
   "repository": {
-    "url": "git+ssh://git@github.com/mjswensen/themer.git",
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
     "type": "git"
   },
   "license": "MIT",
@@ -34,9 +34,9 @@
   },
   "devDependencies": {},
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer#readme",
+  "homepage": "https://github.com/themerdev/themer#readme",
   "keywords": [
     "themer",
     "theme",
