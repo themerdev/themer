@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@themer/wallpaper-trianglify options should return proper defaults if none provided 1`] = `
+exports[`@themerdev/wallpaper-trianglify options should return proper defaults if none provided 1`] = `
 Array [
   Object {
     "h": 1800,
@@ -13,7 +13,7 @@ Array [
 ]
 `;
 
-exports[`@themer/wallpaper-trianglify options should return proper defaults if none provided 2`] = `
+exports[`@themerdev/wallpaper-trianglify options should return proper defaults if none provided 2`] = `
 Array [
   0.75,
 ]

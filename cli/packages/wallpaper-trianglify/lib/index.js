@@ -1,5 +1,5 @@
 const trianglify = require('trianglify'),
-  { deepFlatten, listOutputFiles } = require('@themer/utils'),
+  { deepFlatten, listOutputFiles } = require('@themerdev/utils'),
   { getSizes, getVariances } = require('./opts');
 const { createCanvas } = require('canvas');
 
