@@ -1,5 +1,5 @@
 {
-  "name": "@themer/xcode",
+  "name": "@themerdev/xcode",
   "version": "2.1.1",
   "description": "An Xcode theme generator for themer.",
   "main": "lib/index.js",
@@ -24,12 +24,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjswensen/themer.git"
+    "url": "git+https://github.com/themerdev/themer.git",
+    "directory": "cli/packages/xcode"
   },
   "bugs": {
-    "url": "https://github.com/mjswensen/themer/issues"
+    "url": "https://github.com/themerdev/themer/issues"
   },
-  "homepage": "https://github.com/mjswensen/themer/tree/main/cli/packages/xcode#readme",
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/xcode#readme",
   "keywords": [
     "themer",
     "Xcode",
