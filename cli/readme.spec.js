@@ -9,10 +9,10 @@ describe('readme', () => {
     );
 
     const templates = [
-      ...readmeContents.matchAll(/^\* \[@themer\/([\w-]+)\]/gm),
+      ...readmeContents.matchAll(/^\- \[@themerdev\/([\w-]+)\]/gm),
     ].map(([_, basename]) => basename);
     const colorSets = [
-      ...readmeContents.matchAll(/^\| \[@themer\/([\w-]+)\]/gm),
+      ...readmeContents.matchAll(/^\| \[@themerdev\/([\w-]+)\]/gm),
     ].map(([_, basename]) => basename);
     const actual = new Set([...templates, ...colorSets]);
 
