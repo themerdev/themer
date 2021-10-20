@@ -26,6 +26,7 @@ const Download = () => {
   const [hyper, setHyper] = useState(false);
   const [iterm, setIterm] = useState(false);
   const [jetbrains, setJetbrains] = useState(false);
+  const [kdePlasmaColors, setKdePlasmaColors] = useState(false);
   const [keypirinha, setKeypirinha] = useState(false);
   const [kitty, setKitty] = useState(false);
   const [konsole, setKonsole] = useState(false);
@@ -80,6 +81,7 @@ const Download = () => {
       hyper,
       iterm,
       jetbrains,
+      kdePlasmaColors,
       keypirinha,
       kitty,
       konsole,
@@ -384,6 +386,12 @@ const Download = () => {
             value={firefox}
             onChange={() => setFirefox(!firefox)}
             label='Firefox'
+            accentSelected
+          />
+          <Checkbox
+            value={kdePlasmaColors}
+            onChange={() => setKdePlasmaColors(!kdePlasmaColors)}
+            label='KDE Plasma Colors'
             accentSelected
           />
           <Checkbox

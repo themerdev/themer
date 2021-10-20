@@ -1895,6 +1895,13 @@
   dependencies:
     color "^3.0.0"
 
+"@themerdev/kde-plasma-colors@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themerdev/kde-plasma-colors/-/kde-plasma-colors-1.0.0.tgz#db92e787fd2a10babd600fea02eb5ecd521365a3"
+  integrity sha512-4wyHE1eYbjNqozL/ir7aoyhh7d2rnI/+aZWIjZpmxoL0dZmbcKzvx+jzgJWjHDLlc2DupsJXpLBQgOb1oXi7yw==
+  dependencies:
+    color "^4.0.1"
+
 "@themerdev/keypirinha@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@themerdev/keypirinha/-/keypirinha-1.0.1.tgz#17f0cda604b20bd94cbf1799d5faac392aa3578b"
@@ -3783,6 +3790,14 @@ color@^3.0.0, color@^3.1.2, color@^3.1.3, color@^3.2.1:
   integrity sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==
   dependencies:
     color-convert "^1.9.3"
+    color-string "^1.6.0"
+
+color@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/color/-/color-4.0.1.tgz#21df44cd10245a91b1ccf5ba031609b0e10e7d67"
+  integrity sha512-rpZjOKN5O7naJxkH2Rx1sZzzBgaiWECc6BYXjeCE6kF0kcASJYbUq02u7JqIHwCb/j3NhV+QhRL2683aICeGZA==
+  dependencies:
+    color-convert "^2.0.1"
     color-string "^1.6.0"
 
 colorette@^1.2.1, colorette@^1.2.2, colorette@^1.3.0:

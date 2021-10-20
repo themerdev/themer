@@ -20,6 +20,7 @@ import * as themerGnomeTerminal from 'themer-gnome-terminal';
 import * as themerHyper from '@themerdev/hyper';
 import * as themerIterm from '@themerdev/iterm';
 import * as themerJetbrains from 'themer-jetbrains';
+import * as themerKdePlasmaColors from '@themerdev/kde-plasma-colors';
 import * as themerKeypirinha from '@themerdev/keypirinha';
 import * as themerKitty from '@themerdev/kitty';
 import * as themerKonsole from '@themerdev/konsole';
@@ -69,6 +70,7 @@ const templates = {
   hyper: { name: 'Hyper', ...themerHyper },
   iterm: { name: 'iTerm', ...themerIterm },
   jetbrains: { name: 'JetBrains', ...themerJetbrains },
+  kdePlasmaColors: { name: 'KDE Plasma Colors', ...themerKdePlasmaColors },
   keypirinha: { name: 'Keypirinha', ...themerKeypirinha },
   kitty: { name: 'kitty', ...themerKitty },
   konsole: { name: 'Konsole', ...themerKonsole },

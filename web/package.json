@@ -36,6 +36,7 @@
     "@themerdev/firefox-color": "^1.0.1",
     "@themerdev/hyper": "^3.1.1",
     "@themerdev/iterm": "^2.1.0",
+    "@themerdev/kde-plasma-colors": "^1.0.0",
     "@themerdev/keypirinha": "^1.0.0",
     "@themerdev/kitty": "^1.0.0",
     "@themerdev/konsole": "^1.0.0",
