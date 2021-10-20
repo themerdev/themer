@@ -290,6 +290,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 - [@themerdev/css](https://github.com/themerdev/themer/tree/main/cli/packages/css)
 - [@themerdev/firefox-addon](https://github.com/themerdev/themer/tree/main/cli/packages/firefox-addon)
 - [@themerdev/firefox-color](https://github.com/themerdev/themer/tree/main/cli/packages/firefox-color)
+- [@themerdev/kde-plasma-colors](https://github.com/themerdev/themer/tree/main/cli/packages/kde-plasma-colors)
 - [@themerdev/keypirinha](https://github.com/themerdev/themer/tree/main/cli/packages/keypirinha)
 - [@themerdev/prism](https://github.com/themerdev/themer/tree/main/cli/packages/prism)
 - [@themerdev/sketch-palettes](https://github.com/themerdev/themer/tree/main/cli/packages/sketch-palettes)

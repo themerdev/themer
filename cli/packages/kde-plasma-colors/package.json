@@ -1,0 +1,35 @@
+{
+  "name": "@themerdev/kde-plasma-colors",
+  "version": "1.0.0",
+  "description": "KDE Plasma Color Scheme generator for themer.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.11.4"
+  },
+  "scripts": {
+    "prepublishOnly": "cp ../../../LICENSE.md ./"
+  },
+  "author": "mjswensen",
+  "license": "MIT",
+  "files": [
+    "/lib/index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themerdev/themer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/themerdev/themer/issues"
+  },
+  "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/kde-plasma-colors#readme",
+  "peerDependencies": {
+    "themer": "^3"
+  },
+  "keywords": [
+    "themer",
+    "kde-plasma-colors"
+  ],
+  "dependencies": {
+    "color": "^4.0.1"
+  }
+}

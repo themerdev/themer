@@ -10,24 +10,22 @@
       "name": "Debug current test",
       "cwd": "${workspaceFolder}/cli",
       "program": "node_modules/.bin/jest",
-      "args": [
-        "--runInBand",
-        "${relativeFile}"
-      ],
+      "args": ["--runInBand", "${relativeFile}"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Run",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
+      "skipFiles": ["<node_internals>/**"],
       "cwd": "${workspaceFolder}/cli/packages",
       "program": "./themer/lib/index.js",
       "args": [
-        "-c", "./${input:colorSet}",
-        "-t", "./${input:template}",
-        "-o", "${workspaceFolder}/cli/tmp"
+        "-c",
+        "./${input:colorSet}",
+        "-t",
+        "./${input:template}",
+        "-o",
+        "${workspaceFolder}/cli/tmp"
       ]
     }
   ],
@@ -76,6 +74,7 @@
         "firefox-color",
         "hyper",
         "iterm",
+        "kde-plasma-colors",
         "kitty",
         "konsole",
         "preview-code",
