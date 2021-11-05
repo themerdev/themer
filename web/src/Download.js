@@ -8,6 +8,7 @@ import ThemeContext from './ThemeContext';
 import PriceInput from './PriceInput';
 import CheckoutModal from './CheckoutModal';
 import SupportModal from './SupportModal';
+import PriceContext from './PriceContext';
 
 const Download = () => {
   const [alacritty, setAlacritty] = useState(false);
@@ -59,7 +60,7 @@ const Download = () => {
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } =
     useContext(ThemeContext);
 
-  const [price, setPrice] = useState({ code: 'usd', amount: 900 });
+  const { price, setPrice } = useContext(PriceContext);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const [showSupportModal, setShowSupportModal] = useState(false);
 

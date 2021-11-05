@@ -1,10 +1,9 @@
 import { useState, useEffect, useContext } from 'react';
 import styles from './Main.module.css';
 
-import ColorSetInputs from './ColorSetInputs';
+import ColorSetSelector from './ColorSetSelector';
 import TextPreviews from './TextPreviews';
 import WallpaperPreview from './WallpaperPreview';
-import PreBuiltList from './PreBuiltList';
 import Download from './Download';
 import Link from './Link';
 import CopyUrl from './CopyUrl';
@@ -89,22 +88,9 @@ const Main = () => {
           className={styles.h2}
           style={{ color: getActiveColorOrFallback(['shade7']) }}
         >
-          1. Define colors
+          1. Pick your colors
         </h2>
-        <p
-          className={styles.help}
-          style={{ color: getActiveColorOrFallback(['shade6']) }}
-        >
-          Input your colors using any CSS format (keyword, hsl, rgb, etc.).
-        </p>
-        <ColorSetInputs />
-        <p
-          className={styles.preBuilt}
-          style={{ color: getActiveColorOrFallback(['shade6']) }}
-        >
-          Or start with a pre-built color set:
-        </p>
-        <PreBuiltList />
+        <ColorSetSelector />
         <h2
           className={styles.h2}
           style={{ color: getActiveColorOrFallback(['shade7']) }}
@@ -125,7 +111,7 @@ const Main = () => {
           className={styles.help}
           style={{ color: getActiveColorOrFallback(['shade6']) }}
         >
-          Select which themes you'd like to generate from your color set.
+          Select which themes you'd like to generate from your colors.
           Installation instructions will be included in a README file.
         </p>
         <Download />

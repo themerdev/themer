@@ -1,0 +1,9 @@
+.help {
+  margin: 0 0 var(--size-regular);
+}
+
+.footer {
+  padding-top: var(--size-regular);
+  display: flex;
+  justify-content: right;
+}

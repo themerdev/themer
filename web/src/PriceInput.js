@@ -1,120 +1,7 @@
 import { useContext } from 'react';
+import PriceContext from './PriceContext';
 import styles from './PriceInput.module.css';
 import ThemeContext from './ThemeContext';
-
-const toDisplayDecimal = (value) => value / 100;
-const toValueDecimal = (display) => Math.round(+display * 100);
-
-const toDisplayZeroDecimal = (value) => value;
-const toValueZeroDecimal = (display) => display;
-
-export const currencyOptions = [
-  {
-    label: 'AUD',
-    isoCode: 'aud',
-    symbol: '$',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'CAD',
-    isoCode: 'cad',
-    symbol: '$',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'CHF',
-    isoCode: 'chf',
-    symbol: 'CHF',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'CNY',
-    isoCode: 'cny',
-    symbol: 'CN¥',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'EUR',
-    isoCode: 'eur',
-    symbol: '€',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'GBP',
-    isoCode: 'gbp',
-    symbol: '£',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'HKD',
-    isoCode: 'hkd',
-    symbol: 'HK$',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'JPY',
-    isoCode: 'jpy',
-    symbol: '¥',
-    toDisplay: toDisplayZeroDecimal,
-    toValue: toValueZeroDecimal,
-  },
-  {
-    label: 'KRW',
-    isoCode: 'krw',
-    symbol: '₩',
-    toDisplay: toDisplayZeroDecimal,
-    toValue: toValueZeroDecimal,
-  },
-  {
-    label: 'MXN',
-    isoCode: 'mxn',
-    symbol: '$',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'NOK',
-    isoCode: 'nok',
-    symbol: 'NOK',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'NZD',
-    isoCode: 'nzd',
-    symbol: '$',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'SEK',
-    isoCode: 'sek',
-    symbol: 'SEK',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'SGD',
-    isoCode: 'sgd',
-    symbol: 'S$',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-  {
-    label: 'USD',
-    isoCode: 'usd',
-    symbol: '$',
-    toDisplay: toDisplayDecimal,
-    toValue: toValueDecimal,
-  },
-];
 
 const triangle = (color) =>
   `
@@ -125,7 +12,8 @@ const triangle = (color) =>
 
 const PriceInput = ({ className, value: { amount, code }, onChange }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
-  const option = currencyOptions.find(({ isoCode }) => isoCode === code);
+  const { currencyOptions, selectedCurrency: option } =
+    useContext(PriceContext);
   return (
     <span className={className}>
       <label

@@ -10,16 +10,14 @@ import styles from './CheckoutModal.module.css';
 import ThemeContext from './ThemeContext';
 import Banner from './Banner';
 import Button from './Button';
-import { currencyOptions } from './PriceInput';
 import Modal from './Modal';
+import PriceContext from './PriceContext';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const CheckoutModal = ({ price, onClose, onComplete }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
-  const currency = currencyOptions.find(
-    ({ isoCode }) => isoCode === price.code,
-  );
+  const { selectedCurrency: currency } = useContext(PriceContext);
 
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
