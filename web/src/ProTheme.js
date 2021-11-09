@@ -3,25 +3,11 @@ import { has } from 'lodash';
 import { render } from '@themerdev/preview-swatch';
 import Button from './Button';
 import Link from './Link';
+import Price from './Price';
 import ThemeContext, { paramsFromState } from './ThemeContext';
 import styles from './ProTheme.module.css';
-import PriceContext from './PriceContext';
 import ButtonLink from './ButtonLink';
 import featuredImages from './featured/images';
-
-const Price = ({ price }) => {
-  const { selectedCurrency } = useContext(PriceContext);
-  switch (price.type) {
-    case 'fixed':
-      return `${selectedCurrency.symbol}${selectedCurrency.toDisplay(
-        price.value,
-      )}`;
-    case 'pay-what-you-want':
-    default:
-      return `pay what you want`;
-    // TODO: implement min price display
-  }
-};
 
 const ProTheme = ({ theme }) => {
   const {
@@ -155,7 +141,11 @@ const ProTheme = ({ theme }) => {
               Price
             </span>
             <div style={{ color: getActiveColorOrFallback(['shade7']) }}>
-              <Price price={theme.price} />
+              {theme.price.type === 'fixed' ? (
+                <Price amount={theme.price.value} />
+              ) : (
+                'pay what you want'
+              )}
             </div>
           </div>
         </div>
