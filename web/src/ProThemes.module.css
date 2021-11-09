@@ -1,18 +1,9 @@
-.container {
+.section {
   display: grid;
-  gap: var(--size-small-1);
+  gap: var(--size-large-1);
   grid-template-columns: repeat(3, 1fr);
-  overflow-y: scroll;
-  height: var(--size-large-11);
 }
 
-.title,
-.featured {
-  grid-column: 1 / 4;
-}
-
-.title {
-  position: sticky;
-  top: 0;
-  padding: var(--size-small-1) 0;
+.section.featured {
+  grid-template-columns: repeat(2, 1fr);
 }

@@ -1,5 +1,4 @@
 .container {
-  padding: var(--size-small-1);
   border-width: var(--small-border-size);
   border-style: solid;
   border-radius: var(--small-border-radius-size);
@@ -7,15 +6,29 @@
   flex-direction: column;
 }
 
+.hero,
 .preview,
 .preview svg {
   max-width: 100%;
   height: auto;
+  border-top-left-radius: var(--small-border-radius-size);
+  border-top-right-radius: var(--small-border-radius-size);
+}
+
+.content {
+  padding: var(--size-small-1);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  margin: var(--size-small-2) 0 var(--size-regular);
+  margin-bottom: var(--size-regular);
   flex-grow: 1;
+}
+
+.header.featured {
+  text-align: center;
 }
 
 .title {
@@ -48,4 +61,8 @@
 
 .switchPreview {
   margin-left: var(--size-small-3);
+}
+
+.featuredSelect {
+  text-align: center;
 }

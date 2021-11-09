@@ -387,6 +387,7 @@ export const ThemeProvider = ({ history, children }) => {
         colors: cliColors,
         preparedColors,
         isSelected: isEqual(cliColorSet, cliColors),
+        isFeatured: title === 'Featured',
       };
     }),
   }));

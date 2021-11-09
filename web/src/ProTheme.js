@@ -7,6 +7,7 @@ import ThemeContext, { paramsFromState } from './ThemeContext';
 import styles from './ProTheme.module.css';
 import PriceContext from './PriceContext';
 import ButtonLink from './ButtonLink';
+import featuredImages from './featured/images';
 
 const Price = ({ price }) => {
   const { selectedCurrency } = useContext(PriceContext);
@@ -31,6 +32,7 @@ const ProTheme = ({ theme }) => {
   } = useContext(ThemeContext);
   const [darkSvgData, setDarkSvgData] = useState(null);
   const [lightSvgData, setLightSvgData] = useState(null);
+
   const files = render(theme.preparedColors, {
     'themer-preview-swatch-name': 'preview',
   });
@@ -49,9 +51,10 @@ const ProTheme = ({ theme }) => {
     activeColorSet === 'dark'
       ? darkSvgData || lightSvgData
       : lightSvgData || darkSvgData;
+
   const variantString =
     darkSvgData && lightSvgData
-      ? 'light and dark'
+      ? 'light & dark'
       : darkSvgData
       ? 'dark only'
       : lightSvgData
@@ -74,84 +77,110 @@ const ProTheme = ({ theme }) => {
       style={{
         borderColor: theme.isSelected
           ? getActiveColorOrFallback(['accent3'])
-          : getActiveColorOrFallback(['shade3']),
+          : getActiveColorOrFallback(['shade1'], true),
       }}
     >
-      <img
-        className={styles.preview}
-        alt={`Preview swatches for ${theme.name}`}
-        src={`data:image/svg+xml;base64,${svgData}`}
-      />
-      <header className={styles.header}>
-        <h3
-          className={styles.title}
-          style={{ color: getActiveColorOrFallback(['shade7']) }}
+      {theme.isFeatured ? (
+        <img
+          className={styles.hero}
+          alt={`Preview for ${theme.title}`}
+          src={featuredImages.get(theme.title)[activeColorSet]}
+        />
+      ) : (
+        <img
+          className={styles.preview}
+          alt={`Preview swatches for ${theme.title}`}
+          src={`data:image/svg+xml;base64,${svgData}`}
+        />
+      )}
+      <div className={styles.content}>
+        <header
+          className={[styles.header, theme.isFeatured && styles.featured]
+            .filter(Boolean)
+            .join(' ')}
         >
-          {theme.title}
-        </h3>
-        <div
-          className={styles.description}
-          style={{ color: getActiveColorOrFallback(['shade6']) }}
-        >
-          {theme.description}
-        </div>
-      </header>
-      <div className={styles.rows}>
-        <div
-          className={styles.row}
-          style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
-        >
-          <span style={{ color: getActiveColorOrFallback(['shade5']) }}>
-            Variants
-          </span>
-          <span
-            className={styles.variant}
+          <h3
+            className={styles.title}
+            style={{ color: getActiveColorOrFallback(['shade7']) }}
+          >
+            {theme.title}
+          </h3>
+          <div
+            className={styles.description}
             style={{ color: getActiveColorOrFallback(['shade6']) }}
           >
-            {variantString}
-            {darkSvgData && lightSvgData && theme.isSelected ? (
-              <Button
-                className={styles.switchPreview}
-                small
-                onClick={() => setActiveColorSet(inactiveColorSet)}
-              >
-                Preview {inactiveColorSet}
-              </Button>
-            ) : null}
-          </span>
-        </div>
-        <div
-          className={styles.row}
-          style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
-        >
-          <span style={{ color: getActiveColorOrFallback(['shade5']) }}>
-            Author
-          </span>
-          <Link href={theme.author.url} target='_blank' rel='noreferrer'>
-            {theme.author.name}
-          </Link>
-        </div>
-        <div
-          className={styles.row}
-          style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
-        >
-          <span style={{ color: getActiveColorOrFallback(['shade5']) }}>
-            Price
-          </span>
-          <div style={{ color: getActiveColorOrFallback(['shade7']) }}>
-            <Price price={theme.price} />
+            {theme.description}
+          </div>
+        </header>
+        <div className={styles.rows}>
+          <div
+            className={styles.row}
+            style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
+          >
+            <span style={{ color: getActiveColorOrFallback(['shade5']) }}>
+              Variants
+            </span>
+            <span
+              className={styles.variant}
+              style={{ color: getActiveColorOrFallback(['shade7']) }}
+            >
+              {variantString}
+              {theme.colors.dark && theme.colors.light && theme.isSelected ? (
+                <Button
+                  className={styles.switchPreview}
+                  small
+                  onClick={() => setActiveColorSet(inactiveColorSet)}
+                >
+                  Preview {inactiveColorSet}
+                </Button>
+              ) : null}
+            </span>
+          </div>
+          <div
+            className={styles.row}
+            style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
+          >
+            <span style={{ color: getActiveColorOrFallback(['shade5']) }}>
+              Author
+            </span>
+            <Link href={theme.author.url} target='_blank' rel='noreferrer'>
+              {theme.author.name}
+            </Link>
+          </div>
+          <div
+            className={styles.row}
+            style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
+          >
+            <span style={{ color: getActiveColorOrFallback(['shade5']) }}>
+              Price
+            </span>
+            <div style={{ color: getActiveColorOrFallback(['shade7']) }}>
+              <Price price={theme.price} />
+            </div>
           </div>
         </div>
+        {theme.isFeatured ? (
+          <div className={styles.featuredSelect}>
+            {theme.isSelected ? (
+              <Button special disabled>
+                Selected
+              </Button>
+            ) : (
+              <ButtonLink special href={linkToThisTheme}>
+                Select
+              </ButtonLink>
+            )}
+          </div>
+        ) : theme.isSelected ? (
+          <Button secondary disabled>
+            Selected
+          </Button>
+        ) : (
+          <ButtonLink secondary href={linkToThisTheme}>
+            Select
+          </ButtonLink>
+        )}
       </div>
-      {theme.isSelected ? (
-        <Button secondary disabled>
-          Selected
-        </Button>
-      ) : (
-        <ButtonLink secondary href={linkToThisTheme}>
-          Select
-        </ButtonLink>
-      )}
     </div>
   );
 };

@@ -18,8 +18,14 @@ const ButtonLink = ({
     secondary,
     disabled,
   });
+  // TODO: make sure this has browser support
   return (
-    <a className={fullClassName} style={styleProperty} {...props}>
+    <a
+      className={fullClassName}
+      style={styleProperty}
+      data-text={children}
+      {...props}
+    >
       {children}
       {external ? <ExternalIcon className={styles.externalIcon} /> : null}
     </a>
