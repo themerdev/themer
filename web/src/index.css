@@ -49,6 +49,7 @@ body,
   --font-size-small: var(--size-small-1);
 
   --line-height: calc(1 / var(--size-ratio));
+  --line-height-large: calc(1 / var(--size-ratio) / var(--size-ratio));
 
   --button-transition: background-color 75ms ease;
   --notification-transition-time: 300ms;

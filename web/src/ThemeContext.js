@@ -113,6 +113,8 @@ export const ThemeProvider = ({ history, children }) => {
   const mergeState = (newState) =>
     history.replace(paramsFromState(merge({}, rawState, newState)));
 
+  const pushState = (newState) => history.push(paramsFromState(newState));
+
   const activeColorSet = ['dark', 'light'].includes(rawState.activeColorSet)
     ? rawState.activeColorSet
     : DEFAULT_STATE.activeColorSet;
@@ -412,6 +414,7 @@ export const ThemeProvider = ({ history, children }) => {
         getActiveContrastFromBackground,
 
         proThemes,
+        pushState,
       }}
     >
       {children}

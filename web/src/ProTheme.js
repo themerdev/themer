@@ -15,6 +15,7 @@ const ProTheme = ({ theme }) => {
     getActiveColorOrFallback,
     inactiveColorSet,
     setActiveColorSet,
+    pushState,
   } = useContext(ThemeContext);
   const [darkSvgData, setDarkSvgData] = useState(null);
   const [lightSvgData, setLightSvgData] = useState(null);
@@ -47,7 +48,7 @@ const ProTheme = ({ theme }) => {
       ? 'light only'
       : '';
 
-  const linkToThisTheme = paramsFromState({
+  const themeState = {
     colors: theme.colors,
     activeColorSet: has(theme.colors, activeColorSet)
       ? activeColorSet
@@ -56,7 +57,12 @@ const ProTheme = ({ theme }) => {
       dark: !has(theme.colors, 'dark.shade1'),
       light: !has(theme.colors, 'light.shade1'),
     },
-  });
+  };
+  const linkToThisTheme = paramsFromState(themeState);
+  const onSelectClick = (evt) => {
+    evt.preventDefault();
+    pushState(themeState);
+  };
   return (
     <div
       className={styles.container}
@@ -156,7 +162,11 @@ const ProTheme = ({ theme }) => {
                 Selected
               </Button>
             ) : (
-              <ButtonLink special href={linkToThisTheme}>
+              <ButtonLink
+                special
+                href={linkToThisTheme}
+                onClick={onSelectClick}
+              >
                 Select
               </ButtonLink>
             )}
@@ -166,7 +176,7 @@ const ProTheme = ({ theme }) => {
             Selected
           </Button>
         ) : (
-          <ButtonLink secondary href={linkToThisTheme}>
+          <ButtonLink secondary href={linkToThisTheme} onClick={onSelectClick}>
             Select
           </ButtonLink>
         )}

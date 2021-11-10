@@ -49,7 +49,8 @@
   align-items: center;
   gap: var(--size-regular);
   flex-wrap: wrap;
-  padding: var(--size-small-5) 0;
+  padding: var(--size-small-8) 0;
+  line-height: var(--line-height-large);
   border-top-width: var(--small-border-size);
   border-top-style: solid;
 }
