@@ -1,22 +1,50 @@
+const convert = require('color-convert');
+
 const render = (colors) => {
+  const ansi256Colors = [];
+
+  for (let color = 0; color < 255; ++color) {
+    const hexVal = convert.ansi256.hex(color);
+    ansi256Colors.push(hexVal);
+  }
+
+  ansi256Colors.closest = function (hexVal) {
+    const [r, g, b] = convert.hex.rgb(hexVal);
+    let minDistance = Infinity;
+    let index; // NOTE equals ansi code
+    for (let i = 0; i < this.length; ++i) {
+      const [otherR, otherG, otherB] = convert.hex.rgb(this[i]);
+      const distance =
+        (r - otherR) ** 2 + (g - otherG) ** 2 + (b - otherB) ** 2;
+      if (distance < minDistance) {
+        minDistance = distance;
+        index = i;
+      }
+    }
+    return index;
+  };
+
+  const gtermToCterm = (hexVal) => ansi256Colors.closest(hexVal);
+
   const colorVars = (colorSet) => `
-  let s:shade0 = "${colorSet.shade0}"
-  let s:shade1 = "${colorSet.shade1}"
-  let s:shade2 = "${colorSet.shade2}"
-  let s:shade3 = "${colorSet.shade3}"
-  let s:shade4 = "${colorSet.shade4}"
-  let s:shade5 = "${colorSet.shade5}"
-  let s:shade6 = "${colorSet.shade6}"
-  let s:shade7 = "${colorSet.shade7}"
-  let s:accent0 = "${colorSet.accent0}"
-  let s:accent1 = "${colorSet.accent1}"
-  let s:accent2 = "${colorSet.accent2}"
-  let s:accent3 = "${colorSet.accent3}"
-  let s:accent4 = "${colorSet.accent4}"
-  let s:accent5 = "${colorSet.accent5}"
-  let s:accent6 = "${colorSet.accent6}"
-  let s:accent7 = "${colorSet.accent7}"
+  let s:shade0 = ${gtermToCterm(colorSet.shade0)}
+  let s:shade1 = ${gtermToCterm(colorSet.shade1)}
+  let s:shade2 = ${gtermToCterm(colorSet.shade2)}
+  let s:shade3 = ${gtermToCterm(colorSet.shade3)}
+  let s:shade4 = ${gtermToCterm(colorSet.shade4)}
+  let s:shade5 = ${gtermToCterm(colorSet.shade5)}
+  let s:shade6 = ${gtermToCterm(colorSet.shade6)}
+  let s:shade7 = ${gtermToCterm(colorSet.shade7)}
+  let s:accent0 = ${gtermToCterm(colorSet.accent0)}
+  let s:accent1 = ${gtermToCterm(colorSet.accent1)}
+  let s:accent2 = ${gtermToCterm(colorSet.accent2)}
+  let s:accent3 = ${gtermToCterm(colorSet.accent3)}
+  let s:accent4 = ${gtermToCterm(colorSet.accent4)}
+  let s:accent5 = ${gtermToCterm(colorSet.accent5)}
+  let s:accent6 = ${gtermToCterm(colorSet.accent6)}
+  let s:accent7 = ${gtermToCterm(colorSet.accent7)}
   `;
+
 
   const theme = `
 
