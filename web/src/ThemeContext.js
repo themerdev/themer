@@ -394,6 +394,10 @@ export const ThemeProvider = ({ history, children }) => {
     }),
   }));
 
+  const selectedProTheme = proThemes
+    .reduce((acc, { themes }) => [...acc, ...themes], [])
+    .find(({ isSelected }) => isSelected);
+
   return (
     <ThemeContext.Provider
       value={{
@@ -414,6 +418,7 @@ export const ThemeProvider = ({ history, children }) => {
         getActiveContrastFromBackground,
 
         proThemes,
+        selectedProTheme,
         pushState,
       }}
     >

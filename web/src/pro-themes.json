@@ -37,7 +37,7 @@
         },
         "price": {
           "type": "fixed",
-          "value": "900"
+          "value": 900
         }
       }
     ]

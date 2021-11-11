@@ -10,10 +10,19 @@ const triangle = (color) =>
 </svg>
 `.trim();
 
-const PriceInput = ({ className, value: { amount, code }, onChange }) => {
+const PriceInput = ({ className }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
-  const { currencyOptions, selectedCurrency: option } =
-    useContext(PriceContext);
+  const {
+    currencyOptions,
+    selectedCurrency: option,
+    finalPrice: { amount, code },
+    setUserPrice,
+    isFixedPrice,
+  } = useContext(PriceContext);
+  const onChange = (price) => {
+    setUserPrice(price);
+    window.__ssa__log('change price', { price });
+  };
   return (
     <span className={className}>
       <label
@@ -27,6 +36,7 @@ const PriceInput = ({ className, value: { amount, code }, onChange }) => {
           type='number'
           min='0'
           value={option.toDisplay(amount)}
+          disabled={isFixedPrice}
           onChange={(evt) =>
             onChange({
               amount: option.toValue(evt.target.value),

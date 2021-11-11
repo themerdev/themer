@@ -1,4 +1,5 @@
-import { createContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
+import ThemeContext from './ThemeContext';
 
 const toDisplayDecimal = (value) => value / 100;
 const toValueDecimal = (display) => Math.round(+display * 100);
@@ -117,15 +118,24 @@ const currencyOptions = [
 const PriceContext = createContext();
 
 export const PriceProvider = ({ children }) => {
-  const [price, setPrice] = useState({ code: 'usd', amount: 900 });
+  const [userPrice, setUserPrice] = useState({ code: 'usd', amount: 900 });
   const selectedCurrency = currencyOptions.find(
-    ({ isoCode }) => isoCode === price.code,
+    ({ isoCode }) => isoCode === userPrice.code,
   );
+  const { selectedProTheme } = useContext(ThemeContext);
+  const isFixedPrice =
+    selectedProTheme && selectedProTheme.price.type === 'fixed';
+  const finalPrice = {
+    ...userPrice,
+    ...(isFixedPrice && { amount: selectedProTheme.price.value }),
+  };
   return (
     <PriceContext.Provider
       value={{
-        price,
-        setPrice,
+        userPrice,
+        setUserPrice,
+        finalPrice,
+        isFixedPrice,
         currencyOptions,
         selectedCurrency,
       }}

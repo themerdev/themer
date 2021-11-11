@@ -60,7 +60,7 @@ const Download = () => {
   const { getActiveColorOrFallback, preparedColorSet, cliColorSet } =
     useContext(ThemeContext);
 
-  const { price, setPrice } = useContext(PriceContext);
+  const { finalPrice, isFixedPrice } = useContext(PriceContext);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const [showSupportModal, setShowSupportModal] = useState(false);
 
@@ -440,22 +440,20 @@ const Download = () => {
         </fieldset>
       </div>
       <div className={styles.inputs}>
-        <span style={{ color: getActiveColorOrFallback(['shade6']) }}>
-          Pay what you want:
-        </span>
-        <PriceInput
-          className={styles.priceInput}
-          value={price}
-          onChange={(price) => {
-            setPrice(price);
-            window.__ssa__log('change price', { price });
-          }}
-        />
+        {isFixedPrice ? null : (
+          <span
+            className={styles.payWhatYouWant}
+            style={{ color: getActiveColorOrFallback(['shade6']) }}
+          >
+            Pay what you want:
+          </span>
+        )}
+        <PriceInput className={styles.priceInput} />
         <Button
           special
           disabled={!preparedColorSet.dark && !preparedColorSet.light}
           onClick={() => {
-            if (price.amount > 0) {
+            if (finalPrice.amount > 0) {
               setShowCheckoutModal(true);
               window.__ssa__log('open checkout modal');
             } else {
@@ -463,12 +461,12 @@ const Download = () => {
             }
           }}
         >
-          {price.amount > 0 ? 'Purchase' : 'Download'}
+          {finalPrice.amount > 0 ? 'Purchase' : 'Download'}
         </Button>
       </div>
       {showCheckoutModal ? (
         <CheckoutModal
-          price={price}
+          price={finalPrice}
           onClose={() => {
             setShowCheckoutModal(false);
             window.__ssa__log('close checkout modal');
