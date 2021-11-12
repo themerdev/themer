@@ -7,7 +7,12 @@ import ProThemes from './ProThemes';
 import styles from './ColorSetSelector.module.css';
 
 const ColorSetSelector = () => {
-  const { getActiveColorOrFallback } = useContext(ThemeContext);
+  const {
+    getActiveColorOrFallback,
+    selectedProTheme,
+    pushState,
+    activeColorSet,
+  } = useContext(ThemeContext);
   const [showPro, setShowPro] = useState(true);
   return (
     <Tabs>
@@ -28,6 +33,9 @@ const ColorSetSelector = () => {
               style={getTabStyle(!showPro)}
               onClick={() => {
                 setShowPro(false);
+                if (selectedProTheme) {
+                  pushState({ activeColorSet });
+                }
               }}
             >
               Build your own
