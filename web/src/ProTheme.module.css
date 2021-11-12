@@ -47,7 +47,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--size-regular);
+  column-gap: var(--size-regular);
   flex-wrap: wrap;
   padding: var(--size-small-8) 0;
   line-height: var(--line-height-large);
