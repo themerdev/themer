@@ -18,7 +18,10 @@ const ProThemes = () => {
                 key={`tab-${title}`}
                 className={tabClassName}
                 style={getTabStyle(currentTab === title)}
-                onClick={() => setCurrentTab(title)}
+                onClick={() => {
+                  setCurrentTab(title);
+                  window.__ssa__log('select pro theme tab', { title });
+                }}
               >
                 {title}
               </button>

@@ -62,6 +62,11 @@ const ProTheme = ({ theme }) => {
   const onSelectClick = (evt) => {
     evt.preventDefault();
     pushState(themeState);
+    window.__ssa__log('pro theme select', {
+      title: theme.title,
+      featured: theme.isFeatured,
+      priceType: theme.price.type,
+    });
   };
   return (
     <div
@@ -121,7 +126,10 @@ const ProTheme = ({ theme }) => {
                 <Button
                   className={styles.switchPreview}
                   small
-                  onClick={() => setActiveColorSet(inactiveColorSet)}
+                  onClick={() => {
+                    setActiveColorSet(inactiveColorSet);
+                    window.__ssa__log('switch color set from pro theme');
+                  }}
                 >
                   Preview {inactiveColorSet}
                 </Button>

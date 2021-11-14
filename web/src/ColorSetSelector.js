@@ -24,6 +24,7 @@ const ColorSetSelector = () => {
               style={getTabStyle(showPro)}
               onClick={() => {
                 setShowPro(true);
+                window.__ssa__log('switch to pro theme tab');
               }}
             >
               Pro themes
@@ -33,11 +34,13 @@ const ColorSetSelector = () => {
               style={getTabStyle(!showPro)}
               onClick={() => {
                 setShowPro(false);
+                window.__ssa__log('switch to color input tab');
                 if (
                   selectedProTheme &&
                   selectedProTheme.price.type === 'fixed'
                 ) {
                   pushState({ activeColorSet });
+                  window.__ssa__log('clear fixed price pro theme state');
                 }
               }}
             >
