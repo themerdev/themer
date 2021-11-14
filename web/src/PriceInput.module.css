@@ -13,6 +13,10 @@
     var(--size-small-2);
 }
 
+.amountLabel.fixed {
+  cursor: default;
+}
+
 .amountInput {
   font-family: 'Fira Code', monospace;
   font-size: var(--size-large-1);

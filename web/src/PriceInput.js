@@ -26,7 +26,9 @@ const PriceInput = ({ className }) => {
   return (
     <span className={className}>
       <label
-        className={styles.amountLabel}
+        className={[styles.amountLabel, isFixedPrice && styles.fixed]
+          .filter(Boolean)
+          .join(' ')}
         style={{ color: getActiveColorOrFallback(['accent3']) }}
       >
         <span className={styles.symbol}>{option.symbol}</span>
