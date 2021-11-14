@@ -33,7 +33,10 @@ const ColorSetSelector = () => {
               style={getTabStyle(!showPro)}
               onClick={() => {
                 setShowPro(false);
-                if (selectedProTheme) {
+                if (
+                  selectedProTheme &&
+                  selectedProTheme.price.type === 'fixed'
+                ) {
                   pushState({ activeColorSet });
                 }
               }}
