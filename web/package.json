@@ -40,6 +40,7 @@
     "@themerdev/keypirinha": "^1.0.0",
     "@themerdev/kitty": "^1.0.0",
     "@themerdev/konsole": "^1.0.0",
+    "@themerdev/preview-swatch": "^1.0.7",
     "@themerdev/prism": "^1.1.0",
     "@themerdev/sketch-palettes": "^1.1.0",
     "@themerdev/slack": "^2.1.0",

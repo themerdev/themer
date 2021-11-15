@@ -1,8 +1,68 @@
 import { createContext, useState, useEffect } from 'react';
 import qs from 'qs';
-import { get, merge, mapValues, pick } from 'lodash';
+import { get, merge, mapValues, pick, isEqual } from 'lodash';
 import Color from 'color';
 import colorSteps from 'color-steps';
+
+import themes from './pro-themes.json';
+import { colors as defaultColors } from '@themerdev/colors-default';
+import { colors as draculaColors } from '@themerdev/colors-dracula';
+import { colors as fingerPaintColors } from '@themerdev/colors-finger-paint';
+import { colors as githubUniverseColors } from '@themerdev/colors-github-universe';
+import { colors as greenAsAWhistleColors } from '@themerdev/colors-green-as-a-whistle';
+import { colors as lucidColors } from '@themerdev/colors-lucid';
+import { colors as mojaveColors } from '@themerdev/colors-mojave';
+import { colors as monkeyColors } from '@themerdev/colors-monkey';
+import { colors as nightSkyColors } from '@themerdev/colors-night-sky';
+import { colors as novaColors } from '@themerdev/colors-nova';
+import { colors as oneColors } from '@themerdev/colors-one';
+import { colors as polarIceColors } from '@themerdev/colors-polar-ice';
+import { colors as rightInTheTealsColors } from '@themerdev/colors-right-in-the-teals';
+import { colors as rivetColors } from '@themerdev/colors-rivet';
+import { colors as setiColors } from '@themerdev/colors-seti';
+import { colors as solarizedColors } from '@themerdev/colors-solarized';
+
+const getProThemeColors = (theme) => {
+  if (theme.colors) {
+    return theme.colors;
+  } else {
+    switch (theme.package) {
+      case '@themerdev/colors-dracula':
+        return draculaColors;
+      case '@themerdev/colors-finger-paint':
+        return fingerPaintColors;
+      case '@themerdev/colors-github-universe':
+        return githubUniverseColors;
+      case '@themerdev/colors-green-as-a-whistle':
+        return greenAsAWhistleColors;
+      case '@themerdev/colors-lucid':
+        return lucidColors;
+      case '@themerdev/colors-mojave':
+        return mojaveColors;
+      case '@themerdev/colors-monkey':
+        return monkeyColors;
+      case '@themerdev/colors-night-sky':
+        return nightSkyColors;
+      case '@themerdev/colors-nova':
+        return novaColors;
+      case '@themerdev/colors-one':
+        return oneColors;
+      case '@themerdev/colors-polar-ice':
+        return polarIceColors;
+      case '@themerdev/colors-right-in-the-teals':
+        return rightInTheTealsColors;
+      case '@themerdev/colors-rivet':
+        return rivetColors;
+      case '@themerdev/colors-seti':
+        return setiColors;
+      case '@themerdev/colors-solarized':
+        return solarizedColors;
+      case '@themerdev/colors-default':
+      default:
+        return defaultColors;
+    }
+  }
+};
 
 const stateFromParams = (search) =>
   qs.parse(search, { allowDots: true, ignoreQueryPrefix: true });
@@ -52,6 +112,8 @@ export const ThemeProvider = ({ history, children }) => {
 
   const mergeState = (newState) =>
     history.replace(paramsFromState(merge({}, rawState, newState)));
+
+  const pushState = (newState) => history.push(paramsFromState(newState));
 
   const activeColorSet = ['dark', 'light'].includes(rawState.activeColorSet)
     ? rawState.activeColorSet
@@ -283,11 +345,65 @@ export const ThemeProvider = ({ history, children }) => {
       },
     });
 
+  const inactiveColorSet = activeColorSet === 'dark' ? 'light' : 'dark';
+
+  const proThemes = themes.map(({ title, themes }) => ({
+    title,
+    themes: themes.map((theme) => {
+      const cliColors = getProThemeColors(theme);
+      const preparedColors = Object.fromEntries(
+        [...Object.entries(cliColors)].map(([key, colors]) => [
+          key,
+          {
+            shade0: colors.shade0,
+            ...(colors.shade1
+              ? {
+                  shade1: colors.shade1,
+                  shade2: colors.shade2,
+                  shade3: colors.shade3,
+                  shade4: colors.shade4,
+                  shade5: colors.shade5,
+                  shade6: colors.shade6,
+                }
+              : colorSteps(colors.shade0, colors.shade7).reduce(
+                  (shades, color, idx) => ({
+                    ...shades,
+                    [`shade${idx + 1}`]: Color(color).hex(),
+                  }),
+                  {},
+                )),
+            shade7: colors.shade7,
+            accent0: colors.accent0,
+            accent1: colors.accent1,
+            accent2: colors.accent2,
+            accent3: colors.accent3,
+            accent4: colors.accent4,
+            accent5: colors.accent5,
+            accent6: colors.accent6,
+            accent7: colors.accent7,
+          },
+        ]),
+      );
+      return {
+        ...theme,
+        colors: cliColors,
+        preparedColors,
+        isSelected: isEqual(cliColorSet, cliColors),
+        isFeatured: title === 'Featured',
+      };
+    }),
+  }));
+
+  const selectedProTheme = proThemes
+    .reduce((acc, { themes }) => [...acc, ...themes], [])
+    .find(({ isSelected }) => isSelected);
+
   return (
     <ThemeContext.Provider
       value={{
         activeColorSet,
         setActiveColorSet,
+        inactiveColorSet,
 
         activeCalculateIntermediaryShades,
         setActiveCalculateIntermediaryShades,
@@ -300,6 +416,10 @@ export const ThemeProvider = ({ history, children }) => {
         setActiveRawColor,
 
         getActiveContrastFromBackground,
+
+        proThemes,
+        selectedProTheme,
+        pushState,
       }}
     >
       {children}

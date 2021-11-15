@@ -45,6 +45,7 @@
   margin-bottom: var(--size-small-5);
 }
 
+.payWhatYouWant,
 .priceInput {
-  margin: 0 var(--size-regular);
+  margin-right: var(--size-regular);
 }

@@ -1,0 +1,27 @@
+.section {
+  display: grid;
+  gap: var(--size-large-1);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 60rem) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 42rem) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section.featured {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 50rem) {
+  .section.featured {
+    grid-template-columns: 1fr;
+  }
+}

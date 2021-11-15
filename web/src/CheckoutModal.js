@@ -10,16 +10,13 @@ import styles from './CheckoutModal.module.css';
 import ThemeContext from './ThemeContext';
 import Banner from './Banner';
 import Button from './Button';
-import { currencyOptions } from './PriceInput';
 import Modal from './Modal';
+import Price from './Price';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const CheckoutModal = ({ price, onClose, onComplete }) => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
-  const currency = currencyOptions.find(
-    ({ isoCode }) => isoCode === price.code,
-  );
 
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
@@ -123,8 +120,7 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
           className={styles.price}
           style={{ color: getActiveColorOrFallback(['shade7']) }}
         >
-          Total: <span className={styles.symbol}>{currency.symbol}</span>
-          {currency.toDisplay(price.amount)}
+          Total: <Price amount={price.amount} />
         </div>
         <div
           className={styles.card}

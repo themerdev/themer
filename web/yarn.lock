@@ -1921,6 +1921,11 @@
   dependencies:
     color "^3.1.2"
 
+"@themerdev/preview-swatch@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@themerdev/preview-swatch/-/preview-swatch-1.0.7.tgz#3e735ee43b463c9e8d97b5441f03f41da6ccca57"
+  integrity sha512-9bt5/Zwi6MaCQYcWZZwQUs1sSL9Fgg8FiLqykHNvgid+4wBa5zXkL2prrVOp8V16HCxxxu3A3fu8rqsX3CWj7g==
+
 "@themerdev/prism@^1.1.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@themerdev/prism/-/prism-1.1.1.tgz#de221f8181e7b33758974789cb28c1aea3506590"

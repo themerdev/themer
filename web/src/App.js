@@ -1,9 +1,12 @@
 import { ThemeProvider } from './ThemeContext';
 import Main from './Main';
+import { PriceProvider } from './PriceContext';
 
 const App = ({ history }) => (
   <ThemeProvider history={history}>
-    <Main />
+    <PriceProvider>
+      <Main />
+    </PriceProvider>
   </ThemeProvider>
 );
 
