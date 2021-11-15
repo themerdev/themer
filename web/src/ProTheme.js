@@ -62,7 +62,7 @@ const ProTheme = ({ theme }) => {
   const onSelectClick = (evt) => {
     evt.preventDefault();
     pushState(themeState);
-    window.__ssa__log('pro theme select', {
+    window.__ssa__log('select pro theme', {
       title: theme.title,
       featured: theme.isFeatured,
       priceType: theme.price.type,
