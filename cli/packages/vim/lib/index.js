@@ -275,7 +275,7 @@ const render = (colors) => {
 
 const renderInstructions = (paths) => `
 Copy or symlink \`${paths[0]}\` to \`~/.vim/colors/\`.
-
+(note, if your using a non-standard runtimepath or neovim, put it one of the paths ':set runtimepath?' + '/colors' gives you in vim)
 Then set the colorscheme in \`.vimrc\`:
 
     " The background option must be set before running this command.
