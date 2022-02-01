@@ -10,6 +10,54 @@ import CheckoutModal from './CheckoutModal';
 import SupportModal from './SupportModal';
 import PriceContext from './PriceContext';
 
+const templateTitles = {
+  alacritty: 'Alacritty',
+  cmd: 'CMD.exe',
+  conemu: 'ConEmu',
+  gnomeTerminal: 'GNOME Terminal',
+  hyper: 'Hyper',
+  iterm: 'iTerm',
+  kitty: 'kitty',
+  konsole: 'Konsole',
+  terminal: 'Terminal.app',
+  terminator: 'Terminator',
+  termite: 'Termite',
+  windowsTerminal: 'Windows Terminal',
+  atomSyntax: 'Atom (syntax)',
+  atomUi: 'Atom (UI)',
+  bbedit: 'BBEdit',
+  emacs: 'Emacs',
+  jetbrains: 'JetBrains',
+  vimLightline: 'lightline.vim',
+  sublimeText: 'Sublime Text',
+  vim: 'Vim',
+  visualStudio: 'Visual Studio',
+  vscode: 'VS Code',
+  xcode: 'Xcode',
+  wallpaperBlockWave: 'Block Wave',
+  wallpaperBurst: 'Burst',
+  wallpaperCircuits: 'Circuits',
+  wallpaperDiamonds: 'Diamonds',
+  wallpaperDotGrid: 'Dot Grid',
+  wallpaperOctagon: 'Octagon',
+  wallpaperShirts: 'Shirts',
+  wallpaperTriangles: 'Triangles',
+  wallpaperTrianglify: 'Trianglify',
+  alfred: 'Alfred.app',
+  brave: 'Brave',
+  chrome: 'Chrome',
+  css: 'CSS',
+  firefox: 'Firefox',
+  kdePlasmaColors: 'KDE Plasma Colors',
+  keypirinha: 'Keypirinha',
+  prism: 'Prism',
+  sketchPalettes: 'Sketch palettes',
+  slack: 'Slack sidebar',
+  tmux: 'tmux',
+  wox: 'Wox',
+  xresources: 'Xresources',
+};
+
 const Download = () => {
   const [alacritty, setAlacritty] = useState(false);
   const [alfred, setAlfred] = useState(false);
@@ -64,54 +112,101 @@ const Download = () => {
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const [showSupportModal, setShowSupportModal] = useState(false);
 
+  function quoteWrap(str) {
+    return `“${str}”`;
+  }
+
+  const selections = {
+    alacritty,
+    alfred,
+    atomSyntax,
+    atomUi,
+    bbedit,
+    brave,
+    chrome,
+    cmd,
+    conemu,
+    css,
+    emacs,
+    firefox,
+    gnomeTerminal,
+    hyper,
+    iterm,
+    jetbrains,
+    kdePlasmaColors,
+    keypirinha,
+    kitty,
+    konsole,
+    prism,
+    sketchPalettes,
+    slack,
+    sublimeText,
+    terminal,
+    terminator,
+    termite,
+    tmux,
+    vim,
+    vimLightline,
+    visualStudio,
+    vscode,
+    wallpaperBlockWave,
+    wallpaperBurst,
+    wallpaperCircuits,
+    wallpaperDiamonds,
+    wallpaperDotGrid,
+    wallpaperOctagon,
+    wallpaperShirts,
+    wallpaperTriangles,
+    wallpaperTrianglify,
+    windowsTerminal,
+    wox,
+    xcode,
+    xresources,
+  };
+
+  const [themeTitles, wallpaperTitles] = Object.entries(selections)
+    .filter(([_, v]) => v)
+    .reduce(
+      ([themeTitles, wallpaperTitles], [k]) => {
+        if (k.startsWith('wallpaper')) {
+          return [themeTitles, [...wallpaperTitles, templateTitles[k]]];
+        } else {
+          return [[...themeTitles, templateTitles[k]], wallpaperTitles];
+        }
+      },
+      [[], []],
+    );
+
+  let details = '';
+  const variantTitles = [...Object.keys(preparedColorSet)];
+  if (themeTitles.length > 0) {
+    details += variantTitles.join(' and ');
+    if (themeTitles.length > 1 || variantTitles.length > 1) {
+      details += ' themes for ';
+    } else {
+      details += ' theme for ';
+    }
+    details += themeTitles.join(', ');
+  }
+  if (themeTitles.length && wallpaperTitles.length) {
+    details += '; ';
+  }
+  // TODO: add the wallpaper resolution details.
+  if (wallpaperTitles.length > 0) {
+    details += variantTitles.join(' and ') + ' ';
+    details += wallpaperTitles.join(',|').split('|').map(quoteWrap).join(' ');
+    if (themeTitles.length > 1 || wallpaperTitles.length > 1) {
+      details += ' wallpapers';
+    } else {
+      details += ' wallpaper';
+    }
+  }
+  if (themeTitles.length || wallpaperTitles.length) {
+    details += '; ';
+  }
+  details += 'a colors.js file for use with the themer CLI.';
+
   const download = async () => {
-    const selections = {
-      alacritty,
-      alfred,
-      atomSyntax,
-      atomUi,
-      bbedit,
-      brave,
-      chrome,
-      cmd,
-      conemu,
-      css,
-      emacs,
-      firefox,
-      gnomeTerminal,
-      hyper,
-      iterm,
-      jetbrains,
-      kdePlasmaColors,
-      keypirinha,
-      kitty,
-      konsole,
-      prism,
-      sketchPalettes,
-      slack,
-      sublimeText,
-      terminal,
-      terminator,
-      termite,
-      tmux,
-      vim,
-      vimLightline,
-      visualStudio,
-      vscode,
-      wallpaperBlockWave,
-      wallpaperBurst,
-      wallpaperCircuits,
-      wallpaperDiamonds,
-      wallpaperDotGrid,
-      wallpaperOctagon,
-      wallpaperShirts,
-      wallpaperTriangles,
-      wallpaperTrianglify,
-      windowsTerminal,
-      wox,
-      xcode,
-      xresources,
-    };
     const zip = await generateZip(
       selections,
       preparedColorSet,
@@ -137,73 +232,73 @@ const Download = () => {
           <Checkbox
             value={alacritty}
             onChange={() => setAlacritty(!alacritty)}
-            label='Alacritty'
+            label={templateTitles.alacritty}
             accentSelected
           />
           <Checkbox
             value={cmd}
             onChange={() => setCmd(!cmd)}
-            label='CMD.exe'
+            label={templateTitles.cmd}
             accentSelected
           />
           <Checkbox
             value={conemu}
             onChange={() => setConemu(!conemu)}
-            label='ConEmu'
+            label={templateTitles.conemu}
             accentSelected
           />
           <Checkbox
             value={gnomeTerminal}
             onChange={() => setGnomeTerminal(!gnomeTerminal)}
-            label='GNOME Terminal'
+            label={templateTitles.gnomeTerminal}
             accentSelected
           />
           <Checkbox
             value={hyper}
             onChange={() => setHyper(!hyper)}
-            label='Hyper'
+            label={templateTitles.hyper}
             accentSelected
           />
           <Checkbox
             value={iterm}
             onChange={() => setIterm(!iterm)}
-            label='iTerm'
+            label={templateTitles.iterm}
             accentSelected
           />
           <Checkbox
             value={kitty}
             onChange={() => setKitty(!kitty)}
-            label='kitty'
+            label={templateTitles.kitty}
             accentSelected
           />
           <Checkbox
             value={konsole}
             onChange={() => setKonsole(!konsole)}
-            label='Konsole'
+            label={templateTitles.konsole}
             accentSelected
           />
           <Checkbox
             value={terminal}
             onChange={() => setTerminal(!terminal)}
-            label='Terminal.app'
+            label={templateTitles.terminal}
             accentSelected
           />
           <Checkbox
             value={terminator}
             onChange={() => setTerminator(!terminator)}
-            label='Terminator'
+            label={templateTitles.terminator}
             accentSelected
           />
           <Checkbox
             value={termite}
             onChange={() => setTermite(!termite)}
-            label='Termite'
+            label={templateTitles.termite}
             accentSelected
           />
           <Checkbox
             value={windowsTerminal}
             onChange={() => setWindowsTerminal(!windowsTerminal)}
-            label='Windows Terminal'
+            label={templateTitles.windowsTerminal}
             accentSelected
           />
         </fieldset>
@@ -214,67 +309,67 @@ const Download = () => {
           <Checkbox
             value={atomSyntax}
             onChange={() => setAtomSyntax(!atomSyntax)}
-            label='Atom (syntax)'
+            label={templateTitles.atomSyntax}
             accentSelected
           />
           <Checkbox
             value={atomUi}
             onChange={() => setAtomUi(!atomUi)}
-            label='Atom (UI)'
+            label={templateTitles.atomUi}
             accentSelected
           />
           <Checkbox
             value={bbedit}
             onChange={() => setBbedit(!bbedit)}
-            label='BBEdit'
+            label={templateTitles.bbedit}
             accentSelected
           />
           <Checkbox
             value={emacs}
             onChange={() => setEmacs(!emacs)}
-            label='Emacs'
+            label={templateTitles.emacs}
             accentSelected
           />
           <Checkbox
             value={jetbrains}
             onChange={() => setJetbrains(!jetbrains)}
-            label='JetBrains'
+            label={templateTitles.jetbrains}
             accentSelected
           />
           <Checkbox
             value={vimLightline}
             onChange={() => setVimLightline(!vimLightline)}
-            label='lightline.vim'
+            label={templateTitles.vimLightline}
             accentSelected
           />
           <Checkbox
             value={sublimeText}
             onChange={() => setSublimeText(!sublimeText)}
-            label='Sublime Text'
+            label={templateTitles.sublimeText}
             accentSelected
           />
           <Checkbox
             value={vim}
             onChange={() => setVim(!vim)}
-            label='Vim'
+            label={templateTitles.vim}
             accentSelected
           />
           <Checkbox
             value={visualStudio}
             onChange={() => setVisualStudio(!visualStudio)}
-            label='Visual Studio'
+            label={templateTitles.visualStudio}
             accentSelected
           />
           <Checkbox
             value={vscode}
             onChange={() => setVscode(!vscode)}
-            label='VS Code'
+            label={templateTitles.vscode}
             accentSelected
           />
           <Checkbox
             value={xcode}
             onChange={() => setXcode(!xcode)}
-            label='Xcode'
+            label={templateTitles.xcode}
             accentSelected
           />
         </fieldset>
@@ -285,55 +380,55 @@ const Download = () => {
           <Checkbox
             value={wallpaperBlockWave}
             onChange={() => setWallpaperBlockWave(!wallpaperBlockWave)}
-            label='“Block Wave”'
+            label={quoteWrap(templateTitles.wallpaperBlockWave)}
             accentSelected
           />
           <Checkbox
             value={wallpaperBurst}
             onChange={() => setWallpaperBurst(!wallpaperBurst)}
-            label='“Burst”'
+            label={quoteWrap(templateTitles.wallpaperBurst)}
             accentSelected
           />
           <Checkbox
             value={wallpaperCircuits}
             onChange={() => setWallpaperCircuits(!wallpaperCircuits)}
-            label='“Circuits”'
+            label={quoteWrap(templateTitles.wallpaperCircuits)}
             accentSelected
           />
           <Checkbox
             value={wallpaperDiamonds}
             onChange={() => setWallpaperDiamonds(!wallpaperDiamonds)}
-            label='“Diamonds”'
+            label={quoteWrap(templateTitles.wallpaperDiamonds)}
             accentSelected
           />
           <Checkbox
             value={wallpaperDotGrid}
             onChange={() => setWallpaperDotGrid(!wallpaperDotGrid)}
-            label='“Dot Grid”'
+            label={quoteWrap(templateTitles.wallpaperDotGrid)}
             accentSelected
           />
           <Checkbox
             value={wallpaperOctagon}
             onChange={() => setWallpaperOctagon(!wallpaperOctagon)}
-            label='“Octagon”'
+            label={quoteWrap(templateTitles.wallpaperOctagon)}
             accentSelected
           />
           <Checkbox
             value={wallpaperShirts}
             onChange={() => setWallpaperShirts(!wallpaperShirts)}
-            label='“Shirts”'
+            label={quoteWrap(templateTitles.wallpaperShirts)}
             accentSelected
           />
           <Checkbox
             value={wallpaperTriangles}
             onChange={() => setWallpaperTriangles(!wallpaperTriangles)}
-            label='“Triangles”'
+            label={quoteWrap(templateTitles.wallpaperTriangles)}
             accentSelected
           />
           <Checkbox
             value={wallpaperTrianglify}
             onChange={() => setWallpaperTrianglify(!wallpaperTrianglify)}
-            label='“Trianglify”'
+            label={quoteWrap(templateTitles.wallpaperTrianglify)}
             accentSelected
           />
           <div
@@ -362,79 +457,79 @@ const Download = () => {
           <Checkbox
             value={alfred}
             onChange={() => setAlfred(!alfred)}
-            label='Alfred.app'
+            label={templateTitles.alfred}
             accentSelected
           />
           <Checkbox
             value={brave}
             onChange={() => setBrave(!brave)}
-            label='Brave'
+            label={templateTitles.brave}
             accentSelected
           />
           <Checkbox
             value={chrome}
             onChange={() => setChrome(!chrome)}
-            label='Chrome'
+            label={templateTitles.chrome}
             accentSelected
           />
           <Checkbox
             value={css}
             onChange={() => setCss(!css)}
-            label='CSS'
+            label={templateTitles.css}
             accentSelected
           />
           <Checkbox
             value={firefox}
             onChange={() => setFirefox(!firefox)}
-            label='Firefox'
+            label={templateTitles.firefox}
             accentSelected
           />
           <Checkbox
             value={kdePlasmaColors}
             onChange={() => setKdePlasmaColors(!kdePlasmaColors)}
-            label='KDE Plasma Colors'
+            label={templateTitles.kdePlasmaColors}
             accentSelected
           />
           <Checkbox
             value={keypirinha}
             onChange={() => setKeypirinha(!keypirinha)}
-            label='Keypirinha'
+            label={templateTitles.keypirinha}
             accentSelected
           />
           <Checkbox
             value={prism}
             onChange={() => setPrism(!prism)}
-            label='Prism'
+            label={templateTitles.prism}
             accentSelected
           />
           <Checkbox
             value={sketchPalettes}
             onChange={() => setSketchPalettes(!sketchPalettes)}
-            label='Sketch palettes'
+            label={templateTitles.sketchPalettes}
             accentSelected
           />
           <Checkbox
             value={slack}
             onChange={() => setSlack(!slack)}
-            label='Slack sidebar'
+            label={templateTitles.slack}
             accentSelected
           />
           <Checkbox
             value={tmux}
             onChange={() => setTmux(!tmux)}
-            label='tmux'
+            label={templateTitles.tmux}
             accentSelected
           />
           <Checkbox
             value={wox}
             onChange={() => setWox(!wox)}
-            label='Wox'
+            label={templateTitles.wox}
             accentSelected
           />
           <Checkbox
             value={xresources}
             onChange={() => setXresources(!xresources)}
-            label='Xresources'
+            label={templateTitles.xresources}
             accentSelected
           />
         </fieldset>
@@ -463,6 +558,13 @@ const Download = () => {
         >
           {finalPrice.amount > 0 ? 'Purchase' : 'Download'}
         </Button>
+      </div>
+      <div
+        className={styles.details}
+        style={{ color: getActiveColorOrFallback(['shade4']) }}
+      >
+        What you're {finalPrice.amount > 0 ? 'purchasing' : 'downloading'}:{' '}
+        {details}
       </div>
       {showCheckoutModal ? (
         <CheckoutModal

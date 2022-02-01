@@ -42,10 +42,15 @@
 .inputs {
   display: flex;
   align-items: center;
-  margin-bottom: var(--size-small-5);
+  flex-wrap: wrap;
+  margin-bottom: var(--size-small-1);
 }
 
 .payWhatYouWant,
 .priceInput {
   margin-right: var(--size-regular);
+}
+
+.details {
+  margin-bottom: var(--size-small-5);
 }
