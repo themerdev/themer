@@ -22,20 +22,3 @@ jobs:
         run: |
           cd cli
           yarn test:unit
-
-  build-web:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          cd web
-          yarn
-      - name: Check formatting
-        run: |
-          cd web
-          yarn test:format
-      - name: Run tests
-        run: |
-          cd web
-          yarn test:unit
