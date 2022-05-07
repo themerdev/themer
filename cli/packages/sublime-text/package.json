@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "plist": "^3.0.1"
+    "plist": "^3.0.5"
   },
   "repository": {
     "url": "git+ssh://git@github.com/themerdev/themer.git",
