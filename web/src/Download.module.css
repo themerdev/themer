@@ -1,0 +1,56 @@
+.fieldsetWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--size-large-1);
+  margin-bottom: var(--size-large-1);
+}
+
+@media (max-width: 60rem) {
+  .fieldsetWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: var(--size-small-1);
+  }
+}
+
+@media (max-width: 30rem) {
+  .fieldsetWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fieldsetWrapper fieldset {
+  padding: var(--size-small-4) var(--size-regular) var(--size-small-1);
+  border-style: solid;
+  border-width: var(--border-size);
+  border-radius: var(--border-radius-size);
+}
+
+.fieldsetWrapper fieldset legend {
+  padding: 0 var(--size-small-2);
+  margin-left: var(--size-regular);
+}
+
+.wallpaperHint {
+  font-size: var(--font-size-small);
+}
+
+.wallpaperHint,
+.fullscreen {
+  margin-top: var(--size-small-2);
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--size-small-1);
+}
+
+.payWhatYouWant,
+.priceInput {
+  margin-right: var(--size-regular);
+}
+
+.details {
+  margin-bottom: var(--size-small-5);
+}

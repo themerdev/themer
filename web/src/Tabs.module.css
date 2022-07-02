@@ -1,0 +1,38 @@
+.tab {
+  position: relative;
+  display: inline-block;
+  font-size: var(--size-regular);
+  line-height: var(--line-height);
+  font-family: 'Fira Code', monospace;
+  padding: var(--size-small-4) var(--size-small-1)
+    calc(var(--size-small-4) - var(--border-size));
+  border-width: var(--border-size);
+  border-style: solid;
+  border-top-left-radius: var(--border-radius-size);
+  border-top-right-radius: var(--border-radius-size);
+  cursor: pointer;
+  margin: 0;
+}
+
+.tab::after {
+  content: '';
+  background-color: var(--tab-bottom-overlap-color);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: var(--tab-bottom-overlap-size);
+}
+
+.tab + .tab {
+  margin-left: var(--size-small-3);
+}
+
+.tabContent {
+  border-width: var(--border-size);
+  border-style: solid;
+  border-top-right-radius: var(--border-radius-size);
+  border-bottom-right-radius: var(--border-radius-size);
+  border-bottom-left-radius: var(--border-radius-size);
+  padding: var(--size-large-1);
+}

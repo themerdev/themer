@@ -1,0 +1,14 @@
+.admin {
+  height: 0px;
+  min-height: 100%;
+}
+
+.admin *::selection {
+  color: var(--selection-foreground-color);
+  background: var(--selection-background-color);
+}
+
+.admin *:focus {
+  outline: var(--focus-outline-color) solid var(--border-size);
+  outline-offset: var(--size-small-3);
+}

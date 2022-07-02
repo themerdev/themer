@@ -1,0 +1,20 @@
+.handle {
+  padding: var(--size-small-3) var(--size-small-2);
+  border-style: solid;
+  border-width: var(--small-border-size);
+  border-color: currentColor;
+  border-radius: var(--small-border-radius-size);
+  font-size: var(--font-size-small);
+  transition: var(--button-transition);
+  background-color: var(--handle-resting-background-color);
+  text-decoration: none;
+  margin: 0 var(--size-small-2);
+}
+
+.handle:hover {
+  background-color: var(--handle-hover-background-color);
+}
+
+.handle:active {
+  background-color: var(--handle-active-background-color);
+}

@@ -1,0 +1,4 @@
+.buttons {
+  display: grid;
+  grid-row-gap: var(--size-small-1);
+}
