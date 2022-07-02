@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: themer.dev
+Token: 7e7f4d1cec0c63f9546136226d93eb65f081d71688fb3998341a4ce6e104c850

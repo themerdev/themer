@@ -1,0 +1,53 @@
+.amountLabel {
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--size-large-1);
+  line-height: var(--line-height);
+  box-sizing: border-box;
+  border-color: currentColor;
+  border-width: var(--border-size);
+  border-style: solid;
+  border-top-left-radius: var(--border-radius-size);
+  border-bottom-left-radius: var(--border-radius-size);
+  padding: var(--size-small-4) var(--size-small-4) var(--size-small-4)
+    var(--size-small-2);
+}
+
+.amountLabel.fixed {
+  cursor: default;
+}
+
+.amountInput {
+  font-family: 'Fira Code', monospace;
+  font-size: var(--size-large-1);
+  background: none;
+  border: none;
+  width: var(--size-large-5);
+  padding: 0;
+  margin: 0;
+}
+
+.symbol {
+  margin-right: var(--size-small-3);
+}
+
+.currencySelect {
+  font-family: 'Fira Code', monospace;
+  font-size: var(--size-large-1);
+  line-height: var(--line-height);
+  cursor: pointer;
+  background: none;
+  border-width: var(--border-size);
+  border-style: solid;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: var(--border-radius-size);
+  border-bottom-right-radius: var(--border-radius-size);
+  border-bottom-left-radius: 0;
+  padding: var(--size-small-4) var(--size-large-1) var(--size-small-4)
+    var(--size-small-1);
+  margin: 0;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right var(--size-small-2) top 50%;
+}

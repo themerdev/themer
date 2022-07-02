@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--size-small-2);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--size-small-7);
+}
+
+.label span {
+  font-size: var(--size-small-1);
+}
+
+.submit {
+  align-self: flex-end;
+}

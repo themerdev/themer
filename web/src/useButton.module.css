@@ -1,0 +1,70 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-style: solid;
+  border-width: var(--border-size);
+  border-radius: var(--border-radius-size);
+  border-color: currentColor;
+  font-size: var(--size-regular);
+  line-height: var(--line-height);
+  font-family: 'Fira Code', monospace;
+  padding: var(--size-small-4) var(--size-small-1);
+  cursor: pointer;
+  transition: var(--button-transition);
+  background-color: var(--button-resting-background-color);
+}
+
+.small {
+  padding: var(--size-small-4) var(--size-small-1);
+  border-width: var(--small-border-size);
+  font-size: var(--font-size-small);
+}
+
+.special {
+  padding: var(--size-small-3) var(--size-large-1);
+  border: none;
+  font-size: var(--size-large-1);
+  background-image: linear-gradient(
+    to right,
+    var(--button-special-color-1),
+    var(--button-special-color-2)
+  );
+  position: relative;
+}
+
+.special::before {
+  content: attr(data-text);
+  position: absolute;
+  top: var(--large-border-size);
+  right: var(--large-border-size);
+  bottom: var(--large-border-size);
+  left: var(--large-border-size);
+  border-radius: var(--small-border-radius-size);
+  background-color: var(--button-resting-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special:hover::before {
+  background-color: var(--button-hover-background-color);
+}
+
+.special:active::before {
+  background-color: var(--button-active-background-color);
+}
+
+.button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+.button:active {
+  background-color: var(--button-active-background-color);
+}
+
+.button:disabled {
+  background-color: transparent;
+  cursor: default;
+}

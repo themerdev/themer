@@ -1,0 +1,25 @@
+[build.environment]
+  NODE_VERSION = "16"
+
+[functions]
+  directory = "api"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/static/media/FiraCode-Regular.bf5ea52f.woff2"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[dev.https]
+  certFile = "localhost.crt"
+  keyFile = "localhost.key"

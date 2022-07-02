@@ -1,0 +1,63 @@
+.outerWrapper {
+  --input-size: var(--size-large-2);
+}
+
+.inputsWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  padding-bottom: calc(var(--size-small-6) + var(--size-small-7));
+  margin-right: var(--size-small-2);
+}
+
+.textInputWrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.textInput {
+  font-family: 'Fira Code', monospace;
+  font-size: var(--size-regular);
+  line-height: var(--size-regular);
+  border: none;
+  border-bottom-width: var(--size-small-6);
+  border-bottom-style: solid;
+  border-radius: 0;
+  padding: var(--size-small-7) var(--size-small-6);
+  background: none;
+  height: var(--input-size);
+  box-sizing: border-box;
+  width: 0;
+  flex-grow: 1;
+}
+
+.swatch {
+  height: var(--input-size);
+  width: var(--input-size);
+  border-top-left-radius: var(--size-small-6);
+  border-top-right-radius: var(--size-small-6);
+  border-bottom-right-radius: var(--size-small-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.colorInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.help {
+  font-size: var(--size-small-1);
+  margin-top: var(--size-small-5);
+  text-align: right;
+}

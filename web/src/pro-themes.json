@@ -1,0 +1,235 @@
+[
+  {
+    "title": "Featured",
+    "themes": [
+      {
+        "title": "Victor Mono",
+        "description": "The official theme for the open source programming font",
+        "slug": "victor-mono",
+        "author": {
+          "name": "@rubjo",
+          "url": "https://github.com/rubjo"
+        },
+        "price": {
+          "type": "fixed",
+          "value": 900
+        }
+      },
+      {
+        "title": "Future Pro",
+        "description": "A perfectly balanced color set for professional development work",
+        "slug": "future-pro",
+        "author": {
+          "name": "Matt Swensen",
+          "url": "https://twitter.com/mjswensen"
+        },
+        "price": {
+          "type": "fixed",
+          "value": 900
+        }
+      }
+    ]
+  },
+  {
+    "title": "Original color sets",
+    "themes": [
+      {
+        "package": "@themerdev/colors-default",
+        "title": "Default",
+        "description": "Themer's default color set.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-night-sky",
+        "title": "Night Sky",
+        "description": "A dark color set.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-polar-ice",
+        "title": "Polar Ice",
+        "description": "A chilly color set.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-finger-paint",
+        "title": "Finger Paint",
+        "description": "A warm and friendly color set.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-monkey",
+        "title": "Monkey",
+        "description": "A color set based on a Mailchimp logo.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-right-in-the-teals",
+        "title": "Right in the Teals",
+        "description": "A color set based on shades of teal.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-green-as-a-whistle",
+        "title": "Green as a Whistle",
+        "description": "A warm color set featuring desaturated shades of green.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Ports from third-party themes",
+    "themes": [
+      {
+        "package": "@themerdev/colors-one",
+        "title": "One",
+        "description": "A port of the popular Atom One themes.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-lucid",
+        "title": "Lucid",
+        "description": "A color set based on the Lucidchart editor.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-solarized",
+        "title": "Solarized",
+        "description": "A color set ported from the popular Solarized themes.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-github-universe",
+        "title": "GitHub Universe",
+        "description": "A dark color set based on the GitHub Universe 2017 color palette.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-nova",
+        "title": "Nova",
+        "description": "A port of the beautiful Nova color set.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-mojave",
+        "title": "Mojave",
+        "description": "A color set based on macOS Mojave.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-rivet",
+        "title": "Rivet",
+        "description": "A color set based on the design system for Rivet, Inc.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-dracula",
+        "title": "Dracula",
+        "description": "A color set ported from the popular Dracula theme.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      },
+      {
+        "package": "@themerdev/colors-seti",
+        "title": "Seti",
+        "description": "A color set ported from the popular Seti theme.",
+        "author": {
+          "name": "Themer",
+          "url": "https://github.com/themerdev"
+        },
+        "price": {
+          "type": "pay-what-you-want"
+        }
+      }
+    ]
+  }
+]

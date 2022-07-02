@@ -1,0 +1,7 @@
+.banner {
+  padding: var(--size-small-1);
+  border-width: var(--small-border-size);
+  border-color: currentColor;
+  border-style: solid;
+  border-radius: var(--small-border-radius-size);
+}

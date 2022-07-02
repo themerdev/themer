@@ -5,5 +5,5 @@
   },
   "remoteUser": "node",
   "extensions": ["esbenp.prettier-vscode"],
-  "postCreateCommand": "cd cli && yarn"
+  "postCreateCommand": "cd cli && yarn && cd ../web && yarn"
 }
