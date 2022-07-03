@@ -9,6 +9,7 @@ import PriceInput from './PriceInput';
 import CheckoutModal from './CheckoutModal';
 import SupportModal from './SupportModal';
 import PriceContext from './PriceContext';
+import useViewportDimensions from './useViewportDimensions';
 
 const templateTitles = {
   alacritty: 'Alacritty',
@@ -181,6 +182,8 @@ const Download = () => {
       [[], []],
     );
 
+  const [resolutionWidth, resolutionHeight] = useViewportDimensions();
+
   let details = '';
   const variantTitles = [...Object.keys(preparedColorSet)];
   if (themeTitles.length > 0) {
@@ -203,6 +206,7 @@ const Download = () => {
     } else {
       details += ' wallpaper';
     }
+    details += ` at ${resolutionWidth}×${resolutionHeight}`;
   }
   if (themeTitles.length || wallpaperTitles.length) {
     details += '; ';
@@ -213,8 +217,8 @@ const Download = () => {
     const zip = await generateZip(
       selections,
       preparedColorSet,
-      window.innerWidth * window.devicePixelRatio,
-      window.innerHeight * window.devicePixelRatio,
+      resolutionWidth,
+      resolutionHeight,
       window.location.href,
       cliColorSet,
       selectedProTheme,
