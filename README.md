@@ -18,6 +18,7 @@
   - [Example workflow](#example-workflow)
   - [Example usage with `npx`](#example-usage-with-npx)
 - [Themer color sets](#themer-color-sets)
+  - [Premium color sets](#premium-color-sets)
   - [Original color sets](#original-color-sets)
   - [Ports from third-party themes](#ports-from-third-party-themes)
   - [Create your own color set](#create-your-own-color-set)
