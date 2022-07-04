@@ -41,6 +41,7 @@
 - 👋 Follow [@themerdev](https://twitter.com/themerdev) on Twitter
 - 🦁 [Send a tip through the Brave Browser](https://brave.com/mjs684), either on [the repository page](https://github.com/themerdev/themer) or [`themer`'s Web UI](https://themer.dev)
 - 💳 Pay what you want when downloading your theme from [themer.dev](https://themer.dev)
+- 👑 Purchase a premium theme from [themer.dev](https://themer.dev)
 - 💖 [Sponsor the @themerdev GitHub org](https://github.com/sponsors/themerdev)
 
 ## Installation
@@ -117,6 +118,13 @@ npx \
 ```
 
 ## Themer color sets
+
+### Premium color sets
+
+| Name                                          | Dark Preview                                                                                                                                           | Light Preview                                                                                                                                            |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Victor Mono](https://themer.dev/victor-mono) | ![Victor Mono dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@f9e890dc7ecd947eb05df702e11d252e3efd3b24/assets/preview/victor-mono-dark.png) | ![Victor Mono light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@f9e890dc7ecd947eb05df702e11d252e3efd3b24/assets/preview/victor-mono-light.png) |
+| [Future Pro](https://themer.dev/future-pro)   | ![Future Pro dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@f9e890dc7ecd947eb05df702e11d252e3efd3b24/assets/preview/future-pro-dark.png)   | ![Future Pro light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@f9e890dc7ecd947eb05df702e11d252e3efd3b24/assets/preview/future-pro-light.png)   |
 
 ### Original color sets
 
