@@ -4,7 +4,7 @@ import useEscListener from './useEscListener';
 import ThemeContext from './ThemeContext';
 import styles from './Modal.module.css';
 
-const Modal = ({ children, footer, onClose }) => {
+const Modal = ({ children, footer, onClose = () => {} }) => {
   useEscListener(onClose);
   const { getActiveColorOrFallback } = useContext(ThemeContext);
   return (
@@ -28,12 +28,14 @@ const Modal = ({ children, footer, onClose }) => {
         }}
       >
         <div className={styles.body}>{children}</div>
-        <footer
-          className={styles.footer}
-          style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
-        >
-          {footer}
-        </footer>
+        {footer ? (
+          <footer
+            className={styles.footer}
+            style={{ borderTopColor: getActiveColorOrFallback(['shade2']) }}
+          >
+            {footer}
+          </footer>
+        ) : null}
       </div>
     </div>
   );

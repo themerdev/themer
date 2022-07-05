@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Checkbox from './Checkbox';
 import styles from './Download.module.css';
 import Button from './Button';
@@ -10,6 +10,7 @@ import CheckoutModal from './CheckoutModal';
 import SupportModal from './SupportModal';
 import PriceContext from './PriceContext';
 import useViewportDimensions from './useViewportDimensions';
+import LoadingModal from './LoadingModal';
 
 const templateTitles = {
   alacritty: 'Alacritty',
@@ -213,22 +214,28 @@ const Download = () => {
   }
   details += 'a colors.js file for use with the themer CLI.';
 
-  const download = async () => {
-    const zip = await generateZip(
-      selections,
-      preparedColorSet,
-      resolutionWidth,
-      resolutionHeight,
-      window.location.href,
-      cliColorSet,
-      selectedProTheme,
-    );
-    const contents = await zip.generateAsync({ type: 'blob' });
-    saveAs(contents, 'themer.zip');
-    window.__ssa__log('download zip', { selections });
-    setShowSupportModal(true);
-    window.__ssa__log('open support modal');
-  };
+  const [rendering, setRendering] = useState(false);
+  useEffect(() => {
+    if (rendering) {
+      (async () => {
+        const zip = await generateZip(
+          selections,
+          preparedColorSet,
+          resolutionWidth,
+          resolutionHeight,
+          window.location.href,
+          cliColorSet,
+          selectedProTheme,
+        );
+        const contents = await zip.generateAsync({ type: 'blob' });
+        saveAs(contents, 'themer.zip');
+        window.__ssa__log('download zip', { selections });
+        setRendering(false);
+        setShowSupportModal(true);
+        window.__ssa__log('open support modal');
+      })();
+    }
+  });
 
   return (
     <>
@@ -560,7 +567,7 @@ const Download = () => {
               setShowCheckoutModal(true);
               window.__ssa__log('open checkout modal');
             } else {
-              download();
+              setRendering(true);
             }
           }}
         >
@@ -583,7 +590,7 @@ const Download = () => {
           }}
           onComplete={() => {
             setShowCheckoutModal(false);
-            download();
+            setRendering(true);
           }}
         />
       ) : null}
@@ -595,6 +602,7 @@ const Download = () => {
           }}
         />
       ) : null}
+      {rendering ? <LoadingModal /> : null}
     </>
   );
 };
