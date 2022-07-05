@@ -8,26 +8,14 @@ export default function useViewportDimensions() {
     window.innerHeight * window.devicePixelRatio,
   );
 
-  const listener = () => {
-    setWidth(window.innerWidth * window.devicePixelRatio);
-    setHeight(window.innerHeight * window.devicePixelRatio);
-  };
-
   useEffect(() => {
+    const listener = () => {
+      setWidth(window.innerWidth * window.devicePixelRatio);
+      setHeight(window.innerHeight * window.devicePixelRatio);
+    };
     window.addEventListener('resize', listener);
     return () => window.removeEventListener('resize', listener);
   }, []);
-
-  const dprListener = () => {
-    listener();
-    const mql = window.matchMedia(
-      `(resolution: ${window.devicePixelRatio}dppx)`,
-    );
-    mql.addEventListener('change', dprListener, { once: true });
-    return () => mql.removeEventListener('change', dprListener);
-  };
-
-  useEffect(dprListener, []);
 
   return [width, height];
 }
