@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
+import classNames from 'classnames';
 import { loadStripe } from '@stripe/stripe-js';
 import {
   Elements,
@@ -14,6 +15,7 @@ import Modal from './Modal';
 import Price from './Price';
 import TextInput from './TextInput';
 import fontUrl from './FiraCode-Regular.woff2';
+import Checkbox from './Checkbox';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
@@ -32,30 +34,34 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
   const stripe = useStripe();
   const elements = useElements();
 
+  const isPurchase = price.amount > 0;
+
   useEffect(() => {
-    (async function fetchIntent() {
-      const response = await window.fetch('/api/intent', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(
-          selectedProTheme
-            ? {
-                ...price,
-                proSlug: selectedProTheme.slug,
-              }
-            : price,
-        ),
-      });
-      const data = await response.json();
-      if (response.status === 200) {
-        setClientSecret(data.clientSecret);
-      } else {
-        setError(data.message);
-      }
-    })();
-  }, [price, selectedProTheme]);
+    if (isPurchase) {
+      (async function fetchIntent() {
+        const response = await window.fetch('/api/intent', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(
+            selectedProTheme
+              ? {
+                  ...price,
+                  proSlug: selectedProTheme.slug,
+                }
+              : price,
+          ),
+        });
+        const data = await response.json();
+        if (response.status === 200) {
+          setClientSecret(data.clientSecret);
+        } else {
+          setError(data.message);
+        }
+      })();
+    }
+  }, [isPurchase, price, selectedProTheme]);
 
   const cardStyle = {
     style: {
@@ -83,28 +89,53 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
     setError(evt.error ? evt.error.message : '');
   };
 
+  const [consent, setConsent] = useState(true);
+
   const submit = async (evt) => {
     evt.preventDefault();
     setProcessing(true);
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement(CardElement),
-        billing_details: {
-          name: evt.target.name.value,
+    if (consent) {
+      try {
+        await window.fetch('/api/user', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, paid: isPurchase }),
+        });
+        window.__ssa__log('user created');
+      } catch (err) {
+        window.__ssa__log('user creation failed', { message: err.message });
+      }
+    } else {
+      window.__ssa__log('user opted out');
+    }
+    if (isPurchase) {
+      const payload = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+          billing_details: {
+            name: evt.target.name.value,
+          },
         },
-      },
-      receipt_email: email,
-    });
-    if (payload.error) {
-      setError(`Payment failed: ${payload.error.message}`);
-      setProcessing(false);
-      window.__ssa__log('payment failed', { message: payload.error.message });
+        receipt_email: email,
+      });
+      if (payload.error) {
+        setError(`Payment failed: ${payload.error.message}`);
+        setProcessing(false);
+        window.__ssa__log('payment failed', { message: payload.error.message });
+      } else {
+        setError(null);
+        setProcessing(false);
+        setSucceeded(true);
+        onComplete();
+        window.__ssa__log('payment complete');
+      }
     } else {
       setError(null);
       setProcessing(false);
       setSucceeded(true);
       onComplete();
-      window.__ssa__log('payment complete');
     }
   };
 
@@ -123,33 +154,53 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
               Cancel
             </Button>
             <Button
-              disabled={cardEmpty || emailEmpty || processing || succeeded}
+              disabled={
+                (isPurchase && cardEmpty) ||
+                emailEmpty ||
+                processing ||
+                succeeded
+              }
             >
-              {processing ? 'Processing...' : 'Pay & download'}
+              {processing
+                ? 'Processing...'
+                : isPurchase
+                ? 'Pay & download'
+                : 'Download'}
             </Button>
           </>
         }
       >
         <div
-          className={styles.price}
+          className={classNames(styles.price, { [styles.free]: !isPurchase })}
           style={{ color: getActiveColorOrFallback(['shade7']) }}
         >
           Total: <Price amount={price.amount} />
         </div>
-        <div
-          className={styles.card}
-          style={{ borderColor: getActiveColorOrFallback(['shade7']) }}
-        >
-          <CardElement options={cardStyle} onChange={cardChange} />
-        </div>
+        {isPurchase ? (
+          <div
+            className={styles.card}
+            style={{ borderColor: getActiveColorOrFallback(['shade7']) }}
+          >
+            <CardElement options={cardStyle} onChange={cardChange} />
+          </div>
+        ) : null}
         <TextInput
           className={styles.email}
           type='email'
-          placeholder='Email address'
+          placeholder={isPurchase ? 'Receipt email' : 'Email address'}
           value={email}
           onChange={(evt) => setEmail(evt.target.value)}
           required
         />
+        {isPurchase ? (
+          <div className={styles.consent}>
+            <Checkbox
+              value={consent}
+              onChange={() => setConsent(!consent)}
+              label='Receive updates via email'
+            />
+          </div>
+        ) : null}
         {error ? (
           <Banner
             className={styles.error}

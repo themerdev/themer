@@ -42,6 +42,7 @@ const Checkbox = ({ className, value, accentSelected, onChange, label }) => {
         checkColor={
           value ? getActiveColorOrFallback(['shade0'], true) : 'transparent'
         }
+        className={styles.icon}
       />
       <span className={styles.label}>{label}</span>
     </label>

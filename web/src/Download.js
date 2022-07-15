@@ -563,12 +563,8 @@ const Download = () => {
           special
           disabled={!preparedColorSet.dark && !preparedColorSet.light}
           onClick={() => {
-            if (finalPrice.amount > 0) {
-              setShowCheckoutModal(true);
-              window.__ssa__log('open checkout modal');
-            } else {
-              setRendering(true);
-            }
+            setShowCheckoutModal(true);
+            window.__ssa__log('open checkout modal');
           }}
         >
           {finalPrice.amount > 0 ? 'Purchase' : 'Download'}
