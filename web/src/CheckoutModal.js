@@ -88,12 +88,12 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
     setError(evt.error ? evt.error.message : '');
   };
 
-  const [consent, setConsent] = useState(true);
+  const [consent, setConsent] = useState(false);
 
   const submit = async (evt) => {
     evt.preventDefault();
     setProcessing(true);
-    if (consent) {
+    if (consent || !isPurchase) {
       try {
         await window.fetch('/api/user', {
           method: 'POST',
@@ -209,7 +209,7 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
           style={{ color: getActiveColorOrFallback(['shade4']) }}
         >
           No spam. Just occasional updates to your theme, discounts, freebies,
-          and other perks.
+          and other perks. Unsubscribe at any time.
         </p>
         {error ? (
           <Banner
