@@ -171,7 +171,7 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
         }
       >
         <div
-          className={classNames(styles.price, { [styles.free]: !isPurchase })}
+          className={styles.price}
           style={{ color: getActiveColorOrFallback(['shade7']) }}
         >
           Total: <Price amount={price.amount} />
@@ -183,7 +183,11 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
           >
             <CardElement options={cardStyle} onChange={cardChange} />
           </div>
-        ) : null}
+        ) : (
+          <p style={{ color: getActiveColorOrFallback(['shade7']) }}>
+            Join the themer community and get your free theme:
+          </p>
+        )}
         <TextInput
           className={styles.email}
           type='email'
@@ -201,6 +205,13 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
             />
           </div>
         ) : null}
+        <p
+          className={styles.disclaimer}
+          style={{ color: getActiveColorOrFallback(['shade4']) }}
+        >
+          No spam. Just occasional updates to your theme, discounts, freebies,
+          and other perks.
+        </p>
         {error ? (
           <Banner
             className={styles.error}

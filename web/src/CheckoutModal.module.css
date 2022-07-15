@@ -1,7 +1,5 @@
 .price {
   text-align: center;
-}
-.price:not(.free) {
   margin-bottom: var(--size-small-1);
 }
 
@@ -24,6 +22,11 @@
 .consent {
   margin-top: var(--size-small-2);
   text-align: left;
+}
+
+.disclaimer {
+  font-size: var(--size-small-1);
+  margin-top: var(--size-small-2);
 }
 
 .cancel {
