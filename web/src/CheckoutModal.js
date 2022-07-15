@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from 'react';
-import classNames from 'classnames';
 import { loadStripe } from '@stripe/stripe-js';
 import {
   Elements,
