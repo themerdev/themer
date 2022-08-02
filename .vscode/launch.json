@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
+      "type": "node",
       "request": "launch",
       "name": "Debug current test",
       "cwd": "${workspaceFolder}/cli",
@@ -15,7 +15,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Run",
+      "name": "Run and debug",
       "skipFiles": ["<node_internals>/**"],
       "cwd": "${workspaceFolder}/cli/packages",
       "program": "./themer/lib/index.js",
@@ -24,6 +24,22 @@
         "./${input:colorSet}",
         "-t",
         "./${input:template}",
+        "-o",
+        "${workspaceFolder}/cli/tmp"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Quick run and debug current",
+      "skipFiles": ["<node_internals>/**"],
+      "cwd": "${workspaceFolder}/cli/packages",
+      "program": "./themer/lib/index.js",
+      "args": [
+        "-c",
+        "./colors-default",
+        "-t",
+        "${file}",
         "-o",
         "${workspaceFolder}/cli/tmp"
       ]
@@ -93,6 +109,7 @@
         "wallpaper-block-wave",
         "wallpaper-burst",
         "wallpaper-circuits",
+        "wallpaper-curves",
         "wallpaper-diamonds",
         "wallpaper-dot-grid",
         "wallpaper-octagon",
