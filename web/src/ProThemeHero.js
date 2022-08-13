@@ -84,14 +84,17 @@ const renderImage = ({
 };
 
 const ProThemeHero = ({ theme, className }) => {
-  const { activeColorSet } = useContext(ThemeContext);
+  const { activeColorSet, inactiveColorSet } = useContext(ThemeContext);
+  const colorSet = theme.preparedColors[activeColorSet]
+    ? activeColorSet
+    : inactiveColorSet;
   const svgData = useMemo(
     () =>
       Buffer.from(
-        renderImage(theme.preparedColors[activeColorSet]),
+        renderImage(theme.preparedColors[colorSet]),
         'utf-8',
       ).toString('base64'),
-    [theme, activeColorSet],
+    [theme, colorSet],
   );
   return (
     <img

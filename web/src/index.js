@@ -18,6 +18,7 @@ ReactDOM.render(
     <Route path='/' element={<App />} />
     <Route path='/victor-mono' element={<ThemeRedirect slug='victor-mono' />} />
     <Route path='/future-pro' element={<ThemeRedirect slug='future-pro' />} />
+    <Route path='/jamstacker' element={<ThemeRedirect slug='jamstacker' />} />
     <Route
       path={LOGIN_ROUTE}
       requiresNoAuth

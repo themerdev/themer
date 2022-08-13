@@ -3,6 +3,19 @@
     "title": "Featured",
     "themes": [
       {
+        "title": "Jamstacker",
+        "description": "A bold and vivid theme to get your creative juices flowing",
+        "slug": "jamstacker",
+        "author": {
+          "name": "Michael Andreuzza",
+          "url": "https://michaelandreuzza.com"
+        },
+        "price": {
+          "type": "fixed",
+          "value": 900
+        }
+      },
+      {
         "title": "Victor Mono",
         "description": "The official theme for the open source programming font",
         "slug": "victor-mono",

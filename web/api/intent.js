@@ -2,6 +2,7 @@ import stripe from './helpers/stripe';
 
 const PRO_THEME_ACCOUNTS = {
   'victor-mono': process.env.STRIPE_ACCOUNT_VICTOR_MONO,
+  'jamstacker': process.env.STRIPE_ACCOUNT_JAMSTACKER,
 };
 
 export async function handler(event) {

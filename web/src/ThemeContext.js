@@ -53,6 +53,8 @@ const getProThemeColors = (theme) => {
         return JSON.parse(atob(process.env.REACT_APP_FUTURE_PRO_COLORS));
       case 'victor-mono':
         return JSON.parse(atob(process.env.REACT_APP_VICTOR_MONO_COLORS));
+      case 'jamstacker':
+        return JSON.parse(atob(process.env.REACT_APP_JAMSTACKER_COLORS));
       default:
         return defaultColors;
     }
