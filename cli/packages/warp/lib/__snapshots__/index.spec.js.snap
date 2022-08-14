@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderInstructions should provide installation instructions 1`] = `
+"
+1. Copy your files (\`themer_colors-default_dark.yaml\` and \`themer_colors-default_light.yaml\`) to \`~/.warp/themes/\`
+2. Launch Warp
+3. Press \`command\`-\`P\` to open the Command Palette
+4. Search and select \`Open Theme Picker\`
+5. Search for \`Themer Colors Default Dark\` or \`Themer Colors Default Light\` and select it
+6. Enjoy your new theme! ✨
+"
+`;
