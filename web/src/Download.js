@@ -58,6 +58,7 @@ const templateTitles = {
   tmux: 'tmux',
   wox: 'Wox',
   xresources: 'Xresources',
+  warp: 'Warp',
 };
 
 const Download = () => {
@@ -102,6 +103,7 @@ const Download = () => {
   const [wallpaperShirts, setWallpaperShirts] = useState(false);
   const [wallpaperTriangles, setWallpaperTriangles] = useState(false);
   const [wallpaperTrianglify, setWallpaperTrianglify] = useState(false);
+  const [warp, setWarp] = useState(false);
   const [windowsTerminal, setWindowsTerminal] = useState(false);
   const [wox, setWox] = useState(false);
   const [xcode, setXcode] = useState(false);
@@ -164,6 +166,7 @@ const Download = () => {
     wallpaperShirts,
     wallpaperTriangles,
     wallpaperTrianglify,
+    warp,
     windowsTerminal,
     wox,
     xcode,
@@ -308,6 +311,12 @@ const Download = () => {
             value={termite}
             onChange={() => setTermite(!termite)}
             label={templateTitles.termite}
+            accentSelected
+          />
+          <Checkbox
+            value={warp}
+            onChange={() => setWarp(!warp)}
+            label={templateTitles.warp}
             accentSelected
           />
           <Checkbox

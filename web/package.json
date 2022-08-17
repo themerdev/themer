@@ -1,6 +1,6 @@
 {
   "name": "themer.dev",
-  "version": "1.8.2",
+  "version": "1.9.0",
   "private": true,
   "dependencies": {
     "@stripe/react-stripe-js": "^1.1.2",
@@ -60,6 +60,7 @@
     "@themerdev/wallpaper-shirts": "^2.0.1",
     "@themerdev/wallpaper-triangles": "^3.0.1",
     "@themerdev/wallpaper-trianglify": "^2.0.1",
+    "@themerdev/warp": "^1.0.0",
     "@themerdev/windows-terminal": "^1.0.0",
     "@themerdev/wox": "^1.0.0",
     "@themerdev/xcode": "^2.1.0",

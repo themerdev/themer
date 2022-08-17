@@ -45,6 +45,7 @@ import * as themerWallpaperOctagon from '@themerdev/wallpaper-octagon';
 import * as themerWallpaperShirts from '@themerdev/wallpaper-shirts';
 import * as themerWallpaperTriangles from '@themerdev/wallpaper-triangles';
 import * as themerWallpaperTrianglify from '@themerdev/wallpaper-trianglify';
+import * as themerWarp from '@themerdev/warp';
 import * as themerWindowsTerminal from '@themerdev/windows-terminal';
 import * as themerWox from '@themerdev/wox';
 import * as themerXcode from '@themerdev/xcode';
@@ -103,6 +104,10 @@ const templates = {
   wallpaperTrianglify: {
     name: 'Trianglify Wallpaper',
     ...themerWallpaperTrianglify,
+  },
+  warp: {
+    name: 'Warp',
+    ...themerWarp,
   },
   windowsTerminal: { name: 'Windows Terminal', ...themerWindowsTerminal },
   wox: { name: 'Wox', ...themerWox },

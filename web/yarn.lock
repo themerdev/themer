@@ -2572,6 +2572,11 @@
     canvas "^2.6.1"
     trianglify "^4.0.0"
 
+"@themerdev/warp@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@themerdev/warp/-/warp-1.0.0.tgz#7486e0d130b6ad773bba0c8c6108ba8558e19e8c"
+  integrity sha512-ehytWPmudP+J/M4sX85Cp1tWiY1Bp0n0eXWfLloUxprlgHBeFt7lHF08dy4fc96HyOUH7FFbaFUFljnS+EdxQg==
+
 "@themerdev/windows-terminal@^1.0.0":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@themerdev/windows-terminal/-/windows-terminal-1.0.3.tgz#d1eed318f85bea58b81cfc6a934aea300ed44b3c"
