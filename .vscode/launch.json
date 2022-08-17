@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
+      "type": "node",
       "request": "launch",
       "name": "Debug current test",
       "cwd": "${workspaceFolder}/cli",
@@ -99,6 +99,7 @@
         "wallpaper-shirts",
         "wallpaper-triangles",
         "wallpaper-trianglify",
+        "warp",
         "windows-terminal",
         "wox",
         "xcode",

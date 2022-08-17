@@ -35,8 +35,8 @@
     "warp.dev",
     "theme"
   ],
-  "dependencies": {
-    "title": "^3.5.2"
-  },
-  "devDependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
 }

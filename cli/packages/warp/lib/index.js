@@ -1,4 +1,5 @@
-const title = require('title');
+const path = require('path');
+
 const WARP_TEMPLATE = `accent: "%ACCENT%"
 background: "%BACKGROUND%"
 foreground: "%FOREGROUND%"
@@ -24,7 +25,7 @@ terminal_colors:
     white: "%B_WHITE%"
 `;
 
-const render = (colors, options) => {
+const render = (colors) => {
   return [
     { name: 'dark', colors: colors.dark },
     { name: 'light', colors: colors.light },
@@ -32,9 +33,7 @@ const render = (colors, options) => {
     .filter((colorSet) => !!colorSet.colors)
     .map((colorSet) => {
       return Promise.resolve({
-        name: `themer_${options.colors.replace('./', '')}_${
-          colorSet.name
-        }.yaml`,
+        name: `themer_${colorSet.name}.yaml`,
         contents: Buffer.from(
           WARP_TEMPLATE.replace('%ACCENT%', colorSet.colors.accent6)
             .replace('%BACKGROUND%', colorSet.colors.shade0)
@@ -81,27 +80,23 @@ const render = (colors, options) => {
     });
 };
 
-const renderInstructions = (paths) => `
+const renderInstructions = (paths) => {
+  const files = paths.map((p) => path.basename(p));
+  const themeNames = [
+    files.includes('themer_dark.yaml') && '"Themer Dark"',
+    files.includes('themer_light.yaml') && '"Themer Light"',
+  ].filter(Boolean);
+  return `
 1. Copy your files (${paths
-  .map((p) => `\`${p}\``)
-  .join(' and ')}) to \`~/.warp/themes/\`
+    .map((p) => `\`${p}\``)
+    .join(' and ')}) to \`~/.warp/themes/\`
 2. Launch Warp
 3. Press \`command\`-\`P\` to open the Command Palette
 4. Search and select \`Open Theme Picker\`
-5. Search for ${paths
-  .map(
-    (p) =>
-      `\`${title(
-        p
-          .replace('warp/', '')
-          .replace('.yaml', '')
-          .replaceAll('-', ' ')
-          .replaceAll('_', ' '),
-      )}\``,
-  )
-  .join(' or ')} and select it
+5. Search for ${themeNames.join(' or ')} and select it
 6. Enjoy your new theme! ✨
 `;
+};
 
 module.exports = {
   render,

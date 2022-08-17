@@ -265,6 +265,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 - [@themerdev/konsole](https://github.com/themerdev/themer/tree/main/cli/packages/konsole)
 - [@themerdev/terminal](https://github.com/themerdev/themer/tree/main/cli/packages/terminal)
 - [@themerdev/terminator](https://github.com/themerdev/themer/tree/main/cli/packages/terminator)
+- [@themerdev/warp](https://github.com/themerdev/themer/tree/main/cli/packages/warp)
 - [@themerdev/windows-terminal](https://github.com/themerdev/themer/tree/main/cli/packages/windows-terminal)
 
 ### Editors/IDEs
