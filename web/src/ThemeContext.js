@@ -468,7 +468,7 @@ export const UrlThemeProvider = ({ children }) => {
   );
 };
 
-export const AdminThemeProvider = ({ children }) => {
+export const PageThemeProvider = ({ children }) => {
   const theme = getProThemeColors({
     package: '@themerdev/colors-default',
   });

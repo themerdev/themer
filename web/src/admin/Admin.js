@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import ThemeContext, { AdminThemeProvider } from '../ThemeContext';
+import ThemeContext, { PageThemeProvider } from '../ThemeContext';
 import styles from './Admin.module.css';
 
 const AdminInternal = ({ children }) => {
@@ -20,9 +20,9 @@ const AdminInternal = ({ children }) => {
 
 const Admin = ({ children }) => {
   return (
-    <AdminThemeProvider>
+    <PageThemeProvider>
       <AdminInternal>{children}</AdminInternal>
-    </AdminThemeProvider>
+    </PageThemeProvider>
   );
 };
 

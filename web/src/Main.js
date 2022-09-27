@@ -146,8 +146,14 @@ const Main = () => {
           , and is released under the MIT license &bull; v{version}
         </div>
         <div className={styles.follow}>
-          follow <Link href='https://twitter.com/themerdev'>@themerdev</Link> on
-          Twitter for new themes, wallpapers, and features as soon as they
+          <Link
+            href='/join'
+            onClick={() => window.__ssa__log('click join newsletter link')}
+          >
+            join the newsletter
+          </Link>{' '}
+          or follow <Link href='https://twitter.com/themerdev'>@themerdev</Link>{' '}
+          on Twitter for new themes, wallpapers, and features as soon as they
           launch
         </div>
         <div className={styles.support}>

@@ -95,12 +95,13 @@ const CheckoutModal = ({ price, onClose, onComplete }) => {
     setProcessing(true);
     if (consent || !isPurchase) {
       try {
-        await window.fetch('/api/user', {
+        await window.fetch('/api/subscriber', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, paid: isPurchase }),
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            source: isPurchase ? 'Theme Purchase' : 'Free Theme Download',
+          }),
         });
         window.__ssa__log('user created');
       } catch (err) {

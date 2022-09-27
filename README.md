@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# themer ![CI](https://github.com/themerdev/themer/workflows/CI/badge.svg?branch=main) [![Twitter Follow](https://img.shields.io/twitter/follow/themerdev?style=social)](https://twitter.com/themerdev)
+# themer ![GitHub Workflow Status (main branch)](https://img.shields.io/github/workflow/status/themerdev/themer/CI/main) [![Twitter Follow](https://img.shields.io/twitter/follow/themerdev)](https://twitter.com/intent/user?screen_name=themerdev) [![Join the newsletter](https://img.shields.io/badge/newsletter-join-brightgreen)](https://themer.dev/join)
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other), and [desktop/device wallpapers](#wallpapers).
 

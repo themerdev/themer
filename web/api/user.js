@@ -1,3 +1,7 @@
+/*
+ * Deprecated, but kept around for cached clients.
+ */
+
 import { userTable } from './helpers/airtable';
 
 export async function handler(event) {

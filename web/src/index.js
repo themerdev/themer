@@ -12,6 +12,7 @@ import Logout from './admin/Logout';
 import StripeAccountLink from './admin/StripeAccountLink';
 import Admin from './admin/Admin';
 import ThemeRedirect from './ThemeRedirect';
+import Newsletter from './Newsletter';
 
 ReactDOM.render(
   <StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
     <Route path='/victor-mono' element={<ThemeRedirect slug='victor-mono' />} />
     <Route path='/future-pro' element={<ThemeRedirect slug='future-pro' />} />
     <Route path='/jamstacker' element={<ThemeRedirect slug='jamstacker' />} />
+    <Route path='/join' element={<Newsletter />} />
     <Route
       path={LOGIN_ROUTE}
       requiresNoAuth
