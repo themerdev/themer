@@ -14,9 +14,9 @@ node_modules
 LICENSE.md
 EOF
 
-cat << EOF > $PACKAGE/.yarnrc
-version-tag-prefix "$NAME-v"
-version-git-message "$NAME-v%s"
+cat << EOF > $PACKAGE/.npmrc
+tag-version-prefix "$NAME-v"
+message "$NAME-v%s"
 EOF
 
 cat << EOF > $PACKAGE/package.json

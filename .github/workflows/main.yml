@@ -9,32 +9,32 @@ jobs:
   test-cli:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install dependencies
         run: |
           cd cli
-          yarn
+          npm install
       - name: Check formatting
         run: |
           cd cli
-          yarn test:format
+          npm run test:format
       - name: Run tests
         run: |
           cd cli
-          yarn test:unit
+          npm run test:unit
   test-web:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install dependencies
         run: |
           cd web
-          yarn
+          npm install --legacy-peer-deps
       - name: Check formatting
         run: |
           cd web
-          yarn test:format
+          npm run test:format
       - name: Run tests
         run: |
           cd web
-          yarn test:unit
+          npm run test:unit

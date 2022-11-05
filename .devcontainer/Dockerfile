@@ -1,4 +1,6 @@
-FROM node:14
+FROM node:18
+
+RUN npm install -g npm
 
 RUN apt-get update \
   && apt-get install -y \

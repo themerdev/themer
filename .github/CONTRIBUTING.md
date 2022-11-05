@@ -39,7 +39,7 @@ If there is a theme template that should be distributed as an officially support
 
 1. Clone the themer repository.
 2. `cd cli`
-3. `yarn` to install dependencies
+3. `npm install` to install dependencies
 4. Run `./scripts/generate-template-package.zsh <the name of the tool or program you are making a theme template for>`. This step is optional but will save you some time as it sets up the basic scaffolding for your package. (For wallpaper templates, use the `generate-wallpaper-package.zsh` script instead.)
 5. Implement your theme's `render()` function in `/cli/packages/<your package>/lib/index.js`, following the documentation in the ["Create your own template" section of the README](https://github.com/themerdev/themer#create-your-own-template).
 6. Develop and test your package with the following command within the `/cli/packages` directory: `./themer/bin/themer.js -c ./colors-default -t ./<your package directory> -o <some output directory you can inspect, like /tmp/themer>`
@@ -86,7 +86,7 @@ If a color set should be distributed on npm under the `@themer` namespace and in
 
 1. Clone the themer repository.
 2. `cd cli`
-3. `yarn` to install dependencies
+3. `npm install` to install dependencies
 4. Run `./scripts/generate-color-package.zsh <the name of the color set>`. This step is optional but will save you some time as it sets up the basic scaffolding for your package.
 5. Implement your color set's `colors` object in `/cli/packages/<your package>/lib/index.js`, following the documentation in the ["Create your own color set" section of the README](https://github.com/themerdev/themer#create-your-own-color-set).
 6. Develop and test your package with the following command within the `/cli/packages` directory: `./themer/bin/themer.js -c ./<your package directory> -t ./vscode -t ./wallpaper-block-wave -o <some output directory you can inspect, like /tmp/themer>`
