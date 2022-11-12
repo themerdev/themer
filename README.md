@@ -159,7 +159,7 @@ npx \
 To create your own color set, create a JavaScript file that exports a `colors` object, like so:
 
 ```js
-module.exports.colors = {
+export const colors = {
 
   // A color set can have both light and dark variants, but is only required
   // to have one.
@@ -206,7 +206,7 @@ _Pro Tip: you can use [`themer`'s Web UI](https://themer.dev) to more easily sel
 Then pass the path to your JS file to the `--colors` argument of `themer`.
 
 ```
-themer -c path/to/my/colors.js ...
+themer -c path/to/my/colors.mjs ...
 ```
 
 #### Color mappings
@@ -329,7 +329,7 @@ Refer to the [base16 repository](https://github.com/chriskempson/base16#scheme-r
 To create your own template, create a JavaScript file that exports a `render` function, like so:
 
 ```js
-module.exports.render = function (colors, options) {
+export const render = function (colors, options) {
   /*
 
   colors is an object that will have one or both keys: 'light' and
@@ -355,6 +355,23 @@ module.exports.render = function (colors, options) {
 Your JS file can then be passed to a `--template` argument of `themer`. That's it!
 
 Here's an [example template render function](https://github.com/themerdev/themer/blob/main/cli/packages/slack/lib/index.js) that generates a Slack sidebar theme from a `themer` color set.
+
+You can also implement a `renderInstructions` function to help users of your template know how to install the generated themes:
+
+```js
+export const renderInstructions = (paths) => {
+  /*
+
+  paths is an array of strings representing the file paths that will be written
+  by your render() function. The expected return value is a string (of markdown-
+  formatted text) that will be appended to a generated README.md file for the
+  user to reference when installing their themes.
+
+  */
+};
+```
+
+See [an example `renderInstructions` function](https://github.com/themerdev/themer/blob/main/cli/packages/slack/lib/index.js).
 
 Once you've developed your template, consider publishing it on npm so that others can use it!
 

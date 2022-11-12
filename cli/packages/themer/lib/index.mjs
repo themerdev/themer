@@ -1,13 +1,10 @@
-const path = require('path'),
-  minimist = require('minimist'),
-  fs = require('fs'),
-  { promisify } = require('util'),
-  mkdir = promisify(fs.mkdir),
-  writeFile = promisify(fs.writeFile),
-  resolvePackage = require('./resolve'),
-  getColors = require('./get-colors'),
-  prepareColors = require('./prepare'),
-  themer = require('./themer');
+import path from 'node:path';
+import minimist from 'minimist';
+import { mkdir, writeFile } from 'node:fs/promises';
+import resolvePackage from './resolve.mjs';
+import getColors from './get-colors.mjs';
+import prepareColors from './prepare.mjs';
+import themer from './themer.mjs';
 
 (async function main() {
   try {
@@ -48,7 +45,7 @@ const path = require('path'),
     const templates = await Promise.all(
       args.template.map(async (packageName) => ({
         name: path.basename(packageName),
-        ...require(await resolvePackage(packageName)),
+        ...(await import(await resolvePackage(packageName))),
       })),
     );
     console.log('rendering templates...');

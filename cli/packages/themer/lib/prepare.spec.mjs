@@ -1,4 +1,5 @@
-const prepareColors = require('./prepare');
+import prepareColors from './prepare.mjs';
+import { describe, expect, it } from 'vitest';
 
 describe('the color set validation/preparation', () => {
   it('should convert valid CSS colors to hex', () => {

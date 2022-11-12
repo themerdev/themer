@@ -7,18 +7,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug current test",
-      "cwd": "${workspaceFolder}/cli",
-      "program": "node_modules/.bin/jest",
-      "args": ["--runInBand", "${relativeFile}"]
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "Run",
       "skipFiles": ["<node_internals>/**"],
       "cwd": "${workspaceFolder}/cli/packages",
-      "program": "./themer/lib/index.js",
+      "program": "./themer/lib/index.mjs",
       "args": [
         "-c",
         "./${input:colorSet}",

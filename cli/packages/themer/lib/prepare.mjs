@@ -1,5 +1,5 @@
-const one = require('onecolor'),
-  colorSteps = require('color-steps');
+import Color from 'color';
+import colorSteps from 'color-steps';
 
 const minimumKeys = [
   'shade0',
@@ -32,7 +32,7 @@ const mapValues = (obj, fn) =>
   );
 
 const convertPaletteToHex = (palette) =>
-  mapValues(palette, (color) => one(color).hex());
+  mapValues(palette, (color) => Color(color).hex());
 
 const preparePalette = (palette, name) => {
   const keys = Object.keys(palette);
@@ -59,7 +59,7 @@ const preparePalette = (palette, name) => {
   throw new Error('Some colors were missing from the provided color set.');
 };
 
-module.exports = function prepare(colors) {
+export default function prepare(colors) {
   console.log('validating colors...');
   if (!colors.light && !colors.dark) {
     throw new Error(
@@ -69,4 +69,4 @@ module.exports = function prepare(colors) {
   return mapValues(colors, (palette, paletteName) =>
     preparePalette(palette, paletteName),
   );
-};
+}

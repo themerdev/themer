@@ -1,0 +1,111 @@
+// Vitest Snapshot v1
+
+exports[`the color set reading/parsing > should parse and transform a base16 YAML file with .yaml extension 1`] = `
+{
+  "dark": {
+    "accent0": "#A0A0C5",
+    "accent1": "#EFE4A1",
+    "accent2": "#AE81FF",
+    "accent3": "#6DFEDF",
+    "accent4": "#8EAEE0",
+    "accent5": "#2DE0A7",
+    "accent6": "#7AA5FF",
+    "accent7": "#FF79C6",
+    "shade0": "#292A44",
+    "shade1": "#663399",
+    "shade2": "#383A62",
+    "shade3": "#666699",
+    "shade4": "#A0A0C5",
+    "shade5": "#F1EFF8",
+    "shade6": "#CCCCFF",
+    "shade7": "#53495D",
+  },
+}
+`;
+
+exports[`the color set reading/parsing > should parse and transform a base16 dark scheme YAML file 1`] = `
+{
+  "dark": {
+    "accent0": "#AB4642",
+    "accent1": "#DC9656",
+    "accent2": "#F7CA88",
+    "accent3": "#A1B56C",
+    "accent4": "#86C1B9",
+    "accent5": "#7CAFC2",
+    "accent6": "#BA8BAF",
+    "accent7": "#A16946",
+    "shade0": "#181818",
+    "shade1": "#282828",
+    "shade2": "#383838",
+    "shade3": "#585858",
+    "shade4": "#B8B8B8",
+    "shade5": "#D8D8D8",
+    "shade6": "#E8E8E8",
+    "shade7": "#F8F8F8",
+  },
+}
+`;
+
+exports[`the color set reading/parsing > should parse and transform a base16 light scheme YAML file 1`] = `
+{
+  "light": {
+    "accent0": "#AB4642",
+    "accent1": "#DC9656",
+    "accent2": "#F7CA88",
+    "accent3": "#A1B56C",
+    "accent4": "#86C1B9",
+    "accent5": "#7CAFC2",
+    "accent6": "#BA8BAF",
+    "accent7": "#A16946",
+    "shade0": "#F8F8F8",
+    "shade1": "#E8E8E8",
+    "shade2": "#D8D8D8",
+    "shade3": "#B8B8B8",
+    "shade4": "#585858",
+    "shade5": "#383838",
+    "shade6": "#282828",
+    "shade7": "#181818",
+  },
+}
+`;
+
+exports[`the color set reading/parsing > should return colors defined in standard javascript format 1`] = `
+{
+  "dark": {
+    "accent0": "#FF4050",
+    "accent1": "#F28144",
+    "accent2": "#FFD24A",
+    "accent3": "#A4CC35",
+    "accent4": "#26C99E",
+    "accent5": "#66BFFF",
+    "accent6": "#CC78FA",
+    "accent7": "#F553BF",
+    "shade0": "#282629",
+    "shade1": "#474247",
+    "shade2": "#656066",
+    "shade3": "#847E85",
+    "shade4": "#A29DA3",
+    "shade5": "#C1BCC2",
+    "shade6": "#E0DCE0",
+    "shade7": "#FFFCFF",
+  },
+  "light": {
+    "accent0": "#F03E4D",
+    "accent1": "#F37735",
+    "accent2": "#EEBA21",
+    "accent3": "#97BD2D",
+    "accent4": "#1FC598",
+    "accent5": "#53A6E1",
+    "accent6": "#BF65F0",
+    "accent7": "#EE4EB8",
+    "shade0": "#FFFCFF",
+    "shade1": "#E0DCE0",
+    "shade2": "#C1BCC2",
+    "shade3": "#A29DA3",
+    "shade4": "#847E85",
+    "shade5": "#656066",
+    "shade6": "#474247",
+    "shade7": "#282629",
+  },
+}
+`;

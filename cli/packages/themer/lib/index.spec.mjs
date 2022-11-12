@@ -1,22 +1,24 @@
-const child_process = require('child_process'),
-  fs = require('fs'),
-  { tmpdir } = require('os'),
-  { promisify } = require('util'),
-  execFile = promisify(child_process.execFile),
-  exec = promisify(child_process.exec),
-  access = promisify(fs.access),
-  readFile = promisify(fs.readFile),
-  path = require('path'),
-  wrap = require('./test-helpers/wrap'),
-  {
-    outputFileDirectory,
-    outputFileName,
-    outputFileContents,
-    readmeInstructions,
-  } = require('./test-helpers/template');
+import { execFile as _execFile, exec as _exec } from 'node:child_process';
+import { promisify } from 'node:util';
+import { tmpdir } from 'node:os';
+import { access, readFile } from 'node:fs/promises';
+import {
+  outputFileContents,
+  outputFileDirectory,
+  outputFileName,
+  readmeInstructions,
+} from './test-helpers/template.mjs';
+import wrap from './test-helpers/wrap.mjs';
+import path from 'node:path';
+import { describe, expect, it, afterEach } from 'vitest';
+import { fileURLToPath } from 'node:url';
+
+const execFile = promisify(_execFile);
+const exec = promisify(_exec);
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 describe('the themer command line interface', () => {
-  const pathToExecutable = path.resolve(__dirname, '..', 'bin', 'themer.js');
+  const pathToExecutable = path.resolve(__dirname, '..', 'bin', 'themer.mjs');
 
   it('should fail if no arguments are provided', async () => {
     const wrapped = await wrap(() => execFile(pathToExecutable));
@@ -31,8 +33,8 @@ describe('the themer command line interface', () => {
 
   describe('when given valid arguments', () => {
     const testOutputDir = path.resolve(tmpdir(), 'test-output');
-    const templateName = 'template.js';
-    const testOutputFile = path.resolve(
+    const templateName = 'template.mjs';
+    const testOutputFile = path.join(
       testOutputDir,
       templateName,
       outputFileDirectory,
@@ -40,7 +42,7 @@ describe('the themer command line interface', () => {
     );
     const args = [
       '-c',
-      path.resolve(__dirname, 'test-helpers', 'colors.js'),
+      path.resolve(__dirname, 'test-helpers', 'colors', 'colors.mjs'),
       '-t',
       path.resolve(__dirname, 'test-helpers', templateName),
       '-o',

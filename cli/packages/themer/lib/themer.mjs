@@ -1,4 +1,4 @@
-module.exports = async function themer(
+export default async function themer(
   colors,
   templates,
   extraArgs,
@@ -33,4 +33,4 @@ module.exports = async function themer(
     });
   }
   return files;
-};
+}

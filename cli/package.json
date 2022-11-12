@@ -5,11 +5,9 @@
   ],
   "scripts": {
     "format": "prettier --write .",
-    "test:format": "prettier --check .",
-    "test:unit": "jest"
+    "test:format": "prettier --check ."
   },
   "devDependencies": {
-    "jest": "^27.0.4",
     "prettier": "2.3.1"
   }
 }

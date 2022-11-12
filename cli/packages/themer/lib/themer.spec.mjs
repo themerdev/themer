@@ -1,5 +1,6 @@
-const themer = require('./themer'),
-  path = require('path');
+import themer from './themer.mjs';
+import { sep } from 'node:path';
+import { describe, expect, it } from 'vitest';
 
 describe('themer core', () => {
   it('should produce a list of files from colors + templates', async () => {
@@ -35,7 +36,7 @@ describe('themer core', () => {
         },
       ],
       {},
-      path.sep,
+      sep,
       '# test',
     );
     expect(outputs.length).toBe(2);

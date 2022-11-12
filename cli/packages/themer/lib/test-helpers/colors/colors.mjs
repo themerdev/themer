@@ -1,4 +1,4 @@
-module.exports.colors = {
+export const colors = {
   dark: {
     accent0: '#FF4050',
     accent1: '#F28144',

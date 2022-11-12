@@ -1,4 +1,4 @@
-module.exports = async (fn) => {
+export default async (fn) => {
   try {
     const result = await fn();
     return () => result;
