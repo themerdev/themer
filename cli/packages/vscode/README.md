@@ -10,6 +10,6 @@ Install this module wherever you have `themer^2.1.0` installed:
 
 Then pass `@themerdev/vscode` as a `-t` (`--template`) argument to `themer`:
 
-    themer -c my-colors.js -t @themerdev/vscode -o gen
+    themer -c my-colors.mjs -t @themerdev/vscode -o gen
 
 Installation instructions for the generated theme package will be included in `<output dir>/README.md`.

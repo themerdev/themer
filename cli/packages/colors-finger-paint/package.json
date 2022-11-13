@@ -1,13 +1,14 @@
 {
   "name": "@themerdev/colors-finger-paint",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "A warm and friendly color set for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "keywords": [
     "themer",
@@ -19,7 +20,7 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "repository": {
     "type": "git",
@@ -31,7 +32,9 @@
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-finger-paint#readme",
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "vitest": "^0.25.1"
+  }
 }

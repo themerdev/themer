@@ -18,6 +18,10 @@ jobs:
         run: |
           cd cli
           npm run test:format
+      - name: Run tests
+        run: |
+          cd cli
+          npm run test --workspaces
   test-web:
     runs-on: ubuntu-latest
     steps:

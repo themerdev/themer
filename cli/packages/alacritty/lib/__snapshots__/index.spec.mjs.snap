@@ -1,0 +1,154 @@
+// Vitest Snapshot v1
+
+exports[`themer alacritty theme generator > should generate well-formatted themes 1`] = `
+"
+# Themer Alacritty
+
+schemes:
+  themer-dark: &dark
+    primary:
+      background: '#282629'
+      foreground: '#E0DCE0'
+
+    cursor:
+      text: '#282629'
+      cursor: '#CC78FA'
+
+    selection:
+      text: '#282629'
+      background: '#66BFFF'
+
+    normal:
+      black: '#656066'
+      red: '#FF4050'
+      green: '#A4CC35'
+      yellow: '#FFD24A'
+      blue: '#66BFFF'
+      magenta: '#F553BF'
+      cyan: '#26C99E'
+      white: '#E0DCE0'
+
+    bright:
+      black: '#847E85'
+      red: '#FF6673'
+      green: '#B6D65D'
+      yellow: '#FFDA6E'
+      blue: '#85CBFF'
+      magenta: '#F775CC'
+      cyan: '#51D3B1'
+      white: '#FFFCFF'
+
+    dim:
+      black: '#474247'
+      red: '#D43B48'
+      green: '#8BAB33'
+      yellow: '#D4B043'
+      blue: '#5AA0D4'
+      magenta: '#CC4AA1'
+      cyan: '#26A887'
+      white: '#C1BCC2'
+  
+
+  themer-light: &light
+    primary:
+      background: '#FFFCFF'
+      foreground: '#474247'
+
+    cursor:
+      text: '#FFFCFF'
+      cursor: '#BF65F0'
+
+    selection:
+      text: '#FFFCFF'
+      background: '#53A6E1'
+
+    normal:
+      black: '#474247'
+      red: '#F03E4D'
+      green: '#97BD2D'
+      yellow: '#EEBA21'
+      blue: '#53A6E1'
+      magenta: '#EE4EB8'
+      cyan: '#1FC598'
+      white: '#C1BCC2'
+
+    bright:
+      black: '#656066'
+      red: '#F36471'
+      green: '#ACCA57'
+      yellow: '#F1C74D'
+      blue: '#75B7E7'
+      magenta: '#F171C6'
+      cyan: '#4CD0AD'
+      white: '#E0DCE0'
+
+    dim:
+      black: '#282629'
+      red: '#C83946'
+      green: '#819F2C'
+      yellow: '#C69C23'
+      blue: '#4A8CBC'
+      magenta: '#C6469B'
+      cyan: '#21A582'
+      white: '#A29DA3'
+  
+"
+`;
+
+exports[`themer alacritty theme generator > should generate well-formatted themes 2`] = `
+"
+# Themer Alacritty
+
+schemes:
+  themer-light: &light
+    primary:
+      background: '#FFFCFF'
+      foreground: '#474247'
+
+    cursor:
+      text: '#FFFCFF'
+      cursor: '#BF65F0'
+
+    selection:
+      text: '#FFFCFF'
+      background: '#53A6E1'
+
+    normal:
+      black: '#474247'
+      red: '#F03E4D'
+      green: '#97BD2D'
+      yellow: '#EEBA21'
+      blue: '#53A6E1'
+      magenta: '#EE4EB8'
+      cyan: '#1FC598'
+      white: '#C1BCC2'
+
+    bright:
+      black: '#656066'
+      red: '#F36471'
+      green: '#ACCA57'
+      yellow: '#F1C74D'
+      blue: '#75B7E7'
+      magenta: '#F171C6'
+      cyan: '#4CD0AD'
+      white: '#E0DCE0'
+
+    dim:
+      black: '#282629'
+      red: '#C83946'
+      green: '#819F2C'
+      yellow: '#C69C23'
+      blue: '#4A8CBC'
+      magenta: '#C6469B'
+      cyan: '#21A582'
+      white: '#A29DA3'
+  
+"
+`;
+
+exports[`themer alacritty theme generator > should provide installation instructions 1`] = `
+"
+1. Paste the contents of \`Themer.yml\` into your Alacritty config file.
+2. Select the desired theme by setting the \`colors\` config key to reference the scheme's anchor (i.e., \`colors: *light\` or \`colors: *dark\`).
+"
+`;

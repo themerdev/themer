@@ -33,9 +33,6 @@
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.5"
   },
-  "devDependencies": {
-    "vitest": "^0.24.5"
-  },
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"
   },
@@ -53,5 +50,8 @@
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/themerdev"
+  },
+  "devDependencies": {
+    "vitest": "^0.25.1"
   }
 }

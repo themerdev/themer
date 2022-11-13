@@ -27,17 +27,18 @@ cat << EOF > $PACKAGE/package.json
   "name": "$NAME",
   "version": "1.0.0",
   "description": "A wallpaper generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "repository": {
     "type": "git",
@@ -52,7 +53,7 @@ cat << EOF > $PACKAGE/package.json
     "canvas": "^2.6.1"
   },
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
   "keywords": [
     "themer",
@@ -76,7 +77,7 @@ Install this module wherever you have \`themer\` installed:
 
 Then pass \`$NAME\` as a \`-t\` (\`--template\`) arg to \`themer\`:
 
-    themer -c my-colors.js -t $NAME -o gen
+    themer -c my-colors.mjs -t $NAME -o gen
 
 \`$NAME\` will generate PNG wallpapers to the output directory (\`gen/\` in this example).
 
@@ -95,7 +96,7 @@ By default, \`$NAME\` will output wallpapers at the following sizes:
 
 to which you would pass \`<width>x<height>\`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
-    themer -c my-colors.js -t $NAME --$SIZE_ARG 1024x768 --$SIZE_ARG 320x960 -o gen
+    themer -c my-colors.mjs -t $NAME --$SIZE_ARG 1024x768 --$SIZE_ARG 320x960 -o gen
 EOF
 
 LIB="$PACKAGE/lib"

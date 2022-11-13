@@ -1,13 +1,14 @@
 {
   "name": "@themerdev/chrome",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "A Chrome theme generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,7 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"
@@ -32,8 +33,11 @@
     "color": "^3.0.0",
     "lodash": "^4.17.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@themerdev/colors-default": "^2.0.0",
+    "vitest": "^0.25.1"
+  },
   "peerDependencies": {
-    "themer": "^2.1||^3"
+    "themer": "^4"
   }
 }

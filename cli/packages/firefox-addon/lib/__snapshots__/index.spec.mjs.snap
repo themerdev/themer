@@ -1,0 +1,329 @@
+// Vitest Snapshot v1
+
+exports[`Firefox theme generator > should provide installation instructions 1`] = `
+"
+To use the generated extension package, the code will need to be packaged up and signed by Mozilla.
+
+To package the code in preparation for submission, the \`web-ext\` tool can be used:
+
+    npx web-ext build --source-dir 'Themer Dark' # or 'Themer Light'
+
+Then the package can be submitted to Mozilla for review in the [Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/addon/submit/distribution).
+
+Learn more about Firefox themes from [extensionworkshop.com](https://extensionworkshop.com/documentation/themes/)
+
+To theme Firefox without the need to create a developer account and go through the extension review process, see themer's integration with [Firefox Color](https://color.firefox.com).
+  "
+`;
+
+exports[`Firefox theme generator > should render properly formatted manifest files 1`] = `
+{
+  "manifest_version": 2,
+  "name": "Themer Dark",
+  "theme": {
+    "colors": {
+      "bookmark_text": [
+        255,
+        252,
+        255,
+      ],
+      "frame": [
+        40,
+        38,
+        41,
+      ],
+      "frame_inactive": [
+        71,
+        66,
+        71,
+      ],
+      "icons": [
+        255,
+        252,
+        255,
+      ],
+      "icons_attention": [
+        255,
+        252,
+        255,
+      ],
+      "ntp_background": [
+        71,
+        66,
+        71,
+      ],
+      "ntp_text": [
+        255,
+        252,
+        255,
+      ],
+      "popup": [
+        71,
+        66,
+        71,
+      ],
+      "popup_border": [
+        71,
+        66,
+        71,
+      ],
+      "popup_highlight": [
+        224,
+        220,
+        224,
+      ],
+      "popup_highlight_text": [
+        101,
+        96,
+        102,
+      ],
+      "popup_text": [
+        255,
+        252,
+        255,
+      ],
+      "sidebar": [
+        71,
+        66,
+        71,
+      ],
+      "sidebar_border": [
+        71,
+        66,
+        71,
+      ],
+      "sidebar_highlight": [
+        101,
+        96,
+        102,
+      ],
+      "sidebar_highlight_text": [
+        224,
+        220,
+        224,
+      ],
+      "sidebar_text": [
+        224,
+        220,
+        224,
+      ],
+      "tab_background_text": [
+        255,
+        252,
+        255,
+      ],
+      "tab_loading": [
+        255,
+        252,
+        255,
+      ],
+      "tab_text": [
+        255,
+        252,
+        255,
+      ],
+      "toolbar": [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_bottom_separator": [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_field": [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_field_border": [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_field_border_focus": [
+        101,
+        96,
+        102,
+      ],
+      "toolbar_field_highlight_text": [
+        101,
+        96,
+        102,
+      ],
+      "toolbar_field_separator": [
+        71,
+        66,
+        71,
+      ],
+      "toolbar_field_text": [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field_text_focus": [
+        255,
+        252,
+        255,
+      ],
+    },
+  },
+}
+`;
+
+exports[`Firefox theme generator > should render properly formatted manifest files 2`] = `
+{
+  "manifest_version": 2,
+  "name": "Themer Light",
+  "theme": {
+    "colors": {
+      "bookmark_text": [
+        40,
+        38,
+        41,
+      ],
+      "frame": [
+        224,
+        220,
+        224,
+      ],
+      "frame_inactive": [
+        255,
+        252,
+        255,
+      ],
+      "icons": [
+        40,
+        38,
+        41,
+      ],
+      "icons_attention": [
+        40,
+        38,
+        41,
+      ],
+      "ntp_background": [
+        255,
+        252,
+        255,
+      ],
+      "ntp_text": [
+        40,
+        38,
+        41,
+      ],
+      "popup": [
+        255,
+        252,
+        255,
+      ],
+      "popup_border": [
+        255,
+        252,
+        255,
+      ],
+      "popup_highlight": [
+        71,
+        66,
+        71,
+      ],
+      "popup_highlight_text": [
+        193,
+        188,
+        194,
+      ],
+      "popup_text": [
+        40,
+        38,
+        41,
+      ],
+      "sidebar": [
+        255,
+        252,
+        255,
+      ],
+      "sidebar_border": [
+        255,
+        252,
+        255,
+      ],
+      "sidebar_highlight": [
+        193,
+        188,
+        194,
+      ],
+      "sidebar_highlight_text": [
+        71,
+        66,
+        71,
+      ],
+      "sidebar_text": [
+        71,
+        66,
+        71,
+      ],
+      "tab_background_text": [
+        40,
+        38,
+        41,
+      ],
+      "tab_loading": [
+        40,
+        38,
+        41,
+      ],
+      "tab_text": [
+        40,
+        38,
+        41,
+      ],
+      "toolbar": [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_bottom_separator": [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field": [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field_border": [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field_border_focus": [
+        193,
+        188,
+        194,
+      ],
+      "toolbar_field_highlight_text": [
+        193,
+        188,
+        194,
+      ],
+      "toolbar_field_separator": [
+        255,
+        252,
+        255,
+      ],
+      "toolbar_field_text": [
+        40,
+        38,
+        41,
+      ],
+      "toolbar_field_text_focus": [
+        40,
+        38,
+        41,
+      ],
+    },
+  },
+}
+`;

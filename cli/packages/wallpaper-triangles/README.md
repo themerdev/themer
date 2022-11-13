@@ -12,7 +12,7 @@ Install this module wherever you have `themer` installed:
 
 Then pass `@themerdev/wallpaper-triangles` as a `-t` (`--template`) arg to `themer`:
 
-    themer -c my-colors.js -t @themerdev/wallpaper-triangles -o gen
+    themer -c my-colors.mjs -t @themerdev/wallpaper-triangles -o gen
 
 `@themerdev/wallpaper-triangles` will generate PNG wallpapers to the output directory (`gen/` in this example).
 
@@ -33,4 +33,4 @@ By default, `@themerdev/wallpaper-triangles` will output wallpapers at the follo
 
 to which you would pass `<width>x<height>`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
-    themer -c my-colors.js -t @themerdev/wallpaper-triangles --themer-wallpaper-triangles-size 1024x768 --themer-wallpaper-triangles-size 320x960 -o gen
+    themer -c my-colors.mjs -t @themerdev/wallpaper-triangles --themer-wallpaper-triangles-size 1024x768 --themer-wallpaper-triangles-size 320x960 -o gen

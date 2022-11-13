@@ -1,26 +1,30 @@
 {
   "name": "@themerdev/xcode",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "An Xcode theme generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "dependencies": {
     "color": "^3.0.0",
     "lodash": "^4.17.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@themerdev/colors-default": "^2.0.0",
+    "vitest": "^0.25.1"
+  },
   "peerDependencies": {
-    "themer": "^1.0.2||^2||^3"
+    "themer": "^4"
   },
   "repository": {
     "type": "git",

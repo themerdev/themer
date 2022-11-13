@@ -14,7 +14,7 @@ Install this module wherever you have `themer` installed:
 
 Then pass `@themerdev/wallpaper-diamonds` as a `-t` (`--template`) arg to `themer`:
 
-    themer -c my-colors.js -t @themerdev/wallpaper-diamonds -o gen
+    themer -c my-colors.mjs -t @themerdev/wallpaper-diamonds -o gen
 
 `@themerdev/wallpaper-diamonds` will generate PNG wallpapers to the output directory (`gen/` in this example).
 
@@ -35,4 +35,4 @@ By default, `@themerdev/wallpaper-diamonds` will output wallpapers at the follow
 
 to which you would pass `<width>x<height>`. For example, to forego the default resolutions and generate two wallpapers, one 1024 by 768 and one 320 by 960:
 
-    themer -c my-colors.js -t @themerdev/wallpaper-diamonds --themer-wallpaper-diamonds-size 1024x768 --themer-wallpaper-diamonds-size 320x960 -o gen
+    themer -c my-colors.mjs -t @themerdev/wallpaper-diamonds --themer-wallpaper-diamonds-size 1024x768 --themer-wallpaper-diamonds-size 320x960 -o gen

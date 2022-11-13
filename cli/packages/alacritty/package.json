@@ -1,18 +1,19 @@
 {
   "name": "@themerdev/alacritty",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A themer template for the alacritty terminal emulator",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "repository": {
     "type": "git",
@@ -24,7 +25,7 @@
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/alacritty#readme",
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
   "keywords": [
     "themer",
@@ -32,5 +33,9 @@
   ],
   "dependencies": {
     "color": "^3.1.2"
+  },
+  "devDependencies": {
+    "@themerdev/colors-default": "^2.0.0",
+    "vitest": "^0.25.1"
   }
 }

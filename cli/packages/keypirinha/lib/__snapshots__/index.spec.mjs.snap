@@ -1,0 +1,21 @@
+// Vitest Snapshot v1
+
+exports[`themer keypirinha theme generator > should provide installation instructions 1`] = `
+"
+1. Open the Keypirinha Configuration:
+    - Select **Keypirinha: Configure** item from the Keypirinha LaunchBox
+    - Right-Click **Keypirinha** -> **Configure Keypirinha**
+2. Add the contents of 'themer-keypirinha-dark.ini' and 'themer-keypirinha-light.ini' to the \`Keypirinha.ini\` file.
+3. Set/Append the desired theme name (\\"ThemerDarkColors\\" or \\"ThemerLightColors\\") to the \`theme\` property under the \`[gui]\` section of the \`Keypirinha.ini\` file.
+"
+`;
+
+exports[`themer keypirinha theme generator > should provide installation instructions 2`] = `
+"
+1. Open the Keypirinha Configuration:
+    - Select **Keypirinha: Configure** item from the Keypirinha LaunchBox
+    - Right-Click **Keypirinha** -> **Configure Keypirinha**
+2. Add the contents of 'themer-keypirinha-light.ini' to the \`Keypirinha.ini\` file.
+3. Set/Append the desired theme name (\\"ThemerLightColors\\") to the \`theme\` property under the \`[gui]\` section of the \`Keypirinha.ini\` file.
+"
+`;

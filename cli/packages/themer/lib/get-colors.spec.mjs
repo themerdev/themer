@@ -1,7 +1,7 @@
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 import getColors from './get-colors';
 import { describe, expect, it } from 'vitest';
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 

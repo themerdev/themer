@@ -1,0 +1,10 @@
+// Vitest Snapshot v1
+
+exports[`themer "octagon" wallpaper > should list output files 1`] = `
+"
+Files generated:
+
+* \`themer-wallpaper-octagon-dark-1000x1000.png\`
+* \`themer-wallpaper-octagon-light-1000x1000.png\`
+"
+`;

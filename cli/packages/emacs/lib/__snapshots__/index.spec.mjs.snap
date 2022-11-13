@@ -1,0 +1,16 @@
+// Vitest Snapshot v1
+
+exports[`themer emacs theme generator > should provide installation instructions 1`] = `
+"
+Copy (or symlink) the generated theme files into \`~/.emacs.d/\`:
+
+    cp 'themer-dark-theme.el' ~/.emacs.d/
+    cp 'themer-light-theme.el' ~/.emacs.d/
+
+Then load the desired theme in \`init.el\`:
+
+    (load-theme 'themer-dark t)
+    ;; or
+    (load-theme 'themer-light t)
+"
+`;

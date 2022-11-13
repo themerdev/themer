@@ -1,13 +1,14 @@
 {
   "name": "@themerdev/colors-lucid",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "A color set for themer based on the Lucidchart editor.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -24,12 +25,13 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-lucid#readme",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "vitest": "^0.25.1"
+  }
 }

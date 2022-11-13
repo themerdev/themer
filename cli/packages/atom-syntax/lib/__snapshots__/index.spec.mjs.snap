@@ -1,0 +1,12 @@
+// Vitest Snapshot v1
+
+exports[`renderInstructions function > should provide installation instructions 1`] = `
+"
+Use the \`apm link\` command to install the generated theme packages to Atom:
+
+    apm link 'themer-dark-syntax'
+    apm link 'themer-light-syntax'
+
+Then open/reload Atom and select the desired theme in the list of available syntax themes.
+  "
+`;

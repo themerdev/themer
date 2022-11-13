@@ -1,0 +1,20 @@
+// Vitest Snapshot v1
+
+exports[`@themerdev/wallpaper-trianglify options > should return proper defaults if none provided 1`] = `
+[
+  {
+    "h": 1800,
+    "w": 2880,
+  },
+  {
+    "h": 1334,
+    "w": 750,
+  },
+]
+`;
+
+exports[`@themerdev/wallpaper-trianglify options > should return proper defaults if none provided 2`] = `
+[
+  0.75,
+]
+`;

@@ -1,18 +1,19 @@
 {
   "name": "@themerdev/wallpaper-diamonds",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "A wallpaper generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "repository": {
     "type": "git",
@@ -25,14 +26,18 @@
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/wallpaper-diamonds#readme",
   "dependencies": {
     "@themerdev/utils": "^1.2.0",
-    "canvas": "^2.6.1",
+    "canvas": "^2.10.2",
     "color": "^3.1.3"
   },
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
   "keywords": [
     "themer",
     "wallpaper"
-  ]
+  ],
+  "devDependencies": {
+    "@themerdev/colors-default": "^1.0.11",
+    "vitest": "^0.25.1"
+  }
 }
