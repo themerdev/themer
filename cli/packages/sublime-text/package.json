@@ -1,20 +1,24 @@
 {
   "name": "@themerdev/sublime-text",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Sublime Text theme generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@themerdev/colors-default": "^2.0.0",
+    "vitest": "^0.25.1"
+  },
   "dependencies": {
     "plist": "^3.0.1"
   },
@@ -24,7 +28,7 @@
     "directory": "cli/packages/sublime-text"
   },
   "peerDependencies": {
-    "themer": "^1.0.2||^2||^3"
+    "themer": "^4"
   },
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"

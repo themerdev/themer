@@ -1,13 +1,14 @@
 {
   "name": "@themerdev/colors-github-universe",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "A dark color set for themer, based on the GitHub Universe 2017 color palette.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -24,14 +25,16 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/colors-github-universe#readme",
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "vitest": "^0.25.1"
+  }
 }

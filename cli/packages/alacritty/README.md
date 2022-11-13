@@ -10,4 +10,4 @@ Install this module wherever you have `themer` installed:
 
 Then pass `@themerdev/alacritty` as a `-t` (`--template`) arg to `themer`:
 
-    themer -c my-colors.js -t @themerdev/alacritty -o gen
+    themer -c my-colors.mjs -t @themerdev/alacritty -o gen

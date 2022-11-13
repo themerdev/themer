@@ -1,0 +1,29 @@
+// Vitest Snapshot v1
+
+exports[`themer Windows Terminal theme generator > should provide installation instructions 1`] = `
+"
+1. Open the Windows Terminal settings (\`Ctrl\`-\`,\`)
+2. Add the contents of 'themer-dark.json' and 'themer-light.json' to the \`schemes\` array in \`profile.json\`
+3. Set the \`colorScheme\` property to the desired scheme name (\\"Themer Dark\\" or \\"Themer Light\\") in the profiles section of \`profile.json\`, e.g.:
+
+    \\"profiles\\": {
+      \\"defaults\\": {
+        \\"colorScheme\\": \\"Themer Dark\\"
+      }
+    }
+"
+`;
+
+exports[`themer Windows Terminal theme generator > should provide installation instructions 2`] = `
+"
+1. Open the Windows Terminal settings (\`Ctrl\`-\`,\`)
+2. Add the contents of 'themer-light.json' to the \`schemes\` array in \`profile.json\`
+3. Set the \`colorScheme\` property to the desired scheme name (\\"Themer Light\\") in the profiles section of \`profile.json\`, e.g.:
+
+    \\"profiles\\": {
+      \\"defaults\\": {
+        \\"colorScheme\\": \\"Themer Light\\"
+      }
+    }
+"
+`;

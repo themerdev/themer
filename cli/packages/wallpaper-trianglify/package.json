@@ -1,13 +1,14 @@
 {
   "name": "@themerdev/wallpaper-trianglify",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "A themer template for generating wallpaper using trianglify.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "ava"
   },
   "keywords": [
     "themer",
@@ -17,17 +18,20 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js",
+    "/lib/index.mjs",
     "/lib/opts.js"
   ],
   "dependencies": {
     "@themerdev/utils": "^1.2.0",
-    "canvas": "^2.6.1",
+    "canvas": "^2.10.2",
     "trianglify": "^4.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@themerdev/colors-default": "^2.0.0",
+    "ava": "^5.1.0"
+  },
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
   "repository": {
     "type": "git",

@@ -25,17 +25,18 @@ cat << EOF > $PACKAGE/package.json
   "name": "$NAME",
   "version": "1.0.0",
   "description": "TODO",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=6.11"
+    "node": ">=18"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "repository": {
     "url": "git+ssh://git@github.com/themerdev/themer.git",
@@ -46,7 +47,7 @@ cat << EOF > $PACKAGE/package.json
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/$DIR#readme",
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
   "keywords": [
     "themer",

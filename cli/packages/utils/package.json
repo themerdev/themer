@@ -1,22 +1,20 @@
 {
   "name": "@themerdev/utils",
-  "version": "1.3.1",
+  "version": "2.0.0",
   "description": "Common functions used across various themer templates.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/themerdev/themer.git",
@@ -29,5 +27,8 @@
   "keywords": [
     "themer",
     "utils"
-  ]
+  ],
+  "devDependencies": {
+    "vitest": "^0.25.1"
+  }
 }

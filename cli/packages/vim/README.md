@@ -10,6 +10,6 @@ Install this module wherever you have `themer` installed:
 
 Then pass `@themerdev/vim` as a `-t` (`--template`) arg to `themer`:
 
-    themer -c my-colors.js -t @themerdev/vim -o gen
+    themer -c my-colors.mjs -t @themerdev/vim -o gen
 
 Installation instructions for the generated theme file will be included in `<output dir>/README.md`.

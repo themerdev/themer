@@ -10,6 +10,6 @@ Install this module wherever you have `themer` installed.
 
 Then pass `@themerdev/iterm` as a `-t` (`--template`) argument to `themer`:
 
-    themer -c my-colors.js -t @themerdev/iterm -o gen/
+    themer -c my-colors.mjs -t @themerdev/iterm -o gen/
 
 Installation instructions for the generated theme file(s) will be included in `<output dir>/README.md`.

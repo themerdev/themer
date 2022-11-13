@@ -1,13 +1,14 @@
 {
   "name": "@themerdev/cmd",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "A CMD.exe theme generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -23,17 +24,20 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/cmd#readme",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash-es": "^4.17.21"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@themerdev/colors-default": "^1.0.11",
+    "vitest": "^0.25.1"
+  },
   "peerDependencies": {
-    "themer": "^1.0.2||^2||^3"
+    "themer": "^4"
   }
 }

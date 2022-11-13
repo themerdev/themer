@@ -1,13 +1,14 @@
 {
   "name": "@themerdev/atom-ui",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "An Atom UI theme generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -23,36 +24,37 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js",
-    "/lib/templates/baseLess.js",
-    "/lib/templates/buttonsLess.js",
-    "/lib/templates/editorLess.js",
-    "/lib/templates/findAndReplaceLess.js",
-    "/lib/templates/gitLess.js",
-    "/lib/templates/indexLess.js",
-    "/lib/templates/keyBindingLess.js",
-    "/lib/templates/listsLess.js",
-    "/lib/templates/packageJson.js",
-    "/lib/templates/panelsLess.js",
-    "/lib/templates/progressLess.js",
-    "/lib/templates/sitesLess.js",
-    "/lib/templates/statusBarLess.js",
-    "/lib/templates/tabsLess.js",
-    "/lib/templates/textLess.js",
-    "/lib/templates/tooltipsLess.js",
-    "/lib/templates/treeViewLess.js",
-    "/lib/templates/uiVariablesLess.js"
+    "/lib/index.mjs",
+    "/lib/templates/baseLess.mjs",
+    "/lib/templates/buttonsLess.mjs",
+    "/lib/templates/editorLess.mjs",
+    "/lib/templates/findAndReplaceLess.mjs",
+    "/lib/templates/gitLess.mjs",
+    "/lib/templates/indexLess.mjs",
+    "/lib/templates/keyBindingLess.mjs",
+    "/lib/templates/listsLess.mjs",
+    "/lib/templates/packageJson.mjs",
+    "/lib/templates/panelsLess.mjs",
+    "/lib/templates/progressLess.mjs",
+    "/lib/templates/sitesLess.mjs",
+    "/lib/templates/statusBarLess.mjs",
+    "/lib/templates/tabsLess.mjs",
+    "/lib/templates/textLess.mjs",
+    "/lib/templates/tooltipsLess.mjs",
+    "/lib/templates/treeViewLess.mjs",
+    "/lib/templates/uiVariablesLess.mjs"
   ],
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/atom-ui#readme",
-  "dependencies": {},
   "devDependencies": {
+    "@themerdev/colors-default": "^2.0.0",
     "less": "^4.1.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "vitest": "^0.25.1"
   },
   "peerDependencies": {
-    "themer": "^2.1||^3"
+    "themer": "^4"
   }
 }

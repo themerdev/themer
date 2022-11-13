@@ -1,0 +1,126 @@
+// Vitest Snapshot v1
+
+exports[`themer kitty theme generator > should generate well-formatted themes 1`] = `
+"
+cursor #CC78FA
+cursor_text_color background
+
+url_color #66BFFF
+
+active_border_color #A4CC35
+inactive_border_color #474247
+bell_border_color #F28144
+
+active_tab_foreground #E0DCE0
+active_tab_background #282629
+
+inactive_tab_foreground #C1BCC2
+inactive_tab_background #474247
+
+foreground #E0DCE0
+background #282629
+
+selection_foreground #282629
+selection_background #66BFFF
+
+color0 #656066
+color8 #847E85
+
+color1 #FF4050
+color9 #FF6673
+
+color2 #A4CC35
+color10 #B6D65D
+
+color3 #FFD24A
+color11 #FFDA6E
+
+color4 #66BFFF
+color12 #85CBFF
+
+color5 #F553BF
+color13 #F775CC
+
+color6 #26C99E
+color14 #51D3B1
+
+color7 #E0DCE0
+color15 #FFFCFF
+
+mark1_foreground #282629
+mark1_background #26C99E
+
+mark2_foreground #282629
+mark2_background #F553BF
+
+mark3_foreground #282629
+mark3_background #FFD24A
+"
+`;
+
+exports[`themer kitty theme generator > should generate well-formatted themes 2`] = `
+"
+cursor #BF65F0
+cursor_text_color background
+
+url_color #53A6E1
+
+active_border_color #97BD2D
+inactive_border_color #E0DCE0
+bell_border_color #F37735
+
+active_tab_foreground #474247
+active_tab_background #FFFCFF
+
+inactive_tab_foreground #656066
+inactive_tab_background #E0DCE0
+
+foreground #474247
+background #FFFCFF
+
+selection_foreground #FFFCFF
+selection_background #53A6E1
+
+color0 #474247
+color8 #656066
+
+color1 #F03E4D
+color9 #F36471
+
+color2 #97BD2D
+color10 #ACCA57
+
+color3 #EEBA21
+color11 #F1C74D
+
+color4 #53A6E1
+color12 #75B7E7
+
+color5 #EE4EB8
+color13 #F171C6
+
+color6 #1FC598
+color14 #4CD0AD
+
+color7 #C1BCC2
+color15 #E0DCE0
+
+mark1_foreground #FFFCFF
+mark1_background #1FC598
+
+mark2_foreground #FFFCFF
+mark2_background #EE4EB8
+
+mark3_foreground #FFFCFF
+mark3_background #EEBA21
+"
+`;
+
+exports[`themer kitty theme generator > should provide installation instructions 1`] = `
+"
+In the kitty configuration file (usually \`~/.config/kitty/kitty.conf\`), \`include\` the generated theme file:
+
+    include themer-dark.conf
+    include themer-light.conf
+"
+`;

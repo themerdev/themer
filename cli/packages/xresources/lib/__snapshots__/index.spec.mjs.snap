@@ -1,0 +1,87 @@
+// Vitest Snapshot v1
+
+exports[`themer xresources theme generator > renders instructions 1`] = `
+"
+Copy the contents of 'themer-dark.Xresources' or 'themer-light.Xresources' into your .Xresources configuration file, or load it with \`xrdb\`.
+"
+`;
+
+exports[`themer xresources theme generator > renders valid theme files 1`] = `
+"
+! general
+*background: rgb:28/26/29
+*foreground: rgb:e0/dc/e0
+
+! blacks
+*color0: rgb:65/60/66
+*color8: rgb:84/7e/85
+
+! reds
+*color1: rgb:ff/40/50
+*color9: rgb:ff/66/73
+
+! greens
+*color2: rgb:a4/cc/35
+*color10: rgb:b6/d6/5d
+
+! yellows
+*color3: rgb:ff/d2/4a
+*color11: rgb:ff/da/6e
+
+! blues
+*color4: rgb:66/bf/ff
+*color12: rgb:85/cb/ff
+
+! magentas
+*color5: rgb:f5/53/bf
+*color13: rgb:f7/75/cc
+
+! cyans
+*color6: rgb:26/c9/9e
+*color14: rgb:51/d3/b1
+
+! whites
+*color7: rgb:e0/dc/e0
+*color15: rgb:ff/fc/ff
+"
+`;
+
+exports[`themer xresources theme generator > renders valid theme files 2`] = `
+"
+! general
+*background: rgb:ff/fc/ff
+*foreground: rgb:47/42/47
+
+! blacks
+*color0: rgb:47/42/47
+*color8: rgb:65/60/66
+
+! reds
+*color1: rgb:f0/3e/4d
+*color9: rgb:f3/64/71
+
+! greens
+*color2: rgb:97/bd/2d
+*color10: rgb:ac/ca/57
+
+! yellows
+*color3: rgb:ee/ba/21
+*color11: rgb:f1/c7/4d
+
+! blues
+*color4: rgb:53/a6/e1
+*color12: rgb:75/b7/e7
+
+! magentas
+*color5: rgb:ee/4e/b8
+*color13: rgb:f1/71/c6
+
+! cyans
+*color6: rgb:1f/c5/98
+*color14: rgb:4c/d0/ad
+
+! whites
+*color7: rgb:c1/bc/c2
+*color15: rgb:e0/dc/e0
+"
+`;

@@ -1,10 +1,10 @@
 {
   "name": "@themerdev/hyper",
-  "version": "3.1.2",
+  "version": "4.0.0",
   "description": "A Hyper.app plugin generator for themer.",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "repository": {
     "url": "git+ssh://git@github.com/themerdev/themer.git",
@@ -14,17 +14,21 @@
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@themerdev/colors-default": "^2.0.0",
+    "vitest": "^0.25.1"
+  },
   "dependencies": {
     "color": "^3.0.0"
   },
   "peerDependencies": {
-    "themer": "^2.1||^3"
+    "themer": "^4"
   },
   "bugs": {
     "url": "https://github.com/themerdev/themer/issues"

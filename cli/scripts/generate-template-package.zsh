@@ -24,17 +24,18 @@ cat << EOF > $PACKAGE/package.json
   "name": "$NAME",
   "version": "1.0.0",
   "description": "TODO",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "engines": {
-    "node": ">=8.11.4"
+    "node": ">=18"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "test": "vitest"
   },
   "author": "mjswensen",
   "license": "MIT",
   "files": [
-    "/lib/index.js"
+    "/lib/index.mjs"
   ],
   "repository": {
     "type": "git",
@@ -45,7 +46,7 @@ cat << EOF > $PACKAGE/package.json
   },
   "homepage": "https://github.com/themerdev/themer/tree/main/cli/packages/$1#readme",
   "peerDependencies": {
-    "themer": "^3"
+    "themer": "^4"
   },
   "keywords": [
     "themer",
@@ -67,7 +68,7 @@ Install this module wherever you have \`themer\` installed:
 
 Then pass \`$NAME\` as a \`-t\` (\`--template\`) arg to \`themer\`:
 
-    themer -c my-colors.js -t $NAME -o gen
+    themer -c my-colors.mjs -t $NAME -o gen
 
 Installation instructions for the generated theme(s) will be included in \`<output dir>/README.md\`.
 EOF
