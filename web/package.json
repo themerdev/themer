@@ -98,7 +98,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "dev": "export $(grep -v '^#' .env.local | xargs) && netlify dev",
     "test:format": "prettier --check .",
     "test:unit": "react-scripts test"
