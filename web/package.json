@@ -73,7 +73,7 @@
     "file-saver": "^2.0.0",
     "history": "^5.0.1",
     "jsonwebtoken": "^8.5.1",
-    "jszip": "^3.7.1",
+    "jszip": "^3.8.0",
     "lodash": "^4.17.11",
     "node-fetch": "^3.2.0",
     "numeral": "^2.0.6",
