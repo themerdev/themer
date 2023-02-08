@@ -1,7 +1,0 @@
-// Vitest Snapshot v1
-
-exports[`renderInstructions > should provide installation instructions 1`] = `
-"
-In the HTML page where prism.js is being used, link to the generated stylesheet (\`themer-prism-dark.css\` or \`themer-prism-light.css\`).
-"
-`;

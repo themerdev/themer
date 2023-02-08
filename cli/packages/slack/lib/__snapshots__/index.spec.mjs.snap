@@ -1,7 +1,0 @@
-// Vitest Snapshot v1
-
-exports[`renderInstructions > should provide installation instructions 1`] = `
-"
-Copy the contents of \`themer-slack-dark.txt\` or \`themer-slack-light.txt\` and paste into the custom theme input in Slack's preferences.
-"
-`;

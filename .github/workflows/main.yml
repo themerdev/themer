@@ -14,14 +14,10 @@ jobs:
         run: |
           cd cli
           npm install
-      - name: Check formatting
-        run: |
-          cd cli
-          npm run test:format
       - name: Run tests
         run: |
           cd cli
-          npm run test --workspaces
+          npm run test
   test-web:
     runs-on: ubuntu-latest
     steps:

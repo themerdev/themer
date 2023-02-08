@@ -1,8 +1,0 @@
-// Vitest Snapshot v1
-
-exports[`themer Sublime Text theme generator > should provide installation instructions 1`] = `
-"
-1. Copy (or symlink) the generated theme files (\`themer-sublime-text-dark.tmTheme\` or \`themer-sublime-text-light.tmTheme\`) to the \`User/\` packages folder (you can see where this folder is located by choosing the \\"Browse Packages...\\" menu option in Sublime Text).
-2. Choose the theme from the list of available color themes.
-"
-`;

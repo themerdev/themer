@@ -1,13 +1,86 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "name": "themer",
+  "version": "5.0.0",
+  "description": "Customizable theme generator for editors, terminals, wallpaper, and more.",
+  "main": "dist/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "mjswensen",
+  "repository": {
+    "url": "git+ssh://git@github.com/themerdev/themer.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "bin": {
+    "themer": "dist/bin.js"
+  },
   "scripts": {
-    "format": "prettier --write .",
-    "test:format": "prettier --check ."
+    "prepublishOnly": "cp ../README.md && cp ../LICENSE.md",
+    "build": "tsc",
+    "test": "ava"
+  },
+  "bugs": {
+    "url": "https://github.com/themerdev/themer/issues"
+  },
+  "homepage": "https://github.com/themerdev/themer#readme",
+  "keywords": [
+    "themer",
+    "theme",
+    "editor",
+    "ide",
+    "syntax",
+    "slack",
+    "wallpaper",
+    "terminal"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/themerdev"
   },
   "devDependencies": {
-    "prettier": "2.3.1"
+    "@ava/typescript": "^3.0.1",
+    "@tsconfig/node-lts-strictest-esm": "^18.12.1",
+    "@types/color": "^3.0.3",
+    "@types/color-convert": "^2.0.0",
+    "@types/common-tags": "^1.8.1",
+    "@types/d3-scale": "^4.0.3",
+    "@types/lodash": "^4.14.191",
+    "@types/minimist": "^1.2.2",
+    "@types/msgpack5": "^3.4.3",
+    "@types/node": "^18.11.18",
+    "@types/plist": "^3.0.2",
+    "@types/urlsafe-base64": "^1.0.28",
+    "@types/xml": "^1.0.8",
+    "ava": "^5.1.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "canvas": "^2.11.0",
+    "color": "^4.2.3",
+    "color-convert": "^2.0.1",
+    "commander": "^10.0.0",
+    "common-tags": "^1.8.2",
+    "d3-scale": "^4.0.2",
+    "file-paths-to-tree": "^3.0.0",
+    "lodash": "^4.17.21",
+    "lzma": "^2.3.2",
+    "msgpack5": "^6.0.2",
+    "plist": "^3.0.6",
+    "trianglify": "^4.1.1",
+    "tumult": "^3.0.14",
+    "urlsafe-base64": "^1.0.0",
+    "xml": "^1.0.1",
+    "yaml": "^2.2.1"
+  },
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "dist/"
+      },
+      "compile": "tsc"
+    },
+    "workerThreads": false
   }
 }
