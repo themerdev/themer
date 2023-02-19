@@ -1,5 +1,7 @@
+import Color from 'color';
 import { Command } from 'commander';
 import flatten from 'lodash/flatten.js';
+import { parse } from 'yaml';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -56,10 +58,59 @@ function isBuiltInColorSet(value: string): value is BuiltInColorSet {
   return allBuiltInColorSetIdentfiers.includes(value as BuiltInColorSet);
 }
 
+console.log('resolving color set(s)...');
+
 const resolvedColorSets: (BuiltInColorSet | ColorSet)[] = await Promise.all(
-  expandedColorSets.map((value: string) => {
+  expandedColorSets.map(async (value: string) => {
     if (isBuiltInColorSet(value)) return value;
-    throw new Error(`Unable to resolve color set: ${value}`);
+    else {
+      const absolutePath = resolve(value);
+      console.log(`loading color set ${value} (path: ${absolutePath})...`);
+      try {
+        return (await import(absolutePath)).default;
+      } catch {
+        console.log(
+          `color set ${absolutePath} does not appear to be a themer color set JavaScript file...`,
+        );
+      }
+      try {
+        const content = await readFile(absolutePath, 'utf8');
+        const base16 = parse(content);
+        const variant = {
+          shade0: `#${base16.base00}`,
+          shade1: `#${base16.base01}`,
+          shade2: `#${base16.base02}`,
+          shade3: `#${base16.base03}`,
+          shade4: `#${base16.base04}`,
+          shade5: `#${base16.base05}`,
+          shade6: `#${base16.base06}`,
+          shade7: `#${base16.base07}`,
+          accent0: `#${base16.base08}`,
+          accent1: `#${base16.base09}`,
+          accent2: `#${base16.base0A}`,
+          accent3: `#${base16.base0B}`,
+          accent4: `#${base16.base0C}`,
+          accent5: `#${base16.base0D}`,
+          accent6: `#${base16.base0E}`,
+          accent7: `#${base16.base0F}`,
+        };
+        const isDark =
+          Color(variant.shade0).luminosity() <
+          Color(variant.shade7).luminosity();
+        const colors: ColorSet = {
+          name: base16.scheme,
+          variants: isDark ? { dark: variant } : { light: variant },
+        };
+        return colors;
+      } catch (e: any) {
+        console.error(e.message);
+        console.log(
+          `color set ${absolutePath} does not appear to be a base16 theme...`,
+        );
+      }
+      console.error(`...unable to load color set ${value}`);
+      process.exit(1);
+    }
   }),
 );
 
@@ -79,7 +130,19 @@ function isBuiltInTemplate(value: string): value is BuiltInTemplate {
 const resolvedTemplates: (BuiltInTemplate | Template)[] = await Promise.all(
   expandedTemplates.map(async (value) => {
     if (isBuiltInTemplate(value)) return value;
-    throw new Error(`Unable to resolve template: ${value}`);
+    else {
+      const absolutePath = resolve(value);
+      console.log(`loading template ${value} (path: ${absolutePath})...`);
+      try {
+        return (await import(absolutePath)).default;
+      } catch {
+        console.log(
+          `template ${absolutePath} does not appear to be a themer template file...`,
+        );
+      }
+    }
+    console.error(`...unable to resolve template: ${value}`);
+    process.exit(1);
   }),
 );
 
