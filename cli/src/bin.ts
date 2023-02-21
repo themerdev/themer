@@ -45,7 +45,7 @@ program
     'resolution to render in pixels, in the format [width]x[height]',
     '2880x1800',
   )
-  .option('-o, --output <path>', 'the output directory', 'output');
+  .option('-o, --output <path>', 'the output directory', 'themer-output');
 
 program.parse();
 
