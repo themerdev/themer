@@ -33,7 +33,7 @@ program
   .option(
     '-c, --color-set <built-in color set name or file path...>',
     'the color set(s) to render',
-    '*',
+    'default',
   )
   .option(
     '-t, --template <built-in template name or file path...>',
