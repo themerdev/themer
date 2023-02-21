@@ -11,6 +11,7 @@ import themer, {
   BuiltInColorSet,
   BuiltInTemplate,
   ColorSet,
+  RenderOptions,
   Template,
 } from './index.js';
 
@@ -30,14 +31,19 @@ program
   .description(description)
   .version(version, '-v, --version', 'display the current version')
   .option(
-    '-c, --color-set <identifier or file...>',
+    '-c, --color-set <built-in color set name or file path...>',
     'the color set(s) to render',
     '*',
   )
   .option(
-    '-t, --template <identifier or file...>',
+    '-t, --template <built-in template name or file path...>',
     'the theme template(s) to render',
     '*',
+  )
+  .option(
+    '-s, --size <wallpaper resolution...>',
+    'resolution to render in pixels, in the format [width]x[height]',
+    '2880x1800',
   )
   .option('-o, --output <path>', 'the output directory', 'output');
 
@@ -146,7 +152,33 @@ const resolvedTemplates: (BuiltInTemplate | Template)[] = await Promise.all(
   }),
 );
 
-for await (const file of themer(resolvedColorSets, resolvedTemplates)) {
+function isTuplePair<T>(arr: T[]): arr is [T, T] {
+  return arr.length === 2;
+}
+
+const resolvedResolutions: RenderOptions['wallpaperSizes'] = (
+  typeof options['size'] === 'string' ? [options['size']] : options['size']
+).map((opt: string) => {
+  const dimensions = opt.split('x').map((n) => parseInt(n));
+  if (isTuplePair(dimensions) && dimensions.every((n) => !isNaN(n))) {
+    const [w, h] = dimensions;
+    return { w, h };
+  }
+  console.error(
+    `...size option doesn't appear to be a valid WxH resolution specifier: ${opt}`,
+  );
+  process.exit(1);
+});
+
+const renderOptions: RenderOptions = {
+  wallpaperSizes: resolvedResolutions,
+};
+
+for await (const file of themer(
+  resolvedColorSets,
+  resolvedTemplates,
+  renderOptions,
+)) {
   const path = join(options['output'], file.path);
   console.log(`writing ${path}...`);
   await mkdir(dirname(path), { recursive: true });

@@ -11,6 +11,7 @@ export {
 export type {
   BuiltInTemplate,
   OutputFile,
+  RenderOptions,
   Template,
 } from './template/index.js';
 export {

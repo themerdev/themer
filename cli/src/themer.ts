@@ -199,7 +199,7 @@ function resolveTemplate(template: BuiltInTemplate | Template): Template {
 export async function* themer(
   colorSets: (BuiltInColorSet | ColorSet)[],
   templates: (BuiltInTemplate | Template)[],
-  options: RenderOptions = { wallpaperSizes: [{ w: 2880, h: 1800 }] },
+  options: RenderOptions,
 ): AsyncGenerator<OutputFile> {
   for (const colorSet of colorSets) {
     const resolvedColorSet = resolveColorSet(colorSet);

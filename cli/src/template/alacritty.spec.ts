@@ -3,7 +3,9 @@ import themer from '../index.js';
 import { toArray } from '../util.js';
 
 test('alacritty', async (t) => {
-  const files = await toArray(themer(['finger-paint'], ['alacritty']));
+  const files = await toArray(
+    themer(['finger-paint'], ['alacritty'], { wallpaperSizes: [] }),
+  );
   t.is(files.length, 2, 'produces only one theme file');
   const theme = files.find(({ path }) =>
     path.endsWith('Themer Finger Paint.yml'),
