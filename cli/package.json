@@ -7,23 +7,23 @@
   "engines": {
     "node": ">=18"
   },
-  "author": "mjswensen",
+  "author": {
+    "name": "Matt Swensen",
+    "url": "https://mjswensen.com"
+  },
   "repository": {
-    "url": "git+ssh://git@github.com/themerdev/themer.git",
-    "type": "git"
+    "url": "https://github.com/themerdev/themer.git",
+    "type": "git",
+    "directory": "cli"
   },
   "license": "MIT",
-  "bin": {
-    "themer": "dist/bin.js"
-  },
+  "bin": "dist/bin.js",
   "scripts": {
-    "prepublishOnly": "cp ../README.md && cp ../LICENSE.md",
+    "prepublishOnly": "cp ../README.md ./ && cp ../LICENSE.md ./ && npm run build && npm run test",
     "build": "tsc",
     "test": "ava"
   },
-  "bugs": {
-    "url": "https://github.com/themerdev/themer/issues"
-  },
+  "bugs": "https://github.com/themerdev/themer/issues",
   "homepage": "https://github.com/themerdev/themer#readme",
   "keywords": [
     "themer",
@@ -35,10 +35,17 @@
     "wallpaper",
     "terminal"
   ],
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/themerdev"
-  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "funding": [
+    "https://themer.dev",
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/themerdev"
+    }
+  ],
   "devDependencies": {
     "@ava/typescript": "^3.0.1",
     "@tsconfig/node-lts-strictest-esm": "^18.12.1",

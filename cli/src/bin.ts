@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import Color from 'color';
 import { Command } from 'commander';
 import flatten from 'lodash/flatten.js';
