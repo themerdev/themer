@@ -95,7 +95,7 @@
     "prettier": "2.3.1"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
     "start": "react-scripts --openssl-legacy-provider start",
