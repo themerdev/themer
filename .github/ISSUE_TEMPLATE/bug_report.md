@@ -39,16 +39,15 @@ Please fill out the following information if you are using the web UI at [themer
 - Browser [e.g. Chrome, Safari]:
 - Browser version [e.g. 22]:
 
-## CLI
+## CLI or API
 
-Please fill out the following information if you are using the command-line interface. For the web UI, you can delete this section.
+Please fill out the following information if you are using the command-line interface or programmatic API. For the web UI, you can delete this section.
 
 - Device [e.g. iPhone6, MacBook Pro]:
 - OS [e.g. iOS, macOS]:
 - OS version [e.g. 14.0]:
 - Node version [e.g. 14.4.0]:
-- `themer` version [e.g. 3.3.4]:
-- Other `themer` packages and their versions [e.g. `@themerdev/vscode@2.2.1`]:
+- `themer` version [e.g. 5.0.0]:
 
 # Additional context
 
