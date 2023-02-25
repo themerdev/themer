@@ -1,0 +1,43 @@
+{
+  "Color Set": {
+    "scope": "typescript",
+    "prefix": "color-set",
+    "body": [
+      "import type { ColorSet } from './index.js';",
+      "",
+      "const colors: ColorSet = {",
+      "  name: '$1',",
+      "  variants: {",
+      "    $2",
+      "  },",
+      "};",
+      "",
+      "export default colors;",
+      "$0"
+    ]
+  },
+  "Template": {
+    "scope": "typescript",
+    "prefix": "template",
+    "body": [
+      "import type { Template } from './index.js';",
+      "import { colorSetToVariants } from '../color-set/index.js';",
+      "",
+      "const template: Template = {",
+      "  name: '$1',",
+      "  render: async function* (colorSet) {",
+      "    const variants = colorSetToVariants(colorSet);",
+      "    for (const variant of variants) {",
+      "      $2",
+      "    }",
+      "  },",
+      "  renderInstructions: (paths) => {",
+      "    $3",
+      "  },",
+      "};",
+      "",
+      "export default template;",
+      "$0"
+    ]
+  }
+}

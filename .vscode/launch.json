@@ -1,110 +1,35 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug current test",
-      "cwd": "${workspaceFolder}/cli",
-      "program": "node_modules/.bin/jest",
-      "args": ["--runInBand", "${relativeFile}"]
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Run",
-      "skipFiles": ["<node_internals>/**"],
-      "cwd": "${workspaceFolder}/cli/packages",
-      "program": "./themer/lib/index.js",
+      "name": "Run CLI",
+      "cwd": "${workspaceFolder}/cli/",
+      "program": "./dist/bin.js",
       "args": [
-        "-c",
-        "./${input:colorSet}",
-        "-t",
-        "./${input:template}",
-        "-o",
-        "${workspaceFolder}/cli/tmp"
-      ]
+        "--color-set",
+        "${input:colorSet}",
+        "--template",
+        "${input:template}",
+        "--output",
+        "tmp"
+      ],
+      "preLaunchTask": "build cli"
     }
   ],
   "inputs": [
     {
       "id": "colorSet",
-      "type": "pickString",
-      "description": "Color set package",
-      "options": [
-        "colors-default",
-        "colors-dracula",
-        "colors-finger-paint",
-        "colors-github-universe",
-        "colors-green-as-a-whistle",
-        "colors-lucid",
-        "colors-mojave",
-        "colors-monkey",
-        "colors-night-sky",
-        "colors-nova",
-        "colors-one",
-        "colors-polar-ice",
-        "colors-right-in-the-teals",
-        "colors-rivet",
-        "colors-seti",
-        "colors-solarized"
-      ],
-      "default": "colors-default"
+      "description": "Color set to render",
+      "type": "promptString",
+      "default": "*"
     },
     {
       "id": "template",
-      "type": "pickString",
-      "description": "Template package",
-      "options": [
-        "alacritty",
-        "alfred",
-        "atom-syntax",
-        "atom-ui",
-        "bbedit",
-        "brave",
-        "chrome",
-        "cmd",
-        "conemu",
-        "css",
-        "emacs",
-        "firefox-addon",
-        "firefox-color",
-        "hyper",
-        "iterm",
-        "kde-plasma-colors",
-        "kitty",
-        "konsole",
-        "preview-code",
-        "preview-inline",
-        "preview-swatch",
-        "prism",
-        "sketch-palettes",
-        "slack",
-        "sublime-text",
-        "terminal",
-        "terminator",
-        "vim",
-        "vim-lightline",
-        "visual-studio",
-        "vscode",
-        "wallpaper-block-wave",
-        "wallpaper-burst",
-        "wallpaper-circuits",
-        "wallpaper-diamonds",
-        "wallpaper-dot-grid",
-        "wallpaper-octagon",
-        "wallpaper-shirts",
-        "wallpaper-triangles",
-        "wallpaper-trianglify",
-        "warp",
-        "windows-terminal",
-        "wox",
-        "xcode",
-        "xresources"
-      ]
+      "description": "Template to render",
+      "type": "promptString",
+      "default": "*"
     }
   ]
 }

@@ -1,3 +1,5 @@
 node_modules
-coverage
+dist
 tmp
+README.md
+LICENSE.md

@@ -1,6 +1,3 @@
-[build.environment]
-  NODE_VERSION = "16"
-
 [functions]
   directory = "api"
   node_bundler = "esbuild"

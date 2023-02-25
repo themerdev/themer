@@ -1,4 +1,22 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "alacritty",
+    "bbedit",
+    "chriskempson",
+    "conemu",
+    "dotfiles",
+    "iterm",
+    "Jamstacker",
+    "keypirinha",
+    "konsole",
+    "lightline",
+    "seti",
+    "themer",
+    "themerdev",
+    "trevordmiller",
+    "trianglify",
+    "xresources"
+  ]
 }
