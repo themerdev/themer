@@ -91,14 +91,14 @@
     "themer-tmux": "1.0.4"
   },
   "devDependencies": {
-    "netlify-cli": "^8.15.2",
+    "netlify-cli": "^13.0.0",
     "prettier": "2.3.1"
   },
   "scripts": {
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "dev": "export $(grep -v '^#' .env.local | xargs) && netlify dev",
     "test:format": "prettier --check .",
     "test:unit": "react-scripts test"
