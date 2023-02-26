@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import styles from './TwitterHandle.module.css';
+import styles from './MastodonHandle.module.css';
 import ThemeContext from './ThemeContext';
 
-const TwitterHandle = () => {
+const MastodonHandle = () => {
   const { getActiveColorOrFallback } = useContext(ThemeContext);
 
   return (
@@ -23,13 +23,13 @@ const TwitterHandle = () => {
         ),
         'color': getActiveColorOrFallback(['shade7']),
       }}
-      href='https://twitter.com/intent/follow?screen_name=themerdev'
+      href='https://fosstodon.org/@themer'
       target='_blank'
       rel='noopener noreferrer'
     >
-      Follow @themerdev
+      Follow @themer
     </a>
   );
 };
 
-export default TwitterHandle;
+export default MastodonHandle;

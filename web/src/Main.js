@@ -11,7 +11,7 @@ import CopyUrl from './CopyUrl';
 import StarCount from './StarCount';
 import ThemeContext from './ThemeContext';
 import Notification from './Notification';
-import TwitterHandle from './TwitterHandle';
+import MastodonHandle from './MastodonHandle';
 
 const Main = () => {
   const [keyboarding, setKeyboarding] = useState(false);
@@ -59,7 +59,7 @@ const Main = () => {
             </a>
           </h1>
           <span>
-            <TwitterHandle />
+            <MastodonHandle />
             <StarCount />
           </span>
         </header>
@@ -152,8 +152,11 @@ const Main = () => {
           >
             join the newsletter
           </Link>{' '}
-          or follow <Link href='https://twitter.com/themerdev'>@themerdev</Link>{' '}
-          on Twitter for new themes, wallpapers, and features as soon as they
+          or follow{' '}
+          <Link href='https://fosstodon.org/@themer' rel='me'>
+            @themer
+          </Link>{' '}
+          on Mastodon for new themes, wallpapers, and features as soon as they
           launch
         </div>
         <div className={styles.support}>

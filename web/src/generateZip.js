@@ -136,7 +136,7 @@ ${url}
 If you find \`themer\` useful, here are some ways to support the project:
 
 - Star [\`themer\` on GitHub](https://github.com/themerdev/themer)
-- Follow [@themerdev](https://twitter.com/themerdev) on Twitter
+- Follow [@themer](https://fosstodon.org/@themer) on Mastodon
 - [Send a tip through the Brave Browser](https://brave.com/the537), either on [the repository page](https://github.com/themerdev/themer) or [the Web UI](https://themer.dev)
 - Pay what you want when downloading your theme from [themer.dev](https://themer.dev)
 - [Sponsor the @themerdev GitHub org](https://github.com/sponsors/themerdev)
