@@ -45,11 +45,11 @@ const ProTheme = ({ theme }) => {
       : lightSvgData || darkSvgData;
 
   const variantString =
-    darkSvgData && lightSvgData
+    theme.preparedColors.dark && theme.preparedColors.light
       ? 'light & dark'
-      : darkSvgData
+      : theme.preparedColors.dark
       ? 'dark only'
-      : lightSvgData
+      : theme.preparedColors.light
       ? 'light only'
       : '';
 
