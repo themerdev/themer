@@ -80,7 +80,7 @@
     "qs": "^6.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.1",
     "reset.css": "^2.0.2",
     "stripe": "^8.176.0",
     "swr": "^1.2.2",
