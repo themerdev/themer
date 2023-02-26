@@ -19,20 +19,26 @@ const ProTheme = ({ theme }) => {
   const [darkSvgData, setDarkSvgData] = useState(null);
   const [lightSvgData, setLightSvgData] = useState(null);
 
-  const files = render(theme.preparedColors, {
-    'themer-preview-swatch-name': 'preview',
-  });
-  files.forEach((promisedFile) =>
-    promisedFile.then(({ name, contents }) => {
-      const svg = contents.toString('base64');
-      if (name === 'preview-dark-swatch.svg') {
-        setDarkSvgData(svg);
-      }
-      if (name === 'preview-light-swatch.svg') {
-        setLightSvgData(svg);
-      }
-    }),
-  );
+  if (
+    !theme.isFeatured &&
+    ((!!theme.preparedColors.light && !lightSvgData) ||
+      (!!theme.preparedColors.dark && !darkSvgData))
+  ) {
+    const files = render(theme.preparedColors, {
+      'themer-preview-swatch-name': 'preview',
+    });
+    files.forEach((promisedFile) =>
+      promisedFile.then(({ name, contents }) => {
+        const svg = contents.toString('base64');
+        if (name === 'preview-dark-swatch.svg') {
+          setDarkSvgData(svg);
+        }
+        if (name === 'preview-light-swatch.svg') {
+          setLightSvgData(svg);
+        }
+      }),
+    );
+  }
   const svgData =
     activeColorSet === 'dark'
       ? darkSvgData || lightSvgData

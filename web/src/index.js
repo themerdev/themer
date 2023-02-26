@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import 'reset.css/reset.css';
 import './index.css';
 import Route, { DASHBOARD_ROUTE, LOGIN_ROUTE } from './Route';
@@ -14,7 +14,8 @@ import Admin from './admin/Admin';
 import ThemeRedirect from './ThemeRedirect';
 import Newsletter from './Newsletter';
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <StrictMode>
     <Route path='/' element={<App />} />
     <Route path='/victor-mono' element={<ThemeRedirect slug='victor-mono' />} />
@@ -75,7 +76,6 @@ ReactDOM.render(
       }
     />
   </StrictMode>,
-  document.getElementById('root'),
 );
 
 register({
