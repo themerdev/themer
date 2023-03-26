@@ -72,7 +72,7 @@ const BUILT_IN_COLOR_SET_IDENTIFIERS = [
 ] as const;
 
 export type BuiltInColorSet = typeof BUILT_IN_COLOR_SET_IDENTIFIERS[number];
-export const allBuiltInColorSetIdentfiers: BuiltInColorSet[] = [
+export const allBuiltInColorSetIdentifiers: BuiltInColorSet[] = [
   ...BUILT_IN_COLOR_SET_IDENTIFIERS,
 ];
 

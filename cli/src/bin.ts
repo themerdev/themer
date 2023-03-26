@@ -8,7 +8,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import themer, {
-  allBuiltInColorSetIdentfiers,
+  allBuiltInColorSetIdentifiers,
   allBuiltInTemplateIdentifiers,
   BuiltInColorSet,
   BuiltInTemplate,
@@ -58,12 +58,12 @@ const expandedColorSets: string[] = flatten(
     ? [options['colorSet']]
     : options['colorSet']
   ).map((value: string) =>
-    value === '*' ? allBuiltInColorSetIdentfiers : value,
+    value === '*' ? allBuiltInColorSetIdentifiers : value,
   ),
 );
 
 function isBuiltInColorSet(value: string): value is BuiltInColorSet {
-  return allBuiltInColorSetIdentfiers.includes(value as BuiltInColorSet);
+  return allBuiltInColorSetIdentifiers.includes(value as BuiltInColorSet);
 }
 
 console.log('resolving color set(s)...');

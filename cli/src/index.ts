@@ -4,7 +4,7 @@ export type {
   FullColorSet,
 } from './color-set/index.js';
 export {
-  allBuiltInColorSetIdentfiers,
+  allBuiltInColorSetIdentifiers,
   colorSetToVariants,
   prepareColorSet,
 } from './color-set/index.js';
