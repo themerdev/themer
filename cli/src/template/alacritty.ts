@@ -79,7 +79,7 @@ const template: Template = {
     }
     yield {
       path: `${colorSet.title.human}.yml`,
-      content: Buffer.from(document.toString(), 'utf8'),
+      content: document.toString(),
     };
   },
   renderInstructions: ([path]) => source`

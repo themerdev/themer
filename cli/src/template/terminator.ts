@@ -27,16 +27,13 @@ const template: Template = {
       ];
       yield {
         path: `terminator-${title.kebab}.txt`,
-        content: Buffer.from(
-          source`
-            [[Themer ${title.human}]]
-              background_color = "${colors.shade0}"
-              cursor_color = "${colors.shade6}"
-              foreground_color = "${colors.shade6}"
-              palette = "${palette.join(':')}"
-          `,
-          'utf8',
-        ),
+        content: source`
+          [[Themer ${title.human}]]
+            background_color = "${colors.shade0}"
+            cursor_color = "${colors.shade6}"
+            foreground_color = "${colors.shade6}"
+            palette = "${palette.join(':')}"
+        `,
       };
     }
   },

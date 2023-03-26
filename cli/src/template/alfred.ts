@@ -21,73 +21,70 @@ const template: Template = {
       } = variant.colors;
       yield {
         path: `${variant.title.kebab}.alfredappearance`,
-        content: Buffer.from(
-          JSON.stringify(
-            {
-              alfredtheme: {
-                result: {
-                  textSpacing: 6,
-                  subtext: {
-                    size: 12,
-                    colorSelected: `${shade1}FF`,
-                    font: 'System Light',
-                    color: `${shade4}FF`,
-                  },
-                  shortcut: {
-                    size: 16,
-                    colorSelected: `${shade1}FF`,
-                    font: 'System',
-                    color: `${shade6}FF`,
-                  },
-                  backgroundSelected: `${accent4}FF`,
-                  text: {
-                    size: 18,
-                    colorSelected: `${shade0}FF`,
-                    font: 'System Light',
-                    color: `${shade7}FF`,
-                  },
-                  iconPaddingHorizontal: 6,
-                  paddingVertical: 6,
-                  iconSize: 36,
+        content: JSON.stringify(
+          {
+            alfredtheme: {
+              result: {
+                textSpacing: 6,
+                subtext: {
+                  size: 12,
+                  colorSelected: `${shade1}FF`,
+                  font: 'System Light',
+                  color: `${shade4}FF`,
                 },
-                search: {
-                  paddingVertical: 8,
-                  background: `${shade2}7F`,
-                  spacing: 10,
-                  text: {
-                    size: 22,
-                    colorSelected: `${accent5}FF`,
-                    font: 'System',
-                    color: `${shade7}FF`,
-                  },
-                  backgroundSelected: `${accent7}FF`,
+                shortcut: {
+                  size: 16,
+                  colorSelected: `${shade1}FF`,
+                  font: 'System',
+                  color: `${shade6}FF`,
                 },
-                window: {
-                  color: `${shade0}CC`,
-                  paddingHorizontal: 10,
-                  width: 560,
-                  borderPadding: 0,
-                  borderColor: `${shade0}00`,
-                  blur: 15,
-                  roundness: 2,
-                  paddingVertical: 10,
+                backgroundSelected: `${accent4}FF`,
+                text: {
+                  size: 18,
+                  colorSelected: `${shade0}FF`,
+                  font: 'System Light',
+                  color: `${shade7}FF`,
                 },
-                credit: 'Themer',
-                separator: {
-                  color: `${shade0}00`,
-                  thickness: 0,
-                },
-                scrollbar: {
-                  color: `${accent2}FF`,
-                  thickness: 2,
-                },
-                name: variant.title.human,
+                iconPaddingHorizontal: 6,
+                paddingVertical: 6,
+                iconSize: 36,
               },
+              search: {
+                paddingVertical: 8,
+                background: `${shade2}7F`,
+                spacing: 10,
+                text: {
+                  size: 22,
+                  colorSelected: `${accent5}FF`,
+                  font: 'System',
+                  color: `${shade7}FF`,
+                },
+                backgroundSelected: `${accent7}FF`,
+              },
+              window: {
+                color: `${shade0}CC`,
+                paddingHorizontal: 10,
+                width: 560,
+                borderPadding: 0,
+                borderColor: `${shade0}00`,
+                blur: 15,
+                roundness: 2,
+                paddingVertical: 10,
+              },
+              credit: 'Themer',
+              separator: {
+                color: `${shade0}00`,
+                thickness: 0,
+              },
+              scrollbar: {
+                color: `${accent2}FF`,
+                thickness: 2,
+              },
+              name: variant.title.human,
             },
-            null,
-            2,
-          ),
-          'utf8',
+          },
+          null,
+          2,
         ),
       };
     }

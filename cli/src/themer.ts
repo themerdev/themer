@@ -1,4 +1,3 @@
-import { join } from 'node:path';
 import type { BuiltInColorSet, ColorSet } from './color-set/index.js';
 import { prepareColorSet } from './color-set/index.js';
 import type {
@@ -35,7 +34,6 @@ import conemu from './template/conemu.js';
 import css from './template/css.js';
 import emacs from './template/emacs.js';
 import firefoxAddon from './template/firefox-addon.js';
-import firefoxColor from './template/firefox-color.js';
 import hyper from './template/hyper.js';
 import iterm from './template/iterm.js';
 import kdePlasmaColors from './template/kde-plasma-colors.js';
@@ -60,13 +58,11 @@ import wallpaperDotGrid from './template/wallpaper-dot-grid.js';
 import wallpaperOctagon from './template/wallpaper-octagon.js';
 import wallpaperShirts from './template/wallpaper-shirts.js';
 import wallpaperTriangles from './template/wallpaper-triangles.js';
-import wallpaperTrianglify from './template/wallpaper-trianglify.js';
 import warp from './template/warp.js';
 import windowsTerminal from './template/windows-terminal.js';
 import wox from './template/wox.js';
 import xcode from './template/xcode.js';
 import xresources from './template/xresources.js';
-import { filePathsToTree, treeToString } from 'file-paths-to-tree';
 
 function resolveColorSet(colorSet: BuiltInColorSet | ColorSet): ColorSet {
   switch (colorSet) {
@@ -129,8 +125,6 @@ function resolveTemplate(template: BuiltInTemplate | Template): Template {
       return emacs;
     case 'firefox-addon':
       return firefoxAddon;
-    case 'firefox-color':
-      return firefoxColor;
     case 'hyper':
       return hyper;
     case 'iterm':
@@ -179,8 +173,6 @@ function resolveTemplate(template: BuiltInTemplate | Template): Template {
       return wallpaperShirts;
     case 'wallpaper-triangles':
       return wallpaperTriangles;
-    case 'wallpaper-trianglify':
-      return wallpaperTrianglify;
     case 'warp':
       return warp;
     case 'windows-terminal':
@@ -205,16 +197,15 @@ export async function* themer(
     const resolvedColorSet = resolveColorSet(colorSet);
     const fullColorSet = prepareColorSet(resolvedColorSet);
     const resolvedTemplates = templates.map(resolveTemplate);
-    const allPaths: string[] = [];
     const instructions: string[] = [`# themer - ${fullColorSet.name}`];
     const rootDir = fullColorSet.name;
     for (const template of resolvedTemplates) {
       const templatePaths: string[] = [];
       for await (const file of template.render(fullColorSet, options)) {
-        const path = join(template.name, file.path);
+        const path = `${template.name}/${file.path}`;
         yield {
           ...file,
-          path: join(rootDir, path),
+          path: `${rootDir}/${path}`,
         };
         templatePaths.push(path);
       }
@@ -222,13 +213,10 @@ export async function* themer(
       instructions.push(
         template.renderInstructions(templatePaths, fullColorSet).trim(),
       );
-      allPaths.push(...templatePaths);
     }
-    instructions.push('# Files rendered');
-    instructions.push(treeToString(filePathsToTree(allPaths)));
     yield {
-      path: join(rootDir, 'README.md'),
-      content: Buffer.from(instructions.join('\n\n')),
+      path: `${rootDir}/README.md`,
+      content: instructions.join('\n\n'),
     };
   }
 }

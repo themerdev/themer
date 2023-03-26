@@ -18,45 +18,42 @@ const template: Template = {
       const { colors, isDark, title } = variant;
       yield {
         path: `${title.kebab}.json`,
-        content: Buffer.from(
-          JSON.stringify(
-            {
-              name: themeName(variant),
+        content: JSON.stringify(
+          {
+            name: themeName(variant),
 
-              background: colors.shade0,
-              foreground: colors.shade6,
+            background: colors.shade0,
+            foreground: colors.shade6,
 
-              cursorColor: colors.accent6,
-              selectionBackground: colors.accent5,
+            cursorColor: colors.accent6,
+            selectionBackground: colors.accent5,
 
-              black: isDark ? colors.shade2 : colors.shade6,
-              brightBlack: isDark ? colors.shade3 : colors.shade5,
+            black: isDark ? colors.shade2 : colors.shade6,
+            brightBlack: isDark ? colors.shade3 : colors.shade5,
 
-              red: colors.accent0,
-              brightRed: brightMix(colors, 'accent0', isDark),
+            red: colors.accent0,
+            brightRed: brightMix(colors, 'accent0', isDark),
 
-              green: colors.accent3,
-              brightGreen: brightMix(colors, 'accent3', isDark),
+            green: colors.accent3,
+            brightGreen: brightMix(colors, 'accent3', isDark),
 
-              yellow: colors.accent2,
-              brightYellow: brightMix(colors, 'accent2', isDark),
+            yellow: colors.accent2,
+            brightYellow: brightMix(colors, 'accent2', isDark),
 
-              blue: colors.accent5,
-              brightBlue: brightMix(colors, 'accent5', isDark),
+            blue: colors.accent5,
+            brightBlue: brightMix(colors, 'accent5', isDark),
 
-              purple: colors.accent6,
-              brightPurple: brightMix(colors, 'accent6', isDark),
+            purple: colors.accent6,
+            brightPurple: brightMix(colors, 'accent6', isDark),
 
-              cyan: colors.accent4,
-              brightCyan: brightMix(colors, 'accent4', isDark),
+            cyan: colors.accent4,
+            brightCyan: brightMix(colors, 'accent4', isDark),
 
-              white: isDark ? colors.shade6 : colors.shade2,
-              brightWhite: isDark ? colors.shade7 : colors.shade1,
-            },
-            null,
-            2,
-          ),
-          'utf8',
+            white: isDark ? colors.shade6 : colors.shade2,
+            brightWhite: isDark ? colors.shade7 : colors.shade1,
+          },
+          null,
+          2,
         ),
       };
     }

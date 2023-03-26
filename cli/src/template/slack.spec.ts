@@ -6,9 +6,8 @@ test('slack', async (t) => {
     wallpaperSizes: [],
   })) {
     if (!file.path.includes('README.md')) {
-      const content = file.content.toString('utf8');
-      t.notRegex(content, /\,\,/, 'contains no missing values');
-      t.notRegex(content, /\s/, 'contains no whitespace');
+      t.notRegex(file.content, /\,\,/, 'contains no missing values');
+      t.notRegex(file.content, /\s/, 'contains no whitespace');
     }
   }
 });

@@ -30,43 +30,40 @@ const template: Template = {
       const accent7 = formatColor(variant.colors.accent7);
       yield {
         path: `${variant.title.kebab}.xml`,
-        content: Buffer.from(
-          source`
-            <value name="ColorTable00" type="dword" data="${shade0}" />
-            <value name="ColorTable01" type="dword" data="${accent5}" />
-            <value name="ColorTable02" type="dword" data="${accent3}" />
-            <value name="ColorTable03" type="dword" data="${accent4}" />
-            <value name="ColorTable04" type="dword" data="${accent0}" />
-            <value name="ColorTable05" type="dword" data="${accent6}" />
-            <value name="ColorTable06" type="dword" data="${accent1}" />
-            <value name="ColorTable07" type="dword" data="${shade6}" />
-            <value name="ColorTable08" type="dword" data="${shade1}" />
-            <value name="ColorTable09" type="dword" data="${accent5}" />
-            <value name="ColorTable10" type="dword" data="${accent3}" />
-            <value name="ColorTable11" type="dword" data="${accent4}" />
-            <value name="ColorTable12" type="dword" data="${accent0}" />
-            <value name="ColorTable13" type="dword" data="${accent7}" />
-            <value name="ColorTable14" type="dword" data="${accent2}" />
-            <value name="ColorTable15" type="dword" data="${shade7}" />
-            <value name="ColorTable16" type="dword" data="${shade0}" />
-            <value name="ColorTable17" type="dword" data="${accent0}" />
-            <value name="ColorTable18" type="dword" data="${accent3}" />
-            <value name="ColorTable19" type="dword" data="${accent1}" />
-            <value name="ColorTable20" type="dword" data="${accent5}" />
-            <value name="ColorTable21" type="dword" data="${accent6}" />
-            <value name="ColorTable22" type="dword" data="${accent4}" />
-            <value name="ColorTable23" type="dword" data="${shade6}" />
-            <value name="ColorTable24" type="dword" data="${shade1}" />
-            <value name="ColorTable25" type="dword" data="${accent0}" />
-            <value name="ColorTable26" type="dword" data="${accent3}" />
-            <value name="ColorTable27" type="dword" data="${accent2}" />
-            <value name="ColorTable28" type="dword" data="${accent5}" />
-            <value name="ColorTable29" type="dword" data="${accent7}" />
-            <value name="ColorTable30" type="dword" data="${accent4}" />
-            <value name="ColorTable31" type="dword" data="${shade7}" />
-          `,
-          'utf8',
-        ),
+        content: source`
+          <value name="ColorTable00" type="dword" data="${shade0}" />
+          <value name="ColorTable01" type="dword" data="${accent5}" />
+          <value name="ColorTable02" type="dword" data="${accent3}" />
+          <value name="ColorTable03" type="dword" data="${accent4}" />
+          <value name="ColorTable04" type="dword" data="${accent0}" />
+          <value name="ColorTable05" type="dword" data="${accent6}" />
+          <value name="ColorTable06" type="dword" data="${accent1}" />
+          <value name="ColorTable07" type="dword" data="${shade6}" />
+          <value name="ColorTable08" type="dword" data="${shade1}" />
+          <value name="ColorTable09" type="dword" data="${accent5}" />
+          <value name="ColorTable10" type="dword" data="${accent3}" />
+          <value name="ColorTable11" type="dword" data="${accent4}" />
+          <value name="ColorTable12" type="dword" data="${accent0}" />
+          <value name="ColorTable13" type="dword" data="${accent7}" />
+          <value name="ColorTable14" type="dword" data="${accent2}" />
+          <value name="ColorTable15" type="dword" data="${shade7}" />
+          <value name="ColorTable16" type="dword" data="${shade0}" />
+          <value name="ColorTable17" type="dword" data="${accent0}" />
+          <value name="ColorTable18" type="dword" data="${accent3}" />
+          <value name="ColorTable19" type="dword" data="${accent1}" />
+          <value name="ColorTable20" type="dword" data="${accent5}" />
+          <value name="ColorTable21" type="dword" data="${accent6}" />
+          <value name="ColorTable22" type="dword" data="${accent4}" />
+          <value name="ColorTable23" type="dword" data="${shade6}" />
+          <value name="ColorTable24" type="dword" data="${shade1}" />
+          <value name="ColorTable25" type="dword" data="${accent0}" />
+          <value name="ColorTable26" type="dword" data="${accent3}" />
+          <value name="ColorTable27" type="dword" data="${accent2}" />
+          <value name="ColorTable28" type="dword" data="${accent5}" />
+          <value name="ColorTable29" type="dword" data="${accent7}" />
+          <value name="ColorTable30" type="dword" data="${accent4}" />
+          <value name="ColorTable31" type="dword" data="${shade7}" />
+        `,
       };
     }
   },

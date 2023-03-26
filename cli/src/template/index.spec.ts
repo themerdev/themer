@@ -1,5 +1,5 @@
 import test from 'ava';
-import { packageJson, weightedRandom } from './index.js';
+import { weightedRandom } from './index.js';
 
 test('weightedRandom', (t) => {
   const testData = new Map([
@@ -34,9 +34,4 @@ test('weightedRandom', (t) => {
   t.is(Math.round(aFrequency / samples), 1);
   t.is(Math.round(bFrequency / samples), 3);
   t.is(Math.round(cFrequency / samples), 1);
-});
-
-test('packageJson', async (t) => {
-  const { version } = await packageJson();
-  t.assert(typeof version === 'string');
 });

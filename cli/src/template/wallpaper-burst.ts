@@ -1,7 +1,6 @@
-import { createCanvas } from 'canvas';
 import { listOutputFiles, Template } from './index.js';
 import { Accents, colorSetToVariants } from '../color-set/index.js';
-import Color from 'color';
+import { source } from 'common-tags';
 
 const SIZE = 70;
 const MAX_DISTANCE = SIZE * 5;
@@ -28,96 +27,117 @@ const template: Template = {
     const variants = colorSetToVariants(colorSet);
     for (const variant of variants) {
       for (const size of options.wallpaperSizes) {
-        const canvas = createCanvas(size.w, size.h);
-        const ctx = canvas.getContext('2d');
-
         const focalPoint = {
-          x: size.w * 0.5,
-          y: size.h * 0.5,
+          x: size.w / 2,
+          y: size.h / 2,
         };
-
-        ctx.fillStyle = variant.colors.shade0;
-        ctx.fillRect(0, 0, size.w, size.h);
-
-        const gradient = ctx.createRadialGradient(
-          focalPoint.x,
-          focalPoint.y,
-          0,
-          focalPoint.x,
-          focalPoint.y,
-          Math.min(size.w, size.h) / 2,
-        );
-        gradient.addColorStop(
-          0,
-          Color(variant.isDark ? variant.colors.shade1 : variant.colors.shade0)
-            .alpha(0.25)
-            .rgb()
-            .string(),
-        );
-        gradient.addColorStop(
-          0.7,
-          colorSet.name === 'dark'
-            ? variant.colors.shade0
-            : variant.colors.shade1,
-        );
-
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, size.w, size.h);
-
-        const xCount = Math.round(size.w / SIZE);
-        const yCount = Math.round(size.h / SIZE);
-        const cellWidth = size.w / xCount;
-        const cellHeight = size.h / yCount;
-        for (let i = 0; i < xCount; i++) {
-          for (let j = 0; j < yCount; j++) {
-            const x1 = i * cellWidth + Math.random() * cellWidth;
-            const y1 = j * cellHeight + Math.random() * cellHeight;
-            const [x2, y2] = getClampedPoint(
-              x1,
-              y1,
-              focalPoint.x,
-              focalPoint.y,
-            );
-            const keys: (keyof Accents)[] = [
-              'accent0',
-              'accent1',
-              'accent2',
-              'accent3',
-              'accent4',
-              'accent5',
-              'accent6',
-              'accent7',
-            ];
-            const accentKey =
-              keys[
-                (Math.round(
-                  (i / xCount) * keys.length +
-                    (Math.random() * LEAK_FACTOR * 2 - LEAK_FACTOR),
-                ) +
-                  keys.length) %
-                  keys.length
-              ];
-            const color = variant.colors[accentKey!];
-            const transparentColor = Color(color).alpha(0).rgb().string();
-            const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
-            gradient.addColorStop(0.02, variant.colors.shade7);
-            gradient.addColorStop(0.3, color);
-            gradient.addColorStop(0.5, transparentColor);
-            ctx.lineCap = 'round';
-            ctx.lineWidth = 3;
-            ctx.strokeStyle = gradient;
-            ctx.beginPath();
-            ctx.moveTo(x1, y1);
-            ctx.lineTo(x2, y2);
-            ctx.stroke();
-          }
-        }
+        const svg = source`
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="${size.w}"
+            height="${size.h}"
+            viewBox="0 0 ${size.w} ${size.h}"
+          >
+            <defs>
+              <radialGradient id="burst">
+                <stop
+                  offset="0%"
+                  stop-color="${
+                    colorSet.name === 'dark'
+                      ? variant.colors.shade1
+                      : variant.colors.shade0
+                  }"
+                  stop-opacity="0.25"
+                />
+                <stop
+                  offset="70%"
+                  stop-color="${
+                    colorSet.name === 'dark'
+                      ? variant.colors.shade0
+                      : variant.colors.shade1
+                  }"
+                />
+              </radialGradient>
+            </defs>
+            <rect
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              fill="${variant.colors.shade0}"
+            />
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#burst)" />
+            ${Array(Math.round(size.w / SIZE))
+              .fill(null)
+              .map((_, i, { length: xCount }) =>
+                Array(Math.round(size.h / SIZE))
+                  .fill(null)
+                  .map((_, j, { length: yCount }) => {
+                    const cellWidth = size.w / xCount;
+                    const cellHeight = size.h / yCount;
+                    const x1 = i * cellWidth + Math.random() * cellWidth;
+                    const y1 = j * cellHeight + Math.random() * cellHeight;
+                    const [x2, y2] = getClampedPoint(
+                      x1,
+                      y1,
+                      focalPoint.x,
+                      focalPoint.y,
+                    );
+                    const keys: (keyof Accents)[] = [
+                      'accent0',
+                      'accent1',
+                      'accent2',
+                      'accent3',
+                      'accent4',
+                      'accent5',
+                      'accent6',
+                      'accent7',
+                    ];
+                    const accentKey =
+                      keys[
+                        (Math.round(
+                          (i / xCount) * keys.length +
+                            (Math.random() * LEAK_FACTOR * 2 - LEAK_FACTOR),
+                        ) +
+                          keys.length) %
+                          keys.length
+                      ];
+                    const color = variant.colors[accentKey!];
+                    const id = `${i}-${j}`;
+                    return source`
+                        <defs>
+                          <linearGradient
+                            id="${id}"
+                            gradientUnits="userSpaceOnUse"
+                            x1="${x1}"
+                            y1="${y1}"
+                            x2="${x2}"
+                            y2="${y2}"
+                          >
+                            <stop offset="2%" stop-color="${variant.colors.shade7}" />
+                            <stop offset="30%" stop-color="${color}" />
+                            <stop offset="50%" stop-color="${color}" stop-opacity="0" />
+                          </linearGradient>
+                        </defs>
+                        <line
+                          x1="${x1}"
+                          y1="${y1}"
+                          x2="${x2}"
+                          y2="${y2}"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke="url(#${id})"
+                        />
+                      `;
+                  })
+                  .join('\n'),
+              )
+              .join('\n')}
+          </svg>
+        `;
         yield {
-          path: `${variant.title.kebab}-${size.w}x${size.h}.png`,
-          content: Buffer.from(
-            canvas.toDataURL().replace('data:image/png;base64,', ''),
-            'base64',
-          ),
+          path: `${variant.title.kebab}-${size.w}x${size.h}.svg`,
+          content: svg,
         };
       }
     }

@@ -9,42 +9,39 @@ const template: Template = {
     for (const variant of variants) {
       yield {
         path: `${variant.title.snake}.yaml`,
-        content: Buffer.from(
-          source`
-            accent: "${variant.colors.accent6}"
-            background: "${variant.colors.shade0}"
-            foreground: "${variant.colors.shade7}"
-            details: "${variant.name}er"
-            terminal_colors:
-              normal:
-                black: "${
-                  variant.isDark ? variant.colors.shade0 : variant.colors.shade7
-                }"
-                red: "${variant.colors.accent0}"
-                green: "${variant.colors.accent3}"
-                yellow: "${variant.colors.accent2}"
-                blue: "${variant.colors.accent5}"
-                magenta: "${variant.colors.accent7}"
-                cyan: "${variant.colors.accent4}"
-                white: "${
-                  variant.isDark ? variant.colors.shade6 : variant.colors.shade1
-                }"
-              bright:
-                black: "${
-                  variant.isDark ? variant.colors.shade1 : variant.colors.shade6
-                }"
-                red: "${variant.colors.accent1}"
-                green: "${variant.colors.accent4}"
-                yellow: "${variant.colors.accent2}"
-                blue: "${variant.colors.accent5}"
-                magenta: "${variant.colors.accent7}"
-                cyan: "${variant.colors.accent4}"
-                white: "${
-                  variant.isDark ? variant.colors.shade7 : variant.colors.shade0
-                }"
-          `,
-          'utf8',
-        ),
+        content: source`
+          accent: "${variant.colors.accent6}"
+          background: "${variant.colors.shade0}"
+          foreground: "${variant.colors.shade7}"
+          details: "${variant.name}er"
+          terminal_colors:
+            normal:
+              black: "${
+                variant.isDark ? variant.colors.shade0 : variant.colors.shade7
+              }"
+              red: "${variant.colors.accent0}"
+              green: "${variant.colors.accent3}"
+              yellow: "${variant.colors.accent2}"
+              blue: "${variant.colors.accent5}"
+              magenta: "${variant.colors.accent7}"
+              cyan: "${variant.colors.accent4}"
+              white: "${
+                variant.isDark ? variant.colors.shade6 : variant.colors.shade1
+              }"
+            bright:
+              black: "${
+                variant.isDark ? variant.colors.shade1 : variant.colors.shade6
+              }"
+              red: "${variant.colors.accent1}"
+              green: "${variant.colors.accent4}"
+              yellow: "${variant.colors.accent2}"
+              blue: "${variant.colors.accent5}"
+              magenta: "${variant.colors.accent7}"
+              cyan: "${variant.colors.accent4}"
+              white: "${
+                variant.isDark ? variant.colors.shade7 : variant.colors.shade0
+              }"
+        `,
       };
     }
   },

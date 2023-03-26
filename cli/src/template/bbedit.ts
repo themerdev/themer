@@ -1,6 +1,5 @@
 import Color from 'color';
 import { source } from 'common-tags';
-import xml from 'xml';
 import { colorSetToVariants } from '../color-set/index.js';
 import type { Template } from './index.js';
 
@@ -34,174 +33,163 @@ const template: Template = {
       const accent5 = formatColor(variant.colors.accent5);
       const accent6 = formatColor(variant.colors.accent6);
       const accent7 = formatColor(variant.colors.accent7);
-      const document = xml(
-        {
-          plist: [
-            { _attr: { version: '1.0' } },
-            {
-              dict: [
-                { key: 'BackgroundColor' },
-                { string: shade0 },
-                { key: 'DifferenceHighlightColor' },
-                { string: accent2 },
-                { key: 'InsertionPointLineHighlightColor' },
-                { string: shade1 },
-                { key: 'InvisibleOthersColor' },
-                { string: accent7 },
-                { key: 'InvisibleSpacesColor' },
-                { string: shade2 },
-                { key: 'PrimaryHighlightColor' },
-                { string: shade1 },
-                { key: 'SecondaryHighlightColor' },
-                { string: shade2 },
-                { key: 'SpellingColor' },
-                { string: accent0 },
-                { key: 'com.barebones.bblm.JavaScript.error' },
-                { string: accent0 },
-                { key: 'com.barebones.bblm.JavaScript.regexp' },
-                { string: accent7 },
-                { key: 'com.barebones.bblm.Pyth.decorator' },
-                { string: accent4 },
-                { key: 'com.barebones.bblm.Pyth.triple-string' },
-                { string: accent3 },
-                { key: 'com.barebones.bblm.TeX.math-string' },
-                { string: accent3 },
-                { key: 'com.barebones.bblm.TeX.param-content' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.TeX.verbatim' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.code' },
-                { string: shade7 },
-                { key: 'com.barebones.bblm.comment' },
-                { string: shade2 },
-                { key: 'com.barebones.bblm.css.color-spec' },
-                { string: shade7 },
-                { key: 'com.barebones.bblm.file-include' },
-                { string: accent6 },
-                { key: 'com.barebones.bblm.grep.charclass' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.grep.escape-sequence' },
-                { string: accent7 },
-                { key: 'com.barebones.bblm.grep.metachar' },
-                { string: accent4 },
-                { key: 'com.barebones.bblm.grep.metasequence' },
-                { string: accent3 },
-                { key: 'com.barebones.bblm.grep.posix-name' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.grep.repeat' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.grep.repeat-data' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.heredoc-string' },
-                { string: shade7 },
-                { key: 'com.barebones.bblm.html.anchor' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.html.attribute-name' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.html.attribute-value' },
-                { string: accent3 },
-                { key: 'com.barebones.bblm.html.image' },
-                { string: accent6 },
-                { key: 'com.barebones.bblm.indexed-symbol' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.keyword' },
-                { string: accent0 },
-                { key: 'com.barebones.bblm.markdown.Emph' },
-                { string: accent1 },
-                { key: 'com.barebones.bblm.markdown.HorizontalRule' },
-                { string: shade4 },
-                { key: 'com.barebones.bblm.markdown.ImageAltText' },
-                { string: accent6 },
-                { key: 'com.barebones.bblm.markdown.ImageId' },
-                { string: shade5 },
-                { key: 'com.barebones.bblm.markdown.InlineCode' },
-                { string: accent0 },
-                { key: 'com.barebones.bblm.markdown.InlineLinkText' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.markdown.Keyword' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.markdown.LinkDefId' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.markdown.LinkDefTitle' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.markdown.LinkDefUrl' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.markdown.ListItemMarker' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.markdown.Pre' },
-                { string: accent0 },
-                { key: 'com.barebones.bblm.markdown.QuoteMarker' },
-                { string: accent7 },
-                { key: 'com.barebones.bblm.markdown.QuotedContent' },
-                { string: shade7 },
-                { key: 'com.barebones.bblm.number' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.perl.generic-string' },
-                { string: accent3 },
-                { key: 'com.barebones.bblm.perl.outer-pod' },
-                { string: accent7 },
-                { key: 'com.barebones.bblm.perl.pre-generic-string' },
-                { string: accent3 },
-                { key: 'com.barebones.bblm.predefined-symbol' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.preprocessor' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.ruby.regexp' },
-                { string: accent7 },
-                { key: 'com.barebones.bblm.ruby.symbol' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.sgml-cdata' },
-                { string: shade7 },
-                { key: 'com.barebones.bblm.sgml-decl' },
-                { string: accent7 },
-                { key: 'com.barebones.bblm.sgml-entity' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.sgml-tag' },
-                { string: accent5 },
-                { key: 'com.barebones.bblm.string' },
-                { string: accent3 },
-                { key: 'com.barebones.bblm.variable' },
-                { string: accent7 },
-                { key: 'com.barebones.bblm.verilog-hdl.comment-1' },
-                { string: shade2 },
-                { key: 'com.barebones.bblm.verilog-hdl.comment-2' },
-                { string: shade3 },
-                { key: 'com.barebones.bblm.verilog-hdl.comment-3' },
-                { string: shade4 },
-                { key: 'com.barebones.bblm.verilog-hdl.input-type' },
-                { string: accent4 },
-                { key: 'com.barebones.bblm.verilog-hdl.output-type' },
-                { string: accent6 },
-                { key: 'com.barebones.bblm.verilog-hdl.register-type' },
-                { string: accent2 },
-                { key: 'com.barebones.bblm.verilog-hdl.wire-type' },
-                { string: accent1 },
-                { key: 'com.barebones.bblm.vhdl.comment-1' },
-                { string: shade2 },
-                { key: 'com.barebones.bblm.vhdl.comment-2' },
-                { string: shade3 },
-                { key: 'com.barebones.bblm.vhdl.comment-3' },
-                { string: shade4 },
-                { key: 'com.barebones.bblm.xml-empty' },
-                { string: accent0 },
-                { key: 'com.barebones.bblm.xml-pi' },
-                { string: accent0 },
-              ],
-            },
-          ],
-        },
-        { indent: '  ' },
-      );
+      const document = source`
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        <plist version="1.0">
+          <dict>
+            <key>BackgroundColor</key>
+            <string>${shade0}</string>
+            <key>DifferenceHighlightColor</key>
+            <string>${accent2}</string>
+            <key>InsertionPointLineHighlightColor</key>
+            <string>${shade1}</string>
+            <key>InvisibleOthersColor</key>
+            <string>${accent7}</string>
+            <key>InvisibleSpacesColor</key>
+            <string>${shade2}</string>
+            <key>PrimaryHighlightColor</key>
+            <string>${shade1}</string>
+            <key>SecondaryHighlightColor</key>
+            <string>${shade2}</string>
+            <key>SpellingColor</key>
+            <string>${accent0}</string>
+            <key>com.barebones.bblm.JavaScript.error</key>
+            <string>${accent0}</string>
+            <key>com.barebones.bblm.JavaScript.regexp</key>
+            <string>${accent7}</string>
+            <key>com.barebones.bblm.Pyth.decorator</key>
+            <string>${accent4}</string>
+            <key>com.barebones.bblm.Pyth.triple-string</key>
+            <string>${accent3}</string>
+            <key>com.barebones.bblm.TeX.math-string</key>
+            <string>${accent3}</string>
+            <key>com.barebones.bblm.TeX.param-content</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.TeX.verbatim</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.code</key>
+            <string>${shade7}</string>
+            <key>com.barebones.bblm.comment</key>
+            <string>${shade2}</string>
+            <key>com.barebones.bblm.css.color-spec</key>
+            <string>${shade7}</string>
+            <key>com.barebones.bblm.file-include</key>
+            <string>${accent6}</string>
+            <key>com.barebones.bblm.grep.charclass</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.grep.escape-sequence</key>
+            <string>${accent7}</string>
+            <key>com.barebones.bblm.grep.metachar</key>
+            <string>${accent4}</string>
+            <key>com.barebones.bblm.grep.metasequence</key>
+            <string>${accent3}</string>
+            <key>com.barebones.bblm.grep.posix-name</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.grep.repeat</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.grep.repeat-data</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.heredoc-string</key>
+            <string>${shade7}</string>
+            <key>com.barebones.bblm.html.anchor</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.html.attribute-name</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.html.attribute-value</key>
+            <string>${accent3}</string>
+            <key>com.barebones.bblm.html.image</key>
+            <string>${accent6}</string>
+            <key>com.barebones.bblm.indexed-symbol</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.keyword</key>
+            <string>${accent0}</string>
+            <key>com.barebones.bblm.markdown.Emph</key>
+            <string>${accent1}</string>
+            <key>com.barebones.bblm.markdown.HorizontalRule</key>
+            <string>${shade4}</string>
+            <key>com.barebones.bblm.markdown.ImageAltText</key>
+            <string>${accent6}</string>
+            <key>com.barebones.bblm.markdown.ImageId</key>
+            <string>${shade5}</string>
+            <key>com.barebones.bblm.markdown.InlineCode</key>
+            <string>${accent0}</string>
+            <key>com.barebones.bblm.markdown.InlineLinkText</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.markdown.Keyword</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.markdown.LinkDefId</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.markdown.LinkDefTitle</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.markdown.LinkDefUrl</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.markdown.ListItemMarker</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.markdown.Pre</key>
+            <string>${accent0}</string>
+            <key>com.barebones.bblm.markdown.QuoteMarker</key>
+            <string>${accent7}</string>
+            <key>com.barebones.bblm.markdown.QuotedContent</key>
+            <string>${shade7}</string>
+            <key>com.barebones.bblm.number</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.perl.generic-string</key>
+            <string>${accent3}</string>
+            <key>com.barebones.bblm.perl.outer-pod</key>
+            <string>${accent7}</string>
+            <key>com.barebones.bblm.perl.pre-generic-string</key>
+            <string>${accent3}</string>
+            <key>com.barebones.bblm.predefined-symbol</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.preprocessor</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.ruby.regexp</key>
+            <string>${accent7}</string>
+            <key>com.barebones.bblm.ruby.symbol</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.sgml-cdata</key>
+            <string>${shade7}</string>
+            <key>com.barebones.bblm.sgml-decl</key>
+            <string>${accent7}</string>
+            <key>com.barebones.bblm.sgml-entity</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.sgml-tag</key>
+            <string>${accent5}</string>
+            <key>com.barebones.bblm.string</key>
+            <string>${accent3}</string>
+            <key>com.barebones.bblm.variable</key>
+            <string>${accent7}</string>
+            <key>com.barebones.bblm.verilog-hdl.comment-1</key>
+            <string>${shade2}</string>
+            <key>com.barebones.bblm.verilog-hdl.comment-2</key>
+            <string>${shade3}</string>
+            <key>com.barebones.bblm.verilog-hdl.comment-3</key>
+            <string>${shade4}</string>
+            <key>com.barebones.bblm.verilog-hdl.input-type</key>
+            <string>${accent4}</string>
+            <key>com.barebones.bblm.verilog-hdl.output-type</key>
+            <string>${accent6}</string>
+            <key>com.barebones.bblm.verilog-hdl.register-type</key>
+            <string>${accent2}</string>
+            <key>com.barebones.bblm.verilog-hdl.wire-type</key>
+            <string>${accent1}</string>
+            <key>com.barebones.bblm.vhdl.comment-1</key>
+            <string>${shade2}</string>
+            <key>com.barebones.bblm.vhdl.comment-2</key>
+            <string>${shade3}</string>
+            <key>com.barebones.bblm.vhdl.comment-3</key>
+            <string>${shade4}</string>
+            <key>com.barebones.bblm.xml-empty</key>
+            <string>${accent0}</string>
+            <key>com.barebones.bblm.xml-pi</key>
+            <string>${accent0}</string>
+          </dict>
+        </plist>
+      `;
       yield {
         path: `${variant.title.human}.bbColorScheme`,
-        content: Buffer.from(
-          source`
-            <?xml version="1.0" encoding="UTF-8"?>
-            <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-            ${document}
-          `,
-          'utf8',
-        ),
+        content: document,
       };
     }
   },

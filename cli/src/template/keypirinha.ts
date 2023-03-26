@@ -13,32 +13,29 @@ const template: Template = {
     for (const variant of variants) {
       yield {
         path: `keypirinha-${variant.title.kebab}.ini`,
-        content: Buffer.from(
-          source`
-            [theme/${themeName(variant)}]
-            color_background = ${variant.colors.shade0}
-            color_foreground = ${variant.colors.shade7}
-            color_faded = ${variant.colors.shade5}
-            color_accent = ${variant.colors.accent6}
-            color_warn = ${variant.colors.accent0}
+        content: source`
+          [theme/${themeName(variant)}]
+          color_background = ${variant.colors.shade0}
+          color_foreground = ${variant.colors.shade7}
+          color_faded = ${variant.colors.shade5}
+          color_accent = ${variant.colors.accent6}
+          color_warn = ${variant.colors.accent0}
 
-            color_title = ${variant.colors.shade7}
-            color_status = ${variant.colors.accent5}
+          color_title = ${variant.colors.shade7}
+          color_status = ${variant.colors.accent5}
 
-            color_textbox_back = ${variant.colors.shade0}
+          color_textbox_back = ${variant.colors.shade0}
 
-            color_listitem_back = ${variant.colors.shade0}
-            color_listitem_title = ${variant.colors.shade7}
-            color_listitem_desc = ${variant.colors.accent5}
-            color_listitem_tips = ${variant.colors.accent5}
+          color_listitem_back = ${variant.colors.shade0}
+          color_listitem_title = ${variant.colors.shade7}
+          color_listitem_desc = ${variant.colors.accent5}
+          color_listitem_tips = ${variant.colors.accent5}
 
-            color_listitem_selected_back = ${variant.colors.shade1}
-            color_listitem_selected_title = ${variant.colors.accent7}
-            color_listitem_selected_desc = ${variant.colors.shade7}
-            color_listitem_selected_tips = ${variant.colors.accent7}
-          `,
-          'utf8',
-        ),
+          color_listitem_selected_back = ${variant.colors.shade1}
+          color_listitem_selected_title = ${variant.colors.accent7}
+          color_listitem_selected_desc = ${variant.colors.shade7}
+          color_listitem_selected_tips = ${variant.colors.accent7}
+        `,
       };
     }
   },

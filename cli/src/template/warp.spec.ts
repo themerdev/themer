@@ -6,8 +6,11 @@ test('slack', async (t) => {
     wallpaperSizes: [],
   })) {
     if (!file.path.includes('README.md')) {
-      const content = file.content.toString('utf8');
-      t.regex(content, /(?:darker|lighter)/, 'contains valid details value');
+      t.regex(
+        file.content,
+        /(?:darker|lighter)/,
+        'contains valid details value',
+      );
     }
   }
 });

@@ -6,7 +6,7 @@ const template: Template = {
   render: async function* (colorSet) {
     yield* colorSetToVariants(colorSet).map(({ title }) => ({
       path: `${title.kebab}.txt`,
-      content: Buffer.from(title.human, 'utf8'),
+      content: title.human,
     }));
   },
   renderInstructions: (paths) => paths.join('\n'),

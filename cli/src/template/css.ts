@@ -36,29 +36,26 @@ const template: Template = {
     for (const format of formats) {
       yield {
         path: `${colorSet.title.human} - ${format}.css`,
-        content: Buffer.from(
-          source`
-            :root {
-              ${variants
-                .map((variant) =>
-                  Object.entries(variant.colors)
-                    .map(([key, color]) => {
-                      switch (format) {
-                        case 'hex':
-                          return renderHex(variant.name, key, color);
-                        case 'rgb':
-                          return renderRgb(variant.name, key, color);
-                        case 'hsl':
-                          return renderHsl(variant.name, key, color);
-                      }
-                    })
-                    .join('\n\n'),
-                )
-                .join('\n\n')}
-            }
-          `,
-          'utf8',
-        ),
+        content: source`
+          :root {
+            ${variants
+              .map((variant) =>
+                Object.entries(variant.colors)
+                  .map(([key, color]) => {
+                    switch (format) {
+                      case 'hex':
+                        return renderHex(variant.name, key, color);
+                      case 'rgb':
+                        return renderRgb(variant.name, key, color);
+                      case 'hsl':
+                        return renderHsl(variant.name, key, color);
+                    }
+                  })
+                  .join('\n\n'),
+              )
+              .join('\n\n')}
+          }
+        `,
       };
     }
   },

@@ -10,24 +10,21 @@ const template: Template = {
     for (const { title, colors } of variants) {
       yield {
         path: `sketch-palettes-${title.kebab}.sketchpalette`,
-        content: Buffer.from(
-          JSON.stringify({
-            compatibleVersion: '2.0',
-            pluginVersion: '2.13',
-            colors: Object.values(colors).map((color) => {
-              const [red, green, blue] = Color(color).rgb().array();
-              return {
-                red,
-                green,
-                blue,
-                alpha: 1,
-              };
-            }),
-            gradients: [],
-            images: [],
+        content: JSON.stringify({
+          compatibleVersion: '2.0',
+          pluginVersion: '2.13',
+          colors: Object.values(colors).map((color) => {
+            const [red, green, blue] = Color(color).rgb().array();
+            return {
+              red,
+              green,
+              blue,
+              alpha: 1,
+            };
           }),
-          'utf8',
-        ),
+          gradients: [],
+          images: [],
+        }),
       };
     }
   },

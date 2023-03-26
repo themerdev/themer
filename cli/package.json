@@ -55,16 +55,13 @@
     "@types/d3-scale": "^4.0.3",
     "@types/lodash": "^4.14.191",
     "@types/minimist": "^1.2.2",
-    "@types/msgpack5": "^3.4.3",
     "@types/node": "^18.11.18",
     "@types/plist": "^3.0.2",
-    "@types/urlsafe-base64": "^1.0.28",
-    "@types/xml": "^1.0.8",
     "ava": "^5.1.1",
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "canvas": "^2.11.0",
+    "base64-js": "^1.5.1",
     "color": "^4.2.3",
     "color-convert": "^2.0.1",
     "commander": "^10.0.0",
@@ -72,13 +69,8 @@
     "d3-scale": "^4.0.2",
     "file-paths-to-tree": "^3.0.0",
     "lodash": "^4.17.21",
-    "lzma": "^2.3.2",
-    "msgpack5": "^6.0.2",
     "plist": "^3.0.6",
-    "trianglify": "^4.1.1",
     "tumult": "^3.0.14",
-    "urlsafe-base64": "^1.0.0",
-    "xml": "^1.0.1",
     "yaml": "^2.2.1"
   },
   "ava": {
@@ -87,7 +79,6 @@
         "src/": "dist/"
       },
       "compile": "tsc"
-    },
-    "workerThreads": false
+    }
   }
 }

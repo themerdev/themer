@@ -1,6 +1,6 @@
-import { createCanvas } from 'canvas';
 import { listOutputFiles, Template, weightedRandom } from './index.js';
 import { colorSetToVariants } from '../color-set/index.js';
+import { source } from 'common-tags';
 
 const BORDER_SIZE = 75;
 const GRID_CELL_SIZE = 30;
@@ -30,12 +30,6 @@ const template: Template = {
     const variants = colorSetToVariants(colorSet);
     for (const variant of variants) {
       for (const size of options.wallpaperSizes) {
-        const canvas = createCanvas(size.w, size.h);
-        const ctx = canvas.getContext('2d');
-
-        ctx.fillStyle = variant.colors.shade0;
-        ctx.fillRect(0, 0, size.w, size.h);
-
         // Calculate the drawing area
         const columnCount = Math.floor(
           (size.w - BORDER_SIZE * 2) / GRID_CELL_SIZE,
@@ -143,47 +137,73 @@ const template: Template = {
           );
         }
 
+        const elements: string[] = [];
+
         paths.forEach((points) => {
-          // Draw connecting path
-          ctx.strokeStyle =
+          const strokeColor =
             points.length > 1 ? getStrokeStyle() : variant.colors.shade1;
-          ctx.lineWidth = 2.5;
-
-          ctx.beginPath();
-          points.forEach((point, i) => {
-            const center = getCenter(point);
-            if (i === 0) {
-              ctx.moveTo(center.x, center.y);
-            } else {
-              ctx.lineTo(center.x, center.y);
-            }
-          });
-          ctx.stroke();
-
-          // Draw endpoints
-          ctx.fillStyle = variant.colors.shade0;
+          elements.push(source`
+            <path
+              fill="none"
+              stroke="${strokeColor}"
+              stroke-width="2.5"
+              d="${points
+                .map((point, i) => {
+                  const c = getCenter(point);
+                  return i === 0 ? `M${c.x},${c.y}` : `L${c.x},${c.y}`;
+                })
+                .join(' ')}"
+            />
+          `);
 
           const startCenter = getCenter(points[0]!);
-          ctx.beginPath();
-          ctx.arc(startCenter.x, startCenter.y, END_CAP_SIZE, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.stroke();
+          elements.push(source`
+            <circle
+              cx="${startCenter.x}"
+              cy="${startCenter.y}"
+              r="${END_CAP_SIZE}"
+              fill="${variant.colors.shade0}"
+              stroke="${strokeColor}"
+              stroke-width="2.5"
+            />
+          `);
 
           if (points.length > 1) {
             const endCenter = getCenter(points[points.length - 1]!);
-            ctx.beginPath();
-            ctx.arc(endCenter.x, endCenter.y, END_CAP_SIZE, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.stroke();
+            elements.push(source`
+            <circle
+              cx="${endCenter.x}"
+              cy="${endCenter.y}"
+              r="${END_CAP_SIZE}"
+              fill="${variant.colors.shade0}"
+              stroke="${strokeColor}"
+              stroke-width="2.5"
+            />
+          `);
           }
         });
 
+        const svg = source`
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="${size.w}"
+            height="${size.h}"
+            viewBox="0 0 ${size.w} ${size.h}"
+          >
+            <rect
+              x="0"
+              y="0"
+              width="${size.w}"
+              height="${size.h}"
+              fill="${variant.colors.shade0}"
+            />
+            ${elements}
+          </svg>
+        `;
+
         yield {
-          path: `${variant.title.kebab}-${size.w}x${size.h}.png`,
-          content: Buffer.from(
-            canvas.toDataURL().replace('data:image/png;base64,', ''),
-            'base64',
-          ),
+          path: `${variant.title.kebab}-${size.w}x${size.h}.svg`,
+          content: svg,
         };
       }
     }

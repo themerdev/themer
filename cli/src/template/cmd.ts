@@ -31,32 +31,29 @@ const template: Template = {
       const accent7 = formatColor(variant.colors.accent7);
       yield {
         path: `${variant.title.kebab}.reg`,
-        content: Buffer.from(
-          source`
-            Windows Registry Editor Version 5.00
+        content: source`
+          Windows Registry Editor Version 5.00
 
-            [HKEY_CURRENT_USER\\Console]
-            "ColorTable00"=dword:${shade0}
-            "ColorTable01"=dword:${accent5}
-            "ColorTable02"=dword:${accent3}
-            "ColorTable03"=dword:${accent4}
-            "ColorTable04"=dword:${accent0}
-            "ColorTable05"=dword:${accent6}
-            "ColorTable06"=dword:${accent2}
-            "ColorTable07"=dword:${shade6}
-            "ColorTable08"=dword:${shade1}
-            "ColorTable09"=dword:${accent5}
-            "ColorTable10"=dword:${accent3}
-            "ColorTable11"=dword:${accent4}
-            "ColorTable12"=dword:${accent0}
-            "ColorTable13"=dword:${accent7}
-            "ColorTable14"=dword:${accent2}
-            "ColorTable15"=dword:${shade7}
-            "ScreenColors"=dword:00000007
-            "PopupColors"=dword:0000008b
-          `,
-          'utf8',
-        ),
+          [HKEY_CURRENT_USER\\Console]
+          "ColorTable00"=dword:${shade0}
+          "ColorTable01"=dword:${accent5}
+          "ColorTable02"=dword:${accent3}
+          "ColorTable03"=dword:${accent4}
+          "ColorTable04"=dword:${accent0}
+          "ColorTable05"=dword:${accent6}
+          "ColorTable06"=dword:${accent2}
+          "ColorTable07"=dword:${shade6}
+          "ColorTable08"=dword:${shade1}
+          "ColorTable09"=dword:${accent5}
+          "ColorTable10"=dword:${accent3}
+          "ColorTable11"=dword:${accent4}
+          "ColorTable12"=dword:${accent0}
+          "ColorTable13"=dword:${accent7}
+          "ColorTable14"=dword:${accent2}
+          "ColorTable15"=dword:${shade7}
+          "ScreenColors"=dword:00000007
+          "PopupColors"=dword:0000008b
+        `,
       };
     }
   },

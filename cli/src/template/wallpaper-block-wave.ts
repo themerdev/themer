@@ -1,5 +1,4 @@
-import { createCanvas } from 'canvas';
-import Color from 'color';
+import { source } from 'common-tags';
 import { colorSetToVariants, FullVariant } from '../color-set/index.js';
 import { listOutputFiles, Template, weightedRandom } from './index.js';
 
@@ -51,48 +50,66 @@ const template: Template = {
             });
           }
         }
-        const canvas = createCanvas(size.w, size.h);
-        const ctx = canvas.getContext('2d');
 
-        ctx.fillStyle = variant.colors.shade0;
-        ctx.fillRect(0, 0, size.w, size.h);
-
-        blocks.forEach(({ x, y, w, h, c, g }) => {
-          const radius = 2;
-          const right = x + w;
-          const bottom = y + h;
-          ctx.fillStyle = c;
-          ctx.shadowColor = c;
-          ctx.shadowBlur = g ? 5 : 0;
-          ctx.beginPath();
-          ctx.moveTo(x + radius, y);
-          ctx.lineTo(right - radius, y);
-          ctx.quadraticCurveTo(right, y, right, y + radius);
-          ctx.lineTo(right, y + h - radius);
-          ctx.quadraticCurveTo(right, bottom, right - radius, bottom);
-          ctx.lineTo(x + radius, bottom);
-          ctx.quadraticCurveTo(x, bottom, x, bottom - radius);
-          ctx.lineTo(x, y + radius);
-          ctx.quadraticCurveTo(x, y, x + radius, y);
-          ctx.fill();
-        });
-
-        const gradient = ctx.createLinearGradient(size.w, 0, 0, size.h);
-        gradient.addColorStop(0, variant.colors.shade0);
-        gradient.addColorStop(
-          0.5,
-          Color(variant.colors.shade0).alpha(0).rgb().string(),
-        );
-        gradient.addColorStop(1, variant.colors.shade0);
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, size.w, size.h);
+        const svg = source`
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="${size.w}"
+            height="${size.h}"
+            viewBox="0 0 ${size.w} ${size.h}"
+          >
+            <defs>
+              <linearGradient id="overlay" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="${variant.colors.shade0}"/>
+                <stop
+                  offset="50%"
+                  stop-color="${variant.colors.shade0}"
+                  stop-opacity="0"
+                />
+                <stop offset="100%" stop-color="${variant.colors.shade0}"/>
+              </linearGradient>
+              <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <rect
+              x="0"
+              y="0"
+              width="${size.w}"
+              height="${size.h}"
+              fill="${variant.colors.shade0}"
+            />
+            ${blocks.map(
+              (block) => source`
+                <rect
+                  x="${block.x}"
+                  y="${block.y}"
+                  width="${block.w}"
+                  height="${block.h}"
+                  fill="${block.c}"
+                  rx="2"
+                  ry="2"
+                  ${block.g ? `filter="url(#glow)"` : ''}
+                />
+              `,
+            )}
+            <rect
+              x="0"
+              y="0"
+              width="${size.w}"
+              height="${size.h}"
+              fill="url(#overlay)"
+            />
+          </svg>
+        `;
 
         yield {
-          path: `${variant.title.kebab}-${size.w}x${size.h}.png`,
-          content: Buffer.from(
-            canvas.toDataURL().replace('data:image/png;base64,', ''),
-            'base64',
-          ),
+          path: `${variant.title.kebab}-${size.w}x${size.h}.svg`,
+          content: svg,
         };
       }
     }

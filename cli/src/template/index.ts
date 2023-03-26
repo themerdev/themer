@@ -1,8 +1,5 @@
 import { source } from 'common-tags';
 import type { AnnotatedColorSet } from '../color-set/index.js';
-import { readFile } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
 
 export type RenderOptions = {
   wallpaperSizes: { w: number; h: number }[];
@@ -10,7 +7,7 @@ export type RenderOptions = {
 
 export type OutputFile = {
   path: string;
-  content: Buffer;
+  content: string;
 };
 
 export interface Template {
@@ -33,7 +30,6 @@ const BUILT_IN_TEMPLATE_IDENTIFIERS = [
   'css',
   'emacs',
   'firefox-addon',
-  'firefox-color',
   'hyper',
   'iterm',
   'kde-plasma-colors',
@@ -58,7 +54,6 @@ const BUILT_IN_TEMPLATE_IDENTIFIERS = [
   'wallpaper-octagon',
   'wallpaper-shirts',
   'wallpaper-triangles',
-  'wallpaper-trianglify',
   'warp',
   'windows-terminal',
   'wox',
@@ -90,14 +85,12 @@ export function weightedRandom<T>(map: Map<T, number>): T {
   return [...map.keys()][cumulativeWeights.findIndex((cw) => random < cw)]!;
 }
 
-export async function packageJson(): Promise<{
-  version: string;
-}> {
-  const packageJsonPath = resolve(
-    dirname(fileURLToPath(import.meta.url)),
-    '..',
-    '..',
-    'package.json',
-  );
-  return JSON.parse((await readFile(packageJsonPath)).toString('utf8'));
+export const version = '5.0.1';
+
+export function join(...parts: string[]): string {
+  return parts.join('/');
+}
+
+export function dirname(path: string): string {
+  return path.substring(0, path.lastIndexOf('/'));
 }

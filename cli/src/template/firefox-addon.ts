@@ -1,10 +1,7 @@
 import Color from 'color';
 import { source } from 'common-tags';
-import { dirname, join } from 'node:path';
 import { colorSetToVariants } from '../color-set/index.js';
-import { packageJson, Template } from './index.js';
-
-const { version } = await packageJson();
+import { dirname, join, Template, version } from './index.js';
 
 function formatColor(hex: string): number[] {
   return Color(hex).rgb().array();
@@ -23,50 +20,47 @@ const template: Template = {
       const name = variant.title.human;
       yield {
         path: join(name, 'manifest.json'),
-        content: Buffer.from(
-          JSON.stringify(
-            {
-              version: version,
-              manifest_version: 2,
-              name,
-              theme: {
-                colors: {
-                  bookmark_text: shade7,
-                  frame: variant.isDark ? shade0 : shade1,
-                  frame_inactive: variant.isDark ? shade1 : shade0,
-                  icons_attention: shade7,
-                  icons: shade7,
-                  ntp_background: variant.isDark ? shade1 : shade0,
-                  ntp_text: shade7,
-                  popup_highlight_text: shade2,
-                  popup_highlight: shade6,
-                  toolbar_field_highlight_text: shade2,
-                  popup_border: variant.isDark ? shade1 : shade0,
-                  popup_text: shade7,
-                  popup: variant.isDark ? shade1 : shade0,
-                  sidebar_border: variant.isDark ? shade1 : shade0,
-                  sidebar_highlight_text: shade6,
-                  sidebar_highlight: shade2,
-                  sidebar_text: shade6,
-                  sidebar: variant.isDark ? shade1 : shade0,
-                  tab_background_text: shade7,
-                  tab_loading: shade7,
-                  tab_text: shade7,
-                  toolbar_bottom_separator: variant.isDark ? shade1 : shade0,
-                  toolbar_field_border: variant.isDark ? shade1 : shade0,
-                  toolbar_field_separator: variant.isDark ? shade1 : shade0,
-                  toolbar_field_text_focus: shade7,
-                  toolbar_field_text: shade7,
-                  toolbar_field: variant.isDark ? shade1 : shade0,
-                  toolbar_field_border_focus: shade2,
-                  toolbar: variant.isDark ? shade1 : shade0,
-                },
+        content: JSON.stringify(
+          {
+            version,
+            manifest_version: 2,
+            name,
+            theme: {
+              colors: {
+                bookmark_text: shade7,
+                frame: variant.isDark ? shade0 : shade1,
+                frame_inactive: variant.isDark ? shade1 : shade0,
+                icons_attention: shade7,
+                icons: shade7,
+                ntp_background: variant.isDark ? shade1 : shade0,
+                ntp_text: shade7,
+                popup_highlight_text: shade2,
+                popup_highlight: shade6,
+                toolbar_field_highlight_text: shade2,
+                popup_border: variant.isDark ? shade1 : shade0,
+                popup_text: shade7,
+                popup: variant.isDark ? shade1 : shade0,
+                sidebar_border: variant.isDark ? shade1 : shade0,
+                sidebar_highlight_text: shade6,
+                sidebar_highlight: shade2,
+                sidebar_text: shade6,
+                sidebar: variant.isDark ? shade1 : shade0,
+                tab_background_text: shade7,
+                tab_loading: shade7,
+                tab_text: shade7,
+                toolbar_bottom_separator: variant.isDark ? shade1 : shade0,
+                toolbar_field_border: variant.isDark ? shade1 : shade0,
+                toolbar_field_separator: variant.isDark ? shade1 : shade0,
+                toolbar_field_text_focus: shade7,
+                toolbar_field_text: shade7,
+                toolbar_field: variant.isDark ? shade1 : shade0,
+                toolbar_field_border_focus: shade2,
+                toolbar: variant.isDark ? shade1 : shade0,
               },
             },
-            null,
-            2,
-          ),
-          'utf8',
+          },
+          null,
+          2,
         ),
       };
     }

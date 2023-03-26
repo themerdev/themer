@@ -1,4 +1,3 @@
-import { createCanvas, loadImage } from 'canvas';
 import { listOutputFiles, Template } from './index.js';
 import { colorSetToVariants } from '../color-set/index.js';
 
@@ -690,21 +689,9 @@ const template: Template = {
           </svg>
         `;
 
-        const canvas = createCanvas(size.w, size.h);
-        const ctx = canvas.getContext('2d');
-
-        const url = `data:image/svg+xml;base64,${Buffer.from(
-          svg,
-          'utf8',
-        ).toString('base64')}`;
-        const img = await loadImage(url);
-        ctx.drawImage(img, 0, 0);
         yield {
-          path: `${variant.title.kebab}-${size.w}x${size.h}.png`,
-          content: Buffer.from(
-            canvas.toDataURL().replace('data:image/png;base64,', ''),
-            'base64',
-          ),
+          path: `${variant.title.kebab}-${size.w}x${size.h}.svg`,
+          content: svg,
         };
       }
     }
