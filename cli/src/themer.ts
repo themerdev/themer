@@ -1,28 +1,11 @@
 import type { BuiltInColorSet, ColorSet } from './color-set/index.js';
-import { prepareColorSet } from './color-set/index.js';
+import { prepareColorSet, resolveColorSet } from './color-set/index.js';
 import type {
   BuiltInTemplate,
   Template,
   OutputFile,
   RenderOptions,
 } from './template/index.js';
-
-import defaultColorSet from './color-set/default.js';
-import dracula from './color-set/dracula.js';
-import fingerPaint from './color-set/finger-paint.js';
-import githubUniverse from './color-set/github-universe.js';
-import greenAsAWhistle from './color-set/green-as-a-whistle.js';
-import lucid from './color-set/lucid.js';
-import mojave from './color-set/mojave.js';
-import monkey from './color-set/monkey.js';
-import nightSky from './color-set/night-sky.js';
-import nova from './color-set/nova.js';
-import one from './color-set/one.js';
-import polarIce from './color-set/polar-ice.js';
-import rightInTheTeals from './color-set/right-in-the-teals.js';
-import rivet from './color-set/rivet.js';
-import seti from './color-set/seti.js';
-import solarized from './color-set/solarized.js';
 
 import alacritty from './template/alacritty.js';
 import alfred from './template/alfred.js';
@@ -63,45 +46,6 @@ import windowsTerminal from './template/windows-terminal.js';
 import wox from './template/wox.js';
 import xcode from './template/xcode.js';
 import xresources from './template/xresources.js';
-
-function resolveColorSet(colorSet: BuiltInColorSet | ColorSet): ColorSet {
-  switch (colorSet) {
-    case 'default':
-      return defaultColorSet;
-    case 'dracula':
-      return dracula;
-    case 'finger-paint':
-      return fingerPaint;
-    case 'github-universe':
-      return githubUniverse;
-    case 'green-as-a-whistle':
-      return greenAsAWhistle;
-    case 'lucid':
-      return lucid;
-    case 'mojave':
-      return mojave;
-    case 'monkey':
-      return monkey;
-    case 'night-sky':
-      return nightSky;
-    case 'nova':
-      return nova;
-    case 'one':
-      return one;
-    case 'polar-ice':
-      return polarIce;
-    case 'right-in-the-teals':
-      return rightInTheTeals;
-    case 'rivet':
-      return rivet;
-    case 'seti':
-      return seti;
-    case 'solarized':
-      return solarized;
-    default:
-      return colorSet;
-  }
-}
 
 function resolveTemplate(template: BuiltInTemplate | Template): Template {
   switch (template) {

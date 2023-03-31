@@ -5,6 +5,7 @@ export type {
 } from './color-set/index.js';
 export {
   allBuiltInColorSetIdentifiers,
+  allBuiltInColorSets,
   colorSetToVariants,
   prepareColorSet,
 } from './color-set/index.js';
