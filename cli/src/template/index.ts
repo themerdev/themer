@@ -19,53 +19,6 @@ export interface Template {
   renderInstructions: (paths: string[], colorSet: AnnotatedColorSet) => string;
 }
 
-const BUILT_IN_TEMPLATE_IDENTIFIERS = [
-  'alacritty',
-  'alfred',
-  'bbedit',
-  'brave',
-  'chrome',
-  'cmd',
-  'conemu',
-  'css',
-  'emacs',
-  'firefox-addon',
-  'hyper',
-  'iterm',
-  'kde-plasma-colors',
-  'keypirinha',
-  'kitty',
-  'konsole',
-  'prism',
-  'sketch-palettes',
-  'slack',
-  'sublime-text',
-  'terminal',
-  'terminator',
-  'vim',
-  'vim-lightline',
-  'visual-studio',
-  'vs-code',
-  'wallpaper-block-wave',
-  'wallpaper-burst',
-  'wallpaper-circuits',
-  'wallpaper-diamonds',
-  'wallpaper-dot-grid',
-  'wallpaper-octagon',
-  'wallpaper-shirts',
-  'wallpaper-triangles',
-  'warp',
-  'windows-terminal',
-  'wox',
-  'xcode',
-  'xresources',
-] as const;
-
-export type BuiltInTemplate = typeof BUILT_IN_TEMPLATE_IDENTIFIERS[number];
-export const allBuiltInTemplateIdentifiers: BuiltInTemplate[] = [
-  ...BUILT_IN_TEMPLATE_IDENTIFIERS,
-];
-
 export const listOutputFiles: Template['renderInstructions'] = (
   paths: string[],
 ) => source`

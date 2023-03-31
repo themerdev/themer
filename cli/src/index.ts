@@ -1,22 +1,15 @@
-export type {
-  BuiltInColorSet,
-  ColorSet,
-  FullColorSet,
-} from './color-set/index.js';
+export type { ColorSet, FullColorSet } from './color-set/index.js';
+export { colorSetToVariants, prepareColorSet } from './color-set/index.js';
 export {
   allBuiltInColorSetIdentifiers,
   allBuiltInColorSets,
-  colorSetToVariants,
-  prepareColorSet,
-} from './color-set/index.js';
-export type {
-  BuiltInTemplate,
-  OutputFile,
-  RenderOptions,
-  Template,
-} from './template/index.js';
+  BuiltInColorSet,
+} from './color-set/all.js';
+export type { OutputFile, RenderOptions, Template } from './template/index.js';
+export { listOutputFiles } from './template/index.js';
 export {
   allBuiltInTemplateIdentifiers,
-  listOutputFiles,
-} from './template/index.js';
+  allBuiltInTemplates,
+  BuiltInTemplate,
+} from './template/all.js';
 export { themer as default } from './themer.js';
