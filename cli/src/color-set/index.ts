@@ -46,7 +46,7 @@ type ColorSetBase<T extends Variant> = {
 
 type PartialVariant = PartialShades & Accents;
 export type FullVariant = FullShades & Accents;
-type Variant = PartialVariant | FullVariant;
+export type Variant = PartialVariant | FullVariant;
 
 export type PartialColorSet = ColorSetBase<PartialVariant>;
 export type FullColorSet = ColorSetBase<FullVariant>;

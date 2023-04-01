@@ -1,4 +1,4 @@
-export type { ColorSet, FullColorSet } from './color-set/index.js';
+export type { ColorSet, FullColorSet, Variant } from './color-set/index.js';
 export { colorSetToVariants, prepareColorSet } from './color-set/index.js';
 export {
   allBuiltInColorSetIdentifiers,
