@@ -4,7 +4,11 @@ export type {
   FullVariant,
   Variant,
 } from './color-set/index.js';
-export { colorSetToVariants, prepareColorSet } from './color-set/index.js';
+export {
+  colorSetToVariants,
+  prepareColorSet,
+  prepareVariant,
+} from './color-set/index.js';
 export {
   allBuiltInColorSetIdentifiers,
   allBuiltInColorSets,

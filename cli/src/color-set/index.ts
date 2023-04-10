@@ -111,7 +111,7 @@ export function prepareColorSet(colorSet: ColorSet): AnnotatedColorSet {
   };
 }
 
-function prepareVariant(variant: Variant): FullVariant {
+export function prepareVariant(variant: Variant): FullVariant {
   if ('shade1' in variant) {
     return variant;
   }
