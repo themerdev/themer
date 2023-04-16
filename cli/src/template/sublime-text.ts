@@ -1,4 +1,3 @@
-import plist from 'plist';
 import type { Template } from './index.js';
 import { colorSetToVariants } from '../color-set/index.js';
 import { source } from 'common-tags';
@@ -10,149 +9,241 @@ const template: Template = {
     for (const { title, colors } of variants) {
       yield {
         path: `${title.human}.tmTheme`,
-        content: plist.build({
-          name: title.human,
-          settings: [
-            {
-              settings: {
-                background: colors.shade0,
-                caret: colors.accent6,
-                foreground: colors.shade6,
-                invisibles: colors.shade1,
-                lineHighlight: colors.shade1,
-                selection: colors.shade2,
-                selectionBorder: colors.shade5,
-                findHighlight: colors.accent2,
-                findHighlightForeground: colors.shade0,
-                activeGuide: colors.accent1,
-                bracketsForeground: `${colors.shade6}7F`,
-                bracketsOptions: 'stippled_underline',
-                bracketsContentsForeground: `${colors.shade6}7F`,
-                tagsOptions: 'stippled_underline',
-              },
-            },
-            {
-              name: 'Comment',
-              scope: 'comment',
-              settings: {
-                foreground: colors.shade2,
-              },
-            },
-            {
-              name: 'Constant',
-              scope: 'constant',
-              settings: {
-                foreground: colors.accent7,
-              },
-            },
-            {
-              name: 'Entity',
-              scope: 'entity',
-              settings: {
-                foreground: colors.accent4,
-              },
-            },
-            {
-              name: 'Invalid',
-              scope: 'invalid',
-              settings: {
-                background: colors.accent0,
-                foreground: colors.shade1,
-              },
-            },
-            {
-              name: 'Keyword',
-              scope: 'keyword',
-              settings: {
-                foreground: colors.accent6,
-              },
-            },
-            {
-              name: 'Storage',
-              scope: 'storage',
-              settings: {
-                foreground: colors.accent7,
-              },
-            },
-            {
-              name: 'String',
-              scope: 'string',
-              settings: {
-                foreground: colors.accent3,
-              },
-            },
-            {
-              name: 'Support',
-              scope: 'support',
-              settings: {
-                foreground: colors.accent4,
-              },
-            },
-            {
-              name: 'Variable',
-              scope: 'variable',
-              settings: {
-                foreground: colors.shade7,
-              },
-            },
-            {
-              name: 'Markup Heading',
-              scope: 'markup.heading',
-              settings: {
-                foreground: colors.accent4,
-              },
-            },
-            {
-              name: 'Markup Deleted',
-              scope: 'markup.deleted',
-              settings: {
-                foreground: colors.accent0,
-              },
-            },
-            {
-              name: 'Markup Inserted',
-              scope: 'markup.inserted',
-              settings: {
-                foreground: colors.accent3,
-              },
-            },
-            {
-              name: 'Markup Changed',
-              scope: 'markup.changed',
-              settings: {
-                foreground: colors.accent2,
-              },
-            },
-            {
-              name: 'Markup Underline',
-              scope: 'markup.underline',
-              settings: {
-                fontStyle: 'underline',
-              },
-            },
-            {
-              name: 'Markup Underline Link',
-              scope: 'markup.underline.link',
-              settings: {
-                foreground: colors.accent5,
-              },
-            },
-            {
-              name: 'Markup List',
-              scope: 'markup.list',
-              settings: {
-                foreground: colors.shade7,
-              },
-            },
-            {
-              name: 'Markup Raw',
-              scope: 'markup.raw',
-              settings: {
-                foreground: colors.accent7,
-              },
-            },
-          ],
-        }),
+        content: source`
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+            <dict>
+              <key>name</key>
+              <string>${title.human}</string>
+              <key>settings</key>
+              <array>
+                <dict>
+                  <key>settings</key>
+                  <dict>
+                    <key>background</key>
+                    <string>${colors.shade0}</string>
+                    <key>caret</key>
+                    <string>${colors.accent6}</string>
+                    <key>foreground</key>
+                    <string>${colors.shade6}</string>
+                    <key>invisibles</key>
+                    <string>${colors.shade1}</string>
+                    <key>lineHighlight</key>
+                    <string>${colors.shade1}</string>
+                    <key>selection</key>
+                    <string>${colors.shade2}</string>
+                    <key>selectionBorder</key>
+                    <string>${colors.shade5}</string>
+                    <key>findHighlight</key>
+                    <string>${colors.accent2}</string>
+                    <key>findHighlightForeground</key>
+                    <string>${colors.shade0}</string>
+                    <key>activeGuide</key>
+                    <string>${colors.accent1}</string>
+                    <key>bracketsForeground</key>
+                    <string>${colors.shade6}7F</string>
+                    <key>bracketsOptions</key>
+                    <string>stippled_underline</string>
+                    <key>bracketsContentsForeground</key>
+                    <string>${colors.shade6}7F</string>
+                    <key>tagsOptions</key>
+                    <string>stippled_underline</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Comment</string>
+                  <key>scope</key>
+                  <string>comment</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.shade2}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Constant</string>
+                  <key>scope</key>
+                  <string>constant</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent7}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Entity</string>
+                  <key>scope</key>
+                  <string>entity</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent4}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Invalid</string>
+                  <key>scope</key>
+                  <string>invalid</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>background</key>
+                    <string>${colors.accent0}</string>
+                    <key>foreground</key>
+                    <string>${colors.shade1}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Keyword</string>
+                  <key>scope</key>
+                  <string>keyword</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent6}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Storage</string>
+                  <key>scope</key>
+                  <string>storage</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent7}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>String</string>
+                  <key>scope</key>
+                  <string>string</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent3}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Support</string>
+                  <key>scope</key>
+                  <string>support</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent4}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Variable</string>
+                  <key>scope</key>
+                  <string>variable</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.shade7}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup Heading</string>
+                  <key>scope</key>
+                  <string>markup.heading</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent4}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup Deleted</string>
+                  <key>scope</key>
+                  <string>markup.deleted</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent0}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup Inserted</string>
+                  <key>scope</key>
+                  <string>markup.inserted</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent3}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup Changed</string>
+                  <key>scope</key>
+                  <string>markup.changed</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent2}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup Underline</string>
+                  <key>scope</key>
+                  <string>markup.underline</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>fontStyle</key>
+                    <string>underline</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup Underline Link</string>
+                  <key>scope</key>
+                  <string>markup.underline.link</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent5}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup List</string>
+                  <key>scope</key>
+                  <string>markup.list</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.shade7}</string>
+                  </dict>
+                </dict>
+                <dict>
+                  <key>name</key>
+                  <string>Markup Raw</string>
+                  <key>scope</key>
+                  <string>markup.raw</string>
+                  <key>settings</key>
+                  <dict>
+                    <key>foreground</key>
+                    <string>${colors.accent7}</string>
+                  </dict>
+                </dict>
+              </array>
+            </dict>
+          </plist>
+        `,
       };
     }
   },
