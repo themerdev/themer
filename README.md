@@ -48,6 +48,16 @@ There are a few different ways to level up your development setup with `themer`:
 2. **Command-line interface.** `themer` can be used to generate themes on the CLI, see the [CLI docs](#cli-documentation) below.
 3. **Application programming interface.** `themer` exposes a JavaScript API (complete with TypeScript type definitions) for programmatic use; see the [API docs](#api-documentation) below.
 
+Feature comparison:
+
+|                               | Web UI         | CLI/API  |
+| ----------------------------- | -------------- | -------- |
+| Instant preview               | ✅             | ❌       |
+| Premium color sets            | ✅             | ❌       |
+| Supported color format        | Any CSS format | Hex only |
+| Wallpaper output format       | PNG + SVG      | SVG only |
+| Seamless dotfiles integration | ❌             | ✅       |
+
 ## CLI documentation
 
 As of V5, `themer` is distributed as a single TypeScript/JavaScript package containing all built-in color sets and templates for ease of use—but still supports the use of [custom color sets](#create-custom-colorsets) or [templates](#create-custom-templates).
