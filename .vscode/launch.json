@@ -12,6 +12,8 @@
         "${input:colorSet}",
         "--template",
         "${input:template}",
+        "--size",
+        "${input:size}",
         "--output",
         "tmp"
       ],
@@ -30,6 +32,12 @@
       "description": "Template to render",
       "type": "promptString",
       "default": "*"
+    },
+    {
+      "id": "size",
+      "description": "Wallpaper size to render",
+      "type": "promptString",
+      "default": "2880x1800"
     }
   ]
 }
