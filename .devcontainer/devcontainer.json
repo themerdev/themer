@@ -1,9 +1,11 @@
 {
   "name": "themer",
-  "build": {
-    "dockerfile": "./Dockerfile"
-  },
+  "image": "node:18",
   "remoteUser": "node",
-  "extensions": ["esbenp.prettier-vscode"],
-  "postCreateCommand": "cd cli && npm install && cd ../web && npm install --legacy-peer-deps"
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  },
+  "postCreateCommand": "cd cli && npm install"
 }

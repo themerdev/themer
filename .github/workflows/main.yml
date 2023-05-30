@@ -6,7 +6,7 @@ env:
   CI: true
 
 jobs:
-  test-cli:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,19 +18,3 @@ jobs:
         run: |
           cd cli
           npm run test
-  test-web:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: |
-          cd web
-          npm install --legacy-peer-deps
-      - name: Check formatting
-        run: |
-          cd web
-          npm run test:format
-      - name: Run tests
-        run: |
-          cd web
-          npm run test:unit
