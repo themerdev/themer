@@ -81,7 +81,7 @@ const BUILT_IN_TEMPLATE_IDENTIFIERS = [
   'xresources',
 ] as const;
 
-export type BuiltInTemplate = typeof BUILT_IN_TEMPLATE_IDENTIFIERS[number];
+export type BuiltInTemplate = (typeof BUILT_IN_TEMPLATE_IDENTIFIERS)[number];
 export const allBuiltInTemplateIdentifiers: BuiltInTemplate[] = [
   ...BUILT_IN_TEMPLATE_IDENTIFIERS,
 ];

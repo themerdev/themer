@@ -14,6 +14,7 @@ import polarIce from './polar-ice.js';
 import rightInTheTeals from './right-in-the-teals.js';
 import rivet from './rivet.js';
 import seti from './seti.js';
+import shoulderPads from './shoulder-pads.js';
 import solarized from './solarized.js';
 
 const BUILT_IN_COLOR_SET_IDENTIFIERS = [
@@ -32,10 +33,11 @@ const BUILT_IN_COLOR_SET_IDENTIFIERS = [
   'right-in-the-teals',
   'rivet',
   'seti',
+  'shoulder-pads',
   'solarized',
 ] as const;
 
-export type BuiltInColorSet = typeof BUILT_IN_COLOR_SET_IDENTIFIERS[number];
+export type BuiltInColorSet = (typeof BUILT_IN_COLOR_SET_IDENTIFIERS)[number];
 export const allBuiltInColorSetIdentifiers: BuiltInColorSet[] = [
   ...BUILT_IN_COLOR_SET_IDENTIFIERS,
 ];
@@ -74,6 +76,8 @@ export function resolveColorSet(
       return rivet;
     case 'seti':
       return seti;
+    case 'shoulder-pads':
+      return shoulderPads;
     case 'solarized':
       return solarized;
     default:
