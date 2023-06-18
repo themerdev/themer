@@ -1,6 +1,6 @@
 {
   "name": "themer",
-  "version": "6.5.0",
+  "version": "6.5.1",
   "description": "Customizable theme generator for editors, terminals, wallpaper, and more.",
   "main": "dist/index.js",
   "type": "module",
