@@ -13,9 +13,36 @@ type Combination = {
 const template: Template = {
   name: 'Dot Grid wallpaper',
   render: async function* (colorSet, options) {
-    const variants = colorSetToVariants(colorSet);
-    for (const variant of variants) {
-      for (const size of options.wallpaperSizes) {
+    for (const size of options.wallpaperSizes) {
+      const patternSize = size.w / Math.round(size.w / 36);
+
+      const scale = scalePow()
+        .domain([0, 1])
+        .range([patternSize * 0.1, patternSize * 0.95])
+        .exponent(2 / 3)
+        .clamp(true);
+
+      const perlin = new Perlin2();
+      const circles: string[] = [];
+      for (let i = 0; i < size.h; i += patternSize) {
+        for (let j = 0; j < size.w; j += patternSize) {
+          const denominator = (Math.min(size.w, size.h) / patternSize) * 21;
+          const rand = perlin.gen(j / denominator, i / denominator);
+          const radius = scale(rand) / 2;
+          const x = j + patternSize / 2;
+          const y = i + patternSize / 2;
+          circles.push(source`
+            <circle
+              cx="${x}"
+              cy="${y}"
+              r="${radius}"
+              fill="url(#overlay)"
+            />
+          `);
+        }
+      }
+      const variants = colorSetToVariants(colorSet);
+      for (const variant of variants) {
         const combinations: Combination[] = [
           {
             color1: variant.colors.accent3,
@@ -28,35 +55,7 @@ const template: Template = {
             color3: variant.colors.accent7,
           },
         ];
-        const perlin = new Perlin2();
         yield* combinations.map(({ color1, color2, color3 }, i) => {
-          const patternSize = size.w / Math.round(size.w / 36);
-
-          const scale = scalePow()
-            .domain([0, 1])
-            .range([patternSize * 0.1, patternSize * 0.95])
-            .exponent(2 / 3)
-            .clamp(true);
-
-          const circles = [];
-          for (let i = 0; i < size.h; i += patternSize) {
-            for (let j = 0; j < size.w; j += patternSize) {
-              const denominator = (Math.min(size.w, size.h) / patternSize) * 21;
-              const rand = perlin.gen(j / denominator, i / denominator);
-              const radius = scale(rand) / 2;
-              const x = j + patternSize / 2;
-              const y = i + patternSize / 2;
-              circles.push(source`
-                <circle
-                  cx="${x}"
-                  cy="${y}"
-                  r="${radius}"
-                  fill="url(#overlay)"
-                />
-              `);
-            }
-          }
-
           const svg = source`
             <svg
               xmlns="http://www.w3.org/2000/svg"
