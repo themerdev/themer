@@ -55,6 +55,7 @@ const template: Template = {
                   "
                   fill="${variant.colors[anchoredRandomColorKey()]}"
                   opacity="${minRandom(0.2)}"
+                  shape-rendering="crispEdges"
                 />
               `);
             } else if (Math.random() < 0.1) {
@@ -68,6 +69,7 @@ const template: Template = {
                   "
                   fill="${variant.colors[anchoredRandomColorKey()]}"
                   opacity="${minRandom(0.2)}"
+                  shape-rendering="crispEdges"
                 />
                 <path
                   d="
@@ -78,6 +80,7 @@ const template: Template = {
                   "
                   fill="${variant.colors[anchoredRandomColorKey()]}"
                   opacity="${minRandom(0.2)}"
+                  shape-rendering="crispEdges"
                 />
               `);
             } else {
@@ -91,6 +94,7 @@ const template: Template = {
                   "
                   fill="${variant.colors[anchoredRandomColorKey()]}"
                   opacity="${minRandom(0.2)}"
+                  shape-rendering="crispEdges"
                 />
                 <path
                   d="
@@ -101,6 +105,7 @@ const template: Template = {
                   "
                   fill="${variant.colors[anchoredRandomColorKey()]}"
                   opacity="${minRandom(0.2)}"
+                  shape-rendering="crispEdges"  
                 />
               `);
             }
