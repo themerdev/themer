@@ -410,7 +410,5 @@ For instructions on how to contribute to `themer`, see [CONTRIBUTING.md](https:/
 
 ### Support `themer`
 
-- 🦁 [Send a tip through the Brave Browser](https://brave.com), either on [the repository page](https://github.com/themerdev/themer) or [`themer`'s Web UI](https://themer.dev)
-- 💳 Pay what you want when downloading your theme from [themer.dev](https://themer.dev)
 - 👑 Purchase a premium theme from [themer.dev](https://themer.dev)
 - 💖 [Sponsor the @themerdev GitHub org](https://github.com/sponsors/themerdev)
