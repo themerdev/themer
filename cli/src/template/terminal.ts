@@ -1,6 +1,6 @@
 import type { Template } from './index.js';
 import { brightMix, colorSetToVariants } from '../color-set/index.js';
-import Color from 'color';
+import Color from 'colorjs.io';
 import { source } from 'common-tags';
 import { fromByteArray } from 'base64-js';
 

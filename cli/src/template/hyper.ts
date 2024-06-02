@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color from 'colorjs.io';
 import { source } from 'common-tags';
 import { AnnotatedVariant, colorSetToVariants } from '../color-set/index.js';
 import { dirname, join, Template, version } from './index.js';

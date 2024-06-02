@@ -1,7 +1,7 @@
 import type { Template } from './index.js';
 import { brightMix, colorSetToVariants } from '../color-set/index.js';
 import { source } from 'common-tags';
-import Color from 'color';
+import Color from 'colorjs.io';
 
 function format(hex: string): string {
   return `rgb:${Color(hex)

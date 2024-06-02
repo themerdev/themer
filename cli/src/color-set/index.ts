@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color from 'colorjs.io';
 import capitalize from 'lodash/capitalize.js';
 import camelCase from 'lodash/camelCase.js';
 import kebabCase from 'lodash/kebabCase.js';
@@ -117,42 +117,29 @@ export function prepareVariant(variant: Variant): FullVariant {
   }
   const start = new Color(variant.shade0);
   const end = new Color(variant.shade7);
-  const rDelta = (end.red() - start.red()) / 7;
-  const gDelta = (end.green() - start.green()) / 7;
-  const bDelta = (end.blue() - start.blue()) / 7;
+  const shades = Color.steps(start, end, {
+    steps: 8,
+    space: 'oklch',
+    outputSpace: 'srgb',
+  }).map((c) => new Color(c).toString({ format: 'hex', collapse: false }));
+  const [_1, shade1, shade2, shade3, shade4, shade5, shade6, _2] = shades;
+  if (!shade1 || !shade2 || !shade3 || !shade4 || !shade5 || !shade6)
+    throw new Error();
   return {
     ...variant,
-    shade1: new Color({
-      r: start.red() + rDelta * 1,
-      g: start.green() + gDelta * 1,
-      b: start.blue() + bDelta * 1,
-    }).hex(),
-    shade2: new Color({
-      r: start.red() + rDelta * 2,
-      g: start.green() + gDelta * 2,
-      b: start.blue() + bDelta * 2,
-    }).hex(),
-    shade3: new Color({
-      r: start.red() + rDelta * 3,
-      g: start.green() + gDelta * 3,
-      b: start.blue() + bDelta * 3,
-    }).hex(),
-    shade4: new Color({
-      r: start.red() + rDelta * 4,
-      g: start.green() + gDelta * 4,
-      b: start.blue() + bDelta * 4,
-    }).hex(),
-    shade5: new Color({
-      r: start.red() + rDelta * 5,
-      g: start.green() + gDelta * 5,
-      b: start.blue() + bDelta * 5,
-    }).hex(),
-    shade6: new Color({
-      r: start.red() + rDelta * 6,
-      g: start.green() + gDelta * 6,
-      b: start.blue() + bDelta * 6,
-    }).hex(),
+    shade1,
+    shade2,
+    shade3,
+    shade4,
+    shade5,
+    shade6,
   };
+}
+
+export function mix(color1: string, color2: string, p: number): string {
+  return new Color(Color.mix(new Color(color1), new Color(color2), p)).toString(
+    { format: 'hex', collapse: false },
+  );
 }
 
 export function brightMix(
@@ -160,7 +147,13 @@ export function brightMix(
   key: keyof FullVariant,
   isDark: boolean,
 ): string {
-  return Color(colors[key])
-    .mix(isDark ? Color(colors.shade7) : Color(colors.shade0), 0.2)
-    .hex();
+  return mix(colors[key], isDark ? colors.shade7 : colors.shade0, 0.2);
+}
+
+export function dimMix(
+  colors: FullVariant,
+  key: keyof FullVariant,
+  isDark: boolean,
+) {
+  return mix(colors[key], isDark ? colors.shade0 : colors.shade7, 0.2);
 }

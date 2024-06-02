@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color from 'colorjs.io';
 import { colorSetToVariants } from '../color-set/index.js';
 import { dirname, join, Template, version } from './index.js';
 import { source } from 'common-tags';
@@ -9,11 +9,11 @@ const template: Template = {
     const variants = colorSetToVariants(colorSet);
     for (const variant of variants) {
       const themeName = variant.title.human;
-      const shade0rgb = Color(variant.colors.shade0).rgb().array();
-      const shade1rgb = Color(variant.colors.shade1).rgb().array();
-      const shade7rgb = Color(variant.colors.shade7).rgb().array();
-      const accent5hsl = Color(variant.colors.accent5).hsl().array();
-      const accent6hsl = Color(variant.colors.accent6).hsl().array();
+      const shade0rgb = new Color(variant.colors.shade0).to('srgb').coords;
+      const shade1rgb = new Color(variant.colors.shade1).to('srgb').coords;
+      const shade7rgb = new Color(variant.colors.shade7).to('srgb').coords;
+      const accent5hsl = new Color(variant.colors.accent5).to('hsl').coords;
+      const accent6hsl = new Color(variant.colors.accent6).to('hsl').coords;
       yield {
         path: join(themeName, 'manifest.json'),
         content: JSON.stringify(

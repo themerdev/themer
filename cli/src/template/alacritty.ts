@@ -1,24 +1,7 @@
 import { source } from 'common-tags';
-import Color from 'color';
 import { Document, YAMLMap } from 'yaml';
 import type { Template } from './index.js';
-import { colorSetToVariants, FullVariant } from '../color-set/index.js';
-
-const MIX = 0.2;
-
-const brightMix = (
-  isDark: boolean,
-  colors: FullVariant,
-  key: keyof FullVariant,
-) =>
-  Color(colors[key])
-    .mix(isDark ? Color(colors.shade7) : Color(colors.shade0), MIX)
-    .hex();
-
-const dimMix = (isDark: boolean, colors: FullVariant, key: keyof FullVariant) =>
-  Color(colors[key])
-    .mix(isDark ? Color(colors.shade0) : Color(colors.shade7), MIX)
-    .hex();
+import { colorSetToVariants, brightMix, dimMix } from '../color-set/index.js';
 
 const template: Template = {
   name: 'Alacritty',
@@ -47,22 +30,22 @@ const template: Template = {
             },
             bright: {
               black: isDark ? colors.shade3 : colors.shade5,
-              red: brightMix(isDark, colors, 'accent0'),
-              green: brightMix(isDark, colors, 'accent3'),
-              yellow: brightMix(isDark, colors, 'accent2'),
-              blue: brightMix(isDark, colors, 'accent5'),
-              magenta: brightMix(isDark, colors, 'accent7'),
-              cyan: brightMix(isDark, colors, 'accent4'),
+              red: brightMix(colors, 'accent0', isDark),
+              green: brightMix(colors, 'accent3', isDark),
+              yellow: brightMix(colors, 'accent2', isDark),
+              blue: brightMix(colors, 'accent5', isDark),
+              magenta: brightMix(colors, 'accent7', isDark),
+              cyan: brightMix(colors, 'accent4', isDark),
               white: isDark ? colors.shade7 : colors.shade1,
             },
             dim: {
               black: isDark ? colors.shade1 : colors.shade7,
-              red: dimMix(isDark, colors, 'accent0'),
-              green: dimMix(isDark, colors, 'accent3'),
-              yellow: dimMix(isDark, colors, 'accent2'),
-              blue: dimMix(isDark, colors, 'accent5'),
-              magenta: dimMix(isDark, colors, 'accent7'),
-              cyan: dimMix(isDark, colors, 'accent4'),
+              red: dimMix(colors, 'accent0', isDark),
+              green: dimMix(colors, 'accent3', isDark),
+              yellow: dimMix(colors, 'accent2', isDark),
+              blue: dimMix(colors, 'accent5', isDark),
+              magenta: dimMix(colors, 'accent7', isDark),
+              cyan: dimMix(colors, 'accent4', isDark),
               white: isDark ? colors.shade5 : colors.shade3,
             },
           },

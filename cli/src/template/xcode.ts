@@ -2,7 +2,7 @@ import round from 'lodash/round.js';
 import type { Template } from './index.js';
 import { colorSetToVariants } from '../color-set/index.js';
 import { source } from 'common-tags';
-import Color from 'color';
+import Color from 'colorjs.io';
 
 function formatColor(hex: string): string {
   return Color(hex)

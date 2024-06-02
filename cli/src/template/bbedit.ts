@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color from 'colorjs.io';
 import { source } from 'common-tags';
 import { colorSetToVariants } from '../color-set/index.js';
 import type { Template } from './index.js';
@@ -6,11 +6,7 @@ import type { Template } from './index.js';
 const DESTINATION = '~/Library/Application Support/BBEdit/Color Schemes/';
 
 const formatColor = (hex: string) => {
-  const [r, g, b] = Color(hex)
-    .rgb()
-    .array()
-    .map((c) => c / 255);
-  return `rgba(${r}, ${g}, ${b}, 1.00)`;
+  return new Color(hex).toString({ format: 'rgba' });
 };
 
 const template: Template = {

@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color from 'colorjs.io';
 import type { Template } from './index.js';
 import { colorSetToVariants } from '../color-set/index.js';
 import { source } from 'common-tags';

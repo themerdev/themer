@@ -1,7 +1,7 @@
 import type { Template } from './index.js';
 import { brightMix, colorSetToVariants } from '../color-set/index.js';
 import { source } from 'common-tags';
-import Color from 'color';
+import Color from 'colorjs.io';
 
 function format(color: string): string {
   return Color(color).rgb().round().array().join(',');

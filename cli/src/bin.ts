@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import Color from 'color';
+import Color from 'colorjs.io';
 import { Command } from 'commander';
 import flatten from 'lodash/flatten.js';
 import { parse } from 'yaml';
@@ -103,8 +103,8 @@ const resolvedColorSets: (BuiltInColorSet | ColorSet)[] = await Promise.all(
           accent7: `#${base16.base0F}`,
         };
         const isDark =
-          Color(variant.shade0).luminosity() <
-          Color(variant.shade7).luminosity();
+          new Color(variant.shade0).luminance <
+          new Color(variant.shade7).luminance;
         const colors: ColorSet = {
           name: base16.scheme,
           variants: isDark ? { dark: variant } : { light: variant },
