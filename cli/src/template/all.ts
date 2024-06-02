@@ -33,6 +33,7 @@ import wallpaperDotGrid from './wallpaper-dot-grid.js';
 import wallpaperOctagon from './wallpaper-octagon.js';
 import wallpaperShirts from './wallpaper-shirts.js';
 import wallpaperTriangles from './wallpaper-triangles.js';
+import wallpaperTbd from './wallpaper-tbd.js';
 import warp from './warp.js';
 import windowsTerminal from './windows-terminal.js';
 import wox from './wox.js';
@@ -74,6 +75,7 @@ const BUILT_IN_TEMPLATE_IDENTIFIERS = [
   'wallpaper-octagon',
   'wallpaper-shirts',
   'wallpaper-triangles',
+  'wallpaper-tbd',
   'warp',
   'windows-terminal',
   'wox',
@@ -158,6 +160,8 @@ export function resolveTemplate(
       return wallpaperShirts;
     case 'wallpaper-triangles':
       return wallpaperTriangles;
+    case 'wallpaper-tbd':
+      return wallpaperTbd;
     case 'warp':
       return warp;
     case 'windows-terminal':
