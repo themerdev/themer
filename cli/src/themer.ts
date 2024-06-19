@@ -2,11 +2,13 @@ import { ColorSet, prepareColorSet } from './color-set/index.js';
 import { BuiltInColorSet, resolveColorSet } from './color-set/all.js';
 import type { Template, OutputFile, RenderOptions } from './template/index.js';
 import { BuiltInTemplate, resolveTemplate } from './template/all.js';
+import { OutputFileTransform, noopTransform } from './transform/index.js';
 
 export async function* themer(
   colorSets: (BuiltInColorSet | ColorSet)[],
   templates: (BuiltInTemplate | Template)[],
   options: RenderOptions,
+  transform: OutputFileTransform = noopTransform,
 ): AsyncGenerator<OutputFile> {
   for (const colorSet of colorSets) {
     const resolvedColorSet = resolveColorSet(colorSet);
@@ -16,13 +18,15 @@ export async function* themer(
     const rootDir = fullColorSet.name;
     for (const template of resolvedTemplates) {
       const templatePaths: string[] = [];
-      for await (const file of template.render(fullColorSet, options)) {
-        const path = `${template.name}/${file.path}`;
-        yield {
-          ...file,
-          path: `${rootDir}/${path}`,
-        };
-        templatePaths.push(path);
+      for await (const renderedFile of template.render(fullColorSet, options)) {
+        for await (const file of transform(renderedFile)) {
+          const path = `${template.name}/${file.path}`;
+          yield {
+            ...file,
+            path: `${rootDir}/${path}`,
+          };
+          templatePaths.push(path);
+        }
       }
       instructions.push(`## ${template.name}`);
       instructions.push(

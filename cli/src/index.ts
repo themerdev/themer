@@ -21,4 +21,5 @@ export {
   allBuiltInTemplates,
   type BuiltInTemplate,
 } from './template/all.js';
+export { type OutputFileTransform } from './transform/index.js';
 export { themer as default } from './themer.js';
