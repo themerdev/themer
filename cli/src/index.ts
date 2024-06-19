@@ -12,13 +12,13 @@ export {
 export {
   allBuiltInColorSetIdentifiers,
   allBuiltInColorSets,
-  BuiltInColorSet,
+  type BuiltInColorSet,
 } from './color-set/all.js';
 export type { OutputFile, RenderOptions, Template } from './template/index.js';
 export { listOutputFiles } from './template/index.js';
 export {
   allBuiltInTemplateIdentifiers,
   allBuiltInTemplates,
-  BuiltInTemplate,
+  type BuiltInTemplate,
 } from './template/all.js';
 export { themer as default } from './themer.js';

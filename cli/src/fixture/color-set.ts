@@ -1,4 +1,4 @@
-import type { ColorSet } from '../color-set';
+import type { ColorSet } from '../index.js';
 
 const colors: ColorSet = {
   name: 'Test',
