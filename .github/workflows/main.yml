@@ -9,12 +9,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: |
-          cd cli
-          npm install
+      - uses: actions/checkout@v4
       - name: Run tests
-        run: |
-          cd cli
-          npm run test
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: |
+            cd cli
+            npm run test
