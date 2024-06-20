@@ -1,9 +1,9 @@
 import { OutputFile } from '../template/index.js';
 
-export type OutputFileTransform = (
+export type OutputFileTransform<T> = (
   file: OutputFile,
-) => AsyncGenerator<OutputFile>;
+) => AsyncGenerator<T | OutputFile>;
 
-export const noopTransform: OutputFileTransform = async function* (file) {
+export async function* noopTransform(file: OutputFile) {
   yield file;
-};
+}

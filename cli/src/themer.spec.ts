@@ -3,8 +3,9 @@ import template from './fixture/template.js';
 import { themer } from './themer.js';
 import { OutputFileTransform } from './transform/index.js';
 import { basename } from 'node:path';
+import { OutputFile } from './template/index.js';
 
-const backupFile: OutputFileTransform = async function* (file) {
+const backupFile: OutputFileTransform<OutputFile> = async function* (file) {
   yield file;
   yield {
     ...file,
@@ -42,5 +43,40 @@ test('supports file post-processing', async (t) => {
     );
     const base = basename(path);
     t.assert(readme?.content.includes(base), `README must contain ${base}`);
+  }
+});
+
+type TransformedFile = { path: string; test: string };
+
+const customTransform: OutputFileTransform<TransformedFile> = async function* (
+  file,
+) {
+  yield file;
+  yield {
+    path: file.path + '.other',
+    test: file.path,
+  };
+};
+
+test('supports custom types', async (t) => {
+  const files: (OutputFile | TransformedFile)[] = [];
+  for await (const file of themer(
+    ['default'],
+    [template],
+    { wallpaperSizes: [] },
+    customTransform,
+  )) {
+    files.push(file);
+  }
+
+  t.plan(5);
+
+  for (const file of files) {
+    if ('test' in file) {
+      t.assert(file.path.endsWith('.other'));
+    }
+    if ('content' in file) {
+      t.assert(file.path.endsWith('.txt') || file.path.endsWith('.md'));
+    }
   }
 });

@@ -4,12 +4,12 @@ import type { Template, OutputFile, RenderOptions } from './template/index.js';
 import { BuiltInTemplate, resolveTemplate } from './template/all.js';
 import { OutputFileTransform, noopTransform } from './transform/index.js';
 
-export async function* themer(
+export async function* themer<T extends { path: string } = OutputFile>(
   colorSets: (BuiltInColorSet | ColorSet)[],
   templates: (BuiltInTemplate | Template)[],
   options: RenderOptions,
-  transform: OutputFileTransform = noopTransform,
-): AsyncGenerator<OutputFile> {
+  transform: OutputFileTransform<T> = noopTransform,
+): AsyncGenerator<T | OutputFile> {
   for (const colorSet of colorSets) {
     const resolvedColorSet = resolveColorSet(colorSet);
     const fullColorSet = prepareColorSet(resolvedColorSet);
