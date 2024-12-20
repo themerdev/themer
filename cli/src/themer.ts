@@ -17,7 +17,7 @@ export async function* themer<T extends { path: string } = OutputFile>(
     const instructions: string[] = [`# themer - ${fullColorSet.name}`];
     const rootDir = fullColorSet.name;
     for (const template of resolvedTemplates) {
-      const templatePaths: string[] = [];
+      const templatePaths: Set<string> = new Set();
       for await (const renderedFile of template.render(fullColorSet, options)) {
         for await (const file of transform(renderedFile)) {
           const path = `${template.name}/${file.path}`;
@@ -25,12 +25,12 @@ export async function* themer<T extends { path: string } = OutputFile>(
             ...file,
             path: `${rootDir}/${path}`,
           };
-          templatePaths.push(path);
+          templatePaths.add(path);
         }
       }
       instructions.push(`## ${template.name}`);
       instructions.push(
-        template.renderInstructions(templatePaths, fullColorSet).trim(),
+        template.renderInstructions([...templatePaths], fullColorSet).trim(),
       );
     }
     yield {
