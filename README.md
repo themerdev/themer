@@ -346,8 +346,6 @@ export default template;
 
 ### Editors/IDEs
 
-- [`atom-syntax`](https://github.com/themerdev/themer/tree/main/cli/src/template/atom-syntax.ts)
-- [`atom-ui`](https://github.com/themerdev/themer/tree/main/cli/src/template/atom-ui.ts)
 - [`bbedit`](https://github.com/themerdev/themer/tree/main/cli/src/template/bbedit.ts)
 - [`emacs`](https://github.com/themerdev/themer/tree/main/cli/src/template/emacs.ts)
 - [`sublime-text`](https://github.com/themerdev/themer/tree/main/cli/src/template/sublime-text.ts)
