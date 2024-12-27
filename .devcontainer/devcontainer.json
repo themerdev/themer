@@ -4,8 +4,11 @@
   "remoteUser": "node",
   "customizations": {
     "vscode": {
-      "extensions": ["esbenp.prettier-vscode"]
+      "extensions": ["esbenp.prettier-vscode", "svelte.svelte-vscode"]
     }
   },
-  "postCreateCommand": "cd cli && npm install"
+  "postCreateCommand": {
+    "install cli dependencies": "cd cli && npm install",
+    "install web dependencies": "cd web && npm install"
+  }
 }

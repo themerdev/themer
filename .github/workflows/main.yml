@@ -6,14 +6,47 @@ env:
   CI: true
 
 jobs:
-  test:
+  test-cli-unit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run tests
+      - name: Run CLI unit tests
         uses: devcontainers/ci@v0.3
         with:
           push: never
           runCmd: |
             cd cli
             npm run test
+  test-web-unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run web unit tests
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: |
+            cd web
+            npm run test:unit
+  lint-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint web
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: |
+            cd web
+            npm run lint
+  svelte-check-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run svelte-check
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: |
+            cd web
+            npm run check
