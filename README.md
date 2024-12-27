@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# themer ![GitHub Workflow Status (main branch)](https://img.shields.io/github/actions/workflow/status/themerdev/themer/main.yml?branch=main) [![Follow on Mastodon](https://img.shields.io/mastodon/follow/109767516017513032?domain=https%3A%2F%2Ffosstodon.org)](https://twitter.com/intent/user?screen_name=themerdev) [![Join the newsletter](https://img.shields.io/badge/newsletter-join-brightgreen)](https://themer.dev/join)
+# themer ![GitHub Workflow Status (main branch)](https://img.shields.io/github/actions/workflow/status/themerdev/themer/main.yml?branch=main)
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other-apps), and [desktop wallpapers](#wallpapers).
 
@@ -36,9 +36,6 @@
   - [Wallpapers](#wallpapers)
 - [Prior art](#prior-art)
 - [Contributing](#contributing)
-- [Next steps](#next-steps)
-  - [Join the community](#join-the-community)
-  - [Support `themer`](#support-themer)
 
 ## Getting started
 
@@ -398,16 +395,3 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 ## Contributing
 
 For instructions on how to contribute to `themer`, see [CONTRIBUTING.md](https://github.com/themerdev/themer/blob/main/.github/CONTRIBUTING.md) and [`themer`'s code of conduct](https://github.com/themerdev/themer/blob/main/CODE_OF_CONDUCT.md).
-
-## Next steps
-
-### Join the community
-
-- ⭐️ Star [`themer` on GitHub](https://github.com/themerdev/themer)
-- 🐘 Follow [@themer](https://fosstodon.org/@themer) on Mastodon
-- 💌 [Join the newsletter](https://themer.dev/join)
-
-### Support `themer`
-
-- 👑 Purchase a premium theme from [themer.dev](https://themer.dev)
-- 💖 [Sponsor the @themerdev GitHub org](https://github.com/sponsors/themerdev)
