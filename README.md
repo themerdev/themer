@@ -26,7 +26,7 @@
     - [Color mappings](#color-mappings)
   - [Create custom `Template`s](#create-custom-templates)
 - [Themer color sets](#themer-color-sets)
-  - [Premium color sets](#premium-color-sets)
+  - [Web-only color sets](#web-only-color-sets)
   - [Original color sets](#original-color-sets)
   - [Ports from third-party themes](#ports-from-third-party-themes)
 - [Themer templates](#themer-templates)
@@ -50,7 +50,6 @@ Feature comparison:
 |                               | Web UI         | CLI/API  |
 | ----------------------------- | -------------- | -------- |
 | Instant preview               | ✅             | ❌       |
-| Premium color sets            | ✅             | ❌       |
 | Supported color format        | Any CSS format | Hex only |
 | Wallpaper output format       | PNG + SVG      | SVG only |
 | Seamless dotfiles integration | ❌             | ✅       |
@@ -288,7 +287,7 @@ export default template;
 
 ## Themer color sets
 
-### Premium color sets
+### Web-only color sets
 
 (Only available on [themer.dev](https://themer.dev).)
 
