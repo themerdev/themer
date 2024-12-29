@@ -1,6 +1,6 @@
 {
   "name": "themer",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "build": { "dockerfile": "./Dockerfile" },
   "remoteUser": "node",
   "customizations": {
     "vscode": {
