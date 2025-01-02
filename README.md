@@ -1,14 +1,14 @@
 <p align="center">
   <a href="https://themer.dev">
-    <img src="https://cdn.jsdelivr.net/gh/themerdev/themer@8af6e97f2d51b7002894ba86bb7b3fccf965efb9/assets/icon.png" width="384" alt="Themer logo" />
+    <img src="https://cdn.jsdelivr.net/gh/mjswensen/themer@8af6e97f2d51b7002894ba86bb7b3fccf965efb9/assets/icon.png" width="384" alt="Themer logo" />
   </a>
 </p>
 
-# themer ![GitHub Workflow Status (main branch)](https://img.shields.io/github/actions/workflow/status/themerdev/themer/main.yml?branch=main)
+# themer ![GitHub Workflow Status (main branch)](https://img.shields.io/github/actions/workflow/status/mjswensen/themer/main.yml?branch=main)
 
 `themer` takes a set of colors and generates [editor themes](#editorsides), [terminal themes](#terminals), [themes for other apps](#other-apps), and [desktop wallpapers](#wallpapers).
 
-![visual description](https://cdn.jsdelivr.net/gh/themerdev/themer@a4ad55a9d664d474485b2cc167ef41ec8ff1b1d7/assets/themer-description.png)
+![visual description](https://cdn.jsdelivr.net/gh/mjswensen/themer@a4ad55a9d664d474485b2cc167ef41ec8ff1b1d7/assets/themer-description.png)
 
 ## Table of contents
 
@@ -52,6 +52,7 @@ Feature comparison:
 | Instant preview               | ✅             | ❌       |
 | Supported color format        | Any CSS format | Hex only |
 | Wallpaper output format       | PNG + SVG      | SVG only |
+| Raytraced 3D wallpaper        | ✅             | ❌       |
 | Seamless dotfiles integration | ❌             | ✅       |
 
 ## CLI documentation
@@ -114,7 +115,7 @@ npm run build
 
 Now check the `gen/` folder for your generated files. Here's the result:
 
-![example usage result](https://cdn.jsdelivr.net/gh/themerdev/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/assets/example-usage.png)
+![example usage result](https://cdn.jsdelivr.net/gh/mjswensen/themer@a186c8585721d5defbf4cb1bc94165144d4dd35a/assets/example-usage.png)
 
 ### Example workflow: npx
 
@@ -293,97 +294,101 @@ export default template;
 
 | Name                                          | Dark Preview                                                                                                                                           | Light Preview                                                                                                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Jamstacker](https://themer.dev/jamstacker)   | ![Jamstacker dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@bd73b5e6a10f4dfbbfc17f89a3e46dd0550673e4/assets/preview/jamstacker-dark.png)   | (dark only)                                                                                                                                              |
-| [Victor Mono](https://themer.dev/victor-mono) | ![Victor Mono dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/victor-mono-dark.png) | ![Victor Mono light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/victor-mono-light.png) |
-| [Future Pro](https://themer.dev/future-pro)   | ![Future Pro dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/future-pro-dark.png)   | ![Future Pro light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/future-pro-light.png)   |
+| [Concert](https://themer.dev/concert)         | ![Concert dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@45a6ab8544d5c3d0b167f3e98fe1f7ad684e38fc/assets/preview/concert-dark.svg)         | ![Concert light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@45a6ab8544d5c3d0b167f3e98fe1f7ad684e38fc/assets/preview/concert-light.svg)         |
+| [Victor Mono](https://themer.dev/victor-mono) | ![Victor Mono dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/victor-mono-dark.png) | ![Victor Mono light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/victor-mono-light.png) |
+| [Future Pro](https://themer.dev/future-pro)   | ![Future Pro dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/future-pro-dark.png)   | ![Future Pro light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@6d814b06830b02d6138e824655f7e3d1314e991c/assets/preview/future-pro-light.png)   |
 
 ### Original color sets
 
 | Name                                                                                                          | Dark Preview                                                                                                                                                                | Light Preview                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`default`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/default.ts)                       | ![default dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-default-dark.svg)                       | ![default light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-default-light.svg)                       |
-| [`finger-paint`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/finger-paint.ts)             | ![finger-paint dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-finger-paint-dark.svg)             | ![finger-paint light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-finger-paint-light.svg)             |
-| [`green-as-a-whistle`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/green-as-a-whistle.ts) | ![green-as-a-whistle dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-green-as-a-whistle-dark.svg) | ![green-as-a-whistle light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-green-as-a-whistle-light.svg) |
-| [`monkey`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/monkey.ts)                         | ![monkey dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-monkey-dark.svg)                         | ![monkey light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-monkey-light.svg)                         |
-| [`night-sky`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/night-sky.ts)                   | ![night-sky dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-night-sky-dark.svg)                   | (dark only)                                                                                                                                                                   |
-| [`polar-ice`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/polar-ice.ts)                   | ![polar-ice dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-polar-ice-dark.svg)                   | ![polar-ice light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-polar-ice-light.svg)                   |
-| [`right-in-the-teals`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/right-in-the-teals.ts) | ![right-in-the-teals dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-right-in-the-teals-dark.svg) | ![right-in-the-teals light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-right-in-the-teals-light.svg) |
-| [`shoulder-pads`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/shoulder-pads.ts)           | ![shoulder-pads dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@cd4919aae2f59901b6119480bf8a926b63916d43/assets/preview/themer-shoulder-pads-dark.svg)           | ![shoulder-pads light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@cd4919aae2f59901b6119480bf8a926b63916d43/assets/preview/themer-shoulder-pads-light.svg)           |
+| [`default`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/default.ts)                       | ![default dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-default-dark.svg)                       | ![default light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-default-light.svg)                       |
+| [`finger-paint`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/finger-paint.ts)             | ![finger-paint dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-finger-paint-dark.svg)             | ![finger-paint light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-finger-paint-light.svg)             |
+| [`green-as-a-whistle`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/green-as-a-whistle.ts) | ![green-as-a-whistle dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-green-as-a-whistle-dark.svg) | ![green-as-a-whistle light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-green-as-a-whistle-light.svg) |
+| [`monkey`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/monkey.ts)                         | ![monkey dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-monkey-dark.svg)                         | ![monkey light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-monkey-light.svg)                         |
+| [`night-sky`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/night-sky.ts)                   | ![night-sky dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-night-sky-dark.svg)                   | (dark only)                                                                                                                                                                   |
+| [`polar-ice`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/polar-ice.ts)                   | ![polar-ice dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-polar-ice-dark.svg)                   | ![polar-ice light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-polar-ice-light.svg)                   |
+| [`right-in-the-teals`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/right-in-the-teals.ts) | ![right-in-the-teals dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-right-in-the-teals-dark.svg) | ![right-in-the-teals light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-right-in-the-teals-light.svg) |
+| [`shoulder-pads`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/shoulder-pads.ts)           | ![shoulder-pads dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@cd4919aae2f59901b6119480bf8a926b63916d43/assets/preview/themer-shoulder-pads-dark.svg)           | ![shoulder-pads light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@cd4919aae2f59901b6119480bf8a926b63916d43/assets/preview/themer-shoulder-pads-light.svg)           |
 
 ### Ports from third-party themes
 
 | Name                                                                                                    | Dark Preview                                                                                                                                                           | Light Preview                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`dracula`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/dracula.ts)                 | ![dracula dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-dracula-dark.svg)                  | (dark only)                                                                                                                                                 |
-| [`github-universe`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/github-universe.ts) | ![github-universe dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-git-hub-universe-dark.svg) | (dark only)                                                                                                                                                 |
-| [`lucid`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/lucid.ts)                     | ![lucid dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-lucid-dark.svg)                      | ![lucid light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-lucid-light.svg)         |
-| [`mojave`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/mojave.ts)                   | ![mojave dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-mojave-dark.svg)                    | ![mojave light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-mojave-light.svg)       |
-| [`nova`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/nova.ts)                       | ![nova dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-nova-dark.svg)                        | (dark only)                                                                                                                                                 |
-| [`one`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/one.ts)                         | ![one dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-one-dark.svg)                          | ![one light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-one-light.svg)             |
-| [`rivet`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/rivet.ts)                     | ![rivet dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-rivet-dark.svg)                      | ![rivet light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-rivet-light.svg)         |
-| [`seti`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/seti.ts)                       | ![seti dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-seti-dark.svg)                        | (dark only)                                                                                                                                                 |
-| [`solarized`](https://github.com/themerdev/themer/tree/main/cli/src/color-set/solarized.ts)             | ![solarized dark preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-solarized-dark.svg)              | ![solarized light preview](https://cdn.jsdelivr.net/gh/themerdev/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-solarized-light.svg) |
+| [`dracula`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/dracula.ts)                 | ![dracula dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-dracula-dark.svg)                  | (dark only)                                                                                                                                                 |
+| [`github-universe`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/github-universe.ts) | ![github-universe dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-git-hub-universe-dark.svg) | (dark only)                                                                                                                                                 |
+| [`lucid`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/lucid.ts)                     | ![lucid dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-lucid-dark.svg)                      | ![lucid light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-lucid-light.svg)         |
+| [`mojave`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/mojave.ts)                   | ![mojave dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-mojave-dark.svg)                    | ![mojave light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-mojave-light.svg)       |
+| [`nova`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/nova.ts)                       | ![nova dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-nova-dark.svg)                        | (dark only)                                                                                                                                                 |
+| [`one`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/one.ts)                         | ![one dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-one-dark.svg)                          | ![one light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-one-light.svg)             |
+| [`rivet`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/rivet.ts)                     | ![rivet dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-rivet-dark.svg)                      | ![rivet light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-rivet-light.svg)         |
+| [`seti`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/seti.ts)                       | ![seti dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-seti-dark.svg)                        | (dark only)                                                                                                                                                 |
+| [`solarized`](https://github.com/mjswensen/themer/tree/main/cli/src/color-set/solarized.ts)             | ![solarized dark preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-solarized-dark.svg)              | ![solarized light preview](https://cdn.jsdelivr.net/gh/mjswensen/themer@42a574d77d0a5b68b2f46a0a12c344457585c016/assets/preview/themer-solarized-light.svg) |
 
 ## Themer templates
 
 ### Terminals
 
-- [`alacritty`](https://github.com/themerdev/themer/tree/main/cli/src/template/alacritty.ts)
-- [`cmd`](https://github.com/themerdev/themer/tree/main/cli/src/template/cmd.ts)
-- [`conemu`](https://github.com/themerdev/themer/tree/main/cli/src/template/conemu.ts)
-- [`hyper`](https://github.com/themerdev/themer/tree/main/cli/src/template/hyper.ts)
-- [`iterm`](https://github.com/themerdev/themer/tree/main/cli/src/template/iterm.ts)
-- [`kitty`](https://github.com/themerdev/themer/tree/main/cli/src/template/kitty.ts)
-- [`konsole`](https://github.com/themerdev/themer/tree/main/cli/src/template/konsole.ts)
-- [`terminal`](https://github.com/themerdev/themer/tree/main/cli/src/template/terminal.ts)
-- [`terminator`](https://github.com/themerdev/themer/tree/main/cli/src/template/terminator.ts)
-- [`warp`](https://github.com/themerdev/themer/tree/main/cli/src/template/warp.ts)
-- [`windows-terminal`](https://github.com/themerdev/themer/tree/main/cli/src/template/windows-terminal.ts)
+- [`alacritty`](https://github.com/mjswensen/themer/tree/main/cli/src/template/alacritty.ts)
+- [`cmd`](https://github.com/mjswensen/themer/tree/main/cli/src/template/cmd.ts)
+- [`conemu`](https://github.com/mjswensen/themer/tree/main/cli/src/template/conemu.ts)
+- [`hyper`](https://github.com/mjswensen/themer/tree/main/cli/src/template/hyper.ts)
+- [`iterm`](https://github.com/mjswensen/themer/tree/main/cli/src/template/iterm.ts)
+- [`kitty`](https://github.com/mjswensen/themer/tree/main/cli/src/template/kitty.ts)
+- [`konsole`](https://github.com/mjswensen/themer/tree/main/cli/src/template/konsole.ts)
+- [`terminal`](https://github.com/mjswensen/themer/tree/main/cli/src/template/terminal.ts)
+- [`terminator`](https://github.com/mjswensen/themer/tree/main/cli/src/template/terminator.ts)
+- [`warp`](https://github.com/mjswensen/themer/tree/main/cli/src/template/warp.ts)
+- [`windows-terminal`](https://github.com/mjswensen/themer/tree/main/cli/src/template/windows-terminal.ts)
 
 ### Editors/IDEs
 
-- [`bbedit`](https://github.com/themerdev/themer/tree/main/cli/src/template/bbedit.ts)
-- [`emacs`](https://github.com/themerdev/themer/tree/main/cli/src/template/emacs.ts)
-- [`sublime-text`](https://github.com/themerdev/themer/tree/main/cli/src/template/sublime-text.ts)
-- [`vim-lightline`](https://github.com/themerdev/themer/tree/main/cli/src/template/vim-lightline.ts)
-- [`vim`](https://github.com/themerdev/themer/tree/main/cli/src/template/vim.ts)
-- [`visual-studio`](https://github.com/themerdev/themer/tree/main/cli/src/template/visual-studio.ts)
-- [`vs-code`](https://github.com/themerdev/themer/tree/main/cli/src/template/vs-code.ts)
-- [`xcode`](https://github.com/themerdev/themer/tree/main/cli/src/template/xcode.ts)
+- [`bbedit`](https://github.com/mjswensen/themer/tree/main/cli/src/template/bbedit.ts)
+- [`emacs`](https://github.com/mjswensen/themer/tree/main/cli/src/template/emacs.ts)
+- [`sublime-text`](https://github.com/mjswensen/themer/tree/main/cli/src/template/sublime-text.ts)
+- [`vim-lightline`](https://github.com/mjswensen/themer/tree/main/cli/src/template/vim-lightline.ts)
+- [`vim`](https://github.com/mjswensen/themer/tree/main/cli/src/template/vim.ts)
+- [`visual-studio`](https://github.com/mjswensen/themer/tree/main/cli/src/template/visual-studio.ts)
+- [`vs-code`](https://github.com/mjswensen/themer/tree/main/cli/src/template/vs-code.ts)
+- [`xcode`](https://github.com/mjswensen/themer/tree/main/cli/src/template/xcode.ts)
 
 ### Other apps
 
-- [`alfred`](https://github.com/themerdev/themer/tree/main/cli/src/template/alfred.ts)
-- [`brave`](https://github.com/themerdev/themer/tree/main/cli/src/template/brave.ts)
-- [`chrome`](https://github.com/themerdev/themer/tree/main/cli/src/template/chrome.ts)
-- [`css`](https://github.com/themerdev/themer/tree/main/cli/src/template/css.ts)
-- [`firefox-addon`](https://github.com/themerdev/themer/tree/main/cli/src/template/firefox-addon.ts)
-- [`firefox-color`](https://github.com/themerdev/themer/tree/main/cli/src/template/firefox-color.ts)
-- [`kde-plasma-colors`](https://github.com/themerdev/themer/tree/main/cli/src/template/kde-plasma-colors.ts)
-- [`keypirinha`](https://github.com/themerdev/themer/tree/main/cli/src/template/keypirinha.ts)
-- [`prism`](https://github.com/themerdev/themer/tree/main/cli/src/template/prism.ts)
-- [`sketch-palettes`](https://github.com/themerdev/themer/tree/main/cli/src/template/sketch-palettes.ts)
-- [`slack`](https://github.com/themerdev/themer/tree/main/cli/src/template/slack.ts)
-- [`wox`](https://github.com/themerdev/themer/tree/main/cli/src/template/wox.ts)
-- [`xresources`](https://github.com/themerdev/themer/tree/main/cli/src/template/xresources.ts)
+- [`alfred`](https://github.com/mjswensen/themer/tree/main/cli/src/template/alfred.ts)
+- [`brave`](https://github.com/mjswensen/themer/tree/main/cli/src/template/brave.ts)
+- [`chrome`](https://github.com/mjswensen/themer/tree/main/cli/src/template/chrome.ts)
+- [`css`](https://github.com/mjswensen/themer/tree/main/cli/src/template/css.ts)
+- [`firefox-addon`](https://github.com/mjswensen/themer/tree/main/cli/src/template/firefox-addon.ts)
+- [`firefox-color`](https://github.com/mjswensen/themer/tree/main/cli/src/template/firefox-color.ts)
+- [`kde-plasma-colors`](https://github.com/mjswensen/themer/tree/main/cli/src/template/kde-plasma-colors.ts)
+- [`keypirinha`](https://github.com/mjswensen/themer/tree/main/cli/src/template/keypirinha.ts)
+- [`prism`](https://github.com/mjswensen/themer/tree/main/cli/src/template/prism.ts)
+- [`sketch-palettes`](https://github.com/mjswensen/themer/tree/main/cli/src/template/sketch-palettes.ts)
+- [`slack`](https://github.com/mjswensen/themer/tree/main/cli/src/template/slack.ts)
+- [`wox`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wox.ts)
+- [`xresources`](https://github.com/mjswensen/themer/tree/main/cli/src/template/xresources.ts)
 
 ### Wallpapers
 
 See [`themer`'s Web UI](https://themer.dev) for wallpaper previews.
 
-- [`wallpaper-block-wave`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-block-wave.ts)
-- [`wallpaper-burst`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-burst.ts)
-- [`wallpaper-circuits`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-circuits.ts)
-- [`wallpaper-diamonds`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-diamonds.ts)
-- [`wallpaper-dot-grid`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-dot-grid.ts)
-- [`wallpaper-octagon`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-octagon.ts)
-- [`wallpaper-shirts`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-shirts.ts)
-- [`wallpaper-triangles`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-triangles.ts)
-- [`wallpaper-trianglify`](https://github.com/themerdev/themer/tree/main/cli/src/template/wallpaper-trianglify.ts)
+- 3D (web-only)
+  - [`wallpaper-exhibit`](https://github.com/mjswensen/themer/tree/main/web/src/lib/template/wallpaper-exhibit.ts)
+  - [`wallpaper-logos`](https://github.com/mjswensen/themer/tree/main/web/src/lib/template/wallpaper-logos.ts)
+- 2D (web & CLI)
+  - [`wallpaper-block-wave`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-block-wave.ts)
+  - [`wallpaper-burst`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-burst.ts)
+  - [`wallpaper-circuits`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-circuits.ts)
+  - [`wallpaper-diamonds`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-diamonds.ts)
+  - [`wallpaper-dot-grid`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-dot-grid.ts)
+  - [`wallpaper-octagon`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-octagon.ts)
+  - [`wallpaper-shirts`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-shirts.ts)
+  - [`wallpaper-triangles`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-triangles.ts)
+  - [`wallpaper-trianglify`](https://github.com/mjswensen/themer/tree/main/cli/src/template/wallpaper-trianglify.ts)
 
 ## Prior art
 
-`themer` is inspired by [trevordmiller/nova](https://github.com/trevordmiller/nova/) and [chriskempson/base16](http://chriskempson.com/projects/base16/).
+`themer` is inspired by [chriskempson/base16](http://chriskempson.com/projects/base16/) and similar projects.
 
 Conceptually, `themer` is very similar to [base16](http://chriskempson.com/projects/base16/), but:
 
@@ -393,4 +398,4 @@ Conceptually, `themer` is very similar to [base16](http://chriskempson.com/proje
 
 ## Contributing
 
-For instructions on how to contribute to `themer`, see [CONTRIBUTING.md](https://github.com/themerdev/themer/blob/main/.github/CONTRIBUTING.md) and [`themer`'s code of conduct](https://github.com/themerdev/themer/blob/main/CODE_OF_CONDUCT.md).
+For instructions on how to contribute to `themer`, see [CONTRIBUTING.md](https://github.com/mjswensen/themer/blob/main/.github/CONTRIBUTING.md) and [`themer`'s code of conduct](https://github.com/mjswensen/themer/blob/main/CODE_OF_CONDUCT.md).
