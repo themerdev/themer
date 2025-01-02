@@ -21,6 +21,7 @@ import slack from './slack.js';
 import sublimeText from './sublime-text.js';
 import terminal from './terminal.js';
 import terminator from './terminator.js';
+import tmux from './tmux.js';
 import vimLightline from './vim-lightline.js';
 import vim from './vim.js';
 import visualStudio from './visual-studio.js';
@@ -62,6 +63,7 @@ const BUILT_IN_TEMPLATE_IDENTIFIERS = [
   'sublime-text',
   'terminal',
   'terminator',
+  'tmux',
   'vim',
   'vim-lightline',
   'visual-studio',
@@ -134,6 +136,8 @@ export function resolveTemplate(
       return terminal;
     case 'terminator':
       return terminator;
+    case 'tmux':
+      return tmux;
     case 'vim':
       return vim;
     case 'vim-lightline':
