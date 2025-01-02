@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="100%" height="100%" fill="#3A3F45"/>
+  <rect width="150" height="500" x="920" y="500" fill="#C46365" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(14 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#FF7272" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(24 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#EFA280" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(47 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#EBCB8B" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(58 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#E8CF99" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(71 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#938568" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(85 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#959DA2" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(99 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#A1A9AE" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(122 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#ACB4B9" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(128 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#CF95C6" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(150 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#67596C" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(161 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#7F858B" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(180 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#686E74" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(191 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#8684AB" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(203 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#A39AE1" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(225 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#7DA5D4" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(233 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#95ADC7" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(252 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#5C728D" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(263 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#C3CCD1" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(286 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#DAE3E8" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(298 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#99C794" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(316 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#7CC3A6" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(333 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#5FBFB7" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(345 960 540)"/>
+  <rect width="150" height="500" x="920" y="500" fill="#51565C" stroke="rgba(0,0,0,0.05)" stroke-width="3" rx="20" transform="rotate(-3 960 540)"/>
+</svg>
