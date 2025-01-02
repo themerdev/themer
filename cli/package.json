@@ -12,7 +12,7 @@
     "url": "https://mjswensen.com"
   },
   "repository": {
-    "url": "https://github.com/themerdev/themer.git",
+    "url": "https://github.com/mjswensen/themer.git",
     "type": "git",
     "directory": "cli"
   },
@@ -23,8 +23,8 @@
     "build": "tsc",
     "test": "ava"
   },
-  "bugs": "https://github.com/themerdev/themer/issues",
-  "homepage": "https://github.com/themerdev/themer#readme",
+  "bugs": "https://github.com/mjswensen/themer/issues",
+  "homepage": "https://github.com/mjswensen/themer#readme",
   "keywords": [
     "themer",
     "theme",

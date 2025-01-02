@@ -5,7 +5,7 @@
 
 	onMount(async () => {
 		const response: { stargazers_count: number } = await fetch(
-			'https://api.github.com/repos/themerdev/themer'
+			'https://api.github.com/repos/mjswensen/themer'
 		).then((res) => res.json());
 		starCount = (response.stargazers_count / 1000).toFixed(1) + 'k';
 	});
@@ -16,7 +16,7 @@
 	<span class="subtitle">
 		<span class="themed shade5">// free and open-source development environment theme creator</span>
 	</span>
-	<a href="https://github.com/themerdev/themer" target="_blank">
+	<a href="https://github.com/mjswensen/themer" target="_blank">
 		Star on GitHub ({starCount})
 	</a>
 </div>

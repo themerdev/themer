@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to themer! All contributions are welcome, and are expected to adhere to [the code of conduct](https://github.com/themerdev/themer/blob/main/CODE_OF_CONDUCT.md). Below are some guidelines for the most effective ways you can help build themer.
+Thanks for contributing to themer! All contributions are welcome, and are expected to adhere to [the code of conduct](https://github.com/mjswensen/themer/blob/main/CODE_OF_CONDUCT.md). Below are some guidelines for the most effective ways you can help build themer.
 
 - [Log a bug](#log-a-bug)
 - [Request a theme template](#request-a-theme-template)
@@ -31,7 +31,7 @@ If you use a tool that themer doesn't support yet, feel free to request it by cr
 2. `cd cli`
 3. `npm install` to install dependencies
 4. Create a new file in the `src/template/` directory.
-5. Implement the template interface, following the documentation in the ["Create custom `Template`s" section of the README](https://github.com/themerdev/themer#create-custom-templates).
+5. Implement the template interface, following the documentation in the ["Create custom `Template`s" section of the README](https://github.com/mjswensen/themer#create-custom-templates).
 6. Submit a pull request.
 
 ## Provide a color set
@@ -48,7 +48,7 @@ You can also download your theme and a `colors.js` file that is compatible with 
 
 #### Option 1.2: using the CLI or API
 
-Define your colors following the instructions under the ["Create custom `ColorSet`s" section of the README](https://github.com/themerdev/themer#create-custom-colorsets). To test your color configuration file, you can use the following command:
+Define your colors following the instructions under the ["Create custom `ColorSet`s" section of the README](https://github.com/mjswensen/themer#create-custom-colorsets). To test your color configuration file, you can use the following command:
 
 ```sh
 npx themer -c <path to your colors file> -t vs-code -o <path to your desired output directory>
@@ -64,5 +64,5 @@ If a color set should be distributed with `themer` in the official web UI at [th
 2. `cd cli`
 3. `npm install` to install dependencies
 4. Create a new file in the `src/color-set/` directory.
-5. Implement your color set interface, following the documentation in the ["Create custom `ColorSet`s" section of the README](https://github.com/themerdev/themer#create-custom-colorsets).
+5. Implement your color set interface, following the documentation in the ["Create custom `ColorSet`s" section of the README](https://github.com/mjswensen/themer#create-custom-colorsets).
 6. Submit a pull request.

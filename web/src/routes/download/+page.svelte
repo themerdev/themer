@@ -70,14 +70,14 @@
 		{#if succeeded}
 			<p>
 				<span>Enjoying themer?</span>
-				<a href="https://github.com/themerdev/themer">Star the GitHub repo</a>
+				<a href="https://github.com/mjswensen/themer">Star the GitHub repo</a>
 			</p>
 			<p><a href="/">← Back to themer</a></p>
 		{/if}
 		{#if failed}
 			<p>
 				<a href="/">Go back and try again</a>; if it doesn't work, file an issue on
-				<a href="https://github.com/themerdev/themer/issues">the GitHub repo</a>
+				<a href="https://github.com/mjswensen/themer/issues">the GitHub repo</a>
 				for help.
 			</p>
 		{/if}
